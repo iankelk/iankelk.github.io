@@ -1,0 +1,45 @@
+
+
+/**** ADD YOUR STYLES ****/
+
+
+/****************/
+/*   BAR-CHART  */
+/****************/
+
+.bar {
+  fill: #3C948B;
+}
+
+.bar:hover {
+  fill: #327972;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line,
+.domain {
+  fill: none;
+  stroke: #888;
+  shape-rendering: crispEdges;
+}
+
+#chart-area text {
+  font-size: 11px;
+}
+
+.axis-label {
+  fill: #888;
+  font-size: 10px;
+}
+
+.x-label {
+  fill: black;
+}
+
+.y-label {
+  fill: black;
+}
