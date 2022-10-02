@@ -1,46 +1,70 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Za'atari Refugee Camp</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS171 - Assignment 4</title>
 
-		<!-- Load CSS libraries -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/style.css">
+    <!-- Load CSS libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- The toggle.css library was adapted from one found here: https://www.tutorialstonight.com/css-toggle-switch-with-text -->
+    <link rel="stylesheet" href="css/toggle.css">
+    <link rel="stylesheet" href="css/style.css">
 
-		<!-- GOOGLE FONTS -->
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
-	</head>
+    <!-- GOOGLE FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet'
+          type='text/css'>
+</head>
 
-	<body>
-	<div class="container" >
-		<div class="row justify-content-center" id="top-row">
-			<div class="align-self-center" id="header">
-				<h1>Za'atari Refugee Camp</h1>
-			</div>
-		</div>
-		<div class="col">
-			<div class="row">
-				<div class="col" id="area-chart"></div>
-				<div class="col" id="bar-chart"></div>
-			</div>
-			<div class="row text-muted" id="footer">
-				<p>* Households with recorded tent and caravan combinations</p>
-				<p>Source: <br/>* <a href="https://data.unhcr.org/en/situations/syria/location/53" target="_blank">https://data.unhcr.org/en/situations/syria/location/53</a><br/>
-					* <a href="https://www.impact-repository.org/document/reach/5949aa0e/reach_jor_report_zaatari_camp_population_count_february2015_1.pdf" target="_blank">https://www.impact-repository.org/document/reach/5949aa0e/reach_jor_report_zaatari_camp_population_count_february2015_1.pdf</a></p>
-			</div>
-		</div>
-	</div>
+<!-- SOME OF THESE FILES WERE ADAPTED FROM THE BOILERPLATE PROVIDED IN LAB 3 -->
+<body>
+<div class="container-fluid" >
+    <div class="row justify-content-center" id="top-row">
+        <div class="align-self-center">
+            <h1>The World's Tallest Buildings</h1>
+        </div>
+    </div>
+    <div class="row" id="middle-row">
+        <div class="col" id="left-middle">
+            <div class="row justify-content-center left-middle-text">
+                <div class="align-self-start mt-3">
+                    <div id="barchart" class="well"></div>
+                    <span class="text-primary">Select building height unit</span>
+                    <label class="toggle">
+                        <input type="checkbox"  id="units"/>
+                        <span class="slider"></span>
+                        <span class="labels" data-on="FEET" data-off="METERS"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col" id="right-middle">
+                <h2 id="building-name"></h2>
+                <div class="row">
+                    <div class="col mt-2">
+                        <img id="building-image" class="img-responsive rounded">
+                    </div>
+                    <div class="col mt-2">
+                        <div id="building-summary"></div>
+                    </div>
+                    <a class="btn btn-primary btn-block btn-sm mt-5" id="wikipedia" target="_blank"></a>
+                </div>
+        </div>
+    </div>
+</div>
 
-	<!-- embedding JS libraries -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
-	<!-- d3 -->
-	<script src="https://d3js.org/d3.v7.min.js"></script>
+<!-- embedding JS libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
 
-	<!-- own js files -->
-	<script src="js/main.js"></script>
-	</body>
+<!-- d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<!-- own js files -->
+<script src="js/main.js"></script>
+</body>
 </html>
