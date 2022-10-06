@@ -111,8 +111,10 @@ function updateVisualization(dateRange) {
 	let t = d3.transition().duration(800);
 
 	let selection = d3.select("#data-selected").property("value");
-	let selectedData = data.map(function(d){ return {...d, value:d[selection]}});
-	let filteredData = selectedData.filter( (d) => ((+formatDate(d.YEAR) >= dateRange[0]) && (+formatDate(d.YEAR) <= dateRange[1])));
+	let filteredData = data.filter( (d) => ((+formatDate(d.YEAR) >= dateRange[0]) && (+formatDate(d.YEAR) <= dateRange[1])));
+
+	// Label the date range
+	d3.select("#date-range").text(`${dateRange[0]}-${dateRange[1]}`);
 
 	// Set the listener for the data selector
 	d3.select("#data-selected").on("change", () => updateVisualization(minMaxDateRange(filteredData)));
@@ -123,7 +125,7 @@ function updateVisualization(dateRange) {
 
 	// Update the scalers for the new data
 	x.domain(minMaxDateRange(filteredData));
-	y.domain([d3.min(filteredData, (d) => d.value), d3.max(filteredData, (d) => d.value)]);
+	y.domain([d3.min(filteredData, (d) => d[selection]), d3.max(filteredData, (d) => d[selection])]);
 	console.log(filteredData);
 
 	svg.select(".line")
@@ -135,19 +137,23 @@ function updateVisualization(dateRange) {
 			.curve(d3.curveLinear)
 		);
 
-	circles.exit().remove();
-
 	// Create / Update circles
 	circles
 		.enter()
 		.append("circle")
 		.data(filteredData)
+		.style("opacity", 0.3)
+		.attr("cy", d=>y(height))
+		.style("opacity", 1.0)
 		.merge(circles)
 		.transition(t)
 		.attr("class", "chart-point")
+		.attr("cy", d=>y(d[selection]))
 		.attr("cx", d=>x(+formatDate(d.YEAR)))
-		.attr("cy", d=>y(d.value))
 		.attr("r", 5)
+
+	// Remove exiting circles
+	circles.exit().remove();
 
 	// Update x axis
 	xGroup
