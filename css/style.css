@@ -1,89 +1,140 @@
 
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: #D0C6B2;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
 }
 
 h1 {
-  color: #865F3C;
-  margin-top: 40px;
-  font-weight: 300;
+  font-weight: 100;
+  margin-top: 50px;
+  color: #4B6D4A;
+}
+
+h1 sup {
+  font-size: 11px;
+  top: -18px;
+  font-weight: 400;
+  color: #5b835a;
 }
 
 h2 {
-  font-weight: 100;
-  font-size: 20px;
-  margin-bottom: 30px;
-  color: #906666;
+  font-weight: 300;
+  font-size: 18px;
+  color: #91988B;
+  margin-bottom: 40px;
 }
 
-/*************/
-/*    FORM   */
-/*************/
-
-.form-inline {
-  margin-bottom: 30px;
-}
-
-.form-control {
-  background: #E2DDD1;
-  border: 1px solid #D49999;
-  width: 250px;
-}
-
-.form-group label {
-  font-weight: 400;
-  margin-right: 10px;
-}
-
-.form-inline button, .btn-link:active {
-  border-left: 1px solid #888;
-  margin-left: 15px;
-  padding-left: 15px;
+h3 {
+  font-size: 18px;
+  margin-bottom: 24px;
   color: #333;
-  cursor: pointer;
-  outline: none;
-}
-.form-inline button:hover, .btn-link:active, .btn-link:focus  {
-  border-left: 1px solid #888;
-  color: #8E7060;
-  text-decoration: none;
-  outline: none;
-}
-.form-inline button .glyphicon {
-  margin-right: 5px;
 }
 
+
+/****************/
+/*  USER INPUT  */
+/****************/
+
+.chart-point {
+  fill: #86AC86;
+  stroke: #86AC86;
+}
 
 /***************/
-/*  BAR CHART  */
+/*   DETAILS   */
 /***************/
 
-.bar {
-  fill: #8E7060;
+#world-cup-edition {
+  display: none;
+  background-color: #F5EFEF;
+  padding: 20px;
+  border: thin solid #4B6D4A; border-radius: 5px
 }
 
-.axis {
-  font: 10px sans-serif;
-  fill: #333;
-}
 
-.axis-title {
-  fill: #9C8B83;
-  font-size: 11px;
-}
+/****************/
+/*  LINE CHART  */
+/****************/
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #333;
+  stroke: #000;
   shape-rendering: crispEdges;
 }
-
-.x-axis {
-  font-size: 12px;
+.axis text {
+  font-size: 11px;
 }
 
-.x-axis path {
-  display: none;
+.line {
+  fill: none;
+  stroke: #86AC86;
+  stroke-width: 3px;
+}
+
+.tooltip-circle {
+  fill: #5C865B;
+  cursor: pointer;
+}
+
+.tooltip-title {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.d3-tip {
+  line-height: 1;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  z-index: 100;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+
+/****************/
+/*    SLIDER    */
+/****************/
+
+#time-period-slider {
+  width: 200px;
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.range-slider-value {
+  background-color: #EFE9E9;
+  color: #888;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 2px 10px;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.noUi-connect {
+  background: #92B592;
 }

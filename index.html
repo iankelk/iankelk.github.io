@@ -4,56 +4,63 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CS171 - Lab 5</title>
+    <title>CS171 - HW 5</title>
 
     <!-- CSS LIBRARIES -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.css" integrity="sha512-DGB74Gyw93qON+V0QxSRs1er6sqoPyFoy23HBL5LN7MRJBcjeCU22zega+vOEGE0XQLoVrv4ExcaesSTwZQA2w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>-->
+    <link href="./css/nouislider.css" rel="stylesheet">
 
     <!-- YOUR CSS -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
 <div class="container">
 
-    <h1>Coffee House Chains</h1>
-    <h2>A ranking of selected leading coffee house chains worldwide</h2>
-
-    <form class="row g-3">
-        <div class="col-auto">
-            <div class="form-group">
-                <!-- Select box to choose the ranking type -->
-                <select class="form-control" id="ranking-type">
-                    <option value="stores">Stores worldwide</option>
-                    <option value="revenue">Revenue in billion U.S. dollars</option>
-                </select>
-            </div>
+    <h1>FIFA World Cup<sup>TM</sup></h1>
+    <h2>All Time Statistics</h2>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label form="variable-type">Choose Data </label>
+                    <select class="form-control" id="data-selected">
+                        <option label = "Goals" value="GOALS">Goals</option>
+                        <option label = "Average Goals" value="AVERAGE_GOALS">Average Goals</option>
+                        <option label = "Matches" value="MATCHES">Matches</option>
+                        <option label = "Teams" value="TEAMS">Teams</option>
+                        <option label = "Average Attendance" value="AVERAGE_ATTENDANCE">Average Attendance</option>
+                    </select>
+                </div>
+            </form>
         </div>
-        <div class="col-auto">
-            <!-- Activity IV -->
-            <button type="button" class="btn btn-outline-dark"  id="change-sorting" >
-                SORT
-            </button>
+        <div class="col align-items-center">
+            <div class="col"><p id="date-range"></p></div>
+            <div class="col"><div id="range"></div></div>
         </div>
-    </form>
-
-
+    </div>
     <!-- Parent container for the visualization -->
-    <div id="chart-area"></div>
+    <div class = "row  align-items-center">
+        <div class="col">
+            <div id="chart-area"></div>
+        </div>
+        <div class="col" id="summary-area"></div>
+    </div>
 
 </div>
 
 <!-- embedding JS libraries -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="./js/nouislider.js"></script>
 
 <!-- d3 -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
 
+
+
 <!-- Your implementation -->
 <script src="js/main.js"></script>
-
 </body>
 </html>

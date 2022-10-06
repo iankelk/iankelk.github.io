@@ -1,26 +1,33 @@
-// SVG drawing area
-let margin = {top: 40, right: 10, bottom: 20, left: 80};
 
-let width = 960 - margin.left - margin.right,
-	height = 500 - margin.top - margin.bottom;
+// margin conventions & svg drawing area - since we only have one chart, it's ok to have these stored as global variables
+// ultimately, we will create dashboards with multiple graphs where having the margin conventions live in the global
+// variable space is no longer a feasible strategy.
+
+let margin = {top: 40, right: 40, bottom: 60, left: 60};
+
+let width = 600 - margin.left - margin.right;
+let height = 500 - margin.top - margin.bottom;
 
 let svg = d3.select("#chart-area").append("svg")
-	.attr("width", width + margin.left + margin.right)
-	.attr("height", height + margin.top + margin.bottom)
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
 	.append("g")
-	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// Date parser
+let formatDate = d3.timeFormat("%Y");
+let parseDate = d3.timeParse("%Y");
 
 // Scales
-let x = d3.scaleBand()
-	.rangeRound([0, width])
-	.paddingInner(0.1);
-
+let x = d3.scaleTime()
+	.range([0, width])
 let y = d3.scaleLinear()
-	.range([height, 0]);
+	.range([height,0])
 
 // Create the Axes
 let xAxis = d3.axisBottom()
-	.scale(x);
+	.scale(x)
+	.tickFormat(d3.format("d"));
 let yAxis = d3.axisLeft()
 	.scale(y);
 
@@ -33,131 +40,150 @@ let xGroup = svg.append("g")
 let yGroup = svg.append("g")
 	.attr("class", "axis y-axis")
 
-// Create the Y axis label
-yGroup
-	.append("text")
-	.attr("transform", `rotate(-90)translate(${-height/2}, -300)`)
-	.attr("class", "axis-label y-label")
-	.attr("text-anchor", "middle")
-	.attr("x", 0)
-	.attr("y", 233)
-	.text("stores");
-
-// Initialize UI
-let initialRanking = d3.select("#ranking-type").property("value");
-let sortByCompanies = true;
-
-console.log(initialRanking);
-
 // Initialize data
 loadData();
 
-// Create a 'data' property under the window object
-// to store the coffee chain data
-Object.defineProperty(window, 'data', {
-	// data getter
-	get: function() { return _data; },
-	// data setter
-	set: function(value) {
-		_data = value;
-		// update the visualization each time the data property is set by using the equal sign (e.g. data = [])
-		updateVisualization()
-	}
-});
-
+// FIFA world cup
+let data;
 
 // Load CSV file
 function loadData() {
-	d3.csv("data/coffee-house-chains.csv").then(csv=> {
-
-		csv.sort((a,b)=> b.stores - a.stores);
-
-		csv.forEach(function(d){
-			d.revenue = +d.revenue;
-			d.stores = +d.stores;
-		});
+	d3.csv("data/fifa-world-cup.csv", row => {
+		row.YEAR = parseDate(row.YEAR);
+		row.TEAMS = +row.TEAMS;
+		row.MATCHES = +row.MATCHES;
+		row.GOALS = +row.GOALS;
+		row.AVERAGE_GOALS = +row.AVERAGE_GOALS;
+		row.AVERAGE_ATTENDANCE = +row.AVERAGE_ATTENDANCE;
+		return row
+	}).then(csv => {
 
 		// Store csv data in global variable
 		data = csv;
 
-		// updateVisualization gets automatically called within the data = csv call;
-		// basically(whenever the data is set to a value using = operator);
-		// see the definition above: Object.defineProperty(window, 'data', { ...
+		// Create the line and slider with initial values
+		createLine();
+		buildSlider();
+		// Draw the visualization for the first time
+		updateVisualization(minMaxDateRange(data));
 	});
 }
 
-// option 1: D3
-d3.select("#ranking-type").on("change", updateVisualization);
-
-d3.select("#change-sorting").on("click", () => {
-	sortByCompanies = !sortByCompanies;
-	updateVisualization();
-});
+function buildSlider() {
+	let range = document.getElementById("range");
+	noUiSlider.create(range, {
+		// Range over all the dates
+		range: {
+			'min': d3.min(data, (d) => +formatDate(d.YEAR)),
+			'max': d3.max(data, (d) => +formatDate(d.YEAR))
+		},
+		// World cups are 4 years apart
+		step: 4,
+		// World cups are 4 years apart
+		margin: 4,
+		// Start showing all the data
+		start: minMaxDateRange(data),
+		// Display colored bars between handles
+		connect: true,
+		// Move handle on tap, bars are draggable
+		behaviour: 'tap-drag',
+		tooltips: true,
+		format: {
+			to: function(value) {
+				return d3.format("d")(value);
+			},
+			from: function(value) {
+				return +value;
+			}
+		}
+	});
+	// Attach an event listener to the slider
+	range.noUiSlider.on('slide', function (values, handle) {
+		console.log(values);
+		updateVisualization(values)
+	});
+}
 
 // Render visualization
-function updateVisualization() {
+function updateVisualization(dateRange) {
 
-	// Choose selection based on dropdown
-	let selection = d3.select("#ranking-type").property("value");
-	let filteredData = data.map(function(d){return {company: d.company, value: d[selection]}});
+	// Create the transition
+	let t = d3.transition().duration(800);
 
-	// Sort data based on sort button
-	let sortedData = sortData(filteredData,sortByCompanies);
+	let selection = d3.select("#data-selected").property("value");
+	let selectedData = data.map(function(d){ return {...d, value:d[selection]}});
+	let filteredData = selectedData.filter( (d) => ((+formatDate(d.YEAR) >= dateRange[0]) && (+formatDate(d.YEAR) <= dateRange[1])));
+
+	// Set the listener for the data selector
+	d3.select("#data-selected").on("change", () => updateVisualization(minMaxDateRange(filteredData)));
+
+	// Create circles
+	let circles = svg.selectAll("circle")
+		.data(filteredData);
 
 	// Update the scalers for the new data
-	x.domain(sortedData.map( (d) => d.company));
-	y.domain([0, d3.max(sortedData, (d) => d.value)]);
+	x.domain(minMaxDateRange(filteredData));
+	y.domain([d3.min(filteredData, (d) => d.value), d3.max(filteredData, (d) => d.value)]);
+	console.log(filteredData);
 
-	// Define the bar chart
-	let bar = svg.selectAll("rect")
-		// Custom key function
-		.data(sortedData, function(entry) { return entry.company; });
-		// Basic keys by index
-		//.data(sortedData);
+	svg.select(".line")
+		.datum(filteredData)
+		.transition(t)
+		.attr("d", d3.line(filteredData)
+			.x(d=> x(+formatDate(d.YEAR)))
+			.y(d=> y(d[selection]))
+			.curve(d3.curveLinear)
+		);
 
-	// Update the axes
-	xAxis.scale(x)
-	yAxis.scale(y)
+	circles.exit().remove();
 
-	// Enter and update the bar chart
-	bar
+	// Create / Update circles
+	circles
 		.enter()
-		.append("rect")
-		.merge(bar)
-		.style("opacity", 0.5)
-		.transition()
-		.duration(1000)
-		.style("opacity", 1)
-		.attr("class", "bar")
-		.attr("x", (d) => x(d.company))
-		.attr("y", (d) => y(d.value))
-		.attr("width", x.bandwidth())
-		.attr("height", d=> height - y(d.value));
-
-	// Remove the old bar chart
-	bar.exit().remove();
+		.append("circle")
+		.data(filteredData)
+		.merge(circles)
+		.transition(t)
+		.attr("class", "chart-point")
+		.attr("cx", d=>x(+formatDate(d.YEAR)))
+		.attr("cy", d=>y(d.value))
+		.attr("r", 5)
 
 	// Update x axis
 	xGroup
-		.transition()
-		.duration(1000)
-		.call(xAxis)
+		.transition(t)
+		.call(xAxis);
 
 	// Update y axis
 	yGroup
-		.transition()
-		.duration(1000)
+		.transition(t)
 		.call(yAxis)
-
-	// Append y axis label
-	svg.selectAll(".axis-label.y-label")
-		.text(selection);
 }
 
-function sortData(data, toggle){
-	if (toggle) {
-		return data.sort( (a,b) => b.value - a.value);
-	} else {
-		return data.sort( (a,b) => a.value - b.value);
-	}
+// Show details for a specific FIFA World Cup
+function showEdition(d){
+	
+}
+
+function createLine() {
+
+	let selection = d3.select("#data-selected").property("value");
+
+	// Scales for initial data
+	x.domain(minMaxDateRange(data));
+	y.domain([d3.min(data, (d) => d[selection]), d3.max(data, (d) => d[selection])]);
+
+	// Create line
+	let line = svg.append("path")
+		.datum(data)
+		.attr("class", "line")
+		.attr("d", d3.line(data)
+			.x(d=> x(+formatDate(d.YEAR)))
+			.y(d=> y(d[selection]))
+			.curve(d3.curveLinear)
+		);
+}
+
+function minMaxDateRange(currentData) {
+	return [d3.min(currentData, (d) => +formatDate(d.YEAR)), d3.max(currentData, (d) => +formatDate(d.YEAR))];
 }
