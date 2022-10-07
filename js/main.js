@@ -64,6 +64,7 @@ function loadData() {
 		// Create the line and slider with initial values
 		createLine();
 		buildSlider();
+		showEdition(data[0]);
 		// Draw the visualization for the first time
 		updateVisualization(minMaxDateRange(data));
 	});
@@ -80,7 +81,7 @@ function buildSlider() {
 		// World cups are 4 years apart
 		step: 4,
 		// World cups are 4 years apart
-		margin: 4,
+		margin: 8,
 		// Start showing all the data
 		start: minMaxDateRange(data),
 		// Display colored bars between handles
@@ -141,16 +142,16 @@ function updateVisualization(dateRange) {
 	circles
 		.enter()
 		.append("circle")
-		.data(filteredData)
+		.on("mouseover", (event, d) => showEdition(d))
 		.style("opacity", 0.3)
 		.attr("cy", d=>y(height))
 		.style("opacity", 1.0)
 		.merge(circles)
 		.transition(t)
-		.attr("class", "chart-point")
+		.attr("class", "tooltip-circle")
 		.attr("cy", d=>y(d[selection]))
 		.attr("cx", d=>x(+formatDate(d.YEAR)))
-		.attr("r", 5)
+		.attr("r", 5);
 
 	// Remove exiting circles
 	circles.exit().remove();
@@ -167,8 +168,14 @@ function updateVisualization(dateRange) {
 }
 
 // Show details for a specific FIFA World Cup
-function showEdition(d){
-	
+function showEdition(d) {
+	document.getElementById('summary-edition').innerHTML = d.EDITION;
+	document.getElementById("summary-winner").innerHTML = d.WINNER;
+	document.getElementById("summary-goals").innerHTML = d.GOALS;
+	document.getElementById("summary-avg-goals").innerHTML = d.AVERAGE_GOALS;
+	document.getElementById("summary-matches").innerHTML = d.MATCHES;
+	document.getElementById("summary-teams").innerHTML = d.TEAMS;
+	document.getElementById("summary-attendance").innerHTML = d.AVERAGE_ATTENDANCE.toLocaleString("en-US");
 }
 
 function createLine() {

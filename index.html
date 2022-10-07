@@ -18,14 +18,14 @@
 
 <div class="container">
 
-    <h1>FIFA World Cup<sup>TM</sup></h1>
+    <h1>FIFA World Cup<sup>TM</sup> <span id="date-range"></span></h1>
     <h2>All Time Statistics</h2>
     <hr />
     <div class="row">
         <div class="col">
             <form class="form-inline">
                 <div class="form-group">
-                    <label form="variable-type">Choose Data </label>
+                    <label form="variable-type" id="selector-label">Choose Data </label>
                     <select class="form-control" id="data-selected">
                         <option label = "Goals" value="GOALS">Goals</option>
                         <option label = "Average Goals" value="AVERAGE_GOALS">Average Goals</option>
@@ -37,18 +37,29 @@
             </form>
         </div>
         <div class="col align-items-center">
-            <div class="col"><p id="date-range"></p></div>
-            <div class="col"><div id="range"></div></div>
+            <div class="row">
+                <div class="col">
+                    <div id="range"></div></div>
+            </div>
         </div>
     </div>
-    <!-- Parent container for the visualization -->
-    <div class = "row  align-items-center">
+    <div class="row">
         <div class="col">
             <div id="chart-area"></div>
         </div>
-        <div class="col" id="summary-area"></div>
+            <div class="col" id="summary-area">
+                <h3 id="summary-edition"></h3>
+                <table class='table table-responsive table-striped table-hover table-borderless' id="summary-table">
+                    <tr><th class="header-cell">Winner</th><th class="header-cell" id="summary-winner"></th></tr>
+                    <tr><th>Goals</th><th id="summary-goals"></th></tr>
+                    <tr><th>Average Goals</th><th id="summary-avg-goals"></th></tr>
+                    <tr><th>Matches</th><th id="summary-matches"></th></tr>
+                    <tr><th>Teams</th><th id="summary-teams"></th></tr>
+                    <tr><th> Average Attendance</th><th id="summary-attendance"></th></tr>
+                </tr></table>
+            </div>
+        </div>
     </div>
-
 </div>
 
 <!-- embedding JS libraries -->
