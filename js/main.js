@@ -142,7 +142,7 @@ function updateVisualization(dateRange) {
 	circles
 		.enter()
 		.append("circle")
-		.on("mouseover", (event, d) => showEdition(d))
+		.on("click", (event, d) => showEdition(d))
 		.style("opacity", 0.3)
 		.attr("cy", d=>y(height))
 		.style("opacity", 1.0)
@@ -151,7 +151,7 @@ function updateVisualization(dateRange) {
 		.attr("class", "tooltip-circle")
 		.attr("cy", d=>y(d[selection]))
 		.attr("cx", d=>x(+formatDate(d.YEAR)))
-		.attr("r", 5);
+		.attr("r", 7);
 
 	// Remove exiting circles
 	circles.exit().remove();
