@@ -62,8 +62,8 @@ select {
 }
 
 .header-cell {
-  max-width: 300px;
-  min-width: 300px;
+  max-width: 30vh;
+  min-width: 30vh;
 }
 
 
