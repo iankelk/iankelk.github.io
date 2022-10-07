@@ -176,6 +176,8 @@ function updateVisualization(dateRange) {
 		.attr("class", "tooltip-circle")
 		.attr("cy", d=>y(d[selection]))
 		.attr("cx", d=>x(+formatDate(d.YEAR)))
+		.attr("r", 7);
+
 
 	// Remove exiting circles
 	circles.exit().remove();
