@@ -21,7 +21,7 @@ h2 {
   font-weight: 300;
   font-size: 18px;
   color: #91988B;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -31,6 +31,13 @@ h3 {
   color: #333;
 }
 
+.logo {
+  position: relative;
+  top: 20px;
+  width: 300px;
+  border: 3px solid #5b835a;
+  padding: 10px;
+}
 
 /****************/
 /*  USER INPUT  */
@@ -41,6 +48,7 @@ select {
 }
 
 #selector-label {
+  margin-top: 35px;
   margin-bottom: 10px;
 }
 
@@ -62,10 +70,18 @@ select {
 }
 
 .header-cell {
-  max-width: 30vh;
-  min-width: 30vh;
+  max-width: 100px;
+  min-width: 100px;
 }
 
+.info-cell {
+  color: #5C865B;
+  horiz-align: left;
+}
+
+#summary-table {
+  border: thin solid grey;
+}
 
 /****************/
 /*  LINE CHART  */
@@ -90,6 +106,7 @@ select {
 .tooltip-circle {
   fill: #5C865B;
   cursor: pointer;
+  r: 7;
 }
 
 .tooltip-title {
@@ -99,12 +116,13 @@ select {
 }
 
 .d3-tip {
-  line-height: 1;
+  line-height: 1.2;
   padding: 12px;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
   border-radius: 2px;
   z-index: 100;
+  pointer-events: none;
 }
 
 /* Creates a small triangle extender for the tooltip */
@@ -117,7 +135,9 @@ select {
   color: rgba(0, 0, 0, 0.8);
   content: "\25BC";
   position: absolute;
-  text-align: center;
+  left: 63px;
+  top: 61px;
+  /*text-align: center;*/
 }
 
 /* Style northward tooltips differently */
@@ -139,7 +159,7 @@ select {
 }
 
 #range {
-  margin: 40px 15px 10px 15px;
+  margin: 40px 0px 10px 30px;
 }
 
 .range-slider-value {

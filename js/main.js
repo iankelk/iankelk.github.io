@@ -5,7 +5,7 @@
 
 let margin = {top: 40, right: 40, bottom: 60, left: 60};
 
-let width = 600 - margin.left - margin.right;
+let width = 700 - margin.left - margin.right;
 let height = 500 - margin.top - margin.bottom;
 
 // let svg = d3.select("#chart-area").append("svg")
@@ -13,6 +13,11 @@ let height = 500 - margin.top - margin.bottom;
 // 		.attr("height", height + margin.top + margin.bottom)
 // 	.append("g")
 // 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// Propercase function taken from here: https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
+String.prototype.toProperCase = function () {
+	return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+};
 
 let svg = d3.select("#chart-area").append("svg")
 	.attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
@@ -46,6 +51,18 @@ let xGroup = svg.append("g")
 // Draw the y axis
 let yGroup = svg.append("g")
 	.attr("class", "axis y-axis")
+
+// define tooltip
+let tooltip = d3.select("body")
+	.append("div")
+	.attr('class', 'd3-tip')
+	.style("position", "absolute")
+	.style("visibility", "hidden")
+	.style("opacity", 0.9);
+
+function updateTooltip() {
+
+}
 
 // Initialize data
 loadData();
@@ -119,6 +136,7 @@ function updateVisualization(dateRange) {
 	let t = d3.transition().duration(800);
 
 	let selection = d3.select("#data-selected").property("value");
+	console.log(selection);
 	let filteredData = data.filter( (d) => ((+formatDate(d.YEAR) >= dateRange[0]) && (+formatDate(d.YEAR) <= dateRange[1])));
 
 	// Label the date range
@@ -150,15 +168,21 @@ function updateVisualization(dateRange) {
 		.enter()
 		.append("circle")
 		.on("click", (event, d) => showEdition(d))
-		.style("opacity", 0.3)
+		.on("mouseover", () => tooltip.style("visibility", "visible"))
+		.on("mouseout", () => tooltip.style("visibility", "hidden"))
+		.on('mousemove', (event,d) => {
+			selection = d3.select("#data-selected").property("value");
+			return tooltip.html(d.EDITION + "<br>" + selection.replace("_", " ").toProperCase() + ":  " +
+				d[selection].toLocaleString("en-US"))
+				.style("top", `${event.pageY - 80}px`)
+				.style("left", `${event.pageX - 70}px`)
+		})
 		.attr("cy", d=>y(height))
-		.style("opacity", 1.0)
 		.merge(circles)
 		.transition(t)
 		.attr("class", "tooltip-circle")
 		.attr("cy", d=>y(d[selection]))
 		.attr("cx", d=>x(+formatDate(d.YEAR)))
-		.attr("r", 7);
 
 	// Remove exiting circles
 	circles.exit().remove();
@@ -186,7 +210,6 @@ function showEdition(d) {
 }
 
 function createLine() {
-
 	let selection = d3.select("#data-selected").property("value");
 
 	// Scales for initial data

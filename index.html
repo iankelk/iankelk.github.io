@@ -8,7 +8,7 @@
 
     <!-- CSS LIBRARIES -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.css" integrity="sha512-DGB74Gyw93qON+V0QxSRs1er6sqoPyFoy23HBL5LN7MRJBcjeCU22zega+vOEGE0XQLoVrv4ExcaesSTwZQA2w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>-->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.css" integrity="sha512-DGB74Gyw93qON+V0QxSRs1er6sqoPyFoy23HBL5LN7MRJBcjeCU22zega+vOEGE0XQLoVrv4ExcaesSTwZQA2w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>-->
     <link href="./css/nouislider.css" rel="stylesheet">
 
     <!-- YOUR CSS -->
@@ -18,11 +18,14 @@
 
 <div class="container">
 
-    <h1>FIFA World Cup<sup>TM</sup> <span id="date-range"></span></h1>
-    <h2>All Time Statistics</h2>
-    <hr />
     <div class="row">
         <div class="col">
+            <h1>FIFA World Cup<sup>TM</sup> <span id="date-range"></span></h1>
+            <h2>All Time Statistics</h2>
+        </div>
+    <hr />
+    <div class="row">
+        <div class="col-7">
             <form class="form-inline">
                 <div class="form-group">
                     <label form="variable-type" id="selector-label">Choose Data </label>
@@ -36,30 +39,28 @@
                 </div>
             </form>
         </div>
-        <div class="col align-items-center">
-            <div class="row">
-                <div class="col">
-                    <div id="range"></div></div>
-            </div>
+        <div class="col-5">
+            <div id="range"></div></div>
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-7">
             <div id="chart-area"></div>
         </div>
-            <div class="col" id="summary-area">
-                <h3 id="summary-edition"></h3>
-                <table class='table table-responsive table-striped table-hover table-borderless' id="summary-table">
-                    <tr><th class="header-cell">Winner</th><th class="header-cell" id="summary-winner"></th></tr>
-                    <tr><th>Goals</th><th id="summary-goals"></th></tr>
-                    <tr><th>Average Goals</th><th id="summary-avg-goals"></th></tr>
-                    <tr><th>Matches</th><th id="summary-matches"></th></tr>
-                    <tr><th>Teams</th><th id="summary-teams"></th></tr>
-                    <tr><th> Average Attendance</th><th id="summary-attendance"></th></tr>
+        <div class="col-5" id="summary-area">
+            <h3 id="summary-edition"></h3>
+            <table class='table table-responsive table-hover table-borderless' id="summary-table">
+                <tr><th class="header-cell">Winner</th><th class="header-cell info-cell" id="summary-winner"></th></tr>
+                <tr><th>Goals:</th><th id="summary-goals" class="info-cell"></th></tr>
+                <tr><th>Average Goals:</th><th id="summary-avg-goals" class="info-cell"></th></tr>
+                <tr><th>Matches:</th><th id="summary-matches" class="info-cell"></th></tr>
+                <tr><th>Teams:</th><th id="summary-teams" class="info-cell"></th></tr>
+                <tr><th> Average Attendance:</th><th id="summary-attendance" class="info-cell"></th></tr>
                 </tr></table>
-            </div>
+                <img src="./img/logo.svg" class="img-fluid logo" alt="logo">
         </div>
     </div>
+</div>
 </div>
 
 <!-- embedding JS libraries -->
