@@ -8,21 +8,14 @@ let margin = {top: 40, right: 40, bottom: 60, left: 60};
 let width = 700 - margin.left - margin.right;
 let height = 500 - margin.top - margin.bottom;
 
-// let svg = d3.select("#chart-area").append("svg")
-// 		.attr("width", width + margin.left + margin.right)
-// 		.attr("height", height + margin.top + margin.bottom)
-// 	.append("g")
-// 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-// Propercase function taken from here: https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
+// Proper case function adapted from here: https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
 String.prototype.toProperCase = function () {
-	return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+	return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();});
 };
 
+// Using a viewbox in an attempt to be responsive
 let svg = d3.select("#chart-area").append("svg")
 	.attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
-		// .attr("width", width + margin.left + margin.right)
-		// .attr("height", height + margin.top + margin.bottom)
 	.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -52,17 +45,10 @@ let xGroup = svg.append("g")
 let yGroup = svg.append("g")
 	.attr("class", "axis y-axis")
 
-// define tooltip
+// Create tooltip
 let tooltip = d3.select("body")
 	.append("div")
 	.attr('class', 'd3-tip')
-	.style("position", "absolute")
-	.style("visibility", "hidden")
-	.style("opacity", 0.9);
-
-function updateTooltip() {
-
-}
 
 // Initialize data
 loadData();
@@ -81,19 +67,20 @@ function loadData() {
 		row.AVERAGE_ATTENDANCE = +row.AVERAGE_ATTENDANCE;
 		return row
 	}).then(csv => {
-
 		// Store csv data in global variable
 		data = csv;
 
-		// Create the line and slider with initial values
+		// Create the line and slider
 		createLine();
 		buildSlider();
+		// Show the edition of the first, most recent entry
 		showEdition(data[0]);
 		// Draw the visualization for the first time
 		updateVisualization(minMaxDateRange(data));
 	});
 }
 
+// Create the slider
 function buildSlider() {
 	let range = document.getElementById("range");
 	noUiSlider.create(range, {
@@ -120,6 +107,12 @@ function buildSlider() {
 			from: function(value) {
 				return +value;
 			}
+		},
+		pips: {
+			mode: 'positions',
+			values: [0, 25, 50, 75, 100],
+			density: 4,
+			stepped: true
 		}
 	});
 	// Attach an event listener to the slider
@@ -209,6 +202,7 @@ function showEdition(d) {
 	document.getElementById("summary-attendance").innerHTML = d.AVERAGE_ATTENDANCE.toLocaleString("en-US");
 }
 
+// Create the line (path) that will be used by the updating
 function createLine() {
 	let selection = d3.select("#data-selected").property("value");
 
@@ -227,6 +221,7 @@ function createLine() {
 		);
 }
 
+// Given the current data, return the range of years as a 2 element array
 function minMaxDateRange(currentData) {
 	return [d3.min(currentData, (d) => +formatDate(d.YEAR)), d3.max(currentData, (d) => +formatDate(d.YEAR))];
 }
