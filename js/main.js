@@ -19,15 +19,18 @@ let svg = d3.select("#chart-area").append("svg")
 	.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+// Padding for some separation between line plot and axes
+let padding = 25;
+
 // Date parser
 let formatDate = d3.timeFormat("%Y");
 let parseDate = d3.timeParse("%Y");
 
 // Scales
 let x = d3.scaleTime()
-	.range([0, width])
+	.range([padding, width - padding])
 let y = d3.scaleLinear()
-	.range([height,0])
+	.range([height - padding, padding])
 
 // Create the Axes
 let xAxis = d3.axisBottom()
