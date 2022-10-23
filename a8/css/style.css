@@ -1,0 +1,102 @@
+
+/* ADD YOUR STYLES HERE */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.browser text {
+    text-anchor: end;
+}
+
+.brush .extent {
+    stroke: #fff;
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+}
+
+.main-area {
+    margin-top: 2vh;
+    border: thin solid grey;
+    border-radius: 5px;
+    background: rgba(221,221,221,0.45);
+    height: 100%;
+}
+
+#title-row {
+    height: 10vh;
+}
+
+#timeline {
+    height: 100%;
+    /*width: 100%;*/
+}
+
+#ownrent, #electricity, #latrine, #hohreligion {
+    height: 12vh;
+}
+
+#hohreligion {
+    margin-bottom: 3vh;
+}
+
+.bar-label{
+    fill: darkblue;
+    font-size: 0.8vw;
+}
+
+.bar {
+    fill: darkblue;
+}
+
+.barchart {
+        height: 100%;
+        width: 100%;
+}
+
+.barchart-title {
+    text-anchor: middle;
+    font-size: 12pt;
+}
+
+.brush .extent {
+    stroke: #fff;
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+}
+
+.area {
+    fill: darkgreen;
+}
+
+.x.axis {
+    color: darkgreen;
+}
