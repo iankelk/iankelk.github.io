@@ -57,20 +57,16 @@ h2 {
 
 #timeline {
     height: 100%;
-    /*width: 100%;*/
+    margin-bottom: 2vh;
 }
 
 #ownrent, #electricity, #latrine, #hohreligion {
-    height: 12vh;
-}
-
-#hohreligion {
-    margin-bottom: 3vh;
+    height: 200px;
 }
 
 .bar-label{
     fill: darkblue;
-    font-size: 0.8vw;
+    font-size: 1.4em;
 }
 
 .bar {
@@ -99,4 +95,12 @@ h2 {
 
 .x.axis {
     color: darkgreen;
+}
+
+#barcharts {
+    height: 820px;
+}
+
+.axis {
+    font-size: 1.1em;
 }

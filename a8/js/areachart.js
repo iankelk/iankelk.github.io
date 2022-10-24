@@ -20,15 +20,10 @@ class AreaChart {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 20, right: 10, bottom: 20, left: 35};
+        vis.margin = {top: 20, right: 10, bottom: 30, left: 50};
 
-        // Bit of a kludge here - for some reason getBoundingClientRect().height returns 0 when
-        // viewed on a phone-sized screen, so I've added a check to ensure it doesn't go to 0
-        // and cause the visualizations not to render
-        let temp_height = vis.parentElement.getBoundingClientRect().height;
-        if (temp_height === 0) temp_height = 600;
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-        vis.height = temp_height - vis.margin.top - vis.margin.bottom;
+        vis.height = 800 - vis.margin.top - vis.margin.bottom;
 
         // SVG drawing area
         vis.svg = d3.select(vis.parentElement).append("svg")

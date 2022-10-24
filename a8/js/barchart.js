@@ -31,7 +31,7 @@ class BarChart {
 		vis.margin = {top: 40, right: 50, bottom: 0, left: 110};
 
 		vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-		vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
+		vis.height = 200 - vis.margin.top - vis.margin.bottom;
 
 		// SVG drawing area
 		vis.svg = d3.select(vis.parentElement).append("svg")
@@ -102,8 +102,8 @@ class BarChart {
 
 		// (1) Update domains
 		vis.x
-			.domain(vis.sorted.map(d=>d.key))
-			.padding(0.5);
+			.domain(vis.sorted.map(d => d.key))
+			.padding(0.2);
 		vis.y.domain([0, d3.max(vis.sorted, d => d.value)]);
 
 		vis.xGroup
@@ -125,7 +125,7 @@ class BarChart {
 			.attr("y", (d) => vis.x(d.key))
 			.attr("height", vis.x.bandwidth() )
 			.transition(t)
-			.attr("width", function(d) { return vis.y(d.value); });
+			.attr("width", (d) => vis.y(d.value));
 
 		vis.rect.exit().remove();
 
@@ -138,9 +138,9 @@ class BarChart {
 			.append('text')
 			.attr("class", "bar-label")
 			.merge(vis.barsLabel)
-			.attr("y", function(d) {return (vis.x(d.key) + vis.x.bandwidth()/1.2);})
+			.attr("y", (d) => vis.x(d.key) + vis.x.bandwidth()/1.5)
 			.transition(t)
-			.attr("x", function(d) {return (vis.width-(vis.width-vis.y(d.value))+5);})
+			.attr("x", (d) => vis.width - (vis.width - vis.y(d.value)) + 5)
 			.text(d=>d.value.toLocaleString("en-US"))
 
 		vis.barsLabel.exit().remove();
