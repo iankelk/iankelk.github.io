@@ -22,15 +22,13 @@ class AreaChart {
 
         vis.margin = {top: 20, right: 10, bottom: 20, left: 35};
 
-        // TODO: #9 - Change hardcoded width to reference the width of the parent element
+        // Bit of a kludge here - for some reason getBoundingClientRect().height returns 0 when
+        // viewed on a phone-sized screen, so I've added a check to ensure it doesn't go to 0
+        // and cause the visualizations not to render
         let temp_height = vis.parentElement.getBoundingClientRect().height;
         if (temp_height === 0) temp_height = 600;
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = temp_height - vis.margin.top - vis.margin.bottom;
-
-
-        console.log("vis width:" + vis.width);
-        console.log("vis height:" + vis.height);
 
         // SVG drawing area
         vis.svg = d3.select(vis.parentElement).append("svg")
@@ -95,7 +93,7 @@ class AreaChart {
         let vis = this;
 
         // (1) Group data by date and count survey results for each day
-        let rolled = d3.rollup(vis.data, v => v.length, d => +d.survey);
+        let rolled = d3.rollup(vis.data, v => v.length, d => d.survey);
         vis.displayData = Array.from(rolled, ([date, value]) => ({date, value}));
         // (2) Sort data by day
         vis.displayData.sort((a,b) => d3.ascending(a.date, b.date));

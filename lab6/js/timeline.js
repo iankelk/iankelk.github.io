@@ -24,11 +24,11 @@ class Timeline {
 
 		vis.margin = {top: 0, right: 40, bottom: 30, left: 40};
 
-		vis.width = document.getElementById(vis._parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-		vis.height = document.getElementById(vis._parentElement).getBoundingClientRect().height  - vis.margin.top - vis.margin.bottom;
+		vis.width = vis._parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
+		vis.height = vis._parentElement.getBoundingClientRect().height  - vis.margin.top - vis.margin.bottom;
 
 		// SVG drawing area
-		vis.svg = d3.select("#" + vis._parentElement).append("svg")
+		vis.svg = d3.select(vis._parentElement).append("svg")
 			.attr("width", vis.width + vis.margin.left + vis.margin.right)
 			.attr("height", vis.height + vis.margin.top + vis.margin.bottom)
 			.append("g")

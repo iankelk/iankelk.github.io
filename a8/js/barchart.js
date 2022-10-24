@@ -6,6 +6,10 @@
  * @param _config					-- variable from the dataset (e.g. 'electricity') and title for each bar chart
  */
 
+// Proper case function adapted from here: https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
+String.prototype.toProperCase = function () {
+	return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();});
+};
 
 class BarChart {
 
@@ -24,7 +28,7 @@ class BarChart {
 	initVis() {
 		let vis = this;
 
-		vis.margin = {top: 40, right: 50, bottom: 0, left: 100};
+		vis.margin = {top: 40, right: 50, bottom: 0, left: 110};
 
 		vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
 		vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
@@ -78,7 +82,7 @@ class BarChart {
 		let vis = this;
 
 		// (1) Group data by key variable (e.g. 'electricity') and count leaves
-		let rolled = d3.rollup(vis.displayData, leaves => leaves.length, d => d[vis.config.key])
+		let rolled = d3.rollup(vis.displayData, leaves => leaves.length, d => d[vis.config.key].toProperCase())
 		let arrayed = Array.from(rolled, ([key, value]) => ({key, value}));
 		// (2) Sort columns descending
 		vis.sorted = arrayed.sort( (a,b) => d3.descending(a.value, b.value));

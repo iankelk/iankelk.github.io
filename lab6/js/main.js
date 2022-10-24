@@ -15,8 +15,8 @@ function loadData() {
         console.log('data loaded ')
 
         // TO-DO (Activity I): instantiate visualization objects
-		areachart = new StackedAreaChart("stacked-area-chart", data.layers);
-		timeline = new Timeline("timeline", data.years);
+		areachart = new StackedAreaChart(document.getElementById("stacked-area-chart"), data.layers);
+		timeline = new Timeline(document.getElementById("timeline"), data.years);
 
         // TO-DO (Activity I):  init visualizations
 		areachart.initVis();

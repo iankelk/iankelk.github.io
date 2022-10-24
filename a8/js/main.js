@@ -55,3 +55,4 @@ function drawAreaChart(data) {
     // Create the area chart
     areachart = new AreaChart(document.getElementById("timeline"), data);
 }
+
