@@ -15,7 +15,7 @@ class BarVis {
     initVis(){
         let vis = this;
 
-        vis.margin = {top: 30, right: 30, bottom: 30, left: 50};
+        vis.margin = {top: 30, right: 30, bottom: 50, left: 50};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -26,18 +26,18 @@ class BarVis {
             .append('g')
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
+        let title = vis.descending ? "Ten Worst States" : "Ten Best States";
         // add title
         vis.svg.append('g')
             .attr('class', 'title bar-title')
             .append('text')
-            .text('Title for Barchart')
-            .attr('transform', `translate(${vis.width / 2}, 10)`)
+            .text(title)
+            .attr('transform', `translate(${vis.width / 2}, 5)`)
             .attr('text-anchor', 'middle');
 
         // tooltip
         vis.tooltip = d3.select("body").append('div')
             .attr('class', "tooltip")
-            .attr('id', 'barTooltip')
 
         // TODO
         // Scales
@@ -77,13 +77,7 @@ class BarVis {
         } else {
             vis.stateInfo.sort((a,b) => {return a[selectedCategory] - b[selectedCategory]})
         }
-
-        console.log('final data structure', vis.stateInfo);
-
         vis.topTenData = vis.stateInfo.slice(0, 10)
-
-        console.log('final data structure', vis.topTenData);
-
         vis.updateVis()
 
     }
@@ -94,8 +88,6 @@ class BarVis {
             .interpolator(d3.interpolateViridis)
             .domain([
                 d3.min(vis.stateInfo, d=>d[selectedCategory]), d3.max(vis.stateInfo, d=>d[selectedCategory])])
-
-        console.log('here')
 
         let t = d3.transition().duration(700);
 
@@ -130,13 +122,26 @@ class BarVis {
                     .attr('stroke-width', '2px')
                     .attr('stroke', 'black')
                     .attr('fill', 'rgba(173,222,255,0.62)')
+
+                vis.tooltip
+                    .style("opacity", 1)
+                    .style("left", event.pageX - 200 + "px")
+                    .style("top", event.pageY + "px")
+                    .html(`
+                     <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
+                         <h4>${d.state}</h4>
+                         <strong> Population </strong>: ${d.population.toLocaleString("en-US")}<br />  
+                         <strong>Cases (absolute): </strong>${d.absCases.toLocaleString("en-US")}<br /> 
+                         <strong>Deaths (absolute): </strong>${d.absDeaths.toLocaleString("en-US")}<br /> 
+                         <strong>Cases (relative): </strong>${d.relCases.toFixed(2)}%<br /> 
+                         <strong>Deaths (relative): </strong>${d.relDeaths.toFixed(3)}%
+                     </div>`);
+
                 selectedState = d.state;
                 myMapVis.highlightState();
                 myBrushVis.wrangleDataResponsive();
-
             })
             .on('mouseout', function (event, d) {
-                console.log(d);
                 d3.select(this)
                     .attr('stroke-width', '0px')
                     .attr("fill", function (d) {
@@ -144,7 +149,14 @@ class BarVis {
                         let myStateInfo = vis.stateInfo.filter( (d) => d.state === myState);
                         return vis.colorScale(myStateInfo[0][selectedCategory])
                     })
+
+                vis.tooltip
+                    .style("opacity", 0)
+                    .style("left", 0)
+                    .style("top", 0)
+                    .html(``);
                 myMapVis.removeHighlightState();
+
             })
             .transition(t)
             .style("opacity", 1)
@@ -158,6 +170,8 @@ class BarVis {
         vis.xGroup
             .transition(t)
             .call(vis.xAxis)
+            .selectAll("text")
+            .attr("transform", "translate(5,12) rotate(25)");
 
         // Update y axis
         vis.yGroup
@@ -179,7 +193,6 @@ class BarVis {
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)
             .attr('stroke-width', '0px')
             .attr("fill", function (d) {
-                console.log(d.state)
                 let myStateInfo = vis.stateInfo.filter( (d) => d.state === selectedState);
                 return vis.colorScale(myStateInfo[0][selectedCategory])
             });

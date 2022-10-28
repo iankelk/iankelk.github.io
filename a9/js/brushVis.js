@@ -39,7 +39,7 @@ class BrushVis {
         vis.svg.append('g')
             .attr('class', 'title')
             .append('text')
-            .text('Title for Timeline')
+            .text('COVID-19 2020 Timeline')
             .attr('transform', `translate(${vis.width / 2}, 20)`)
             .attr('text-anchor', 'middle');
 
@@ -231,10 +231,10 @@ class BrushVis {
         vis.xAxis.transition().duration(400).call(d3.axisBottom(vis.x));
         vis.yAxis.transition().duration(400).call(d3.axisLeft(vis.y).ticks(5));
 
-        console.log("preProcessedData");
-        console.log(this.preProcessedData);
-        console.log("dataPathTwo");
-        console.log(this.dataPathTwo);
+        // console.log("preProcessedData");
+        // console.log(this.preProcessedData);
+        // console.log("dataPathTwo");
+        // console.log(this.dataPathTwo);
 
         // draw pathOne
         vis.pathOne.datum(vis.preProcessedData)

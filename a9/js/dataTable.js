@@ -43,17 +43,11 @@ class DataTable {
     wrangleData() {
         let vis = this
 
-        // check out the data
-        // console.log(vis.covidData)
-        // console.log(vis.usaData)
-
         // first, filter according to selectedTimeRange, init empty array
         let filteredData = [];
 
         // if there is a region selected
         if (selectedTimeRange.length !== 0) {
-            //console.log('region selected', vis.selectedTimeRange, vis.selectedTimeRange[0].getTime() )
-
             // iterate over all rows the csv (dataFill)
             vis.covidData.forEach(row => {
                 // and push rows with proper dates into filteredData
@@ -67,9 +61,6 @@ class DataTable {
 
         // prepare covid data by grouping all rows by state
         let covidDataByState = Array.from(d3.group(filteredData, d => d.state), ([key, value]) => ({key, value}))
-
-        // have a look
-        // console.log(covidDataByState)
 
         // init final data structure in which both data sets will be merged into
         vis.stateInfo = []
@@ -111,7 +102,7 @@ class DataTable {
             )
         })
 
-        console.log('final data structure for myDataTable', vis.stateInfo);
+        // console.log('final data structure for myDataTable', vis.stateInfo);
 
         vis.updateTable()
 
@@ -135,7 +126,7 @@ class DataTable {
                 <td>${state.relDeaths}</td>`
             )
             row.on('mouseover', function () {
-                console.log(' you hovered over a row - the selected state is', state.state)
+                // console.log(' you hovered over a row - the selected state is', state.state)
                 selectedState = state.state;
                 myBrushVis.wrangleDataResponsive();
             })

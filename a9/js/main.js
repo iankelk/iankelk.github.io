@@ -34,7 +34,7 @@ Promise.all(promises)
 function initMainPage(dataArray) {
 
     // log data
-    console.log('check out the data', dataArray);
+    // console.log('check out the data', dataArray);
 
     // init table
     myDataTable = new DataTable('tableDiv', dataArray[1], dataArray[2]);

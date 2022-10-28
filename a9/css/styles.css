@@ -1,6 +1,6 @@
 .tooltip {
     position: absolute;
-    text-align: center;
+    text-align: left;
     font: 12px sans-serif;
     /*  pointer-events: none;	This line needs to be removed */
 }
@@ -9,6 +9,7 @@
 }
 .tooltip h4 {
     font: 14px sans-serif;
+    color: darkblue;
 }
 
 .table {

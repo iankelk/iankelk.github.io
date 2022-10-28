@@ -99,12 +99,14 @@ class MapVis {
     updateVis() {
         let vis = this;
 
+        // append tooltip
+        vis.tooltip = d3.select("body").append('div')
+            .attr('class', "tooltip")
+
         vis.colorScale = d3.scaleSequential()
             .interpolator(d3.interpolateViridis)
             .domain([d3.min(vis.stateInfo, d=>d[selectedCategory]), d3.max(vis.stateInfo, d=>d[selectedCategory])])
 
-        console.log("stateinfo");
-        console.log(this.stateInfo);
         vis.states
             .attr("fill", function(d){
                 let state = vis.stateInfo.find(o => o.state === d.properties.name);
@@ -114,14 +116,29 @@ class MapVis {
                 d3.select(this)
                     .attr('stroke-width', '2px')
                     .attr('stroke', 'black')
-                    .attr('fill', 'rgba(173,222,255,0.62)')
+                    .attr('fill', 'rgba(173,222,255,0.62)');
+
+                let state = vis.stateInfo.find(o => o.state === d.properties.name);
+                vis.tooltip
+                    .style("opacity", 1)
+                    .style("left", event.pageX + 20 + "px")
+                    .style("top", event.pageY + "px")
+                    .html(`
+                     <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
+                         <h4>${state.state}</h4>
+                         <strong>Population: </strong> ${state.population.toLocaleString("en-US")}<br />
+                         <strong>Cases (absolute): </strong>${state.absCases.toLocaleString("en-US")}<br />
+                         <strong>Deaths (absolute): </strong>${state.absDeaths.toLocaleString("en-US")}<br />
+                         <strong>Cases (relative): </strong>${state.relCases.toFixed(2)}%<br />
+                         <strong>Deaths (relative): </strong>${state.relDeaths.toFixed(3)}%
+                     </div>`);
+
                 selectedState = d.properties.name;
                 myBarVisOne.highlightBar();
                 myBarVisTwo.highlightBar();
                 myBrushVis.wrangleDataResponsive();
             })
             .on('mouseout', function (event, d) {
-                console.log(d);
                 d3.select(this)
                     .attr('stroke-width', '0px')
                     .attr("fill", function (d) {
@@ -129,6 +146,11 @@ class MapVis {
                         let myStateInfo = vis.stateInfo.filter( (d) => d.state === myState);
                         return vis.colorScale(myStateInfo[0][selectedCategory])
                     })
+                vis.tooltip
+                    .style("opacity", 0)
+                    .style("left", 0)
+                    .style("top", 0)
+                    .html(``);
                 myBarVisOne.removeHighlightBar();
                 myBarVisTwo.removeHighlightBar();
             });
@@ -142,6 +164,7 @@ class MapVis {
     }
     highlightState() {
         let vis = this;
+        console.log("highlighting");
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)
             .attr('stroke-width', '2px')
             .attr('stroke', 'black')
@@ -150,6 +173,7 @@ class MapVis {
 
     removeHighlightState() {
         let vis = this;
+        console.log("unhighlighting");
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)
             .attr('stroke-width', '0px')
             .attr("fill", function (d) {
