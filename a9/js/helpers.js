@@ -64,7 +64,12 @@ class NameConverter {
             ['Washington', 'WA'],
             ['West Virginia', 'WV'],
             ['Wisconsin', 'WI'],
-            ['Wyoming', 'WY']
+            ['Wyoming', 'WY'],
+            ['Republic of the Marshall Islands', 'RMI'],
+            ['New York City', 'NYC'],
+            ['Federated States of Micronesia', 'FSM'],
+            ['Palau', 'PW'],
+            ['Northern Mariana Islands', 'MP']
         ]
     }
 
@@ -122,6 +127,3 @@ function getTickFormatter() {
             return (x) => d3.format('.2')(x) + "%";
     }
 }
-
-
-

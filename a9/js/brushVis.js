@@ -2,10 +2,10 @@
 class BrushVis {
 
     // constructor method to initialize Timeline object
-    constructor(_parentElement, _data) {
+    constructor(_parentElement, covidData2020, covidData2022) {
         this.parentElement = _parentElement;
-        this.data = _data;
-        this.displayData = [];
+        this.covidData2020 = covidData2020;
+        this.covidData2022 = covidData2022;
         this.parseDate = d3.timeParse("%m/%d/%Y");
 
         // call method initVis
@@ -36,10 +36,10 @@ class BrushVis {
             .attr("height", vis.height);
 
         // add title
-        vis.svg.append('g')
+        vis.title = vis.svg.append('g')
             .attr('class', 'title')
             .append('text')
-            .text('COVID-19 2020 Timeline')
+            .text('COVID-19 '+ selectedYear + ' Timeline')
             .attr('transform', `translate(${vis.width / 2}, 20)`)
             .attr('text-anchor', 'middle');
 
@@ -141,6 +141,8 @@ class BrushVis {
     wrangleDataStatic(){
         let vis = this;
 
+        vis.data = (selectedYear === "2020") ? vis.covidData2020 : vis.covidData2022;
+
         // rearrange data structure and group by state
         let dataByDate = Array.from(d3.group(vis.data, d => d.submission_date), ([key, value]) => ({key, value}))
 
@@ -171,6 +173,8 @@ class BrushVis {
     // additional DataFiltering - only needed if we want to draw a second chart
     wrangleDataResponsive(){
         let vis = this;
+
+        vis.data = (selectedYear === "2020") ? vis.covidData2020 : vis.covidData2022;
 
         vis.filteredData = [];
 
@@ -219,6 +223,9 @@ class BrushVis {
     updateVis(){
         let vis = this;
 
+        vis.title
+            .text('COVID-19 '+ selectedYear + ' Timeline');
+
         // update domains
         vis.x.domain(d3.extent(vis.preProcessedData, function (d) {
             return d.date
@@ -229,12 +236,7 @@ class BrushVis {
 
         // draw x & y axis
         vis.xAxis.transition().duration(400).call(d3.axisBottom(vis.x));
-        vis.yAxis.transition().duration(400).call(d3.axisLeft(vis.y).ticks(5));
-
-        // console.log("preProcessedData");
-        // console.log(this.preProcessedData);
-        // console.log("dataPathTwo");
-        // console.log(this.dataPathTwo);
+        vis.yAxis.transition().duration(400).call(d3.axisLeft(vis.y).ticks(5).tickFormat(d3.format('.2s')));
 
         // draw pathOne
         vis.pathOne.datum(vis.preProcessedData)

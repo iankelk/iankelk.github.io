@@ -19,7 +19,7 @@
             <!-- HEADING -->
             <div class="row d-flex justify-content-center" style="height: 10vh; padding: 0; background: #bdbdbd;">
                 <div class="align-self-center">
-                    <h1>COVID-19 Cases and Deaths</h1>
+                    <h1>COVID-19 Cases and Deaths 2020-2022</h1>
                 </div>
             </div>
 
@@ -70,16 +70,24 @@
                         <div class="col"
                              style="border: thin solid grey; border-radius: 5px; background: rgba(64,64,64,0.4)">
                             <div class="row" style="height: 100%">
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="row justify-content-center" style="height: 100%">
                                         <button id="switchView" class="btn btn-light align-self-center" type="button"
                                                 onclick="switchView()">switch view
                                         </button>
                                     </div>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-3">
                                     <div class="row justify-content-center" style="height: 100%">
-                                        <select id='categorySelector' class="custom-select align-self-center" style="width: 50%" onchange="categoryChange()">
+                                        <select id='yearSelector' class="custom-select align-self-center" style="width: 80%" onchange="yearChange()">
+                                            <option value="2020" selected>2020</option>
+                                            <option value="2022">2022</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row justify-content-center" style="height: 100%">
+                                        <select id='categorySelector' class="custom-select align-self-center" style="width: 90%" onchange="categoryChange()">
                                             <option value="absCases" selected>Cases (absolute)</option>
                                             <option value="absDeaths">Deaths (absolute)</option>
                                             <option value="relCases">Cases (relative to population)</option>

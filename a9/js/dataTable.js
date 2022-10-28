@@ -1,9 +1,10 @@
 class DataTable {
 
     // constructor method to initialize Timeline object
-    constructor(parentElement, covidData, usaData) {
+    constructor(parentElement, covidData2020, covidData2022, usaData) {
         this.parentElement = parentElement;
-        this.covidData = covidData;
+        this.covidData2020 = covidData2020;
+        this.covidData2022 = covidData2022;
         this.usaData = usaData;
         this.displayData = [];
 
@@ -42,6 +43,8 @@ class DataTable {
 
     wrangleData() {
         let vis = this
+
+        vis.covidData = (selectedYear === "2020") ? vis.covidData2020 : vis.covidData2022;
 
         // first, filter according to selectedTimeRange, init empty array
         let filteredData = [];
@@ -101,8 +104,14 @@ class DataTable {
                 }
             )
         })
+        console.log(vis.stateInfo);
 
-        // console.log('final data structure for myDataTable', vis.stateInfo);
+        // Added alphabetical sorting of table
+        vis.stateInfo.sort(function(a, b) {
+            let textA = a.state.toUpperCase();
+            let textB = b.state.toUpperCase();
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
 
         vis.updateTable()
 

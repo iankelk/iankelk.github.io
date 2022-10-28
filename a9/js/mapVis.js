@@ -6,12 +6,9 @@
 class MapVis {
 
     // Constructor method to initialize Map object
-    constructor(parentElement, mapData, covidData, usaData) {
+    constructor(parentElement, mapData) {
         this.parentElement = parentElement;
         this.mapData = mapData;
-        this.covidData = covidData;
-        this.usaData = usaData;
-        this.displayData = [];
 
         // parse date method
         this.parseDate = d3.timeParse("%m/%d/%Y");
@@ -125,7 +122,7 @@ class MapVis {
                     .style("top", event.pageY + "px")
                     .html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
-                         <h4>${state.state}</h4>
+                         <h4>${state.state} (${selectedYear})</h4>
                          <strong>Population: </strong> ${state.population.toLocaleString("en-US")}<br />
                          <strong>Cases (absolute): </strong>${state.absCases.toLocaleString("en-US")}<br />
                          <strong>Deaths (absolute): </strong>${state.absDeaths.toLocaleString("en-US")}<br />

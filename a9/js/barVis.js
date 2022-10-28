@@ -5,10 +5,9 @@
 
 class BarVis {
 
-    constructor(parentElement, descending, title){
+    constructor(parentElement, descending){
         this.parentElement = parentElement;
         this.descending = descending;
-        this.title = title;
         this.initVis()
     }
 
@@ -26,12 +25,10 @@ class BarVis {
             .append('g')
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
-        let title = vis.descending ? "Ten Worst States" : "Ten Best States";
         // add title
-        vis.svg.append('g')
+        vis.title = vis.svg.append('g')
             .attr('class', 'title bar-title')
             .append('text')
-            .text(title)
             .attr('transform', `translate(${vis.width / 2}, 5)`)
             .attr('text-anchor', 'middle');
 
@@ -84,6 +81,11 @@ class BarVis {
 
     updateVis(){
         let vis = this;
+
+        let title = vis.descending ? "Ten Worst States (" + selectedYear + ")" : "Ten Best States (" + selectedYear + ")";
+        vis.title
+            .text(title);
+
         vis.colorScale = d3.scaleSequential()
             .interpolator(d3.interpolateViridis)
             .domain([
@@ -129,7 +131,7 @@ class BarVis {
                     .style("top", event.pageY + "px")
                     .html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
-                         <h4>${d.state}</h4>
+                         <h4>${d.state} (${selectedYear})</h4>
                          <strong> Population </strong>: ${d.population.toLocaleString("en-US")}<br />  
                          <strong>Cases (absolute): </strong>${d.absCases.toLocaleString("en-US")}<br /> 
                          <strong>Deaths (absolute): </strong>${d.absDeaths.toLocaleString("en-US")}<br /> 
