@@ -9,7 +9,6 @@ class MapVis {
     constructor(parentElement, mapData) {
         this.parentElement = parentElement;
         this.mapData = mapData;
-
         this.initVis()
     }
 
@@ -57,6 +56,14 @@ class MapVis {
             .attr("class", "x-axis axis")
             .attr("transform", `translate(10, ${vis.height-18})`);
 
+        vis.title = vis.xGroup
+            .append("text")
+            .attr("class", "legend-text")
+            .attr('text-anchor', 'middle')
+            .attr('x', 300)
+            .attr('y', -40)
+            .attr('fill', 'black');
+
         // Create scale for legend
         let legendColorScale = d3.scaleSequential()
             .interpolator(d3.interpolateViridis)
@@ -91,6 +98,10 @@ class MapVis {
 
     updateVis() {
         let vis = this;
+
+        let sel = document.getElementById('categorySelector');
+        vis.title
+            .text(sel.options[sel.selectedIndex].text);
 
         let t = d3.transition().duration(700);
 

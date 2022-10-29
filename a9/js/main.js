@@ -18,7 +18,6 @@ let selectedYear = document.getElementById('yearSelector').value;
 
 // load data using promises
 let promises = [
-
     // d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),  // not projected -> you need to do it
     d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-albers-10m.json"), // already projected -> you can just scale it to fit your browser window
     d3.csv("data/covid_data_20.csv"),
@@ -36,9 +35,8 @@ Promise.all(promises)
 
 // initMainPage
 function initMainPage(dataArray) {
-
+    // init data table
     myDataTable = new DataTable('tableDiv', dataArray[1], dataArray[2], dataArray[3]);
-
     // init map
     myMapVis = new MapVis('mapDiv', dataArray[0]);
     // init bars
