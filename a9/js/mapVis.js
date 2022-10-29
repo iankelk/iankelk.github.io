@@ -75,7 +75,7 @@ class MapVis {
             .append("text")
             .attr("class", "date-range")
             .attr('text-anchor', 'start')
-            .attr('x', 180)
+            .attr('x', 280)
             .attr('y', vis.height-59)
             .text(formatTime(parseDate(myDataTable.covidData[0].submission_date)) + " - " +
                 formatTime(parseDate(myDataTable.covidData[myDataTable.covidData.length-1].submission_date)));
