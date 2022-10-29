@@ -66,9 +66,7 @@ class BarVis {
     wrangleData(){
         let vis = this
         vis.stateInfo = myDataTable.stateInfo;
-        // TODO: Sort and then filter by top 10
-        // maybe a boolean in the constructor could come in handy ?
-
+        // Sort and then filter by top 10
         if (vis.descending){
             vis.stateInfo.sort((a,b) => {return b[selectedCategory] - a[selectedCategory]})
         } else {

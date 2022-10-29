@@ -56,6 +56,7 @@ class MapVis {
             .attr("class", "x-axis axis")
             .attr("transform", `translate(10, ${vis.height-18})`);
 
+        // Create a title for the legend
         vis.title = vis.xGroup
             .append("text")
             .attr("class", "legend-text")
@@ -63,6 +64,14 @@ class MapVis {
             .attr('x', 300)
             .attr('y', -40)
             .attr('fill', 'black');
+
+        // Create a label saying what date range has been brushed
+        vis.dateRange = vis.svg
+            .append("text")
+            .attr("class", "date-range")
+            .attr('text-anchor', 'start')
+            .attr('x', 10)
+            .attr('y', vis.height-100);
 
         // Create scale for legend
         let legendColorScale = d3.scaleSequential()
@@ -113,11 +122,17 @@ class MapVis {
             .interpolator(d3.interpolateViridis)
             .domain([d3.min(vis.stateInfo, d=>d[selectedCategory]), d3.max(vis.stateInfo, d=>d[selectedCategory])])
 
+        try {
+            vis.states
+                .attr("fill", function (d) {
+                    let state = vis.stateInfo.find(o => o.state === d.properties.name);
+                    return vis.colorScale(state[selectedCategory])
+                });
+        }
+        catch(e) {
+            console.log("Brush selection too small to render: vis.stateInfo length=", vis.stateInfo.length)
+        }
         vis.states
-            .attr("fill", function(d){
-                let state = vis.stateInfo.find(o => o.state === d.properties.name);
-                return vis.colorScale(state[selectedCategory])
-            })
             .on('mouseover', function(event, d) {
                 d3.select(this)
                     .attr('stroke-width', '2px')
@@ -168,7 +183,6 @@ class MapVis {
     }
     highlightState() {
         let vis = this;
-        console.log("highlighting");
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)
             .attr('stroke-width', '2px')
             .attr('stroke', 'black')
@@ -177,7 +191,6 @@ class MapVis {
 
     removeHighlightState() {
         let vis = this;
-        console.log("unhighlighting");
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)
             .attr('stroke-width', '0px')
             .attr("fill", function (d) {

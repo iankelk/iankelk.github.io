@@ -52,6 +52,7 @@ function categoryChange() {
     myMapVis.wrangleData();
     myBarVisOne.wrangleData();
     myBarVisTwo.wrangleData();
+    myBrushVis.wrangleDataStatic();
 }
 
 function yearChange() {

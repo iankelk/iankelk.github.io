@@ -7,6 +7,7 @@ class BrushVis {
         this.covidData2020 = covidData2020;
         this.covidData2022 = covidData2022;
         this.parseDate = d3.timeParse("%m/%d/%Y");
+        this.formatTime = d3.timeFormat("%B %d, %Y");
 
         // call method initVis
         this.initVis();
@@ -72,10 +73,7 @@ class BrushVis {
             .x(function (d) {
                 return vis.x(d.date);
             })
-            .y0(vis.y(0))
-            .y1(function (d) {
-                return vis.y(d.newCases);
-            });
+            .y0(vis.y(0));
 
         // init brushGroup:
         vis.brushGroup = vis.svg.append("g")
@@ -84,20 +82,6 @@ class BrushVis {
         // init brush
         vis.brush = d3.brushX()
             .extent([[0, 0], [vis.width, vis.height]])
-            .on("brush end", function (event) {
-                if (event.selection !== null) {
-                    selectedTimeRange = [vis.x.invert(event.selection[0]), vis.x.invert(event.selection[1])];
-                }
-                else {
-                    selectedTimeRange = [vis.x.invert(0), vis.x.invert(vis.width)];
-                }
-                myDataTable.wrangleData();
-
-                // TODO - brushing should trigger wrangleData() methods for each visualization
-                myMapVis.wrangleData();
-                myBarVisOne.wrangleData();
-                myBarVisTwo.wrangleData();
-            });
 
         // Add legend
         vis.legend = vis.svg.append("g")
@@ -165,8 +149,6 @@ class BrushVis {
             return a.date - b.date;
         })
 
-        console.log("preProcessedData", vis.preProcessedData);
-
         this.wrangleDataResponsive();
     }
 
@@ -223,15 +205,24 @@ class BrushVis {
     updateVis(){
         let vis = this;
 
-        vis.title
-            .text('COVID-19 '+ selectedYear + ' Timeline (New Cases)');
+        // init path generator
+        vis.area
+            .y1(function (d) {
+                if (selectedCategory === "absCases" || selectedCategory === "relCases") return vis.y(d.newCases);
+                else return vis.y(d.newDeaths);
+            });
+
+        let title = (selectedCategory === "absCases" || selectedCategory === "relCases") ? "Cases" : "Deaths";
+            vis.title
+            .text(`COVID-19 ${selectedYear} Timeline (New ${title})`);
 
         // update domains
         vis.x.domain(d3.extent(vis.preProcessedData, function (d) {
             return d.date
         }));
         vis.y.domain(d3.extent(vis.preProcessedData, function (d) {
-            return d.newCases
+            if (selectedCategory === "absCases" || selectedCategory === "relCases") return d.newCases;
+            else return d.newDeaths;
         }));
 
         // draw x & y axis
@@ -267,6 +258,21 @@ class BrushVis {
             vis.stateLegendLabel.text(`${selectedState} Population`)
 
        }
+        vis.brush
+            .on("brush end", function (event) {
+                if (event.selection !== null) {
+                    selectedTimeRange = [vis.x.invert(event.selection[0]), vis.x.invert(event.selection[1])];
+                }
+                else {
+                    selectedTimeRange = [vis.x.invert(0), vis.x.invert(vis.width)];
+                }
+                myDataTable.wrangleData();
+                myMapVis.dateRange
+                    .text(`${vis.formatTime(selectedTimeRange[0])} - ${vis.formatTime(selectedTimeRange[1])}`);
+                myMapVis.wrangleData();
+                myBarVisOne.wrangleData();
+                myBarVisTwo.wrangleData();
+            });
 
         vis.brushGroup
             .call(vis.brush);
