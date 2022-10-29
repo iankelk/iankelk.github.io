@@ -15,7 +15,7 @@ class MapVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 10, right: 20, bottom: 20, left: 20};
+        vis.margin = {top: 10, right: 15, bottom: 20, left: 15};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -32,13 +32,15 @@ class MapVis {
         vis.viewpoint = {'width': 975, 'height': 610};
         vis.zoom = vis.width / vis.viewpoint.width;
 
-        // Adjust map position
-        vis.map = vis.svg.append("g") // group will contain all state paths
+        // Adjust map position, group will contain all state paths
+        vis.map = vis.svg.append("g")
             .attr("class", "map")
             .attr('transform', `scale(${vis.zoom} ${vis.zoom})`);
 
+        // Get the map features
         vis.usMap = topojson.feature(vis.mapData, vis.mapData.objects.states).features
 
+        // Create the state paths
         vis.states = vis.map.selectAll(".state")
             .data(vis.usMap)
             .enter().append("path")
@@ -78,6 +80,7 @@ class MapVis {
             .interpolator(d3.interpolateViridis)
             .domain([0,100])
 
+        // Create a gradient by drawing many squares
         let gradientData = d3.range(100);
         vis.legend = vis.legendGroup.selectAll(".rects")
             .data(gradientData)
@@ -100,14 +103,14 @@ class MapVis {
 
     wrangleData() {
         let vis = this
-        // myDataTable already wrangles the needed data in the date range
+        // dataTable's wrangle data is always called first, and prepares the data into myDataTable.stateInfo
         vis.stateInfo = myDataTable.stateInfo;
         vis.updateVis();
     }
 
     updateVis() {
         let vis = this;
-
+        // Title the legend with what category we're displaying
         let sel = document.getElementById('categorySelector');
         vis.title
             .text(sel.options[sel.selectedIndex].text);
@@ -118,10 +121,12 @@ class MapVis {
         vis.tooltip = d3.select("body").append('div')
             .attr('class', "tooltip")
 
+        // Create the map color scale
         vis.colorScale = d3.scaleSequential()
             .interpolator(d3.interpolateViridis)
-            .domain([d3.min(vis.stateInfo, d=>d[selectedCategory]), d3.max(vis.stateInfo, d=>d[selectedCategory])])
+            .domain([0, d3.max(vis.stateInfo, d=>d[selectedCategory])])
 
+        // Try to color the map. If the user brushes an area too small to return any data, catch and log the error
         try {
             vis.states
                 .attr("fill", function (d) {
@@ -132,6 +137,7 @@ class MapVis {
         catch(e) {
             console.log("Brush selection too small to render: vis.stateInfo length=", vis.stateInfo.length)
         }
+        // Fill all the states and add the tooltips
         vis.states
             .on('mouseover', function(event, d) {
                 d3.select(this)
@@ -171,16 +177,18 @@ class MapVis {
                     .style("left", 0)
                     .style("top", 0)
                     .html(``);
+                // Remove the highlighted bars from the bar charts
                 myBarVisOne.removeHighlightBar();
                 myBarVisTwo.removeHighlightBar();
             });
-
-        vis.x.domain([d3.min(vis.stateInfo, d=>d[selectedCategory]), d3.max(vis.stateInfo, d=>d[selectedCategory])])
+        // Adjust the axis domains and tick marks
+        vis.x.domain([0, d3.max(vis.stateInfo, d=>d[selectedCategory])])
         vis.xGroup
             .transition(t)
             .call(vis.xAxis.tickFormat(getTickFormatter()))
 
     }
+    // Highlight the appropriate state by coloring it
     highlightState() {
         let vis = this;
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)
@@ -188,7 +196,7 @@ class MapVis {
             .attr('stroke', 'black')
             .attr('fill', 'rgba(173,222,255,0.62)');
     }
-
+    // Remove the highlight and color the state as it was originally
     removeHighlightState() {
         let vis = this;
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)
@@ -199,4 +207,3 @@ class MapVis {
             });
     }
 }
-

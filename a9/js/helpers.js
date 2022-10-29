@@ -115,6 +115,7 @@ function switchView() {
 /* * * * * * * * * * * * * *
 *         Ticks         *
 * * * * * * * * * * * * * */
+// Depending on which data we're looking at, format the ticks to better display it
 function getTickFormatter() {
     switch (selectedCategory) {
         case "absCases":

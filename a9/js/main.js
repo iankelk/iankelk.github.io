@@ -14,8 +14,6 @@ let selectedState = '';
 let selectedCategory =  document.getElementById('categorySelector').value;
 let selectedYear = document.getElementById('yearSelector').value;
 
-
-
 // load data using promises
 let promises = [
     // d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),  // not projected -> you need to do it
@@ -46,7 +44,7 @@ function initMainPage(dataArray) {
     myBrushVis = new BrushVis('brushDiv', dataArray[1], dataArray[2]);
 
 }
-
+// Function called when category (cases, deaths) is changed
 function categoryChange() {
     selectedCategory =  document.getElementById('categorySelector').value;
     myMapVis.wrangleData();
@@ -54,7 +52,7 @@ function categoryChange() {
     myBarVisTwo.wrangleData();
     myBrushVis.wrangleDataStatic();
 }
-
+// Function called when dataset is changed between 2020 and 2022
 function yearChange() {
     selectedYear = document.getElementById('yearSelector').value;
     myDataTable.wrangleData();

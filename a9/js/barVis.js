@@ -2,7 +2,6 @@
 *      class BarVis        *
 * * * * * * * * * * * * * */
 
-
 class BarVis {
 
     constructor(parentElement, descending){
@@ -36,7 +35,6 @@ class BarVis {
         vis.tooltip = d3.select("body").append('div')
             .attr('class', "tooltip")
 
-        // TODO
         // Scales
         vis.x = d3.scaleBand()
             .rangeRound([0, vis.width])
@@ -65,6 +63,7 @@ class BarVis {
 
     wrangleData(){
         let vis = this
+        // dataTable's wrangle data is always called first, and prepares the data into myDataTable.stateInfo
         vis.stateInfo = myDataTable.stateInfo;
         // Sort and then filter by top 10
         if (vis.descending){
@@ -80,14 +79,15 @@ class BarVis {
     updateVis(){
         let vis = this;
 
+        // Create the titles for the bar charts
         let title = vis.descending ? "Ten Worst States (" + selectedYear + ")" : "Ten Best States (" + selectedYear + ")";
         vis.title
             .text(title);
 
+        // Create the color scales for bar charts and map
         vis.colorScale = d3.scaleSequential()
             .interpolator(d3.interpolateViridis)
-            .domain([
-                d3.min(vis.stateInfo, d=>d[selectedCategory]), d3.max(vis.stateInfo, d=>d[selectedCategory])])
+            .domain([0, d3.max(vis.stateInfo, d=>d[selectedCategory])])
 
         let t = d3.transition().duration(700);
 
@@ -107,7 +107,7 @@ class BarVis {
         // Remove the old bar chart
         bar.exit().remove();
 
-        // Enter and update the bar chart
+        // Enter and update the bar chart, highlighting, and tooltips
         bar
             .enter()
             .append("rect")
@@ -155,6 +155,7 @@ class BarVis {
                     .style("left", 0)
                     .style("top", 0)
                     .html(``);
+                // Remove the highlighted state from the map
                 myMapVis.removeHighlightState();
 
             })
@@ -171,7 +172,8 @@ class BarVis {
             .transition(t)
             .call(vis.xAxis)
             .selectAll("text")
-            .attr("transform", "translate(5,12) rotate(25)");
+            .attr("transform", "translate(2,9) rotate(18)")
+            //.attr('text-anchor', 'start');
 
         // Update y axis
         vis.yGroup
@@ -179,7 +181,7 @@ class BarVis {
             .call(vis.yAxis.tickFormat(getTickFormatter()))
 
     }
-
+    // Highlight the appropriate bar by coloring it
     highlightBar() {
         let vis = this;
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)
@@ -187,7 +189,7 @@ class BarVis {
             .attr('stroke', 'black')
             .attr('fill', 'rgba(173,222,255,0.62)');
     }
-
+    // Remove the highlight and color the bar as it was originally
     removeHighlightBar() {
         let vis = this;
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)

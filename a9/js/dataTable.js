@@ -132,7 +132,6 @@ class DataTable {
                 <td>${state.relDeaths}</td>`
             )
             row.on('mouseover', function () {
-                // console.log(' you hovered over a row - the selected state is', state.state)
                 selectedState = state.state;
                 myBrushVis.wrangleDataResponsive();
             })

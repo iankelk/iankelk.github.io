@@ -191,7 +191,6 @@ class BrushVis {
             return a.date - b.date;
         })
 
-
         this.wrangleData();
     }
 
@@ -216,7 +215,7 @@ class BrushVis {
             vis.title
             .text(`COVID-19 ${selectedYear} Timeline (New ${title})`);
 
-        // update domains
+        // Update domains to reflect if we're looking at cases or deaths
         vis.x.domain(d3.extent(vis.preProcessedData, function (d) {
             return d.date
         }));
@@ -246,6 +245,7 @@ class BrushVis {
             .attr("stroke", "#darkred")
             .attr("clip-path", "url(#clip)");
 
+        // Small legend in the timeline to show which state is selected to show individual state data
         if (selectedState !== '') {
             vis.legend
                 .append("rect")
@@ -258,6 +258,7 @@ class BrushVis {
             vis.stateLegendLabel.text(`${selectedState} Population`)
 
        }
+        // Update the brush for the new ranges
         vis.brush
             .on("brush end", function (event) {
                 if (event.selection !== null) {
