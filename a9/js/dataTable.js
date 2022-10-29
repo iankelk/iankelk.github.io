@@ -44,7 +44,6 @@ class DataTable {
         let vis = this
 
         vis.covidData = (selectedYear === "2020") ? vis.covidData2020 : vis.covidData2022;
-        console.log(vis.covidData)
 
         // first, filter according to selectedTimeRange, init empty array
         let filteredData = [];
