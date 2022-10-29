@@ -39,7 +39,6 @@ class BrushVis {
         vis.title = vis.svg.append('g')
             .attr('class', 'title')
             .append('text')
-            .text('COVID-19 '+ selectedYear + ' Timeline')
             .attr('transform', `translate(${vis.width / 2}, 20)`)
             .attr('text-anchor', 'middle');
 
@@ -166,6 +165,8 @@ class BrushVis {
             return a.date - b.date;
         })
 
+        console.log("preProcessedData", vis.preProcessedData);
+
         this.wrangleDataResponsive();
     }
 
@@ -223,7 +224,7 @@ class BrushVis {
         let vis = this;
 
         vis.title
-            .text('COVID-19 '+ selectedYear + ' Timeline');
+            .text('COVID-19 '+ selectedYear + ' Timeline (New Cases)');
 
         // update domains
         vis.x.domain(d3.extent(vis.preProcessedData, function (d) {

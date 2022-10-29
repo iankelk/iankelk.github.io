@@ -29,7 +29,7 @@ class BarVis {
         vis.title = vis.svg.append('g')
             .attr('class', 'title bar-title')
             .append('text')
-            .attr('transform', `translate(${vis.width / 2}, 5)`)
+            .attr('transform', `translate(${vis.width / 2}, 0)`)
             .attr('text-anchor', 'middle');
 
         // tooltip
