@@ -13,6 +13,7 @@ let selectedTimeRange = [];
 let selectedState = '';
 let selectedCategory =  document.getElementById('categorySelector').value;
 let selectedYear = document.getElementById('yearSelector').value;
+let yearChanging = false;
 
 // load data using promises
 let promises = [
@@ -54,6 +55,7 @@ function categoryChange() {
 }
 // Function called when dataset is changed between 2020 and 2022
 function yearChange() {
+    yearChanging = true;
     selectedYear = document.getElementById('yearSelector').value;
     myDataTable.wrangleData();
     myBrushVis.brushGroup.call(myBrushVis.brush.clear);

@@ -9,11 +9,14 @@ class MapVis {
     constructor(parentElement, mapData) {
         this.parentElement = parentElement;
         this.mapData = mapData;
-        this.initVis()
+        this.initVis();
     }
 
     initVis() {
         let vis = this;
+
+        const parseDate = d3.timeParse("%m/%d/%Y");
+        const formatTime = d3.timeFormat("%B %d, %Y");
 
         vis.margin = {top: 10, right: 15, bottom: 20, left: 15};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
@@ -62,8 +65,8 @@ class MapVis {
         vis.title = vis.xGroup
             .append("text")
             .attr("class", "legend-text")
-            .attr('text-anchor', 'middle')
-            .attr('x', 300)
+            .attr('text-anchor', 'start')
+            .attr('x', 0)
             .attr('y', -40)
             .attr('fill', 'black');
 
@@ -72,8 +75,10 @@ class MapVis {
             .append("text")
             .attr("class", "date-range")
             .attr('text-anchor', 'start')
-            .attr('x', 10)
-            .attr('y', vis.height-100);
+            .attr('x', 180)
+            .attr('y', vis.height-59)
+            .text(formatTime(parseDate(myDataTable.covidData[0].submission_date)) + " - " +
+                formatTime(parseDate(myDataTable.covidData[myDataTable.covidData.length-1].submission_date)));
 
         // Create scale for legend
         let legendColorScale = d3.scaleSequential()
@@ -110,6 +115,7 @@ class MapVis {
 
     updateVis() {
         let vis = this;
+
         // Title the legend with what category we're displaying
         let sel = document.getElementById('categorySelector');
         vis.title

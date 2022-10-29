@@ -258,6 +258,16 @@ class BrushVis {
             vis.stateLegendLabel.text(`${selectedState} Population`)
 
        }
+
+        // Indicator that the dataset has changed and to wrangle data and reset
+        if (yearChanging) {
+            yearChanging = false;
+            selectedTimeRange = [vis.x.invert(0), vis.x.invert(vis.width)];
+            myDataTable.wrangleData();
+            myMapVis.dateRange
+                .text(`${vis.formatTime(selectedTimeRange[0])} - ${vis.formatTime(selectedTimeRange[1])}`);
+        }
+
         // Update the brush for the new ranges
         vis.brush
             .on("brush end", function (event) {
