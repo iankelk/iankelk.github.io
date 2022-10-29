@@ -6,7 +6,6 @@ class DataTable {
         this.covidData2020 = covidData2020;
         this.covidData2022 = covidData2022;
         this.usaData = usaData;
-        this.displayData = [];
 
         // parse date method
         this.parseDate = d3.timeParse("%m/%d/%Y");

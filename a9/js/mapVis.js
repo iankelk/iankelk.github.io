@@ -10,9 +10,6 @@ class MapVis {
         this.parentElement = parentElement;
         this.mapData = mapData;
 
-        // parse date method
-        this.parseDate = d3.timeParse("%m/%d/%Y");
-
         this.initVis()
     }
 
@@ -88,13 +85,14 @@ class MapVis {
     wrangleData() {
         let vis = this
         // myDataTable already wrangles the needed data in the date range
-        //myDataTable.wrangleData();
         vis.stateInfo = myDataTable.stateInfo;
         vis.updateVis();
     }
 
     updateVis() {
         let vis = this;
+
+        let t = d3.transition().duration(700);
 
         // append tooltip
         vis.tooltip = d3.select("body").append('div')
@@ -107,9 +105,6 @@ class MapVis {
         vis.states
             .attr("fill", function(d){
                 let state = vis.stateInfo.find(o => o.state === d.properties.name);
-                console.log("stateInfo", vis.stateInfo)
-                console.log("state", state)
-                console.log("d.properties.name", d.properties.name)
                 return vis.colorScale(state[selectedCategory])
             })
             .on('mouseover', function(event, d) {
@@ -142,10 +137,7 @@ class MapVis {
                 d3.select(this)
                     .attr('stroke-width', '0px')
                     .attr("fill", function (d) {
-                        // let myState = d.properties.name
-                        // let myStateInfo = vis.stateInfo.filter( (d) => d.state === myState);
                         let state = vis.stateInfo.find(o => o.state === d.properties.name);
-                        console.log("state", state)
                         return vis.colorScale(state[selectedCategory])
                     })
                 vis.tooltip
@@ -157,7 +149,6 @@ class MapVis {
                 myBarVisTwo.removeHighlightBar();
             });
 
-        let t = d3.transition().duration(700);
         vis.x.domain([d3.min(vis.stateInfo, d=>d[selectedCategory]), d3.max(vis.stateInfo, d=>d[selectedCategory])])
         vis.xGroup
             .transition(t)
