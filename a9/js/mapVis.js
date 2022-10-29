@@ -53,7 +53,7 @@ class MapVis {
         // Add legend group
         vis.legendGroup = vis.svg.append("g")
             .attr('class', 'timeline-legend')
-            .attr("transform", `translate(10, ${vis.height-45})`);
+            .attr("transform", `translate(10, ${vis.height-50})`);
 
         // Add x axis group
         vis.xGroup = vis.svg.append("g")
@@ -107,6 +107,9 @@ class MapVis {
         vis.states
             .attr("fill", function(d){
                 let state = vis.stateInfo.find(o => o.state === d.properties.name);
+                console.log("stateInfo", vis.stateInfo)
+                console.log("state", state)
+                console.log("d.properties.name", d.properties.name)
                 return vis.colorScale(state[selectedCategory])
             })
             .on('mouseover', function(event, d) {
@@ -139,9 +142,11 @@ class MapVis {
                 d3.select(this)
                     .attr('stroke-width', '0px')
                     .attr("fill", function (d) {
-                        let myState = d.properties.name
-                        let myStateInfo = vis.stateInfo.filter( (d) => d.state === myState);
-                        return vis.colorScale(myStateInfo[0][selectedCategory])
+                        // let myState = d.properties.name
+                        // let myStateInfo = vis.stateInfo.filter( (d) => d.state === myState);
+                        let state = vis.stateInfo.find(o => o.state === d.properties.name);
+                        console.log("state", state)
+                        return vis.colorScale(state[selectedCategory])
                     })
                 vis.tooltip
                     .style("opacity", 0)

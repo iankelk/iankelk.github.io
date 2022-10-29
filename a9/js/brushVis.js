@@ -98,7 +98,6 @@ class BrushVis {
                 myMapVis.wrangleData();
                 myBarVisOne.wrangleData();
                 myBarVisTwo.wrangleData();
-
             });
 
         // Add legend

@@ -70,7 +70,6 @@ class DataTable {
 
         // merge
         covidDataByState.forEach(state => {
-
             // get full state name
             let stateName = nameConverter.getFullName(state.key)
 
@@ -104,7 +103,6 @@ class DataTable {
                 }
             )
         })
-        console.log(vis.stateInfo);
 
         // Added alphabetical sorting of table
         vis.stateInfo.sort(function(a, b) {

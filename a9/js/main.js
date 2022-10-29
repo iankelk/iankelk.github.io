@@ -37,17 +37,14 @@ Promise.all(promises)
 // initMainPage
 function initMainPage(dataArray) {
 
-    console.log(selectedYear);
-
     myDataTable = new DataTable('tableDiv', dataArray[1], dataArray[2], dataArray[3]);
 
-    // TODO - init map
+    // init map
     myMapVis = new MapVis('mapDiv', dataArray[0]);
-
-    // TODO - init bars
+    // init bars
     myBarVisOne = new BarVis('barDiv', true);
     myBarVisTwo = new BarVis('barTwoDiv', false);
-
+    // init timeline
     myBrushVis = new BrushVis('brushDiv', dataArray[1], dataArray[2]);
 
 }
@@ -62,9 +59,9 @@ function categoryChange() {
 function yearChange() {
     selectedYear = document.getElementById('yearSelector').value;
     myDataTable.wrangleData();
+    myBrushVis.brushGroup.call(myBrushVis.brush.clear);
+    myBrushVis.wrangleDataStatic();
     myMapVis.wrangleData();
     myBarVisOne.wrangleData();
     myBarVisTwo.wrangleData();
-    myBrushVis.wrangleDataStatic();
-
 }
