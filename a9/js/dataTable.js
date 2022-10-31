@@ -125,11 +125,11 @@ class DataTable {
             let row = tableObject.tbody.append("tr")
             row.html(
                 `<td>${state.state}</td>
-                <td>${state.population}</td>
-                <td>${state.absCases}</td>
-                <td>${state.absDeaths}</td>
-                <td>${state.relCases}</td>
-                <td>${state.relDeaths}</td>`
+                <td>${state.population.toLocaleString("en-US")}</td>
+                <td>${state.absCases.toLocaleString("en-US")}</td>
+                <td>${state.absDeaths.toLocaleString("en-US")}</td>
+                <td>${state.relCases.toLocaleString("en-US")}%</td>
+                <td>${state.relDeaths.toLocaleString("en-US")}%</td>`
             )
             row.on('mouseover', function () {
                 selectedState = state.state;

@@ -47,6 +47,8 @@ class MapVis {
         vis.states = vis.map.selectAll(".state")
             .data(vis.usMap)
             .enter().append("path")
+            .attr('stroke-width', '1px')
+            .attr('stroke', 'black')
             .attr("fill", "transparent")
             .attr("d", vis.path)
             .attr("class", (d) => nameConverter.getAbbreviation(d.properties.name))
@@ -148,7 +150,6 @@ class MapVis {
             .on('mouseover', function(event, d) {
                 d3.select(this)
                     .attr('stroke-width', '2px')
-                    .attr('stroke', 'black')
                     .attr('fill', 'rgba(173,222,255,0.62)');
 
                 let state = vis.stateInfo.find(o => o.state === d.properties.name);
@@ -173,7 +174,7 @@ class MapVis {
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
-                    .attr('stroke-width', '0px')
+                    .attr('stroke-width', '1px')
                     .attr("fill", function (d) {
                         let state = vis.stateInfo.find(o => o.state === d.properties.name);
                         return vis.colorScale(state[selectedCategory])
@@ -199,14 +200,13 @@ class MapVis {
         let vis = this;
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)
             .attr('stroke-width', '2px')
-            .attr('stroke', 'black')
             .attr('fill', 'rgba(173,222,255,0.62)');
     }
     // Remove the highlight and color the state as it was originally
     removeHighlightState() {
         let vis = this;
         vis.svg.selectAll(`.${nameConverter.getAbbreviation(selectedState)}`)
-            .attr('stroke-width', '0px')
+            .attr('stroke-width', '1px')
             .attr("fill", function (d) {
                 let myStateInfo = vis.stateInfo.filter( (d) => d.state === selectedState);
                 return vis.colorScale(myStateInfo[0][selectedCategory])
