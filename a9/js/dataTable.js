@@ -118,11 +118,11 @@ class DataTable {
         let tableObject = this;
 
         // reset tbody
-        tableObject.tbody.html('')
+        tableObject.tbody.html('');
 
         // loop over all states
         tableObject.stateInfo.forEach(state => {
-            let row = tableObject.tbody.append("tr")
+            let row = tableObject.tbody.append("tr");
             row.html(
                 `<td>${state.state}</td>
                 <td>${state.population.toLocaleString("en-US")}</td>

@@ -33,7 +33,7 @@ class BarVis {
 
         // tooltip
         vis.tooltip = d3.select("body").append('div')
-            .attr('class', "tooltip")
+            .attr('class', "tooltip");
 
         // Scales
         vis.x = d3.scaleBand()
@@ -52,11 +52,11 @@ class BarVis {
         // Draw the x axis
         vis.xGroup = vis.svg.append("g")
             .attr("class", "axis x-axis")
-            .attr("transform", `translate(0, ${vis.height})`)
+            .attr("transform", `translate(0, ${vis.height})`);
 
         // Draw the y axis
         vis.yGroup = vis.svg.append("g")
-            .attr("class", "axis y-axis")
+            .attr("class", "axis y-axis");
 
         this.wrangleData();
     }
@@ -67,12 +67,12 @@ class BarVis {
         vis.stateInfo = myDataTable.stateInfo;
         // Sort and then filter by top 10
         if (vis.descending){
-            vis.stateInfo.sort((a,b) => {return b[selectedCategory] - a[selectedCategory]})
+            vis.stateInfo.sort((a,b) => {return b[selectedCategory] - a[selectedCategory]});
         } else {
-            vis.stateInfo.sort((a,b) => {return a[selectedCategory] - b[selectedCategory]})
+            vis.stateInfo.sort((a,b) => {return a[selectedCategory] - b[selectedCategory]});
         }
-        vis.topTenData = vis.stateInfo.slice(0, 10)
-        vis.updateVis()
+        vis.topTenData = vis.stateInfo.slice(0, 10);
+        vis.updateVis();
 
     }
 
@@ -101,8 +101,8 @@ class BarVis {
             .data(vis.topTenData, (d) => d.state);
 
         // Update the axes
-        vis.xAxis.scale(vis.x)
-        vis.yAxis.scale(vis.y)
+        vis.xAxis.scale(vis.x);
+        vis.yAxis.scale(vis.y);
 
         // Remove the old bar chart
         bar.exit().remove();
@@ -121,7 +121,7 @@ class BarVis {
                 d3.select(this)
                     .attr('stroke-width', '2px')
                     .attr('stroke', 'black')
-                    .attr('fill', 'rgba(173,222,255,0.62)')
+                    .attr('fill', 'rgba(173,222,255,0.62)');
 
                 vis.tooltip
                     .style("opacity", 1)
@@ -147,7 +147,7 @@ class BarVis {
                     .attr("fill", function (d) {
                         let myState = d.state
                         let myStateInfo = vis.stateInfo.filter( (d) => d.state === myState);
-                        return vis.colorScale(myStateInfo[0][selectedCategory])
+                        return vis.colorScale(myStateInfo[0][selectedCategory]);
                     })
 
                 vis.tooltip
@@ -164,7 +164,7 @@ class BarVis {
             .attr("class", (d) => nameConverter.getAbbreviation(d.state))
             .attr("y", (d) => vis.y(d[selectedCategory]))
             .attr("x", (d) => vis.x(d.state))
-            .attr("height", function (d) { let ht = vis.height - vis.y(d[selectedCategory]); return (ht < 0) ? 0 : ht;} )
+            .attr("height", function (d) { let ht = vis.height - vis.y(d[selectedCategory]); return (ht < 0) ? 0 : ht;} );
 
 
         // Update x axis
@@ -173,12 +173,11 @@ class BarVis {
             .call(vis.xAxis)
             .selectAll("text")
             .attr("transform", "translate(2,9) rotate(18)")
-            //.attr('text-anchor', 'start');
 
         // Update y axis
         vis.yGroup
             .transition(t)
-            .call(vis.yAxis.tickFormat(getTickFormatter()))
+            .call(vis.yAxis.tickFormat(getTickFormatter()));
 
     }
     // Highlight the appropriate bar by coloring it
@@ -196,7 +195,7 @@ class BarVis {
             .attr('stroke-width', '0px')
             .attr("fill", function (d) {
                 let myStateInfo = vis.stateInfo.filter( (d) => d.state === selectedState);
-                return vis.colorScale(myStateInfo[0][selectedCategory])
+                return vis.colorScale(myStateInfo[0][selectedCategory]);
             });
     }
 }

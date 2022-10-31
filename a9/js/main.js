@@ -26,10 +26,10 @@ let promises = [
 
 Promise.all(promises)
     .then(function (data) {
-        initMainPage(data)
+        initMainPage(data);
     })
     .catch(function (err) {
-        console.log(err)
+        console.log(err);
     });
 
 // initMainPage

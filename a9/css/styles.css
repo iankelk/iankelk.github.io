@@ -22,8 +22,10 @@
 
 .legend-text {
     font-size: 2em;
+    font-weight: bold;
 }
 
 .date-range {
     font-weight: bold;
+    font-size: 1.5em;
 }

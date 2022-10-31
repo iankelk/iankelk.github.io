@@ -61,7 +61,7 @@ class MapVis {
         // Add x axis group
         vis.xGroup = vis.svg.append("g")
             .attr("class", "x-axis axis")
-            .attr("transform", `translate(10, ${vis.height-18})`);
+            .attr("transform", `translate(10, ${vis.height-15})`);
 
         // Create a title for the legend
         vis.title = vis.xGroup
@@ -69,16 +69,17 @@ class MapVis {
             .attr("class", "legend-text")
             .attr('text-anchor', 'start')
             .attr('x', 0)
-            .attr('y', -40)
+            .attr('y', -70)
             .attr('fill', 'black');
 
         // Create a label saying what date range has been brushed
-        vis.dateRange = vis.svg
+        vis.dateRange = vis.xGroup
             .append("text")
             .attr("class", "date-range")
             .attr('text-anchor', 'start')
-            .attr('x', 280)
-            .attr('y', vis.height-59)
+            .attr('x', 0)
+            .attr('y', -47)
+            .attr('fill', 'black')
             .text(formatTime(parseDate(myDataTable.covidData[0].submission_date)) + " - " +
                 formatTime(parseDate(myDataTable.covidData[myDataTable.covidData.length-1].submission_date)));
 
@@ -103,7 +104,7 @@ class MapVis {
         vis.x = d3.scaleLinear()
             .range([0, 600]);
         vis.xAxis = d3.axisBottom()
-            .scale(vis.x)
+            .scale(vis.x);
 
        vis.wrangleData();
     }
@@ -118,6 +119,9 @@ class MapVis {
     updateVis() {
         let vis = this;
 
+        const parseDate = d3.timeParse("%m/%d/%Y");
+        const formatTime = d3.timeFormat("%B %d, %Y");
+
         // Title the legend with what category we're displaying
         let sel = document.getElementById('categorySelector');
         vis.title
@@ -127,12 +131,12 @@ class MapVis {
 
         // append tooltip
         vis.tooltip = d3.select("body").append('div')
-            .attr('class', "tooltip")
+            .attr('class', "tooltip");
 
         // Create the map color scale
         vis.colorScale = d3.scaleSequential()
             .interpolator(d3.interpolateViridis)
-            .domain([0, d3.max(vis.stateInfo, d=>d[selectedCategory])])
+            .domain([0, d3.max(vis.stateInfo, d=>d[selectedCategory])]);
 
         // Try to color the map. If the user brushes an area too small to return any data, catch and log the error
         try {
@@ -143,7 +147,7 @@ class MapVis {
                 });
         }
         catch(e) {
-            console.log("Brush selection too small to render: vis.stateInfo length=", vis.stateInfo.length)
+            console.log("Brush selection too small to render: vis.stateInfo length=", vis.stateInfo.length);
         }
         // Fill all the states and add the tooltips
         vis.states
@@ -189,10 +193,10 @@ class MapVis {
                 myBarVisTwo.removeHighlightBar();
             });
         // Adjust the axis domains and tick marks
-        vis.x.domain([0, d3.max(vis.stateInfo, d=>d[selectedCategory])])
+        vis.x.domain([0, d3.max(vis.stateInfo, d=>d[selectedCategory])]);
         vis.xGroup
             .transition(t)
-            .call(vis.xAxis.tickFormat(getTickFormatter()))
+            .call(vis.xAxis.tickFormat(getTickFormatter()));
 
     }
     // Highlight the appropriate state by coloring it

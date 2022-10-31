@@ -81,12 +81,12 @@ class BrushVis {
 
         // init brush
         vis.brush = d3.brushX()
-            .extent([[0, 0], [vis.width, vis.height]])
+            .extent([[0, 0], [vis.width, vis.height]]);
 
         // Add legend
         vis.legend = vis.svg.append("g")
             .attr('class', 'timeline-legend')
-            .attr("transform", `translate(10, 0)`)
+            .attr("transform", `translate(10, 0)`);
 
         vis.legend
             .append("rect")
@@ -103,7 +103,7 @@ class BrushVis {
             .text("U.S. Population")
             .attr("class", "timeline-legend-text")
             .style("font-size", "15px")
-            .attr("alignment-baseline","middle")
+            .attr("alignment-baseline","middle");
 
         vis.stateLegendLabel = vis.legend
             .append("text")
@@ -126,8 +126,7 @@ class BrushVis {
         vis.data = (selectedYear === "2020") ? vis.covidData2020 : vis.covidData2022;
 
         // rearrange data structure and group by state
-        let dataByDate = Array.from(d3.group(vis.data, d => d.submission_date), ([key, value]) => ({key, value}))
-
+        let dataByDate = Array.from(d3.group(vis.data, d => d.submission_date), ([key, value]) => ({key, value}));
 
         vis.preProcessedData = [];
 
@@ -147,7 +146,7 @@ class BrushVis {
 
         vis.preProcessedData.sort((a, b) => {
             return a.date - b.date;
-        })
+        });
 
         this.wrangleDataResponsive();
     }
@@ -170,7 +169,7 @@ class BrushVis {
         }
 
         // rearrange data structure and group by state
-        let dataByDate = Array.from(d3.group(vis.filteredData, d => d.submission_date), ([key, value]) => ({key, value}))
+        let dataByDate = Array.from(d3.group(vis.filteredData, d => d.submission_date), ([key, value]) => ({key, value}));
 
         vis.dataPathTwo = [];
 
@@ -185,7 +184,7 @@ class BrushVis {
 
             vis.dataPathTwo.push(
                 {date: vis.parseDate(year.key), newCases: tmpSumNewCases, newDeaths: tmpSumNewDeaths}
-            )
+            );
         });
         vis.dataPathTwo.sort((a, b) => {
             return a.date - b.date;
@@ -217,7 +216,7 @@ class BrushVis {
 
         // Update domains to reflect if we're looking at cases or deaths
         vis.x.domain(d3.extent(vis.preProcessedData, function (d) {
-            return d.date
+            return d.date;
         }));
         vis.y.domain(d3.extent(vis.preProcessedData, function (d) {
             if (selectedCategory === "absCases" || selectedCategory === "relCases") return d.newCases;
@@ -255,7 +254,7 @@ class BrushVis {
                 .attr("height", 12)
                 .style("fill", "rgba(255,0,0,0.47)");
 
-            vis.stateLegendLabel.text(`${selectedState} Population`)
+            vis.stateLegendLabel.text(`${selectedState} Population`);
 
        }
 

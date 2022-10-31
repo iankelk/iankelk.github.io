@@ -104,7 +104,7 @@ let nameConverter = new NameConverter()
 * * * * * * * * * * * * * */
 
 // Create bootstrap carousel, disabling rotating
-let carousel = new bootstrap.Carousel(document.getElementById('stateCarousel'), {interval: false})
+let carousel = new bootstrap.Carousel(document.getElementById('stateCarousel'), {interval: false});
 
 // on button click switch view
 function switchView() {
