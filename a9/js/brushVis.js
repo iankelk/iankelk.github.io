@@ -17,7 +17,7 @@ class BrushVis {
     initVis(){
         let vis = this;
 
-        vis.margin = {top: 20, right: 50, bottom: 20, left: 50};
+        vis.margin = {top: 20, right:15, bottom: 20, left: 40};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
