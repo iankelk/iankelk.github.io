@@ -40,7 +40,7 @@ class BrushVis {
         vis.title = vis.svg.append('g')
             .attr('class', 'title')
             .append('text')
-            .attr('transform', `translate(${vis.width / 2}, 20)`)
+            .attr('transform', `translate(${vis.width / 2}, 3)`)
             .attr('text-anchor', 'middle');
 
         // init scales

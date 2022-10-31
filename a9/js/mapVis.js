@@ -18,7 +18,7 @@ class MapVis {
         const parseDate = d3.timeParse("%m/%d/%Y");
         const formatTime = d3.timeFormat("%B %d, %Y");
 
-        vis.margin = {top: 10, right: 15, bottom: 20, left: 15};
+        vis.margin = {top: 10, right: 15, bottom: 10, left: 20};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -56,12 +56,12 @@ class MapVis {
         // Add legend group
         vis.legendGroup = vis.svg.append("g")
             .attr('class', 'timeline-legend')
-            .attr("transform", `translate(10, ${vis.height-50})`);
+            .attr("transform", `translate(15, ${vis.height-50})`);
 
         // Add x axis group
         vis.xGroup = vis.svg.append("g")
             .attr("class", "x-axis axis")
-            .attr("transform", `translate(10, ${vis.height-15})`);
+            .attr("transform", `translate(15, ${vis.height-18})`);
 
         // Create a title for the legend
         vis.title = vis.xGroup
