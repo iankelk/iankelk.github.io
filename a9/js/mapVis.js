@@ -18,7 +18,7 @@ class MapVis {
         const parseDate = d3.timeParse("%m/%d/%Y");
         const formatTime = d3.timeFormat("%B %d, %Y");
 
-        vis.margin = {top: 10, right: 15, bottom: 10, left: 20};
+        vis.margin = {top: 10, right: 10, bottom: 10, left: 10};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
