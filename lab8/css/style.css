@@ -26,7 +26,7 @@ h1,h2{
 }
 
 #vis-row {
-    height: 72vh;
+    height: 78vh;
     width: 100%;
 }
 
@@ -37,4 +37,8 @@ h1,h2{
 .legend-text {
     font-size: 1em;
     alignment-baseline: middle;
+}
+
+.row-label,.col-label{
+    font-size: 1em;
 }

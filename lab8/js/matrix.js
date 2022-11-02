@@ -5,7 +5,7 @@ class MatrixVis {
         this.data = data;
         // Make a deep copy of the data for display purposes
         this.displayData = this.data.map((x) => x);
-        this.cellHeight = 40;
+        this.cellHeight = 35;
         this.cellPadding = 4;
 
         // Define colors for the links
@@ -19,19 +19,20 @@ class MatrixVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 100, right: 50, bottom: 0, left: 120};
+        // define margins
+        vis.margin = {top: 100, right: 20, bottom: 0, left: 125};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
         // Some resizing depending on the window size
-        let zoom = (vis.width > 900) ? 1 : vis.width / 900;
+        let zoom = (vis.width > 680) ? 1 : vis.width / 680;
         vis.cellPadding = vis.cellPadding * zoom;
         vis.cellHeight = vis.cellHeight * zoom;
 
-        // Initialize drawing area
+        // init drawing area
         vis.svg = d3.select(vis.parentElement).append("svg")
-            .attr("width", vis.width)
-            .attr("height", vis.height)
+            .attr("width", vis.width + vis.margin.left + vis.margin.right)
+            .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
             .append('g')
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
