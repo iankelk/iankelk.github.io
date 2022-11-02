@@ -1,0 +1,33 @@
+body {
+    padding: 5vh;
+}
+
+h1 {
+    color: #F2E9E4;
+}
+
+.container-fluid {
+    border: thin solid grey;
+    border-radius: 5px;
+}
+
+#top-row {
+    height: 10vh;
+    margin-top: 1vh;
+}
+
+#selector-row {
+    height: 5vh;
+}
+
+#ordering {
+    width: 20%;
+}
+
+#vis-row {
+    height: 72vh;
+}
+
+#matrix {
+    width: 100%;
+}
