@@ -24,9 +24,9 @@ h1 {
     width: 20%;
 }
 
-/*#vis-row {*/
-/*    !*height: 72vh;*!*/
-/*!*}*!*/
+#vis-row {
+    height: 72vh;
+}
 
 #matrix {
     width: 100%;

@@ -11,12 +11,10 @@ class MatrixVis {
 
     initVis() {
         let vis = this;
-
-        console.log(document.getElementById(vis.parentElement).getBoundingClientRect().height);
-
+        
         vis.margin = {top: 100, right: 20, bottom: 0, left: 200};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-        vis.height = 1000 - vis.margin.top - vis.margin.bottom;
+        vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
         // Initialize drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
