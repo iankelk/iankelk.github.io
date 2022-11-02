@@ -9,6 +9,7 @@ h1,h2{
 .container-fluid {
     border: thin solid grey;
     border-radius: 5px;
+    background: lightcyan;
 }
 
 #top-row {
