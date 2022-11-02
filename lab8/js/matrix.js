@@ -1,23 +1,35 @@
 class MatrixVis {
     constructor(parentElement, data){
+        // The DOM element of the parent
         this.parentElement = parentElement;
         this.data = data;
+        // Make a deep copy of the data for display purposes
         this.displayData = this.data.map((x) => x);
-        this.cellHeight = 35;
-        this.cellPadding = 5;
+        this.cellHeight = 40;
+        this.cellPadding = 4;
+
+        // Define colors for the links
+        this.colorBusiness = "#0080ff";
+        this.colorMarriage = "#4F5D75";
+        this.colorNoRelation = "#B0C4DE";
 
         this.initVis()
     }
 
     initVis() {
         let vis = this;
-        
-        vis.margin = {top: 100, right: 20, bottom: 0, left: 200};
-        vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-        vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
+
+        vis.margin = {top: 100, right: 50, bottom: 0, left: 120};
+        vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
+        vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
+
+        // Some resizing depending on the window size
+        let zoom = (vis.width > 900) ? 1 : vis.width / 900;
+        vis.cellPadding = vis.cellPadding * zoom;
+        vis.cellHeight = vis.cellHeight * zoom;
 
         // Initialize drawing area
-        vis.svg = d3.select("#" + vis.parentElement).append("svg")
+        vis.svg = d3.select(vis.parentElement).append("svg")
             .attr("width", vis.width)
             .attr("height", vis.height)
             .append('g')
@@ -26,7 +38,7 @@ class MatrixVis {
         vis.rows = vis.svg.selectAll(".matrix-row")
             .data(vis.displayData, (d) => d.name);
 
-        // define row groups
+        // Define row groups
         vis.rowGroups = vis.rows
             .enter()
             .append("g")
@@ -53,7 +65,7 @@ class MatrixVis {
 
                 return `M ${x} ${y} l ${vis.cellHeight}  0 l 0  ${vis.cellHeight} z`;
             })
-            .attr("fill", d=> (d===1)? color2: color4);
+            .attr("fill", d=> (d===1)? vis.colorMarriage : vis.colorNoRelation);
 
         // Lower triangles
         vis.triangles.selectAll(".triangles-businesses")
@@ -71,7 +83,7 @@ class MatrixVis {
 
                 return `M ${x} ${y} l 0 ${vis.cellHeight}  l ${vis.cellHeight} 0 z`;
             })
-            .attr("fill", d => (d === 1) ? color1 : color4);
+            .attr("fill", d => (d === 1) ? vis.colorBusiness : vis.colorNoRelation);
 
         // Add row labels
         vis.rowGroups
@@ -90,14 +102,52 @@ class MatrixVis {
             .enter()
             .append("text")
             .attr("class", "col-label")
-            .attr("transform", (d,i)=>`translate(${((vis.cellHeight+vis.cellPadding)*i)+20}, ${(-(vis.cellHeight + vis.cellPadding))+30}) rotate(-45)`)
-            .text(d=>d.name)
+            .attr("transform", (d,i) => `translate(${((vis.cellHeight+vis.cellPadding) * i ) + 20}, ${(-(vis.cellHeight + vis.cellPadding)) + 20}) rotate(-45)`)
+            .text(d => d.name)
+
+        // Add legend
+        vis.legend = vis.svg.append("g")
+            .attr('class', 'legend')
+            .attr("transform", `translate(-110, -70)`);
+
+        // Add the 2 colors
+        vis.legend
+            .append("rect")
+            .attr("x",0)
+            .attr("y",0)
+            .attr("width", 12)
+            .attr("height", 12)
+            .attr("fill", this.colorMarriage);
+
+        vis.legend
+            .append("rect")
+            .attr("x",0)
+            .attr("y",20)
+            .attr("width", 12)
+            .attr("height", 12)
+            .attr("fill", this.colorBusiness);
+
+        // Add the text
+        vis.legend
+            .append("text")
+            .attr("x", 18)
+            .attr("y", 7)
+            .text("Marriage")
+            .attr("class", "legend-text")
+
+        vis.legend
+            .append("text")
+            .attr("x", 18)
+            .attr("y", 27)
+            .text("Business Tie")
+            .attr("class", "legend-text")
 
         vis.wrangleData();
     }
     wrangleData() {
         let vis = this;
 
+        // Get the selected order and make a copy of the data to display
         vis.selectedOrder =  document.getElementById('ordering').value;
         vis.displayData = vis.data.map((x) => x);
 
@@ -123,7 +173,8 @@ class MatrixVis {
             .transition(t)
             .attr("transform", (d,i)=> `translate(0, ${(vis.cellHeight + vis.cellPadding) * i})`);
 
-        // Mouse events
+        // Mouse events. It was rather tricky to get the row and column data and I had to use two
+        // separate mouseovers on both the grouping and the individual triangles.
         vis.triangles.selectAll(".triangles")
             .on('mouseover', function(event, d) {
                 let triangle = d3.select(this);

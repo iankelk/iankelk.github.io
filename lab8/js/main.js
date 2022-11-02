@@ -1,13 +1,6 @@
 // Init global variables
 let myMatrixVis;
 
-// Define colors
-let color1 = "#EF8354";
-let color2 = "#4F5D75";
-let color3 = "#2D3142";
-let color4 = "#BFC0C0";
-let color5 = "#FFFFFF";
-
 // Load data using promises
 let promises = [
     d3.csv("data/florentine-family-attributes.csv", (row, i) => {
@@ -17,6 +10,8 @@ let promises = [
         return row;
     }),
 
+    // It turned out to be tricky reading in the CSV's of the matrices. There seems to be no way
+    // to do it in D3 currently when the CSV doesn't have columnn headers, so I added them.
     d3.csv("data/marriages.csv", (row, i) => {
         // Convert all fields to numbers
         let arr = [];
@@ -44,7 +39,7 @@ Promise.all(promises)
         console.log(err);
     });
 
-// Prepare data
+// Prepare data by constructing the familiar data structure from the 3 datasets
 function prepareData(dataArray) {
     let familyData = dataArray[0];
     let marriageData = dataArray[1];
@@ -74,7 +69,7 @@ function prepareData(dataArray) {
 // initMainPage
 function initMainPage(data) {
     // Init matrix
-    myMatrixVis = new MatrixVis('matrix', data);
+    myMatrixVis = new MatrixVis(document.getElementById('matrix'), data);
 }
 
 // Selector listener

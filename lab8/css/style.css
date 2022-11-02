@@ -2,8 +2,8 @@ body {
     padding: 5vh;
 }
 
-h1 {
-    color: #F2E9E4;
+h1,h2{
+    color: midnightblue;
 }
 
 .container-fluid {
@@ -26,8 +26,14 @@ h1 {
 
 #vis-row {
     height: 72vh;
+    width: 100%;
 }
 
 #matrix {
     width: 100%;
+}
+
+.legend-text {
+    font-size: 1em;
+    alignment-baseline: middle;
 }
