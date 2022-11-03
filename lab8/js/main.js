@@ -10,8 +10,8 @@ let promises = [
         return row;
     }),
 
-    // It turned out to be tricky reading in the CSV's of the matrices. There seems to be no way
-    // to do it in D3 currently when the CSV doesn't have columnn headers, so I added them.
+    // It turned out to be tricky reading in the CSVs of the matrices. There seems to be no way
+    // to do it in D3 currently when the CSV doesn't have column headers, so I added them.
     d3.csv("data/marriages.csv", (row, i) => {
         // Convert all fields to numbers
         let arr = [];
