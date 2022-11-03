@@ -13,12 +13,12 @@ h1,h2{
 }
 
 #top-row {
-    height: 10vh;
+    height: 45px;
     margin-top: 1vh;
 }
 
 #selector-row {
-    height: 5vh;
+    height: 30px;
 }
 
 #ordering {
