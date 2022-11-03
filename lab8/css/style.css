@@ -22,11 +22,12 @@ h1,h2{
 }
 
 #ordering {
-    width: 40%;
+    width: 30%;
+    height: 100%;
 }
 
 #vis-row {
-    height: 800px;
+    height: 760px;
     width: 100%;
 }
 
