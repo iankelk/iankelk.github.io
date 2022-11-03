@@ -1,5 +1,5 @@
 class MatrixVis {
-    constructor(parentElement, data){
+    constructor(parentElement, data) {
         // The DOM element of the parent
         this.parentElement = parentElement;
         this.data = data;
@@ -13,7 +13,7 @@ class MatrixVis {
         this.colorMarriage = "#4F5D75";
         this.colorNoRelation = "#B0C4DE";
 
-        this.initVis()
+        this.initVis();
     }
 
     initVis() {
@@ -48,7 +48,7 @@ class MatrixVis {
             .merge(vis.rows);
 
         // Define triangles
-        vis.triangles = vis.rowGroups.append("g")
+        vis.triangles = vis.rowGroups.append("g");
 
         // Upper triangles
         vis.triangles.selectAll(".triangles-marriages")
@@ -104,7 +104,7 @@ class MatrixVis {
             .append("text")
             .attr("class", "col-label")
             .attr("transform", (d,i) => `translate(${((vis.cellHeight+vis.cellPadding) * i ) + 20}, ${(-(vis.cellHeight + vis.cellPadding)) + 20}) rotate(-45)`)
-            .text(d => d.name)
+            .text(d => d.name);
 
         // Add legend
         vis.legend = vis.svg.append("g")
@@ -134,14 +134,14 @@ class MatrixVis {
             .attr("x", 18)
             .attr("y", 7)
             .text("Marriage")
-            .attr("class", "legend-text")
+            .attr("class", "legend-text");
 
         vis.legend
             .append("text")
             .attr("x", 18)
             .attr("y", 27)
             .text("Business Tie")
-            .attr("class", "legend-text")
+            .attr("class", "legend-text");
 
         vis.wrangleData();
     }
@@ -160,7 +160,7 @@ class MatrixVis {
             })
         }
 
-        vis.updateVis()
+        vis.updateVis();
     }
     updateVis() {
         let vis = this;

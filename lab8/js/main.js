@@ -16,7 +16,7 @@ let promises = [
         // Convert all fields to numbers
         let arr = [];
         for (let i = 1; i < (Object.keys(row).length+1); i++) {
-            arr.push(+row["col" + i])
+            arr.push(+row["col" + i]);
         }
         return arr;
     }),
@@ -25,7 +25,7 @@ let promises = [
         // Convert all fields to numbers
         let arr = [];
         for (let i = 1; i < (Object.keys(row).length+1); i++) {
-            arr.push(+row["col" + i])
+            arr.push(+row["col" + i]);
         }
         return arr;
     })
@@ -61,7 +61,7 @@ function prepareData(dataArray) {
             marriageValues: d,
             numPriorates: familyData[i].Priorates,
             wealth: familyData[i].Wealth
-        })
+        });
     })
     initMainPage(preparedData);
 }
