@@ -165,14 +165,16 @@ class MatrixVis {
     updateVis() {
         let vis = this;
 
-        let t = d3.transition().duration(500);
+        let t = d3.transition().duration(1000);
 
         // Define row groups
         vis.rowGroups
             .data(vis.displayData, (d) => d.name)
             .merge(vis.rowGroups)
+            .attr("opacity", 0.5)
             .transition(t)
-            .attr("transform", (d,i)=> `translate(0, ${(vis.cellHeight + vis.cellPadding) * i})`);
+            .attr("transform", (d,i)=> `translate(0, ${(vis.cellHeight + vis.cellPadding) * i})`)
+            .attr("opacity", 1);
 
         // Mouse events. It was rather tricky to get the row and column data and I had to use two
         // separate mouseovers on both the grouping and the individual triangles.
