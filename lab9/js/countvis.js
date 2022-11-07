@@ -214,7 +214,6 @@ class CountVis {
 	}
 	resetZoom() {
 		let vis = this;
-		console.log(d3.zoomTransform(vis.zoom));
 		vis.brushGroup.call(vis.zoom.transform, d3.zoomIdentity);
 		vis.updateVis();
 	}
