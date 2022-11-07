@@ -1,0 +1,57 @@
+body {
+	font-family: 'Neuton', serif;
+}
+
+h1 {
+	font-size: 36px;
+	color: #825a5a;
+	margin-top: 40px;
+}
+
+h2 {
+	color: #94a97a;
+	font-size: 24px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+/*.brush {*/
+/*	fill: #ccc;*/
+/*	fill-opacity: .5;*/
+/*	pointer-events: none;*/
+/*}*/
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #555;
+  shape-rendering: crispEdges;
+}
+
+.tick text {
+	font-family: sans-serif;
+	font-size: 11px;
+	fill: #555;
+}
+
+#priovis .x-axis text {
+	font-weight: 600;
+}
+
+.area {
+	fill: #825a5a;
+}
+
+.area.area-age {
+	fill: #94a97a;
+}
+
+.bar {
+	fill: #93bebf;
+}
+
+#reset-button {
+	margin-top: 55px;
+	width: 100%;
+	/*display: none;*/
+}
