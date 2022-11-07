@@ -185,10 +185,6 @@ class CountVis {
 	updateVis() {
 		let vis = this;
 
-		if (vis.x === vis.xOrig) {
-			console.log("blahhahahshasjdhjsad")
-		}
-
 		// Call brush component here
 		vis.brushGroup
 			.call(vis.brush);
