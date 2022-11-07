@@ -138,7 +138,7 @@ class CountVis {
 
 			// Check if a zoom has been applied
 			const trans = d3.zoomTransform(this);
-			if (Math.abs(trans.x) > 10 || Math.abs(trans.y) > 10) {
+			if (Math.abs(trans.x) > 20 || Math.abs(trans.y) > 20) {
 				vis.resetButton.style.display = "block";
 			} else {
 				vis.resetButton.style.display = "none";
