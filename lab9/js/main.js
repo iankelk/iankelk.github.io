@@ -21,8 +21,6 @@ Promise.all(promises)
 function createVis(data) {
     let perDayData = data[0]
     let metaData = data[1]
-    // error, perDayData, metaData
-    // if(error) { console.log(error); }
 
     // (2) Make our data look nicer and more useful
     allData = perDayData.map(function (d) {
@@ -76,6 +74,7 @@ function createVis(data) {
         let rangeStart;
         let rangeEnd;
         let vis = countVis;
+        // Check if we have a brushed selection, or the selection has been cleared
         if (event.detail !== null) {
             rangeStart = event.detail[0];
             rangeEnd = event.detail[1];
@@ -83,11 +82,13 @@ function createVis(data) {
             rangeStart = vis.x.invert(0);
             rangeEnd = vis.x.invert(vis.width);
         }
+        // Update all the visualizations
         countVis.onSelectionChange(rangeStart, rangeEnd);
         ageVis.onSelectionChange(rangeStart, rangeEnd);
         prioVis.onSelectionChange(rangeStart, rangeEnd);
     });
 }
+// Function called by the reset zoom button
 function resetZoom() {
     countVis.resetZoom();
 }

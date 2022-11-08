@@ -26,8 +26,6 @@ class CountVis {
 
 		let vis = this;
 
-		vis.resetButton.style.display = "none";
-
 		vis.margin = { top: 40, right: 0, bottom: 60, left: 60 };
 
 		vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
@@ -107,12 +105,10 @@ class CountVis {
 				// User just selected a specific region
 				vis.currentBrushRegion = event.selection;
 
+				// If the brush has a selection area
 				if (vis.currentBrushRegion !== null) {
 					vis.currentBrushRegion = vis.currentBrushRegion.map(vis.x.invert);
 				}
-				// else {
-				// 	vis.currentBrushRegion = [vis.x.invert(0), vis.x.invert(vis.width)];
-				// }
 
 				// 3. Trigger the event 'selectionChanged' of our event handler
 				vis.eventHandler.trigger("selectionChanged", vis.currentBrushRegion);
@@ -206,12 +202,13 @@ class CountVis {
 		vis.svg.select(".x-axis").call(vis.xAxis);
 		vis.svg.select(".y-axis").call(vis.yAxis);
 	}
-
+	// Function called to update the displayed date range
 	onSelectionChange(selectionStart, selectionEnd) {
 		let vis = this;
 		vis.dateRange
 			.text(`${vis.formatTime(selectionStart)} - ${vis.formatTime(selectionEnd)}`);
 	}
+	// Function called by the main.js file to reset the zoom
 	resetZoom() {
 		let vis = this;
 		vis.brushGroup.call(vis.zoom.transform, d3.zoomIdentity);
