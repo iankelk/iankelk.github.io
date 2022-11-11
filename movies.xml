@@ -1,5 +1,4 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="Movies.xsl" ?>
 <Movies>
     <Movie rating= "R">
         <Title runtime="177" >The Godfather</Title>
