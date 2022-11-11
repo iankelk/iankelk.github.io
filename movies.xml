@@ -1,0 +1,148 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Movies.xsl" ?>
+<Movies>
+    <Movie rating= "R">
+        <Title runtime="177" >The Godfather</Title>
+        <Genre> Crime Drama </Genre>
+        <Director>
+            <Name>
+                <First>Francis Ford </First>
+                <Last>Coppola </Last>
+            </Name>
+        </Director>
+        <Studio>Paramount Pictures </Studio>
+        <Year>1972 </Year>
+    </Movie>
+    <Movie rating= "R">
+        <Title runtime="142">The Shwashank Redemption</Title>
+        <Genre> Drama</Genre>
+        <Director>
+            <Name highratedmovie="The Mist">
+                <First> Frank   </First>
+                <Last> Darabont</Last>
+            </Name>
+        </Director>
+        <Studio>Columbia Pictures </Studio>
+        <Year> 1994</Year>
+    </Movie>
+    <Movie rating= "PG">
+        <Title runtime="204">Sholay</Title>
+        <Genre> Action-Advneture</Genre>
+        <Director>
+            <Name highratedmovie="Shaan">
+                <First> Ramesh  </First>
+                <Last> Sippy</Last>
+            </Name>
+        </Director>
+        <Studio>United Producers Sippy Films </Studio>
+        <Year> 1975</Year>
+    </Movie>
+    <Movie rating= "G">
+        <Title>Swades</Title>
+        <Genre> Drama</Genre>
+        <Director>
+            <Name highratedmovie="Jodhaa Akbar">
+                <First> Ashutosh  </First>
+                <Last> Gowariker</Last>
+            </Name>
+        </Director>
+        <Studio>Ashutosh Gowariker Productions</Studio>
+        <Year> 2004</Year>
+    </Movie>
+    <Movie rating= "G">
+        <Title runtime="183">Guide</Title>
+        <Genre> Romantic Drama</Genre>
+        <Director>
+            <Name highratedmovie="Johny Mera Naam">
+                <First> Vijay  </First>
+                <Last> Anand</Last>
+            </Name>
+        </Director>
+        <Studio>Navketan Films</Studio>
+        <Year> 1965</Year>
+    </Movie>
+    <Movie rating= "G">
+        <Title>Guru</Title>
+        <Genre> Drama</Genre>
+        <Director>
+            <Name highratedmovie="Roja">
+                <First> Mani  </First>
+                <Last> Ratnam</Last>
+            </Name>
+        </Director>
+        <Studio>Madras Talkies</Studio>
+        <Year> 2007</Year>
+    </Movie>
+    <Movie rating= "PG">
+        <Title runtime="174">Sarfarosh</Title>
+        <Genre>Action Drama</Genre>
+        <Director>
+            <Name>
+                <First> John Mathew  </First>
+                <Last> Matthan</Last>
+            </Name>
+        </Director>
+        <Studio>Cinematt Pictures</Studio>
+        <Year> 1999</Year>
+    </Movie>
+    <Movie rating= "G">
+        <Title runtime="224">Lagaan</Title>
+        <Genre>Epic Sports-Drama</Genre>
+        <Director>
+            <Name>
+                <First> Ashutosh  </First>
+                <Last> Gowariker</Last>
+            </Name>
+        </Director>
+        <Studio>Aamir Khan Productions</Studio>
+        <Year> 2001</Year>
+    </Movie>
+    <Movie rating= "PG-13">
+        <Title runtime="135">A Beautiful Mind</Title>
+        <Genre>Biographical Drama</Genre>
+        <Director>
+            <Name highratedmovie="The Da Vinci Code">
+                <First> Ron  </First>
+                <Last> Howard</Last>
+            </Name>
+        </Director>
+        <Studio>Imagine Entertainment</Studio>
+        <Year> 2001</Year>
+    </Movie>
+    <Movie rating= "PG">
+        <Title>Ship of Theseus</Title>
+        <Genre>Indian Drama</Genre>
+        <Director>
+            <Name>
+                <First> Anand  </First>
+                <Last> Gandhi</Last>
+            </Name>
+        </Director>
+        <Studio>Recyclewala Films</Studio>
+        <Year> 2012</Year>
+    </Movie>
+    <Movie rating= "PG-13">
+        <Title runtime="170">Purab aur Paschim</Title>
+        <Genre>Patriotic</Genre>
+        <Director>
+            <Name>
+                <First> Manoj  </First>
+                <Last> Kumar</Last>
+            </Name>
+        </Director>
+        <Studio>Vishal Inernational Productions</Studio>
+        <Year> 1970</Year>
+    </Movie>
+    <Movie rating= "PG-13">
+        <Title runtime="124">The Notebook</Title>
+        <Genre>Romantic Drama</Genre>
+        <Director>
+            <Name>
+                <First> Nick  </First>
+                <Last> Cassavetes</Last>
+            </Name>
+        </Director>
+        <Studio>Avery Pix</Studio>
+        <Year> 2004</Year>
+    </Movie>
+</Movies>
