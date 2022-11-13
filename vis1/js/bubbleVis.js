@@ -6,7 +6,7 @@ class BubbleVis {
         this.narrativeData = narrativeData;
         this.regionData = regionData;
         this.data = motiveData;
-        //this.motives = [...new Set(data.map(d => d.motive))]
+
         this.categories = {};
         this.categories["motive"] =  [...new Set(motiveData.map(d => d.motive))]
         this.categories["narrative"] =  [...new Set(narrativeData.map(d => d.narrative))]
@@ -109,8 +109,6 @@ class BubbleVis {
         vis.tooltip = d3.select("body").append('div')
             .attr('class', "tooltip");
 
-       // vis.data = vis.getDataset();
-
         const split = (document.getElementById('split').value !== "all");
 
         let height = split ? 800 : 400;
@@ -165,7 +163,6 @@ class BubbleVis {
         vis.simulation = d3.forceSimulation()
             .force("x", d3.forceX(d => vis.x(d.date)))
             .force("y", d3.forceY(d => vis.y(d[selectedCategory]) + vis.y.bandwidth() / 2))
-            //.force("y", d3.forceY(d => vis.y.bandwidth() / 2))
             .force("collide", d3.forceCollide(d => vis.r(d.count) + 1).strength(0.5));
 
         vis.simulation.on("tick", () => {

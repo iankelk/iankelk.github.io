@@ -2,7 +2,6 @@
 let myBubbleVis;
 let selectedCategory =  document.getElementById('category').value;
 
-
 // Load data using promises
 let promises = [
     d3.json("data/motive.json", (row, i) => {
@@ -30,7 +29,7 @@ function initMainPage(dataArray) {
     let narrativeData = dataArray[1];
     let regionData = dataArray[2];
 
-    // Init matrix
+    // Init bubbles
     myBubbleVis = new BubbleVis(document.getElementById('bubble'), motiveData, narrativeData, regionData);
 }
 
