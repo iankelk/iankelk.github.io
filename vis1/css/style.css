@@ -49,3 +49,17 @@ h1,h2{
 /*input[type=radio] {*/
 /*    display: inline;*/
 /*}*/
+
+.tooltip {
+    position: absolute;
+    text-align: left;
+    font: 12px sans-serif;
+    /*  pointer-events: none;	This line needs to be removed */
+}
+.tooltip h3,h4 {
+    text-align: left;
+}
+.tooltip h4 {
+    font: 14px sans-serif;
+    color: darkblue;
+}

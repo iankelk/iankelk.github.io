@@ -105,6 +105,10 @@ class BubbleVis {
         // If the simulation is running already, stop it to free up resources
         if (vis.simulation) vis.simulation.stop();
 
+        // append tooltip
+        vis.tooltip = d3.select("body").append('div')
+            .attr('class', "tooltip");
+
        // vis.data = vis.getDataset();
 
         const split = (document.getElementById('split').value !== "all");
@@ -128,7 +132,33 @@ class BubbleVis {
             .attr("r", d => vis.r(d.count))
             .attr("stroke", "white")
             .attr("stroke-width", 1)
-            .attr("fill", d => vis.colour(d.date));
+            .attr("fill", d => vis.colour(d.date))
+            .on('mouseover', function(event, d) {
+                d3.select(this)
+                    .attr('stroke-width', '2px')
+                    .attr('fill', 'rgba(173,222,255,0.62)');
+                vis.tooltip
+                    .style("opacity", 1)
+                    .style("left", event.pageX + 20 + "px")
+                    .style("top", event.pageY + "px")
+                    .html(`
+                     <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
+                         <h4>${selectedCategory}: ${d[selectedCategory]}</h4>
+                         <strong>Date: </strong> ${d.date.toLocaleString("en-US")}<br />
+                         <strong>Count: </strong>${d.count}<br />
+                     </div>`);
+            })
+            .on('mouseout', function (event, d) {
+                d3.select(this)
+                    .attr('stroke-width', '1px')
+                    .attr("fill", d => vis.colour(d.date))
+                vis.tooltip
+                    .style("opacity", 0)
+                    .style("left", 0)
+                    .style("top", 0)
+                    .html(``);
+            });
+
 
         console.log("selectedCategory", selectedCategory)
 
