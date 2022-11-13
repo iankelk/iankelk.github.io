@@ -26,9 +26,15 @@
 		<div class="row" id="selector-row" >
 			<div class="col">
 				<div class="row justify-content-center">
-					<select id='selection' class="custom-select align-self-center" onchange="changeSelection()">
+					<select id='split' class="custom-select align-self-center" onchange="toggleSplit()">
 						<option value="all" selected>Global</option>
-						<option value="motive">By Motive</option>
+						<option value="split">Split into Categories</option>
+					</select>
+				</div>
+				<div class="row justify-content-center">
+					<select id='category' class="custom-select align-self-center" onchange="changeCategory()">
+						<option value="motive" selected>By Motive</option>
+						<option value="narrative">By Narrative</option>
 					</select>
 				</div>
 			</div>

@@ -21,7 +21,10 @@ h1,h2{
     height: 5vh;
 }
 
-#selection {
+#category {
+    width: 20%;
+}
+#split {
     width: 20%;
 }
 
