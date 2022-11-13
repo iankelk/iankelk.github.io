@@ -20,24 +20,27 @@ class BubbleVis {
     }
 
     initVis() {
-        const nativeWidth = 700;
+        const nativeWidth = 1000;
         let vis = this;
 
         let height = 800 // initial height
+        let actualWidth = vis.parentElement.getBoundingClientRect().width;
+        vis.zoom = actualWidth / nativeWidth;
+        if (vis.zoom > 1) vis.zoom = 1;
 
         vis.margin = {top: 50, right: 100, bottom: 50, left: 170};
-        vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
+        vis.width = actualWidth - vis.margin.left - Math.ceil(vis.zoom*vis.margin.right);
         vis.height = height - vis.margin.top - vis.margin.bottom;
 
         console.log("width", vis.width)
 
         // SVG drawing area
         vis.svg = d3.select(vis.parentElement).append("svg")
-            .attr("width", vis.width + vis.margin.left + vis.margin.right)
+            .attr("width", vis.width + vis.margin.left +  Math.ceil(vis.zoom*vis.margin.right))
             .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
            // .attr("viewBox", [0, 0, vis.width, height])
             .append("g")
-            .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
+            .attr("transform", "translate(" + vis.margin.left+ "," + vis.margin.top + ")");
 
         // vis.svg.attr("viewBox", [0, 0, vis.width, height]) ;
 
@@ -50,7 +53,7 @@ class BubbleVis {
             .domain(vis.categories[selectedCategory])
             .range([height / 2, height / 2])
 
-        vis.zoom = vis.width / nativeWidth;
+        //vis.zoom = vis.width / nativeWidth;
         console.log("zoom", vis.zoom);
 
 
