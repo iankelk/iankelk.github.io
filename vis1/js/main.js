@@ -10,6 +10,9 @@ let promises = [
     }),
     d3.json("data/narrative.json", (row, i) => {
         row.map((d, i) => ({id: i + 1, ...d}))
+    }),
+    d3.json("data/region.json", (row, i) => {
+        row.map((d, i) => ({id: i + 1, ...d}))
     })
 ];
 
@@ -25,9 +28,10 @@ Promise.all(promises)
 function initMainPage(dataArray) {
     let motiveData = dataArray[0];
     let narrativeData = dataArray[1];
+    let regionData = dataArray[2];
 
     // Init matrix
-    myBubbleVis = new BubbleVis(document.getElementById('bubble'), motiveData, narrativeData);
+    myBubbleVis = new BubbleVis(document.getElementById('bubble'), motiveData, narrativeData, regionData);
 }
 
 // Selector listener

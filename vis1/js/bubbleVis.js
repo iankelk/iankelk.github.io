@@ -1,15 +1,18 @@
 class BubbleVis {
-    constructor(parentElement, motiveData, narrativeData){
+    constructor(parentElement, motiveData, narrativeData, regionData){
         // The DOM element of the parent
         this.parentElement = parentElement;
         this.motiveData = motiveData;
         this.narrativeData = narrativeData;
+        this.regionData = regionData;
         this.data = motiveData;
         //this.motives = [...new Set(data.map(d => d.motive))]
         this.categories = {};
         this.categories["motive"] =  [...new Set(motiveData.map(d => d.motive))]
         this.categories["narrative"] =  [...new Set(narrativeData.map(d => d.narrative))]
-        console.log("motives", this.motives);
+        this.categories["region"] =  [...new Set(regionData.map(d => d.region))]
+
+        //console.log("motives", this.motives);
         selectedCategory =  document.getElementById('category').value;
         console.log("categories", this.categories);
 
@@ -154,6 +157,8 @@ class BubbleVis {
                 return vis.motiveData;
             case "narrative":
                 return vis.narrativeData;
+            case "region":
+                return vis.regionData;
         }
     }
 }
