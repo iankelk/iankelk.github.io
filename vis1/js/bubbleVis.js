@@ -44,7 +44,7 @@ class BubbleVis {
             .domain(d3.extent(vis.data, d => d.count))
             .range([6, 20])
 
-        vis.colour = d3.scaleSequential(d3.extent(vis.data, d => d.date), d3.interpolatePlasma)
+        vis.colour = d3.scaleSequential(d3.extent(vis.data, d => d.date), d3.interpolateViridis)
 
         vis.xAxis = g =>
             g
@@ -54,7 +54,8 @@ class BubbleVis {
                 .call(g =>
                     g
                         .append("text")
-                        .attr("x", vis.width)
+                        .attr("x", vis.width-20)
+                        .attr("y", 10)
                         .attr("fill", "currentColor")
                         .attr("text-anchor", "middle")
                         .text("Years →")
@@ -69,31 +70,6 @@ class BubbleVis {
 
         vis.svg.append("g").call(vis.xAxis);
         vis.yG = vis.svg.append("g").attr("stroke-width", 0);
-
-        // let node = vis.svg.append("g")
-        //     .selectAll("circle")
-        //     .data(vis.data)
-        //     .join("circle")
-        //     .attr("cx", d => vis.x(d.date))
-        //     .attr("cy", d => vis.y(d.motive) + vis.y.bandwidth() / 2)
-        //     .attr("r", d => vis.r(d.count))
-        //     .attr("stroke", "white")
-        //     .attr("stroke-width", 1)
-        //     .attr("fill", d => vis.colour(d.date));
-        //
-        // vis.simulation = d3.forceSimulation()
-        //     .force("x", d3.forceX(d => vis.x(d.date)))
-        //     .force("y", d3.forceY(d => vis.y(d.motive) + vis.y.bandwidth() / 2))
-        //     .force("collide", d3.forceCollide(d => vis.r(d.count) + 1).strength(0.3));
-        //
-        // vis.simulation.on("tick", () => {
-        //     node
-        //         .transition()
-        //         .delay((d, i) => d.x)
-        //         .ease(d3.easeLinear)
-        //         .attr("cx", d => d.x)
-        //         .attr("cy", d => d.y)
-        // });
 
         vis.wrangleData();
     }
@@ -142,6 +118,7 @@ class BubbleVis {
         vis.simulation = d3.forceSimulation()
             .force("x", d3.forceX(d => vis.x(d.date)))
             .force("y", d3.forceY(d => vis.y(d[selectedCategory]) + vis.y.bandwidth() / 2))
+            //.force("y", d3.forceY(d => vis.y.bandwidth() / 2))
             .force("collide", d3.forceCollide(d => vis.r(d.count) + 1).strength(0.3));
 
         vis.simulation.on("tick", () => {
