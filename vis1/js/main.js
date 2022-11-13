@@ -3,7 +3,7 @@ let myBubbleVis;
 
 // Load data using promises
 let promises = [
-    d3.json("data/data2.json", (row, i) => {
+    d3.json("data/motive.json", (row, i) => {
         row.map((d, i) => ({id: i + 1, ...d}))
     })
 ];
