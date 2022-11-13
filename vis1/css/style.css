@@ -21,7 +21,7 @@ h1,h2{
     height: 5vh;
 }
 
-#ordering {
+#selection {
     width: 20%;
 }
 
@@ -39,10 +39,10 @@ h1,h2{
     alignment-baseline: middle;
 }
 
-input, textarea, select {
-    margin-top: 10px; display: block;
-}
+/*input, textarea, select {*/
+/*    margin-top: 10px; display: block;*/
+/*}*/
 
-input[type=radio] {
-    display: inline;
-}
+/*input[type=radio] {*/
+/*    display: inline;*/
+/*}*/

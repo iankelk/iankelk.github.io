@@ -88,9 +88,6 @@ class BubbleVis {
                 .attr("cy", d => d.y)
         });
 
-       // invalidation.then(() => simulation.stop());
-
-
         vis.wrangleData();
     }
     wrangleData() {
