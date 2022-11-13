@@ -14,7 +14,7 @@ class BubbleVis {
 
         let height = 800 // initial height
 
-        vis.margin = {top: 50, right: 100, bottom: 50, left: 200};
+        vis.margin = {top: 50, right: 100, bottom: 50, left: 120};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -49,7 +49,7 @@ class BubbleVis {
 
         vis.yAxis = (g, scale = vis.y, ticks = vis.y.domain()) =>
             g
-                .attr("transform", `translate(-100, 0)`)
+                .attr("transform", `translate(-90, 0)`)
                 .call(d3.axisLeft(scale).tickValues(ticks))
                 .call(g => g.style("text-anchor", "start"))
                 .call(g => g.select(".domain").remove())
