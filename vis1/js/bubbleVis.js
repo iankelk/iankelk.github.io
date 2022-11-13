@@ -12,7 +12,9 @@ class BubbleVis {
     initVis() {
         let vis = this;
 
-        const parseMilliseconds = d3.timeParse(".%L");
+        const parseTime = d3.timeParse("%Y");
+        console.log("hi")
+        console.log("hi", parseTime("2022.3"));
 
         let height = 800 // initial height
 
