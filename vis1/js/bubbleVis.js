@@ -20,20 +20,27 @@ class BubbleVis {
     }
 
     initVis() {
+        const nativeWidth = 700;
         let vis = this;
 
         let height = 800 // initial height
 
         vis.margin = {top: 50, right: 100, bottom: 50, left: 170};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-        vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
+        vis.height = height - vis.margin.top - vis.margin.bottom;
+
+        console.log("width", vis.width)
 
         // SVG drawing area
         vis.svg = d3.select(vis.parentElement).append("svg")
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
             .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
+           // .attr("viewBox", [0, 0, vis.width, height])
             .append("g")
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
+
+        // vis.svg.attr("viewBox", [0, 0, vis.width, height]) ;
+
 
         vis.x = d3.scaleLinear()
             .domain(d3.extent(vis.data, d => d.date))
@@ -43,9 +50,13 @@ class BubbleVis {
             .domain(vis.categories[selectedCategory])
             .range([height / 2, height / 2])
 
+        vis.zoom = vis.width / nativeWidth;
+        console.log("zoom", vis.zoom);
+
+
         vis.r = d3.scaleSqrt()
             .domain(d3.extent(vis.data, d => d.count))
-            .range([6, 20])
+            .range([Math.ceil(6*vis.zoom), Math.ceil(20*vis.zoom)])
 
         vis.colour = d3.scaleSequential(d3.extent(vis.data, d => d.date), d3.interpolateViridis)
 
@@ -122,7 +133,7 @@ class BubbleVis {
             .force("x", d3.forceX(d => vis.x(d.date)))
             .force("y", d3.forceY(d => vis.y(d[selectedCategory]) + vis.y.bandwidth() / 2))
             //.force("y", d3.forceY(d => vis.y.bandwidth() / 2))
-            .force("collide", d3.forceCollide(d => vis.r(d.count) + 1).strength(0.3));
+            .force("collide", d3.forceCollide(d => vis.r(d.count) + 1).strength(0.5));
 
         vis.simulation.on("tick", () => {
             vis.node
@@ -140,8 +151,8 @@ class BubbleVis {
         let ticks = split ? vis.categories[selectedCategory] : ["Global"];
         console.log("ticks", ticks)
 
-        const t = vis.svg.transition().duration(750);
-        vis.svg.transition(t).attr("viewBox", [0, 0, vis.width, height]) ;
+        const t = vis.svg.transition().duration(400);
+        //vis.svg.transition(t).attr("viewBox", [0, 0, vis.width, height]) ;
         vis.yG.transition(t).call(vis.yAxis, vis.y, ticks);
 
         vis.simulation.nodes(vis.data); // update nodes
