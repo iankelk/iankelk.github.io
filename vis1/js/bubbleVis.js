@@ -143,7 +143,7 @@ class BubbleVis {
                     .style("top", event.pageY + "px")
                     .html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
-                         <h4>${selectedCategory}: ${d[selectedCategory]}</h4>
+                         <h4>${selectedCategory.toProperCase()}: ${d[selectedCategory]}</h4>
                          <strong>Date: </strong> ${d.date.toLocaleString("en-US")}<br />
                          <strong>Count: </strong>${d.count}<br />
                      </div>`);
