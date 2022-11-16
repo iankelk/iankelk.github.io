@@ -166,10 +166,10 @@ class BubbleVis {
             vis.node
                 .attr("cy", vis.height / 2)
                 //.attr("cy", 0)
-                .attr("opacity", 0)
+                //.attr("opacity", 0)
                 .transition()
                 .delay((d, i) => d.x)
-                .attr("opacity", 1)
+                //.attr("opacity", 1)
                 .ease(d3.easeLinear)
                 .attr("cx", d => d.x)
                 .attr("cy", d => d.y)
