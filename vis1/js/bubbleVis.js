@@ -23,55 +23,52 @@ class BubbleVis {
         const nativeWidth = 1000;
         let vis = this;
 
-        let height = 800 // initial height
-        let actualWidth = vis.parentElement.getBoundingClientRect().width;
-        vis.zoom = actualWidth / nativeWidth;
-        if (vis.zoom > 1) vis.zoom = 1;
+        // let height = 800 // initial height
 
-        vis.margin = {top: 50, right: 100, bottom: 50, left: 170};
-        vis.width = actualWidth - vis.margin.left - Math.ceil(vis.zoom*vis.margin.right);
-        vis.height = height - vis.margin.top - vis.margin.bottom;
+        vis.margin = {top: 50, right: 100, bottom: 50, left: 200};
+        vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
+        vis.height = 600;
 
         console.log("width", vis.width)
 
         // SVG drawing area
-        vis.svg = d3.select(vis.parentElement).append("svg")
-            .attr("width", vis.width + vis.margin.left +  Math.ceil(vis.zoom*vis.margin.right))
-            .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
-           // .attr("viewBox", [0, 0, vis.width, height])
-            .append("g")
-            .attr("transform", "translate(" + vis.margin.left+ "," + vis.margin.top + ")");
+        vis.svg = d3.select(vis.parentElement)
+            .append("svg")
+            .attr("viewBox", [0, 0, vis.width, vis.height]);
+
+        // vis.svg = d3.select(vis.parentElement).append("svg")
+        //     .attr("width", vis.width + vis.margin.left +  Math.ceil(vis.margin.right))
+        //     .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
+        //    // .attr("viewBox", [0, 0, vis.width, height])
+        //     .append("g")
+        //     .attr("transform", "translate(" + vis.margin.left+ "," + vis.margin.top + ")");
 
         // vis.svg.attr("viewBox", [0, 0, vis.width, height]) ;
 
 
         vis.x = d3.scaleLinear()
             .domain(d3.extent(vis.data, d => d.date))
-            .range([0, vis.width])
+            .range([vis.margin.left, vis.width - vis.margin.right])
 
         vis.y = d3.scaleBand()
             .domain(vis.categories[selectedCategory])
-            .range([height / 2, height / 2])
-
-        //vis.zoom = vis.width / nativeWidth;
-        console.log("zoom", vis.zoom);
-
+            .range([vis.height / 2, vis.height / 2])
 
         vis.r = d3.scaleSqrt()
             .domain(d3.extent(vis.data, d => d.count))
-            .range([Math.ceil(6*vis.zoom), Math.ceil(20*vis.zoom)])
+            .range([6,20])
 
         vis.colour = d3.scaleSequential(d3.extent(vis.data, d => d.date), d3.interpolateViridis)
 
         vis.xAxis = g =>
             g
-                //.attr("transform", `translate(0, ${vis.margin.top})`)
+                .attr("transform", `translate(0, ${vis.margin.top})`)
                 .call(d3.axisTop(vis.x).ticks(10))
                 .call(g => g.select(".domain").remove())
                 .call(g =>
                     g
                         .append("text")
-                        .attr("x", vis.width-20)
+                        .attr("x", vis.width - vis.margin.right)
                         .attr("y", 10)
                         .attr("fill", "currentColor")
                         .attr("text-anchor", "middle")
@@ -80,7 +77,7 @@ class BubbleVis {
 
         vis.yAxis = (g, scale = vis.y, ticks = vis.y.domain()) =>
             g
-                .attr("transform", `translate(-150, 0)`)
+                .attr("transform", `translate(30, 0)`)
                 .call(d3.axisLeft(scale).tickValues(ticks))
                 .call(g => g.style("text-anchor", "start"))
                 .call(g => g.select(".domain").remove())
@@ -168,21 +165,26 @@ class BubbleVis {
         vis.simulation.on("tick", () => {
             vis.node
                 .attr("cy", vis.height / 2)
+                //.attr("cy", 0)
+                .attr("opacity", 0)
                 .transition()
                 .delay((d, i) => d.x)
+                .attr("opacity", 1)
                 .ease(d3.easeLinear)
                 .attr("cx", d => d.x)
                 .attr("cy", d => d.y)
         });
 
+        vis.height = split ? 800 : 400;
+
 
         vis.y.domain(split ? vis.categories[selectedCategory] : vis.categories[selectedCategory].concat("Global")); // workaround for updating the yAxis
-        vis.y.range(split ? [0, vis.height] : [vis.height / 2, vis.height / 2]);
+        vis.y.range(split ? [vis.margin.top, vis.height - vis.margin.bottom] : [vis.height / 2, vis.height / 2]);
         let ticks = split ? vis.categories[selectedCategory] : ["Global"];
         console.log("ticks", ticks)
 
         const t = vis.svg.transition().duration(400);
-        //vis.svg.transition(t).attr("viewBox", [0, 0, vis.width, height]) ;
+        vis.svg.transition(t).attr("viewBox", [0, 0, vis.width, height]) ;
         vis.yG.transition(t).call(vis.yAxis, vis.y, ticks);
 
         vis.simulation.nodes(vis.data); // update nodes
