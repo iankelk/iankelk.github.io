@@ -73,11 +73,11 @@ class StationMap {
 		vis.displayData.forEach((d,i) => {
 			vis.marker = L.marker([d.lat, d.long],{icon: styleMarker(d)})
 				.addTo(vis.map)
-				.bindPopup(d.name + "<br> Capacity: " + d.capacity + "<br> Available Bikes: " +
-					d.numBikesAvailable + "<br> Available Docks: " + d.numDocksAvailable +
-					"<br> E-Bikes Available: " + d.numEbikesAvailable +
-					"<br> Disabled Bikes: " + d.numBikesDisabled +
-					"<br> Disabled Docks: " + d.numDocksDisabled )
+				.bindPopup("<strong>" + d.name + "</strong><br /> Capacity: " + d.capacity + "<br /> Available Bikes: " +
+					d.numBikesAvailable + "<br /> Available Docks: " + d.numDocksAvailable +
+					"<br /> E-Bikes Available: " + d.numEbikesAvailable +
+					"<br /> Disabled Bikes: " + d.numBikesDisabled +
+					"<br /> Disabled Docks: " + d.numDocksDisabled )
 			vis.stations.addLayer(vis.marker)
 		})
 

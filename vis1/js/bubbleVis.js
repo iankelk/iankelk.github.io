@@ -23,11 +23,9 @@ class BubbleVis {
         const nativeWidth = 1000;
         let vis = this;
 
-        // let height = 800 // initial height
-
         vis.margin = {top: 50, right: 100, bottom: 50, left: 200};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-        vis.height = 600;
+        vis.height = 400;
 
         console.log("width", vis.width)
 
@@ -108,8 +106,6 @@ class BubbleVis {
 
         const split = (document.getElementById('split').value !== "all");
 
-        let height = split ? 800 : 400;
-
         vis.r.domain(d3.extent(vis.data, d => d.count))
         vis.x.domain(d3.extent(vis.data, d => d.date))
         vis.y.domain(vis.categories[selectedCategory])
@@ -164,7 +160,7 @@ class BubbleVis {
 
         vis.simulation.on("tick", () => {
             vis.node
-                .attr("cy", vis.height / 2)
+                //.attr("cy", vis.height / 2)
                 //.attr("cy", 0)
                 //.attr("opacity", 0)
                 .transition()
@@ -175,7 +171,7 @@ class BubbleVis {
                 .attr("cy", d => d.y)
         });
 
-        vis.height = split ? 800 : 400;
+        vis.height = split ? 650 : 400;
 
 
         vis.y.domain(split ? vis.categories[selectedCategory] : vis.categories[selectedCategory].concat("Global")); // workaround for updating the yAxis
@@ -184,7 +180,7 @@ class BubbleVis {
         console.log("ticks", ticks)
 
         const t = vis.svg.transition().duration(400);
-        vis.svg.transition(t).attr("viewBox", [0, 0, vis.width, height]) ;
+        vis.svg.transition(t).attr("viewBox", [0, 0, vis.width, vis.height]) ;
         vis.yG.transition(t).call(vis.yAxis, vis.y, ticks);
 
         vis.simulation.nodes(vis.data); // update nodes
