@@ -263,6 +263,13 @@ class ForceVis {
             .attr('class', 'legend')
             .attr('transform', `translate(${400},${-200})`)
 
+        vis.legend.selectAll().data([1])
+            .enter()
+            .append('text')
+            .text("The center nodes represent:")
+            .attr("y", -35)
+            .attr("x", -12)
+
         vis.legend.selectAll().data(vis.misinfoGroups)
             .enter()
             .append("circle")
