@@ -4,8 +4,18 @@ class ForceVis {
         this.parentElement = parentElement;
         this.miserablesData = miserablesData;
         this.data = miserablesData;
+        console.log("data", miserablesData)
 
-        //console.log("motives", this.motives);
+        this.misinfoGroups = [
+            { group: 1, name: "Dr Rashid A Buttar" },
+            { group: 2, name: "Christiane Northrup" },
+            { group: 3, name: "Robert F. Kennedy Jr" },
+            { group: 4, name: "Kevin Jenkins" },
+            { group: 5, name: "Dr. Joseph Mercola" },
+            { group: 6, name: "Sayer Ji" },
+            { group: 7, name: "Combination" },
+            { group: 8, name: "Donald Trump" }];
+
         selectedCategory =  document.getElementById('category').value;
 
         this.initVis()
@@ -19,11 +29,7 @@ class ForceVis {
         vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
         console.log("width", vis.width)
-
-        // // SVG drawing area
-        // vis.svg = d3.select(vis.parentElement)
-        //     .append("svg")
-        //     .attr("viewBox", [0, 0, vis.width, vis.height]);
+        console.log("height", vis.height)
 
         vis.chart = vis.ForceDisjointedGraph(vis.miserablesData, {
             nodeId: d => d.username,
@@ -36,10 +42,11 @@ class ForceVis {
             linkStrength: 0.2,
             nodeStrength: -40,
             width: vis.width,
-            height: 800
+            height: 700
         })
 
-        d3.select(vis.parentElement).node().appendChild(vis.chart)
+        vis.svg = d3.select(vis.parentElement).node().appendChild(vis.chart)
+
 
         // append tooltip
         vis.tooltip = d3.select("body").append('div')
@@ -67,10 +74,6 @@ class ForceVis {
     wrangleData() {
         let vis = this;
 
-        //vis.data = vis.getDataset();
-        // Get the selected order
-        //vis.selectedOrder =  document.getElementById('ordering').value;
-
         vis.updateVis()
     }
     updateVis() {
@@ -86,7 +89,6 @@ class ForceVis {
         let updatedRadius = d => {
             let radius = Math.round(Math.log(+d[selectedCategory]))*sizeMultipliers[selectedCategory];
             radius = radius < 4 ? 4 : radius;
-            console.log(radius);
             return radius;
         }
 
@@ -95,6 +97,7 @@ class ForceVis {
             .transition(800)
             .delay((d,i) => 7*i )
             .attr("r", updatedRadius)
+
 
     }
 
@@ -135,9 +138,8 @@ class ForceVis {
         if (nodeTitle === undefined) nodeTitle = (_, i) => N[i];
         const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);
         const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
+        console.log("G",G)
         const W = typeof linkStrokeWidth !== "function" ? null : d3.map(links, linkStrokeWidth);
-
-        console.log("nodes_before", nodes)
 
         // Replace the input nodes and links with mutable objects for the simulation.
         nodes = d3.map(nodes, (d, i) => ({id: N[i],
@@ -215,12 +217,7 @@ class ForceVis {
             .attr("r", nodeRadius)
             .attr("stroke", nodeStroke)
             .attr("stroke-width", nodeStrokeWidth)
-            // .join(
-            //     enter => enter.append("circle")
-            //         .attr("r", nodeRadius)
-            // )
             .on('mouseover', function(event, d) {
-                console.log(d)
                 d3.select(this)
                     .attr('stroke-width', '2px')
                     .attr('fill', 'rgba(173,222,255,0.62)');
@@ -260,6 +257,40 @@ class ForceVis {
 
         // Handle invalidation.
         if (invalidation != null) invalidation.then(() => simulation.stop());
+
+        // Legend
+        vis.legend = svg.append("g")
+            .attr('class', 'legend')
+            .attr('transform', `translate(${400},${-200})`)
+
+        vis.legend.selectAll().data(vis.misinfoGroups)
+            .enter()
+            .append("circle")
+            .attr("r", 15)
+            .attr("cy", (d, i) => i * 40)
+            .attr("fill", (d,i) => colors[i]);
+
+        vis.legend.selectAll().data(vis.misinfoGroups)
+            .enter()
+            .append('text')
+            .text((d,i) => d.name)
+            .attr("y", (d, i) => i * 40+5)
+            .attr("x", 25)
+
+        vis.legendScale = d3.scaleBand()
+            .rangeRound([0, 200])
+            .padding(0.25)
+            .domain(colors.map( (d, i) => ["1", "2", "3", "4"][i]));
+
+        vis.legendAxis = d3.axisBottom()
+            .scale(vis.legendScale);
+
+        vis.legendAxisGroup = svg.append("g")
+            .attr("class", "axis x-axis")
+            .attr("transform", `translate(${vis.width * 2.8 / 5}, ${vis.height - 20})`);
+
+        vis.legendAxisGroup
+            .call(vis.legendAxis)
 
         function intern(value) {
             return value !== null && typeof value === "object" ? value.valueOf() : value;
