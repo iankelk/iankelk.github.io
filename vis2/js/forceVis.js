@@ -26,9 +26,9 @@ class ForceVis {
         //     .attr("viewBox", [0, 0, vis.width, vis.height]);
 
         vis.chart = vis.ForceDisjointedGraph(vis.miserablesData, {
-            nodeId: d => d.id,
+            nodeId: d => d.username,
             nodeGroup: d => d.group,
-            nodeTitle: d => `${d.id}\n${d.group}`,
+            nodeTitle: d => `${d.username}\n${d.group}`,
             linkStrokeWidth: l => Math.sqrt(l.value),
             nodeRadius: d => {
                 let radius = Math.round(Math.log(+d.followers+1));
@@ -138,7 +138,16 @@ class ForceVis {
         console.log("nodes_before", nodes)
 
         // Replace the input nodes and links with mutable objects for the simulation.
-        nodes = d3.map(nodes, (d, i) => ({id: N[i], group: d.group, followers: d.followers_count, verified: d.verified}));
+        nodes = d3.map(nodes, (d, i) => ({id: N[i],
+                                        name: d.name,
+                                        group: d.group,
+                                        followers: d.followers_count,
+                                        following: d.following_count,
+                                        numTweets: d.tweet_count,
+                                        numLists: d.listed_count,
+                                        description: d.description,
+                                        location: d.location,
+                                        verified: d.verified}));
         console.log("nodes", nodes)
         links = d3.map(links, (_, i) => ({source: LS[i], target: LT[i]}));
 
@@ -217,8 +226,14 @@ class ForceVis {
                     .style("top", event.pageY + "px")
                     .html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
-                         <h4>Username: ${d.id}</h4>
+                         <h4>${d.name} (${d.id})</h4>
+                         ${splitLongString(10, d.description)}<br /><br />
+                         <img src="img/profile_pics/${d.id}.jpg"><br />
+                         <strong>Location:</strong> ${d.location}<br />
                          <strong>Followers: </strong> ${d.followers.toLocaleString("en-US")}<br />
+                         <strong>Following: </strong> ${d.following.toLocaleString("en-US")}<br />
+                         <strong>Number of Tweets: </strong> ${d.numTweets.toLocaleString("en-US")}<br />
+                         <strong>Number of lists: </strong> ${d.numLists.toLocaleString("en-US")}<br />
                         ${d.verified ? "<strong>Verified Account</strong>" : ""}
                         ${d.group === 11 || d.id === "realDonaldTrump" ? "<strong>Suspended Account</strong>" : ""}
                      </div>`);
