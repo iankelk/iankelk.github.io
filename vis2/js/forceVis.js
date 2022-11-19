@@ -36,7 +36,8 @@ class ForceVis {
                 console.log(radius);
                 return radius;
             },
-            nodeStroke: d => d.verified ? "magenta" : "#fff",
+            nodeStroke: d => d.verified ? '#1DA1F2' : "#fff",
+            nodeStrokeWidth: d => d.verified ? 3 : 1.5,
             linkStrength: 0.2,
             nodeStrength: -40,
             width: vis.width,
@@ -180,12 +181,12 @@ class ForceVis {
         const node = svg.append("g")
             .attr("fill", nodeFill)
             .attr("stroke-opacity", nodeStrokeOpacity)
-            .attr("stroke-width", nodeStrokeWidth)
             .selectAll("circle")
             .data(nodes)
             .join("circle")
             .attr("r", nodeRadius)
             .attr("stroke", nodeStroke)
+            .attr("stroke-width", nodeStrokeWidth)
             // .join(
             //     enter => enter.append("circle")
             //         .attr("r", nodeRadius)
