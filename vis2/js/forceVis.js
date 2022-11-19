@@ -229,7 +229,7 @@ class ForceVis {
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
                          <h4>${d.name} (${d.id})</h4>
                          ${d.description ? splitLongString(7, d.description) + "<br /><br />" : ""}
-                         <img src="img/profile_pics/${d.group === 11 ? "suspended" : d.id}.jpg"><br /><br />
+                         <img src="img/profile_pics/${d.group === 9 ? "suspended" : d.id}.jpg"><br /><br />
                          <strong>Location:</strong> ${d.location}<br />
                          <strong>Followers: </strong> ${d.followers.toLocaleString("en-US")}<br />
                          <strong>Following: </strong> ${d.following.toLocaleString("en-US")}<br />
