@@ -1,40 +1,10 @@
 {
   "nodes": [
     {
-      "id": "DrButtar",
-      "followers_count": 87813,
-      "verified": false,
-      "group": 12
-    },
-    {
       "id": "DrChrisNorthrup",
       "followers_count": 114347,
       "verified": false,
-      "group": 12
-    },
-    {
-      "id": "RobertKennedyJr",
-      "followers_count": 483114,
-      "verified": true,
-      "group": 12
-    },
-    {
-      "id": "kevdjenkins1",
-      "followers_count": 16541,
-      "verified": false,
-      "group": 12
-    },
-    {
-      "id": "mercola",
-      "followers_count": 361875,
-      "verified": false,
-      "group": 12
-    },
-    {
-      "id": "sayerjigmi",
-      "followers_count": 11876,
-      "verified": false,
-      "group": 12
+      "group": 2
     },
     {
       "id": "1ThessCh5",
@@ -1796,9 +1766,9 @@
     },
     {
       "id": "realDonaldTrump",
-      "followers_count": 0,
-      "verified": false,
-      "group": 11
+      "followers_count":88900000,
+      "verified": true,
+      "group": 12
     },
     {
       "id": "redpill_beena",
