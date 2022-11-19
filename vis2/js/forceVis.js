@@ -91,8 +91,9 @@ class ForceVis {
         }
 
         vis.node
-            .transition(500)
-            .delay((d,i) =>  4*i )
+            //.attr("r", 2)
+            .transition(800)
+            .delay((d,i) => 7*i )
             .attr("r", updatedRadius)
 
     }
