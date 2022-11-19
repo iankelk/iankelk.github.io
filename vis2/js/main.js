@@ -4,7 +4,10 @@ let selectedCategory =  document.getElementById('category').value;
 
 // Load data using promises
 let promises = [
-    d3.json("data/miserables.json", (row, i) => {
+    // d3.json("data/miserables.json", (row, i) => {
+    //     row.map((d, i) => ({id: i + 1, ...d}))
+    // })
+    d3.json("data/misinfo6.json", (row, i) => {
         row.map((d, i) => ({id: i + 1, ...d}))
     })
 ];

@@ -14,7 +14,7 @@ class ForceVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 50, right: 50, bottom: 50, left: 50};
+        vis.margin = {top: 0, right: 0, bottom: 0, left: 0};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -31,10 +31,9 @@ class ForceVis {
             nodeTitle: d => `${d.id}\n${d.group}`,
             linkStrokeWidth: l => Math.sqrt(l.value),
             width: vis.width,
-            height: 600
+            height: 1500
         })
 
-        console.log(vis.chart)
         d3.select(vis.parentElement).node().appendChild(vis.chart)
         // SVG drawing area
         // vis.svg = d3.select(vis.parentElement)
@@ -108,7 +107,7 @@ class ForceVis {
         linkStrength,
         colors = d3.schemeTableau10, // an array of color strings, for the node groups
         width = 640, // outer width, in pixels
-        height = 400 // outer height, in pixels
+        height = 800 // outer height, in pixels
     } = {}) {
         // Compute values.
         const N = d3.map(nodes, nodeId).map(intern);

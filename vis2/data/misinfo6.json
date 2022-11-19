@@ -1,0 +1,3433 @@
+{
+  "nodes": [
+    {
+      "id": "DrButtar",
+      "followers_count": 87813,
+      "verified": false,
+      "group": 12
+    },
+    {
+      "id": "DrChrisNorthrup",
+      "followers_count": 114347,
+      "verified": false,
+      "group": 12
+    },
+    {
+      "id": "RobertKennedyJr",
+      "followers_count": 483114,
+      "verified": true,
+      "group": 12
+    },
+    {
+      "id": "kevdjenkins1",
+      "followers_count": 16541,
+      "verified": false,
+      "group": 12
+    },
+    {
+      "id": "mercola",
+      "followers_count": 361875,
+      "verified": false,
+      "group": 12
+    },
+    {
+      "id": "sayerjigmi",
+      "followers_count": 11876,
+      "verified": false,
+      "group": 12
+    },
+    {
+      "id": "1ThessCh5",
+      "followers_count": 24911,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "2600hz",
+      "followers_count": 918,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "7dancingrain7",
+      "followers_count": 6,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "AldnoahVoid",
+      "followers_count": 184,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "AlecBaldwin",
+      "followers_count": 1034209,
+      "verified": true,
+      "group": 3
+    },
+    {
+      "id": "AlexBerenson",
+      "followers_count": 435189,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "AlisonRoseLevy",
+      "followers_count": 1634,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "AncestorAligned",
+      "followers_count": 10810,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "AndrewRamosTV",
+      "followers_count": 3737,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "AndrewSaulPhD",
+      "followers_count": 2065,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "AnitaMoorjani",
+      "followers_count": 28627,
+      "verified": true,
+      "group": 2
+    },
+    {
+      "id": "AnnMadeMusic",
+      "followers_count": 160,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "AnneMazza17",
+      "followers_count": 214,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "AzamHussainUK",
+      "followers_count": 9,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "Benoceanman",
+      "followers_count": 29,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "BetoORourke",
+      "followers_count": 2596447,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "BillieCraftRoom",
+      "followers_count": 594,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "BlossomingV",
+      "followers_count": 7,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "BradDeGraw",
+      "followers_count": 174,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "BreakingBrown",
+      "followers_count": 36003,
+      "verified": false,
+      "group": 4
+    },
+    {
+      "id": "BrendanCarrFCC",
+      "followers_count": 39585,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "BrittElise727",
+      "followers_count": 2187,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "Bruno_J_Navarro",
+      "followers_count": 7357,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "CCDHate",
+      "followers_count": 27648,
+      "verified": true,
+      "group": 9
+    },
+    {
+      "id": "CarolM39",
+      "followers_count": 2934,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "CharlesMBlow",
+      "followers_count": 632012,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "CherylHines",
+      "followers_count": 35039,
+      "verified": true,
+      "group": 3
+    },
+    {
+      "id": "ChildrensHD",
+      "followers_count": 130890,
+      "verified": false,
+      "group": 7
+    },
+    {
+      "id": "Corbynsmom7",
+      "followers_count": 254,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "CortinaAmalfi",
+      "followers_count": 81,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "Corvelva",
+      "followers_count": 5756,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "DBrozeLiveFree",
+      "followers_count": 23485,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "DRockxxxx",
+      "followers_count": 4472,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "DarlaElaine0406",
+      "followers_count": 656,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "Dbakerinbg",
+      "followers_count": 35,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "Deniseisms",
+      "followers_count": 413,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "DonCarlitos",
+      "followers_count": 1425,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "DrButtar",
+      "followers_count": 87785,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "DrSean",
+      "followers_count": 1593,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "ESodicoffMD",
+      "followers_count": 8361,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "EditorPublisher",
+      "followers_count": 8525,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "ErinMewes",
+      "followers_count": 109,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "FearlessParent1",
+      "followers_count": 1316,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "Flatbush1910",
+      "followers_count": 171,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "Fonseca_Group",
+      "followers_count": 303,
+      "verified": false,
+      "group": 4
+    },
+    {
+      "id": "Gary133q",
+      "followers_count": 6,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "GavinNewsom",
+      "followers_count": 2062338,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "GayHendricks",
+      "followers_count": 17545,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "Gerrieag",
+      "followers_count": 57,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "GokhaleMethod",
+      "followers_count": 1505,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "GoldenLightB13",
+      "followers_count": 894,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "GoodTasteArt",
+      "followers_count": 856,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "GovJanetMills",
+      "followers_count": 24069,
+      "verified": true,
+      "group": 2
+    },
+    {
+      "id": "Habakus",
+      "followers_count": 918,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "HighWireTalk",
+      "followers_count": 143185,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "Holley",
+      "followers_count": 620,
+      "verified": false,
+      "group": 4
+    },
+    {
+      "id": "Jack4NJ",
+      "followers_count": 33936,
+      "verified": false,
+      "group": 4
+    },
+    {
+      "id": "Jmanuel7101",
+      "followers_count": 35,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "JonKeel",
+      "followers_count": 3651,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "JoshAtDrButtar",
+      "followers_count": 103,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "JumbleWumbles",
+      "followers_count": 12,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "KADorgan",
+      "followers_count": 4588,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "KSweigartHarris",
+      "followers_count": 167,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "Kaepernick7",
+      "followers_count": 2399917,
+      "verified": true,
+      "group": 3
+    },
+    {
+      "id": "KatsSoulJourney",
+      "followers_count": 102,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "KayBeck03904159",
+      "followers_count": 381,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "KimberleyHorne1",
+      "followers_count": 224,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "KingsCounty_DOC",
+      "followers_count": 7,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "LairdDourka",
+      "followers_count": 24,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "LorenEllisArt",
+      "followers_count": 194,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "MMADIFF",
+      "followers_count": 164,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "MariaZdream",
+      "followers_count": 165,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "MaryBeckerME",
+      "followers_count": 90,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "McmaxClaire",
+      "followers_count": 90,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "MeganL77",
+      "followers_count": 66,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "MeliSa48999225",
+      "followers_count": 8,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "MicrobiomDigest",
+      "followers_count": 133600,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "NSolomonfair",
+      "followers_count": 211,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "NYTScience",
+      "followers_count": 1234059,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "Nas",
+      "followers_count": 2439706,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "NaturopathMax",
+      "followers_count": 877,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "Nehanotknown",
+      "followers_count": 338,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "PamLongCO",
+      "followers_count": 32499,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "PammMalveaux",
+      "followers_count": 394,
+      "verified": false,
+      "group": 4
+    },
+    {
+      "id": "PassionateNana",
+      "followers_count": 269,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "PerryAlexJ",
+      "followers_count": 4321,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "PlumRemson",
+      "followers_count": 3514,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "QueenRania",
+      "followers_count": 10145878,
+      "verified": true,
+      "group": 1
+    },
+    {
+      "id": "Ranjeev_Sidhu",
+      "followers_count": 50699,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "RealCandaceO",
+      "followers_count": 3246160,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "RebelXentric",
+      "followers_count": 75,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "ReinetteSenum",
+      "followers_count": 1292,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "RepKenBuck",
+      "followers_count": 69350,
+      "verified": true,
+      "group": 1
+    },
+    {
+      "id": "RobertKennedyJr",
+      "followers_count": 475584,
+      "verified": true,
+      "group": 3
+    },
+    {
+      "id": "RobertLustigMD",
+      "followers_count": 77791,
+      "verified": true,
+      "group": 2
+    },
+    {
+      "id": "SenAngusKing",
+      "followers_count": 249822,
+      "verified": true,
+      "group": 2
+    },
+    {
+      "id": "SenatorCollins",
+      "followers_count": 561660,
+      "verified": true,
+      "group": 2
+    },
+    {
+      "id": "SharylAttkisson",
+      "followers_count": 398547,
+      "verified": true,
+      "group": 1
+    },
+    {
+      "id": "Soundof70158396",
+      "followers_count": 230,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "Splashstorm1",
+      "followers_count": 102,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "Spotify",
+      "followers_count": 7477524,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "SpotifyCares",
+      "followers_count": 317924,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "StayWellMap",
+      "followers_count": 91,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "SunSentinel",
+      "followers_count": 293282,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "SwineFluHeds",
+      "followers_count": 297,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "SwineFluNewsIN",
+      "followers_count": 1733,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "TNRiverkeeper",
+      "followers_count": 14382,
+      "verified": false,
+      "group": 3
+    },
+    {
+      "id": "Tally126",
+      "followers_count": 30,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "TannersDad",
+      "followers_count": 19191,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "TexG11",
+      "followers_count": 189,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "TheRealNimoy",
+      "followers_count": 880296,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "ThisBastard",
+      "followers_count": 375,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "TimeInSpace33",
+      "followers_count": 149,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "Tishestrada1988",
+      "followers_count": 2098,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "TomSmith_USA",
+      "followers_count": 147,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "TransparentMed1",
+      "followers_count": 704,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "ViaNutrition",
+      "followers_count": 965,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "Vie95534908",
+      "followers_count": 18,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "Vinod65001857",
+      "followers_count": 621,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "Vyvian07",
+      "followers_count": 577,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "Want_v_Need",
+      "followers_count": 4018,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "WanzhuHou",
+      "followers_count": 15,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "WatchesPaintDry",
+      "followers_count": 191,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "WhatsYourAvocad",
+      "followers_count": 1035,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "WhitlockJason",
+      "followers_count": 614594,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "WilliamDavisMD",
+      "followers_count": 24186,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "WindsBag",
+      "followers_count": 564,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "Ziadhalabilive1",
+      "followers_count": 0,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "Zoolander39",
+      "followers_count": 506,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "_ReadingSchool",
+      "followers_count": 5775,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "ackdoc",
+      "followers_count": 1749,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "adkisojk",
+      "followers_count": 1728,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "aginnt",
+      "followers_count": 70223,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "albelushiwalid",
+      "followers_count": 753,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "anaphylaxisfact",
+      "followers_count": 307,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "anelyn1968",
+      "followers_count": 5,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "angelnumber53",
+      "followers_count": 59,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "askdrskip",
+      "followers_count": 864,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "autismtoday",
+      "followers_count": 34771,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "bjlefebvre",
+      "followers_count": 7509,
+      "verified": true,
+      "group": 3
+    },
+    {
+      "id": "boriqua_swagg87",
+      "followers_count": 3264,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "browbrewer",
+      "followers_count": 92,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "bylenasun",
+      "followers_count": 20181,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "celinegounder",
+      "followers_count": 89393,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "chelliepingree",
+      "followers_count": 32973,
+      "verified": true,
+      "group": 2
+    },
+    {
+      "id": "clseebeck",
+      "followers_count": 11,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "coachoncall",
+      "followers_count": 92659,
+      "verified": true,
+      "group": 2
+    },
+    {
+      "id": "d3v1lsadvocate1",
+      "followers_count": 235,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "daniel_kraft",
+      "followers_count": 53488,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "david_wilcock",
+      "followers_count": 148328,
+      "verified": true,
+      "group": 1
+    },
+    {
+      "id": "dbongino",
+      "followers_count": 3420437,
+      "verified": true,
+      "group": 1
+    },
+    {
+      "id": "desmondknox1",
+      "followers_count": 195,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "disclosed_live",
+      "followers_count": 112,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "djockers5",
+      "followers_count": 2109,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "drhollylucille",
+      "followers_count": 4611,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "drsharnael",
+      "followers_count": 11856,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "drsimonegold",
+      "followers_count": 547604,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "eileeniorio",
+      "followers_count": 20065,
+      "verified": false,
+      "group": 8
+    },
+    {
+      "id": "ellisp46750928",
+      "followers_count": 50,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "ellobosalvaje",
+      "followers_count": 36475,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "elonmusk",
+      "followers_count": 115329005,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "eric_kessler",
+      "followers_count": 3524,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "fourgsmagazine",
+      "followers_count": 1280,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "gaz4223",
+      "followers_count": 581,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "gbrumfiel",
+      "followers_count": 15457,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "gdimelow",
+      "followers_count": 3412,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "giselleaguiar",
+      "followers_count": 2330,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "gorskon",
+      "followers_count": 71826,
+      "verified": true,
+      "group": 6
+    },
+    {
+      "id": "gtconway3d",
+      "followers_count": 2130077,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "healinwithprana",
+      "followers_count": 6,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "healthconsult",
+      "followers_count": 1804,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "hoomalamalama",
+      "followers_count": 194,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "iam_me_iam",
+      "followers_count": 80,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "imheathergraham",
+      "followers_count": 93545,
+      "verified": true,
+      "group": 2
+    },
+    {
+      "id": "ingridonline",
+      "followers_count": 256,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "jack",
+      "followers_count": 6492632,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "jackuhlope",
+      "followers_count": 93,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "jad3atik",
+      "followers_count": 80,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "jamelholley",
+      "followers_count": 10654,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "jancarson65",
+      "followers_count": 864,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "jaykay_esjay",
+      "followers_count": 37,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "jaywilltay",
+      "followers_count": 246,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "jazzycarolanne",
+      "followers_count": 1466,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "jesskovitzski",
+      "followers_count": 428,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "jhm1027",
+      "followers_count": 1032,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "jhollandmedium",
+      "followers_count": 40803,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "jojooxoxox",
+      "followers_count": 409,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "kctheboss123",
+      "followers_count": 6,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "kevdjenkins1",
+      "followers_count": 15983,
+      "verified": false,
+      "group": 4
+    },
+    {
+      "id": "kimmijune",
+      "followers_count": 40,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "lancemann",
+      "followers_count": 3233,
+      "verified": false,
+      "group": 4
+    },
+    {
+      "id": "lehsacmurd",
+      "followers_count": 556,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "libertytarian",
+      "followers_count": 132057,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "lotuswei",
+      "followers_count": 2162,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "luke_pighetti",
+      "followers_count": 6133,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "margielaird_9",
+      "followers_count": 517,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "mariarodale",
+      "followers_count": 8813,
+      "verified": true,
+      "group": 2
+    },
+    {
+      "id": "matanmoragpa",
+      "followers_count": 81,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "math1751",
+      "followers_count": 141,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "mercola",
+      "followers_count": 362114,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "michellemalkin",
+      "followers_count": 2054733,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "mille011751",
+      "followers_count": 8,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "mrsfatbastard",
+      "followers_count": 36,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "msskitty",
+      "followers_count": 12,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "musslim7",
+      "followers_count": 812,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "mverchere",
+      "followers_count": 747,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "nj1015",
+      "followers_count": 167405,
+      "verified": false,
+      "group": 4
+    },
+    {
+      "id": "noGMOsHollywood",
+      "followers_count": 2444,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "nora20922854",
+      "followers_count": 4,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "noufaalf",
+      "followers_count": 114,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "nytimes",
+      "followers_count": 54640864,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "obgETH",
+      "followers_count": 2649,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "orazio_peter",
+      "followers_count": 155,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "popham_up",
+      "followers_count": 68,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "priesterspr",
+      "followers_count": 8624,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "realSGhosh",
+      "followers_count": 34,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "rhinodaddy",
+      "followers_count": 3434,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "rickygervais",
+      "followers_count": 15123472,
+      "verified": true,
+      "group": 2
+    },
+    {
+      "id": "roccogalatilaw",
+      "followers_count": 62952,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "rsbellmedia",
+      "followers_count": 12000,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "ryanhowsam",
+      "followers_count": 760,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "said_huber",
+      "followers_count": 165,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "sami_ingalls",
+      "followers_count": 598,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "sayerjigmi",
+      "followers_count": 11888,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "shaunking",
+      "followers_count": 1054371,
+      "verified": true,
+      "group": 4
+    },
+    {
+      "id": "sheeraf",
+      "followers_count": 68055,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "stevesilberman",
+      "followers_count": 141331,
+      "verified": true,
+      "group": 5
+    },
+    {
+      "id": "susanblanda",
+      "followers_count": 346,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "teresa63_te",
+      "followers_count": 351,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "ticobas",
+      "followers_count": 662,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "timobriensr",
+      "followers_count": 228,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "tlay45132714",
+      "followers_count": 850,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "tonitone",
+      "followers_count": 700,
+      "verified": false,
+      "group": 6
+    },
+    {
+      "id": "trackswineflu",
+      "followers_count": 220,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "twttier",
+      "followers_count": 119,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "uniteCOforus",
+      "followers_count": 853,
+      "verified": false,
+      "group": 4
+    },
+    {
+      "id": "united__UK",
+      "followers_count": 12413,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "valemercurii",
+      "followers_count": 1077,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "watermanwords",
+      "followers_count": 503,
+      "verified": false,
+      "group": 2
+    },
+    {
+      "id": "wildflower138",
+      "followers_count": 332,
+      "verified": false,
+      "group": 1
+    },
+    {
+      "id": "ydeigin",
+      "followers_count": 22112,
+      "verified": false,
+      "group": 5
+    },
+    {
+      "id": "12Tommygun",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "8q4nx8bj",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "Achilles12219",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "BayouGirl54",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "BelleElle82",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "BusyDrT",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "CJforeveryoung",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "DollarrrrJim",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "EpigeneticWhisp",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "ExpectingRain_",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "FreeDom85458343",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "Googoolygaga",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "HerpnutPat",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "IIIMattieBoz",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "IanMolony",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "JacquiJ13",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "JimGlen3",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "JimW1967",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "JonMoor62699896",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "Just4TheCause",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "Kellie23364945",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "LarryBurkCEHP",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "LieslSchoonraad",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "LindaForTrump1",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "LotusOak2",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "MaryamHenein",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "Mommabear1231",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "Msblowana",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "MyxaZZ",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "OzReturns_",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "OzRevealed",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "Qtherise",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "RWMaloneMD",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "Rectitude20",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "SenatorLesniak",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "TheFuknPunisher",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "TifaLockhart78",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "TryingWake",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "Tuenchai33",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "chuen00",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "dochuckster",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "feistysocialist",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "flatbear",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "gatewaypundit",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "jn684",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "johnrock23jr",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "jonkirbysthlm",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "jrt67",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "kshw5678",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "martingeddes",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "nycdickers",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "que_uk",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "realDonaldTrump",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "redpill_beena",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "rosannaimani",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "rustyboy1973",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "shiekmedia",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "sovrin5",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "stopvaccinating",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "summerluvin2376",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "transastro",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "uTobian",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "usmile777",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "warra057",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    },
+    {
+      "id": "zev_dr",
+      "followers_count": 0,
+      "verified": false,
+      "group": 11
+    }
+  ],
+  "links": [
+    {
+      "source": "DrButtar",
+      "target": "2600hz",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "7dancingrain7",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "Achilles12219",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "AldnoahVoid",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "AzamHussainUK",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "BayouGirl54",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "BelleElle82",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "BrittElise727",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "CJforeveryoung",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "CarolM39",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "Corbynsmom7",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "DRockxxxx",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "DarlaElaine0406",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "DollarrrrJim",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "DonCarlitos",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "DrButtar",
+      "value": 5
+    },
+    {
+      "source": "DrButtar",
+      "target": "Gary133q",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "Gerrieag",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "Googoolygaga",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "HerpnutPat",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "JacquiJ13",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "JimGlen3",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "JimW1967",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "Jmanuel7101",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "JonKeel",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "JonMoor62699896",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "JoshAtDrButtar",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "JumbleWumbles",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "KayBeck03904159",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "Kellie23364945",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "LairdDourka",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "LindaForTrump1",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "MaryamHenein",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "McmaxClaire",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "MeliSa48999225",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "Msblowana",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "MyxaZZ",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "NSolomonfair",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "Nehanotknown",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "PassionateNana",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "PerryAlexJ",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "Qtherise",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "QueenRania",
+      "value": 8
+    },
+    {
+      "source": "DrButtar",
+      "target": "RebelXentric",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "RepKenBuck",
+      "value": 5
+    },
+    {
+      "source": "DrButtar",
+      "target": "SharylAttkisson",
+      "value": 6
+    },
+    {
+      "source": "DrButtar",
+      "target": "SwineFluHeds",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "SwineFluNewsIN",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "TannersDad",
+      "value": 5
+    },
+    {
+      "source": "DrButtar",
+      "target": "TexG11",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "TheFuknPunisher",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "ThisBastard",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "Tishestrada1988",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "TransparentMed1",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "TryingWake",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "Tuenchai33",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "Vinod65001857",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "Ziadhalabilive1",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "Zoolander39",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "_ReadingSchool",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "aginnt",
+      "value": 5
+    },
+    {
+      "source": "DrButtar",
+      "target": "albelushiwalid",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "autismtoday",
+      "value": 5
+    },
+    {
+      "source": "DrButtar",
+      "target": "browbrewer",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "chuen00",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "clseebeck",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "david_wilcock",
+      "value": 6
+    },
+    {
+      "source": "DrButtar",
+      "target": "dbongino",
+      "value": 7
+    },
+    {
+      "source": "DrButtar",
+      "target": "desmondknox1",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "disclosed_live",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "dochuckster",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "ellisp46750928",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "ellobosalvaje",
+      "value": 5
+    },
+    {
+      "source": "DrButtar",
+      "target": "feistysocialist",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "fourgsmagazine",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "gaz4223",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "healinwithprana",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "healthconsult",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "iam_me_iam",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "ingridonline",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "jad3atik",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "jaykay_esjay",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "jhm1027",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "jn684",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "kctheboss123",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "kshw5678",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "libertytarian",
+      "value": 6
+    },
+    {
+      "source": "DrButtar",
+      "target": "matanmoragpa",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "math1751",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "musslim7",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "nora20922854",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "nycdickers",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "priesterspr",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "realDonaldTrump",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "realSGhosh",
+      "value": 2
+    },
+    {
+      "source": "DrButtar",
+      "target": "redpill_beena",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "rhinodaddy",
+      "value": 4
+    },
+    {
+      "source": "DrButtar",
+      "target": "rosannaimani",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "rsbellmedia",
+      "value": 5
+    },
+    {
+      "source": "DrButtar",
+      "target": "rustyboy1973",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "ryanhowsam",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "said_huber",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "sami_ingalls",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "shiekmedia",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "sovrin5",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "timobriensr",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "tlay45132714",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "trackswineflu",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "twttier",
+      "value": 3
+    },
+    {
+      "source": "DrButtar",
+      "target": "usmile777",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "warra057",
+      "value": 1
+    },
+    {
+      "source": "DrButtar",
+      "target": "wildflower138",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "12Tommygun",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "1ThessCh5",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "AncestorAligned",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "AnitaMoorjani",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "AnnMadeMusic",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "AnneMazza17",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Benoceanman",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "BillieCraftRoom",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "BlossomingV",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "BradDeGraw",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "BusyDrT",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "ChildrensHD",
+      "value": 6
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "CortinaAmalfi",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Corvelva",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "DBrozeLiveFree",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Deniseisms",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "DrSean",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "ESodicoffMD",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "EpigeneticWhisp",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "ExpectingRain_",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Flatbush1910",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "FreeDom85458343",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "GayHendricks",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "GokhaleMethod",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "GovJanetMills",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "IIIMattieBoz",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "IanMolony",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Just4TheCause",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "KADorgan",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "KatsSoulJourney",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "KimberleyHorne1",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "KingsCounty_DOC",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "LarryBurkCEHP",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "LieslSchoonraad",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "LorenEllisArt",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "LotusOak2",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "MMADIFF",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "MariaZdream",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "MaryBeckerME",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "MeganL77",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "OzReturns_",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "PlumRemson",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Ranjeev_Sidhu",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Rectitude20",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "ReinetteSenum",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "RobertLustigMD",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "SenAngusKing",
+      "value": 6
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "SenatorCollins",
+      "value": 6
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Soundof70158396",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Splashstorm1",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Tally126",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "TifaLockhart78",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "TimeInSpace33",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Vie95534908",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Vyvian07",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "Want_v_Need",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "WanzhuHou",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "WindsBag",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "adkisojk",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "anaphylaxisfact",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "anelyn1968",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "angelnumber53",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "askdrskip",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "chelliepingree",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "coachoncall",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "d3v1lsadvocate1",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "drsharnael",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "drsimonegold",
+      "value": 6
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "eileeniorio",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "gdimelow",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "hoomalamalama",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "imheathergraham",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "jackuhlope",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "jancarson65",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "jaywilltay",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "jazzycarolanne",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "jesskovitzski",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "jhollandmedium",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "johnrock23jr",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "jonkirbysthlm",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "jrt67",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "kimmijune",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "lehsacmurd",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "lotuswei",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "luke_pighetti",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "margielaird_9",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "mariarodale",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "martingeddes",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "mille011751",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "mrsfatbastard",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "msskitty",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "mverchere",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "obgETH",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "popham_up",
+      "value": 2
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "que_uk",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "realDonaldTrump",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "rickygervais",
+      "value": 8
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "roccogalatilaw",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "stopvaccinating",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "susanblanda",
+      "value": 3
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "transastro",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "uTobian",
+      "value": 1
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "united__UK",
+      "value": 5
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "valemercurii",
+      "value": 4
+    },
+    {
+      "source": "DrChrisNorthrup",
+      "target": "watermanwords",
+      "value": 3
+    },
+    {
+      "source": "RobertKennedyJr",
+      "target": "AlecBaldwin",
+      "value": 7
+    },
+    {
+      "source": "RobertKennedyJr",
+      "target": "CherylHines",
+      "value": 5
+    },
+    {
+      "source": "RobertKennedyJr",
+      "target": "ChildrensHD",
+      "value": 6
+    },
+    {
+      "source": "RobertKennedyJr",
+      "target": "Kaepernick7",
+      "value": 7
+    },
+    {
+      "source": "RobertKennedyJr",
+      "target": "RobertKennedyJr",
+      "value": 6
+    },
+    {
+      "source": "RobertKennedyJr",
+      "target": "TNRiverkeeper",
+      "value": 5
+    },
+    {
+      "source": "RobertKennedyJr",
+      "target": "bjlefebvre",
+      "value": 4
+    },
+    {
+      "source": "RobertKennedyJr",
+      "target": "realDonaldTrump",
+      "value": 1
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "AndrewRamosTV",
+      "value": 4
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "BetoORourke",
+      "value": 7
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "BreakingBrown",
+      "value": 5
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "CharlesMBlow",
+      "value": 6
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "Fonseca_Group",
+      "value": 3
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "GavinNewsom",
+      "value": 7
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "Holley",
+      "value": 3
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "Jack4NJ",
+      "value": 5
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "Mommabear1231",
+      "value": 1
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "Nas",
+      "value": 7
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "OzRevealed",
+      "value": 1
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "PammMalveaux",
+      "value": 3
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "RealCandaceO",
+      "value": 7
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "SenatorLesniak",
+      "value": 1
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "SpotifyCares",
+      "value": 6
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "WhitlockJason",
+      "value": 6
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "eileeniorio",
+      "value": 5
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "gatewaypundit",
+      "value": 1
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "jamelholley",
+      "value": 5
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "kevdjenkins1",
+      "value": 5
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "lancemann",
+      "value": 4
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "michellemalkin",
+      "value": 7
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "nj1015",
+      "value": 6
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "shaunking",
+      "value": 7
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "summerluvin2376",
+      "value": 1
+    },
+    {
+      "source": "kevdjenkins1",
+      "target": "uniteCOforus",
+      "value": 3
+    },
+    {
+      "source": "mercola",
+      "target": "AlexBerenson",
+      "value": 6
+    },
+    {
+      "source": "mercola",
+      "target": "BrendanCarrFCC",
+      "value": 5
+    },
+    {
+      "source": "mercola",
+      "target": "Bruno_J_Navarro",
+      "value": 4
+    },
+    {
+      "source": "mercola",
+      "target": "CCDHate",
+      "value": 5
+    },
+    {
+      "source": "mercola",
+      "target": "Dbakerinbg",
+      "value": 2
+    },
+    {
+      "source": "mercola",
+      "target": "EditorPublisher",
+      "value": 4
+    },
+    {
+      "source": "mercola",
+      "target": "ErinMewes",
+      "value": 3
+    },
+    {
+      "source": "mercola",
+      "target": "GoldenLightB13",
+      "value": 3
+    },
+    {
+      "source": "mercola",
+      "target": "HighWireTalk",
+      "value": 6
+    },
+    {
+      "source": "mercola",
+      "target": "MicrobiomDigest",
+      "value": 6
+    },
+    {
+      "source": "mercola",
+      "target": "NYTScience",
+      "value": 7
+    },
+    {
+      "source": "mercola",
+      "target": "PamLongCO",
+      "value": 5
+    },
+    {
+      "source": "mercola",
+      "target": "RWMaloneMD",
+      "value": 1
+    },
+    {
+      "source": "mercola",
+      "target": "Spotify",
+      "value": 7
+    },
+    {
+      "source": "mercola",
+      "target": "SunSentinel",
+      "value": 6
+    },
+    {
+      "source": "mercola",
+      "target": "TomSmith_USA",
+      "value": 3
+    },
+    {
+      "source": "mercola",
+      "target": "WatchesPaintDry",
+      "value": 3
+    },
+    {
+      "source": "mercola",
+      "target": "boriqua_swagg87",
+      "value": 4
+    },
+    {
+      "source": "mercola",
+      "target": "bylenasun",
+      "value": 5
+    },
+    {
+      "source": "mercola",
+      "target": "celinegounder",
+      "value": 5
+    },
+    {
+      "source": "mercola",
+      "target": "daniel_kraft",
+      "value": 5
+    },
+    {
+      "source": "mercola",
+      "target": "elonmusk",
+      "value": 9
+    },
+    {
+      "source": "mercola",
+      "target": "eric_kessler",
+      "value": 4
+    },
+    {
+      "source": "mercola",
+      "target": "flatbear",
+      "value": 1
+    },
+    {
+      "source": "mercola",
+      "target": "gbrumfiel",
+      "value": 5
+    },
+    {
+      "source": "mercola",
+      "target": "giselleaguiar",
+      "value": 4
+    },
+    {
+      "source": "mercola",
+      "target": "gtconway3d",
+      "value": 7
+    },
+    {
+      "source": "mercola",
+      "target": "jack",
+      "value": 7
+    },
+    {
+      "source": "mercola",
+      "target": "jojooxoxox",
+      "value": 3
+    },
+    {
+      "source": "mercola",
+      "target": "mercola",
+      "value": 6
+    },
+    {
+      "source": "mercola",
+      "target": "noufaalf",
+      "value": 3
+    },
+    {
+      "source": "mercola",
+      "target": "nytimes",
+      "value": 8
+    },
+    {
+      "source": "mercola",
+      "target": "orazio_peter",
+      "value": 3
+    },
+    {
+      "source": "mercola",
+      "target": "sheeraf",
+      "value": 5
+    },
+    {
+      "source": "mercola",
+      "target": "stevesilberman",
+      "value": 6
+    },
+    {
+      "source": "mercola",
+      "target": "teresa63_te",
+      "value": 3
+    },
+    {
+      "source": "mercola",
+      "target": "ydeigin",
+      "value": 5
+    },
+    {
+      "source": "mercola",
+      "target": "zev_dr",
+      "value": 1
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "8q4nx8bj",
+      "value": 1
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "AlisonRoseLevy",
+      "value": 4
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "AndrewSaulPhD",
+      "value": 4
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "CCDHate",
+      "value": 5
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "FearlessParent1",
+      "value": 4
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "GoodTasteArt",
+      "value": 3
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "Habakus",
+      "value": 3
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "KSweigartHarris",
+      "value": 3
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "NaturopathMax",
+      "value": 3
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "StayWellMap",
+      "value": 2
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "TheRealNimoy",
+      "value": 6
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "ViaNutrition",
+      "value": 3
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "WhatsYourAvocad",
+      "value": 4
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "WilliamDavisMD",
+      "value": 5
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "ackdoc",
+      "value": 4
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "djockers5",
+      "value": 4
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "drhollylucille",
+      "value": 4
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "gorskon",
+      "value": 5
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "noGMOsHollywood",
+      "value": 4
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "sayerjigmi",
+      "value": 5
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "ticobas",
+      "value": 3
+    },
+    {
+      "source": "sayerjigmi",
+      "target": "tonitone",
+      "value": 3
+    }
+  ]
+}
