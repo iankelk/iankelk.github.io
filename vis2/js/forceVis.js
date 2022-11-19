@@ -30,12 +30,7 @@ class ForceVis {
             nodeGroup: d => d.group,
             nodeTitle: d => `${d.username}\n${d.group}`,
             linkStrokeWidth: l => Math.sqrt(l.value),
-            nodeRadius: d => {
-                let radius = Math.round(Math.log(+d.followers+1));
-                radius = radius < 4 ? 4 : radius;
-                console.log(radius);
-                return radius;
-            },
+            nodeRadius: 2,
             nodeStroke: d => d.verified ? '#1DA1F2' : "#fff",
             nodeStrokeWidth: d => d.verified ? 3 : 1.5,
             linkStrength: 0.2,
@@ -81,8 +76,6 @@ class ForceVis {
     updateVis() {
         let vis = this;
 
-        let radius;
-
         const sizeMultipliers = {
             followers: 1.2,
             following: 1.5,
@@ -102,19 +95,6 @@ class ForceVis {
             .delay((d,i) =>  4*i )
             .attr("r", updatedRadius)
 
-    }
-    // Depending on which data we're looking at, format the ticks to better display it
-    getDataset() {
-        let vis = this;
-        selectedCategory = document.getElementById('category').value;
-        switch (selectedCategory) {
-            case "motive":
-                return vis.motiveData;
-            case "narrative":
-                return vis.narrativeData;
-            case "region":
-                return vis.regionData;
-        }
     }
 
     // Copyright 2021 Observable, Inc.
