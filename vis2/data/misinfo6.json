@@ -348,7 +348,7 @@
       "following_count": 2131,
       "tweet_count": 4255,
       "listed_count": 510,
-      "group": 9
+      "group": 7
     },
     {
       "username": "CarolM39",
@@ -2224,7 +2224,7 @@
       "following_count": 644,
       "tweet_count": 12966,
       "listed_count": 99,
-      "group": 8
+      "group": 7
     },
     {
       "username": "ellisp46750928",
@@ -4118,17 +4118,17 @@
     },
     {
       "username": "realDonaldTrump",
-      "name": "Unknown",
+      "name": "Donald Trump",
       "verified": false,
       "description": "User has been suspended: [realDonaldTrump].",
       "protected": false,
       "location": "Unknown",
-      "created_at": "",
-      "followers_count": 88900000,
-      "following_count": 0,
-      "tweet_count": 0,
-      "listed_count": 0,
-      "group": 11
+      "created_at": "2009-03-18T02:36:16.000Z",
+      "followers_count": 88936841,
+      "following_count": 51,
+      "tweet_count": 59553,
+      "listed_count": 118951,
+      "group": 9
     },
     {
       "username": "redpill_beena",

@@ -145,8 +145,8 @@ class ForceVis {
                                         following: d.following_count,
                                         numTweets: d.tweet_count,
                                         numLists: d.listed_count,
-                                        description: d.description,
-                                        location: d.location,
+                                        description: d.description ? d.description : "",
+                                        location: d.location ? d.location : "",
                                         verified: d.verified}));
         console.log("nodes", nodes)
         links = d3.map(links, (_, i) => ({source: LS[i], target: LT[i]}));
@@ -227,13 +227,14 @@ class ForceVis {
                     .html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
                          <h4>${d.name} (${d.id})</h4>
-                         ${splitLongString(10, d.description)}<br /><br />
-                         <img src="img/profile_pics/${d.id}.jpg"><br />
+                         ${d.description ? splitLongString(7, d.description) + "<br /><br />" : ""}
+                         <img src="img/profile_pics/${d.group === 11 ? "suspended" : d.id}.jpg"><br /><br />
                          <strong>Location:</strong> ${d.location}<br />
                          <strong>Followers: </strong> ${d.followers.toLocaleString("en-US")}<br />
                          <strong>Following: </strong> ${d.following.toLocaleString("en-US")}<br />
                          <strong>Number of Tweets: </strong> ${d.numTweets.toLocaleString("en-US")}<br />
                          <strong>Number of lists: </strong> ${d.numLists.toLocaleString("en-US")}<br />
+                         <strong>Group: </strong> ${d.group}<br />
                         ${d.verified ? "<strong>Verified Account</strong>" : ""}
                         ${d.group === 11 || d.id === "realDonaldTrump" ? "<strong>Suspended Account</strong>" : ""}
                      </div>`);
@@ -251,7 +252,7 @@ class ForceVis {
             .call(drag(simulation));
 
         if (G) node.attr("fill", ({index: i}) => color(G[i]));
-        if (T) node.append("title").text(({index: i}) => T[i]);
+       // if (T) node.append("title").text(({index: i}) => T[i]);
 
         // Handle invalidation.
         if (invalidation != null) invalidation.then(() => simulation.stop());
