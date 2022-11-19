@@ -81,6 +81,27 @@ class ForceVis {
     updateVis() {
         let vis = this;
 
+        let radius;
+
+        const sizeMultipliers = {
+            followers: 1.2,
+            following: 1.5,
+            numTweets: 1.2,
+            numLists: 1.5
+        }
+
+        let updatedRadius = d => {
+            let radius = Math.round(Math.log(+d[selectedCategory]))*sizeMultipliers[selectedCategory];
+            radius = radius < 4 ? 4 : radius;
+            console.log(radius);
+            return radius;
+        }
+
+        vis.node
+            .transition(500)
+            .delay((d,i) =>  4*i )
+            .attr("r", updatedRadius)
+
     }
     // Depending on which data we're looking at, format the ticks to better display it
     getDataset() {
@@ -202,12 +223,14 @@ class ForceVis {
 
         if (W) link.attr("stroke-width", ({index: i}) => W[i]);
 
-        const node = svg.append("g")
+        vis.node = svg.append("g")
             .attr("fill", nodeFill)
             .attr("stroke-opacity", nodeStrokeOpacity)
             .selectAll("circle")
             .data(nodes)
             .join("circle")
+
+        vis.node
             .attr("r", nodeRadius)
             .attr("stroke", nodeStroke)
             .attr("stroke-width", nodeStrokeWidth)
@@ -251,7 +274,7 @@ class ForceVis {
             })
             .call(drag(simulation));
 
-        if (G) node.attr("fill", ({index: i}) => color(G[i]));
+        if (G) vis.node.attr("fill", ({index: i}) => color(G[i]));
        // if (T) node.append("title").text(({index: i}) => T[i]);
 
         // Handle invalidation.
@@ -268,7 +291,7 @@ class ForceVis {
                 .attr("x2", d => d.target.x)
                 .attr("y2", d => d.target.y);
 
-            node
+            vis.node
                 .attr("cx", d => d.x)
                 .attr("cy", d => d.y);
         }

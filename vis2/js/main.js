@@ -31,6 +31,7 @@ function initMainPage(dataArray) {
 
 // Selector listener
 function changeCategory() {
+    selectedCategory =  document.getElementById('category').value;
     myForceVis.wrangleData();
 }
 // Proper case function adapted from here: https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
