@@ -13,7 +13,7 @@ class ForceVis {
             { group: 4, name: "Kevin Jenkins" },
             { group: 5, name: "Dr. Joseph Mercola" },
             { group: 6, name: "Sayer Ji" },
-            { group: 7, name: "Combination" },
+            { group: 7, name: "Contacted by multiple people" },
             { group: 8, name: "Donald Trump" }];
 
         selectedCategory =  document.getElementById('category').value;
@@ -275,6 +275,23 @@ class ForceVis {
             .append('text')
             .text((d,i) => d.name)
             .attr("y", (d, i) => i * 40+5)
+            .attr("x", 25)
+
+        vis.legend.selectAll().data([1])
+            .enter()
+            .append("circle")
+            .attr("r", 15)
+            .attr("cy", 350)
+            .attr("fill", "silver")
+            .attr("stroke", "#1DA1F2")
+            .attr("stroke-opacity", 1)
+            .attr("stroke-width",3);
+
+        vis.legend.selectAll().data([1])
+            .enter()
+            .append('text')
+            .text("Verified on Twitter")
+            .attr("y", 355)
             .attr("x", 25)
 
         vis.legendScale = d3.scaleBand()
