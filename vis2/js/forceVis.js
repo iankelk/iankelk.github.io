@@ -266,7 +266,7 @@ class ForceVis {
         vis.legend.selectAll().data([1])
             .enter()
             .append('text')
-            .text("The center nodes represent:")
+            .text("The nodes at the centers represent:")
             .attr("y", -35)
             .attr("x", -12)
 
