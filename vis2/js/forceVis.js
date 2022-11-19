@@ -167,11 +167,26 @@ class ForceVis {
             .attr("viewBox", [-width / 2, -height / 2, width, height])
             .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
+        svg.append('defs').append('marker')
+            .attr("id",'arrowhead')
+            .attr('viewBox','-0 -5 10 10') //the bound of the SVG viewport for the current SVG fragment. defines a coordinate system 10 wide and 10 high starting on (0,-5)
+            .attr('refX',23) // x coordinate for the reference point of the marker. If circle is bigger, this need to be bigger.
+            .attr('refY',0)
+            .attr('orient','auto')
+            .attr('markerWidth',5)
+            .attr('markerHeight',3)
+            .attr('xoverflow','visible')
+            .append('svg:path')
+            .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
+            .attr('fill', '#999')
+            .style('stroke','none');
+
         const link = svg.append("g")
             .attr("stroke", linkStroke)
             .attr("stroke-opacity", linkStrokeOpacity)
             .attr("stroke-width", typeof linkStrokeWidth !== "function" ? linkStrokeWidth : null)
             .attr("stroke-linecap", linkStrokeLinecap)
+            .attr('marker-end','url(#arrowhead)') //The marker-end attribute defines the arrowhead or polymarker that will be drawn at the final vertex of the given shape.
             .selectAll("line")
             .data(links)
             .join("line");
