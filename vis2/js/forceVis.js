@@ -30,7 +30,13 @@ class ForceVis {
             nodeGroup: d => d.group,
             nodeTitle: d => `${d.id}\n${d.group}`,
             linkStrokeWidth: l => Math.sqrt(l.value),
-            nodeRadius: d => ((Math.log(+d.followers+1).toFixed(0))),
+            nodeRadius: d => {
+                let radius = Math.round(Math.log(+d.followers+1));
+                radius = radius < 4 ? 4 : radius;
+                console.log(radius);
+                return radius;
+            },
+            nodeStroke: d => d.verified ? "magenta" : "#fff",
             linkStrength: 0.2,
             nodeStrength: -40,
             width: vis.width,
@@ -131,7 +137,7 @@ class ForceVis {
         console.log("nodes_before", nodes)
 
         // Replace the input nodes and links with mutable objects for the simulation.
-        nodes = d3.map(nodes, (d, i) => ({id: N[i], group: d.group, followers: d.followers_count}));
+        nodes = d3.map(nodes, (d, i) => ({id: N[i], group: d.group, followers: d.followers_count, verified: d.verified}));
         console.log("nodes", nodes)
         links = d3.map(links, (_, i) => ({source: LS[i], target: LT[i]}));
 
@@ -173,13 +179,13 @@ class ForceVis {
 
         const node = svg.append("g")
             .attr("fill", nodeFill)
-            .attr("stroke", nodeStroke)
             .attr("stroke-opacity", nodeStrokeOpacity)
             .attr("stroke-width", nodeStrokeWidth)
             .selectAll("circle")
             .data(nodes)
             .join("circle")
             .attr("r", nodeRadius)
+            .attr("stroke", nodeStroke)
             // .join(
             //     enter => enter.append("circle")
             //         .attr("r", nodeRadius)
@@ -196,6 +202,9 @@ class ForceVis {
                     .html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
                          <h4>Username: ${d.id}</h4>
+                         <strong>Followers: </strong> ${d.followers.toLocaleString("en-US")}<br />
+                        ${d.verified ? "<strong>Verified Account</strong>" : ""}
+                        ${d.group === 11 || d.id === "realDonaldTrump" ? "<strong>Suspended Account</strong>" : ""}
                      </div>`);
             })
             .on('mouseout', function (event, d) {
