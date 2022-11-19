@@ -173,8 +173,8 @@ class ForceVis {
             .attr('refX',23) // x coordinate for the reference point of the marker. If circle is bigger, this need to be bigger.
             .attr('refY',0)
             .attr('orient','auto')
-            .attr('markerWidth',5)
-            .attr('markerHeight',3)
+            .attr('markerWidth',4)
+            .attr('markerHeight',4)
             .attr('xoverflow','visible')
             .append('svg:path')
             .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
