@@ -11,8 +11,10 @@ class ForceVis {
             { group: 4, name: "Kevin Jenkins" },
             { group: 5, name: "Dr. Joseph Mercola" },
             { group: 6, name: "Sayer Ji" },
-            { group: 7, name: "Multiple People" },
-            { group: 8, name: "Donald Trump" }];
+            { group: 7, name: "Multiple People and Organizations" },
+            { group: 8, name: "Donald Trump" },
+            { group: 9, name: "Center for Countering Digital Hate" }];
+
 
         this.powersOfTen = {
             "followers": [10, 100, 1000, 10000,100000, 1000000, 10000000, 100000000],
@@ -306,21 +308,21 @@ class ForceVis {
             .enter()
             .append('text')
             .text("The nodes at the centers represent:")
-            .attr("y", -55)
+            .attr("y", -85)
             .attr("x", -12);
 
         vis.legend.selectAll().data([1])
             .enter()
             .append('text')
             .text("(Hover on colors and sizes to highlight)")
-            .attr("y", -30)
+            .attr("y", -60)
             .attr("x", -12);
 
         vis.legend.selectAll().data(vis.misinfoGroups)
             .enter()
             .append("circle")
             .attr("r", 15)
-            .attr("cy", (d, i) => i * 40)
+            .attr("cy", (d, i) => i * 40 - 30)
             .attr("cx", 10)
             .attr("fill", (d,i) => colors[i])
             .attr("class", (d,i) => `group_${d.group}`)
@@ -353,7 +355,7 @@ class ForceVis {
             .enter()
             .append('text')
             .text((d,i) => d.name)
-            .attr("y", (d, i) => i * 40+5)
+            .attr("y", (d, i) => i * 40 - 25)
             .attr("x", 35);
 
         vis.legend.selectAll().data([1])
