@@ -16,9 +16,9 @@ class ForceVis {
 
         this.powersOfTen = {
             "followers": [10, 100, 1000, 10000,100000, 1000000, 10000000, 100000000],
-            "following": [10, 100, 1000, 10000,100000],
+            "following": [10, 100, 1000, 10000],
             "numTweets": [10, 100, 1000, 10000,100000, 1000000],
-            "numLists": [10, 100, 1000, 10000,100000, 1000000] };
+            "numLists": [10, 100, 1000, 10000,100000] };
 
         selectedCategory =  document.getElementById('category').value;
 
@@ -86,8 +86,8 @@ class ForceVis {
         vis.sizeCircles = vis.sizeLegend.selectAll("circle")
             .data(vis.powersOfTen[selectedCategory]);
 
-        const multipliers = { followers: 60, following: 95, numTweets: 80, numLists: 80};
-        const offsets = { followers: 40, following: 60, numTweets: 50, numLists: 50};
+        const multipliers = { followers: 60, following: 117.5, numTweets: 80, numLists: 95};
+        const offsets = { followers: 40, following: 74, numTweets: 50, numLists: 60};
 
         vis.sizeCircles
             .enter()
@@ -107,7 +107,10 @@ class ForceVis {
                         if (d[selectedCategory] >= size && d[selectedCategory] < nextSize) count++;
                         return d[selectedCategory] >= size && d[selectedCategory] < nextSize ? vis.color(vis.G[i]) : "#B8B8B8";
                     });
-                vis.counter.html(`${count} People Highlighted for size ${size.toLocaleString("en-US")} to ${(nextSize-1).toLocaleString("en-US")}`);
+                const sizeWordingBefore = { followers: "having", following: "following", numTweets: "tweeting", numLists: "being on"};
+                const sizeWordingAfter = { followers: "followers", following: "other accounts", numTweets: "times", numLists: "lists"};
+
+                vis.counter.html(`${count} highlighted for ${sizeWordingBefore[selectedCategory]} ${size.toLocaleString("en-US")} to ${(nextSize-1).toLocaleString("en-US")} ${sizeWordingAfter[selectedCategory]}`);
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
@@ -335,7 +338,7 @@ class ForceVis {
                 const person = vis.misinfoGroups.filter(obj => {
                     return obj.group === group
                 })
-                vis.counter.html(`${count} People Highlighted for ${person[0].name}`);
+                vis.counter.html(`${count} highlighted for ${person[0].name}`);
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
@@ -344,8 +347,6 @@ class ForceVis {
                     .transition(300)
                     .attr("fill", (d,i) => vis.color(vis.G[i]));
                 vis.counter.html("");
-
-
             });
 
         vis.legend.selectAll().data(vis.misinfoGroups)
@@ -375,7 +376,7 @@ class ForceVis {
                         if (d.verified) count++;
                         return d.verified ? vis.color(vis.G[i]) : "#B8B8B8";
                     })
-                vis.counter.html(`${count} People Highlighted for Verified Accounts`)
+                vis.counter.html(`${count} people highlighted for verified accounts`)
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
@@ -462,7 +463,7 @@ class ForceVis {
                 .on("end", dragended);
         }
 
-        // Addint local variable to use in the below dictionary
+        // Adding local variable to use in the below dictionary
         const color = vis.color;
         return Object.assign(svg.node(), {scales: {color}});
     }
