@@ -30,7 +30,7 @@ class ForceVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 20, right: 20, bottom: 20, left: 20};
+        vis.margin = {top: 0, right: 20, bottom: 0, left: 20};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -45,8 +45,8 @@ class ForceVis {
             nodeRadius: 2,
             nodeStroke: d => d.verified ? '#1DA1F2' : "#fff",
             nodeStrokeWidth: d => d.verified ? 3 : 1.5,
-            linkStrength: 0.15,
-            nodeStrength: -40,
+            linkStrength: 0.3,
+            nodeStrength: -50,
             width: vis.width,
             height: 700
         })
@@ -195,7 +195,7 @@ class ForceVis {
 
         // Construct the forces.
         const forceNode = d3.forceManyBody();
-        const forceLink = d3.forceLink(links).id(({index: i}) => N[i]);
+        const forceLink = d3.forceLink(links).id(({index: i}) => N[i]).distance(35);
         if (nodeStrength !== undefined) forceNode.strength(nodeStrength);
         if (linkStrength !== undefined) forceLink.strength(linkStrength);
 
@@ -300,7 +300,14 @@ class ForceVis {
             .enter()
             .append('text')
             .text("The nodes at the centers represent:")
-            .attr("y", -35)
+            .attr("y", -55)
+            .attr("x", -12)
+
+        vis.legend.selectAll().data([1])
+            .enter()
+            .append('text')
+            .text("(Hover on colors to highlight)")
+            .attr("y", -30)
             .attr("x", -12)
 
         vis.legend.selectAll().data(vis.misinfoGroups)
@@ -308,31 +315,62 @@ class ForceVis {
             .append("circle")
             .attr("r", 15)
             .attr("cy", (d, i) => i * 40)
-            .attr("fill", (d,i) => colors[i]);
+            .attr("cx", 10)
+            .attr("fill", (d,i) => colors[i])
+            .attr("class", (d,i) => `group_${d.group}`)
+            .on('mouseover', function(event, d) {
+                const group = +d3.select(this).attr("class").substring(6)
+                console.log("group", group)
+                vis.node
+                    .transition(300)
+                    .attr("fill", function(d,i) {
+                        return d.group === group ? color(G[i]) : "#B8B8B8";
+                    })
+            })
+            .on('mouseout', function (event, d) {
+                vis.node
+                    .transition(300)
+                    .attr("fill", (d,i) => color(G[i]));
+
+            })
 
         vis.legend.selectAll().data(vis.misinfoGroups)
             .enter()
             .append('text')
             .text((d,i) => d.name)
             .attr("y", (d, i) => i * 40+5)
-            .attr("x", 25)
+            .attr("x", 35)
 
         vis.legend.selectAll().data([1])
             .enter()
             .append("circle")
             .attr("r", 15)
             .attr("cy", 350)
+            .attr("cx", 10)
             .attr("fill", "silver")
             .attr("stroke", "#1DA1F2")
             .attr("stroke-opacity", 1)
-            .attr("stroke-width",3);
+            .attr("stroke-width",3)
+            .on('mouseover', function(event, d) {
+                vis.node
+                    .transition(300)
+                    .attr("fill", function(d,i) {
+                        return d.verified ? color(G[i]) : "#B8B8B8";
+                    })
+            })
+            .on('mouseout', function (event, d) {
+                vis.node
+                    .transition(300)
+                    .attr("fill", (d,i) => color(G[i]));
+
+            })
 
         vis.legend.selectAll().data([1])
             .enter()
             .append('text')
             .text("Verified on Twitter")
             .attr("y", 355)
-            .attr("x", 25)
+            .attr("x", 35)
 
         // Size Legend
         vis.sizeLegend = svg.append("g")
