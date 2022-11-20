@@ -261,7 +261,6 @@ class ForceVis {
             .attr("stroke-width", nodeStrokeWidth)
             .on('mouseover', function(event, d) {
                 d3.select(this)
-                    .attr('stroke-width', '2px')
                     .attr('fill', 'rgba(173,222,255,0.62)');
                 vis.tooltip
                     .style("opacity", 1)
@@ -284,7 +283,6 @@ class ForceVis {
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
-                    .attr('stroke-width', '1px')
                     .attr("fill", (d) => vis.color(vis.G[d.index]))
                 vis.tooltip
                     .style("opacity", 0)
