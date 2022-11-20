@@ -16,6 +16,12 @@ class ForceVis {
             { group: 7, name: "Contacted by multiple people" },
             { group: 8, name: "Donald Trump" }];
 
+        this.powersOfTen = {
+            "followers": [10, 100, 1000, 10000,100000, 1000000, 10000000, 100000000],
+            "following": [10, 100, 1000, 10000,100000],
+            "numTweets": [10, 100, 1000, 10000,100000, 1000000],
+            "numLists": [10, 100, 1000, 10000,100000, 1000000] };
+
         selectedCategory =  document.getElementById('category').value;
 
         this.initVis()
@@ -39,7 +45,7 @@ class ForceVis {
             nodeRadius: 2,
             nodeStroke: d => d.verified ? '#1DA1F2' : "#fff",
             nodeStrokeWidth: d => d.verified ? 3 : 1.5,
-            linkStrength: 0.2,
+            linkStrength: 0.15,
             nodeStrength: -40,
             width: vis.width,
             height: 700
@@ -66,9 +72,6 @@ class ForceVis {
 
         // vis.svg.attr("viewBox", [0, 0, vis.width, height]) ;
 
-
-
-
         vis.wrangleData();
     }
     wrangleData() {
@@ -79,17 +82,10 @@ class ForceVis {
     updateVis() {
         let vis = this;
 
-        const sizeMultipliers = {
-            followers: 1.2,
-            following: 1.5,
-            numTweets: 1.2,
-            numLists: 1.5
-        }
+        let t = d3.transition(600);
 
         let updatedRadius = d => {
-            let radius = Math.round(Math.log(+d[selectedCategory]))*sizeMultipliers[selectedCategory];
-            radius = radius < 4 ? 4 : radius;
-            return radius;
+            return vis.scaleRadius(+d[selectedCategory])
         }
 
         vis.node
@@ -98,7 +94,43 @@ class ForceVis {
             .delay((d,i) => 7*i )
             .attr("r", updatedRadius)
 
+        vis.legendScale
+            .domain(vis.powersOfTen[selectedCategory])
 
+        vis.legendAxisGroup
+            .transition(t)
+            .call(vis.legendAxis)
+
+        vis.sizeCircles = vis.sizeLegend.selectAll("circle")
+            .data(vis.powersOfTen[selectedCategory]);
+
+        const num = vis.powersOfTen[selectedCategory].length;
+        const multipliers = { followers: 60, following: 95, numTweets: 80, numLists: 80};
+        const offsets = { followers: 40, following: 60, numTweets: 50, numLists: 50};
+
+        vis.sizeCircles
+            .enter()
+            .append("circle")
+            .attr("r", 2)
+            .merge(vis.sizeCircles)
+            .transition(t)
+            .attr("r", (d, i) => vis.scaleRadius(d))
+            .attr("cx", (d, i) => i * multipliers[selectedCategory] + offsets[selectedCategory])
+            .attr("fill", (d,i) => "grey")
+
+        vis.sizeCircles.exit().remove();
+
+    }
+
+    scaleRadius(radius) {
+        const sizeMultipliers = {
+            followers: 1.1,
+            following: 1.5,
+            numTweets: 1.2,
+            numLists: 1.5
+        }
+        let rd = Math.round(Math.log(radius))*sizeMultipliers[selectedCategory];
+        return  rd < 4 ? 4 : rd;
     }
 
     // Copyright 2021 Observable, Inc.
@@ -258,7 +290,7 @@ class ForceVis {
         // Handle invalidation.
         if (invalidation != null) invalidation.then(() => simulation.stop());
 
-        // Legend
+        // Color Legend
         vis.legend = svg.append("g")
             .attr('class', 'legend')
             .attr('transform', `translate(${400},${-200})`)
@@ -301,20 +333,38 @@ class ForceVis {
             .attr("y", 355)
             .attr("x", 25)
 
+        // Size Legend
+        vis.sizeLegend = svg.append("g")
+            .attr('class', 'size-legend')
+            .attr('transform', `translate(${400},${250})`)
+
+        // vis.sizeCircles = vis.sizeLegend.selectAll();
+        //
+        // vis.sizeCircles
+        //     .data(vis.powersOfTen[selectedCategory])
+        //     .enter()
+        //     .append("circle")
+        //     .attr("r", (d, i) => vis.scaleRadius(d))
+        //     .attr("cx", (d, i) => i * 60 + 40 )
+        //     .attr("fill", (d,i) => colors[i]);
+
         vis.legendScale = d3.scaleBand()
-            .rangeRound([0, 200])
+            .rangeRound([0, 500])
             .padding(0.25)
-            .domain(colors.map( (d, i) => ["1", "2", "3", "4"][i]));
+            .domain(vis.powersOfTen[selectedCategory])
 
         vis.legendAxis = d3.axisBottom()
-            .scale(vis.legendScale);
+            .scale(vis.legendScale)
+            .tickFormat(d3.format(",.0f"));
 
         vis.legendAxisGroup = svg.append("g")
             .attr("class", "axis x-axis")
-            .attr("transform", `translate(${vis.width * 2.8 / 5}, ${vis.height - 20})`);
+            .attr("transform", `translate(400,280)`);
 
         vis.legendAxisGroup
             .call(vis.legendAxis)
+
+        //vis.circles = vis.sizeLegend.selectAll("circle");
 
         function intern(value) {
             return value !== null && typeof value === "object" ? value.valueOf() : value;
