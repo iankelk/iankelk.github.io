@@ -14,6 +14,13 @@
     <link rel="stylesheet" type="text/css" href="css/libraries/fullpage/fullpage.css"/>
     <link rel="stylesheet" href="css/styles.css">
 
+<!--    Google fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
+<!--    STYLESHEETS FOR EACH VIZ-->
+    <link rel="stylesheet" href="visuals/globe/css/styles.css">
+    <link rel="stylesheet" href="visuals/chumBox/css/styles.css">
+    <link rel="stylesheet" href="visuals/bubbles/css/style.css">
+
 </head>
 <body>
 
@@ -54,56 +61,203 @@
     <div class="section" id="section3">
         <h2>This is terrible! How long have people been doing this??</h2>
         <h3>From a few people on the internet to mainstream media outlets, fake news are a tale as old as time.</h3>
-        <img src="img/timeline.jpg">
-        <p>
-            <span style="font-weight:bold;">Description</span>
-            This is the history of fake news presented in a timeline format.
-            The countries which have fake news in our dataset will be displayed in red, and those that don't have it
-            will be displayed in gray.
-            Hovering over the timeline and clicking on one circle will center the globe on the country and display an
-            image on the right,
-            and a descriptive text at the bottom.
-            As of now the globe colors are placeholders and the visualization elements are not linked.
-            One of the issues I found as I was working on it is that our data is heavily focused on the US and the UK,
-            so my plan of having
-            markers for each location was scrapped, and now I will have it so clicking on a country that has fake news
-            will display a random
-            fake news originating from that country, and link it to the timeline.
-            This will require further adjustments to the dataset, like dumping latitude and longitude.
-        </p>
+
+        <div class="container-fluid" style="height: 100vh; padding-top: 1vh">
+            <div class="row d-flex justify-content-center">
+                <div class="col d-flex justify-content-center">
+                    <h1>Tale as old as time, fake as it can be</h1>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col d-flex justify-content-center" id="timelineDiv">
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-5 d-flex justify-content-center">
+
+                    <div id="globeDiv" style="height: 65vh; width: 65vw; min-height: 10vh; min-width:10vw">
+                    </div>
+
+                </div>
+                <div class="col-7 d-flex justify-content-center">
+                    <div class="row d-flex justify-content-center align-items-center" id="newsimage">
+
+                        <p class="direction"></p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row d-flex justify-content-center bg-light" id="description">
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--        <p>-->
+<!--            <span style="font-weight:bold;">Description</span>-->
+<!--            This is the history of fake news presented in a timeline format.-->
+<!--            The countries which have fake news in our dataset will be displayed in red, and those that don't have it-->
+<!--            will be displayed in gray.-->
+<!--            Hovering over the timeline and clicking on one circle will center the globe on the country and display an-->
+<!--            image on the right,-->
+<!--            and a descriptive text at the bottom.-->
+<!--            As of now the globe colors are placeholders and the visualization elements are not linked.-->
+<!--            One of the issues I found as I was working on it is that our data is heavily focused on the US and the UK,-->
+<!--            so my plan of having-->
+<!--            markers for each location was scrapped, and now I will have it so clicking on a country that has fake news-->
+<!--            will display a random-->
+<!--            fake news originating from that country, and link it to the timeline.-->
+<!--            This will require further adjustments to the dataset, like dumping latitude and longitude.-->
+<!--        </p>-->
     </div>
 
     <div class="section" id="section4">
-        <h2>Old and New Tricks in The Age of Fake News</h2>
-        <h3>From strong emotional language to clickbait titles, fraudsters will do anything to make you react</h3>
-        <img src="img/chumbox.jpg">
-        <p>
-            <span style="font-weight:bold;">Description</span>
-            A visualization in the chumbox-style that used to be omnipresent in the past (or still is, I don't know, I
-            installed an ad blocker).
-            On mouseover, a text bit will be displayed to the right indicating an aggregated piece of information from
-            our credibility dataset.
-            An example for a text on the image:
-            "See how newspapers get thousands of views with this one weird trick!"
-            On mouseover, the following text would show:
-            "Over half of all reviewed headlines on our dataset on climate change news had negative to extremely
-            negative language!"
-        </p>
+<!--        <h2>Old and New Tricks in The Age of Fake News</h2>-->
+<!--        <h3>From strong emotional language to clickbait titles, fraudsters will do anything to make you react</h3>-->
+<!--        <img src="img/chumbox.jpg">-->
+<!--        <p>-->
+<!--            <span style="font-weight:bold;">Description</span>-->
+<!--            A visualization in the chumbox-style that used to be omnipresent in the past (or still is, I don't know, I-->
+<!--            installed an ad blocker).-->
+<!--            On mouseover, a text bit will be displayed to the right indicating an aggregated piece of information from-->
+<!--            our credibility dataset.-->
+<!--            An example for a text on the image:-->
+<!--            "See how newspapers get thousands of views with this one weird trick!"-->
+<!--            On mouseover, the following text would show:-->
+<!--            "Over half of all reviewed headlines on our dataset on climate change news had negative to extremely-->
+<!--            negative language!"-->
+<!--        </p>-->
+        <!-- WRAPPER -->
+        <div class="container-fluid" style="height: 100vh; padding-top: 1vh">
+            <div class="row d-flex justify-content-center">
+                <div class="col d-flex justify-content-center border">
+                    <h1>But first, a word from our sponsors</h1>
+                </div>
+            </div>
+
+            <!--              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"-->
+
+            <!--  Photo by <a href="https://unsplash.com/@theyshane?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shane</a> on <a href="https://unsplash.com/s/photos/rich-person?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            Photo by <a href="https://unsplash.com/@laurynasm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Laurynas Mereckas</a> on <a href="https://unsplash.com/s/photos/pill?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+              -->
+            <div class="row d-flex">
+                <div class="col lg-1"></div>
+                <div class = "col-lg-9 col-md-8 mb-4 mb-lg-0 fun-fact">
+                    <p>Recommended for You</p>
+                </div>
+                <div class="col lg-2"></div>
+            </div>
+            <!-- Gallery -->
+            <div class="row d-flex">
+            </div>
+            <div class="row d-flex">
+                <div class="col lg-1"></div>
+                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                    <img
+                            src="visuals/chumBox/img/shane.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4 chumbox"
+                            alt="Person with sunglasses holding lots of money. https://unsplash.com/photos/U_ekGjoIm_E"
+
+                    />
+                    <p class="website">realcashcrypto.com</p>
+                    <p class="website-description">Banks don't want you to know this! Local Entrepreneur makes fortune with crazy investment!</p>
+
+                </div>
+
+                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                    <img
+                            src="visuals/chumBox/img/pants.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4 chumbox"
+                            alt="Woman holding loose pants https://www.publicdomainpictures.net/en/view-image.php?image=5600&picture=loose-jeans"
+                    />
+                    <p class="website">notahealthscam.net</p>
+                    <p class="website-description">Lose weight while sleeping with this one weird trick!</p>
+                </div>
+
+                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                    <img
+                            src="visuals/chumBox/img/pills.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4 chumbox"
+                            alt="Box of pills"
+                    />
+                    <p class="website">instantbrainboost.net</p>
+                    <p class="website-description">The pill all billionaires take every morning now approved by the FDA.</p>
+                </div>
+                <div class="col lg-1"></div>
+                <!-- Gallery -->
+            </div>
+
+            <div class="row d-flex">
+                <div class="col lg-1"></div>
+                <div class = "col-lg-9 col-md-8 mb-4 mb-lg-0 fun-fact">
+                    <h2>Did you know that...</h2>
+                    <p id="factline">...you can click on the images to get new facts on fake news?
+                    <br>
+                    Don't worry, these images are perfectly safe (and fun) to click on.</p>
+                </div>
+                <div class="col lg-2"></div>
+            </div>
+        </div>
+
     </div>
 
     <div class="section" id="section5">
         <h2>What do they want to do with their lies?</h2> <br>
         <h3>People will lie for all sorts of reasons.</h3>
-        <img src="img/bubbles.jpg"> <br>
-        <p>
-            <span style="font-weight:bold;">Description</span>
-            Another visualization, this time related to one of our covid datasets, that shows metrics for misinformation
-            over time.
-            On hovering on any of the bubbles, the user can see the count of tweets for that date, split by the
-            categories available.
-            This elucidates the methods used by fake news spreaders and the goals they want to achieve.
-        </p>
+        <div>
+        <div class="container-fluid" >
+            <div class="row justify-content-center" id="top-row" >
+                <div class="align-self-center">
+                    <h1>Misinformation Over Time</h1>
+                    <h2>How metrics changed over 2020 for COVID-19</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="row" id="selector-row" >
+                <div class="col">
+                    <div class="row justify-content-center">
+                        <select id='split' class="custom-select align-self-center" onchange="toggleSplit()">
+                            <option value="all" selected>Global</option>
+                            <option value="split">Split into Categories</option>
+                        </select>
+                    </div>
+                    <div class="row justify-content-center">
+                        <select id='category' class="custom-select align-self-center" onchange="changeCategory()">
+                            <option value="motive" selected>By Motive</option>
+                            <option value="narrative">By Narrative</option>
+                            <option value="region">By Region</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" id="vis-row" >
+                <div class="col" id="bubble" ></div>
+            </div>
+        </div>
+
+        </div>
     </div>
+
+<!--    <div class="section" id="section5">-->
+<!--        <h2>What do they want to do with their lies?</h2> <br>-->
+<!--        <h3>People will lie for all sorts of reasons.</h3>-->
+<!--        <img src="img/bubbles.jpg"> <br>-->
+<!--        <p>-->
+<!--            <span style="font-weight:bold;">Description</span>-->
+<!--            Another visualization, this time related to one of our covid datasets, that shows metrics for misinformation-->
+<!--            over time.-->
+<!--            On hovering on any of the bubbles, the user can see the count of tweets for that date, split by the-->
+<!--            categories available.-->
+<!--            This elucidates the methods used by fake news spreaders and the goals they want to achieve.-->
+<!--        </p>-->
+<!--    </div>-->
 
     <div class="section" id="section6">
         <h2>So fake news are older than sliced bread, so what's this buzz about them now? Why should you care?</h2>
@@ -165,24 +319,24 @@
 </div>
 
 
-<div id="fullpage">
-    <div class="section" id="section0">
-        <h1>fullPage.js</h1>
-        <p>Continuous Scrolling Enabled</p>
-    </div>
-    <div class="section" id="section1">
-        <div class="intro">
-            <h1>Keep Scrolling</h1>
-            <p>Move to the first section and scroll up or move to the last and scroll down to see how it works.</p>
-        </div>
-    </div>
-    <div class="section" id="section2">
-        <div class="intro">
-            <h1>Scroll Down</h1>
-            <p>And it will animate down to the first section</p>
-        </div>
-    </div>
-</div>
+<!--<div id="fullpage">-->
+<!--    <div class="section" id="section0">-->
+<!--        <h1>fullPage.js</h1>-->
+<!--        <p>Continuous Scrolling Enabled</p>-->
+<!--    </div>-->
+<!--    <div class="section" id="section1">-->
+<!--        <div class="intro">-->
+<!--            <h1>Keep Scrolling</h1>-->
+<!--            <p>Move to the first section and scroll up or move to the last and scroll down to see how it works.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="section" id="section2">-->
+<!--        <div class="intro">-->
+<!--            <h1>Scroll Down</h1>-->
+<!--            <p>And it will animate down to the first section</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 <!-- - - - - - - - - - - - >
@@ -225,6 +379,21 @@
         },
     });
 </script>
+
+
+<!-- Globe Visualization -->
+<script src="visuals/globe/js/globeVis.js"></script>
+<script src="visuals/globe/js/timelineVis.js"></script>
+<script src="visuals/globe/js/textVis.js"></script>
+<script src="visuals/globe/js/linkViews.js"></script>
+<script src="visuals/globe/js/main.js"></script>
+
+<!--Chumbox Visualization-->
+<script src="visuals/chumBox/js/main.js"></script>
+
+<!--Bubbles Visualization-->
+<script src = "visuals/bubbles/js/bubbleVis.js"></script>
+<script src="visuals/bubbles/js/main.js"></script>
 
 <!--<script src="js/main.js"></script>-->
 </body>
