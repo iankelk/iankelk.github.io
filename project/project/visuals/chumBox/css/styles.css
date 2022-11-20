@@ -1,0 +1,17 @@
+.highlight{
+    color:red;
+    font-weight: bold;
+}
+.website{
+    color:grey
+}
+.website-description{
+    font-weight: bold;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.fun-fact{
+    margin-top:1rem;
+}

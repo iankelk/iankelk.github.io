@@ -1,0 +1,65 @@
+body {
+    padding: 2vh;
+}
+
+h1,h2{
+    color: midnightblue;
+}
+
+.container-fluid {
+    border: thin solid grey;
+    border-radius: 5px;
+    background: lightcyan;
+}
+
+#top-row {
+    height: 10vh;
+    margin-top: 1vh;
+}
+
+#selector-row {
+    height: 5vh;
+}
+
+#category {
+    width: 20%;
+}
+#split {
+    width: 20%;
+}
+
+/*#vis-row {*/
+/*    height: 800px;*/
+/*    width: 100%;*/
+/*}*/
+
+#matrix {
+    width: 100%;
+}
+
+.legend-text {
+    font-size: 1em;
+    alignment-baseline: middle;
+}
+
+/*input, textarea, select {*/
+/*    margin-top: 10px; display: block;*/
+/*}*/
+
+/*input[type=radio] {*/
+/*    display: inline;*/
+/*}*/
+
+.tooltip {
+    position: absolute;
+    text-align: left;
+    font: 12px sans-serif;
+    /*  pointer-events: none;	This line needs to be removed */
+}
+.tooltip h3,h4 {
+    text-align: left;
+}
+.tooltip h4 {
+    font: 14px sans-serif;
+    color: darkblue;
+}
