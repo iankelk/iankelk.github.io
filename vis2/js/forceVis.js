@@ -397,7 +397,7 @@ class ForceVis {
         // Size Legend
         vis.sizeLegend = svg.append("g")
             .attr('class', 'size-legend')
-            .attr('transform', `translate(400,250)`);
+            .attr('transform', `translate(300,250)`);
 
         vis.legendScale = d3.scaleBand()
             .rangeRound([0, 500])
@@ -410,7 +410,7 @@ class ForceVis {
 
         vis.legendAxisGroup = svg.append("g")
             .attr("class", "axis x-axis")
-            .attr("transform", `translate(400,280)`);
+            .attr("transform", `translate(300,280)`);
 
         vis.legendAxisGroup
             .call(vis.legendAxis);
