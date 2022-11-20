@@ -356,13 +356,15 @@ class ForceVis {
             .attr("y", (d, i) => i * 40 - 25)
             .attr("x", 35);
 
+        // Verified
         vis.legend.selectAll().data([1])
             .enter()
             .append("circle")
             .attr("r", 15)
             .attr("cy", 350)
             .attr("cx", 10)
-            .attr("fill", "silver")
+            .attr("fill", "white")
+            .attr("opacity", 0.5)
             .attr("stroke", "#1DA1F2")
             .attr("stroke-opacity", 1)
             .attr("stroke-width",3)
@@ -387,11 +389,46 @@ class ForceVis {
                 vis.counter.html("");
             });
 
+        // Suspended
         vis.legend.selectAll().data([1])
             .enter()
+            .append("circle")
+            .attr("r", 15)
+            .attr("cy", 390)
+            .attr("cx", 10)
+            .attr("fill", "#B8B8B8")
+            .on('mouseenter', function(event, d) {
+                d3.select(this)
+                    .attr("r", 18)
+                let count = 0;
+                vis.node
+                    .attr("fill", function(d,i) {
+                        if (d.group === 10) count++;
+                        return d.group === 10 ? vis.color(vis.G[i]) : "#B8B8B8";
+                    })
+                    .attr("opacity", function(d,i) {
+                        return d.group === 10 ? 1 :0.1;
+                    })
+                    .transition(100)
+                    .attr("r", 10)
+                    .transition(100)
+                    .attr("r", (d, i) => vis.scaleRadius(+d[selectedCategory]));
+                vis.counter.html(`${count} people highlighted for suspended accounts`)
+            })
+            .on('mouseleave', function (event, d) {
+                d3.select(this)
+                    .attr("r", 15);
+                vis.node
+                    .attr("fill", (d,i) => vis.color(vis.G[i]))
+                    .attr("opacity", 1);
+                vis.counter.html("");
+            });
+
+        vis.legend.selectAll().data(["Verified on Twitter", "Suspended on Twitter"])
+            .enter()
             .append('text')
-            .text("Verified on Twitter")
-            .attr("y", 355)
+            .text((d) => d)
+            .attr("y", (d, i) => i * 40 + 355)
             .attr("x", 35);
 
         // Size Legend
