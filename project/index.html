@@ -1,162 +1,187 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Fake News</title>
+    <meta charset="utf-8">
+    <title>Fake News</title>
+    <meta name="author" content="Ian Kelk and Ronan Fonseca"/>
+    <meta name="description" content="CS171 Final Project on Misinformation"/>
+    <meta name="keywords" content="misinformation,disinformatio,fake news,news"/>
+    <meta name="Resource-type" content="Document"/>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/libraries/fullpage/fullpage.css"/>
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 <body>
 
 <!-- WRAPPER -->
-<div class="container-fluid" style="height: 100vh; padding-top: 1vh">
-  <div class="row d-flex justify-content-center">
-    <div class="col d-flex justify-content-center border bg-light">
-      <h1>Fantastic News and How to Fake Them</h1>
+<div id="fullpage">
+    <div class="section" id="section0">
+        <h1>Fantastic News and How to Fake Them</h1>
     </div>
-  </div>
 
-  <hr>
+    <div class="section" id="section1">
+        <h1>Fake News: The Danger is Out there, Are You Prepared?</h1>
+        <h2>Fake News is everywhere, and it only takes as few as half a dozen people to create a deep network of
+            lies</h2>
+        <img src="img/force-direct.jpg">
+        <p>
+            <span style="font-weight:bold;">Description</span>
+            Force-directed graph illustrating the connections in retweets from the "Misinformation Half Dozen Dataset".
+            RA report from the Center for Countering Digital Hate showed that 65% of anti-vaccine misinformation can be
+            traced to just twelve people.
+            We managed to scrape information related to six of those that were not banned from Twitter.
+            Each node will be hoverable on and will display basic information about the Twitter accounts relative to
+            covid-19 misinformation.
+        </p>
+    </div>
 
-  <div class="row d-flex justify-content-center">
-    <h1>Fake News: The Danger is Out there, Are You Prepared?</h1>
-    <h2>Fake News is everywhere, and it only takes as few as half a dozen people to create a deep network of lies</h2>
-    <img src="img/force-direct.jpg">
-    <p>
-      <span style="font-weight:bold;">Description</span>
-      Force-directed graph illustrating the connections in retweets from the "Misinformation Half Dozen Dataset".
-      RA report from the Center for Countering Digital Hate showed that 65% of anti-vaccine misinformation can be traced to just twelve people.
-      We managed to scrape information related to six of those that were not banned from Twitter.
-      Each node will be hoverable on and will display basic information about the Twitter accounts relative to covid-19 misinformation.
-    </p>
-  </div>
+    <div class="section" id="section2">
+        <h2>You've met the perpetrators, but what do they talk about?</h2>
+        <h3>A small number of people can change a nation's perspective on healthcare, at the cost of lives.</h3>
+        <img src="img/wordcloud.jpg">
+        <p>
+            <span style="font-weight:bold;">Description</span>
+            Static word cloud visualization of the content discussed by the perpetrators above.
+        </p>
+    </div>
 
-  <hr>
+    <hr>
 
-  <div class="row d-flex justify-content-center">
-    <h2>You've met the perpetrators, but what do they talk about?</h2>
-    <h3>A small number of people can change a nation's perspective on healthcare, at the cost of lives.</h3>
-    <img src="img/wordcloud.jpg">
-    <p>
-      <span style="font-weight:bold;">Description</span>
-      Static word cloud visualization of the content discussed by the perpetrators above.
-    </p>
-  </div>
+    <div class="section" id="section3">
+        <h2>This is terrible! How long have people been doing this??</h2>
+        <h3>From a few people on the internet to mainstream media outlets, fake news are a tale as old as time.</h3>
+        <img src="img/timeline.jpg">
+        <p>
+            <span style="font-weight:bold;">Description</span>
+            This is the history of fake news presented in a timeline format.
+            The countries which have fake news in our dataset will be displayed in red, and those that don't have it
+            will be displayed in gray.
+            Hovering over the timeline and clicking on one circle will center the globe on the country and display an
+            image on the right,
+            and a descriptive text at the bottom.
+            As of now the globe colors are placeholders and the visualization elements are not linked.
+            One of the issues I found as I was working on it is that our data is heavily focused on the US and the UK,
+            so my plan of having
+            markers for each location was scrapped, and now I will have it so clicking on a country that has fake news
+            will display a random
+            fake news originating from that country, and link it to the timeline.
+            This will require further adjustments to the dataset, like dumping latitude and longitude.
+        </p>
+    </div>
 
-  <hr>
+    <div class="section" id="section4">
+        <h2>Old and New Tricks in The Age of Fake News</h2>
+        <h3>From strong emotional language to clickbait titles, fraudsters will do anything to make you react</h3>
+        <img src="img/chumbox.jpg">
+        <p>
+            <span style="font-weight:bold;">Description</span>
+            A visualization in the chumbox-style that used to be omnipresent in the past (or still is, I don't know, I
+            installed an ad blocker).
+            On mouseover, a text bit will be displayed to the right indicating an aggregated piece of information from
+            our credibility dataset.
+            An example for a text on the image:
+            "See how newspapers get thousands of views with this one weird trick!"
+            On mouseover, the following text would show:
+            "Over half of all reviewed headlines on our dataset on climate change news had negative to extremely
+            negative language!"
+        </p>
+    </div>
 
-  <div class="row d-flex justify-content-center">
-    <h2>This is terrible! How long have people been doing this??</h2>
-    <h3>From a few people on the internet to mainstream media outlets, fake news are a tale as old as time.</h3>
-    <img src="img/timeline.jpg">
-    <p>
-      <span style="font-weight:bold;">Description</span>
-      This is the history of fake news presented in a timeline format.
-      The countries which have fake news in our dataset will be displayed in red, and those that don't have it will be displayed in gray.
-      Hovering over the timeline and clicking on one circle will center the globe on the country and display an image on the right,
-      and a descriptive text at the bottom.
-      As of now the globe colors are placeholders and the visualization elements are not linked.
-      One of the issues I found as I was working on it is that our data is heavily focused on the US and the UK, so my plan of having
-      markers for each location was scrapped, and now I will have it so clicking on a country that has fake news will display a random
-      fake news originating from that country, and link it to the timeline.
-      This will require further adjustments to the dataset, like dumping latitude and longitude.
-    </p>
-  </div>
+    <div class="section" id="section5">
+        <h2>What do they want to do with their lies?</h2> <br>
+        <h3>People will lie for all sorts of reasons.</h3>
+        <img src="img/bubbles.jpg"> <br>
+        <p>
+            <span style="font-weight:bold;">Description</span>
+            Another visualization, this time related to one of our covid datasets, that shows metrics for misinformation
+            over time.
+            On hovering on any of the bubbles, the user can see the count of tweets for that date, split by the
+            categories available.
+            This elucidates the methods used by fake news spreaders and the goals they want to achieve.
+        </p>
+    </div>
 
-  <hr>
+    <div class="section" id="section6">
+        <h2>So fake news are older than sliced bread, so what's this buzz about them now? Why should you care?</h2>
+        <h3>Misinformation is used for personal profit. Misinformation shakes democracies. Misinformation Kills.</h3>
+        <img src="img/retweets-deaths.jpg">
+        <p>
+            <span style="font-weight:bold;">Description</span>
+            Two stacked graphs showing the relationship between retweets of the Misinformation Half Dozen and COVID-19
+            deaths.
+            Hovering on any of the line charts will show the deaths for that period and the number of tweets, retweets,
+            likes.
+            Brushing/Zooming may be included but are not a priority to drive the point that we are trying to make.
+        </p>
+    </div>
 
-  <div class="row d-flex justify-content-center">
-    <h2>Old and New Tricks in The Age of Fake News</h2>
-    <h3>From strong emotional language to clickbait titles, fraudsters will do anything to make you react</h3>
-    <img src="img/chumbox.jpg">
-    <p>
-      <span style="font-weight:bold;">Description</span>
-      A visualization in the chumbox-style that used to be omnipresent in the past (or still is, I don't know, I installed an ad blocker).
-      On mouseover, a text bit will be displayed to the right indicating an aggregated piece of information from our credibility dataset.
-      An example for a text on the image:
-      "See how newspapers get thousands of views with this one weird trick!"
-      On mouseover, the following text would show:
-      "Over half of all reviewed headlines on our dataset on climate change news had negative to extremely negative language!"
-    </p>
-  </div>
+    <div class="section" id="section7">
+        <h2>The good news: You can protect yourself from misinformation.</h2>
+        <h3>Misinformation is everywhere and comes in various forms. But you can prepare against it.</h3>
+        <img src="img/rating.jpg">
+        <p>
+            <span style="font-weight:bold;">Description</span>
+            A graph in an arc-like shape with subdivisions in different colors.
+            At the middle of the graph, there will be a question that was asked
+            to one of the credibility raters in our credibility dataset about the headline displayed at the middle of
+            the arc.
+            The user will interact with the viz by clicking on the alternative that he thinks is best descriptive of the
+            headline (is it very clickbaity or not at all?)
+            When the choice is made, another arrow will indicate if the original rater agrees with the user's choice or
+            not about that news headline.
+        </p>
+        <ol>Example of interaction:
+            <li> Pick a random headline from dataset (fictitious one)</li>
+            Headline: "Doom approaches as new law axes environmental budget"
+            <li>Have the user choose if they find the language "Extremely Negative", "Somewhat Negative", "Neither
+                Negative Nor Positive", "Somewhat Positive", "Extremely Positive".
+            </li>
+            <li>Show the original response for that question from the original rater.</li>
+        </ol>
+    </div>
 
-  <hr>
+    <div class="section" id="section8">
+        <h2>You've had your warmup, can you handle them all now?</h2>
+        <h3>Explore lots of ways fake news present themselves and see if you ever fell for one of them </h3>
+        <img src="img/thumbs.jpg">
+        <p>
+            <span style="font-weight:bold;">Description</span>
+            A mockup of a fake news website, with several points with fake news, such as a misleading title, subtitle,
+            link, textual content.
+            Hovering over parts with different fake news the page will outline that area with a
+            circle/rectangle/suitable shape
+            and display a tooltip with tips on how to deal with that form of fake news.
+            Over time all of the areas will be highlighted on their own so the viewer does not miss any of them.
+        </p>
+    </div>
 
-  <div class="row d-flex justify-content-center">
-    <h2>What do they want to do with their lies?</h2> <br>
-    <h3>People will lie for all sorts of reasons.</h3>
-    <img src="img/bubbles.jpg"> <br>
-    <p>
-      <span style="font-weight:bold;">Description</span>
-      Another visualization, this time related to one of our covid datasets, that shows metrics for misinformation over time.
-      On hovering on any of the bubbles, the user can see the count of tweets for that date, split by the categories available.
-      This elucidates the methods used by fake news spreaders and the goals they want to achieve.
-    </p>
-  </div>
-
-  <hr>
-
-  <div class="row d-flex justify-content-center">
-    <h2>So fake news are older than sliced bread, so what's this buzz about them now? Why should you care?</h2>
-    <h3>Misinformation is used for personal profit. Misinformation shakes democracies. Misinformation Kills.</h3>
-    <img src="img/retweets-deaths.jpg">
-    <p>
-      <span style="font-weight:bold;">Description</span>
-      Two stacked graphs showing the relationship between retweets of the Misinformation Half Dozen and COVID-19 deaths.
-      Hovering on any of the line charts will show the deaths for that period and the number of tweets, retweets, likes.
-      Brushing/Zooming may be included but are not a priority to drive the point that we are trying to make.
-    </p>
-
-  </div>
-
-  <hr>
-
-  <div class="row d-flex justify-content-center">
-    <h2>The good news: You can protect yourself from misinformation.</h2>
-    <h3>Misinformation is everywhere and comes in various forms. But you can prepare against it.</h3>
-    <img src="img/rating.jpg">
-    <p>
-      <span style="font-weight:bold;">Description</span>
-        A graph in an arc-like shape with subdivisions in different colors.
-        At the middle of the graph, there will be a question that was asked
-        to one of the credibility raters in our credibility dataset about the headline displayed at the middle of the arc.
-        The user will interact with the viz by clicking on the alternative that he thinks is best descriptive of the headline (is it very clickbaity or not at all?)
-        When the choice is made, another arrow will indicate if the original rater agrees with the user's choice or not about that news headline.
-    </p>
-    <ol>Example of interaction:
-    <li> Pick a random headline from dataset (fictitious one)</li>
-    Headline: "Doom approaches as new law axes environmental budget"
-    <li>Have the user choose if they find the language "Extremely Negative", "Somewhat Negative", "Neither Negative Nor Positive", "Somewhat Positive", "Extremely Positive".</li>
-    <li>Show the original response for that question from the original rater.</li>
-    </ol>
-
-  </div>
-
-  <hr>
-
-  <div class="row d-flex justify-content-center">
-    <h2>You've had your warmup, can you handle them all now?</h2>
-    <h3>Explore lots of ways fake news present themselves and see if you ever fell for one of them </h3>
-    <img src="img/thumbs.jpg">
-    <p>
-      <span style="font-weight:bold;">Description</span>
-      A mockup of a fake news website, with several points with fake news, such as a misleading title, subtitle, link, textual content.
-      Hovering over parts with different fake news the page will outline that area with a circle/rectangle/suitable shape
-      and display a tooltip with tips on how to deal with that form of fake news.
-      Over time all of the areas will be highlighted on their own so the viewer does not miss any of them.
-    </p>
-
-  </div>
-
-  <h4>This is it! Fake news are out there, but you CAN detect and avoid them now!</h4>
+    <div class="section" id="section9">
+        <h4>This is it! Fake news are out there, but you CAN detect and avoid them now!</h4>
+    </div>
+</div>
 
 
-
-
-
+<div id="fullpage">
+    <div class="section" id="section0">
+        <h1>fullPage.js</h1>
+        <p>Continuous Scrolling Enabled</p>
+    </div>
+    <div class="section" id="section1">
+        <div class="intro">
+            <h1>Keep Scrolling</h1>
+            <p>Move to the first section and scroll up or move to the last and scroll down to see how it works.</p>
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <div class="intro">
+            <h1>Scroll Down</h1>
+            <p>And it will animate down to the first section</p>
+        </div>
+    </div>
 </div>
 
 
@@ -178,7 +203,29 @@
 <script src="https://d3js.org/topojson.v2.min.js"></script>
 <script src="https://d3js.org/d3-geo.v1.min.js"></script>
 
+<!-- fullPage -->
+<script type="text/javascript" src="js/libraries/fullpage/fullpage.js"></script>
+
 <!-- OWN JS -->
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff',
+            '#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage', '8thpage', '9thpage', '10thpage',
+            '11thpage', '12thpage', '13thpage', '14thpage', '15thpage', '16thpage', '17thpage', '18thpage', '19thpage', '20thpage'],
+        menu: '#menu',
+        continuousVertical: true,
+        navigation: true,
+        afterLoad: function (origin, destination, direction, trigger) {
+            console.log("afterLoad: destination:" + destination.index);
+        },
+        onLeave: function (origin, destination, direction, trigger) {
+            console.log("onLeave: destination:" + destination.index);
+        },
+    });
+</script>
+
 <!--<script src="js/main.js"></script>-->
 </body>
 </html>
