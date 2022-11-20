@@ -82,7 +82,7 @@ class ForceVis {
     updateVis() {
         let vis = this;
 
-        let t = d3.transition(600);
+        let t = d3.transition(800);
 
         let updatedRadius = d => {
             return vis.scaleRadius(+d[selectedCategory])
@@ -209,7 +209,8 @@ class ForceVis {
         const svg = d3.create("svg")
             .attr("width", width)
             .attr("height", height)
-            .attr("viewBox", [-width / 2, -height / 2, width, height])
+           // .attr("viewBox", [-width / 2, -height / 2, width, height])
+            .attr("viewBox", [-width / 3, -height / 2, width, height])
             .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
         svg.append('defs').append('marker')
@@ -256,7 +257,7 @@ class ForceVis {
                 vis.tooltip
                     .style("opacity", 1)
                     .style("left", event.pageX + 20 + "px")
-                    .style("top", event.pageY + "px")
+                    .style("top", event.pageY -160 + "px")
                     .html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
                          <h4>${d.name} (${d.id})</h4>
