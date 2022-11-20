@@ -65,6 +65,7 @@ h1,h2{
 .counter {
     position: absolute;
     text-align: left;
-    font: 12px sans-serif;
+    font: 18px sans-serif;
+    font-weight: bold;
     /*  pointer-events: none;	This line needs to be removed */
 }

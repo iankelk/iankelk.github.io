@@ -419,10 +419,10 @@ class ForceVis {
 
         vis.counter = vis.legend
             .append("text")
-            .attr("class", "date-range")
+            .attr("class", "counter")
             .attr('text-anchor', 'start')
             .attr('x', -10)
-            .attr('y', -100)
+            .attr('y', -120)
             .attr('fill', 'black');
 
         function intern(value) {
