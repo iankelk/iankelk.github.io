@@ -54,7 +54,6 @@ h1,h2{
     position: absolute;
     text-align: left;
     font: 12px sans-serif;
-    /*  pointer-events: none;	This line needs to be removed */
 }
 .tooltip h3,h4 {
     text-align: left;
@@ -62,4 +61,10 @@ h1,h2{
 .tooltip h4 {
     font: 14px sans-serif;
     color: darkblue;
+}
+.counter {
+    position: absolute;
+    text-align: left;
+    font: 12px sans-serif;
+    /*  pointer-events: none;	This line needs to be removed */
 }

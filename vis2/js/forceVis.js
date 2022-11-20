@@ -11,7 +11,7 @@ class ForceVis {
             { group: 4, name: "Kevin Jenkins" },
             { group: 5, name: "Dr. Joseph Mercola" },
             { group: 6, name: "Sayer Ji" },
-            { group: 7, name: "Contacted by multiple people" },
+            { group: 7, name: "Multiple People" },
             { group: 8, name: "Donald Trump" }];
 
         this.powersOfTen = {
@@ -86,7 +86,6 @@ class ForceVis {
         vis.sizeCircles = vis.sizeLegend.selectAll("circle")
             .data(vis.powersOfTen[selectedCategory]);
 
-        const num = vis.powersOfTen[selectedCategory].length;
         const multipliers = { followers: 60, following: 95, numTweets: 80, numLists: 80};
         const offsets = { followers: 40, following: 60, numTweets: 50, numLists: 50};
 
@@ -98,14 +97,17 @@ class ForceVis {
             .merge(vis.sizeCircles)
             .on('mouseover', function(event, d) {
                 const size = +d3.select(this).attr("class").substring(5)
-                const next_size = size*10;
+                const nextSize = size*10;
                 d3.select(this)
-                    .attr("fill", "dodgerblue")
+                    .attr("fill", "dodgerblue");
+                let count = 0;
                 vis.node
                     .transition(300)
                     .attr("fill", function(d,i) {
-                        return d[selectedCategory] >= size && d[selectedCategory] < next_size ? vis.color(vis.G[i]) : "#B8B8B8";
-                    })
+                        if (d[selectedCategory] >= size && d[selectedCategory] < nextSize) count++;
+                        return d[selectedCategory] >= size && d[selectedCategory] < nextSize ? vis.color(vis.G[i]) : "#B8B8B8";
+                    });
+                vis.counter.html(`${count} People Highlighted for size ${size.toLocaleString("en-US")} to ${(nextSize-1).toLocaleString("en-US")}`);
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
@@ -113,15 +115,15 @@ class ForceVis {
                 vis.node
                     .transition(300)
                     .attr("fill", (d,i) => vis.color(vis.G[i]));
-
+                vis.counter.html(``);
             })
+
             .transition(t)
             .attr("r", (d, i) => vis.scaleRadius(d))
             .attr("cx", (d, i) => i * multipliers[selectedCategory] + offsets[selectedCategory])
             .attr("fill", (d,i) => "grey");
 
         vis.sizeCircles.exit().remove();
-
     }
 
     scaleRadius(radius) {
@@ -323,18 +325,26 @@ class ForceVis {
                 d3.select(this)
                     .attr("r", 18)
                 const group = +d3.select(this).attr("class").substring(6)
+                let count = 0;
                 vis.node
                     .transition(300)
                     .attr("fill", function(d,i) {
+                        if (d.group === group) count++;
                         return d.group === group ? vis.color(vis.G[i]) : "#B8B8B8";
                     })
+                const person = vis.misinfoGroups.filter(obj => {
+                    return obj.group === group
+                })
+                vis.counter.html(`${count} People Highlighted for ${person[0].name}`);
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
-                    .attr("r", 15)
+                    .attr("r", 15);
                 vis.node
                     .transition(300)
                     .attr("fill", (d,i) => vis.color(vis.G[i]));
+                vis.counter.html("");
+
 
             });
 
@@ -358,19 +368,22 @@ class ForceVis {
             .on('mouseover', function(event, d) {
                 d3.select(this)
                     .attr("r", 18)
+                let count = 0;
                 vis.node
                     .transition(300)
                     .attr("fill", function(d,i) {
+                        if (d.verified) count++;
                         return d.verified ? vis.color(vis.G[i]) : "#B8B8B8";
                     })
+                vis.counter.html(`${count} People Highlighted for Verified Accounts`)
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
-                    .attr("r", 15)
+                    .attr("r", 15);
                 vis.node
                     .transition(300)
                     .attr("fill", (d,i) => vis.color(vis.G[i]));
-
+                vis.counter.html("");
             });
 
         vis.legend.selectAll().data([1])
@@ -383,7 +396,7 @@ class ForceVis {
         // Size Legend
         vis.sizeLegend = svg.append("g")
             .attr('class', 'size-legend')
-            .attr('transform', `translate(${400},${250})`);
+            .attr('transform', `translate(400,250)`);
 
         vis.legendScale = d3.scaleBand()
             .rangeRound([0, 500])
@@ -399,7 +412,15 @@ class ForceVis {
             .attr("transform", `translate(400,280)`);
 
         vis.legendAxisGroup
-            .call(vis.legendAxis)
+            .call(vis.legendAxis);
+
+        vis.counter = vis.legend
+            .append("text")
+            .attr("class", "date-range")
+            .attr('text-anchor', 'start')
+            .attr('x', -10)
+            .attr('y', -100)
+            .attr('fill', 'black');
 
         function intern(value) {
             return value !== null && typeof value === "object" ? value.valueOf() : value;
