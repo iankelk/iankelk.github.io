@@ -14,7 +14,7 @@ class HoverVis {
         vis.height = 900;
 
         // init drawing area
-        vis.svg = d3.select("#hotspot-image").append("svg")
+        vis.svg = d3.select(vis.parentElement).append("svg")
             .attr("width", vis.width)
             .attr("height", vis.height);
 
@@ -40,6 +40,7 @@ class HoverVis {
                 d3.select(this)
                     .attr("fill", "green")
             })
+        vis.wrangleData()
     }
 
     wrangleData() {
