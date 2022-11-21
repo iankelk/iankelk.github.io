@@ -1,19 +1,19 @@
 [
   {
     "x": 230,
-    "y": 50,
-    "rect": true,
+    "y": 72,
+    "index": 0,
     "rectX": 250,
-    "rectY": 0,
+    "rectY": 32,
     "rectWidth": 335,
-    "rectHeight": 103,
+    "rectHeight": 95,
     "title": "The Source",
     "description": "What's the story's intent? Investigate the site, its mission, and its contact info."
   },
   {
     "x": -7,
     "y": 515,
-    "rect": true,
+    "index": 1,
     "rectX": 8,
     "rectY": 505,
     "rectWidth": 405,
@@ -24,7 +24,7 @@
   {
     "x": -7,
     "y": 575,
-    "rect": true,
+    "index": 2,
     "rectX": 8,
     "rectY": 563,
     "rectWidth": 570,
@@ -35,7 +35,7 @@
   {
     "x": 570,
     "y": 664,
-    "rect": true,
+    "index": 3,
     "rectX": 455,
     "rectY": 655,
     "rectWidth": 100,
@@ -44,22 +44,22 @@
     "description": "Click on the supporting links, and perform reverse searches on the images. Are they credible, and do they support the story?"
   },
   {
-    "x": 105,
-    "y": 0,
-    "rect": true,
-    "rectX": 0,
-    "rectY": 0,
-    "rectWidth": 0,
-    "rectHeight": 0,
+    "x": -8,
+    "y": 17,
+    "index": 4,
+    "rectX": 30,
+    "rectY": 8,
+    "rectWidth": 235,
+    "rectHeight": 20,
     "title": "The URL",
     "description": "Be wary of unusual top-level domain names, like '.com.co' that are designed to appear legitimate."
   },
   {
     "x": 660,
-    "y": 24,
-    "rect": true,
+    "y": 48,
+    "index": 5,
     "rectX": 675,
-    "rectY": 7,
+    "rectY": 32,
     "rectWidth": 147,
     "rectHeight": 35,
     "title": "Your Bias",
@@ -68,7 +68,7 @@
   {
     "x": -7,
     "y": 178,
-    "rect": true,
+    "index": 6,
     "rectX": 8,
     "rectY": 170,
     "rectWidth": 56,
@@ -79,7 +79,7 @@
   {
     "x": 745,
     "y": 522,
-    "rect": true,
+    "index": 7,
     "rectX": 680,
     "rectY": 538,
     "rectWidth": 134,
@@ -90,7 +90,7 @@
   {
     "x": 223,
     "y": 725,
-    "rect": true,
+    "index": 8,
     "rectX": 29,
     "rectY": 712,
     "rectWidth": 175,

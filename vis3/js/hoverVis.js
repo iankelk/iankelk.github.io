@@ -46,7 +46,7 @@ class HoverVis {
             .attr("fill", "green")
             .attr("stroke", "green")
             .attr("stroke-opacity", 1)
-            .attr("stroke-width",3)
+            .attr("stroke-width", 3)
             .attr("opacity", 0.5)
 
         vis.circleAnimation
@@ -65,24 +65,28 @@ class HoverVis {
             .attr("r", 12)
             .attr("fill", "green")
             .attr("opacity", 0.5)
-            .on("mouseover", function(event, d) {
-                const t = d3.transition().duration(300).ease(d3.easeLinear);
-                vis.title.innerHTML = d.title;
-                vis.description.innerHTML = d.description;
+            .on("mouseover", function (event, d) {
+                    const t = d3.transition().duration(300).ease(d3.easeLinear);
+                    vis.title.innerHTML = d.title;
+                    vis.description.innerHTML = d.description;
 
-                d3.select(this)
+                    d3.select(this)
                         .transition(t)
                         //.attr("fill", "red")
                         .attr("opacity", 1)
                         .attr("stroke-opacity", 1)
+
+                vis.svg.selectAll(`.item-${d.index}`)
+                    .transition(t)
+                    .attr("stroke-opacity", 1);
                 }
             )
-            .on("mouseout", function(event, d) {
+            .on("mouseout", function (event, d) {
                 const t = d3.transition().duration(500).ease(d3.easeLinear);
                 d3.select(this)
                     .transition(t)
                     .attr("opacity", 0.5)
-                    //.attr("fill", "green")
+                //.attr("fill", "green")
                 vis.circleAnimation
                     .attr("r", 12)
                     .attr("stroke-opacity", 1)
@@ -91,6 +95,10 @@ class HoverVis {
                     .attr("r", 25)
                     .attr("stroke-opacity", 0)
                     .attr("opacity", 0)
+
+                vis.svg.selectAll(`.item-${d.index}`)
+                    .transition(t)
+                    .attr("stroke-opacity", 0);
             })
 
         vis.bar = vis.svg.selectAll("rect")
@@ -115,14 +123,18 @@ class HoverVis {
             .attr("x", (d) => +d.rectX)
             .attr("y", (d) => +d.rectY)
             .attr("width", (d) => +d.rectWidth)
-            .attr("height", (d) => +d.rectHeight)
-            .attr("rx", 7)
-            .attr("ry", 7)
-            .attr("stroke-opacity", 1)
+            .attr("height", function (d, i) {
+                return +d.rectHeight
+            })
+            .attr("rx", 4)
+            .attr("ry", 4)
+            .attr("stroke-opacity", 0)
             .attr("stroke-width",3)
             .attr("stroke", "blue")
             .attr("fill", "none")
+            .attr("class", (d) => "item-" + d.index)
 
+        console.log("rectangles", vis.rectangles)
         vis.wrangleData()
     }
 
