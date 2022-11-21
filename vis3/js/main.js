@@ -1,27 +1,44 @@
-let width=832
-let height=900
+// Init global variables
+let myHoverVis;
 
-// init drawing area
-svg = d3.select("#imagePlace").append("svg")
-    .attr("width", width)
-    .attr("height", height);
+// Load data using promises
+let promises = [
+    d3.json("data/hotspots.json", (row, i) => {
+        row.map((d, i) => ({id: i + 1, ...d}))
+    })
+];
 
-svg.append("svg:image")
-    .attr("x", 0)
-    .attr("y", 0)
-    .attr("xlink:href", "img/defender.png")
+Promise.all(promises)
+    .then(function (data) {
+        initMainPage(data);
+    })
+    .catch(function (err) {
+        console.log(err);
+    });
 
-svg.append("circle")
-    .attr("cx", 220)
-    .attr("cy", 180)
-    .attr("r", "40")
-    .attr("fill", "green")
-    .on("mouseover", function(event, d) {
-        d3.select(this)
-            .attr("fill", "red")
+// initMainPage
+function initMainPage(dataArray) {
+    let data = dataArray[0];
+
+    // Init force
+    myHoverVis = new HoverVis(document.getElementById('hotspot-image'), data);
+}
+
+// var string="The water content is considered acceptable for this voltage class. Dielectric Breakdown Voltage is unacceptable for transformers > 288 KV. Power factors, Interfacial Tension and Neutralization Number are acceptable for continued use in-service.";
+function splitLongString(N, longString) {
+    let app = longString.split(' '),
+        arrayApp = [],
+        stringApp = "";
+    app.forEach(function (sentence, index) {
+        stringApp += sentence + ' ';
+
+        if ((index + 1) % N === 0) {
+            arrayApp.push(stringApp);
+            stringApp = '';
+        } else if (app.length === index + 1 && stringApp !== '') {
+            arrayApp.push(stringApp);
+            stringApp = '';
         }
-    )
-    .on("mouseout", function(event, d) {
-        d3.select(this)
-            .attr("fill", "green")
-})
+    });
+    return arrayApp.join("<br />");
+};
