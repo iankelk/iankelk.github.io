@@ -93,7 +93,6 @@ class HoverVis {
                     .attr("opacity", 0)
             })
 
-        // Define the bar chart
         vis.bar = vis.svg.selectAll("rect")
             .data(vis.data);
 
@@ -108,6 +107,21 @@ class HoverVis {
         //     .attr("stroke-width",3)
         //     .attr("stroke", "blue")
         //     .attr("fill", "none")
+
+        vis.rectangles = vis.svg.selectAll("rect")
+            .data(vis.data)
+            .enter()
+            .append("rect")
+            .attr("x", (d) => +d.rectX)
+            .attr("y", (d) => +d.rectY)
+            .attr("width", (d) => +d.rectWidth)
+            .attr("height", (d) => +d.rectHeight)
+            .attr("rx", 7)
+            .attr("ry", 7)
+            .attr("stroke-opacity", 1)
+            .attr("stroke-width",3)
+            .attr("stroke", "blue")
+            .attr("fill", "none")
 
         vis.wrangleData()
     }
