@@ -1,12 +1,56 @@
 [
   {
-    "x": 220,
-    "y": 180,
-    "description": "This is some fake news"
+    "x": 230,
+    "y": 50,
+    "title": "The Source",
+    "description": "What's the story's intent? Investigate the site, its mission, and its contact info."
   },
   {
-    "x": 320,
-    "y": 160,
-    "description": "This is some fake news"
+    "x": -5,
+    "y": 515,
+    "title": "The Author",
+    "description": "Do a quick search on the author. Are they credible? Are they real?"
+  },
+  {
+    "x": -5,
+    "y": 575,
+    "title": "The Information",
+    "description": "Read past click-baity headlines, note who is (or isn't) quoted, and verify the information on other sites."
+  },
+  {
+    "x": 570,
+    "y": 664,
+    "title": "Supporting Sources",
+    "description": "Click on the supporting links, and perform reverse searches on the images. Are they credible, and do they support the story?"
+  },
+  {
+    "x": 105,
+    "y": 0,
+    "title": "The URL",
+    "description": "Be wary of unusual top-level domain names, like '.com.co' that are designed to appear legitimate."
+  },
+  {
+    "x": 660,
+    "y": 24,
+    "title": "Your Bias",
+    "description": "Who is the intended audience for this story? Consider if your own beliefs could affect your judgment."
+  },
+  {
+    "x": -5,
+    "y": 178,
+    "title": "The Date",
+    "description": "Reposting old news stories doesn't mean they're relevant to current events."
+  },
+  {
+    "x": 745,
+    "y": 523,
+    "title": "The Text",
+    "description": "Does the article have spelling errors or dramatic punctuation? Reputable sources have high proofreading and grammatical standards."
+  },
+  {
+    "x": 220,
+    "y": 725,
+    "title": "The Experts",
+    "description": "Would this story meet academic citation standards? Consult a fact-checking site."
   }
 ]

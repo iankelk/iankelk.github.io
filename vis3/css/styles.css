@@ -40,3 +40,12 @@ img {
     left: 0%;
     font-size: 10px;
 }
+
+#vis-row {
+    height: 900px;
+    width: 100%;
+}
+
+#hotspot-image {
+    width: 100%;
+}
