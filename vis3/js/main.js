@@ -20,11 +20,10 @@ Promise.all(promises)
 function initMainPage(dataArray) {
     let data = dataArray[0];
 
-    // Init force
+    // Init hover
     myHoverVis = new HoverVis(document.getElementById('hotspot-image'), data);
 }
 
-// var string="The water content is considered acceptable for this voltage class. Dielectric Breakdown Voltage is unacceptable for transformers > 288 KV. Power factors, Interfacial Tension and Neutralization Number are acceptable for continued use in-service.";
 function splitLongString(N, longString) {
     let app = longString.split(' '),
         arrayApp = [],
