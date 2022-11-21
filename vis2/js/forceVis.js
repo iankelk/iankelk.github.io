@@ -4,6 +4,7 @@ class ForceVis {
         this.parentElement = parentElement;
         this.data = data;
 
+        // Suspended is group 10 but handled separately
         this.misinfoGroups = [
             { group: 1, name: "Dr Rashid A Buttar" },
             { group: 2, name: "Christiane Northrup" },
