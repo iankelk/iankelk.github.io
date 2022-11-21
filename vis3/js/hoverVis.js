@@ -30,8 +30,12 @@ class HoverVis {
             .attr("y", 0)
             .attr("xlink:href", "img/defender.png")
 
+        vis.title = document.getElementById('title');
+        vis.description = document.getElementById('description');
+
         const t = d3.transition().duration(500).ease(d3.easeLinear);
 
+        // Create the animations for the circles
         vis.circleAnimation = vis.svg.selectAll()
             .data(vis.data)
             .enter()
@@ -51,6 +55,7 @@ class HoverVis {
             .attr("stroke-opacity", 0)
             .attr("opacity", 0)
 
+        // Create the clickable hotspot circles
         vis.hotspots = vis.svg.selectAll()
             .data(vis.data)
             .enter()
@@ -62,6 +67,9 @@ class HoverVis {
             .attr("opacity", 0.5)
             .on("mouseover", function(event, d) {
                 const t = d3.transition().duration(300).ease(d3.easeLinear);
+                vis.title.innerHTML = d.title;
+                vis.description.innerHTML = d.description;
+
                 d3.select(this)
                         .transition(t)
                         //.attr("fill", "red")
@@ -84,6 +92,22 @@ class HoverVis {
                     .attr("stroke-opacity", 0)
                     .attr("opacity", 0)
             })
+
+        // Define the bar chart
+        vis.bar = vis.svg.selectAll("rect")
+            .data(vis.data);
+
+        // vis.svg.append("rect")
+        //     .attr("x", 220)
+        //     .attr("y", 180)
+        //     .attr("rx", 15)
+        //     .attr("ry", 15)
+        //     .attr("width", 100)
+        //     .attr("height", 100)
+        //     .attr("stroke-opacity", 1)
+        //     .attr("stroke-width",3)
+        //     .attr("stroke", "blue")
+        //     .attr("fill", "none")
 
         vis.wrangleData()
     }
