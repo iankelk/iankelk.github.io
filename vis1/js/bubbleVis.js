@@ -12,9 +12,8 @@ class BubbleVis {
         this.categories["narrative"] =  [...new Set(narrativeData.map(d => d.narrative))]
         this.categories["region"] =  [...new Set(regionData.map(d => d.region))]
 
-        //console.log("motives", this.motives);
         selectedCategory =  document.getElementById('category').value;
-        console.log("categories", this.categories);
+
 
         this.initVis()
     }
@@ -22,6 +21,8 @@ class BubbleVis {
     initVis() {
         const nativeWidth = 1000;
         let vis = this;
+        const formatTime = d3.timeFormat("%B %d, %Y");
+
 
         vis.margin = {top: 50, right: 100, bottom: 50, left: 200};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
@@ -42,10 +43,10 @@ class BubbleVis {
         //     .attr("transform", "translate(" + vis.margin.left+ "," + vis.margin.top + ")");
 
         // vis.svg.attr("viewBox", [0, 0, vis.width, height]) ;
-
+        console.log(vis.data)
 
         vis.x = d3.scaleLinear()
-            .domain(d3.extent(vis.data, d => d.date))
+            .domain(d3.extent(vis.data, d => d3.isoParse(d.date)))
             .range([vis.margin.left, vis.width - vis.margin.right])
 
         vis.y = d3.scaleBand()
@@ -64,7 +65,8 @@ class BubbleVis {
         vis.xAxis = g =>
             g
                 .attr("transform", `translate(0, ${vis.margin.top})`)
-                .call(d3.axisTop(vis.x).ticks(10))
+                //.call(d3.axisTop(vis.x).ticks(10).tickFormat(formatTime))
+                .call(d3.axisTop(vis.x).tickValues(d3.timeDay.range(new Date(2020, 0, 27), new Date(2021, 0, 4), 40)).tickFormat(formatTime))
                 .call(g => g.select(".domain").remove())
                 .call(g =>
                     g
@@ -100,6 +102,8 @@ class BubbleVis {
     updateVis() {
         let vis = this;
 
+        const formatTime = d3.timeFormat("%B %d, %Y");
+
         // If the simulation is running already, stop it to free up resources
         if (vis.simulation) vis.simulation.stop();
 
@@ -110,7 +114,7 @@ class BubbleVis {
         const split = (document.getElementById('split').value !== "all");
 
         vis.r.domain(d3.extent(vis.data, d => d.count))
-        vis.x.domain(d3.extent(vis.data, d => d.date))
+        vis.x.domain(d3.extent(vis.data, d => d3.isoParse(d.date)))
         vis.y.domain(vis.categories[selectedCategory])
 
         if (vis.node) {
@@ -121,7 +125,7 @@ class BubbleVis {
             .selectAll("circle")
             .data(vis.data)
             .join("circle")
-            .attr("cx", d => vis.x(d.date))
+            .attr("cx", d => vis.x(d3.isoParse(d.date)))
             .attr("cy", d => vis.y(d[selectedCategory]) + vis.y.bandwidth() / 2)
             .attr("r", d => vis.r(d.count))
             .attr("stroke", "white")
@@ -138,7 +142,7 @@ class BubbleVis {
                     .html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
                          <h4>${selectedCategory.toProperCase()}: ${d[selectedCategory]}</h4>
-                         <strong>Date: </strong> ${d.date.toLocaleString("en-US")}<br />
+                         <strong>Date: </strong> ${formatTime(d3.isoParse(d.date))}<br />
                          <strong>Count: </strong>${d.count}<br />
                      </div>`);
             })
@@ -157,7 +161,7 @@ class BubbleVis {
         console.log("selectedCategory", selectedCategory)
 
         vis.simulation = d3.forceSimulation()
-            .force("x", d3.forceX(d => vis.x(d.date)))
+            .force("x", d3.forceX(d => vis.x(d3.isoParse(d.date))))
             .force("y", d3.forceY(d => vis.y(d[selectedCategory]) + vis.y.bandwidth() / 2))
             .force("collide", d3.forceCollide(d => vis.r(d.count) + 1).strength(0.5));
 
