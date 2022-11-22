@@ -13,8 +13,7 @@ class BubbleVis {
         this.categories["region"] =  [...new Set(regionData.map(d => d.region))]
 
         selectedCategory =  document.getElementById('category').value;
-
-
+        
         this.initVis()
     }
 
@@ -24,7 +23,7 @@ class BubbleVis {
         const formatTime = d3.timeFormat("%B %d, %Y");
 
 
-        vis.margin = {top: 50, right: 100, bottom: 50, left: 200};
+        vis.margin = {top: 50, right: 100, bottom: 20, left: 200};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = 400;
 
@@ -66,7 +65,7 @@ class BubbleVis {
             g
                 .attr("transform", `translate(0, ${vis.margin.top})`)
                 //.call(d3.axisTop(vis.x).ticks(10).tickFormat(formatTime))
-                .call(d3.axisTop(vis.x).tickValues(d3.timeDay.range(new Date(2020, 0, 27), new Date(2021, 0, 4), 40)).tickFormat(formatTime))
+                .call(d3.axisTop(vis.x).tickValues(d3.timeDay.range(new Date(2020, 0, 27), new Date(2021, 0, 4), 60)).tickFormat(formatTime))
                 .call(g => g.select(".domain").remove())
                 .call(g =>
                     g
@@ -111,7 +110,7 @@ class BubbleVis {
         vis.tooltip = d3.select("body").append('div')
             .attr('class', "tooltip");
 
-        const split = (document.getElementById('split').value !== "all");
+        const split = (document.getElementById('split').checked);
 
         vis.r.domain(d3.extent(vis.data, d => d.count))
         vis.x.domain(d3.extent(vis.data, d => d3.isoParse(d.date)))
