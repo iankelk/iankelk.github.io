@@ -56,7 +56,10 @@ class BubbleVis {
             .domain(d3.extent(vis.data, d => d.count))
             .range([6,20])
 
-        vis.colour = d3.scaleSequential(d3.extent(vis.data, d => d.date), d3.interpolateViridis)
+        //vis.colour = d3.scaleSequential(d3.extent(vis.data, d => d.date), d3.interpolateViridis)
+        //vis.colour = d3.scaleOrdinal(vis.data.map(a => a.motive), d3.schemeTableau10)
+        vis.colour = d3.scaleOrdinal(d3.schemeTableau10)
+        console.log("data",vis.data.map(a => a[selectedCategory]))
 
         vis.xAxis = g =>
             g
@@ -123,7 +126,7 @@ class BubbleVis {
             .attr("r", d => vis.r(d.count))
             .attr("stroke", "white")
             .attr("stroke-width", 1)
-            .attr("fill", d => vis.colour(d.date))
+            .attr("fill", d => vis.colour(d[selectedCategory]))
             .on('mouseover', function(event, d) {
                 d3.select(this)
                     .attr('stroke-width', '2px')
@@ -142,7 +145,7 @@ class BubbleVis {
             .on('mouseout', function (event, d) {
                 d3.select(this)
                     .attr('stroke-width', '1px')
-                    .attr("fill", d => vis.colour(d.date))
+                    .attr("fill", d => vis.colour(d[selectedCategory]))
                 vis.tooltip
                     .style("opacity", 0)
                     .style("left", 0)

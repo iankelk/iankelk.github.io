@@ -202,6 +202,7 @@ class ForceVis {
 
         // Construct the scales.
         vis.color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
+        console.log("nodegroups", nodeGroups)
 
         // Construct the forces.
         const forceNode = d3.forceManyBody();
