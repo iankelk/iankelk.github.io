@@ -54,7 +54,7 @@ class BubbleVis {
 
         vis.r = d3.scaleSqrt()
             .domain(d3.extent(vis.data, d => d.count))
-            .range([6,20])
+            .range([6,15])
 
         //vis.colour = d3.scaleSequential(d3.extent(vis.data, d => d.date), d3.interpolateViridis)
         //vis.colour = d3.scaleOrdinal(vis.data.map(a => a.motive), d3.schemeTableau10)
@@ -172,7 +172,7 @@ class BubbleVis {
                 .attr("cy", d => d.y)
         });
 
-        vis.height = split ? 650 : 400;
+        vis.height = split ? 550 : 300;
 
 
         vis.y.domain(split ? vis.categories[selectedCategory] : vis.categories[selectedCategory].concat("Global")); // workaround for updating the yAxis
