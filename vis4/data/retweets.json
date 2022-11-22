@@ -1,0 +1,5042 @@
+[
+  {
+    "date": "2020-01-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 90.0,
+    "RobertKennedyJr": 169.0,
+    "kevdjenkins1": 110.0,
+    "mercola": 102.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-01-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 227.0,
+    "kevdjenkins1": 17.0,
+    "mercola": 186.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-01-24T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 104.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 133.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-01-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 107.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 61.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-01-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 87.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 117.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-01-27T00:00:00.000Z",
+    "DrButtar": 1.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 157.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 162.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-01-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 82.0,
+    "kevdjenkins1": 84.0,
+    "mercola": 144.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-01-29T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 68.0,
+    "kevdjenkins1": 66.0,
+    "mercola": 145.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-01-30T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 218.0,
+    "kevdjenkins1": 3735.0,
+    "mercola": 195.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-01-31T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 744.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 172.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 469.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 139.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 165.0,
+    "kevdjenkins1": 327.0,
+    "mercola": 145.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 745.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 178.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-04T00:00:00.000Z",
+    "DrButtar": 1.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 324.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 198.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 102.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 152.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 183.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 212.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-07T00:00:00.000Z",
+    "DrButtar": 5.0,
+    "DrChrisNorthrup": 31.0,
+    "RobertKennedyJr": 95.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 90.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 142.0,
+    "kevdjenkins1": 582.0,
+    "mercola": 102.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 69.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 165.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 64.0,
+    "kevdjenkins1": 67.0,
+    "mercola": 196.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 37.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 186.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 61.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 95.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-13T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 128.0,
+    "kevdjenkins1": 18.0,
+    "mercola": 201.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 56.0,
+    "kevdjenkins1": 239.0,
+    "mercola": 87.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-15T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 18.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 102.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 101.0,
+    "kevdjenkins1": 298.0,
+    "mercola": 178.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 62.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 163.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 96.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 161.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-19T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 48.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 282.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 16.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 142.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 53.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 78.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 139.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 115.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 35.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 154.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-24T00:00:00.000Z",
+    "DrButtar": 6.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 246.0,
+    "kevdjenkins1": 146.0,
+    "mercola": 243.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 197.0,
+    "kevdjenkins1": 93.0,
+    "mercola": 258.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 45.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 122.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 152.0,
+    "RobertKennedyJr": 63.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 231.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 83.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 93.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-02-29T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 49.0,
+    "kevdjenkins1": 65.0,
+    "mercola": 65.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 70.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 114.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-02T00:00:00.000Z",
+    "DrButtar": 2.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 132.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 175.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 89.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 170.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 79.0,
+    "kevdjenkins1": 35.0,
+    "mercola": 130.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 42.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 205.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 87.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 99.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-07T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 29.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 171.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 21.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 294.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 93.0,
+    "kevdjenkins1": 246.0,
+    "mercola": 210.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 177.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 345.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 48.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 95.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 75.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 154.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-13T00:00:00.000Z",
+    "DrButtar": 12.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 109.0,
+    "kevdjenkins1": 38.0,
+    "mercola": 88.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-14T00:00:00.000Z",
+    "DrButtar": 10.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 140.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-15T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 167.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-16T00:00:00.000Z",
+    "DrButtar": 6.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 21.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 180.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 321.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 544.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 44.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 223.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-19T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 150.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 146.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 92.0,
+    "kevdjenkins1": 42.0,
+    "mercola": 225.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 167.0,
+    "kevdjenkins1": 93.0,
+    "mercola": 234.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 49.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 135.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-23T00:00:00.000Z",
+    "DrButtar": 10.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 36.0,
+    "kevdjenkins1": 55.0,
+    "mercola": 259.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-24T00:00:00.000Z",
+    "DrButtar": 12.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 128.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 194.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-25T00:00:00.000Z",
+    "DrButtar": 10.0,
+    "DrChrisNorthrup": 2836.0,
+    "RobertKennedyJr": 58.0,
+    "kevdjenkins1": 10.0,
+    "mercola": 315.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 98.0,
+    "kevdjenkins1": 115.0,
+    "mercola": 386.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-27T00:00:00.000Z",
+    "DrButtar": 21.0,
+    "DrChrisNorthrup": 82.0,
+    "RobertKennedyJr": 258.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 378.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-28T00:00:00.000Z",
+    "DrButtar": 24.0,
+    "DrChrisNorthrup": 165.0,
+    "RobertKennedyJr": 156.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 89.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-29T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 352.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 198.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-30T00:00:00.000Z",
+    "DrButtar": 30.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 234.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 194.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-03-31T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 77.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 174.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-01T00:00:00.000Z",
+    "DrButtar": 27.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 230.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 145.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-02T00:00:00.000Z",
+    "DrButtar": 3.0,
+    "DrChrisNorthrup": 19.0,
+    "RobertKennedyJr": 246.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 117.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 1652.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 21.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-04T00:00:00.000Z",
+    "DrButtar": 69.0,
+    "DrChrisNorthrup": 124.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 137.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-05T00:00:00.000Z",
+    "DrButtar": 24.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 289.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 135.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-06T00:00:00.000Z",
+    "DrButtar": 31.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 250.0,
+    "mercola": 165.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-07T00:00:00.000Z",
+    "DrButtar": 51.0,
+    "DrChrisNorthrup": 195.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 26.0,
+    "mercola": 212.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 14.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 83.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 39.0,
+    "RobertKennedyJr": 153.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 59.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3327.0,
+    "RobertKennedyJr": 3664.0,
+    "kevdjenkins1": 5859.0,
+    "mercola": 114.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 433.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 190.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-12T00:00:00.000Z",
+    "DrButtar": 9.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 237.0,
+    "kevdjenkins1": 51.0,
+    "mercola": 33.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-13T00:00:00.000Z",
+    "DrButtar": 28.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 1332.0,
+    "kevdjenkins1": 718.0,
+    "mercola": 213.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-14T00:00:00.000Z",
+    "DrButtar": 392.0,
+    "DrChrisNorthrup": 23.0,
+    "RobertKennedyJr": 806.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 157.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-15T00:00:00.000Z",
+    "DrButtar": 146.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 274.0,
+    "kevdjenkins1": 6843.0,
+    "mercola": 79.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 10.0,
+    "RobertKennedyJr": 789.0,
+    "kevdjenkins1": 639.0,
+    "mercola": 204.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 356.0,
+    "kevdjenkins1": 11313.0,
+    "mercola": 117.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-18T00:00:00.000Z",
+    "DrButtar": 1975.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 37.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 118.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-19T00:00:00.000Z",
+    "DrButtar": 638.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 14.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 220.0,
+    "kevdjenkins1": 11316.0,
+    "mercola": 187.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-21T00:00:00.000Z",
+    "DrButtar": 210.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 70.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 739.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-22T00:00:00.000Z",
+    "DrButtar": 247.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 169.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 267.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-23T00:00:00.000Z",
+    "DrButtar": 246.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 534.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 160.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-24T00:00:00.000Z",
+    "DrButtar": 432.0,
+    "DrChrisNorthrup": 17.0,
+    "RobertKennedyJr": 316.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 80.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-25T00:00:00.000Z",
+    "DrButtar": 415.0,
+    "DrChrisNorthrup": 13.0,
+    "RobertKennedyJr": 77.0,
+    "kevdjenkins1": 12124.0,
+    "mercola": 47.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-26T00:00:00.000Z",
+    "DrButtar": 362.0,
+    "DrChrisNorthrup": 18.0,
+    "RobertKennedyJr": 21.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 310.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 142.0,
+    "kevdjenkins1": 3622.0,
+    "mercola": 466.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-28T00:00:00.000Z",
+    "DrButtar": 571.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 268.0,
+    "kevdjenkins1": 13.0,
+    "mercola": 133.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-29T00:00:00.000Z",
+    "DrButtar": 722.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1172.0,
+    "kevdjenkins1": 16.0,
+    "mercola": 117.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-04-30T00:00:00.000Z",
+    "DrButtar": 237.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 1085.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 71.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 64.0,
+    "kevdjenkins1": 14462.0,
+    "mercola": 30.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-02T00:00:00.000Z",
+    "DrButtar": 55.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 95.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-03T00:00:00.000Z",
+    "DrButtar": 894.0,
+    "DrChrisNorthrup": 253.0,
+    "RobertKennedyJr": 1292.0,
+    "kevdjenkins1": 13.0,
+    "mercola": 137.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-04T00:00:00.000Z",
+    "DrButtar": 784.0,
+    "DrChrisNorthrup": 169.0,
+    "RobertKennedyJr": 88.0,
+    "kevdjenkins1": 63.0,
+    "mercola": 201.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-05T00:00:00.000Z",
+    "DrButtar": 689.0,
+    "DrChrisNorthrup": 28.0,
+    "RobertKennedyJr": 87.0,
+    "kevdjenkins1": 89.0,
+    "mercola": 379.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-06T00:00:00.000Z",
+    "DrButtar": 1475.0,
+    "DrChrisNorthrup": 21.0,
+    "RobertKennedyJr": 332.0,
+    "kevdjenkins1": 18.0,
+    "mercola": 106.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-07T00:00:00.000Z",
+    "DrButtar": 292.0,
+    "DrChrisNorthrup": 34.0,
+    "RobertKennedyJr": 473.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 79.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1150.0,
+    "kevdjenkins1": 50.0,
+    "mercola": 276.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-09T00:00:00.000Z",
+    "DrButtar": 1787.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 727.0,
+    "kevdjenkins1": 2687.0,
+    "mercola": 84.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-10T00:00:00.000Z",
+    "DrButtar": 1578.0,
+    "DrChrisNorthrup": 7767.0,
+    "RobertKennedyJr": 866.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 166.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-11T00:00:00.000Z",
+    "DrButtar": 595.0,
+    "DrChrisNorthrup": 470.0,
+    "RobertKennedyJr": 100.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 329.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-12T00:00:00.000Z",
+    "DrButtar": 1887.0,
+    "DrChrisNorthrup": 655.0,
+    "RobertKennedyJr": 273.0,
+    "kevdjenkins1": 2717.0,
+    "mercola": 196.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-13T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5875.0,
+    "RobertKennedyJr": 666.0,
+    "kevdjenkins1": 147.0,
+    "mercola": 163.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1164.0,
+    "RobertKennedyJr": 639.0,
+    "kevdjenkins1": 1301.0,
+    "mercola": 128.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-15T00:00:00.000Z",
+    "DrButtar": 521.0,
+    "DrChrisNorthrup": 26.0,
+    "RobertKennedyJr": 170.0,
+    "kevdjenkins1": 118.0,
+    "mercola": 121.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-16T00:00:00.000Z",
+    "DrButtar": 122.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 294.0,
+    "kevdjenkins1": 362.0,
+    "mercola": 109.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-17T00:00:00.000Z",
+    "DrButtar": 945.0,
+    "DrChrisNorthrup": 38.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 2264.0,
+    "mercola": 86.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-18T00:00:00.000Z",
+    "DrButtar": 1851.0,
+    "DrChrisNorthrup": 44.0,
+    "RobertKennedyJr": 902.0,
+    "kevdjenkins1": 364.0,
+    "mercola": 221.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-19T00:00:00.000Z",
+    "DrButtar": 269.0,
+    "DrChrisNorthrup": 72.0,
+    "RobertKennedyJr": 223.0,
+    "kevdjenkins1": 150.0,
+    "mercola": 124.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-20T00:00:00.000Z",
+    "DrButtar": 242.0,
+    "DrChrisNorthrup": 84.0,
+    "RobertKennedyJr": 1447.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 210.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 353.0,
+    "kevdjenkins1": 340.0,
+    "mercola": 203.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-22T00:00:00.000Z",
+    "DrButtar": 118.0,
+    "DrChrisNorthrup": 23.0,
+    "RobertKennedyJr": 161.0,
+    "kevdjenkins1": 4.0,
+    "mercola": 64.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-23T00:00:00.000Z",
+    "DrButtar": 279.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 76.0,
+    "mercola": 55.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-24T00:00:00.000Z",
+    "DrButtar": 315.0,
+    "DrChrisNorthrup": 29.0,
+    "RobertKennedyJr": 88.0,
+    "kevdjenkins1": 40.0,
+    "mercola": 107.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-25T00:00:00.000Z",
+    "DrButtar": 614.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 91.0,
+    "mercola": 84.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-26T00:00:00.000Z",
+    "DrButtar": 728.0,
+    "DrChrisNorthrup": 36.0,
+    "RobertKennedyJr": 14.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 129.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 55.0,
+    "RobertKennedyJr": 861.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 167.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-28T00:00:00.000Z",
+    "DrButtar": 124.0,
+    "DrChrisNorthrup": 12.0,
+    "RobertKennedyJr": 63.0,
+    "kevdjenkins1": 45.0,
+    "mercola": 148.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-29T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 22.0,
+    "RobertKennedyJr": 84.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 43.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-30T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 271.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 60.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-05-31T00:00:00.000Z",
+    "DrButtar": 46.0,
+    "DrChrisNorthrup": 28.0,
+    "RobertKennedyJr": 853.0,
+    "kevdjenkins1": 9.0,
+    "mercola": 97.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-01T00:00:00.000Z",
+    "DrButtar": 274.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 6.0,
+    "kevdjenkins1": 117046.0,
+    "mercola": 168.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 43.0,
+    "RobertKennedyJr": 236.0,
+    "kevdjenkins1": 4.0,
+    "mercola": 218.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 13.0,
+    "RobertKennedyJr": 389.0,
+    "kevdjenkins1": 87.0,
+    "mercola": 53.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 17.0,
+    "RobertKennedyJr": 472.0,
+    "kevdjenkins1": 36.0,
+    "mercola": 310.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 20.0,
+    "RobertKennedyJr": 203.0,
+    "kevdjenkins1": 35.0,
+    "mercola": 179.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 32.0,
+    "RobertKennedyJr": 665.0,
+    "kevdjenkins1": 22.0,
+    "mercola": 107.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-07T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 77.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 259.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-08T00:00:00.000Z",
+    "DrButtar": 357.0,
+    "DrChrisNorthrup": 20.0,
+    "RobertKennedyJr": 65.0,
+    "kevdjenkins1": 65.0,
+    "mercola": 340.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-09T00:00:00.000Z",
+    "DrButtar": 137.0,
+    "DrChrisNorthrup": 29.0,
+    "RobertKennedyJr": 118.0,
+    "kevdjenkins1": 2755.0,
+    "mercola": 188.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 285.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 158.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 56.0,
+    "RobertKennedyJr": 37.0,
+    "kevdjenkins1": 40.0,
+    "mercola": 184.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 74.0,
+    "RobertKennedyJr": 158.0,
+    "kevdjenkins1": 26.0,
+    "mercola": 173.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-13T00:00:00.000Z",
+    "DrButtar": 1109.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 4.0,
+    "mercola": 243.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-14T00:00:00.000Z",
+    "DrButtar": 681.0,
+    "DrChrisNorthrup": 151.0,
+    "RobertKennedyJr": 2236.0,
+    "kevdjenkins1": 11.0,
+    "mercola": 58.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-15T00:00:00.000Z",
+    "DrButtar": 758.0,
+    "DrChrisNorthrup": 50.0,
+    "RobertKennedyJr": 54.0,
+    "kevdjenkins1": 5.0,
+    "mercola": 206.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-16T00:00:00.000Z",
+    "DrButtar": 70.0,
+    "DrChrisNorthrup": 17.0,
+    "RobertKennedyJr": 4143.0,
+    "kevdjenkins1": 4.0,
+    "mercola": 218.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 449.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 244.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 17.0,
+    "RobertKennedyJr": 118.0,
+    "kevdjenkins1": 16.0,
+    "mercola": 160.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-19T00:00:00.000Z",
+    "DrButtar": 811.0,
+    "DrChrisNorthrup": 468.0,
+    "RobertKennedyJr": 64.0,
+    "kevdjenkins1": 8.0,
+    "mercola": 176.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-20T00:00:00.000Z",
+    "DrButtar": 685.0,
+    "DrChrisNorthrup": 11.0,
+    "RobertKennedyJr": 88.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 180.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 22.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 103.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 547.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 388.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-23T00:00:00.000Z",
+    "DrButtar": 139.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 7063.0,
+    "kevdjenkins1": 6.0,
+    "mercola": 145.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-24T00:00:00.000Z",
+    "DrButtar": 55.0,
+    "DrChrisNorthrup": 15.0,
+    "RobertKennedyJr": 827.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 54.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-25T00:00:00.000Z",
+    "DrButtar": 220.0,
+    "DrChrisNorthrup": 24.0,
+    "RobertKennedyJr": 489.0,
+    "kevdjenkins1": 113.0,
+    "mercola": 35.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 9688.0,
+    "RobertKennedyJr": 1237.0,
+    "kevdjenkins1": 11.0,
+    "mercola": 139.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 152.0,
+    "RobertKennedyJr": 87.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 59.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 25.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-29T00:00:00.000Z",
+    "DrButtar": 128.0,
+    "DrChrisNorthrup": 24.0,
+    "RobertKennedyJr": 54.0,
+    "kevdjenkins1": 68.0,
+    "mercola": 57.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-06-30T00:00:00.000Z",
+    "DrButtar": 1363.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 369.0,
+    "kevdjenkins1": 289.0,
+    "mercola": 54.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 737.0,
+    "RobertKennedyJr": 449.0,
+    "kevdjenkins1": 321.0,
+    "mercola": 52.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 38.0,
+    "RobertKennedyJr": 67.0,
+    "kevdjenkins1": 217.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-03T00:00:00.000Z",
+    "DrButtar": 1346.0,
+    "DrChrisNorthrup": 15669.0,
+    "RobertKennedyJr": 443.0,
+    "kevdjenkins1": 150.0,
+    "mercola": 142.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-04T00:00:00.000Z",
+    "DrButtar": 30.0,
+    "DrChrisNorthrup": 22.0,
+    "RobertKennedyJr": 182.0,
+    "kevdjenkins1": 21646.0,
+    "mercola": 115.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-05T00:00:00.000Z",
+    "DrButtar": 175.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 176.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 47.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 54.0,
+    "RobertKennedyJr": 428.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 201.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-07T00:00:00.000Z",
+    "DrButtar": 126.0,
+    "DrChrisNorthrup": 100.0,
+    "RobertKennedyJr": 302.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 221.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-08T00:00:00.000Z",
+    "DrButtar": 79.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 564.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 172.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 165.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-10T00:00:00.000Z",
+    "DrButtar": 175.0,
+    "DrChrisNorthrup": 36.0,
+    "RobertKennedyJr": 469.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 115.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-11T00:00:00.000Z",
+    "DrButtar": 57.0,
+    "DrChrisNorthrup": 105.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 59.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-12T00:00:00.000Z",
+    "DrButtar": 51.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 1363.0,
+    "mercola": 58.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-13T00:00:00.000Z",
+    "DrButtar": 177.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 1630.0,
+    "kevdjenkins1": 14.0,
+    "mercola": 78.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-14T00:00:00.000Z",
+    "DrButtar": 86.0,
+    "DrChrisNorthrup": 32.0,
+    "RobertKennedyJr": 782.0,
+    "kevdjenkins1": 18337.0,
+    "mercola": 260.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-15T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 45.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 151.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-16T00:00:00.000Z",
+    "DrButtar": 386.0,
+    "DrChrisNorthrup": 40.0,
+    "RobertKennedyJr": 260.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 70.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 76.0,
+    "RobertKennedyJr": 4236.0,
+    "kevdjenkins1": 515.0,
+    "mercola": 158.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 16.0,
+    "RobertKennedyJr": 602.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 71.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-19T00:00:00.000Z",
+    "DrButtar": 115.0,
+    "DrChrisNorthrup": 17.0,
+    "RobertKennedyJr": 132.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 107.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-20T00:00:00.000Z",
+    "DrButtar": 632.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 275.0,
+    "kevdjenkins1": 95.0,
+    "mercola": 131.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-21T00:00:00.000Z",
+    "DrButtar": 454.0,
+    "DrChrisNorthrup": 100.0,
+    "RobertKennedyJr": 1743.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 194.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 10.0,
+    "RobertKennedyJr": 334.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 115.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 578.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 46.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-24T00:00:00.000Z",
+    "DrButtar": 124.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 153.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 161.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 10.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 189.0,
+    "mercola": 152.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-26T00:00:00.000Z",
+    "DrButtar": 79.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 1925.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 32.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 27.0,
+    "RobertKennedyJr": 62.0,
+    "kevdjenkins1": 53.0,
+    "mercola": 132.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-28T00:00:00.000Z",
+    "DrButtar": 91.0,
+    "DrChrisNorthrup": 525.0,
+    "RobertKennedyJr": 154.0,
+    "kevdjenkins1": 89.0,
+    "mercola": 114.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-29T00:00:00.000Z",
+    "DrButtar": 676.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 226.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 540.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-30T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 13.0,
+    "RobertKennedyJr": 173.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 24.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-07-31T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 186.0,
+    "RobertKennedyJr": 473.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 332.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-01T00:00:00.000Z",
+    "DrButtar": 1005.0,
+    "DrChrisNorthrup": 21.0,
+    "RobertKennedyJr": 40.0,
+    "kevdjenkins1": 8.0,
+    "mercola": 111.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-02T00:00:00.000Z",
+    "DrButtar": 584.0,
+    "DrChrisNorthrup": 39.0,
+    "RobertKennedyJr": 849.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 75.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 67.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 168.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-04T00:00:00.000Z",
+    "DrButtar": 99.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 368.0,
+    "kevdjenkins1": 71.0,
+    "mercola": 385.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 120.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 188.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-06T00:00:00.000Z",
+    "DrButtar": 97.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 514.0,
+    "kevdjenkins1": 326.0,
+    "mercola": 124.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-07T00:00:00.000Z",
+    "DrButtar": 446.0,
+    "DrChrisNorthrup": 22.0,
+    "RobertKennedyJr": 98.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 96.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5104.0,
+    "RobertKennedyJr": 129.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 312.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-09T00:00:00.000Z",
+    "DrButtar": 380.0,
+    "DrChrisNorthrup": 27.0,
+    "RobertKennedyJr": 231.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 84.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 414.0,
+    "kevdjenkins1": 72.0,
+    "mercola": 124.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-11T00:00:00.000Z",
+    "DrButtar": 107.0,
+    "DrChrisNorthrup": 17.0,
+    "RobertKennedyJr": 680.0,
+    "kevdjenkins1": 19.0,
+    "mercola": 317.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 155.0,
+    "RobertKennedyJr": 319.0,
+    "kevdjenkins1": 139.0,
+    "mercola": 123.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-13T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 23.0,
+    "RobertKennedyJr": 680.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 123.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5742.0,
+    "RobertKennedyJr": 203.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 252.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-15T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 67.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 99.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-16T00:00:00.000Z",
+    "DrButtar": 875.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 45.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 71.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 1338.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 948.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-18T00:00:00.000Z",
+    "DrButtar": 45.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 537.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 217.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-19T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 14.0,
+    "RobertKennedyJr": 661.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 91.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 2295.0,
+    "kevdjenkins1": 814.0,
+    "mercola": 183.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 34.0,
+    "RobertKennedyJr": 115.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 243.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 252.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 160.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 94.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 56.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-24T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 17.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 136.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-25T00:00:00.000Z",
+    "DrButtar": 205.0,
+    "DrChrisNorthrup": 32.0,
+    "RobertKennedyJr": 405.0,
+    "kevdjenkins1": 191.0,
+    "mercola": 153.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 1458.0,
+    "kevdjenkins1": 32.0,
+    "mercola": 125.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-27T00:00:00.000Z",
+    "DrButtar": 223.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 533.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 131.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 8101.0,
+    "kevdjenkins1": 40.0,
+    "mercola": 119.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-29T00:00:00.000Z",
+    "DrButtar": 271.0,
+    "DrChrisNorthrup": 46.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 6464.0,
+    "mercola": 105.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-30T00:00:00.000Z",
+    "DrButtar": 234.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 1349.0,
+    "kevdjenkins1": 118.0,
+    "mercola": 31.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-08-31T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 395.0,
+    "kevdjenkins1": 39.0,
+    "mercola": 218.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-01T00:00:00.000Z",
+    "DrButtar": 66.0,
+    "DrChrisNorthrup": 28.0,
+    "RobertKennedyJr": 321.0,
+    "kevdjenkins1": 52.0,
+    "mercola": 111.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 13.0,
+    "RobertKennedyJr": 1293.0,
+    "kevdjenkins1": 434.0,
+    "mercola": 68.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 233.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 355.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 379.0,
+    "RobertKennedyJr": 427.0,
+    "kevdjenkins1": 19.0,
+    "mercola": 117.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 364.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 80.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5942.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 55.0,
+    "mercola": 94.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-07T00:00:00.000Z",
+    "DrButtar": 808.0,
+    "DrChrisNorthrup": 20.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 166.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-08T00:00:00.000Z",
+    "DrButtar": 65.0,
+    "DrChrisNorthrup": 45.0,
+    "RobertKennedyJr": 32.0,
+    "kevdjenkins1": 518.0,
+    "mercola": 189.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-09T00:00:00.000Z",
+    "DrButtar": 62.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 231.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 157.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 18.0,
+    "RobertKennedyJr": 83.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 108.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 25.0,
+    "RobertKennedyJr": 1514.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 162.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 37.0,
+    "kevdjenkins1": 52035.0,
+    "mercola": 120.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-13T00:00:00.000Z",
+    "DrButtar": 137.0,
+    "DrChrisNorthrup": 58.0,
+    "RobertKennedyJr": 519.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 29.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 236.0,
+    "kevdjenkins1": 236.0,
+    "mercola": 227.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-15T00:00:00.000Z",
+    "DrButtar": 64.0,
+    "DrChrisNorthrup": 9509.0,
+    "RobertKennedyJr": 179.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 2766.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 428.0,
+    "kevdjenkins1": 129.0,
+    "mercola": 67.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 395.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 125.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 11.0,
+    "RobertKennedyJr": 230.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 54.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-19T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 29.0,
+    "RobertKennedyJr": 243.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 81.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 93.0,
+    "kevdjenkins1": 28.0,
+    "mercola": 30.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 52.0,
+    "RobertKennedyJr": 111.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 444.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-22T00:00:00.000Z",
+    "DrButtar": 66.0,
+    "DrChrisNorthrup": 12.0,
+    "RobertKennedyJr": 72.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 346.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 20717.0,
+    "RobertKennedyJr": 211.0,
+    "kevdjenkins1": 322.0,
+    "mercola": 277.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-24T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 22.0,
+    "RobertKennedyJr": 187.0,
+    "kevdjenkins1": 3283.0,
+    "mercola": 173.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 10.0,
+    "RobertKennedyJr": 272.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 423.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 348.0,
+    "RobertKennedyJr": 176.0,
+    "kevdjenkins1": 56.0,
+    "mercola": 107.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-27T00:00:00.000Z",
+    "DrButtar": 15.0,
+    "DrChrisNorthrup": 20.0,
+    "RobertKennedyJr": 226.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 25.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 32.0,
+    "kevdjenkins1": 20.0,
+    "mercola": 407.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-29T00:00:00.000Z",
+    "DrButtar": 71.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 827.0,
+    "kevdjenkins1": 94.0,
+    "mercola": 395.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-09-30T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 25.0,
+    "RobertKennedyJr": 75.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 261.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 17.0,
+    "RobertKennedyJr": 1280.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 186.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-02T00:00:00.000Z",
+    "DrButtar": 68.0,
+    "DrChrisNorthrup": 75.0,
+    "RobertKennedyJr": 1222.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 170.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 35.0,
+    "RobertKennedyJr": 854.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 80.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 17.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 37.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 122.0,
+    "RobertKennedyJr": 47.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 660.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-06T00:00:00.000Z",
+    "DrButtar": 68.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 645.0,
+    "kevdjenkins1": 54.0,
+    "mercola": 302.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-07T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 14.0,
+    "RobertKennedyJr": 271.0,
+    "kevdjenkins1": 252.0,
+    "mercola": 343.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 44.0,
+    "RobertKennedyJr": 1302.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 107.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 234.0,
+    "RobertKennedyJr": 1679.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 265.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4571.0,
+    "RobertKennedyJr": 651.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 117.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 26.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 7052.0,
+    "mercola": 50.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 285.0,
+    "RobertKennedyJr": 1331.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 213.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-13T00:00:00.000Z",
+    "DrButtar": 77.0,
+    "DrChrisNorthrup": 6477.0,
+    "RobertKennedyJr": 22.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 244.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 884.0,
+    "RobertKennedyJr": 321.0,
+    "kevdjenkins1": 24.0,
+    "mercola": 367.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-15T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 233.0,
+    "RobertKennedyJr": 395.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 126.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 517.0,
+    "RobertKennedyJr": 509.0,
+    "kevdjenkins1": 223.0,
+    "mercola": 204.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-17T00:00:00.000Z",
+    "DrButtar": 172.0,
+    "DrChrisNorthrup": 242.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 78.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 195.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 32.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-19T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 267.0,
+    "RobertKennedyJr": 491.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 282.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-20T00:00:00.000Z",
+    "DrButtar": 103.0,
+    "DrChrisNorthrup": 125.0,
+    "RobertKennedyJr": 22884.0,
+    "kevdjenkins1": 21.0,
+    "mercola": 498.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 52.0,
+    "RobertKennedyJr": 814.0,
+    "kevdjenkins1": 1725.0,
+    "mercola": 297.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 211.0,
+    "RobertKennedyJr": 18.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 96.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 29.0,
+    "RobertKennedyJr": 244.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 370.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-24T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 77.0,
+    "RobertKennedyJr": 401.0,
+    "kevdjenkins1": 401.0,
+    "mercola": 76.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 13.0,
+    "RobertKennedyJr": 407.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 37.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 73.0,
+    "RobertKennedyJr": 1315.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 276.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-27T00:00:00.000Z",
+    "DrButtar": 48.0,
+    "DrChrisNorthrup": 43.0,
+    "RobertKennedyJr": 471.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 411.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 221.0,
+    "RobertKennedyJr": 191.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 333.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-29T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 270.0,
+    "RobertKennedyJr": 116.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 176.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-30T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 100.0,
+    "RobertKennedyJr": 57.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 382.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-10-31T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 63.0,
+    "RobertKennedyJr": 596.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 91.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-01T00:00:00.000Z",
+    "DrButtar": 184.0,
+    "DrChrisNorthrup": 108.0,
+    "RobertKennedyJr": 162.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-02T00:00:00.000Z",
+    "DrButtar": 37.0,
+    "DrChrisNorthrup": 191.0,
+    "RobertKennedyJr": 110.0,
+    "kevdjenkins1": 17076.0,
+    "mercola": 204.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-03T00:00:00.000Z",
+    "DrButtar": 29.0,
+    "DrChrisNorthrup": 133.0,
+    "RobertKennedyJr": 305.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 155.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-04T00:00:00.000Z",
+    "DrButtar": 603.0,
+    "DrChrisNorthrup": 52.0,
+    "RobertKennedyJr": 133.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 121.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-05T00:00:00.000Z",
+    "DrButtar": 7.0,
+    "DrChrisNorthrup": 28.0,
+    "RobertKennedyJr": 431.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 118.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 120.0,
+    "RobertKennedyJr": 147.0,
+    "kevdjenkins1": 225.0,
+    "mercola": 320.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-07T00:00:00.000Z",
+    "DrButtar": 132.0,
+    "DrChrisNorthrup": 91.0,
+    "RobertKennedyJr": 118.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 59.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-08T00:00:00.000Z",
+    "DrButtar": 59.0,
+    "DrChrisNorthrup": 12.0,
+    "RobertKennedyJr": 53.0,
+    "kevdjenkins1": 142.0,
+    "mercola": 24.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 21.0,
+    "RobertKennedyJr": 26.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 285.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-10T00:00:00.000Z",
+    "DrButtar": 47.0,
+    "DrChrisNorthrup": 231.0,
+    "RobertKennedyJr": 2981.0,
+    "kevdjenkins1": 228.0,
+    "mercola": 158.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-11T00:00:00.000Z",
+    "DrButtar": 11.0,
+    "DrChrisNorthrup": 54.0,
+    "RobertKennedyJr": 34.0,
+    "kevdjenkins1": 1720.0,
+    "mercola": 338.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-12T00:00:00.000Z",
+    "DrButtar": 13.0,
+    "DrChrisNorthrup": 12.0,
+    "RobertKennedyJr": 187.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 232.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-13T00:00:00.000Z",
+    "DrButtar": 14.0,
+    "DrChrisNorthrup": 173.0,
+    "RobertKennedyJr": 161.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 437.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 233.0,
+    "RobertKennedyJr": 468.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 78.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-15T00:00:00.000Z",
+    "DrButtar": 11.0,
+    "DrChrisNorthrup": 98.0,
+    "RobertKennedyJr": 410.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 64.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 58.0,
+    "RobertKennedyJr": 1799.0,
+    "kevdjenkins1": 661.0,
+    "mercola": 615.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-17T00:00:00.000Z",
+    "DrButtar": 64.0,
+    "DrChrisNorthrup": 242.0,
+    "RobertKennedyJr": 478.0,
+    "kevdjenkins1": 18550.0,
+    "mercola": 242.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 72.0,
+    "RobertKennedyJr": 2681.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 54.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-19T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 182.0,
+    "RobertKennedyJr": 1054.0,
+    "kevdjenkins1": 20.0,
+    "mercola": 317.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 106.0,
+    "RobertKennedyJr": 52.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 406.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 80.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 66.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 45.0,
+    "RobertKennedyJr": 416.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 54.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-23T00:00:00.000Z",
+    "DrButtar": 22.0,
+    "DrChrisNorthrup": 37.0,
+    "RobertKennedyJr": 178.0,
+    "kevdjenkins1": 1487.0,
+    "mercola": 362.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-24T00:00:00.000Z",
+    "DrButtar": 163.0,
+    "DrChrisNorthrup": 91.0,
+    "RobertKennedyJr": 18698.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 617.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-25T00:00:00.000Z",
+    "DrButtar": 12.0,
+    "DrChrisNorthrup": 189.0,
+    "RobertKennedyJr": 823.0,
+    "kevdjenkins1": 12782.0,
+    "mercola": 753.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 129.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-27T00:00:00.000Z",
+    "DrButtar": 122.0,
+    "DrChrisNorthrup": 19.0,
+    "RobertKennedyJr": 171.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 96.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 78.0,
+    "RobertKennedyJr": 283.0,
+    "kevdjenkins1": 300.0,
+    "mercola": 64.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-29T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 46.0,
+    "RobertKennedyJr": 597.0,
+    "kevdjenkins1": 24.0,
+    "mercola": 16.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-11-30T00:00:00.000Z",
+    "DrButtar": 30.0,
+    "DrChrisNorthrup": 107.0,
+    "RobertKennedyJr": 246.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 55.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-01T00:00:00.000Z",
+    "DrButtar": 52.0,
+    "DrChrisNorthrup": 155.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 163.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 46.0,
+    "RobertKennedyJr": 1474.0,
+    "kevdjenkins1": 41.0,
+    "mercola": 177.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 132.0,
+    "RobertKennedyJr": 351.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 213.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 314.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 1275.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 84.0,
+    "RobertKennedyJr": 748.0,
+    "kevdjenkins1": 10169.0,
+    "mercola": 483.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 21.0,
+    "RobertKennedyJr": 230.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 217.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-07T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 67.0,
+    "RobertKennedyJr": 775.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 168.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-08T00:00:00.000Z",
+    "DrButtar": 49.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 519.0,
+    "kevdjenkins1": 52.0,
+    "mercola": 251.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 119.0,
+    "RobertKennedyJr": 910.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 423.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 88.0,
+    "RobertKennedyJr": 985.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 589.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 115.0,
+    "RobertKennedyJr": 1736.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 383.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 152.0,
+    "RobertKennedyJr": 80.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 108.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-13T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 90.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 33.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-14T00:00:00.000Z",
+    "DrButtar": 191.0,
+    "DrChrisNorthrup": 160.0,
+    "RobertKennedyJr": 1138.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 241.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-15T00:00:00.000Z",
+    "DrButtar": 63.0,
+    "DrChrisNorthrup": 66.0,
+    "RobertKennedyJr": 1168.0,
+    "kevdjenkins1": 12818.0,
+    "mercola": 217.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 51.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 186.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 237.0,
+    "RobertKennedyJr": 1067.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 298.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 88.0,
+    "RobertKennedyJr": 364.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 991.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-19T00:00:00.000Z",
+    "DrButtar": 19.0,
+    "DrChrisNorthrup": 179.0,
+    "RobertKennedyJr": 422.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 178.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 194.0,
+    "RobertKennedyJr": 755.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 36.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 595.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 501.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-22T00:00:00.000Z",
+    "DrButtar": 48.0,
+    "DrChrisNorthrup": 117.0,
+    "RobertKennedyJr": 22.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 325.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 173.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 38.0,
+    "mercola": 129.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-24T00:00:00.000Z",
+    "DrButtar": 24.0,
+    "DrChrisNorthrup": 56.0,
+    "RobertKennedyJr": 2290.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 9.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 18.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 124.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 76.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 38.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 71.0,
+    "mercola": 28.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 255.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 6337.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-29T00:00:00.000Z",
+    "DrButtar": 57.0,
+    "DrChrisNorthrup": 58.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 63.0,
+    "mercola": 395.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-30T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 98.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 485.0,
+    "mercola": 520.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2020-12-31T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 385.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-01T00:00:00.000Z",
+    "DrButtar": 94.0,
+    "DrChrisNorthrup": 17.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 5307.0,
+    "mercola": 91.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 143.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 235.0,
+    "mercola": 169.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-03T00:00:00.000Z",
+    "DrButtar": 28.0,
+    "DrChrisNorthrup": 192.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 12390.0,
+    "mercola": 82.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-04T00:00:00.000Z",
+    "DrButtar": 65.0,
+    "DrChrisNorthrup": 118.0,
+    "RobertKennedyJr": 282.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 302.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-05T00:00:00.000Z",
+    "DrButtar": 78.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 576.0,
+    "kevdjenkins1": 15.0,
+    "mercola": 297.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 39.0,
+    "RobertKennedyJr": 1036.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 414.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-07T00:00:00.000Z",
+    "DrButtar": 21.0,
+    "DrChrisNorthrup": 18.0,
+    "RobertKennedyJr": 385.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 319.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 94.0,
+    "RobertKennedyJr": 1877.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 301.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 142.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 35025.0,
+    "mercola": 527.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-10T00:00:00.000Z",
+    "DrButtar": 2.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 75.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 41.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 200.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-12T00:00:00.000Z",
+    "DrButtar": 87.0,
+    "DrChrisNorthrup": 13.0,
+    "RobertKennedyJr": 411.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 512.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-13T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 1854.0,
+    "kevdjenkins1": 75.0,
+    "mercola": 458.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 27.0,
+    "RobertKennedyJr": 800.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 324.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-15T00:00:00.000Z",
+    "DrButtar": 157.0,
+    "DrChrisNorthrup": 89.0,
+    "RobertKennedyJr": 3748.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 599.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 47.0,
+    "RobertKennedyJr": 1195.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 286.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 133.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 23.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 68.0,
+    "RobertKennedyJr": 5957.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 11438.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-19T00:00:00.000Z",
+    "DrButtar": 118.0,
+    "DrChrisNorthrup": 19.0,
+    "RobertKennedyJr": 832.0,
+    "kevdjenkins1": 9.0,
+    "mercola": 852.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-20T00:00:00.000Z",
+    "DrButtar": 48.0,
+    "DrChrisNorthrup": 18.0,
+    "RobertKennedyJr": 1019.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 1804.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 59.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 83.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 20.0,
+    "RobertKennedyJr": 9361.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 406.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 13.0,
+    "RobertKennedyJr": 869.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 221.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-24T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 73.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 54.0,
+    "RobertKennedyJr": 1966.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 452.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-26T00:00:00.000Z",
+    "DrButtar": 78.0,
+    "DrChrisNorthrup": 131.0,
+    "RobertKennedyJr": 685.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 272.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 22.0,
+    "RobertKennedyJr": 2410.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 512.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-28T00:00:00.000Z",
+    "DrButtar": 21.0,
+    "DrChrisNorthrup": 19.0,
+    "RobertKennedyJr": 475.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 188.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-29T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 12.0,
+    "RobertKennedyJr": 930.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 487.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-30T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 147.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 128.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-01-31T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 38.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 136.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 478.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 1007.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-02T00:00:00.000Z",
+    "DrButtar": 90.0,
+    "DrChrisNorthrup": 52.0,
+    "RobertKennedyJr": 651.0,
+    "kevdjenkins1": 322.0,
+    "mercola": 488.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-03T00:00:00.000Z",
+    "DrButtar": 11.0,
+    "DrChrisNorthrup": 18.0,
+    "RobertKennedyJr": 872.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 269.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 20.0,
+    "RobertKennedyJr": 2821.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 224.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 3264.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 428.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-06T00:00:00.000Z",
+    "DrButtar": 16.0,
+    "DrChrisNorthrup": 14.0,
+    "RobertKennedyJr": 1184.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 59.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-07T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 10.0,
+    "RobertKennedyJr": 275.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 15.0,
+    "RobertKennedyJr": 652.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 8096.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-09T00:00:00.000Z",
+    "DrButtar": 53.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 3195.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 368.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 59.0,
+    "RobertKennedyJr": 2679.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 105.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 3302.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 172.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 11.0,
+    "RobertKennedyJr": 691.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 458.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-13T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 34.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 202.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 1744.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 115.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-15T00:00:00.000Z",
+    "DrButtar": 4.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 4251.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 457.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-16T00:00:00.000Z",
+    "DrButtar": 54.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 815.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 369.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 3317.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 148.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 34.0,
+    "RobertKennedyJr": 3028.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 2361.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-19T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 54.0,
+    "RobertKennedyJr": 689.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 280.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 55.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 158.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 12.0,
+    "RobertKennedyJr": 3178.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 29.0,
+    "RobertKennedyJr": 1845.0,
+    "kevdjenkins1": 721.0,
+    "mercola": 88.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-23T00:00:00.000Z",
+    "DrButtar": 52.0,
+    "DrChrisNorthrup": 15.0,
+    "RobertKennedyJr": 1084.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 176.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-24T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 53.0,
+    "RobertKennedyJr": 148.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 166.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 36.0,
+    "RobertKennedyJr": 721.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 765.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 40.0,
+    "RobertKennedyJr": 350.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 243.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 44.0,
+    "RobertKennedyJr": 47.0,
+    "kevdjenkins1": 79.0,
+    "mercola": 203.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-02-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 78.0,
+    "RobertKennedyJr": 1334.0,
+    "kevdjenkins1": 2179.0,
+    "mercola": 81.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 67.0,
+    "RobertKennedyJr": 1417.0,
+    "kevdjenkins1": 1652.0,
+    "mercola": 112.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-02T00:00:00.000Z",
+    "DrButtar": 51.0,
+    "DrChrisNorthrup": 78.0,
+    "RobertKennedyJr": 926.0,
+    "kevdjenkins1": 931.0,
+    "mercola": 306.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 35.0,
+    "RobertKennedyJr": 2945.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 795.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 11.0,
+    "RobertKennedyJr": 1239.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 185.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 28.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 7.0,
+    "mercola": 97.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 201.0,
+    "RobertKennedyJr": 300.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 102.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-07T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 26.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 2128.0,
+    "mercola": 67.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 16.0,
+    "RobertKennedyJr": 693.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 58.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-09T00:00:00.000Z",
+    "DrButtar": 52.0,
+    "DrChrisNorthrup": 25.0,
+    "RobertKennedyJr": 742.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 487.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-10T00:00:00.000Z",
+    "DrButtar": 20.0,
+    "DrChrisNorthrup": 73.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 570.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 1113.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 289.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 191.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-13T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 641.0,
+    "mercola": 98.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 18.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 73.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-15T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 5426.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 768.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 2313.0,
+    "kevdjenkins1": 88.0,
+    "mercola": 226.0,
+    "sayerjigmi": 1.0
+  },
+  {
+    "date": "2021-03-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 2861.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 103.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1178.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 147.0,
+    "sayerjigmi": 12.0
+  },
+  {
+    "date": "2021-03-19T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 29.0,
+    "RobertKennedyJr": 1017.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 435.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 13.0,
+    "RobertKennedyJr": 1195.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 77.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 16.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 81.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 151.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 1092.0,
+    "sayerjigmi": 166.0
+  },
+  {
+    "date": "2021-03-23T00:00:00.000Z",
+    "DrButtar": 77.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 787.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 21236.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-24T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 200.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 123.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-03-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 234.0,
+    "kevdjenkins1": 847.0,
+    "mercola": 359.0,
+    "sayerjigmi": 96.0
+  },
+  {
+    "date": "2021-03-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 68.0,
+    "RobertKennedyJr": 689.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 210.0,
+    "sayerjigmi": 119.0
+  },
+  {
+    "date": "2021-03-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 21.0,
+    "RobertKennedyJr": 670.0,
+    "kevdjenkins1": 224.0,
+    "mercola": 67.0,
+    "sayerjigmi": 85.0
+  },
+  {
+    "date": "2021-03-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 138.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 222.0,
+    "sayerjigmi": 10.0
+  },
+  {
+    "date": "2021-03-29T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 728.0,
+    "kevdjenkins1": 21.0,
+    "mercola": 939.0,
+    "sayerjigmi": 86.0
+  },
+  {
+    "date": "2021-03-30T00:00:00.000Z",
+    "DrButtar": 20.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 108.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 632.0,
+    "sayerjigmi": 43.0
+  },
+  {
+    "date": "2021-03-31T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 72.0,
+    "RobertKennedyJr": 1350.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 128.0,
+    "sayerjigmi": 27098.0
+  },
+  {
+    "date": "2021-04-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1314.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 0.0,
+    "sayerjigmi": 6.0
+  },
+  {
+    "date": "2021-04-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 506.0,
+    "kevdjenkins1": 65.0,
+    "mercola": 983.0,
+    "sayerjigmi": 1850.0
+  },
+  {
+    "date": "2021-04-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 123.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 22.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 49.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 277.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 70.0,
+    "sayerjigmi": 8264.0
+  },
+  {
+    "date": "2021-04-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 919.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 347.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-07T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 635.0,
+    "kevdjenkins1": 269.0,
+    "mercola": 1146.0,
+    "sayerjigmi": 5.0
+  },
+  {
+    "date": "2021-04-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 576.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 476.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 148.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 2476.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 2896.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 158.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 1769.0,
+    "kevdjenkins1": 40.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-13T00:00:00.000Z",
+    "DrButtar": 26.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 1523.0,
+    "kevdjenkins1": 689.0,
+    "mercola": 108.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 546.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 338.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-15T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 544.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 635.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 452.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 406.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1008.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-18T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1917.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-19T00:00:00.000Z",
+    "DrButtar": 17.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 477.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 1021.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 301.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 877.0,
+    "kevdjenkins1": 98.0,
+    "mercola": 189.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 1538.0,
+    "kevdjenkins1": 95.0,
+    "mercola": 299.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 981.0,
+    "kevdjenkins1": 1208.0,
+    "mercola": 0.0,
+    "sayerjigmi": 20.0
+  },
+  {
+    "date": "2021-04-24T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1274.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 239.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 12.0
+  },
+  {
+    "date": "2021-04-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 794.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-27T00:00:00.000Z",
+    "DrButtar": 26.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 206.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 678.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 9.0,
+    "RobertKennedyJr": 1248.0,
+    "kevdjenkins1": 275.0,
+    "mercola": 551.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-29T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 13.0,
+    "RobertKennedyJr": 1780.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 179.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-04-30T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 14.0,
+    "RobertKennedyJr": 1231.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 555.0,
+    "sayerjigmi": 7.0
+  },
+  {
+    "date": "2021-05-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 1402.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 315.0,
+    "kevdjenkins1": 2.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 21.0,
+    "RobertKennedyJr": 1281.0,
+    "kevdjenkins1": 3.0,
+    "mercola": 2246.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-04T00:00:00.000Z",
+    "DrButtar": 26.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 3214.0,
+    "kevdjenkins1": 772.0,
+    "mercola": 497.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 1225.0,
+    "kevdjenkins1": 255.0,
+    "mercola": 90.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 1118.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 2759.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-07T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 1502.0,
+    "kevdjenkins1": 1115.0,
+    "mercola": 683.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-08T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 380.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 7.0,
+    "RobertKennedyJr": 384.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 2059.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 392.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-11T00:00:00.000Z",
+    "DrButtar": 33.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 3633.0,
+    "kevdjenkins1": 893.0,
+    "mercola": 1751.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 1518.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 347.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-13T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 619.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 894.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 14.0,
+    "RobertKennedyJr": 498.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 38.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-15T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 11.0,
+    "RobertKennedyJr": 2838.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 600.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-18T00:00:00.000Z",
+    "DrButtar": 15.0,
+    "DrChrisNorthrup": 13.0,
+    "RobertKennedyJr": 1109.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 248.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-19T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 524.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 342.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 14.0,
+    "RobertKennedyJr": 4346.0,
+    "kevdjenkins1": 107.0,
+    "mercola": 973.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 1145.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 3562.0
+  },
+  {
+    "date": "2021-05-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 334.0,
+    "kevdjenkins1": 682.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 678.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-24T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 2317.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 889.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-25T00:00:00.000Z",
+    "DrButtar": 26.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 3257.0,
+    "kevdjenkins1": 1257.0,
+    "mercola": 848.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1485.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 543.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 1572.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 577.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 2901.0,
+    "kevdjenkins1": 401.0,
+    "mercola": 230.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-29T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 4.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-30T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-05-31T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 3655.0,
+    "kevdjenkins1": 1312.0,
+    "mercola": 23177.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 6782.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 819.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 4071.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 280.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 4517.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 306.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-05T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 2995.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-06T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-07T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 399.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 910.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-08T00:00:00.000Z",
+    "DrButtar": 27.0,
+    "DrChrisNorthrup": 577.0,
+    "RobertKennedyJr": 3749.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 683.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 2001.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 521.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-10T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 2760.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 268.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 2379.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-12T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 8.0,
+    "RobertKennedyJr": 1499.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-13T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 6.0,
+    "RobertKennedyJr": 956.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-14T00:00:00.000Z",
+    "DrButtar": 1858.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 252.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 224.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-15T00:00:00.000Z",
+    "DrButtar": 344.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 4920.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 937.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-16T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 2741.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 471.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-17T00:00:00.000Z",
+    "DrButtar": 279.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 2701.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 232.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-18T00:00:00.000Z",
+    "DrButtar": 371.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 2303.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 120.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-19T00:00:00.000Z",
+    "DrButtar": 148.0,
+    "DrChrisNorthrup": 5.0,
+    "RobertKennedyJr": 2888.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-20T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 12.0,
+    "RobertKennedyJr": 483.0,
+    "kevdjenkins1": 109.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-21T00:00:00.000Z",
+    "DrButtar": 150.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 3395.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 578.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 4415.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 53.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-23T00:00:00.000Z",
+    "DrButtar": 584.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 3203.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 217.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-24T00:00:00.000Z",
+    "DrButtar": 173.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 6369.0,
+    "kevdjenkins1": 1180.0,
+    "mercola": 615.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-25T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 2865.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 233.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-26T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 1360.0,
+    "kevdjenkins1": 1674.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 1.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1734.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 804.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-29T00:00:00.000Z",
+    "DrButtar": 211.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 1346.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 765.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-06-30T00:00:00.000Z",
+    "DrButtar": 95.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 4762.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 388.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 3161.0,
+    "kevdjenkins1": 6650.0,
+    "mercola": 759.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 14.0,
+    "RobertKennedyJr": 2837.0,
+    "kevdjenkins1": 7585.0,
+    "mercola": 179.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 14.0,
+    "RobertKennedyJr": 107.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-05T00:00:00.000Z",
+    "DrButtar": 131.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 3039.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-06T00:00:00.000Z",
+    "DrButtar": 24.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 2254.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 485.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-07T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 4331.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 298.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-08T00:00:00.000Z",
+    "DrButtar": 158.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1637.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 297.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-09T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 767.0,
+    "mercola": 816.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-10T00:00:00.000Z",
+    "DrButtar": 83.0,
+    "DrChrisNorthrup": 3.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-11T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 851.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-12T00:00:00.000Z",
+    "DrButtar": 1029.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 2187.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 694.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-13T00:00:00.000Z",
+    "DrButtar": 208.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1416.0,
+    "kevdjenkins1": 9.0,
+    "mercola": 392.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-14T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 1613.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-15T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 5653.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 706.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-16T00:00:00.000Z",
+    "DrButtar": 161.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 797.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-17T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 8117.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-18T00:00:00.000Z",
+    "DrButtar": 596.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 6226.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-19T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 14.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 596.0,
+    "mercola": 1427.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-20T00:00:00.000Z",
+    "DrButtar": 32.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 720.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 640.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-21T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 5342.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 1543.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-22T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1377.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 1309.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-23T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 32.0,
+    "RobertKennedyJr": 425.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 1616.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-24T00:00:00.000Z",
+    "DrButtar": 552.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-26T00:00:00.000Z",
+    "DrButtar": 301.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 2483.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 2445.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-27T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 177.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 1097.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-28T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 2.0,
+    "RobertKennedyJr": 2579.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 610.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-29T00:00:00.000Z",
+    "DrButtar": 301.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 151.0,
+    "kevdjenkins1": 303.0,
+    "mercola": 161.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-30T00:00:00.000Z",
+    "DrButtar": 238.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 235.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-07-31T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 1.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-08-01T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 11.0,
+    "RobertKennedyJr": 0.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 0.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-08-02T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 2148.0,
+    "kevdjenkins1": 0.0,
+    "mercola": 1370.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-08-03T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 1315.0,
+    "kevdjenkins1": 132.0,
+    "mercola": 2919.0,
+    "sayerjigmi": 0.0
+  },
+  {
+    "date": "2021-08-04T00:00:00.000Z",
+    "DrButtar": 0.0,
+    "DrChrisNorthrup": 0.0,
+    "RobertKennedyJr": 908.0,
+    "kevdjenkins1": 1679.0,
+    "mercola": 558.0,
+    "sayerjigmi": 0.0
+  }
+]

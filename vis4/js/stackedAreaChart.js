@@ -89,6 +89,8 @@ constructor(parentElement, data) {
             // TO-DO (Activity II) Stack data
 		vis.stackedData = stack(vis.data);
 
+		console.log(vis.stackedData)
+
 		// TO-DO (Activity II) Stacked area layout
 		vis.area = d3.area()
 			.curve(d3.curveCardinal)
