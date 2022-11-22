@@ -42,7 +42,7 @@ class BubbleVis {
         //     .attr("transform", "translate(" + vis.margin.left+ "," + vis.margin.top + ")");
 
         // vis.svg.attr("viewBox", [0, 0, vis.width, height]) ;
-        console.log(vis.data)
+        // (vis.data)
 
         vis.x = d3.scaleLinear()
             .domain(d3.extent(vis.data, d => d3.isoParse(d.date)))
@@ -59,7 +59,6 @@ class BubbleVis {
         //vis.colour = d3.scaleSequential(d3.extent(vis.data, d => d.date), d3.interpolateViridis)
         //vis.colour = d3.scaleOrdinal(vis.data.map(a => a.motive), d3.schemeTableau10)
         vis.colour = d3.scaleOrdinal(d3.schemeTableau10)
-        console.log("data",vis.data.map(a => a[selectedCategory]))
 
         vis.xAxis = g =>
             g
@@ -117,7 +116,6 @@ class BubbleVis {
         vis.y.domain(vis.categories[selectedCategory])
 
         if (vis.node) {
-            console.log("removing node")
             vis.node.remove();
         }
         vis.node = vis.svg.append("g")
@@ -156,9 +154,6 @@ class BubbleVis {
                     .html(``);
             });
 
-
-        console.log("selectedCategory", selectedCategory)
-
         vis.simulation = d3.forceSimulation()
             .force("x", d3.forceX(d => vis.x(d3.isoParse(d.date))))
             .force("y", d3.forceY(d => vis.y(d[selectedCategory]) + vis.y.bandwidth() / 2))
@@ -183,7 +178,6 @@ class BubbleVis {
         vis.y.domain(split ? vis.categories[selectedCategory] : vis.categories[selectedCategory].concat("Global")); // workaround for updating the yAxis
         vis.y.range(split ? [vis.margin.top, vis.height - vis.margin.bottom] : [vis.height / 2, vis.height / 2]);
         let ticks = split ? vis.categories[selectedCategory] : ["Global"];
-        console.log("ticks", ticks)
 
         const t = vis.svg.transition().duration(400);
         vis.svg.transition(t).attr("viewBox", [0, 0, vis.width, vis.height]) ;
