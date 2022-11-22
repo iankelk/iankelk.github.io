@@ -13,7 +13,7 @@ class BubbleVis {
         this.categories["region"] =  [...new Set(regionData.map(d => d.region))]
 
         selectedCategory =  document.getElementById('category').value;
-        
+
         this.initVis()
     }
 
@@ -23,7 +23,7 @@ class BubbleVis {
         const formatTime = d3.timeFormat("%B %d, %Y");
 
 
-        vis.margin = {top: 50, right: 100, bottom: 20, left: 200};
+        vis.margin = {top: 20, right: 100, bottom: 10, left: 200};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = 400;
 
