@@ -148,6 +148,7 @@ class BrushVis {
             return a.date - b.date;
         });
 
+        console.log(vis.preProcessedData)
         this.wrangleDataResponsive();
     }
 
