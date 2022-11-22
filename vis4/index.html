@@ -26,9 +26,25 @@
 
             <!-- header -->
             <div class="row justify-content-center" id="title-row">
-                <div class="align-self-center">
-                    <h1>UK Household Expenditure</h1>
-                    <h2>Detailed annual statistics on family food and drink purchases</h2>
+                <div class="col-md-8">
+                    <div class="align-self-center">
+                        <h1>Covid vs Tweets</h1>
+                        <h2>How metrics changed over 2020 for COVID-19</h2>
+                    </div>
+                </div>
+                <div class="col-md-4" id="radio">
+                    <label>
+                        <input type="radio" name="case" value="cases"  onchange="toggleCase()" checked/>Cases
+                    </label>
+                    <label>
+                        <input type="radio" name="case" value="deaths" id="case" onchange="toggleCase()"/>Deaths
+                    </label>
+                    <br /><br />
+                    <select id='tweet-category' class="custom-select align-self-center" onchange="changeTweetCategory()">
+                        <option value="tweets" selected>By # of Tweets</option>
+                        <option value="retweets">By # of Retweets</option>
+                        <option value="favorites">By # of Favorites</option>
+                    </select>
                 </div>
             </div>
 

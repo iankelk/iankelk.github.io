@@ -1,68 +1,62 @@
+// Init global variables
+let myAreaChartVis;
+let myTimeLineVis;
+let selectedTweetCategory =  document.getElementById('tweet-category').value;
 
-// Variables for the visualization instances
-let areachart, timeline;
+// Load data using promises
+let promises = [
+	d3.json("data/covid_vs_tweets.json", (row, i) => {
+		row.map((d, i) => ({id: i + 1, ...d}))
+	})
+];
+
+Promise.all(promises)
+	.then(function (data) {
+		initMainPage(data);
+	})
+	.catch(function (err) {
+		console.log(err);
+	});
+
+// initMainPage
+function initMainPage(dataArray) {
+	let data = dataArray[0];
+	console.log(data.covid)
+	console.log(data.tweets[1].retweets)
 
 
-// Start application by loading the data
-loadData();
+	// Init force
+	// myAreaChartVis = new StackedAreaChart(document.getElementById('stacked-area-chart'), data);
+	// myTimeLineVis = new Timeline(document.getElementById('timeline'), data);
 
-function loadData() {
-    d3.json("data/uk-household-purchases.json"). then(jsonData=>{
-            
-        // prepare data
-        let data = prepareDataForStudents(jsonData)
-        
-        console.log('data loaded ')
-
-        // TO-DO (Activity I): instantiate visualization objects
-		areachart = new StackedAreaChart(document.getElementById("stacked-area-chart"), data.layers);
-		timeline = new Timeline(document.getElementById("timeline"), data.years);
-
-        // TO-DO (Activity I):  init visualizations
-		areachart.initVis();
-		timeline.initVis();
-    });
 }
 
+// Selector listener
+function changeTweetCategory() {
+	selectedTweetCategory =  document.getElementById('tweet-category').value;
+	myAreaChartVis.wrangleData();
+	myTimeLineVis.wrangleData();
+}
+// Proper case function adapted from here: https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
+String.prototype.toProperCase = function () {
+	return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();});
+};
 
-// helper function - PROVIDE WITH TEMPLATE
-function prepareDataForStudents(data){
+// var string="The water content is considered acceptable for this voltage class. Dielectric Breakdown Voltage is unacceptable for transformers > 288 KV. Power factors, Interfacial Tension and Neutralization Number are acceptable for continued use in-service.";
+function splitLongString(N, longString) {
+	let app = longString.split(' '),
+		arrayApp = [],
+		stringApp = "";
+	app.forEach(function (sentence, index) {
+		stringApp += sentence + ' ';
 
-	let parseDate = d3.timeParse("%Y");
-
-	let preparedData = {};
-
-	// Convert Pence Sterling (GBX) to USD and years to date objects
-	preparedData.layers = data.layers.map( d => {
-		for (let column in d) {
-			if (d.hasOwnProperty(column) && column !== "Year") {
-				d[column] = parseFloat(d[column]) * 1.481105 / 100;
-			} else if(d.hasOwnProperty(column) && column === "Year") {
-				d[column] = parseDate(d[column].toString());
-			}
+		if ((index + 1) % N === 0) {
+			arrayApp.push(stringApp);
+			stringApp = '';
+		} else if (app.length === index + 1 && stringApp !== '') {
+			arrayApp.push(stringApp);
+			stringApp = '';
 		}
 	});
-
-	//
-	data.years.forEach(function(d){
-		d.Expenditures = parseFloat(d.Expenditures) * 1.481105 / 100;
-		d.Year = parseDate(d.Year.toString());
-	});
-	return data
-}
-
-function brushed(event) {
-	if (event.selection === null) {
-		areachart.x.domain(d3.extent(areachart.data, d=> d.Year));
-		areachart.wrangleData(300);
-		return;
-	}
-	// TO-DO: React to 'brushed' event
-	// Get the extent of the current brush
-	let selectionRange = d3.brushSelection(d3.select(".brush").node());
-
-	// Convert the extent into the corresponding domain values
-	let selectionDomain = selectionRange.map(timeline.xScale.invert);
-	areachart.x.domain(selectionDomain)
-	areachart.wrangleData();
-}
+	return arrayApp.join("<br />");
+};
