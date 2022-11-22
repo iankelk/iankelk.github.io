@@ -21,21 +21,19 @@ Promise.all(promises)
 // initMainPage
 function initMainPage(dataArray) {
 	let data = dataArray[0];
-	console.log(data.covid)
-	console.log(data.tweets[1].retweets)
+	console.log(selectedTweetCategory)
+	console.log(data)
 
-
-	// Init force
-	// myAreaChartVis = new StackedAreaChart(document.getElementById('stacked-area-chart'), data);
-	// myTimeLineVis = new Timeline(document.getElementById('timeline'), data);
-
+	// Init areachart and timeline
+	myAreaChartVis = new StackedAreaChart(document.getElementById('stacked-area-chart'), data.tweets);
+	//myTimeLineVis = new Timeline(document.getElementById('timeline'), data.covid);
 }
 
 // Selector listener
 function changeTweetCategory() {
 	selectedTweetCategory =  document.getElementById('tweet-category').value;
 	myAreaChartVis.wrangleData();
-	myTimeLineVis.wrangleData();
+	//myTimeLineVis.wrangleData();
 }
 // Proper case function adapted from here: https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
 String.prototype.toProperCase = function () {
@@ -59,4 +57,20 @@ function splitLongString(N, longString) {
 		}
 	});
 	return arrayApp.join("<br />");
-};
+}
+
+function brushed(event) {
+	if (event.selection === null) {
+		myAreaChartVis.x.domain(d3.extent(myAreaChartVis.data, d=> d3.isoParse(d.date)));
+		myAreaChartVis.wrangleData(300);
+		return;
+	}
+	// TO-DO: React to 'brushed' event
+	// Get the extent of the current brush
+	let selectionRange = d3.brushSelection(d3.select(".brush").node());
+
+	// Convert the extent into the corresponding domain values
+	let selectionDomain = selectionRange.map(timeline.xScale.invert);
+	myAreaChartVis.x.domain(selectionDomain)
+	myAreaChartVis.wrangleData();
+}

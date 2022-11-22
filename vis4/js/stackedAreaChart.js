@@ -18,27 +18,32 @@ constructor(parentElement, data) {
     this.displayData = [];
 	this.filter = "";
 
-    let colors = ['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fdbf6f','#ff7f00','#cab2d6','#6a3d9a'];
+    let colors = ['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c'];
 
     // grab all the keys from the key value pairs in data (filter out 'year' ) to get a list of categories
-    this.dataCategories = Object.keys(this.data[0]).filter(d=>d !== "Year")
+    this.dataCategories = Object.keys(this.data[selectedTweetCategory][0]).filter(d =>d !== "date")
+
+	console.log(this.dataCategories)
 
     // prepare colors for range
     let colorArray = this.dataCategories.map( (d,i) => {
-        return colors[i%10]
+        return colors[i%6]
     })
     // Set ordinal color scale
     this.colorScale = d3.scaleOrdinal()
         .domain(this.dataCategories)
         .range(colorArray);
-}
 
+	this.initVis();
+}
 
 	/*
 	 * Method that initializes the visualization (static content, e.g. SVG area or axes)
  	*/
 	initVis(){
 		let vis = this;
+
+		console.log("data here",vis.data[selectedTweetCategory])
 
 		vis.margin = {top: 40, right: 40, bottom: 60, left: 40};
 
@@ -63,7 +68,7 @@ constructor(parentElement, data) {
 		// Scales and axes
 		vis.x = d3.scaleTime()
 			.range([0, vis.width])
-			.domain(d3.extent(vis.data, d=> d.Year));
+			.domain(d3.extent(vis.data[selectedTweetCategory], d=> d3.isoParse(d.date)));
 
 		vis.y = d3.scaleLinear()
 			.range([vis.height, 0]);
@@ -82,26 +87,26 @@ constructor(parentElement, data) {
 			.attr("class", "y-axis axis");
 
 	
-			// TO-DO (Activity II): Initialize stack layout
+		// TO-DO (Activity II): Initialize stack layout
 		let stack = d3.stack()
 			.keys(vis.dataCategories);
 
-            // TO-DO (Activity II) Stack data
-		vis.stackedData = stack(vis.data);
+		// TO-DO (Activity II) Stack data
+		vis.stackedData = stack(vis.data[selectedTweetCategory]);
 
 		console.log(vis.stackedData)
 
 		// TO-DO (Activity II) Stacked area layout
 		vis.area = d3.area()
 			.curve(d3.curveCardinal)
-			.x(d=> vis.x(d.data.Year))
+			.x(d=> vis.x(d3.isoParse(d.data.date)))
 			.y0(d=> vis.y(d[0]))
 			.y1(d=> vis.y(d[1]));
 
 		// SVG area path generator
 		vis.areaSingle = d3.area()
 			.curve(d3.curveCardinal)
-			.x(d => vis.x(d.data.Year))
+			.x(d=> vis.x(d3.isoParse(d.data.date)))
 			.y0(vis.height)
 			.y1(d => vis.y(d[1]-d[0]));
 
@@ -187,8 +192,6 @@ constructor(parentElement, data) {
 					return vis.area(d);
 				}
 			})
-
-			
 
 		categories.exit().remove();
 

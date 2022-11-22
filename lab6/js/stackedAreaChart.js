@@ -23,6 +23,7 @@ constructor(parentElement, data) {
     // grab all the keys from the key value pairs in data (filter out 'year' ) to get a list of categories
     this.dataCategories = Object.keys(this.data[0]).filter(d=>d !== "Year")
 
+	console.log("categories", this.dataCategories)
     // prepare colors for range
     let colorArray = this.dataCategories.map( (d,i) => {
         return colors[i%10]
@@ -39,6 +40,8 @@ constructor(parentElement, data) {
  	*/
 	initVis(){
 		let vis = this;
+
+		console.log("data here", vis.data)
 
 		vis.margin = {top: 40, right: 40, bottom: 60, left: 40};
 
