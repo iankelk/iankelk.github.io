@@ -68,7 +68,6 @@ constructor(parentElement, data) {
 		// Scales and axes
 		vis.x = d3.scaleTime()
 			.range([0, vis.width])
-			.domain(d3.extent(vis.data[selectedTweetCategory], d=> d3.isoParse(d.date)));
 
 		vis.y = d3.scaleLinear()
 			.range([vis.height, 0]);
@@ -88,11 +87,11 @@ constructor(parentElement, data) {
 
 	
 		// TO-DO (Activity II): Initialize stack layout
-		let stack = d3.stack()
+		vis.stack = d3.stack()
 			.keys(vis.dataCategories);
 
 		// TO-DO (Activity II) Stack data
-		vis.stackedData = stack(vis.data[selectedTweetCategory]);
+		vis.stackedData = vis.stack(vis.data[selectedTweetCategory]);
 
 		console.log(vis.stackedData)
 
@@ -127,8 +126,10 @@ constructor(parentElement, data) {
  	*/
 	wrangleData(transitionTime = 0){
 		let vis = this;
-        
-        vis.displayData = vis.stackedData;
+
+		vis.stackedData = vis.stack(vis.data[selectedTweetCategory]);
+
+		vis.displayData = vis.stackedData;
 
 		if (vis.filter !== "") {
 			let indexOfFilteredCategory = vis.dataCategories.findIndex(d => d === vis.filter);
@@ -148,6 +149,8 @@ constructor(parentElement, data) {
 
 		// Add a transition for when the brush is cleared
 		let t = d3.transition().duration(transitionTime);
+
+		vis.x.domain(d3.extent(vis.data[selectedTweetCategory], d=> d3.isoParse(d.date)));
 
 		// Update domain
         // Get the maximum of the multi-dimensional array or in other words, get the highest peak of the uppermost layer
@@ -182,6 +185,7 @@ constructor(parentElement, data) {
 			})
 			.transition(t)
 			.style("fill", d => {
+				//console.log("db",d)
 				return vis.colorScale(d)
 			})
 			.attr("d", function(d) {
