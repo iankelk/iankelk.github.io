@@ -34,6 +34,8 @@ constructor(parentElement, data) {
     this.colorScale = d3.scaleOrdinal()
         .domain(this.dataCategories)
         .range(colorArray);
+
+	console.log("datatatata", this.data)
 }
 
 
@@ -180,7 +182,6 @@ constructor(parentElement, data) {
 			})
 			.transition(t)
 			.style("fill", d => {
-				console.log("d",d)
 				return vis.colorScale(d)
 			})
 			.attr("d", function(d) {

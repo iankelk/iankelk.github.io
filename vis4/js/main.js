@@ -67,7 +67,7 @@ function splitLongString(N, longString) {
 
 function brushed(event) {
 	if (event.selection === null) {
-		myAreaChartVis.x.domain(d3.extent(myAreaChartVis.data, d=> d3.isoParse(d.date)));
+		myAreaChartVis.x.domain(d3.extent(myAreaChartVis.data[selectedTweetCategory], d=> d.date));
 		myAreaChartVis.wrangleData(300);
 		return;
 	}
@@ -76,7 +76,7 @@ function brushed(event) {
 	let selectionRange = d3.brushSelection(d3.select(".brush").node());
 
 	// Convert the extent into the corresponding domain values
-	let selectionDomain = selectionRange.map(timeline.xScale.invert);
+	let selectionDomain = selectionRange.map(myTimeLineVis.xScale.invert);
 	myAreaChartVis.x.domain(selectionDomain)
 	myAreaChartVis.wrangleData();
 }

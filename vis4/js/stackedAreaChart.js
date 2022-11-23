@@ -85,6 +85,7 @@ constructor(parentElement, data) {
 		// Scales and axes
 		vis.x = d3.scaleTime()
 			.range([0, vis.width])
+			.domain(d3.extent(vis.data[selectedTweetCategory], d=> d.date));
 
 		vis.y = d3.scaleLinear()
 			.range([vis.height, 0]);
@@ -108,24 +109,7 @@ constructor(parentElement, data) {
 			.keys(vis.dataCategories);
 
 		// TO-DO (Activity II) Stack data
-		vis.stackedData = vis.stack(vis.data[selectedTweetCategory]);
-
-		console.log(vis.stackedData)
-
-		// TO-DO (Activity II) Stacked area layout
-		vis.area = d3.area()
-			.curve(d3.curveCardinal)
-			.x(d=> vis.x(d.data.date))
-			.y0(d=> vis.y(d[0]))
-			.y1(d=> vis.y(d[1]));
-
-		// SVG area path generator
-		vis.areaSingle = d3.area()
-			.curve(d3.curveCardinal)
-			.x(d=> vis.x(d.data.date))
-			.y0(vis.height)
-			.y1(d => vis.y(d[1]-d[0]));
-
+		//vis.stackedData = vis.stack(vis.data[selectedTweetCategory]);
 
 		//TO-DO (Activity IV): Add Tooltip placeholder
 		vis.tooltipText = vis.svg.append("text")
@@ -167,8 +151,6 @@ constructor(parentElement, data) {
 		// Add a transition for when the brush is cleared
 		let t = d3.transition().duration(transitionTime);
 
-		vis.x.domain(d3.extent(vis.data[selectedTweetCategory], d=> d.date));
-
 		// Update domain
         // Get the maximum of the multi-dimensional array or in other words, get the highest peak of the uppermost layer
 		vis.y.domain([0, d3.max(vis.displayData, function(d) {
@@ -183,8 +165,22 @@ constructor(parentElement, data) {
 		})
 		]);
 
+		// TO-DO (Activity II) Stacked area layout
+		vis.area = d3.area()
+			.curve(d3.curveCardinal)
+			.x(d=> vis.x(d.data.date))
+			.y0(d=> vis.y(d[0]))
+			.y1(d=> vis.y(d[1]));
 
-		console.log("displayData", this.displayData)
+		// SVG area path generator
+		vis.areaSingle = d3.area()
+			.curve(d3.curveCardinal)
+			.x(d=> vis.x(d.data.date))
+			.y0(vis.height)
+			.y1(d => vis.y(d[1]-d[0]));
+
+
+		//console.log("displayData", this.displayData)
 		// Draw the layers
 		let categories = vis.svg.selectAll(".area")
 			.data(vis.displayData);
