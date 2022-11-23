@@ -55,7 +55,7 @@ class HoverVis {
             .attr("stroke-opacity", 0)
             .attr("opacity", 0)
 
-        // Create the clickable hotspot circles
+        // Create the clickable tweetTimeline circles
         vis.hotspots = vis.svg.selectAll()
             .data(vis.data)
             .enter()

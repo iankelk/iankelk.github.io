@@ -17,9 +17,12 @@
 <!--    Google fonts-->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
 <!--    STYLESHEETS FOR EACH VIZ-->
+    <link rel="stylesheet" href="visuals/forceDirect/css/styles.css">
     <link rel="stylesheet" href="visuals/globe/css/styles.css">
     <link rel="stylesheet" href="visuals/chumBox/css/styles.css">
     <link rel="stylesheet" href="visuals/bubbles/css/style.css">
+    <link rel="stylesheet" href="visuals/tweetTimeline/css/styles.css">
+    <link rel="stylesheet" href="../hotspot/css/styles.css">
 
 </head>
 <body>
@@ -34,17 +37,46 @@
         <h1>Fake News: The Danger is Out there, Are You Prepared?</h1>
         <h2>Fake News is everywhere, and it only takes as few as half a dozen people to create a deep network of
             lies</h2>
-        <img src="img/force-direct.jpg">
-        <p>
-            <span style="font-weight:bold;">Description</span>
-            Force-directed graph illustrating the connections in retweets from the "Misinformation Half Dozen Dataset".
-            RA report from the Center for Countering Digital Hate showed that 65% of anti-vaccine misinformation can be
-            traced to just twelve people.
-            We managed to scrape information related to six of those that were not banned from Twitter.
-            Each node will be hoverable on and will display basic information about the Twitter accounts relative to
-            covid-19 misinformation.
-        </p>
+        <div class="container-fluid" >
+            <div class="row justify-content-center" id="top-row" >
+                <div class="align-self-center">
+                    <h1>Who Are the Misinformation 6 Contacting?</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="row" id="selector-row" >
+                <div class="col">
+                    <div class="row justify-content-center">
+                        <select id='category-force-direct' class="custom-select align-self-center" onchange="changeCategoryForceDirect()">
+                            <option value="followers" selected >By Number of Followers</option>
+                            <option value="following" >By Number of People They Follow</option>
+                            <option value="numTweets" >By Number of Tweets</option>
+                            <option value="numLists" >By Number of Lists</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-left" id="vis-row" >
+                <div class="col" id="force" ></div>
+            </div>
+        </div>
     </div>
+
+<!--    <div class="section" id="section1">-->
+<!--        <h1>Fake News: The Danger is Out there, Are You Prepared?</h1>-->
+<!--        <h2>Fake News is everywhere, and it only takes as few as half a dozen people to create a deep network of-->
+<!--            lies</h2>-->
+<!--        <img src="img/force-direct.jpg">-->
+<!--        <p>-->
+<!--            <span style="font-weight:bold;">Description</span>-->
+<!--            Force-directed graph illustrating the connections in retweets from the "Misinformation Half Dozen Dataset".-->
+<!--            RA report from the Center for Countering Digital Hate showed that 65% of anti-vaccine misinformation can be-->
+<!--            traced to just twelve people.-->
+<!--            We managed to scrape information related to six of those that were not banned from Twitter.-->
+<!--            Each node will be hoverable on and will display basic information about the Twitter accounts relative to-->
+<!--            covid-19 misinformation.-->
+<!--        </p>-->
+<!--    </div>-->
 
     <div class="section" id="section2">
         <h2>You've met the perpetrators, but what do they talk about?</h2>
@@ -259,18 +291,72 @@
 <!--        </p>-->
 <!--    </div>-->
 
+<!--    <div class="section" id="section6">-->
+<!--        <h2>So fake news are older than sliced bread, so what's this buzz about them now? Why should you care?</h2>-->
+<!--        <h3>Misinformation is used for personal profit. Misinformation shakes democracies. Misinformation Kills.</h3>-->
+<!--        <img src="img/retweets-deaths.jpg">-->
+<!--        <p>-->
+<!--            <span style="font-weight:bold;">Description</span>-->
+<!--            Two stacked graphs showing the relationship between retweets of the Misinformation Half Dozen and COVID-19-->
+<!--            deaths.-->
+<!--            Hovering on any of the line charts will show the deaths for that period and the number of tweets, retweets,-->
+<!--            likes.-->
+<!--            Brushing/Zooming may be included but are not a priority to drive the point that we are trying to make.-->
+<!--        </p>-->
+<!--    </div>-->
+
     <div class="section" id="section6">
         <h2>So fake news are older than sliced bread, so what's this buzz about them now? Why should you care?</h2>
         <h3>Misinformation is used for personal profit. Misinformation shakes democracies. Misinformation Kills.</h3>
-        <img src="img/retweets-deaths.jpg">
-        <p>
-            <span style="font-weight:bold;">Description</span>
-            Two stacked graphs showing the relationship between retweets of the Misinformation Half Dozen and COVID-19
-            deaths.
-            Hovering on any of the line charts will show the deaths for that period and the number of tweets, retweets,
-            likes.
-            Brushing/Zooming may be included but are not a priority to drive the point that we are trying to make.
-        </p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 offset-2 main-area" >
+
+                    <!-- header -->
+                    <div class="row justify-content-center" id="title-row">
+                        <div class="col-md-6">
+                            <div class="align-self-center">
+                                <h1>Covid vs Tweets</h1>
+                                <h2>How misinformation correlates with cases and deaths from COVID-19</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-3" id="radio">
+                            <br />
+                            <label>
+                                <input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases
+                            </label>
+                            <label>
+                                <input type="radio" name="case" value="deaths" onchange="toggleCase()"/>Deaths
+                            </label>
+                            <br /><br />
+                            <select id='tweet-category' class="custom-select align-self-center" onchange="changeTweetCategory()">
+                                <option value="tweets" selected>By # of Tweets</option>
+                                <option value="retweets">By # of Retweets</option>
+                                <option value="favorites">By # of Favorites</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3" >
+                            <br /><br />
+                            <select id='tweet-detail' class="custom-select align-self-center" onchange="changeDetail()">
+                                <option value="months" selected>Month Detail</option>
+                                <option value="weeks">Week Detail</option>
+                                <option value="days">Day Detail</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- graph -->
+                    <div class="row justify-content-center" id="stacked-area-chart-row" >
+                        <div class="align-self-center" id="stacked-area-chart" ></div>
+                    </div>
+
+                    <!-- brush -->
+                    <div class="row justify-content-center timeline-row" >
+                        <div class="align-self-center" id="timeline" ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="section" id="section7">
@@ -301,17 +387,35 @@
     <div class="section" id="section8">
         <h2>You've had your warmup, can you handle them all now?</h2>
         <h3>Explore lots of ways fake news present themselves and see if you ever fell for one of them </h3>
-        <img src="img/thumbs.jpg">
-        <p>
-            <span style="font-weight:bold;">Description</span>
-            A mockup of a fake news website, with several points with fake news, such as a misleading title, subtitle,
-            link, textual content.
-            Hovering over parts with different fake news the page will outline that area with a
-            circle/rectangle/suitable shape
-            and display a tooltip with tips on how to deal with that form of fake news.
-            Over time all of the areas will be highlighted on their own so the viewer does not miss any of them.
-        </p>
+        <div class="container-fluid" style="height: 100vh;">
+            <div class="row d-flex justify-content-center">
+            </div>
+            <div class="row d-flex justify-content-center"  id="vis-row">
+                <div class="col-md-8 justify-content-center border" id="hotspot-image"></div>
+                <div class="col-md-4 justify-content-center border">
+                    <h3 id="title-hotspot">How to Spot Fake News</h3><br/>
+                    <p id="description-hotspot">The most important thing is to consider the credibility of articles in the first place
+                        People's ability to discern and share real articles over fake nearly tripled after a
+                        simple reminder to check accuracy.</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+<!--    <div class="section" id="section8">-->
+<!--        <h2>You've had your warmup, can you handle them all now?</h2>-->
+<!--        <h3>Explore lots of ways fake news present themselves and see if you ever fell for one of them </h3>-->
+<!--        <img src="img/thumbs.jpg">-->
+<!--        <p>-->
+<!--            <span style="font-weight:bold;">Description</span>-->
+<!--            A mockup of a fake news website, with several points with fake news, such as a misleading title, subtitle,-->
+<!--            link, textual content.-->
+<!--            Hovering over parts with different fake news the page will outline that area with a-->
+<!--            circle/rectangle/suitable shape-->
+<!--            and display a tooltip with tips on how to deal with that form of fake news.-->
+<!--            Over time all of the areas will be highlighted on their own so the viewer does not miss any of them.-->
+<!--        </p>-->
+<!--    </div>-->
 
     <div class="section" id="section9">
         <h4>This is it! Fake news are out there, but you CAN detect and avoid them now!</h4>
@@ -380,6 +484,10 @@
     });
 </script>
 
+<!--Force-Directed Visualization-->
+<script src="visuals/forceDirect/js/forceVis.js"></script>
+<script src="visuals/forceDirect/js/main.js"></script>
+<script src="visuals/forceDirect/js/cola.min.js"></script>
 
 <!-- Globe Visualization -->
 <script src="visuals/globe/js/globeVis.js"></script>
@@ -392,8 +500,18 @@
 <script src="visuals/chumBox/js/main.js"></script>
 
 <!--Bubbles Visualization-->
-<script src = "visuals/bubbles/js/bubbleVis.js"></script>
+<script src ="visuals/bubbles/js/bubbleVis.js"></script>
 <script src="visuals/bubbles/js/main.js"></script>
+
+<!--Tweet Timeline Visualization-->
+<script src ="visuals/tweetTimeline/js/stackedAreaChart.js"></script>
+<script src="visuals/tweetTimeline/js/timeline.js"></script>
+<script src="visuals/tweetTimeline/js/main.js"></script>
+
+<!--Hotspot Visualization-->
+<script src ="visuals/hotspot/js/hoverVis.js"></script>
+<script src="visuals/hotspot/js/main.js"></script>
+
 
 <!--<script src="js/main.js"></script>-->
 </body>

@@ -17,14 +17,14 @@ let promises = [
 
 Promise.all(promises)
     .then(function (data) {
-        initMainPage(data);
+        initMainPageBubbles(data);
     })
     .catch(function (err) {
         console.log(err);
     });
 
 // initMainPage
-function initMainPage(dataArray) {
+function initMainPageBubbles(dataArray) {
     let motiveData = dataArray[0];
     let narrativeData = dataArray[1];
     let regionData = dataArray[2];
