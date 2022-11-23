@@ -19,18 +19,19 @@ constructor(parentElement, data) {
 	this.filter = "";
 
 	this.data.tweets.forEach(function(d){
-		d.date = d3.timeMonth(d3.isoParse(d.date));
+		d.date = d3.isoParse(d.date);
 	});
-	this.data.tweets = this.aggregateDates(this.data.tweets)
+	//this.data.tweets = this.aggregateDates(this.data.tweets)
 
 	this.data.retweets.forEach(function(d){
 		d.date = d3.isoParse(d.date);
 	});
+
 	this.data.favorites.forEach(function(d){
 		d.date = d3.isoParse(d.date);
 	});
 
-    let colors = ['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c'];
+	let colors = ['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c'];
 
     // grab all the keys from the key value pairs in data (filter out 'year' ) to get a list of categories
     this.dataCategories = Object.keys(this.data[selectedTweetCategory][0]).filter(d =>d !== "date")
@@ -128,13 +129,43 @@ constructor(parentElement, data) {
 	wrangleData(transitionTime = 0){
 		let vis = this;
 
-		vis.stackedData = vis.stack(vis.data[selectedTweetCategory]);
+		let timeFunction;
+		switch (selectedTweetDetail) {
+			case "months":
+				timeFunction = d3.timeMonth;
+				break;
+			case "weeks":
+				timeFunction = d3.timeWeek;
+				break;
+			case "days":
+				timeFunction = d3.timeDay;
+				break;
+		}
 
-		vis.displayData = vis.stackedData;
+		let wrangledData = JSON.parse(JSON.stringify(vis.data));
+
+		wrangledData.tweets.forEach(function(d){
+			d.date = timeFunction(d3.isoParse(d.date));
+		});
+		wrangledData.tweets = vis.aggregateDates(wrangledData.tweets)
+
+		wrangledData.retweets.forEach(function(d){
+			d.date = timeFunction(d3.isoParse(d.date));
+		});
+		wrangledData.retweets = vis.aggregateDates(wrangledData.retweets)
+
+		wrangledData.favorites.forEach(function(d){
+			d.date = timeFunction(d3.isoParse(d.date));
+		});
+		wrangledData.favorites = vis.aggregateDates(wrangledData.favorites)
+
+		vis.stackedData = vis.stack(wrangledData[selectedTweetCategory]);
 
 		if (vis.filter !== "") {
 			let indexOfFilteredCategory = vis.dataCategories.findIndex(d => d === vis.filter);
 			vis.displayData = [vis.stackedData[indexOfFilteredCategory]];
+		} else {
+			vis.displayData = vis.stackedData;
 		}
 
 		// Update the visualization

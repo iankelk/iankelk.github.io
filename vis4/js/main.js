@@ -2,6 +2,7 @@
 let myAreaChartVis;
 let myTimeLineVis;
 let selectedTweetCategory =  document.getElementById('tweet-category').value;
+let selectedTweetDetail =  document.getElementById('tweet-detail').value;
 let selectedCasesDeaths =  document.getElementById('case').checked ? "cases" : "deaths";
 
 // Load data using promises
@@ -32,6 +33,13 @@ function initMainPage(dataArray) {
 // Selector listener
 function changeTweetCategory() {
 	selectedTweetCategory =  document.getElementById('tweet-category').value;
+	myAreaChartVis.wrangleData();
+	//myTimeLineVis.wrangleData();
+}
+
+// Selector listener
+function changeDetail() {
+	selectedTweetDetail =  document.getElementById('tweet-detail').value;
 	myAreaChartVis.wrangleData();
 	//myTimeLineVis.wrangleData();
 }
