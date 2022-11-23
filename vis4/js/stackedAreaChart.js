@@ -1,4 +1,3 @@
-
 /*
  * StackedAreaChart - ES6 Class
  * @param  parentElement 	-- the HTML element in which to draw the visualization
@@ -120,7 +119,6 @@ constructor(parentElement, data) {
 
 		// TO-DO: (Filter, aggregate, modify data)
 		vis.wrangleData();
-
 	}
 
 	/*
@@ -180,7 +178,9 @@ constructor(parentElement, data) {
 		let vis = this;
 
 		// Add a transition for when the brush is cleared
-		let t = d3.transition().duration(transitionTime);
+		//let t = d3.transition().duration(transitionTime);
+		//let t = d3.transition().duration(300);
+		let chartTrans = d3.transition().duration(300);
 
 		// Update domain
         // Get the maximum of the multi-dimensional array or in other words, get the highest peak of the uppermost layer
@@ -216,7 +216,7 @@ constructor(parentElement, data) {
 		let categories = vis.svg.selectAll(".area")
 			.data(vis.displayData);
 
-		let cat = categories.enter().append("path")
+		categories.enter().append("path")
 			.attr("class", "area")
 			.merge(categories)
 			// TO-DO (Activity IV): update tooltip text on hover
@@ -229,10 +229,11 @@ constructor(parentElement, data) {
 				vis.filter = (vis.filter) ? "" : d.key;
  				vis.wrangleData(transitionTime);
 			})
-			.transition(t)
+
 			.style("fill", (d) => {
 				return vis.colorScale(d.key)
 			})
+			.transition(chartTrans)
 			.attr("d", function(d) {
 				if(vis.filter) {
 					return vis.areaSingle(d);
@@ -241,6 +242,7 @@ constructor(parentElement, data) {
 					return vis.area(d);
 				}
 			})
+
 
 		categories.exit().remove();
 

@@ -82,6 +82,7 @@ function brushed(event) {
 	// TO-DO: React to 'brushed' event
 	// Get the extent of the current brush
 	let selectionRange = d3.brushSelection(d3.select(".brush").node());
+	console.log("selectionrange", selectionRange);
 
 	// Convert the extent into the corresponding domain values
 	let selectionDomain = selectionRange.map(myTimeLineVis.xScale.invert);

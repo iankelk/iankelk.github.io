@@ -53,6 +53,35 @@ class Timeline {
 		vis.xAxis = d3.axisBottom()
 			.scale(vis.x);
 
+		// Draw area by using the path generator
+		vis.pathGen = vis.svg.append("path")
+
+		// Initialize brush component
+		vis.brush = d3.brushX()
+			.extent([[0, 0], [vis.width, vis.height]])
+			.on("brush end", brushed);
+
+		// TO-DO: Append brush component here
+		vis.svg.append("g")
+			.attr("class", "x brush")
+			.call(vis.brush)
+			.selectAll("rect")
+			.attr("y", -6)
+			.attr("height", vis.height + 7);
+
+		vis.svg.append("defs").append("clipPath")
+			.attr("id", "clip")
+			.append("rect")
+			.attr("width", vis.width)
+			.attr("height", vis.height);
+
+		// Append x-axis
+		vis.svg.append("g")
+			.attr("class", "x-axis axis")
+			.attr("transform", "translate(0," + vis.height + ")")
+			.call(vis.xAxis);
+
+
 		vis.wrangleData();
 
 	}
@@ -65,7 +94,9 @@ class Timeline {
 	updateVis() {
 		let vis = this;
 
-		vis.y.domain([0, d3.max(vis.displayData, function(d) { return d[selectedCasesDeaths]; })]);
+		const t = d3.transition().duration(500).ease(d3.easeLinear);
+
+		vis.y.domain([0, d3.max(vis.displayData, (d) => d[selectedCasesDeaths])]);
 
 		// SVG area path generator
 		vis.area = d3.area()
@@ -73,42 +104,20 @@ class Timeline {
 			.y0(vis.height)
 			.y1(function(d) { return vis.y(d[selectedCasesDeaths]); });
 
-		if(vis.pathGen) vis.pathGen.remove();
+		//if(vis.pathGen) vis.pathGen.remove();
 
 		// Draw area by using the path generator
-		vis.pathGen = vis.svg.append("path")
+		vis.pathGen
 			.datum(vis.displayData)
-			.attr("fill", "#ccc")
-			.attr("d", vis.area);
+			.transition().duration(400)
+			.attr("d", vis.area)
+			.attr("fill", "#ccc");
+
         // TO-DO: Initialize brush component
         // Initialize time scale (x-axis)
         vis.xScale = d3.scaleTime()
             .range([0, vis.width])
             .domain(d3.extent(vis.displayData, function(d) { return d.date; }));
 
-        // Initialize brush component
-        vis.brush = d3.brushX()
-            .extent([[0, 0], [vis.width, vis.height]])
-            .on("brush end", brushed);
-
-        // TO-DO: Append brush component here
-        vis.svg.append("g")
-            .attr("class", "x brush")
-            .call(vis.brush)
-            .selectAll("rect")
-            .attr("y", -6)
-            .attr("height", vis.height + 7);
-
-        vis.svg.append("defs").append("clipPath")
-            .attr("id", "clip")
-            .append("rect")
-            .attr("width", vis.width)
-            .attr("height", vis.height);
-
-        // Append x-axis
-        vis.svg.append("g")
-            .attr("class", "x-axis axis")
-            .attr("transform", "translate(0," + vis.height + ")")
-            .call(vis.xAxis);
 	}
 }
