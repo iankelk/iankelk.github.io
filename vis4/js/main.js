@@ -23,8 +23,6 @@ Promise.all(promises)
 // initMainPage
 function initMainPage(dataArray) {
 	let data = dataArray[0];
-	console.log(selectedTweetCategory)
-
 	// Init areachart and timeline
 	myAreaChartVis = new StackedAreaChart(document.getElementById('stacked-area-chart'), data.tweets);
 	myTimeLineVis = new Timeline(document.getElementById('timeline'), data.covid);
@@ -34,14 +32,12 @@ function initMainPage(dataArray) {
 function changeTweetCategory() {
 	selectedTweetCategory =  document.getElementById('tweet-category').value;
 	myAreaChartVis.wrangleData();
-	//myTimeLineVis.wrangleData();
 }
 
 // Selector listener
 function changeDetail() {
 	selectedTweetDetail =  document.getElementById('tweet-detail').value;
 	myAreaChartVis.wrangleData();
-	//myTimeLineVis.wrangleData();
 }
 
 function toggleCase() {
@@ -82,7 +78,6 @@ function brushed(event) {
 	// TO-DO: React to 'brushed' event
 	// Get the extent of the current brush
 	let selectionRange = d3.brushSelection(d3.select(".brush").node());
-	console.log("selectionrange", selectionRange);
 
 	// Convert the extent into the corresponding domain values
 	let selectionDomain = selectionRange.map(myTimeLineVis.xScale.invert);

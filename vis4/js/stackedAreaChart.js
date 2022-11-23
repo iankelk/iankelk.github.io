@@ -35,21 +35,18 @@ constructor(parentElement, data) {
     // grab all the keys from the key value pairs in data (filter out 'year' ) to get a list of categories
     this.dataCategories = Object.keys(this.data[selectedTweetCategory][0]).filter(d =>d !== "date")
 
-	console.log(this.dataCategories)
-
     //prepare colors for range
-    let colorArray = this.dataCategories.map( (d,i) => {
-        return colors[i%6]
-    })
-
-	console.log("colorarray",colorArray)
+    // let colorArray = this.dataCategories.map( (d,i) => {
+    //     return colors[i%6]
+    // })
+	//
+	// console.log("colorarray",colorArray)
     //Set ordinal color scale
-    this.colorScale = d3.scaleOrdinal()
-        .domain(this.dataCategories)
-        .range(colorArray);
+    // this.colorScale = d3.scaleOrdinal()
+    //     .domain(this.dataCategories)
+    //     .range(colorArray);
 
-	//this.colorScale = d3.scaleOrdinal(this.dataCategories, d3.schemeTableau10)
-	console.log(this.colorScale("DrButtar"))
+	this.colorScale = d3.scaleOrdinal(this.dataCategories, d3.schemeTableau10)
 
 	this.initVis();
 }
@@ -59,8 +56,6 @@ constructor(parentElement, data) {
  	*/
 	initVis(){
 		let vis = this;
-
-		console.log("data here",vis.data[selectedTweetCategory])
 
 		vis.margin = {top: 40, right: 40, bottom: 60, left: 40};
 
@@ -210,8 +205,6 @@ constructor(parentElement, data) {
 			.y0(vis.height)
 			.y1(d => vis.y(d[1]-d[0]));
 
-
-		//console.log("displayData", this.displayData)
 		// Draw the layers
 		let categories = vis.svg.selectAll(".area")
 			.data(vis.displayData);
@@ -247,8 +240,8 @@ constructor(parentElement, data) {
 		categories.exit().remove();
 
 		// Call axis functions with the new domain
-		vis.svg.select(".x-axis").call(vis.xAxis);
-		vis.svg.select(".y-axis").call(vis.yAxis);
+		vis.svg.select(".x-axis").transition().duration(300).call(vis.xAxis);
+		vis.svg.select(".y-axis").transition().duration(300).call(vis.yAxis);
 	}
 
 	aggregateDates(data) {

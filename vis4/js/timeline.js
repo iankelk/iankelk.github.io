@@ -19,7 +19,6 @@ class Timeline {
 			d.date = d3.isoParse(d.date);
 		});
 
-		console.log("data", data)
 		this.initVis();
 	}
 
