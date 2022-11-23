@@ -14,6 +14,7 @@ class Timeline {
 
 		// No data wrangling, no update sequence
 		this._displayData = data;
+		console.log("displaydata", this._displayData)
 	}
 
 	// create initVis method for Timeline class

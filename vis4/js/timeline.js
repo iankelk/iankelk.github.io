@@ -9,11 +9,18 @@ class Timeline {
 
 	// constructor method to initialize Timeline object
 	constructor(parentElement, data){
-		this._parentElement = parentElement;
-		this._data = data;
+		this.parentElement = parentElement;
+		this.data = data;
 
 		// No data wrangling, no update sequence
-		this._displayData = data;
+		this.displayData = data;
+
+		this.data.forEach(function(d){
+			d.date = d3.isoParse(d.date);
+		});
+
+		console.log("data", data)
+		this.initVis();
 	}
 
 	// create initVis method for Timeline class
@@ -24,11 +31,11 @@ class Timeline {
 
 		vis.margin = {top: 0, right: 40, bottom: 30, left: 40};
 
-		vis.width = vis._parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-		vis.height = vis._parentElement.getBoundingClientRect().height  - vis.margin.top - vis.margin.bottom;
+		vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
+		vis.height = vis.parentElement.getBoundingClientRect().height  - vis.margin.top - vis.margin.bottom;
 
 		// SVG drawing area
-		vis.svg = d3.select(vis._parentElement).append("svg")
+		vis.svg = d3.select(vis.parentElement).append("svg")
 			.attr("width", vis.width + vis.margin.left + vis.margin.right)
 			.attr("height", vis.height + vis.margin.top + vis.margin.bottom)
 			.append("g")
@@ -37,24 +44,24 @@ class Timeline {
 		// Scales and axes
 		vis.x = d3.scaleTime()
 			.range([0, vis.width])
-			.domain(d3.extent(vis._displayData, function(d) { return d.Year; }));
+			.domain(d3.extent(vis.displayData, function(d) { return d.date; }));
 
 		vis.y = d3.scaleLinear()
 			.range([vis.height, 0])
-			.domain([0, d3.max(vis._displayData, function(d) { return d.Expenditures; })]);
+			.domain([0, d3.max(vis.displayData, function(d) { return d[selectedCasesDeaths]; })]);
 
 		vis.xAxis = d3.axisBottom()
 			.scale(vis.x);
 
 		// SVG area path generator
 		vis.area = d3.area()
-			.x(function(d) { return vis.x(d.Year); })
+			.x(function(d) { return vis.x(d.date); })
 			.y0(vis.height)
-			.y1(function(d) { return vis.y(d.Expenditures); });
+			.y1(function(d) { return vis.y(d[selectedCasesDeaths]); });
 
 		// Draw area by using the path generator
 		vis.svg.append("path")
-			.datum(vis._displayData)
+			.datum(vis.displayData)
 			.attr("fill", "#ccc")
 			.attr("d", vis.area);
 
@@ -62,7 +69,7 @@ class Timeline {
 		// Initialize time scale (x-axis)
 		vis.xScale = d3.scaleTime()
 			.range([0, vis.width])
-			.domain(d3.extent(vis._displayData, function(d) { return d.Year; }));
+			.domain(d3.extent(vis.displayData, function(d) { return d.date; }));
 
 		// Initialize brush component
 		vis.brush = d3.brushX()
@@ -89,5 +96,17 @@ class Timeline {
 			.attr("class", "x-axis axis")
 			.attr("transform", "translate(0," + vis.height + ")")
 			.call(vis.xAxis);
+	}
+	wrangleData() {
+		let vis = this;
+	}
+
+	updateVis() {
+		let vis = this;
+
+		vis.y.domain([0, d3.max(vis.displayData, function(d) { return d[selectedCasesDeaths]; })]);
+
+		// SVG area path generator
+		vis.area = d3.area().y1(function(d) { return vis.y(d[selectedCasesDeaths]); });
 	}
 }

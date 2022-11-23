@@ -2,6 +2,7 @@
 let myAreaChartVis;
 let myTimeLineVis;
 let selectedTweetCategory =  document.getElementById('tweet-category').value;
+let selectedCasesDeaths =  document.getElementById('case').checked ? "cases" : "deaths";
 
 // Load data using promises
 let promises = [
@@ -25,7 +26,7 @@ function initMainPage(dataArray) {
 
 	// Init areachart and timeline
 	myAreaChartVis = new StackedAreaChart(document.getElementById('stacked-area-chart'), data.tweets);
-	//myTimeLineVis = new Timeline(document.getElementById('timeline'), data.covid);
+	myTimeLineVis = new Timeline(document.getElementById('timeline'), data.covid);
 }
 
 // Selector listener
@@ -34,6 +35,12 @@ function changeTweetCategory() {
 	myAreaChartVis.wrangleData();
 	//myTimeLineVis.wrangleData();
 }
+
+function toggleCase() {
+	selectedCasesDeaths =  document.getElementById('case').checked ? "cases" : "deaths";
+	myTimeLineVis.wrangleData();
+}
+
 // Proper case function adapted from here: https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
 String.prototype.toProperCase = function () {
 	return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();});

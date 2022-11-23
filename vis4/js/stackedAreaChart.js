@@ -22,7 +22,7 @@ constructor(parentElement, data) {
 		d.date = d3.timeMonth(d3.isoParse(d.date));
 	});
 	this.data.tweets = this.aggregateDates(this.data.tweets)
-	
+
 	this.data.retweets.forEach(function(d){
 		d.date = d3.isoParse(d.date);
 	});
@@ -203,9 +203,7 @@ constructor(parentElement, data) {
  				vis.wrangleData(transitionTime);
 			})
 			.transition(t)
-			.style("fill", (d,i) => {
-				console.log("i",i)
-				console.log("d",d)
+			.style("fill", (d) => {
 				return vis.colorScale(d.key)
 			})
 			.attr("d", function(d) {
