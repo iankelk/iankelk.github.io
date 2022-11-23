@@ -82,5 +82,6 @@ function brushed(event) {
 	// Convert the extent into the corresponding domain values
 	let selectionDomain = selectionRange.map(myTimeLineVis.xScale.invert);
 	myAreaChartVis.x.domain(selectionDomain)
-	myAreaChartVis.wrangleData();
+	console.log(selectionDomain)
+	myAreaChartVis.wrangleData(true);
 }

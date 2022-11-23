@@ -119,7 +119,7 @@ constructor(parentElement, data) {
 	/*
  	* Data wrangling
  	*/
-	wrangleData(transitionTime = 0){
+	wrangleData(skipTransition=false){
 		let vis = this;
 
 		let timeFunction;
@@ -162,20 +162,20 @@ constructor(parentElement, data) {
 		}
 
 		// Update the visualization
-		vis.updateVis(transitionTime);
+		vis.updateVis(skipTransition);
 	}
 
 	/*
 	 * The drawing function - should use the D3 update sequence (enter, update, exit)
  	* Function parameters only needed if different kinds of updates are needed
  	*/
-	updateVis(transitionTime=0){
+	updateVis(skipTransition=false){
 		let vis = this;
 
 		// Add a transition for when the brush is cleared
 		//let t = d3.transition().duration(transitionTime);
 		//let t = d3.transition().duration(300);
-		let chartTrans = d3.transition().duration(300);
+		let chartTrans = d3.transition().duration(300).ease(d3.easeCubic);
 
 		// Update domain
         // Get the maximum of the multi-dimensional array or in other words, get the highest peak of the uppermost layer
@@ -209,38 +209,51 @@ constructor(parentElement, data) {
 		let categories = vis.svg.selectAll(".area")
 			.data(vis.displayData);
 
-		categories.enter().append("path")
+		let cat = categories.enter().append("path")
 			.attr("class", "area")
 			.merge(categories)
-			// TO-DO (Activity IV): update tooltip text on hover
+			.style("fill", (d) => {
+				return vis.colorScale(d.key)
+			});
+
+		cat
 			.on("mouseover", function(event, d) {
 				vis.tooltipText
 					.text(d.key);
 			})
 			.on("click", (event, d)=> {
-				let transitionTime = (vis.filter) ? 0 : 300;
-				vis.filter = (vis.filter) ? "" : d.key;
- 				vis.wrangleData(transitionTime);
-			})
+				vis.filter = vis.filter ? "" : d.key;
+ 				vis.wrangleData(false);
+			});
 
-			.style("fill", (d) => {
-				return vis.colorScale(d.key)
-			})
-			.transition(chartTrans)
-			.attr("d", function(d) {
-				if(vis.filter) {
-					return vis.areaSingle(d);
-				}
-				else {
-					return vis.area(d);
-				}
-			})
+		if (skipTransition) {
+			cat
+				.attr("d", function(d) {
+					if(vis.filter) {
+						return vis.areaSingle(d);
+					}
+					else {
+						return vis.area(d);
+					}
+				})
+		} else {
+			cat
+				.transition(chartTrans)
+				.attr("d", function(d) {
+					if(vis.filter) {
+						return vis.areaSingle(d);
+					}
+					else {
+						return vis.area(d);
+					}
+				})
+		}
 
 
 		categories.exit().remove();
 
 		// Call axis functions with the new domain
-		vis.svg.select(".x-axis").transition().duration(300).call(vis.xAxis);
+		vis.svg.select(".x-axis").call(vis.xAxis);
 		vis.svg.select(".y-axis").transition().duration(300).call(vis.yAxis);
 	}
 
@@ -263,5 +276,9 @@ constructor(parentElement, data) {
 			b.push(a[key]);
 		}
 		return b;
+	}
+
+	disableTransitionForBrush() {
+
 	}
 }
