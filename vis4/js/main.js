@@ -22,7 +22,6 @@ Promise.all(promises)
 function initMainPage(dataArray) {
 	let data = dataArray[0];
 	console.log(selectedTweetCategory)
-	console.log(data)
 
 	// Init areachart and timeline
 	myAreaChartVis = new StackedAreaChart(document.getElementById('stacked-area-chart'), data.tweets);

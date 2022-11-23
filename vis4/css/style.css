@@ -75,3 +75,15 @@ h2 {
   height: 100%;
   width: 100%;
 }
+
+/****************/
+/*    SLIDER    */
+/****************/
+
+#range-slider {
+  margin: 40px 20px 50px 30px;
+}
+
+.noUi-connect {
+  background: #92B592;
+}

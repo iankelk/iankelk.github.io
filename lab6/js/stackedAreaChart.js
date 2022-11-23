@@ -28,6 +28,8 @@ constructor(parentElement, data) {
     let colorArray = this.dataCategories.map( (d,i) => {
         return colors[i%10]
     })
+
+	console.log("colorArray", colorArray)
     // Set ordinal color scale
     this.colorScale = d3.scaleOrdinal()
         .domain(this.dataCategories)
@@ -158,7 +160,7 @@ constructor(parentElement, data) {
 			});
 		})
 		]);
-
+		console.log("displayData", this.displayData)
 		// Draw the layers
 		let categories = vis.svg.selectAll(".area")
 			.data(vis.displayData);
@@ -178,6 +180,7 @@ constructor(parentElement, data) {
 			})
 			.transition(t)
 			.style("fill", d => {
+				console.log("d",d)
 				return vis.colorScale(d)
 			})
 			.attr("d", function(d) {

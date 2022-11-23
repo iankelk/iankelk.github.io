@@ -26,13 +26,14 @@
 
             <!-- header -->
             <div class="row justify-content-center" id="title-row">
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="align-self-center">
                         <h1>Covid vs Tweets</h1>
                         <h2>How metrics changed over 2020 for COVID-19</h2>
                     </div>
                 </div>
-                <div class="col-md-4" id="radio">
+                <div class="col-md-3" id="radio">
+                    <br />
                     <label>
                         <input type="radio" name="case" value="cases"  onchange="toggleCase()" checked/>Cases
                     </label>
@@ -44,6 +45,14 @@
                         <option value="tweets" selected>By # of Tweets</option>
                         <option value="retweets">By # of Retweets</option>
                         <option value="favorites">By # of Favorites</option>
+                    </select>
+                </div>
+                <div class="col-md-3" >
+                    <br /><br />
+                    <select id='tweet-detail' class="custom-select align-self-center" onchange="changeDetail()">
+                        <option value="months" selected>Month Detail</option>
+                        <option value="weeks">Week Detail</option>
+                        <option value="days">Day Detail</option>
                     </select>
                 </div>
             </div>
