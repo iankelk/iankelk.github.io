@@ -13,7 +13,7 @@ class BubbleVis {
         this.categories["region"] =  [...new Set(regionData.map(d => d.region))]
 
         //console.log("motives", this.motives);
-        selectedCategory =  document.getElementById('category').value;
+        selectedCategoryBubbles =  document.getElementById('category-bubbles').value;
         console.log("categories", this.categories);
 
         this.initVis()
@@ -49,7 +49,7 @@ class BubbleVis {
             .range([vis.margin.left, vis.width - vis.margin.right])
 
         vis.y = d3.scaleBand()
-            .domain(vis.categories[selectedCategory])
+            .domain(vis.categories[selectedCategoryBubbles])
             .range([vis.height / 2, vis.height / 2])
 
         vis.r = d3.scaleSqrt()
@@ -108,7 +108,7 @@ class BubbleVis {
 
         vis.r.domain(d3.extent(vis.data, d => d.count))
         vis.x.domain(d3.extent(vis.data, d => d.date))
-        vis.y.domain(vis.categories[selectedCategory])
+        vis.y.domain(vis.categories[selectedCategoryBubbles])
 
         if (vis.node) {
             console.log("removing node")
@@ -119,7 +119,7 @@ class BubbleVis {
             .data(vis.data)
             .join("circle")
             .attr("cx", d => vis.x(d.date))
-            .attr("cy", d => vis.y(d[selectedCategory]) + vis.y.bandwidth() / 2)
+            .attr("cy", d => vis.y(d[selectedCategoryBubbles]) + vis.y.bandwidth() / 2)
             .attr("r", d => vis.r(d.count))
             .attr("stroke", "white")
             .attr("stroke-width", 1)
@@ -134,7 +134,7 @@ class BubbleVis {
                     .style("top", event.pageY + "px")
                     .html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
-                         <h4>${selectedCategory.toProperCase()}: ${d[selectedCategory]}</h4>
+                         <h4>${selectedCategoryBubbles.toProperCase()}: ${d[selectedCategoryBubbles]}</h4>
                          <strong>Date: </strong> ${d.date.toLocaleString("en-US")}<br />
                          <strong>Count: </strong>${d.count}<br />
                      </div>`);
@@ -151,11 +151,11 @@ class BubbleVis {
             });
 
 
-        console.log("selectedCategory", selectedCategory)
+        console.log("selectedCategory", selectedCategoryBubbles)
 
         vis.simulation = d3.forceSimulation()
             .force("x", d3.forceX(d => vis.x(d.date)))
-            .force("y", d3.forceY(d => vis.y(d[selectedCategory]) + vis.y.bandwidth() / 2))
+            .force("y", d3.forceY(d => vis.y(d[selectedCategoryBubbles]) + vis.y.bandwidth() / 2))
             .force("collide", d3.forceCollide(d => vis.r(d.count) + 1).strength(0.5));
 
         vis.simulation.on("tick", () => {
@@ -174,9 +174,9 @@ class BubbleVis {
         vis.height = split ? 650 : 400;
 
 
-        vis.y.domain(split ? vis.categories[selectedCategory] : vis.categories[selectedCategory].concat("Global")); // workaround for updating the yAxis
+        vis.y.domain(split ? vis.categories[selectedCategoryBubbles] : vis.categories[selectedCategoryBubbles].concat("Global")); // workaround for updating the yAxis
         vis.y.range(split ? [vis.margin.top, vis.height - vis.margin.bottom] : [vis.height / 2, vis.height / 2]);
-        let ticks = split ? vis.categories[selectedCategory] : ["Global"];
+        let ticks = split ? vis.categories[selectedCategoryBubbles] : ["Global"];
         console.log("ticks", ticks)
 
         const t = vis.svg.transition().duration(400);
@@ -190,8 +190,8 @@ class BubbleVis {
     // Depending on which data we're looking at, format the ticks to better display it
     getDataset() {
         let vis = this;
-        selectedCategory = document.getElementById('category').value;
-        switch (selectedCategory) {
+        selectedCategoryBubbles = document.getElementById('category-bubbles').value;
+        switch (selectedCategoryBubbles) {
             case "motive":
                 return vis.motiveData;
             case "narrative":

@@ -1,9 +1,9 @@
 // Init global variables
 let myBubbleVis;
-let selectedCategory =  document.getElementById('category').value;
+let selectedCategoryBubbles =  document.getElementById('category-bubbles').value;
 
 // Load data using promises
-let promises = [
+let promisesBubbles = [
     d3.json("visuals/bubbles/data/motive.json", (row, i) => {
         row.map((d, i) => ({id: i + 1, ...d}))
     }),
@@ -15,7 +15,7 @@ let promises = [
     })
 ];
 
-Promise.all(promises)
+Promise.all(promisesBubbles)
     .then(function (data) {
         initMainPageBubbles(data);
     })

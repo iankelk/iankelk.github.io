@@ -12,16 +12,17 @@ let promisesTweetTimeline = [
 	})
 ];
 
+
 Promise.all(promisesTweetTimeline)
 	.then(function (data) {
-		initMainPageHotspot(data);
+		initMainPageTweetTimeline(data);
 	})
 	.catch(function (err) {
 		console.log(err);
 	});
 
 // initMainPage
-function initMainPageHotspot(dataArray) {
+function initMainPageTweetTimeline(dataArray) {
 	let data = dataArray[0];
 	// Init areachart and timeline
 	myAreaChartVis = new StackedAreaChart(document.getElementById('stacked-area-chart'), data.tweets);

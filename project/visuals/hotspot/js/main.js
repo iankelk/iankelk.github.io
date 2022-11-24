@@ -1,5 +1,7 @@
 // Init global variables
+
 let myHoverVis;
+
 
 // Load data using promises
 let promisesHotspot = [
@@ -8,10 +10,11 @@ let promisesHotspot = [
     })
 ];
 
+
 Promise.all(promisesHotspot)
     .then(function (data) {
-        initMainPageHotspot(data);
-    })
+    initMainPageHotspot(data);
+})
     .catch(function (err) {
         console.log(err);
     });

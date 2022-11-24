@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="visuals/chumBox/css/styles.css">
     <link rel="stylesheet" href="visuals/bubbles/css/style.css">
     <link rel="stylesheet" href="visuals/tweetTimeline/css/styles.css">
-    <link rel="stylesheet" href="../hotspot/css/styles.css">
+    <link rel="stylesheet" href="visuals/hotspot/css/styles.css">
 
 </head>
 <body>
@@ -38,13 +38,13 @@
         <h2>Fake News is everywhere, and it only takes as few as half a dozen people to create a deep network of
             lies</h2>
         <div class="container-fluid" >
-            <div class="row justify-content-center" id="top-row" >
+            <div class="row justify-content-center" id="top-row-force-direct" >
                 <div class="align-self-center">
                     <h1>Who Are the Misinformation 6 Contacting?</h1>
                 </div>
             </div>
             <hr>
-            <div class="row" id="selector-row" >
+            <div class="row" id="selector-row-force-direct" >
                 <div class="col">
                     <div class="row justify-content-center">
                         <select id='category-force-direct' class="custom-select align-self-center" onchange="changeCategoryForceDirect()">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-left" id="vis-row" >
+            <div class="row justify-content-left" id="vis-row-force-direct" >
                 <div class="col" id="force" ></div>
             </div>
         </div>
@@ -261,7 +261,7 @@
                         </select>
                     </div>
                     <div class="row justify-content-center">
-                        <select id='category' class="custom-select align-self-center" onchange="changeCategory()">
+                        <select id='category-bubbles' class="custom-select align-self-center" onchange="changeCategory()">
                             <option value="motive" selected>By Motive</option>
                             <option value="narrative">By Narrative</option>
                             <option value="region">By Region</option>
@@ -269,7 +269,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center" id="vis-row" >
+            <div class="row justify-content-center" id="vis-row-bubble" >
                 <div class="col" id="bubble" ></div>
             </div>
         </div>
@@ -390,7 +390,7 @@
         <div class="container-fluid" style="height: 100vh;">
             <div class="row d-flex justify-content-center">
             </div>
-            <div class="row d-flex justify-content-center"  id="vis-row">
+            <div class="row d-flex justify-content-center"  id="vis-row-hotspot">
                 <div class="col-md-8 justify-content-center border" id="hotspot-image"></div>
                 <div class="col-md-4 justify-content-center border">
                     <h3 id="title-hotspot">How to Spot Fake News</h3><br/>
