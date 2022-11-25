@@ -84,8 +84,8 @@ class Timeline {
 		vis.radioButtons = d3.select(".timeline-row").append('div')
 			.attr('class', "radio-buttons")
 			.style("opacity", 1)
-			.style("left",vis.width+160 + "px")
-			.style("bottom", vis.height+30 + "px")
+			.style("left",70 + "vw")
+			.style("bottom", 16  + "vh")
 			.html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px; width:10%;">
                      	<label >
@@ -95,7 +95,6 @@ class Timeline {
 								<input type="radio" name="case" value="deaths" onchange="toggleCase()"/>Deaths
 						</label>
                     </div>`);
-
 
 		vis.wrangleData();
 
