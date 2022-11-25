@@ -41,7 +41,9 @@ function changeDetail() {
 }
 
 function toggleCase() {
-	selectedCasesDeaths =  document.getElementById('case').checked ? "cases" : "deaths";
+	if (document.getElementById('case').checked) selectedCasesDeaths = "cases";
+	else if (document.getElementById('death').checked) selectedCasesDeaths = "deaths";
+	else selectedCasesDeaths = "both";
 	myTimeLineVis.wrangleData();
 }
 

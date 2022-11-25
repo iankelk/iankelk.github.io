@@ -83,6 +83,7 @@ h2 {
   position: absolute;
   text-align: left;
   font: 12px sans-serif;
+  width: 100%;
 }
 .radio-buttons h3,h4 {
   text-align: left;
@@ -92,7 +93,7 @@ h2 {
   color: darkblue;
 }
 label {
-  margin-right: 23px;
+  /*margin-right: 50px;*/
 }
 input {
   margin-right: 5px;

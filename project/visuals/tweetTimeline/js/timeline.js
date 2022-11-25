@@ -84,15 +84,18 @@ class Timeline {
 		vis.radioButtons = d3.select(".timeline-row").append('div')
 			.attr('class', "radio-buttons")
 			.style("opacity", 1)
-			.style("left",70 + "vw")
+			.style("left",20 + "vw")
 			.style("bottom", 16  + "vh")
 			.html(`
-                     <div style="border: thin solid grey; border-radius: 5px; padding: 10px; width:10%;">
+                     <div style="border: thin solid grey; border-radius: 5px; padding: 5px; width:7%;">
                      	<label >
                         	<input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases
                     	</label>
 						<label >
-								<input type="radio" name="case" value="deaths" onchange="toggleCase()"/>Deaths
+							<input type="radio" name="case" value="deaths" id="death" onchange="toggleCase()"/>Deaths
+						</label>
+						<label >
+							<input type="radio" name="case" value="both" onchange="toggleCase()"/>Both (Log10)
 						</label>
                     </div>`);
 
@@ -110,28 +113,70 @@ class Timeline {
 
 		const t = d3.transition().duration(500).ease(d3.easeLinear);
 
-		vis.y.domain([0, d3.max(vis.displayData, (d) => d[selectedCasesDeaths])]);
+		//vis.y.domain([0, d3.max(vis.displayData, (d) => d["cases"])]);
+		if (selectedCasesDeaths === "cases") {
+			vis.y.domain([0, d3.max(vis.displayData, (d) => d.cases)]);
+		} else if (selectedCasesDeaths === "deaths") {
+			vis.y.domain([0, d3.max(vis.displayData, (d) => d.deaths)]);
+		} else {
+			vis.y.domain([0, d3.max(vis.displayData, (d) => Math.log10(d.cases+1))]);
+		}
 
-		// SVG area path generator
-		vis.area = d3.area()
-			.x(function(d) { return vis.x(d.date); })
-			.y0(vis.height)
-			.y1(function(d) { return vis.y(d[selectedCasesDeaths]); });
 
-		//if(vis.pathGen) vis.pathGen.remove();
+		// // SVG area path generator
+		// vis.area = d3.area()
+		// 	.x(function(d) { return vis.x(d.date); })
+		// 	.y0(vis.height)
+		// 	.y1(function(d) { return vis.y(d[selectedCasesDeaths]); });
+		//
+		// // Draw area by using the path generator
+		// vis.pathGen
+		// 	.datum(vis.displayData)
+		// 	.transition().duration(400)
+		// 	.attr("d", vis.area)
+		// 	.attr("fill", "#ccc");
 
-		// Draw area by using the path generator
-		vis.pathGen
-			.datum(vis.displayData)
-			.transition().duration(400)
-			.attr("d", vis.area)
-			.attr("fill", "#ccc");
+		console.log("selectedCasesDeaths", selectedCasesDeaths)
+		if (selectedCasesDeaths === "cases") {
+			if (vis.pathGen2) vis.pathGen2.remove()
+			vis.drawPath("red", "cases", vis.pathGen);
+		} else if (selectedCasesDeaths === "deaths") {
+			if (vis.pathGen2) vis.pathGen2.remove()
+			vis.drawPath("yellow", "deaths", vis.pathGen);
+		} else {
+			vis.pathGen2 = vis.svg.append("path")
+			vis.drawPath("red", "cases", vis.pathGen, true)
+			vis.drawPath("yellow", "deaths", vis.pathGen2, true);
+		}
+		// selectedCasesDeaths === "cases" ? vis.drawPath("red", selectedCasesDeaths, vis.pathGen) : vis.drawPath("yellow", selectedCasesDeaths, vis.pathGen);
+		//vis.drawPath("yellow", "cases", vis.pathGenCases);
+		//vis.drawPath("red", "deaths", vis.pathGenDeaths)
 
-        // TO-DO: Initialize brush component
+		// TO-DO: Initialize brush component
         // Initialize time scale (x-axis)
         vis.xScale = d3.scaleTime()
             .range([0, vis.width])
             .domain(d3.extent(vis.displayData, function(d) { return d.date; }));
 
+	}
+
+	drawPath(color, areaToDraw, pathGen, log=false) {
+		let vis = this;
+
+		// SVG area path generator
+		vis.area = d3.area()
+			.x(function(d) { return vis.x(d.date); })
+			.y0(vis.height)
+			.y1(function(d) {
+				if (log) return vis.y(Math.log10(d[areaToDraw]+1));
+				else return vis.y(d[areaToDraw]);
+			});
+
+		// Draw area by using the path generator
+		pathGen
+			.datum(vis.displayData)
+			.transition().duration(400)
+			.attr("d", vis.area)
+			.attr("fill", color);
 	}
 }
