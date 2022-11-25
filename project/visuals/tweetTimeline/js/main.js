@@ -12,7 +12,6 @@ let promisesTweetTimeline = [
 	})
 ];
 
-
 Promise.all(promisesTweetTimeline)
 	.then(function (data) {
 		initMainPageTweetTimeline(data);

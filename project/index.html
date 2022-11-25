@@ -12,6 +12,8 @@
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="css/libraries/fullpage/fullpage.css"/>
+    <link href="css/libraries/nouislider/nouislider.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
 
 <!--    Google fonts-->
@@ -359,11 +361,10 @@
                         </div>
                         <div class="col-md-3" >
                             <br /><br />
-                            <select id='tweet-detail' class="custom-select align-self-center" onchange="changeDetail()">
-                                <option value="months" selected>Month Detail</option>
-                                <option value="weeks">Week Detail</option>
-                                <option value="days">Day Detail</option>
-                            </select>
+                            <div class="col-md-3" >
+                                <br /><br />
+                                <div id="slider"></div>
+                            </div>
                         </div>
                     </div>
 
@@ -511,6 +512,9 @@
 
 <!-- fullPage -->
 <script type="text/javascript" src="js/libraries/fullpage/fullpage.js"></script>
+
+<!-- NoUISlider -->
+<script src="js/libraries/nouislider/nouislider.js"></script>
 
 <!-- OWN JS -->
 
