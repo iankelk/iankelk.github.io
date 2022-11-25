@@ -7,7 +7,7 @@ let selectedCasesDeaths =  document.getElementById('case').checked ? "cases" : "
 
 // Load data using promises
 let promisesTweetTimeline = [
-	d3.json("visuals/tweetTimeline/data/covid_vs_tweets.json", (row, i) => {
+	d3.json("/visuals/tweetTimeline/data/covid_vs_tweets.json", (row, i) => {
 		row.map((d, i) => ({id: i + 1, ...d}))
 	})
 ];
