@@ -112,6 +112,46 @@ constructor(parentElement, data) {
 			.attr("x", 10)
 			.attr("y", 0)
 
+		// Create Slider
+		vis.slider = document.getElementById('slider');
+
+		noUiSlider.create(vis.slider, {
+			range: {
+				min: 1,
+				max: 60
+			},
+			step: 1,
+			start: [30],
+			tooltips: true,
+			format: {
+				to: function(value) {
+					return d3.format("d")(value);
+				},
+				from: function(value) {
+					return +value;
+				}
+			},
+			pips: {mode: 'values', stepped: true, density: 8, values: [1,7,14,30,45,60]}
+		});
+
+		let pips = vis.slider.querySelectorAll('.noUi-value');
+
+		function clickOnPip() {
+			let value = Number(this.getAttribute('data-value'));
+			vis.slider.noUiSlider.set(value);
+		}
+
+		for (let i = 0; i < pips.length; i++) {
+			// For this example. Do this in CSS!
+			pips[i].style.cursor = 'pointer';
+			pips[i].addEventListener('click', clickOnPip);
+		}
+
+		// Attach an event listener to the slider
+		vis.slider.noUiSlider.on('slide', function (values, handle) {
+			changeDetail();
+		});
+
 		// TO-DO: (Filter, aggregate, modify data)
 		vis.wrangleData();
 	}

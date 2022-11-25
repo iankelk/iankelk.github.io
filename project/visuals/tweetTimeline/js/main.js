@@ -38,6 +38,8 @@ function changeTweetCategory() {
 // Selector listener
 function changeDetail() {
 	selectedTweetDetail =  document.getElementById('tweet-detail').value;
+	let temp = document.getElementById("slider").noUiSlider.get();
+	console.log("slider value", temp);
 	myAreaChartVis.wrangleData();
 }
 
