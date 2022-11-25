@@ -2,7 +2,7 @@
 let myAreaChartVis;
 let myTimeLineVis;
 let selectedTweetCategory =  document.getElementById('tweet-category').value;
-let selectedTweetDetail =  document.getElementById('tweet-detail').value;
+let selectedTweetDetail = 30;
 let selectedCasesDeaths =  document.getElementById('case').checked ? "cases" : "deaths";
 
 // Load data using promises
@@ -37,9 +37,7 @@ function changeTweetCategory() {
 
 // Selector listener
 function changeDetail() {
-	selectedTweetDetail =  document.getElementById('tweet-detail').value;
-	let temp = document.getElementById("slider").noUiSlider.get();
-	console.log("slider value", temp);
+	selectedTweetDetail =  document.getElementById('slider').noUiSlider.get();
 	myAreaChartVis.wrangleData();
 }
 

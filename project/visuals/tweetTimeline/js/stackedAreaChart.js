@@ -20,8 +20,7 @@ constructor(parentElement, data) {
 	this.data.tweets.forEach(function(d){
 		d.date = d3.isoParse(d.date);
 	});
-	//this.data.tweets = this.aggregateDates(this.data.tweets)
-
+	
 	this.data.retweets.forEach(function(d){
 		d.date = d3.isoParse(d.date);
 	});
@@ -139,10 +138,10 @@ constructor(parentElement, data) {
 		function clickOnPip() {
 			let value = Number(this.getAttribute('data-value'));
 			vis.slider.noUiSlider.set(value);
+			changeDetail();
 		}
 
 		for (let i = 0; i < pips.length; i++) {
-			// For this example. Do this in CSS!
 			pips[i].style.cursor = 'pointer';
 			pips[i].addEventListener('click', clickOnPip);
 		}
@@ -162,34 +161,17 @@ constructor(parentElement, data) {
 	wrangleData(skipTransition=false){
 		let vis = this;
 
-		let timeFunction;
-		switch (selectedTweetDetail) {
-			case "months":
-				timeFunction = d3.timeMonth;
-				break;
-			case "weeks":
-				timeFunction = d3.timeWeek;
-				break;
-			case "days":
-				timeFunction = d3.timeDay;
-				break;
-		}
-
 		let wrangledData = JSON.parse(JSON.stringify(vis.data));
+		console.log("wrangledData", wrangledData)
+		console.log("selectedTweetDetail", selectedTweetDetail);
 
-		wrangledData.tweets.forEach(function(d){
-			d.date = timeFunction(d3.isoParse(d.date));
-		});
+		vis.combineDates(wrangledData.tweets, selectedTweetDetail);
 		wrangledData.tweets = vis.aggregateDates(wrangledData.tweets)
 
-		wrangledData.retweets.forEach(function(d){
-			d.date = timeFunction(d3.isoParse(d.date));
-		});
+		vis.combineDates(wrangledData.retweets, selectedTweetDetail);
 		wrangledData.retweets = vis.aggregateDates(wrangledData.retweets)
 
-		wrangledData.favorites.forEach(function(d){
-			d.date = timeFunction(d3.isoParse(d.date));
-		});
+		vis.combineDates(wrangledData.favorites, selectedTweetDetail);
 		wrangledData.favorites = vis.aggregateDates(wrangledData.favorites)
 
 		vis.stackedData = vis.stack(wrangledData[selectedTweetCategory]);
@@ -295,6 +277,24 @@ constructor(parentElement, data) {
 		// Call axis functions with the new domain
 		vis.svg.select(".x-axis").call(vis.xAxis);
 		vis.svg.select(".y-axis").transition().duration(300).call(vis.yAxis);
+	}
+
+	combineDates(data, offset_size) {
+		let intervalStartDate = data[0].date
+		let nextDate = d3.timeDay.offset(intervalStartDate, offset_size)
+
+		data.forEach(function(d) {
+			d.date = d3.timeDay(d3.isoParse(d.date))
+			if (d.date < nextDate) {
+				d.date = intervalStartDate;
+			}
+			else {
+				intervalStartDate = d.date
+				nextDate = d3.timeDay.offset(intervalStartDate, offset_size)
+			}
+		});
+
+		return data;
 	}
 
 	aggregateDates(data) {
