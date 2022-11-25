@@ -84,10 +84,10 @@ class Timeline {
 		vis.radioButtons = d3.select(".timeline-row").append('div')
 			.attr('class', "radio-buttons")
 			.style("opacity", 1)
-			.style("left",73.5 + "vw")
+			.style("left",70 + "vw")
 			.style("bottom", 16  + "vh")
 			.html(`
-                     <div style="border: thin solid grey; border-radius: 5px; padding: 10px; width:7%;">
+                     <div style="border: thin solid grey; border-radius: 5px; padding: 10px; width:10%;">
                      	<label >
                         	<input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases
                     	</label>
