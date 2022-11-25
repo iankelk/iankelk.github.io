@@ -20,7 +20,7 @@ constructor(parentElement, data) {
 	this.data.tweets.forEach(function(d){
 		d.date = d3.isoParse(d.date);
 	});
-	
+
 	this.data.retweets.forEach(function(d){
 		d.date = d3.isoParse(d.date);
 	});
