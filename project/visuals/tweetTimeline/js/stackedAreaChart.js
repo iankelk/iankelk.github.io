@@ -121,6 +121,7 @@ constructor(parentElement, data) {
 			},
 			step: 1,
 			start: [30],
+			behaviour: 'tap',
 			tooltips: true,
 			format: {
 				to: function(value) {
