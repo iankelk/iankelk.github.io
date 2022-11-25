@@ -63,7 +63,7 @@ h1,h2{
     color: darkblue;
 }
 .counter {
-    position: absolute;
+    position: sticky;
     text-align: left;
     font: 18px sans-serif;
     font-weight: bold;

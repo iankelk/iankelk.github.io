@@ -78,3 +78,22 @@ h2 {
   height: 100%;
   width: 100%;
 }
+
+.radio-buttons {
+  position: absolute;
+  text-align: left;
+  font: 12px sans-serif;
+}
+.radio-buttons h3,h4 {
+  text-align: left;
+}
+.radio-buttons h4 {
+  font: 14px sans-serif;
+  color: darkblue;
+}
+label {
+  margin-right: 50px;
+}
+input {
+  margin-right: 5px;
+}

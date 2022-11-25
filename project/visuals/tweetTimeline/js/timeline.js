@@ -80,6 +80,22 @@ class Timeline {
 			.attr("transform", "translate(0," + vis.height + ")")
 			.call(vis.xAxis);
 
+		// append tooltip
+		vis.radioButtons = d3.select(".timeline-row").append('div')
+			.attr('class', "radio-buttons")
+			.style("opacity", 1)
+			.style("left",vis.width+160 + "px")
+			.style("bottom", vis.height+30 + "px")
+			.html(`
+                     <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px; width:10%;">
+                     	<label >
+                        	<input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases
+                    	</label>
+						<label >
+								<input type="radio" name="case" value="deaths" onchange="toggleCase()"/>Deaths
+						</label>
+                    </div>`);
+
 
 		vis.wrangleData();
 

@@ -3,7 +3,7 @@ let myAreaChartVis;
 let myTimeLineVis;
 let selectedTweetCategory =  document.getElementById('tweet-category').value;
 let selectedTweetDetail = 30;
-let selectedCasesDeaths =  document.getElementById('case').checked ? "cases" : "deaths";
+let selectedCasesDeaths = "cases";
 
 // Load data using promises
 let promisesTweetTimeline = [
