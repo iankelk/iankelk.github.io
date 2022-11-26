@@ -110,7 +110,7 @@ constructor(parentElement, data) {
 			step: 1,
 			start: [30],
 			behaviour: 'tap',
-			tooltips: true,
+			// tooltips: true,
 			format: {
 				to: function(value) {
 					return d3.format("d")(value);
@@ -191,7 +191,6 @@ constructor(parentElement, data) {
 		vis.y.domain([0, d3.max(vis.displayData, function(d) {
 			return d3.max(d, function(e) {
 				if (vis.filter) {
-					console.log("e1-e0", e[1]-e[0])
 					return (e[1]-e[0])*1.05;
 				}
 				else {
@@ -200,8 +199,6 @@ constructor(parentElement, data) {
 			});
 		})
 		]);
-
-		console.log("domain", vis.y.domain())
 
 		// TO-DO (Activity II) Stacked area layout
 		vis.area = d3.area()
