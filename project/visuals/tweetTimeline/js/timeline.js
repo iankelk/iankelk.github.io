@@ -28,7 +28,7 @@ class Timeline {
 		// store keyword this which refers to the object it belongs to in variable vis
 		let vis = this;
 
-		vis.margin = {top: 0, right: 40, bottom: 30, left: 40};
+		vis.margin = {top: 10, right: 40, bottom: 30, left: 40};
 
 		vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
 		vis.height = vis.parentElement.getBoundingClientRect().height  - vis.margin.top - vis.margin.bottom;
@@ -51,6 +51,9 @@ class Timeline {
 
 		vis.xAxis = d3.axisBottom()
 			.scale(vis.x);
+
+		vis.yAxis = vis.svg.append("g")
+			.attr("class", "axis axis-y");
 
 		// Draw area by using the path generator
 		vis.pathGen = vis.svg.append("path")
@@ -122,6 +125,9 @@ class Timeline {
 		} else {
 			vis.y.domain([0, d3.max(vis.displayData, (d) => Math.log10(d.cases+1))]);
 		}
+
+		vis.yAxis.transition().duration(400).call(d3.axisLeft(vis.y).ticks(5).tickFormat(d3.format('.2s')));
+
 
 		if (selectedCasesDeaths === "cases" || selectedCasesDeaths === "deaths") {
 			vis.drawPaths([selectedCasesDeaths], false);
