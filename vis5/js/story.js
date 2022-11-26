@@ -9,8 +9,8 @@ class StoryVis {
 
         console.log("mapData", this.mapData)
         console.log("displayData", this.data)
-        this.width = 1100;
-        this.height = 800;
+        this.width = 930;
+        this.height = 700;
         this.node_radius = 3;
 
         this.initVis();
@@ -30,7 +30,7 @@ class StoryVis {
         console.log("nodesData1", this.nodesData1)
 
         vis.svg = d3.create('svg')
-            .attr('viewBox', [0,0,vis.width*1.3, vis.height*1.6])
+            .attr('viewBox', [0,0,vis.width*1.3, vis.height*1.9])
             .attr("height", vis.height)
             .attr("width", vis.width)
             .attr("preserveAspectRatio", "xMidYMid meet")
