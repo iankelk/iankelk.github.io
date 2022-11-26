@@ -9,8 +9,8 @@ class StoryVis {
 
         console.log("mapData", this.mapData)
         console.log("displayData", this.data)
-        this.width = 1200;
-        this.height = 900;
+        this.width = 1100;
+        this.height = 800;
         this.node_radius = 3;
 
         this.initVis();
