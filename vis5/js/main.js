@@ -44,6 +44,7 @@ function previousSlide() {
 function resetSlides() {
     type = 0;
     console.log("type changed to", type)
+    myStoryVis.wrangleData();
 }
 
 

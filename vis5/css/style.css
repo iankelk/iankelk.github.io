@@ -46,3 +46,8 @@ svg .annotation.rect text {
     font-size: .6em;
     text-transform: uppercase;
 }
+
+#story {
+    height:900px;
+    width:1200px;
+}

@@ -29,7 +29,12 @@ class StoryVis {
         console.log("nodesData", this.nodesData)
         console.log("nodesData1", this.nodesData1)
 
-        vis.svg = d3.create('svg').attr('viewBox', [0,0,vis.width, vis.height]).style('background', "#333333")
+        vis.svg = d3.create('svg')
+            .attr('viewBox', [0,0,vis.width*1.3, vis.height*1.6])
+            .attr("height", vis.height)
+            .attr("width", vis.width)
+            .attr("preserveAspectRatio", "xMidYMid meet")
+            .style('background', "#333333")
 
         const wrapper = vis.svg.append('g').attr("transform", `translate(${vis.margin.left},${vis.margin.top})`)
 
