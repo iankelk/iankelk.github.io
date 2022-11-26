@@ -1,5 +1,3 @@
-
-
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f7f7f7;
@@ -8,7 +6,7 @@ body {
 
 h1 {
   font-weight: 100;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 h2 {
@@ -58,7 +56,7 @@ h2 {
 }
 
 #title-row {
-  height: 15vh;
+  height: 14vh;
 }
 
 #stacked-area-chart-row {
@@ -80,9 +78,9 @@ h2 {
 }
 
 .radio-buttons {
-  position: absolute;
-  text-align: left;
-  font: 12px sans-serif;
+  /*position: absolute;*/
+  /*text-align: left;*/
+  font: 14px sans-serif;
   width: 100%;
 }
 .radio-buttons h3,h4 {
@@ -93,7 +91,7 @@ h2 {
   color: darkblue;
 }
 label {
-  /*margin-right: 50px;*/
+  margin-right: 20px;
 }
 input {
   margin-right: 5px;
@@ -103,5 +101,13 @@ input {
 }
 .red {
   color: #c64156;
+}
+#tweet-category {
+  margin-top: 50px;
+}
+
+#slider {
+  margin-top: 50px;
+  margin-right: 50px;
 }
 

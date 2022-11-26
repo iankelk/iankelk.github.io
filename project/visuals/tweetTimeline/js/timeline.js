@@ -85,23 +85,23 @@ class Timeline {
 			.call(vis.xAxis);
 
 		// append tooltip
-		vis.radioButtons = d3.select(".timeline-row").append('div')
-			.attr('class', "radio-buttons")
-			.style("opacity", 1)
-			.style("left",20 + "vw")
-			.style("bottom", 16  + "vh")
-			.html(`
-                     <div style="border: thin solid grey; border-radius: 5px; padding: 5px; width:7%;">
-                     	<label class="blue">
-                        	<input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases
-                    	</label>
-						<label class="red">
-							<input type="radio" name="case" value="deaths" id="death" onchange="toggleCase()"/>Deaths
-						</label>
-						<label >
-							<input type="radio" name="case" value="both" onchange="toggleCase()"/>Both (Log10)
-						</label>
-                    </div>`);
+		// vis.radioButtons = d3.select(".timeline-row").append('div')
+		// 	.attr('class', "radio-buttons")
+		// 	.style("opacity", 1)
+		// 	.style("left",20 + "vw")
+		// 	.style("bottom", 16  + "vh")
+		// 	.html(`
+        //              <div style="border: thin solid grey; border-radius: 5px; padding: 5px; width:7%;">
+        //              	<label class="blue">
+        //                 	<input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases
+        //             	</label>
+		// 				<label class="red">
+		// 					<input type="radio" name="case" value="deaths" id="death" onchange="toggleCase()"/>Deaths
+		// 				</label>
+		// 				<label >
+		// 					<input type="radio" name="case" value="both" onchange="toggleCase()"/>Both (Log10)
+		// 				</label>
+        //             </div>`);
 
 		vis.wrangleData();
 

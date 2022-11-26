@@ -33,15 +33,7 @@
                         <h2>How misinformation correlates with cases and deaths from COVID-19</h2>
                     </div>
                 </div>
-                <div class="col-md-3" id="radio">
-                    <br />
-<!--                    <label>-->
-<!--                        <input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases-->
-<!--                    </label>-->
-<!--                    <label>-->
-<!--                        <input type="radio" name="case" value="deaths" onchange="toggleCase()"/>Deaths-->
-<!--                    </label>-->
-<!--                    <br /><br />-->
+                <div class="col-md-3">
                     <select id='tweet-category' class="custom-select align-self-center" onchange="changeTweetCategory()">
                         <option value="tweets" selected>By # of Tweets</option>
                         <option value="retweets">By # of Retweets</option>
@@ -49,7 +41,6 @@
                     </select>
                 </div>
                 <div class="col-md-3" >
-                    <br /><br />
                     <div id="slider"></div>
                 </div>
             </div>
@@ -57,6 +48,13 @@
             <!-- graph -->
             <div class="row justify-content-center" id="stacked-area-chart-row" >
                 <div class="align-self-center" id="stacked-area-chart" ></div>
+            </div>
+            <div class="row justify-content-center radio-buttons" id="radio">
+                <div class="col">
+                    <label class="blue"><input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases</label>
+                    <label class="red"><input type="radio" name="case" value="deaths" id="death" onchange="toggleCase()"/>Deaths</label>
+                    <label ><input type="radio" name="case" value="both" onchange="toggleCase()"/>Both (Log10)</label>
+                </div>
             </div>
 
             <!-- brush -->
