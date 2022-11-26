@@ -86,3 +86,9 @@ function brushed(event) {
 	myAreaChartVis.x.domain(selectionDomain)
 	myAreaChartVis.wrangleData(true);
 }
+
+// When the user clicks on <div>, open the popup
+function help() {
+	let popup = document.getElementById("help");
+	popup.classList.toggle("show");
+}

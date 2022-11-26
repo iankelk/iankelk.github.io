@@ -29,7 +29,16 @@ constructor(parentElement, data) {
 		d.date = d3.isoParse(d.date);
 	});
 
-	let colors = ['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c'];
+	this.misinfo6 = {
+		"DrButtar":"Dr Rashid A Buttar",
+		"DrChrisNorthrup":"Christiane Northrup",
+		"RobertKennedyJr":"Robert F. Kennedy Jr",
+		"mercola":"Dr. Joseph Mercola",
+		"kevdjenkins1": "Kevin Jenkins",
+		"sayerjigmi":"Sayer Ji"
+	}
+
+	// let colors = ['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c'];
 
     // grab all the keys from the key value pairs in data (filter out 'year' ) to get a list of categories
     this.dataCategories = Object.keys(this.data[selectedTweetCategory][0]).filter(d =>d !== "date")
@@ -93,7 +102,6 @@ constructor(parentElement, data) {
 		// TO-DO (Activity II) Stack data
 		//vis.stackedData = vis.stack(vis.data[selectedTweetCategory]);
 
-		//TO-DO (Activity IV): Add Tooltip placeholder
 		vis.tooltipText = vis.svg.append("text")
 			.attr("class", "categories")
 			.attr("x", 10)
@@ -140,10 +148,16 @@ constructor(parentElement, data) {
 			changeDetail();
 		});
 
+		//
+		// d3.xml('../img/help.svg')
+		// 	.then(data => {
+		// 		vis.svg.append(data.documentElement)
+		// 			.attr("id", "help-icon");
+		// 	})
+
 		// TO-DO: (Filter, aggregate, modify data)
 		vis.wrangleData();
 	}
-
 	/*
  	* Data wrangling
  	*/
@@ -228,7 +242,11 @@ constructor(parentElement, data) {
 		cat
 			.on("mouseover", function(event, d) {
 				vis.tooltipText
-					.text(d.key);
+					.text(vis.misinfo6[d.key] + " (@" + d.key + ")");
+			})
+			.on("mouseout", function(event, d) {
+				vis.tooltipText
+					.text("");
 			})
 			.on("click", (event, d)=> {
 				vis.filter = vis.filter ? "" : d.key;

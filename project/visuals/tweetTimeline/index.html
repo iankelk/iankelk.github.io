@@ -30,19 +30,25 @@
                 <div class="col-md-6">
                     <div class="align-self-center">
                         <h1>Covid vs Tweets</h1>
-                        <h2>How misinformation correlates with cases and deaths from COVID-19</h2>
+                        <h2>How misinformation correlates with cases and deaths from COVID-19 </h2>
                     </div>
                 </div>
                 <div class="col-md-3">
+
                     <select id='tweet-category' class="custom-select align-self-center" onchange="changeTweetCategory()">
                         <option value="tweets" selected>By # of Tweets</option>
                         <option value="retweets">By # of Retweets</option>
                         <option value="favorites">By # of Favorites</option>
                     </select>
+                    <div class="popup" onclick="help()"><img src="/visuals/tweetTimeline/img/help.png" width="20" height="20">
+                        <span class="popuptext" id="help">Help textHelp textHelp textHelp textHelp textHelp textHelp textHelp textHelp textHelp textHelp textHelp textHelp textHelp textHelp textHelp text...</span>
+                    </div>
+
                 </div>
                 <div class="col-md-3 justify-content-center" >
                     <br/>
                    Days to Aggregate
+
                     <div id="slider"></div>
                 </div>
             </div>
