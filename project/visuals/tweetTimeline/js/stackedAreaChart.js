@@ -45,7 +45,7 @@ constructor(parentElement, data) {
 	initVis(){
 		let vis = this;
 
-		vis.margin = {top: 40, right: 40, bottom: 30, left: 40};
+		vis.margin = {top: 10, right: 40, bottom: 30, left: 40};
 
 		vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
 		vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
@@ -105,7 +105,7 @@ constructor(parentElement, data) {
 		noUiSlider.create(vis.slider, {
 			range: {
 				min: 1,
-				max: 60
+				max: 30
 			},
 			step: 1,
 			start: [30],
@@ -119,7 +119,7 @@ constructor(parentElement, data) {
 					return +value;
 				}
 			},
-			pips: {mode: 'values', stepped: true, density: 8, values: [1,7,14,30,45,60]}
+			pips: {mode: 'values', stepped: true, density: 8, values: [1,7,14,21,30]}
 		});
 
 		let pips = vis.slider.querySelectorAll('.noUi-value');
@@ -192,14 +192,16 @@ constructor(parentElement, data) {
 			return d3.max(d, function(e) {
 				if (vis.filter) {
 					console.log("e1-e0", e[1]-e[0])
-					return e[1]-e[0];
+					return (e[1]-e[0])*1.05;
 				}
 				else {
-					return e[1];
+					return (e[1])*1.05;
 				}
 			});
 		})
 		]);
+
+		console.log("domain", vis.y.domain())
 
 		// TO-DO (Activity II) Stacked area layout
 		vis.area = d3.area()
