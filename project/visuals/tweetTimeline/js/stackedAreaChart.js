@@ -34,17 +34,6 @@ constructor(parentElement, data) {
     // grab all the keys from the key value pairs in data (filter out 'year' ) to get a list of categories
     this.dataCategories = Object.keys(this.data[selectedTweetCategory][0]).filter(d =>d !== "date")
 
-    //prepare colors for range
-    // let colorArray = this.dataCategories.map( (d,i) => {
-    //     return colors[i%6]
-    // })
-	//
-	// console.log("colorarray",colorArray)
-    //Set ordinal color scale
-    // this.colorScale = d3.scaleOrdinal()
-    //     .domain(this.dataCategories)
-    //     .range(colorArray);
-
 	this.colorScale = d3.scaleOrdinal(this.dataCategories, d3.schemeTableau10)
 
 	this.initVis();
@@ -163,8 +152,6 @@ constructor(parentElement, data) {
 		let vis = this;
 
 		let wrangledData = JSON.parse(JSON.stringify(vis.data));
-		console.log("wrangledData", wrangledData)
-		console.log("selectedTweetDetail", selectedTweetDetail);
 
 		vis.combineDates(wrangledData.tweets, selectedTweetDetail);
 		wrangledData.tweets = vis.aggregateDates(wrangledData.tweets)
@@ -271,8 +258,6 @@ constructor(parentElement, data) {
 					}
 				})
 		}
-
-
 		categories.exit().remove();
 
 		// Call axis functions with the new domain
@@ -317,9 +302,5 @@ constructor(parentElement, data) {
 			b.push(a[key]);
 		}
 		return b;
-	}
-
-	disableTransitionForBrush() {
-
 	}
 }

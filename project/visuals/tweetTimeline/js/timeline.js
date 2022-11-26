@@ -54,6 +54,7 @@ class Timeline {
 
 		// Draw area by using the path generator
 		vis.pathGen = vis.svg.append("path")
+		vis.pathGen2 = vis.svg.append("path")
 
 		// Initialize brush component
 		vis.brush = d3.brushX()
@@ -88,10 +89,10 @@ class Timeline {
 			.style("bottom", 16  + "vh")
 			.html(`
                      <div style="border: thin solid grey; border-radius: 5px; padding: 5px; width:7%;">
-                     	<label >
+                     	<label class="blue">
                         	<input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases
                     	</label>
-						<label >
+						<label class="red">
 							<input type="radio" name="case" value="deaths" id="death" onchange="toggleCase()"/>Deaths
 						</label>
 						<label >
@@ -122,35 +123,11 @@ class Timeline {
 			vis.y.domain([0, d3.max(vis.displayData, (d) => Math.log10(d.cases+1))]);
 		}
 
-
-		// // SVG area path generator
-		// vis.area = d3.area()
-		// 	.x(function(d) { return vis.x(d.date); })
-		// 	.y0(vis.height)
-		// 	.y1(function(d) { return vis.y(d[selectedCasesDeaths]); });
-		//
-		// // Draw area by using the path generator
-		// vis.pathGen
-		// 	.datum(vis.displayData)
-		// 	.transition().duration(400)
-		// 	.attr("d", vis.area)
-		// 	.attr("fill", "#ccc");
-
-		console.log("selectedCasesDeaths", selectedCasesDeaths)
-		if (selectedCasesDeaths === "cases") {
-			if (vis.pathGen2) vis.pathGen2.remove()
-			vis.drawPath("red", "cases", vis.pathGen);
-		} else if (selectedCasesDeaths === "deaths") {
-			if (vis.pathGen2) vis.pathGen2.remove()
-			vis.drawPath("yellow", "deaths", vis.pathGen);
+		if (selectedCasesDeaths === "cases" || selectedCasesDeaths === "deaths") {
+			vis.drawPaths([selectedCasesDeaths], false);
 		} else {
-			vis.pathGen2 = vis.svg.append("path")
-			vis.drawPath("red", "cases", vis.pathGen, true)
-			vis.drawPath("yellow", "deaths", vis.pathGen2, true);
+			vis.drawPaths(["cases", "deaths"], true)
 		}
-		// selectedCasesDeaths === "cases" ? vis.drawPath("red", selectedCasesDeaths, vis.pathGen) : vis.drawPath("yellow", selectedCasesDeaths, vis.pathGen);
-		//vis.drawPath("yellow", "cases", vis.pathGenCases);
-		//vis.drawPath("red", "deaths", vis.pathGenDeaths)
 
 		// TO-DO: Initialize brush component
         // Initialize time scale (x-axis)
@@ -160,23 +137,45 @@ class Timeline {
 
 	}
 
-	drawPath(color, areaToDraw, pathGen, log=false) {
+	drawPaths(areaToDraw, log=false) {
+		const colors = {"cases": "#3A4FD8", "deaths": "#c64156"};
 		let vis = this;
 
 		// SVG area path generator
 		vis.area = d3.area()
-			.x(function(d) { return vis.x(d.date); })
+			.x(function (d) {
+				return vis.x(d.date);
+			})
 			.y0(vis.height)
-			.y1(function(d) {
-				if (log) return vis.y(Math.log10(d[areaToDraw]+1));
-				else return vis.y(d[areaToDraw]);
+			.y1(function (d) {
+				if (log) return vis.y(Math.log10(d[areaToDraw[0]] + 1));
+				else return vis.y(d[areaToDraw[0]]);
 			});
 
 		// Draw area by using the path generator
-		pathGen
+		vis.pathGen
 			.datum(vis.displayData)
 			.transition().duration(400)
 			.attr("d", vis.area)
-			.attr("fill", color);
+			.attr("fill", colors[areaToDraw[0]]);
+
+
+		// SVG area path generator
+		vis.area2 = d3.area()
+			.x(function (d) {
+				return vis.x(d.date);
+			})
+			.y0(vis.height)
+			.y1(function (d) {
+				if (log) return vis.y(Math.log10(d[areaToDraw[1]] + 1));
+				else return vis.y(0);
+			});
+
+		vis.pathGen2
+			.datum(vis.displayData)
+			.transition().duration(400)
+			.attr("d", vis.area2)
+			.attr("fill", colors["deaths"]);
+
 	}
 }
