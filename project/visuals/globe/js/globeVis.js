@@ -42,7 +42,8 @@ class GlobeVis {
 
         vis.projection = d3.geoOrthographic()
             .translate([vis.width / 2, vis.height / 2])
-            .scale(230);
+            .scale(180)
+            // .scale(230);
 
         // Define a geogenerator and pass the projection
         vis.path = d3.geoPath()
