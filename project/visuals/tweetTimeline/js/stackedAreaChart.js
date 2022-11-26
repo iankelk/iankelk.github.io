@@ -60,7 +60,6 @@ constructor(parentElement, data) {
 		// Overlay with path clipping
 		vis.svg.append("defs").append("clipPath")
 			.attr("id", "clip")
-
 			.append("rect")
 			.attr("width", vis.width)
 			.attr("height", vis.height);
@@ -192,6 +191,7 @@ constructor(parentElement, data) {
 		vis.y.domain([0, d3.max(vis.displayData, function(d) {
 			return d3.max(d, function(e) {
 				if (vis.filter) {
+					console.log("e1-e0", e[1]-e[0])
 					return e[1]-e[0];
 				}
 				else {
