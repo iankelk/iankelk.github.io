@@ -240,19 +240,46 @@
                         <div class="col-md-6">
                             <div class="align-self-center">
                                 <h1>Covid vs Tweets</h1>
-                                <h2>How misinformation correlates with cases and deaths from COVID-19</h2>
+                                <h2>How misinformation correlates with cases and deaths from COVID-19 </h2>
                             </div>
                         </div>
                         <div class="col-md-3">
+
                             <select id='tweet-category' class="custom-select align-self-center" onchange="changeTweetCategory()">
                                 <option value="tweets" selected>By # of Tweets</option>
                                 <option value="retweets">By # of Retweets</option>
-                                <option value="favorites">By # of Favorites</option>
+                                <option value="favorites">By # of Likes</option>
                             </select>
+                            <div class="popup" onclick="help()"><img src="/project/visuals/tweetTimeline/img/help.png" width="20" height="20">
+                                <span class="popuptext" id="help">
+                            This interactive visualization allows you to explore the activities of the "Disinformation Half-Dozen",
+                            6 of the 12 people responsive for 65% of disinformation about COVID-19 who still have active Twitter accounts.
+                            It allows you to use the dropdown box to select:<br/><br/>
+                            <ul>
+                                <li><strong>By # of Tweets</strong> - The total number of times the person posted on Twitter. You can
+                                    notice there's a large burst of this activity before the major COVID-19 spike in January, 2021.</li>
+                                <li><strong>By # of Retweets</strong> - The total number of times the person was retweeted,
+                                    which is when another person reposts their message directly. If the person retweeting
+                                    has more followers than the original poster, this can strongly amplify the reach of the message.</li>
+                                <li><strong>By # of Favorites</strong> - The total number of times the person received a "like."
+                                    This is an indication of how many people read and reacted to their posts.</li>
+                            </ul>
+                            <strong>Days to Aggregate</strong> - On the right you can choose the number of days added together to create
+                            a single time period that is plotted. When set to 1 day, the data shows individual days and is hard to read,
+                            but as you increase the aggregation and view the sums of days, it becomes smoother. Play with the various
+                            aggregations to see if any patterns are revealed.<br/><br/>
+                            <strong>Cases, Deaths, and Both (Log 10)</strong> - Choose either cases of COVID-19 or deaths due to it
+                            to compare against the creation of disinformation. Selecting "Both (Log 10)" displays a logarithm view
+                            of the 2 metrics, which was necessary as the cases greatly outnumbered the deaths.
+
+                        </span>
+                            </div>
+
                         </div>
                         <div class="col-md-3 justify-content-center" >
                             <br/>
                             Days to Aggregate
+
                             <div id="slider"></div>
                         </div>
                     </div>
@@ -264,7 +291,7 @@
                     <div class="row justify-content-center radio-buttons" id="radio">
                         <div class="col">
                             <label class="blue"><input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases</label>
-                            <label class="red"><input type="radio" name="case" value="deaths" id="death" onchange="toggleCase()"/>Deaths</label>
+                            <label class="orange"><input type="radio" name="case" value="deaths" id="death" onchange="toggleCase()"/>Deaths</label>
                             <label ><input type="radio" name="case" value="both" onchange="toggleCase()"/>Both (Log10)</label>
                         </div>
                     </div>
