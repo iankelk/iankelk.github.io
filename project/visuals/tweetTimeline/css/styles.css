@@ -126,17 +126,18 @@ input {
 /* The actual popup (appears on top) */
 .popup .popuptext {
   visibility: hidden;
-  width: 160px;
+  width: 600px;
+  height: 630px;
   background-color: grey;
   color: #fff;
-  text-align: center;
+  text-align: left;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 20px 20px;
   position: absolute;
   z-index: 1;
-  bottom: -220px;
+  bottom: -650px;
   left: 50%;
-  margin-left: -80px;
+  margin-left: -300px;
 }
 
 /* Popup arrow */
