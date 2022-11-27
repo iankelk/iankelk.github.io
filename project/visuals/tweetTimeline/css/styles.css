@@ -126,8 +126,8 @@ input {
 /* The actual popup (appears on top) */
 .popup .popuptext {
   visibility: hidden;
-  width: 600px;
-  height: 725px;
+  width: 700px;
+  height: 630px;
   background-color: grey;
   color: #fff;
   text-align: left;
@@ -135,9 +135,9 @@ input {
   padding: 20px 20px;
   position: absolute;
   z-index: 1;
-  bottom: -750px;
+  bottom: -640px;
   left: 50%;
-  margin-left: -300px;
+  margin-left: -350px;
 }
 
 /* Popup arrow */
