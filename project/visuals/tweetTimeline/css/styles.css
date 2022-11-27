@@ -1,6 +1,5 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f7f7f7;
   text-align: center;
 }
 
@@ -53,12 +52,12 @@ h2 {
   shape-rendering: crispEdges;
 }
 
-.main-area {
-  margin-top: 5vh;
-  border: thin solid grey;
-  border-radius: 5px;
-  background: rgba(221,221,221,0.45);
-}
+/*.main-area {*/
+/*  margin-top: 5vh;*/
+/*  border: thin solid grey;*/
+/*  border-radius: 5px;*/
+/*  background: rgba(221,221,221,0.45);*/
+/*}*/
 
 #title-row {
   height: 14vh;
