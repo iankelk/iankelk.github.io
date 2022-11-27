@@ -19,7 +19,6 @@ p {
 /*based on
 https://html-online.com/articles/blinking-text-css-animation/
  */
-
 .blinking{
     animation:blinkingText 1.2s infinite;
 }
