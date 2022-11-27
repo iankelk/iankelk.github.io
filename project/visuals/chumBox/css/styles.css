@@ -15,3 +15,18 @@ p {
 .fun-fact{
     margin-top:1rem;
 }
+
+/*based on
+https://html-online.com/articles/blinking-text-css-animation/
+ */
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: red; }
+    99%{    color:red;  }
+    100%{   color: #000;    }
+}

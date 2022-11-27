@@ -3,7 +3,7 @@
 facts = [
     {
         name: "shane.jpg",
-        fact: "the two main companies behind this sort of advertisement," +
+        fact: "the two main companies behind this sort of targeted advertisement," +
             " taboola and Outbrain, made almost" +
             " <span class=\"highlight\">2.4 billion dollars in revenue</span> in 2021?",
         sources:
@@ -32,9 +32,4 @@ facts = [
 
 d3.selectAll(".chumbox").data(facts).on("click", (event, d)=> {
     document.getElementById("factline").innerHTML =`<p>...${d.fact}</p>`;
-    // d.sources.forEach((e, i) => {
-    //     if (i % 2 == 0){
-    //         <a "href = "></a>;
-    //     }
-    // });
 })
