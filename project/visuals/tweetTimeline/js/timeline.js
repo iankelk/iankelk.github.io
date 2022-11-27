@@ -144,7 +144,7 @@ class Timeline {
 	}
 
 	drawPaths(areaToDraw, log=false) {
-		const colors = {"cases": "#3A4FD8", "deaths": "#c64156"};
+		const colors = {"cases": "#3A4FD8", "deaths": "orange"};
 		let vis = this;
 
 		// SVG area path generator
