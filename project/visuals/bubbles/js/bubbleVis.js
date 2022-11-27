@@ -12,7 +12,6 @@ class BubbleVis {
         this.categories["narrative"] =  [...new Set(narrativeData.map(d => d.narrative))]
         this.categories["region"] =  [...new Set(regionData.map(d => d.region))]
 
-        //console.log("motives", this.motives);
         selectedCategoryBubbles =  document.getElementById('category-bubbles').value;
         console.log("categories", this.categories);
 
@@ -23,7 +22,9 @@ class BubbleVis {
         const nativeWidth = 1000;
         let vis = this;
 
-        vis.margin = {top: 50, right: 100, bottom: 50, left: 200};
+        const formatTime = d3.timeFormat("%B %d, %Y");
+
+        vis.margin = {top: 20, right: 100, bottom: 10, left: 200};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = 400;
 
@@ -45,7 +46,7 @@ class BubbleVis {
 
 
         vis.x = d3.scaleLinear()
-            .domain(d3.extent(vis.data, d => d.date))
+            .domain(d3.extent(vis.data, d => d3.isoParse(d.date)))
             .range([vis.margin.left, vis.width - vis.margin.right])
 
         vis.y = d3.scaleBand()
@@ -54,14 +55,16 @@ class BubbleVis {
 
         vis.r = d3.scaleSqrt()
             .domain(d3.extent(vis.data, d => d.count))
-            .range([6,20])
+            .range([6,15])
 
-        vis.colour = d3.scaleSequential(d3.extent(vis.data, d => d.date), d3.interpolateViridis)
+        vis.colour = d3.scaleOrdinal(d3.schemeTableau10)
+
 
         vis.xAxis = g =>
             g
                 .attr("transform", `translate(0, ${vis.margin.top})`)
-                .call(d3.axisTop(vis.x).ticks(10))
+                //.call(d3.axisTop(vis.x).ticks(10).tickFormat(formatTime))
+                .call(d3.axisTop(vis.x).tickValues(d3.timeDay.range(new Date(2020, 0, 27), new Date(2021, 0, 4), 60)).tickFormat(formatTime))
                 .call(g => g.select(".domain").remove())
                 .call(g =>
                     g
@@ -89,13 +92,13 @@ class BubbleVis {
         let vis = this;
 
         vis.data = vis.getDataset();
-        // Get the selected order
-        //vis.selectedOrder =  document.getElementById('ordering').value;
 
         vis.updateVis()
     }
     updateVis() {
         let vis = this;
+
+        const formatTime = d3.timeFormat("%B %d, %Y");
 
         // If the simulation is running already, stop it to free up resources
         if (vis.simulation) vis.simulation.stop();
@@ -104,10 +107,10 @@ class BubbleVis {
         vis.tooltip = d3.select("body").append('div')
             .attr('class', "tooltip");
 
-        const split = (document.getElementById('split').value !== "all");
+        const split = (document.getElementById('split').checked);
 
         vis.r.domain(d3.extent(vis.data, d => d.count))
-        vis.x.domain(d3.extent(vis.data, d => d.date))
+        vis.x.domain(d3.extent(vis.data, d => d3.isoParse(d.date)))
         vis.y.domain(vis.categories[selectedCategoryBubbles])
 
         if (vis.node) {
@@ -118,12 +121,12 @@ class BubbleVis {
             .selectAll("circle")
             .data(vis.data)
             .join("circle")
-            .attr("cx", d => vis.x(d.date))
+            .attr("cx", d => vis.x(d3.isoParse(d.date)))
             .attr("cy", d => vis.y(d[selectedCategoryBubbles]) + vis.y.bandwidth() / 2)
             .attr("r", d => vis.r(d.count))
             .attr("stroke", "white")
             .attr("stroke-width", 1)
-            .attr("fill", d => vis.colour(d.date))
+            .attr("fill", d => vis.colour(d[selectedCategoryBubbles]))
             .on('mouseover', function(event, d) {
                 d3.select(this)
                     .attr('stroke-width', '2px')
@@ -135,14 +138,14 @@ class BubbleVis {
                     .html(`
                      <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
                          <h4>${selectedCategoryBubbles.toProperCase()}: ${d[selectedCategoryBubbles]}</h4>
-                         <strong>Date: </strong> ${d.date.toLocaleString("en-US")}<br />
+                         <strong>Date: </strong> ${formatTime(d3.isoParse(d.date))}<br />
                          <strong>Count: </strong>${d.count}<br />
                      </div>`);
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
                     .attr('stroke-width', '1px')
-                    .attr("fill", d => vis.colour(d.date))
+                    .attr("fill", d => vis.colour(d[selectedCategoryBubbles]))
                 vis.tooltip
                     .style("opacity", 0)
                     .style("left", 0)
@@ -150,11 +153,8 @@ class BubbleVis {
                     .html(``);
             });
 
-
-        console.log("selectedCategory", selectedCategoryBubbles)
-
         vis.simulation = d3.forceSimulation()
-            .force("x", d3.forceX(d => vis.x(d.date)))
+            .force("x", d3.forceX(d => vis.x(d3.isoParse(d.date))))
             .force("y", d3.forceY(d => vis.y(d[selectedCategoryBubbles]) + vis.y.bandwidth() / 2))
             .force("collide", d3.forceCollide(d => vis.r(d.count) + 1).strength(0.5));
 

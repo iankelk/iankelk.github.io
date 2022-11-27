@@ -130,25 +130,59 @@
         </p>
     </div>
 
+<!--    <div class="section" id="section5">-->
+<!--        <div>-->
+<!--        <div class="container-fluid" >-->
+<!--            <div class="row justify-content-center" id="top-row-bubbles" >-->
+<!--                <div class="align-self-center">-->
+<!--                    <h1>Misinformation Over Time</h1>-->
+<!--                    <h2>How metrics changed over 2020 for COVID-19</h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <hr>-->
+<!--            <div class="row" id="selector-row" >-->
+<!--                <div class="col">-->
+<!--                    <div class="row justify-content-center">-->
+<!--                        <select id='split' class="custom-select align-self-center" onchange="toggleSplit()">-->
+<!--                            <option value="all" selected>Global</option>-->
+<!--                            <option value="split">Split into Categories</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                    <div class="row justify-content-center">-->
+<!--                        <select id='category-bubbles' class="custom-select align-self-center" onchange="changeCategory()">-->
+<!--                            <option value="motive" selected>By Motive</option>-->
+<!--                            <option value="narrative">By Narrative</option>-->
+<!--                            <option value="region">By Region</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row justify-content-center" id="vis-row-bubble" >-->
+<!--                <div class="col" id="bubble" ></div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
     <div class="section" id="section5">
         <div>
-        <div class="container-fluid" >
-            <div class="row justify-content-center" id="top-row-bubbles" >
-                <div class="align-self-center">
-                    <h1>Misinformation Over Time</h1>
-                    <h2>How metrics changed over 2020 for COVID-19</h2>
-                </div>
-            </div>
-            <hr>
-            <div class="row" id="selector-row" >
-                <div class="col">
-                    <div class="row justify-content-center">
-                        <select id='split' class="custom-select align-self-center" onchange="toggleSplit()">
-                            <option value="all" selected>Global</option>
-                            <option value="split">Split into Categories</option>
-                        </select>
+            <div class="container-fluid" >
+                <div class="row justify-content-center" id="top-row-bubbles" >
+                    <div class="col-md-8">
+                        <div class="align-self-center">
+                            <h1>Misinformation Over Time</h1>
+                            <h2>How metrics changed over 2020 for COVID-19</h2>
+                        </div>
                     </div>
-                    <div class="row justify-content-center">
+                    <div class="col-md-4" id="radio">
+                        <label>
+                            <input type="radio" name="split" value="all"  onchange="toggleSplit()" checked/>All
+                        </label>
+                        <label>
+                            <input type="radio" name="split" value="split" id="split" onchange="toggleSplit()"/>Split
+                        </label>
+                        <br /><br />
                         <select id='category-bubbles' class="custom-select align-self-center" onchange="changeCategory()">
                             <option value="motive" selected>By Motive</option>
                             <option value="narrative">By Narrative</option>
@@ -156,14 +190,15 @@
                         </select>
                     </div>
                 </div>
+                <hr>
+                <div class="row justify-content-center" id="vis-row-bubble" >
+                    <div class="col" id="bubble" ></div>
+                </div>
             </div>
-            <div class="row justify-content-center" id="vis-row-bubble" >
-                <div class="col" id="bubble" ></div>
-            </div>
-        </div>
 
         </div>
     </div>
+
 
     <div class="section" id="section0000001">
         <h1>The Oldest Trick in the Book</h1>
