@@ -127,7 +127,7 @@ input {
 .popup .popuptext {
   visibility: hidden;
   width: 600px;
-  height: 630px;
+  height: 725px;
   background-color: grey;
   color: #fff;
   text-align: left;
@@ -135,7 +135,7 @@ input {
   padding: 20px 20px;
   position: absolute;
   z-index: 1;
-  bottom: -650px;
+  bottom: -750px;
   left: 50%;
   margin-left: -300px;
 }
