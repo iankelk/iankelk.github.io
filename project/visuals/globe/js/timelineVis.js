@@ -15,7 +15,7 @@ class TimelineVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 20, right: 20, bottom: 5, left: 20};
+        vis.margin = {top: 0, right: 20, bottom: 0, left: 20};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -39,7 +39,15 @@ class TimelineVis {
             .attr('class', "tooltip")
             .attr('id', 'timelineTooltip');
 
+        // Center the globe on the UK for the first news in the timeline
+        setTimeout(myGlobeVis.spinGlobe("United Kingdom"), 2000)
 
+        // Update the text for the first news in the timeline
+        let firstEvent = vis.historyData[0];
+        updateText(firstEvent);
+
+        // Store the index of the news from the UK in a variable for drawing the circles
+        const ukIndex = [0, 2, 6]
 
         // Add circles
         vis.xAxsGroup.selectAll().data(vis.historyData)
@@ -58,9 +66,18 @@ class TimelineVis {
                     return "10";
                 }
             })
-            .attr("fill", "#0B0B45")
+            .attr("fill", (d, i) => {
+                if(ukIndex.includes(i)){
+                    return "orange";
+                } else{
+                    return "#0B0B45";
+                }
+            })
 
-
+        // Pre-select the first circle
+        d3.select("#news-1")
+            .attr("stroke-width", "5")
+            .attr("stroke", "maroon");
 
         vis.xAxis = d3.axisTop()
             .scale(vis.timelineScale)

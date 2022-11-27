@@ -12,17 +12,16 @@ function linkViews(fakeNews){
         .attr("stroke", "none")
         .attr("fill", d => {
             if(countryNews.includes(d)){ // Make fake news for that same country also red
-                return "red";
+                return "orange";
             }else{
                 return "#0B0B45";
             }
 
         })
 
-
-    // Change the circle of the selected fake news and make it red
+    // Change the circle of the selected fake news and make it orange
     d3.select("#news-" + fakeNews.id)
-        .attr("fill", "red")
+        .attr("fill", "orange")
         .transition()
         .duration(200)
         .attr("r", "20") // Make circle increase in size then decrease to "pop out"
