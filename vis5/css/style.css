@@ -1,5 +1,5 @@
 .text-color {
-    fill: white;
+    fill: #333333;
     text-anchor:middle;
     font: 20px sans-serif;
     font-family: "Oswald", sans-serif;
@@ -17,20 +17,20 @@
     fill: #ffbf00;
 }
 .text-color-header {
-    fill: white;
+    fill: #333333;
     text-anchor:middle;
     font: bold 80px sans-serif;
     font-family: "Oswald", sans-serif;
 }
 .text-color-start {
-    fill: white;
+    fill: #333333;
     text-anchor:middle;
     font: 45px sans-serif;
     font-family: "Oswald", sans-serif;
 }
 .annotation-note-content {color:white;}
 .tick {
-    color:white;
+    color:#333333;
 }
 
 .annotation-note-title, text.title {
@@ -47,7 +47,7 @@ svg .annotation.rect text {
     text-transform: uppercase;
 }
 
-#story {
-    height:900px;
-    width:1200px;
+svg {
+    height:750px;
+    width:1000px;
 }
