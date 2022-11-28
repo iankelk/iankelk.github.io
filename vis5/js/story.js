@@ -105,7 +105,7 @@ class StoryVis {
             .attr('dy', "2em")
 
         const node_desc = vis.step2description.append('g').attr('transform', `translate(${0}, ${60})`)
-        node_desc.append("text").attr('y', 20).attr('class', 'text-color').text(`Each node is equal to ${vis.fn_per_dot} pieces of disinformation.`)
+        node_desc.append("text").attr('y', 20).attr('class', 'text-color').text(`Each circle represents ${vis.fn_per_dot} pieces of disinformation.`)
 
         // step 3 Description
         vis.step3description = wrapper.append('g').attr("transform", `translate(${vis.width / 2},${220})`)
