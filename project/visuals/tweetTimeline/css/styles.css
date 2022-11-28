@@ -1,171 +1,171 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-}
+/*body {*/
+/*  font-family: 'Roboto', sans-serif;*/
+/*  text-align: center;*/
+/*}*/
 
-h1 {
-  font-weight: 100;
-  margin-top: 20px;
-}
-
-h2 {
-  font-weight: 300;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-/*h3 {*/
-/*  !*font-weight: 100;*!*/
+/*h1 {*/
+/*  font-weight: 100;*/
 /*  margin-top: 20px;*/
 /*}*/
 
-.container-fluid {
-	padding-right: 30px;
-	padding-left: 30px;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.browser text {
-  text-anchor: end;
-}
-
-.area {
-  /*opacity: 0.7;*/
-  clip-path: url(#clip);
-}
-.area:hover {
-  stroke-width: 1;
-  stroke-opacity: 1;
-  stroke: black;
-  opacity: 1;
-}
-
-.brush .extent {
-  stroke: #fff;
-  fill-opacity: .125;
-  shape-rendering: crispEdges;
-}
-
-/*.main-area {*/
-/*  margin-top: 5vh;*/
-/*  border: thin solid grey;*/
-/*  border-radius: 5px;*/
-/*  background: rgba(221,221,221,0.45);*/
+/*h2 {*/
+/*  font-weight: 300;*/
+/*  font-size: 18px;*/
+/*  margin-bottom: 40px;*/
 /*}*/
 
-#title-row {
-  height: 14vh;
-}
+/*!*h3 {*!*/
+/*!*  !*font-weight: 100;*!*!*/
+/*!*  margin-top: 20px;*!*/
+/*!*}*!*/
 
-#stacked-area-chart-row {
-  height: 60vh;
-}
+/*.container-fluid {*/
+/*	padding-right: 30px;*/
+/*	padding-left: 30px;*/
+/*}*/
 
-#stacked-area-chart {
-  height: 100%;
-  width: 100%;
-}
+/*.axis path,*/
+/*.axis line {*/
+/*  fill: none;*/
+/*  stroke: #000;*/
+/*  shape-rendering: crispEdges;*/
+/*}*/
 
-.timeline-row {
-  height: 15vh;
-}
+/*.browser text {*/
+/*  text-anchor: end;*/
+/*}*/
 
-#timeline {
-  height: 100%;
-  width: 100%;
-}
+/*.area {*/
+/*  !*opacity: 0.7;*!*/
+/*  clip-path: url(#clip);*/
+/*}*/
+/*.area:hover {*/
+/*  stroke-width: 1;*/
+/*  stroke-opacity: 1;*/
+/*  stroke: black;*/
+/*  opacity: 1;*/
+/*}*/
 
-.radio-buttons {
-  /*position: absolute;*/
-  /*text-align: left;*/
-  font: 14px sans-serif;
-  width: 100%;
-}
-.radio-buttons h3,h4 {
-  text-align: left;
-}
-.radio-buttons h4 {
-  font: 14px sans-serif;
-  color: darkblue;
-}
-label {
-  margin-right: 20px;
-}
-input {
-  margin-right: 5px;
-}
-.blue {
-  color: #3A4FD8;
-}
-.orange {
-  color: orange;
-}
-#tweet-category {
-  margin-top: 50px;
-}
+/*.brush .extent {*/
+/*  stroke: #fff;*/
+/*  fill-opacity: .125;*/
+/*  shape-rendering: crispEdges;*/
+/*}*/
 
-#slider {
-  margin-top: 5px;
-  margin-right: 20px;
-}
+/*!*.main-area {*!*/
+/*!*  margin-top: 5vh;*!*/
+/*!*  border: thin solid grey;*!*/
+/*!*  border-radius: 5px;*!*/
+/*!*  background: rgba(221,221,221,0.45);*!*/
+/*!*}*!*/
 
-/* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
+/*#title-row {*/
+/*  height: 14vh;*/
+/*}*/
 
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 750px;
-  height: 585px;
-  background-color: grey;
-  color: #fff;
-  text-align: left;
-  border-radius: 6px;
-  padding: 20px 20px;
-  position: absolute;
-  z-index: 1;
-  bottom: -600px;
-  left: 50%;
-  margin-left: -375px;
-}
+/*#stacked-area-chart-row {*/
+/*  height: 60vh;*/
+/*}*/
 
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: rotate(180deg);
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: grey transparent transparent transparent;
-}
+/*#stacked-area-chart {*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*}*/
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
+/*.timeline-row {*/
+/*  height: 15vh;*/
+/*}*/
 
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
+/*#timeline {*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*}*/
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
+/*.radio-buttons {*/
+/*  !*position: absolute;*!*/
+/*  !*text-align: left;*!*/
+/*  font: 14px sans-serif;*/
+/*  width: 100%;*/
+/*}*/
+/*.radio-buttons h3,h4 {*/
+/*  text-align: left;*/
+/*}*/
+/*.radio-buttons h4 {*/
+/*  font: 14px sans-serif;*/
+/*  color: darkblue;*/
+/*}*/
+/*label {*/
+/*  margin-right: 20px;*/
+/*}*/
+/*input {*/
+/*  margin-right: 5px;*/
+/*}*/
+/*.blue {*/
+/*  color: #3A4FD8;*/
+/*}*/
+/*.orange {*/
+/*  color: orange;*/
+/*}*/
+/*#tweet-category {*/
+/*  margin-top: 50px;*/
+/*}*/
+
+/*#slider {*/
+/*  margin-top: 5px;*/
+/*  margin-right: 20px;*/
+/*}*/
+
+/*!* Popup container *!*/
+/*.popup {*/
+/*  position: relative;*/
+/*  display: inline-block;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*!* The actual popup (appears on top) *!*/
+/*.popup .popuptext {*/
+/*  visibility: hidden;*/
+/*  width: 750px;*/
+/*  height: 585px;*/
+/*  background-color: grey;*/
+/*  color: #fff;*/
+/*  text-align: left;*/
+/*  border-radius: 6px;*/
+/*  padding: 20px 20px;*/
+/*  position: absolute;*/
+/*  z-index: 1;*/
+/*  bottom: -600px;*/
+/*  left: 50%;*/
+/*  margin-left: -375px;*/
+/*}*/
+
+/*!* Popup arrow *!*/
+/*.popup .popuptext::after {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  bottom: 100%;*/
+/*  left: 50%;*/
+/*  transform: rotate(180deg);*/
+/*  margin-left: -5px;*/
+/*  border-width: 5px;*/
+/*  border-style: solid;*/
+/*  border-color: grey transparent transparent transparent;*/
+/*}*/
+
+/*!* Toggle this class when clicking on the popup container (hide and show the popup) *!*/
+/*.popup .show {*/
+/*  visibility: visible;*/
+/*  -webkit-animation: fadeIn 1s;*/
+/*  animation: fadeIn 1s*/
+/*}*/
+
+/*!* Add animation (fade in the popup) *!*/
+/*@-webkit-keyframes fadeIn {*/
+/*  from {opacity: 0;}*/
+/*  to {opacity: 1;}*/
+/*}*/
+
+/*@keyframes fadeIn {*/
+/*  from {opacity: 0;}*/
+/*  to {opacity:1 ;}*/
+/*}*/

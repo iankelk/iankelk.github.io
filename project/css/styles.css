@@ -1,35 +1,3 @@
-/*.tooltip {*/
-/*    position: absolute;*/
-/*    text-align: center;*/
-/*    font: 12px sans-serif;*/
-/*    !*  pointer-events: none;	This line needs to be removed *!*/
-/*}*/
-/*.tooltip h3,h4 {*/
-/*    text-align: left;*/
-/*}*/
-/*.tooltip h4 {*/
-/*    font: 14px sans-serif;*/
-/*}*/
-
-/*.table {*/
-/*    font-size: 0.7em;*/
-/*}*/
-
-/*.x-axis, .y-axis {*/
-/*    font-size: .5em;*/
-/*}*/
-
-/*#timelineDiv {*/
-/*    min-height: 10vh;*/
-/*    min-width: 80vw;*/
-/*}*/
-
-/*#globeDiv {*/
-
-/*    min-height: 10vh;*/
-/*    max-height: 55vh;*/
-/*}*/
-
 body {
     text-align: center;
 
@@ -38,3 +6,439 @@ body {
 .container-fluid {
     max-width: 80%
 }
+
+.slide-text {
+    max-width: 60vw;
+    margin: auto;
+}
+
+/*BUBBLE VIS*/
+
+
+h1,h2{
+    color: midnightblue;
+}
+
+#top-row-bubbles {
+    height: 90px;
+    margin-top: 1vh;
+}
+
+#selector-row {
+    height: 5vh;
+}
+
+#category {
+    width: 40%;
+}
+
+/*#split {*/
+/*    max-width: 20%;*/
+/*}*/
+
+#radio {
+    margin-top: 1vh;
+}
+
+label {
+    margin-right: 50px;
+}
+
+input {
+    margin-right: 5px;
+}
+
+.legend-text {
+    font-size: 1em;
+    alignment-baseline: middle;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: left;
+    font: 12px sans-serif;
+}
+.tooltip h3,h4 {
+    text-align: left;
+}
+.tooltip h4 {
+    font: 14px sans-serif;
+    color: darkblue;
+}
+
+/*CHUMBOX*/
+
+.highlight{
+    color:red;
+    font-weight: bold;
+}
+.website{
+    margin-top: 0;
+    margin-bottom: 0;
+    color:grey
+}
+.website-description{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.fun-fact{
+    margin-top:1rem;
+}
+
+/*based on
+https://html-online.com/articles/blinking-text-css-animation/
+ */
+.blinking{
+    font-size: 3rem;
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: red; }
+    99%{    color:red;  }
+    100%{   color: #000;    }
+}
+
+
+/*FORCE DIRECT*/
+
+#top-row {
+    height: 5vh;
+    margin-top: 1vh;
+}
+
+#selector-row {
+    height: 5vh;
+}
+
+#category-force-direct {
+    width: 20%;
+}
+#split {
+    width: 20%;
+}
+
+#vis-row {
+    height: 700px;
+    width: 100%;
+}
+
+.legend-text {
+    font-size: 1em;
+    alignment-baseline: middle;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: left;
+    font: 12px sans-serif;
+}
+.tooltip h3,h4 {
+    text-align: left;
+}
+.tooltip h4 {
+    font: 14px sans-serif;
+    color: darkblue;
+}
+.counter {
+    position: sticky;
+    text-align: left;
+    font: 18px sans-serif;
+    font-weight: bold;
+}
+
+
+/*GLOBE VIZ*/
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    font: 12px sans-serif;
+}
+.tooltip h3,h4 {
+    text-align: left;
+}
+.tooltip h4 {
+    font: 14px sans-serif;
+}
+
+.table {
+    font-size: 0.7em;
+}
+
+.x-axis, .y-axis {
+    font-size: .5em;
+}
+
+#timelineDiv {
+    min-height: 10vh;
+    min-width: 85vw;
+}
+
+#globeDiv {
+    min-height: 10vh;
+    max-height: 55vh;
+}
+
+#globe-title{
+    font-size: 2em;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+img {
+    max-height:50vh;
+    max-width: 80%;
+}
+
+
+.direction {
+    position: relative;
+    top: 10px;
+    left: 0%;
+    font-size: 10px;
+}
+
+.news-div {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1vh;
+}
+
+.news-description {
+    font-size: 0.6em;
+}
+
+/*HOTSPOT VIZ*/
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    font: 12px sans-serif;
+    /*  pointer-events: none;	This line needs to be removed */
+}
+.tooltip h3,h4 {
+    text-align: left;
+}
+.tooltip h4 {
+    font: 14px sans-serif;
+}
+
+.table {
+    font-size: 0.7em;
+}
+
+.x-axis, .y-axis {
+    font-size: .5em;
+}
+
+#timelineDiv {
+    min-height: 10vh;
+    min-width: 85vw;
+}
+
+#globeDiv {
+    min-height: 10vh;
+    max-height: 55vh;
+}
+
+img {
+    max-height:50vh;
+    max-width: 80%;
+}
+
+.direction {
+    position: relative;
+    top: 10px;
+    left: 0%;
+    font-size: 10px;
+}
+
+#vis-row-hotspot {
+    height: 800px;
+    width: 100%;
+}
+
+#hotspot-image {
+    width: 100%;
+}
+
+/*TWEET TIMELINE*/
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/*h3 {*/
+/*  !*font-weight: 100;*!*/
+/*  margin-top: 20px;*/
+/*}*/
+
+.container-fluid {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.browser text {
+    text-anchor: end;
+}
+
+.area {
+    /*opacity: 0.7;*/
+    clip-path: url(#clip);
+}
+.area:hover {
+    stroke-width: 1;
+    stroke-opacity: 1;
+    stroke: black;
+    opacity: 1;
+}
+
+.brush .extent {
+    stroke: #fff;
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+}
+
+/*.main-area {*/
+/*  margin-top: 5vh;*/
+/*  border: thin solid grey;*/
+/*  border-radius: 5px;*/
+/*  background: rgba(221,221,221,0.45);*/
+/*}*/
+
+#title-row {
+    height: 14vh;
+}
+
+#stacked-area-chart-row {
+    height: 60vh;
+}
+
+#stacked-area-chart {
+    height: 100%;
+    width: 100%;
+}
+
+.timeline-row {
+    height: 15vh;
+}
+
+#timeline {
+    height: 100%;
+    width: 100%;
+}
+
+.radio-buttons {
+    /*position: absolute;*/
+    /*text-align: left;*/
+    font: 14px sans-serif;
+    width: 100%;
+}
+.radio-buttons h3,h4 {
+    text-align: left;
+}
+.radio-buttons h4 {
+    font: 14px sans-serif;
+    color: darkblue;
+}
+label {
+    margin-right: 20px;
+}
+input {
+    margin-right: 5px;
+}
+.blue {
+    color: #3A4FD8;
+}
+.orange {
+    color: orange;
+}
+#tweet-category {
+    margin-top: 50px;
+}
+
+#slider {
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 750px;
+    height: 585px;
+    background-color: grey;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 20px 20px;
+    position: absolute;
+    z-index: 1;
+    bottom: -600px;
+    left: 50%;
+    margin-left: -375px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: rotate(180deg);
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: grey transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
