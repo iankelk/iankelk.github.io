@@ -113,7 +113,7 @@ class StoryVis {
 
         // step 4 Description
         vis.step4description = wrapper.append('g').attr("transform", `translate(${vis.width / 2},${220})`).attr('opacity', 0)
-        const s4 = vis.step4description.append('text').attr('class', "text-color normal").text("However, the top 10 countries produced more than")
+        const s4 = vis.step4description.append('text').attr('class', "text-color normal").text("The top 10 countries produced more than")
         s4.append('tspan').attr('class', "text-color red").style('font-size', "3.5em").text(' 52%')
         vis.step4description.append('text').attr('y', 40).attr('class', "text-color normal").text("of the fake news about COVID-19")
 
