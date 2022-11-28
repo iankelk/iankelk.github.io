@@ -9,12 +9,12 @@ class StoryVis {
 
         console.log("mapData", this.mapData)
         console.log("displayData", this.data)
-        this.width = 1000;
+        this.width = 1200;
         this.height = 750;
-        this.node_radius = 3;
+        this.node_radius = 2;
 
         this.fn_per_dot = 5;
-        this.min_fn_graph = 20;
+        this.min_fn_graph = 5;
 
         this.initVis();
     }
@@ -296,6 +296,8 @@ class StoryVis {
             vis.simulation.restart()
             vis.simulation.on('tick', () => {
                 vis.nodes.transition().duration(800).ease(d3.easeLinear).attr('transform', function(d) {
+                    console.log("d.x", d.x);
+                    console.log("d.y", d.y);
                     return `translate(${d.x},${ d.y})`})})
             vis.simulation.alpha(1).alphaDecay(0.1).velocityDecay(0.36).restart()
 
