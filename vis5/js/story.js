@@ -7,7 +7,7 @@ class StoryVis {
         // Make a deep copy of the data for display purposes
         //this.displayData = this.data.map((x) => x);
 
-        this.width = 1200;
+        this.width = 1000;
         this.height = 750;
         this.node_radius = 3;
 
@@ -35,7 +35,7 @@ class StoryVis {
     initVis() {
         let vis = this;
 
-        vis.margin = ({top: 80, bottom: 10, left: 10, right: 20})
+        vis.margin = ({top: 80, bottom: 10, left: 0, right: 0})
 
         vis.projection = d3.geoEquirectangular().fitSize([vis.width, vis.height+400], vis.mapData).rotate([-30, 0]);
         vis.topCountries = vis.getTopCountries();
