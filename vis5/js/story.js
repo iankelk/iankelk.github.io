@@ -9,7 +9,7 @@ class StoryVis {
 
         this.width = 1200;
         this.height = 750;
-        this.node_radius = 2;
+        this.node_radius = 3;
 
         this.fn_per_dot = 5;
         this.min_fn_graph = 5;
@@ -35,9 +35,9 @@ class StoryVis {
     initVis() {
         let vis = this;
 
-        vis.margin = ({top: 100, bottom: 50, left: 50, right: 50})
+        vis.margin = ({top: 80, bottom: 10, left: 10, right: 20})
 
-        vis.projection = d3.geoEquirectangular().fitSize([vis.width, vis.height], vis.mapData).rotate([-30, 0]);
+        vis.projection = d3.geoEquirectangular().fitSize([vis.width, vis.height+400], vis.mapData).rotate([-30, 0]);
         vis.topCountries = vis.getTopCountries();
         vis.nodesData = vis.getNodesData();
         vis.nodesData1 = vis.getNodesData1();
@@ -62,7 +62,7 @@ class StoryVis {
 
         vis.x_countries = d3.scaleBand().domain(vis.data.filter(d => d.num_fake_news > vis.min_fn_graph).sort((a, b) => a.num_fake_news - b.num_fake_news).map(v => v.country)).range([vis.width, 50])
 
-        vis.y_count = d3.scaleLinear().domain([0, 380]).range([vis.height - 75, 0])
+        vis.y_count = d3.scaleLinear().domain([0, 380]).range([vis.height, -1200])
 
         vis.countNews = {};
         for (let country_code in vis.individual_ratios) {
@@ -86,7 +86,7 @@ class StoryVis {
             .call(g => g.select('.domain').remove())
             .call(g => g.selectAll('.tick line').remove())
 
-        vis.yAxis_countries = wrapper.append("g").attr('transform', `translate(${0}, ${vis.height - 75})`).call(vis.xAxisCountries).selectAll("text")
+        vis.yAxis_countries = wrapper.append("g").attr('transform', `translate(${0}, ${vis.height})`).call(vis.xAxisCountries).selectAll("text")
             .style("text-anchor", "end").attr('opacity', 0).attr("dy", "-1.5em").attr('dx', '-2em')
             .attr("transform", "rotate(-70)");
 
@@ -107,28 +107,25 @@ class StoryVis {
         const node_desc = vis.step2description.append('g').attr('transform', `translate(${0}, ${60})`)
         node_desc.append("text").attr('y', 20).attr('class', 'text-color').text(`Each circle represents ${vis.fn_per_dot} pieces of disinformation.`)
 
-        // step 3 Description
+        // Step 3 Description
         vis.step3description = wrapper.append('g').attr("transform", `translate(${vis.width / 2},${220})`)
         const s3 = vis.step3description.append('text').attr('class', "text-color").style('font-size', "3.5em").text('50%').append('tspan').attr('class', "text-color").text(" of all COVID-19 disinformation came from Asia.")
 
-        // step 4 Description
+        // Step 4 Description
         vis.step4description = wrapper.append('g').attr("transform", `translate(${vis.width / 2},${220})`).attr('opacity', 0)
-        const s4 = vis.step4description.append('text').attr('class', "text-color normal").text("The top 10 countries produced more than")
+        const s4 = vis.step4description.append('text').attr('class', "text-color normal").text("The top 10 countries produced")
         s4.append('tspan').attr('class', "text-color red").style('font-size', "3.5em").text(' 52%')
         vis.step4description.append('text').attr('y', 40).attr('class', "text-color normal").text("of the fake news about COVID-19")
 
-        // with 3.3kg per Capita, philippines contributes more plastic waste than next 4 countries on the list.
-
-        // step 5 description
+        // Step 5 Description
         vis.step5description = wrapper.append('g').attr("transform", `translate(${vis.width / 2},${320})`).attr('opacity', 0)
         const s5 = vis.step5description.append('text').attr('class', "text-color").text("The United States and China alone produced 18% of the fake news about COVID-19.")
 
-        // step 6 description
+        // Step 6 Description
         vis.step6description = wrapper.append('g').attr("transform", `translate(${vis.width / 2},${420})`).attr('opacity', 1)
         const s6 = vis.step6description.append('text').attr('class', "text-color amber").text("Individuals")
         s6.append('tspan').attr('class', "text-color normal").text(' account for ').append('tspan').attr('class', "text-color amber").style('font-size', "3em").text('77%')
         vis.step6description.append('text').attr('y', 50).append('tspan').attr('class', "text-color normal").text(' of fake news created from the top 10 countries.')
-
 
         vis.nodes = wrapper.selectAll('circle').data(vis.nodesData1).join('circle').attr('r', vis.node_radius).attr('fill', 'whitesmoke').attr('stroke', 'black').attr('stroke-width', 0.2)
 
@@ -187,7 +184,7 @@ class StoryVis {
         // add a grid scale
         const calc_grid_pos = (i, nc, nr) => {
             const cs = (vis.height) / nc
-            const rs = (vis.width / 2) / nr
+            const rs = (vis.width / 2.4) / nr
 
             return {y: (Math.floor(i / nr) * cs), x: rs * (i % nr)}
         }
