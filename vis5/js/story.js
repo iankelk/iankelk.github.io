@@ -13,6 +13,9 @@ class StoryVis {
         this.height = 750;
         this.node_radius = 3;
 
+        this.fn_per_dot = 5;
+        this.min_fn_graph = 20;
+
         this.initVis();
     }
 
@@ -44,7 +47,7 @@ class StoryVis {
         let regions = wrapper.selectAll('region').data(vis.mapData.features)
         vis.areas = regions.enter().append('path').attr('class', 'areas').attr('d', d=>geoGenerator(d)).attr('fill','#969696')
 
-        vis.x_countries = d3.scaleBand().domain(vis.data.filter(d => d.pw_total > 1000).sort((a,b) => a.pw_total - b.pw_total).map(v => v.country)).range([vis.width, 50])
+        vis.x_countries = d3.scaleBand().domain(vis.data.filter(d => d.num_fake_news > vis.min_fn_graph).sort((a,b) => a.num_fake_news - b.num_fake_news).map(v => v.country)).range([vis.width, 50])
 
         vis.y_count = d3.scaleLinear().domain([0, 380]).range([vis.height-75, 0])
 
@@ -130,8 +133,8 @@ class StoryVis {
         const nodesData = [];
         const count = {}
         vis.data.forEach(v => {
-            if (v.pw_total > 1000) {
-                for (let i = 0; i < Math.floor(v.pw_total / 1000); i++) {
+            if (v.num_fake_news > vis.fn_per_dot) {
+                for (let i = 0; i < Math.floor(v.num_fake_news / vis.fn_per_dot); i++) {
                     count[v.country] = (count[v.country] || 0) + 1;
 
                     if (vis.topCountries.includes(v.country)) {
@@ -158,7 +161,7 @@ class StoryVis {
             return {y: (Math.floor(i/nr) * cs), x:  rs * (i % nr)}
         }
 
-        return vis.nodesData.sort((a,b) => b.pw_total - a.pw_total).map((v, i) => {
+        return vis.nodesData.sort((a,b) => b.num_fake_news - a.num_fake_news).map((v, i) => {
             const result = calc_grid_pos(i, rows, cols)
             let t = vis.projection([parseFloat(v.long), parseFloat(v.lat)])
             return (
@@ -168,7 +171,7 @@ class StoryVis {
     }
     getTopCountries() {
         let vis = this;
-        return vis.data.filter(d => d.pw_total > 1000).sort((a,b) => b.pw_total - a.pw_total).slice(0, 10).map(v => v.country);
+        return vis.data.filter(d => d.num_fake_news > vis.min_fn_graph).sort((a,b) => b.num_fake_news - a.num_fake_news).slice(0, 10).map(v => v.country);
     }
 
     morph(type) {

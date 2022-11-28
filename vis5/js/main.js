@@ -5,7 +5,8 @@ let type = 0;
 // Load data using promises
 let promises = [
     d3.json("data/world.geojson.json"),
-    d3.csv("data/mismanaged_plastic.csv")
+    //d3.csv("data/mismanaged_plastic.csv")
+    d3.csv("data/fake_news_story.csv")
 ];
 
 Promise.all(promises)
