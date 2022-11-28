@@ -51,7 +51,7 @@ class StoryVis {
             .attr("height", vis.height)
             .attr("width", vis.width)
             .attr("preserveAspectRatio", "xMidYMid meet")
-            .style('background', "#333333")
+            //.style('background', "whitesmoke")
 
         const wrapper = vis.svg.append('g').attr("transform", `translate(${vis.margin.left},${vis.margin.top})`)
 
@@ -127,7 +127,7 @@ class StoryVis {
         s6.append('tspan').attr('class', "text-color normal").text(' account for ').append('tspan').attr('class', "text-color amber").style('font-size', "3em").text('77%')
         vis.step6description.append('text').attr('y', 50).append('tspan').attr('class', "text-color normal").text(' of fake news created from the top 10 countries.')
 
-        vis.nodes = wrapper.selectAll('circle').data(vis.nodesData1).join('circle').attr('r', vis.node_radius).attr('fill', 'whitesmoke').attr('stroke', 'black').attr('stroke-width', 0.2)
+        vis.nodes = wrapper.selectAll('circle').data(vis.nodesData1).join('circle').attr('r', vis.node_radius).attr('fill', '#333333').attr('stroke', 'black').attr('stroke-width', 0.2)
 
         // init simulation
         vis.simulation = d3.forceSimulation();
@@ -240,7 +240,7 @@ class StoryVis {
 
             //show
             vis.simulation.stop()
-            vis.nodes.transition().duration(1500).attr('transform', d => `translate(${d.x_grid},${d.y_grid})`).attr('r', 6).attr('fill', 'whitesmoke')
+            vis.nodes.transition().duration(1500).attr('transform', d => `translate(${d.x_grid},${d.y_grid})`).attr('r', 6).attr('fill', '#333333')
             vis.step2description.transition().duration(800).attr('opacity', 1).attr("transform", `translate(${(vis.width / 2) + vis.width / 4},${vis.height / 2})`)
 
         } else if (type === 2) {
@@ -259,7 +259,7 @@ class StoryVis {
             vis.step2description.transition().duration(800).attr('opacity', 1).attr("transform", `translate(${(vis.width / 2)},${50})`)
 
             vis.areas.transition().duration(400).attr('opacity', 0.4)
-            vis.nodes.attr('r', vis.node_radius).attr('fill', 'whitesmoke')
+            vis.nodes.attr('r', vis.node_radius).attr('fill', '#333333')
 
             vis.simulation.force('y', d3.forceY().y(d => d.y_map)).force('x', d3.forceX().x(d => d.x_map))
 
@@ -292,7 +292,7 @@ class StoryVis {
                 if (d.country_code in vis.individual_ratios) {
                     return 'red'
                 } else {
-                    return 'whitesmoke'
+                    return '#333333'
                 }
             })
             vis.simulation.force('y', d3.forceY().y(d => d.y_map)).force('x', d3.forceX().x(d => d.x_map))
@@ -323,7 +323,7 @@ class StoryVis {
                 if (d.country_code in vis.individual_ratios) {
                     return 'red'
                 } else {
-                    return 'whitesmoke'
+                    return '#333333'
                 }
             })
             vis.yAxis_countries.attr('opacity', 1)
@@ -355,7 +355,7 @@ class StoryVis {
                         return 'red'
                     }
                 } else {
-                    return 'whitesmoke'
+                    return '#333333'
                 }
             })
 
@@ -400,7 +400,7 @@ class StoryVis {
                         return 'red'
                     }
                 } else {
-                    return 'whitesmoke'
+                    return '#333333'
                 }
             })
 
