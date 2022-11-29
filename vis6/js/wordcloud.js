@@ -28,11 +28,9 @@ class WordCloud {
             .append('g')
             .attr('transform', `translate (${vis.margin.left+vis.width/2}, ${vis.margin.top+ vis.height/2})`);
 
-        vis.form = d3.select("#form").on("submit", function (event) {
+        vis.button = d3.select("#redraw-wordcloud").on("click", function (event) {
             console.log("submitted")
             vis.showNewWords(myWordCloud);
-            event.preventDefault();
-            return false;
         });
 
         // How to scale the words which vary greatly in size
