@@ -1,6 +1,6 @@
 body {
     text-align: center;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 .container-fluid {
@@ -13,11 +13,6 @@ body {
 }
 
 /*BUBBLE VIS*/
-
-
-h1,h2{
-    color: midnightblue;
-}
 
 #top-row-bubbles {
     height: 90px;
@@ -168,10 +163,6 @@ https://html-online.com/articles/blinking-text-css-animation/
     font: 14px sans-serif;
 }
 
-.table {
-    font-size: 0.7em;
-}
-
 .x-axis, .y-axis {
     font-size: .5em;
 }
@@ -230,29 +221,6 @@ img {
     font: 14px sans-serif;
 }
 
-.table {
-    font-size: 0.7em;
-}
-
-.x-axis, .y-axis {
-    font-size: .5em;
-}
-
-#timelineDiv {
-    min-height: 10vh;
-    min-width: 85vw;
-}
-
-#globeDiv {
-    min-height: 10vh;
-    max-height: 55vh;
-}
-
-img {
-    max-height:50vh;
-    max-width: 80%;
-}
-
 .direction {
     position: relative;
     top: 10px;
@@ -270,11 +238,6 @@ img {
 }
 
 /*TWEET TIMELINE*/
-body {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
 h1 {
     font-weight: 100;
     margin-top: 20px;
@@ -285,11 +248,6 @@ h2 {
     font-size: 18px;
     margin-bottom: 40px;
 }
-
-/*h3 {*/
-/*  !*font-weight: 100;*!*/
-/*  margin-top: 20px;*/
-/*}*/
 
 .container-fluid {
     padding-right: 30px;
@@ -308,7 +266,6 @@ h2 {
 }
 
 .area {
-    /*opacity: 0.7;*/
     clip-path: url(#clip);
 }
 .area:hover {
@@ -323,13 +280,6 @@ h2 {
     fill-opacity: .125;
     shape-rendering: crispEdges;
 }
-
-/*.main-area {*/
-/*  margin-top: 5vh;*/
-/*  border: thin solid grey;*/
-/*  border-radius: 5px;*/
-/*  background: rgba(221,221,221,0.45);*/
-/*}*/
 
 #title-row {
     height: 14vh;
@@ -354,8 +304,6 @@ h2 {
 }
 
 .radio-buttons {
-    /*position: absolute;*/
-    /*text-align: left;*/
     font: 14px sans-serif;
     width: 100%;
 }
