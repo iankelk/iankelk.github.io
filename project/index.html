@@ -14,13 +14,14 @@
 
     <link rel="stylesheet" type="text/css" href="css/libraries/fullpage/fullpage.css"/>
     <link href="css/libraries/nouislider/nouislider.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+
 
 
 <!--    Google fonts-->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 
 </head>
 <body>
@@ -48,21 +49,34 @@
     </div>
 
     <div class="section" id="section01">
-        <h1>Start From the Source</h1>
-        <p class="slide-text">
+        <h1 data-aos="fade-in" data-aos-delay="100">Start From the Source</h1>
+        <p class="slide-text" data-aos="fade-up" data-aos-delay="500">
             Fake news gain traction as they spread
             and change the perception of reality of those who believe
             it and further contribute to their spreading.
             However, in order for fake news to spread, someone has to create it to begin with. But who?
             Let's use COVID-19 as an example.
-            A report by the Center for Countering Digital Hate (CCDH) showed that only 12 people
-            were responsible for 65% of COVID-19 related lies on social media.
-            Their massive followings and engagement allowed them to spread misinformation about the pandemic
-            and question the effectiveness of vaccines.
-            We have managed to obtain the Twitter interactions for 6 of those people,
-            whose accounts have not been suspended, and what we found is
-            <span style="color: red; font-weight: bold"> only takes as few as half a dozen people to create a deep network of
+            A report by the Center for Countering Digital Hate (CCDH) showed that only <span style="font-weight: bold; font-size:1.5em; color: red;">12</span> people
+            were responsible for 65% of COVID-19 related lies on social media. They were called
+            <span style="font-weight: bold" data-aos="fade-in" data-aos-delay="2000"> The Misinformation Dozen.</span>
+            <br>
+            <br>
+        </p>
+    </div>
+
+    <div class="section" id="section0291">
+        <h1>The Power of The Few</h1>
+        <p class="slide-text" data-aos="fade-up" data-aos-delay="200">
+            <span data-aos="fade-up" data-aos-delay="250">
+                The massive followings and engagement allowed them to spread misinformation about the pandemic
+                and question the effectiveness of vaccines.
+                We have managed to obtain the Twitter interactions for 6 of those people,
+                <span style="font-weight: bold">the Misinformation 6</span>, whose accounts have not been suspended.
+                These individuals are still active on the platform.
+                We examined their interactions on Twitter, and what we found is
+                <span style="color: red; font-weight: bold"> only takes as few as half a dozen people to create a deep network of
                 lies</span>
+            </span>
         </p>
     </div>
 
@@ -539,6 +553,13 @@
 <!-- NoUISlider -->
 <script src="js/libraries/nouislider/nouislider.js"></script>
 
+<!--Animate On Scroll -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
 <!-- OWN JS -->
 
 <script type="text/javascript">
@@ -554,6 +575,11 @@
         navigation: true,
         afterLoad: function (origin, destination, direction, trigger) {
             console.log("afterLoad: destination:" + destination.index);
+            // Necessary for AOS to work:
+            // https://github.com/michalsnik/aos/issues/490
+            document.querySelectorAll('.fp-table.active .aos-init').forEach((el) => {
+                el.classList.add('aos-animate')
+            })
         },
         onLeave: function (origin, destination, direction, trigger) {
             console.log("onLeave: destination:" + destination.index);
