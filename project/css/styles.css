@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Domine', sans-serif;
 }
 
 .container-fluid {
@@ -10,6 +10,7 @@ body {
 .slide-text {
     max-width: 60vw;
     margin: auto;
+    font-size: 1.5em;
 }
 
 /*BUBBLE VIS*/
