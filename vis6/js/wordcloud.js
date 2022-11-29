@@ -95,18 +95,25 @@ class WordCloud {
                     .font("Impact")
                     .fontSize(function(d) { return d.size; })
                     .on("end", draw)
-                if (vis.step % 2) {
+                if (vis.step % 3 === 0) {
                     vis.step++;
                     vis.cloud
                         .rotate(function () {
                             return (~~(Math.random() * 2)) * 90;
                         })
                         .start();
-                } else {
+                } else if (vis.step % 3 === 1) {
                     vis.step++;
                     vis.cloud
                         .rotate(function () {
                             return (~~(Math.random() * 6)-3) * 30;
+                        })
+                        .start();
+                } else {
+                    vis.step++;
+                    vis.cloud
+                        .rotate(function () {
+                            return 30;
                         })
                         .start();
                 }
