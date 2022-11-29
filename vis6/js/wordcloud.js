@@ -3,26 +3,11 @@ class WordCloud {
         // The DOM element of the parent
         this.parentElement = parentElement;
         this.data = data;
-        // Make a deep copy of the data for display purposes
-        //this.displayData = this.data.map((x) => x);
+        this.displayData = this.data.slice(0,150);
 
-        // this.width = 1000;
-        // this.height = 750;
-
-        console.log(this.data);
-        this.minMax = [this.data[this.data.length - 1].value, this.data[0].value];
-
-        console.log("minMax", this.minMax);
-
-        //Some sample data - http://en.wikiquote.org/wiki/Opening_lines
-        this.words = [
-            "You don't know about me without you have read a book called The Adventures of Tom Sawyer but that ain't no matter.",
-            "The boy with fair hair lowered himself down the last few feet of rock and began to pick his way toward the lagoon."
-            // "When Mr. Bilbo Baggins of Bag End announced that he would shortly be celebrating his eleventy-first birthday with a party of special magnificence, there was much talk and excitement in Hobbiton.",
-            // "It was inevitable: the scent of bitter almonds always reminded him of the fate of unrequited love."
-        ]
-
-
+        // Step to alternate between rotations for fun
+        this.step = 0;
+        this.minMax = [parseInt(this.displayData[this.displayData.length - 1].value), parseInt(this.displayData[0].value)];
         this.initVis();
     }
 
@@ -33,8 +18,6 @@ class WordCloud {
 
         // define margins
         vis.margin = {top: 10, right: 10, bottom: 10, left: 10};
-        // vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
-        // vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
         vis.width =  vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -43,7 +26,7 @@ class WordCloud {
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
             .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
             .append('g')
-            .attr('transform', `translate (${vis.margin.left+475}, ${vis.margin.top+400})`);
+            .attr('transform', `translate (${vis.margin.left+vis.width/2}, ${vis.margin.top+ vis.height/2})`);
 
         vis.form = d3.select("#form").on("submit", function (event) {
             console.log("submitted")
@@ -52,33 +35,17 @@ class WordCloud {
             return false;
         });
 
+        // How to scale the words which vary greatly in size
+        vis.wordScale = d3.scaleLog()
+            .domain(vis.minMax)
+            .range([7,80]);
+
         //Create a new instance of the word cloud visualisation.
         let myWordCloud = vis.wordCloud();
 
         myWordCloud.update(vis.getWords(250))
 
         vis.showNewWords(myWordCloud);
-
-
-        vis.wrangleData();
-    }
-
-    wrangleData() {
-        let vis = this;
-
-        vis.updateVis();
-    }
-
-    updateVis() {
-        let vis = this;
-
-    }
-
-    convertRange( value ) {
-        let vis = this;
-        const r1 = vis.minMax;
-        const r2 = [5,100]
-        return ( value - r1[ 0 ] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ];
     }
 
     // Encapsulate the word cloud functionality
@@ -113,62 +80,52 @@ class WordCloud {
                         .style('fill-opacity', 1e-6)
                         .attr('font-size', 1)
                         .remove())
-
-            // //Exiting words
-            // cloud.exit()
-            //     .transition()
-            //     .duration(200)
-            //     .style('fill-opacity', 1e-6)
-            //     .attr('font-size', 1)
-            //     .remove();
         }
 
         vis.cloud = d3.layout.cloud()
             .size([vis.width, vis.height]);
 
-        //Use the module pattern to encapsulate the visualisation code. We'll
-        // expose only the parts that need to be public.
         return {
-
-            // Recompute the word cloud for a new set of words. This method will
+            // Recompute the word cloud. This method will
             // asynchronously call draw when the layout has been computed.
-            // The outside world will need to call this function, so make it part
-            // of the wordCloud return value.
             update: function(words) {
                 console.log("update words", words)
                 vis.cloud
                     .words(words)
                     .padding(5)
-                    .rotate(function() { return ~~(Math.random() * 2) * 90; })
+                    .spiral('rectangular')
                     .font("Impact")
                     .fontSize(function(d) { return d.size; })
                     .on("end", draw)
-                    .start();
+                if (vis.step % 2) {
+                    vis.step++;
+                    vis.cloud
+                        .rotate(function () {
+                            return (~~(Math.random() * 2)) * 90;
+                        })
+                        .start();
+                } else {
+                    vis.step++;
+                    vis.cloud
+                        .rotate(function () {
+                            return (~~(Math.random() * 6)-3) * 30;
+                        })
+                        .start();
+                }
             }
         }
-
     }
 
-    //Prepare one of the sample sentences by removing punctuation,
+    // Prepare one of the sample sentences by removing punctuation,
     // creating an array of words and computing a random size attribute.
-    getWords(numWords=250) {
+    getWords() {
         let vis = this;
-        return vis.data.slice(0,numWords).map(function(d) { return {text: d.key, size: vis.convertRange(d.value)}});
+        return vis.displayData.map(function(d) { return {text: d.key, size: vis.wordScale(d.value)}});
     }
 
-    // This method tells the word cloud to redraw with a new set of words.
-    // In reality the new words would probably come from a server request,
-    // user input or some other source.
+    // This method tells the word cloud to redraw
     showNewWords(v, i) {
-
         let vis = this;
-
-        //const randomInt = Math.floor(Math.random() * 10) + 1;
-        //console.log("random", randomInt)
-
-        // console.log("vis.words", vis.words)
-        v.update(vis.getWords(250))
-
-        //setTimeout(function() { vis.showNewWords(v)}, 5000)
+        v.update(vis.getWords())
     }
 }
