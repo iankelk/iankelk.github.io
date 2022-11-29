@@ -1,22 +1,28 @@
 <!DOCTYPE html>
+<html>
+<head>
     <meta charset="utf-8">
-    <title>Word Cloud Generator</title>
+    <title>Word Cloud</title>
     <link rel="stylesheet" href="css/style.css">
-
-<div id="wordcloud"></div>
-
-<form id="form">
-
-    <p style="position: absolute; right: 0; top: 0" id="status"></p>
-
-    <div style="text-align: center">
-        <div id="presets"></div>
-        <div id="custom-area">
-                <button id="go" type="submit">Randow Redraw!</button>
-        </div>
+</head>
+<body>
+<div class="row">
+    <div class="col">
+        <div id="wordcloud"></div>
     </div>
+    <div class="col">
+        <form id="form">
+            <div style="text-align: center">
+                <button id="go" type="submit">Random Redraw!</button>
+            </div>
+        </form>
+    </div>
+</div>
 
-</form>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
 
 <!-- d3 -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -25,3 +31,5 @@
 <!-- own js files -->
 <script src="js/wordcloud.js"></script>
 <script src="js/main.js"></script>
+</body>
+</html>
