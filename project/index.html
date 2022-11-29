@@ -100,9 +100,31 @@
         </p>
     </div>
 
+<!--    <div class="section" id="section2">-->
+<!--        <h3>A small number of people can change a nation's perspective on healthcare, at the cost of lives.</h3>-->
+<!--        <img src="img/wordcloud.jpg" style="max-height: 80vh">-->
+<!--    </div>-->
+
     <div class="section" id="section2">
-        <h3>A small number of people can change a nation's perspective on healthcare, at the cost of lives.</h3>
-        <img src="img/wordcloud.jpg" style="max-height: 80vh">
+        <div id="wordcloud-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <h1>Politics, Vaccines, Climate Change</h1>
+                    <br>
+                    <p>Fake news disseminators spread lies about all subjects, at the cost of lives</p>
+                </div>
+                <div class="row">
+                    <div class="col-9">
+                        <div id="wordcloud"></div>
+                    </div>
+                    <div class="col-3">
+                        <div style="text-align: left">
+                            <button id="redraw-wordcloud">Random Redraw</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="section" id="section000001">
@@ -553,6 +575,10 @@
 <script src ="visuals/story/js/story.js"></script>
 <script src="visuals/story/js/main.js"></script>
 
+<!--Wordcloud Visualization-->
+<script src ="visuals/wordcloud/js/d3.layout.cloud.js"></script>
+<script src ="visuals/wordcloud/js/wordcloud.js"></script>
+<script src="visuals/wordcloud/js/main.js"></script>
 
 <!--<script src="js/main.js"></script>-->
 </body>

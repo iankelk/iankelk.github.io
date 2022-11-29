@@ -489,7 +489,7 @@ text.title {
 }
 
 #story-svg .annotation.rect text {
-    fill: var(--annotation-context-color);
+    /*fill: var(--annotation-context-color);*/
     /*fill: black;*/
     font-size: .6em;
     text-transform: uppercase;
@@ -498,4 +498,17 @@ text.title {
 #story-svg {
     height:750px;
     width:1000px;
+}
+
+/*WORDCLOUD VIZ*/
+#wordcloud-body {
+    position: relative;
+    font-family: "Helvetica Neue", sans-serif;
+    margin: 20px auto 1em;
+}
+#wordcloud {
+    height: 750px;
+}
+#redraw-wordcloud {
+    margin-top: 50px;
 }
