@@ -76,3 +76,7 @@ a.active {
 #angles input, #max {
     width: 42px;
 }
+
+#wordcloud {
+    height: 50vh;
+}

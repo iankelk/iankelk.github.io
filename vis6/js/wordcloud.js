@@ -35,31 +35,27 @@ class WordCloud {
         vis.margin = {top: 10, right: 10, bottom: 10, left: 10};
         // vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         // vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
-        vis.width = 500 - vis.margin.left - vis.margin.right;
-        vis.height = 500 - vis.margin.top - vis.margin.bottom;
+        vis.width =  vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
+        vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
         // init drawing area
-        // vis.svg = d3.select(vis.parentElement).append("svg")
-        //     .attr("width", vis.width + vis.margin.left + vis.margin.right)
-        //     .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
-        //     .append('g')
-        //     .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
-
-        //Construct the word cloud's SVG element
         vis.svg = d3.select(vis.parentElement).append("svg")
-            .attr("width", 500)
-            .attr("height", 500)
-            .append("g")
-            .attr("transform", "translate(250,250)");
+            .attr("width", vis.width + vis.margin.left + vis.margin.right)
+            .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
+            .append('g')
+            .attr('transform', `translate (${vis.margin.left+475}, ${vis.margin.top+400})`);
 
         vis.form = d3.select("#form").on("submit", function (event) {
             console.log("submitted")
+            vis.showNewWords(myWordCloud);
             event.preventDefault();
             return false;
         });
 
         //Create a new instance of the word cloud visualisation.
         let myWordCloud = vis.wordCloud();
+
+        myWordCloud.update(vis.getWords(250))
 
         vis.showNewWords(myWordCloud);
 
@@ -78,10 +74,10 @@ class WordCloud {
 
     }
 
-    convertRange( value, r1, r2 ) {
+    convertRange( value ) {
         let vis = this;
-        r1 = vis.minMax;
-        r2 = [1,10]
+        const r1 = vis.minMax;
+        const r2 = [5,100]
         return ( value - r1[ 0 ] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ];
     }
 
@@ -95,33 +91,40 @@ class WordCloud {
                 .data(words, function(d) { return d.text; })
 
             //Entering words
-            cloud.enter()
-                .append("text")
-                .style("font-family", "Impact")
-                .style("fill", function(d, i) { return vis.fill(i); })
-                .attr("text-anchor", "middle")
-                .attr('font-size', 1)
-                .text(function(d) { return d.text; });
+            cloud.join(
+            enter => enter.append("text")
+                        .style("font-family", "Impact")
+                        .style("fill", function(d, i) { return vis.fill(i); })
+                        .attr("text-anchor", "middle")
+                        .attr('font-size', 1)
+                        .text(function(d) { return d.text; }),
+                    // Entering and existing words
+                    update => update
+                        .transition()
+                        .duration(600)
+                        .style("font-size", function(d) { return d.size + "px"; })
+                        .attr("transform", function(d) {
+                            return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                        })
+                        .style("fill-opacity", 1),
+                    exit => exit
+                        .transition()
+                        .duration(200)
+                        .style('fill-opacity', 1e-6)
+                        .attr('font-size', 1)
+                        .remove())
 
-            //Entering and existing words
-            cloud
-                .transition()
-                .duration(600)
-                .style("font-size", function(d) { return d.size + "px"; })
-                .attr("transform", function(d) {
-                    return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-                })
-                .style("fill-opacity", 1);
-
-            //Exiting words
-            cloud.exit()
-                .transition()
-                .duration(200)
-                .style('fill-opacity', 1e-6)
-                .attr('font-size', 1)
-                .remove();
+            // //Exiting words
+            // cloud.exit()
+            //     .transition()
+            //     .duration(200)
+            //     .style('fill-opacity', 1e-6)
+            //     .attr('font-size', 1)
+            //     .remove();
         }
 
+        vis.cloud = d3.layout.cloud()
+            .size([vis.width, vis.height]);
 
         //Use the module pattern to encapsulate the visualisation code. We'll
         // expose only the parts that need to be public.
@@ -132,7 +135,8 @@ class WordCloud {
             // The outside world will need to call this function, so make it part
             // of the wordCloud return value.
             update: function(words) {
-                d3.layout.cloud().size([500, 500])
+                console.log("update words", words)
+                vis.cloud
                     .words(words)
                     .padding(5)
                     .rotate(function() { return ~~(Math.random() * 2) * 90; })
@@ -147,16 +151,9 @@ class WordCloud {
 
     //Prepare one of the sample sentences by removing punctuation,
     // creating an array of words and computing a random size attribute.
-    getWords(i) {
+    getWords(numWords=250) {
         let vis = this;
-
-        console.log("i", i)
-        return vis.words[i]
-            .replace(/[!\.,:;\?]/g, '')
-            .split(' ')
-            .map(function(d) {
-                return {text: d, size: 10 + Math.random() * 60};
-            })
+        return vis.data.slice(0,numWords).map(function(d) { return {text: d.key, size: vis.convertRange(d.value)}});
     }
 
     // This method tells the word cloud to redraw with a new set of words.
@@ -165,12 +162,13 @@ class WordCloud {
     showNewWords(v, i) {
 
         let vis = this;
-        i = i || 0;
 
-        console.log("vis.words", vis.words)
-        v.update(vis.getWords(i++ % vis.words.length))
-        setTimeout(function() { vis.showNewWords(v, i)}, 2000)
+        //const randomInt = Math.floor(Math.random() * 10) + 1;
+        //console.log("random", randomInt)
+
+        // console.log("vis.words", vis.words)
+        v.update(vis.getWords(250))
+
+        //setTimeout(function() { vis.showNewWords(v)}, 5000)
     }
-
-
 }
