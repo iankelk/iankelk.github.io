@@ -110,12 +110,12 @@ class StoryVis {
 
         // Step 3 Description
         vis.step3description = wrapper.append('g').attr("transform", `translate(${vis.width / 2},${220})`)
-        const s3 = vis.step3description.append('text').attr('class', "text-color").style('font-size', "3.5em").text('50%').append('tspan').attr('class', "text-color").text(" of all COVID-19 disinformation came from Asia.")
+        const s3 = vis.step3description.append('text').attr('class', "text-color").style('font-size', "3em").text('50%').append('tspan').attr('class', "text-color").text(" of all COVID-19 disinformation came from Asia.")
 
         // Step 4 Description
         vis.step4description = wrapper.append('g').attr("transform", `translate(${vis.width / 2},${220})`).attr('opacity', 0)
         const s4 = vis.step4description.append('text').attr('class', "text-color normal").text("The top 10 countries produced")
-        s4.append('tspan').attr('class', "text-color red").style('font-size', "3.5em").text(' 52%')
+        s4.append('tspan').attr('class', "text-color red").style('font-size', "3em").text(' 52%')
         vis.step4description.append('text').attr('y', 40).attr('class', "text-color normal").text("of the fake news about COVID-19")
 
         // Step 5 Description

@@ -398,31 +398,34 @@ input {
     fill: #333333;
     text-anchor:middle;
     font: 20px sans-serif;
-    font-family: "Oswald", sans-serif;
+    font-family: "Domine", sans-serif;
 }
 
 .red {
-    font: Bold 32px sans-serif;
+    font: Bold 28px sans-serif;
+    font-family: "Domine", sans-serif;
     fill:red;
 }
 .normal {
     font: Bold 26px sans-serif;
+    font-family: "Domine", sans-serif;
 }
 .amber {
-    font: Bold 32px sans-serif;
+    font: Bold 28px sans-serif;
+    font-family: "Domine", sans-serif;
     fill: #ffbf00;
 }
 .text-color-header {
     fill: #333333;
     text-anchor:middle;
-    font: bold 80px sans-serif;
-    font-family: "Oswald", sans-serif;
+    font: bold 60px sans-serif;
+    font-family: "Domine", sans-serif;
 }
 .text-color-start {
     fill: #333333;
     text-anchor:middle;
     font: 45px sans-serif;
-    font-family: "Oswald", sans-serif;
+    font-family: "Domine", sans-serif;
 }
 .annotation-note-content {color:white;}
 .tick {
@@ -452,7 +455,7 @@ text.title {
 /*WORDCLOUD VIZ*/
 #wordcloud-body {
     position: relative;
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: "Domine", sans-serif;
     margin: 20px auto 1em;
 }
 #wordcloud {
