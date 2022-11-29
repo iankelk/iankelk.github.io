@@ -1,10 +1,11 @@
 body {
     position: relative;
     font-family: "Helvetica Neue", sans-serif;
-    width: 960px;
     margin: 20px auto 1em;
 }
 #wordcloud {
-    height: 800px;
+    height: 750px;
 }
-
+#redraw-wordcloud {
+    margin-top: 50px;
+}

@@ -17,7 +17,7 @@ class WordCloud {
         vis.fill = d3.scaleOrdinal(d3.schemeCategory10);
 
         // define margins
-        vis.margin = {top: 10, right: 10, bottom: 10, left: 10};
+        vis.margin = {top: 20, right: 10, bottom: 10, left: 10};
         vis.width =  vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
