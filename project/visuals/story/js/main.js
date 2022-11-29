@@ -30,6 +30,8 @@ function initMainPageStory(dataArray) {
 function nextSlide() {
     if (type < 6) {
         type += 1;
+    } else {
+        type = 0;
     }
     console.log("type changed to", type)
     myStoryVis.wrangleData();

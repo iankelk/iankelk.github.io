@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7d3a7b6-b11b-4c41-af3c-704b53bdf910" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/wordcloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/wordcloud.js" afterDir="false" />
-    </list>
+    <list default="true" id="d7d3a7b6-b11b-4c41-af3c-704b53bdf910" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +49,7 @@
       <workItem from="1669673873805" duration="15889000" />
       <workItem from="1669703849533" duration="1052000" />
       <workItem from="1669704931501" duration="7309000" />
-      <workItem from="1669737379200" duration="2484000" />
+      <workItem from="1669737379200" duration="2827000" />
     </task>
     <servers />
   </component>
