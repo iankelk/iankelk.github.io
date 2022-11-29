@@ -102,7 +102,7 @@ class StoryVis {
         const s2 = vis.step2description.append('text')
         s2.append('tspan').attr('class', "text-color-header").text('5,301 pieces').attr('x', 0)
             .attr('dy', 5)
-        s2.append('tspan').attr('class', "text-color").text('of disinformation were documented from January 2020 to March 2021.').attr('x', 0)
+        s2.append('tspan').attr('class', "text-color").text('of disinformation from January 2020 to March 2021.').attr('x', 0)
             .attr('dy', "2em")
 
         const node_desc = vis.step2description.append('g').attr('transform', `translate(${0}, ${60})`)
