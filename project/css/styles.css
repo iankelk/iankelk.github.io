@@ -397,7 +397,7 @@ input {
 .text-color {
     fill: #333333;
     text-anchor:middle;
-    font: 20px sans-serif;
+    font: 18px sans-serif;
     font-family: "Domine", sans-serif;
 }
 
@@ -453,6 +453,7 @@ text.title {
 }
 
 /*WORDCLOUD VIZ*/
+
 #wordcloud-body {
     position: relative;
     font-family: "Domine", sans-serif;
