@@ -148,18 +148,6 @@ https://html-online.com/articles/blinking-text-css-animation/
     alignment-baseline: middle;
 }
 
-.tooltip {
-    position: absolute;
-    text-align: left;
-    font: 12px sans-serif;
-}
-.tooltip h3,h4 {
-    text-align: left;
-}
-.tooltip h4 {
-    font: 14px sans-serif;
-    color: darkblue;
-}
 .counter {
     position: sticky;
     text-align: left;
