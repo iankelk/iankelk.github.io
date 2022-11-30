@@ -126,8 +126,14 @@ https://html-online.com/articles/blinking-text-css-animation/
 }
 
 #category-force-direct {
-    width: 90%;
+    width: 45%;
 }
+
+#category-force-direct-col {
+    text-align: left !important;
+    padding-left: 120px;
+}
+
 #split {
     width: 20%;
 }
@@ -159,6 +165,50 @@ https://html-online.com/articles/blinking-text-css-animation/
     text-align: left;
     font: 18px sans-serif;
     font-weight: bold;
+}
+
+/* Timeline popup container */
+.popup-force-direct {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup-force-direct .popuptext-force-direct {
+    visibility: hidden;
+    width: 750px;
+    height: 625px;
+    background-color: grey;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 20px 20px;
+    position: absolute;
+    z-index: 1;
+    bottom: -635px;
+    left: 50%;
+    margin-left: -375px;
+}
+
+/* Popup arrow */
+.popup-force-direct .popuptext-force-direct::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: rotate(180deg);
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: grey transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup-force-direct .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
 }
 
 
@@ -347,7 +397,7 @@ input {
     margin-right: 20px;
 }
 
-/* Popup container */
+/* Timeline popup container */
 .popup-timeline {
     position: relative;
     display: inline-block;

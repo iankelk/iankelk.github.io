@@ -53,3 +53,9 @@ function splitLongString(N, longString) {
     });
     return arrayApp.join("<br />");
 };
+
+// When the user clicks on <div>, open the popup
+function helpForceDirect() {
+    let popup = document.getElementById("help-force-direct");
+    popup.classList.toggle("show");
+}
