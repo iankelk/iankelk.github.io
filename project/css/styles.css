@@ -422,7 +422,7 @@ input {
 .red {
     font: Bold 28px sans-serif;
     font-family: "Domine", sans-serif;
-    fill:red;
+    fill:#ffcc00;
 }
 .normal {
     font: Bold 26px sans-serif;
@@ -431,7 +431,7 @@ input {
 .amber {
     font: Bold 28px sans-serif;
     font-family: "Domine", sans-serif;
-    fill: #ffbf00;
+    fill: #0066cc;
 }
 .text-color-header {
     fill: #333333;

@@ -293,7 +293,7 @@ class StoryVis {
 
             vis.nodes.attr('r', vis.node_radius).attr('fill', d => {
                 if (d.country_code in vis.individual_ratios) {
-                    return 'red'
+                    return '#ffcc00'
                 } else {
                     return '#333333'
                 }
@@ -324,7 +324,7 @@ class StoryVis {
             vis.step5description.transition().duration(800).attr('opacity', 1)
             vis.nodes.attr('r', vis.node_radius).attr('fill', d => {
                 if (d.country_code in vis.individual_ratios) {
-                    return 'red'
+                    return '#ffcc00'
                 } else {
                     return '#333333'
                 }
@@ -353,9 +353,9 @@ class StoryVis {
             vis.nodes.attr('r', vis.node_radius).attr('fill', d => {
                 if (d.country_code in vis.individual_ratios) {
                     if (d.count <= vis.countNews[d.country_code]) {
-                        return '#ffbf00'
+                        return '#0066cc'
                     } else {
-                        return 'red'
+                        return '#ffcc00'
                     }
                 } else {
                     return '#333333'
@@ -398,9 +398,9 @@ class StoryVis {
             vis.nodes.attr('r', vis.node_radius).attr('fill', d => {
                 if (d.country_code in vis.individual_ratios) {
                     if (d.index <= vis.sumNews-1) {
-                        return '#ffbf00'
+                        return '#0066cc'
                     } else {
-                        return 'red'
+                        return '#ffcc00'
                     }
                 } else {
                     return '#333333'
