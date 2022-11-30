@@ -13,6 +13,10 @@ body {
     font-size: 1.5em;
 }
 
+svg {
+    overflow: visible;
+}
+
 /*BUBBLE VIS*/
 
 #top-row-bubbles {
