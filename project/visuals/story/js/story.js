@@ -7,8 +7,8 @@ class StoryVis {
         // Make a deep copy of the data for display purposes
         //this.displayData = this.data.map((x) => x);
 
-        this.width = 1000;
-        this.height = 750;
+        this.width = 1200;
+        this.height = 600;
         this.node_radius = 3;
 
         this.fn_per_dot = 5;
@@ -35,7 +35,7 @@ class StoryVis {
     initVis() {
         let vis = this;
 
-        vis.margin = ({top: 80, bottom: 10, left: 0, right: 0})
+        vis.margin = ({top: 80, bottom: 0, left: 0, right: 0})
 
         vis.projection = d3.geoEquirectangular().fitSize([vis.width, vis.height+400], vis.mapData).rotate([-30, 0]);
         vis.topCountries = vis.getTopCountries();
@@ -47,12 +47,12 @@ class StoryVis {
 
         vis.svg = d3.create('svg')
             // .attr('viewBox', [0,0,vis.width*1.3+500, vis.height*1.9-300])
-            .attr('viewBox', [0, 50, vis.width, vis.height * 1.3])
+            .attr('viewBox', [0, 8, vis.width, vis.height * 1.3])
             .attr("height", vis.height)
             .attr("width", vis.width)
             .attr("preserveAspectRatio", "xMidYMid meet")
             .attr("id", "story-svg")
-            //.style('background', "whitesmoke")
+            //.style('background', "#333333")
 
         const wrapper = vis.svg.append('g').attr("transform", `translate(${vis.margin.left},${vis.margin.top})`)
 
