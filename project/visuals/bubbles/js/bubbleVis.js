@@ -19,12 +19,11 @@ class BubbleVis {
     }
 
     initVis() {
-        const nativeWidth = 1000;
         let vis = this;
 
         const formatTime = d3.timeFormat("%B %d, %Y");
 
-        vis.margin = {top: 20, right: 100, bottom: 10, left: 200};
+        vis.margin = {top: 30, right: 100, bottom: 10, left: 200};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = 400;
 
