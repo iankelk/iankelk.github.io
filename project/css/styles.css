@@ -108,10 +108,10 @@ https://html-online.com/articles/blinking-text-css-animation/
 
 /*FORCE DIRECT*/
 
-#top-row {
-    height: 5vh;
-    margin-top: 1vh;
-}
+/*#top-row {*/
+/*    height: 50px;*/
+/*    margin-top: 10px;*/
+/*}*/
 
 #selector-row {
     height: 5vh;
@@ -245,13 +245,13 @@ img {
 /*TWEET TIMELINE*/
 h1 {
     font-weight: 100;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 h2 {
     font-weight: 300;
     font-size: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .container-fluid {

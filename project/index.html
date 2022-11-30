@@ -280,23 +280,40 @@
 
     <div class="section" id="section-9129">
         <div class="container-fluid">
-            <div class="row justify-content-center" id="top-row">
-                <div class="align-self-center">
+<!--            <div class="row justify-content-center" id="top-row">-->
+            <div class="row justify-content-center" id="selector-row-story">
+
+                <div class="col-3">
+<!--                    <div class="col-6">-->
+                        <br/>
+                        <h2>Visualization Control</h2>
+                        <div>
+                            <Button class="button-style" id="prev-slide" onclick="previousSlide()">Previous Slide</Button>
+                            <Button class="button-style" id="next-slide" onclick="nextSlide()">Next Slide</Button>
+                            <Button class="button-style" id="reset" onclick="resetSlides()">Reset</Button>
+<!--                        </div>-->
+<!--                        <div class="col-6"></div>-->
+                        </div>
+                </div>
+                <div class="col-6">
                     <h1>Misinformation: A story</h1>
                     <h2>Fake news know no borders. Anyone can tell a lie.</h2>
                 </div>
+                <div class="col-3"></div>
+                <hr>
+
             </div>
-            <hr>
-            <div class="row" id="selector-row-story">
-                <div>
-                    <h2>Visualization Control</h2>
-                    <div>
-                        <Button class="button-style" id="prev-slide" onclick="previousSlide()">Previous Slide</Button>
-                        <Button class="button-style" id="next-slide" onclick="nextSlide()">Next Slide</Button>
-                        <Button class="button-style" id="reset" onclick="resetSlides()">Reset</Button>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="row" id="selector-row-story">-->
+<!--                <div class="col-6">-->
+<!--                    <h2>Visualization Control</h2>-->
+<!--                    <div>-->
+<!--                        <Button class="button-style" id="prev-slide" onclick="previousSlide()">Previous Slide</Button>-->
+<!--                        <Button class="button-style" id="next-slide" onclick="nextSlide()">Next Slide</Button>-->
+<!--                        <Button class="button-style" id="reset" onclick="resetSlides()">Reset</Button>-->
+<!--                    </div>-->
+<!--                    <div class="col-6"></div>-->
+<!--                </div>-->
+<!--            </div>-->
             <div class="row justify-content-center" id="vis-row">
                 <div class="col" id="story"></div>
             </div>
