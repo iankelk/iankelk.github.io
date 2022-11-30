@@ -36,7 +36,7 @@ class TimelineVis {
 
         // Create a tooltip
         vis.tooltip = d3.select("body").append('div')
-            .attr('class', "tooltip")
+            .attr('class', "tooltip-globe")
             .attr('id', 'timelineTooltip');
 
         // Center the globe on the UK for the first news in the timeline

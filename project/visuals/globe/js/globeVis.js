@@ -180,7 +180,7 @@ class GlobeVis {
 
         // Create a tooltip
         vis.tooltip = d3.select("body").append('div')
-            .attr('class', "tooltip")
+            .attr('class', "tooltip-globe")
             .attr('id', 'mapTooltip');
 
 
@@ -204,7 +204,7 @@ class GlobeVis {
                          <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 5px">
                              <h3>${d.properties.name}<h3>
                              <h4> Click on countries in red to display a random fake news from that country </h4>
-                             <h4> The timeline will display the current event in red and other events for that country in darker red</h4>
+                             <h4> The timeline will highlight the selected event and mark other events for that country in orange</h4>
 
                          </div>`);
             })
