@@ -202,15 +202,15 @@ https://html-online.com/articles/blinking-text-css-animation/
 
 /*GLOBE VIZ*/
 
-.tooltip {
+.tooltip-globe {
     position: absolute;
     text-align: center;
     font: 12px sans-serif;
 }
-.tooltip h3,h4 {
+.tooltip-globe h3,h4 {
     text-align: left;
 }
-.tooltip h4 {
+.tooltip-globe h4 {
     font: 14px sans-serif;
 }
 

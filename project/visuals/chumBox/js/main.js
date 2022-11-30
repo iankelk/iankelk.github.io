@@ -1,5 +1,4 @@
 // Create a simple database of texts and pictures
-// In retrospect, this is not so simple anymore.
 facts = [
     {
         name: "shane.jpg",
