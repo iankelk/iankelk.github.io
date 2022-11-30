@@ -47,7 +47,7 @@ class StoryVis {
 
         vis.svg = d3.create('svg')
             // .attr('viewBox', [0,0,vis.width*1.3+500, vis.height*1.9-300])
-            .attr('viewBox', [0, 0, vis.width, vis.height * 1.3])
+            .attr('viewBox', [0, 50, vis.width, vis.height * 1.3])
             .attr("height", vis.height)
             .attr("width", vis.width)
             .attr("preserveAspectRatio", "xMidYMid meet")
