@@ -8,8 +8,6 @@
     <meta name="keywords" content="misinformation,disinformatio,fake news,news"/>
     <meta name="Resource-type" content="Document"/>
 
-    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"-->
-    <!--          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -134,7 +132,7 @@
                 <div class="col-6"></div>
                 <div class="col-6" id="category-force-direct-col">
                     <div class="popup-force-direct" onclick="helpForceDirect()"><img src="/project/visuals/forceDirect/img/help.png"
-                                                                              width="20" height="20" class="help-icon">
+                                                                                     width="20" height="20" class="help-icon">
                         <span class="popuptext-force-direct" id="help-force-direct">
                             This interactive visualization allows you to explore the activities of the "Disinformation Half-Dozen",
                             6 of the 12 people responsive for 65% of disinformation about COVID-19 who still have active Twitter accounts.
@@ -187,12 +185,12 @@
             </span>
             <br>
             <br>
-            <span data-aos="fade-in" data-aos-delay="3000">
+            <span data-aos="fade-in" data-aos-delay="2500">
                 But were they only talking about COVID-19?
             </span>
             <br>
             <br>
-            <span data-aos="fade-in" data-aos-delay="4500">
+            <span data-aos="fade-in" data-aos-delay="3500">
                 We made a word cloud of what the tweets from the Misinformation 6 were spreading, and it turns out
                 <span style="color: red; font-weight: bold"> those who spread fake news, spread it about everything.</span>
             </span>
@@ -239,10 +237,10 @@
             </span>
             <br>
             <br>
-            <span data-aos="fade-up" data-aos-delay="4500">
+            <span data-aos="fade-up" data-aos-delay="3500">
                 Spreaders of misinformation don't just lie for the sake of it.
             </span>
-            <span data-aos="fade-up" data-aos-delay="6000" style="color: red; font-weight: bold">
+            <span data-aos="fade-up" data-aos-delay="4500" style="color: red; font-weight: bold">
                 For every lie they spread, there is a goal to achieve, and a narrative to tell.
             </span>
         </p>
@@ -307,46 +305,26 @@
 
     <div class="section" id="section-9129">
         <div class="container-fluid">
-<!--            <div class="row justify-content-center" id="top-row">-->
             <div class="row justify-content-center" id="selector-row-story">
                 <div class="col-6">
                     <h1>Misinformation: A story</h1>
                     <h2>Fake news know no borders. Anyone can tell a lie.</h2>
                 </div>
                 <div class="col-6">
-<!--                    <div class="col-6">-->
-                        <br/>
-                        <h2>Visualization Control</h2>
-                        <div>
-                            <Button class="button-style" id="prev-slide" onclick="previousSlide()">Previous Slide</Button>
-                            <Button class="button-style" id="next-slide" onclick="nextSlide()">Next Slide</Button>
-                            <Button class="button-style" id="reset" onclick="resetSlides()">Reset</Button>
-<!--                        </div>-->
-<!--                        <div class="col-6"></div>-->
-                        </div>
+                    <br/>
+                    <h2>Visualization Control</h2>
+                    <div>
+                        <Button class="button-style" id="prev-slide" onclick="previousSlide()">Previous Slide</Button>
+                        <Button class="button-style" id="next-slide" onclick="nextSlide()">Next Slide</Button>
+                        <Button class="button-style" id="reset" onclick="resetSlides()">Reset</Button>
+                    </div>
                 </div>
-<!--                <div class="col-2"></div>-->
-                <hr>
             </div>
             <div class="row justify-content-center" id="vis-row">
                 <div class="col">
                     <div id="story"></div>
                 </div>
             </div>
-<!--            <div class="row" id="selector-row-story">-->
-<!--                <div class="col-6">-->
-<!--                    <h2>Visualization Control</h2>-->
-<!--                    <div>-->
-<!--                        <Button class="button-style" id="prev-slide" onclick="previousSlide()">Previous Slide</Button>-->
-<!--                        <Button class="button-style" id="next-slide" onclick="nextSlide()">Next Slide</Button>-->
-<!--                        <Button class="button-style" id="reset" onclick="resetSlides()">Reset</Button>-->
-<!--                    </div>-->
-<!--                    <div class="col-6"></div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row justify-content-center" id="vis-row">-->
-<!--                <div class="col" id="story"></div>-->
-<!--            </div>-->
         </div>
     </div>
 
@@ -364,7 +342,7 @@
             </span>
             <br>
             <br>
-            <span data-aos="fade-in" data-aos-delay="5500">
+            <span data-aos="fade-in" data-aos-delay="3500">
             Even though the Internet has allowed the dissemination of misinformation on an unprecedented scale,
             <span style="color: red; font-weight: bold"> fake news is a tale as old as time..</span>
             </span>
@@ -446,8 +424,6 @@
     </div>
 
     <div class="section" id="section6">
-        <!--        <h2>So fake news are older than sliced bread, so what's this buzz about them now? Why should you care?</h2>-->
-        <!--        <h3>Misinformation is used for personal profit. Misinformation shakes democracies. Misinformation Kills.</h3>-->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-10 offset-1 main-area">
@@ -469,7 +445,7 @@
                                 <option value="favorites">By # of Likes</option>
                             </select>
                             <div class="popup-timeline" onclick="helpTimeline()"><img src="/project/visuals/tweetTimeline/img/help.png"
-                                                                     width="20" height="20" class="help-icon">
+                                                                                      width="20" height="20" class="help-icon">
                                 <span class="popuptext-timeline" id="help-timeline">
                             This interactive visualization allows you to explore the activities of the "Disinformation Half-Dozen",
                             6 of the 12 people responsive for 65% of disinformation about COVID-19 who still have active Twitter accounts.
@@ -529,28 +505,6 @@
             </div>
         </div>
     </div>
-
-<!--    <div class="section" id="section001">-->
-<!--        <h1>What now?</h1>-->
-<!--        <p class="slide-text">-->
-<!--            So far, you learned that it only takes a handful of people online-->
-<!--            to cause a profound social impact by spreading misinformation.-->
-<!--            You also learned that these people use misinformation to spread their narrative,-->
-<!--            to achieve political goals, or simply for personal profit.-->
-<!--            That fake news is not a recent thing, and even large mainstream-->
-<!--            media outlets have used it to gain popularity and make a quick buck.-->
-<!--            Misinformation destroyed lives and fortunes and, in spite of that, it is still ubiquitous in social media.-->
-<!--        </p>-->
-<!--        <p class="slide-text">-->
-<!--            All of this may seem hopeless. After all, you are just one person, what could you possibly do against fake-->
-<!--            news?-->
-<!--            Well, what if I told you that there is a way to counter it?-->
-<!--            That you can protect yourself against inflammatory language and manipulative wording meant to catch your-->
-<!--            attention?-->
-<!--            All of this is possible from one weird trick, one that we'll share with you.-->
-<!--            <span style="color: red; font-weight: bold"> What happens next may shock you.</span>-->
-<!--        </p>-->
-<!--    </div>-->
 
     <div class="section" id="section001">
         <h1>A Recap</h1>
@@ -793,11 +747,6 @@
 <    Load JS libraries     >
 <- - - - - - - - - - - - -->
 
-<!-- BOOTSTRAP -->
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"-->
-<!--        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"-->
-<!--        crossorigin="anonymous"></script>-->
-
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -829,8 +778,6 @@
 
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff',
-        //     '#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
         sectionsColor: ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white',
             'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
         anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage', '8thpage', '9thpage', '10thpage',
@@ -889,7 +836,5 @@
 <script src="visuals/wordcloud/js/d3.layout.cloud.js"></script>
 <script src="visuals/wordcloud/js/wordcloud.js"></script>
 <script src="visuals/wordcloud/js/main.js"></script>
-
-<!--<script src="js/main.js"></script>-->
 </body>
 </html>
