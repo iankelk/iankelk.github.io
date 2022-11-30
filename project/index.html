@@ -8,8 +8,12 @@
     <meta name="keywords" content="misinformation,disinformatio,fake news,news"/>
     <meta name="Resource-type" content="Document"/>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"-->
+    <!--          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Domine' rel='stylesheet'>
 
     <link rel="stylesheet" type="text/css" href="css/libraries/fullpage/fullpage.css"/>
@@ -19,9 +23,9 @@
     <link rel="stylesheet" href="css/aos-delays.css">
 
 
-
-<!--    Google fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
+    <!--    Google fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet'
+          type='text/css'>
 
 
 </head>
@@ -85,7 +89,8 @@
             <br>
 
             <span data-aos="fade-in" data-aos-delay="3000">
-                A report by the Center for Countering Digital Hate (CCDH) showed that only <span style="font-weight: bold; font-size:1.5em; color: red;">12</span> people
+                A report by the Center for Countering Digital Hate (CCDH) showed that only <span
+                    style="font-weight: bold; font-size:1.5em; color: red;">12</span> people
                 were responsible for <span style="font-weight: bold; font-size:1.5em; color: red;">65%</span> of COVID-19 related lies on social media. They were called
                 <span style="font-weight: bold;">The Misinformation Dozen</span>
             </span>
@@ -93,7 +98,7 @@
     </div>
 
     <div class="section" id="section0291">
-            <h1>The Power of The Few</h1>
+        <h1>The Power of The Few</h1>
         <p class="slide-text" data-aos="fade-up" data-aos-delay="500" data-aos-easing="linear">
             <span data-aos="fade-up" data-aos-delay="500">
                 The massive followings and engagement of these twelve people
@@ -119,25 +124,26 @@
     </div>
 
     <div class="section" id="section1">
-        <div class="container-fluid" >
-            <div class="row justify-content-center" id="top-row-force-direct" >
+        <div class="container-fluid">
+            <div class="row justify-content-center" id="top-row-force-direct">
                 <div class="align-self-center">
                     <h1>Who Are the Misinformation 6 Contacting?</h1>
                 </div>
             </div>
-            <div class="row justify-content-right" id="selector-row-force-direct" >
+            <div class="row justify-content-right" id="selector-row-force-direct">
                 <div class="col-8"></div>
                 <div class="col-4">
-                        <select id='category-force-direct' class="custom-select align-self-center" onchange="changeCategoryForceDirect()">
-                            <option value="followers" selected >By Number of Followers</option>
-                            <option value="following" >By Number of People They Follow</option>
-                            <option value="numTweets" >By Number of Tweets</option>
-                            <option value="numLists" >By Number of Lists</option>
-                        </select>
+                    <select id='category-force-direct' class="custom-select align-self-center"
+                            onchange="changeCategoryForceDirect()">
+                        <option value="followers" selected>By Number of Followers</option>
+                        <option value="following">By Number of People They Follow</option>
+                        <option value="numTweets">By Number of Tweets</option>
+                        <option value="numLists">By Number of Lists</option>
+                    </select>
                 </div>
             </div>
-            <div class="row justify-content-left" id="vis-row-force-direct" >
-                <div class="col" id="force" ></div>
+            <div class="row justify-content-left" id="vis-row-force-direct">
+                <div class="col" id="force"></div>
             </div>
         </div>
     </div>
@@ -216,8 +222,8 @@
 
     <div class="section" id="section5">
         <div>
-            <div class="container-fluid" >
-                <div class="row justify-content-center" id="top-row-bubbles" >
+            <div class="container-fluid">
+                <div class="row justify-content-center" id="top-row-bubbles">
                     <div class="col-md-8">
                         <div class="align-self-center">
                             <h1>Misinformation Over Time</h1>
@@ -226,13 +232,14 @@
                     </div>
                     <div class="col-md-4" id="radio-bubbles">
                         <label>
-                            <input type="radio" name="split" value="all"  onchange="toggleSplit()" checked/>All
+                            <input type="radio" name="split" value="all" onchange="toggleSplit()" checked/>All
                         </label>
                         <label>
                             <input type="radio" name="split" value="split" id="split" onchange="toggleSplit()"/>Split
                         </label>
-                        <br /><br />
-                        <select id='category-bubbles' class="custom-select align-self-center" onchange="changeCategory()">
+                        <br/><br/>
+                        <select id='category-bubbles' class="custom-select align-self-center"
+                                onchange="changeCategory()">
                             <option value="motive" selected>By Motive</option>
                             <option value="narrative">By Narrative</option>
                             <option value="region">By Region</option>
@@ -240,8 +247,8 @@
                     </div>
                 </div>
                 <hr>
-                <div class="row justify-content-center" id="vis-row-bubble" >
-                    <div class="col" id="bubble" ></div>
+                <div class="row justify-content-center" id="vis-row-bubble">
+                    <div class="col" id="bubble"></div>
                 </div>
             </div>
 
@@ -272,15 +279,15 @@
 
 
     <div class="section" id="section-9129">
-        <div class="container-fluid" >
-            <div class="row justify-content-center" id="top-row" >
+        <div class="container-fluid">
+            <div class="row justify-content-center" id="top-row">
                 <div class="align-self-center">
                     <h1>Misinformation: A story</h1>
                     <h2>Fake news know no borders. Anyone can tell a lie.</h2>
                 </div>
             </div>
             <hr>
-            <div class="row" id="selector-row-story" >
+            <div class="row" id="selector-row-story">
                 <div>
                     <h2>Visualization Control</h2>
                     <div>
@@ -290,8 +297,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center" id="vis-row" >
-                <div class="col" id="story" ></div>
+            <div class="row justify-content-center" id="vis-row">
+                <div class="col" id="story"></div>
             </div>
         </div>
     </div>
@@ -386,16 +393,17 @@
                 Misinformation shakes the trust in our institutions.
             </span>
 
-            <span style="color: red; font-weight: bold" data-aos="fade-in" data-aos-delay="8000"> Misinformation kills.</span>
+            <span style="color: red; font-weight: bold" data-aos="fade-in"
+                  data-aos-delay="8000"> Misinformation kills.</span>
         </p>
     </div>
 
     <div class="section" id="section6">
-<!--        <h2>So fake news are older than sliced bread, so what's this buzz about them now? Why should you care?</h2>-->
-<!--        <h3>Misinformation is used for personal profit. Misinformation shakes democracies. Misinformation Kills.</h3>-->
+        <!--        <h2>So fake news are older than sliced bread, so what's this buzz about them now? Why should you care?</h2>-->
+        <!--        <h3>Misinformation is used for personal profit. Misinformation shakes democracies. Misinformation Kills.</h3>-->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-10 offset-1 main-area" >
+                <div class="col-md-10 offset-1 main-area">
 
                     <!-- header -->
                     <div class="row justify-content-center" id="title-row">
@@ -407,12 +415,14 @@
                         </div>
                         <div class="col-md-3">
 
-                            <select id='tweet-category' class="custom-select align-self-center" onchange="changeTweetCategory()">
+                            <select id='tweet-category' class="custom-select align-self-center"
+                                    onchange="changeTweetCategory()">
                                 <option value="tweets" selected>By # of Tweets</option>
                                 <option value="retweets">By # of Retweets</option>
                                 <option value="favorites">By # of Likes</option>
                             </select>
-                            <div class="popup" onclick="help()"><img src="/project/visuals/tweetTimeline/img/help.png" width="20" height="20">
+                            <div class="popup" onclick="help()"><img src="/project/visuals/tweetTimeline/img/help.png"
+                                                                     width="20" height="20">
                                 <span class="popuptext" id="help">
                             This interactive visualization allows you to explore the activities of the "Disinformation Half-Dozen",
                             6 of the 12 people responsive for 65% of disinformation about COVID-19 who still have active Twitter accounts.
@@ -441,7 +451,7 @@
                             </div>
 
                         </div>
-                        <div class="col-md-3 justify-content-center" >
+                        <div class="col-md-3 justify-content-center">
                             <br/>
                             Days to Aggregate
 
@@ -450,20 +460,23 @@
                     </div>
 
                     <!-- graph -->
-                    <div class="row justify-content-center" id="stacked-area-chart-row" >
-                        <div class="align-self-center" id="stacked-area-chart" ></div>
+                    <div class="row justify-content-center" id="stacked-area-chart-row">
+                        <div class="align-self-center" id="stacked-area-chart"></div>
                     </div>
                     <div class="row justify-content-center radio-buttons" id="radio">
                         <div class="col">
-                            <label class="blue"><input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases</label>
-                            <label class="orange"><input type="radio" name="case" value="deaths" id="death" onchange="toggleCase()"/>Deaths</label>
-                            <label ><input type="radio" name="case" value="both" onchange="toggleCase()"/>Both (Log10)</label>
+                            <label class="blue"><input type="radio" name="case" value="cases" id="case"
+                                                       onchange="toggleCase()" checked/>Cases</label>
+                            <label class="orange"><input type="radio" name="case" value="deaths" id="death"
+                                                         onchange="toggleCase()"/>Deaths</label>
+                            <label><input type="radio" name="case" value="both" onchange="toggleCase()"/>Both
+                                (Log10)</label>
                         </div>
                     </div>
 
                     <!-- brush -->
-                    <div class="row justify-content-center timeline-row" >
-                        <div class="align-self-center" id="timeline" ></div>
+                    <div class="row justify-content-center timeline-row">
+                        <div class="align-self-center" id="timeline"></div>
                     </div>
                 </div>
             </div>
@@ -482,9 +495,11 @@
             Misinformation destroyed lives and fortunes and, in spite of that, it is still ubiquitous in social media.
         </p>
         <p class="slide-text">
-            All of this may seem hopeless. After all, you are just one person, what could you possibly do against fake news?
+            All of this may seem hopeless. After all, you are just one person, what could you possibly do against fake
+            news?
             Well, what if I told you that there is a way to counter it?
-            That you can protect yourself against inflammatory language and manipulative wording meant to catch your attention?
+            That you can protect yourself against inflammatory language and manipulative wording meant to catch your
+            attention?
             All of this is possible from one weird trick, one that we'll share with you.
             <span style="color: red; font-weight: bold"> What happens next may shock you.</span>
         </p>
@@ -507,7 +522,7 @@
               -->
             <div class="row d-flex">
                 <div class="col lg-1"></div>
-                <div class = "col-lg-9 col-md-8 mb-4 mb-lg-0 fun-fact">
+                <div class="col-lg-9 col-md-8 mb-4 mb-lg-0 fun-fact">
                     <p>Recommended for You</p>
                 </div>
                 <div class="col lg-2"></div>
@@ -525,7 +540,8 @@
 
                     />
                     <p class="website">realcashcrypto.com</p>
-                    <p class="website-description">Banks don't want you to know this! Local Entrepreneur makes fortune with crazy investment!</p>
+                    <p class="website-description">Banks don't want you to know this! Local Entrepreneur makes fortune
+                        with crazy investment!</p>
 
                 </div>
 
@@ -546,7 +562,8 @@
                             alt="Box of pills"
                     />
                     <p class="website">instantbrainboost.net</p>
-                    <p class="website-description">The pill all billionaires take every morning now approved by the FDA.</p>
+                    <p class="website-description">The pill all billionaires take every morning now approved by the
+                        FDA.</p>
                 </div>
                 <div class="col lg-1"></div>
                 <!-- Gallery -->
@@ -554,7 +571,7 @@
 
             <div class="row d-flex">
                 <div class="col lg-1"></div>
-                <div class = "col-lg-9 col-md-8 mb-4 mb-lg-0 fun-fact">
+                <div class="col-lg-9 col-md-8 mb-4 mb-lg-0 fun-fact">
                     <p class="blinking">ONCE IN A LIFETIME CHANCE</p>
                     <p class="offer-text">
                         Did you ever wonder what would happen if you clicked on those scam-like
@@ -566,7 +583,8 @@
                         <span style="font-weight: bold; color: red">new facts on fake news and scam ads!</span>
                     </p>
 
-                    <h2 style="color: black; font-size: 1.5em; font-weight: bold; margin-top: 2rem;">Did you know that...</h2>
+                    <h2 style="color: black; font-size: 1.5em; font-weight: bold; margin-top: 2rem;">Did you know
+                        that...</h2>
 
                     <p id="factline">...you can click on the images to get new facts on fake news?
                         <br>
@@ -594,11 +612,12 @@
         <div class="container-fluid" style="height: 100vh;">
             <div class="row d-flex justify-content-center">
             </div>
-            <div class="row d-flex justify-content-center"  id="vis-row-hotspot">
+            <div class="row d-flex justify-content-center" id="vis-row-hotspot">
                 <div class="col-md-8 justify-content-center" id="hotspot-image"></div>
                 <div class="col-md-4 justify-content-center">
                     <h3 id="title-hotspot">How to Spot Fake News</h3><br/>
-                    <p id="description-hotspot">The most important thing is to consider the credibility of articles in the first place
+                    <p id="description-hotspot">The most important thing is to consider the credibility of articles in
+                        the first place
                         People's ability to discern and share real articles over fake nearly tripled after a
                         simple reminder to check accuracy.</p>
                 </div>
@@ -624,14 +643,18 @@
 </div>
 
 
-
 <!-- - - - - - - - - - - - >
 <    Load JS libraries     >
 <- - - - - - - - - - - - -->
 
 <!-- BOOTSTRAP -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"-->
+<!--        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"-->
+<!--        crossorigin="anonymous"></script>-->
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 
 <!-- d3 -->
@@ -699,26 +722,26 @@
 <script src="visuals/chumBox/js/main.js"></script>
 
 <!--Bubbles Visualization-->
-<script src ="visuals/bubbles/js/bubbleVis.js"></script>
+<script src="visuals/bubbles/js/bubbleVis.js"></script>
 <script src="visuals/bubbles/js/main.js"></script>
 
 <!--Tweet Timeline Visualization-->
-<script src ="visuals/tweetTimeline/js/stackedAreaChart.js"></script>
+<script src="visuals/tweetTimeline/js/stackedAreaChart.js"></script>
 <script src="visuals/tweetTimeline/js/timeline.js"></script>
 <script src="visuals/tweetTimeline/js/main.js"></script>
 
 <!--Hotspot Visualization-->
-<script src ="visuals/hotspot/js/hoverVis.js"></script>
+<script src="visuals/hotspot/js/hoverVis.js"></script>
 <script src="visuals/hotspot/js/main.js"></script>
 
 <!--Story Visualization-->
 <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
-<script src ="visuals/story/js/story.js"></script>
+<script src="visuals/story/js/story.js"></script>
 <script src="visuals/story/js/main.js"></script>
 
 <!--Wordcloud Visualization-->
-<script src ="visuals/wordcloud/js/d3.layout.cloud.js"></script>
-<script src ="visuals/wordcloud/js/wordcloud.js"></script>
+<script src="visuals/wordcloud/js/d3.layout.cloud.js"></script>
+<script src="visuals/wordcloud/js/wordcloud.js"></script>
 <script src="visuals/wordcloud/js/main.js"></script>
 
 <!--<script src="js/main.js"></script>-->
