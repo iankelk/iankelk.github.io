@@ -95,6 +95,8 @@ class StoryVis {
         // step 1 Description
         vis.step1description = vis.svg.append('g').attr("transform", `translate(${vis.width / 2},${vis.height / 2})`).attr('opacity', 0)
         vis.step1description.append('text').attr('class', "text-color-header").text('Disinformation in the COVID-19 Era').attr('y', 0)
+        vis.step1description.append('text').attr('class', "text-color-sub-header").text('Use the controls in the top left to view this visualization').attr('y', 60)
+
 
         // step 2 Description
         vis.step2description = wrapper.append('g').attr("transform", `translate(${(vis.width / 2) + vis.width / 4},${vis.height / 2})`)

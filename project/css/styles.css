@@ -17,6 +17,10 @@ svg {
     overflow: visible;
 }
 
+/*div {*/
+/*    overflow: visible;*/
+/*}*/
+
 /*BUBBLE VIS*/
 
 #top-row-bubbles {
@@ -25,7 +29,7 @@ svg {
 }
 
 #selector-row {
-    height: 5vh;
+    height: 50vh;
 }
 
 #category-bubbles {
@@ -124,10 +128,10 @@ https://html-online.com/articles/blinking-text-css-animation/
     width: 20%;
 }
 
-#vis-row {
-    height: 700px;
-    width: 100%;
-}
+/*#vis-row {*/
+/*    height: 700px;*/
+/*    width: 100%;*/
+/*}*/
 
 .legend-text {
     font-size: 1em;
@@ -425,6 +429,14 @@ input {
     font: bold 60px sans-serif;
     font-family: "Domine", sans-serif;
 }
+
+.text-color-sub-header {
+    fill: #333333;
+    text-anchor:middle;
+    font: bold 30px sans-serif;
+    font-family: "Domine", sans-serif;
+}
+
 .text-color-start {
     fill: #333333;
     text-anchor:middle;
@@ -454,6 +466,10 @@ text.title {
 #story-svg {
     height:750px;
     width:1000px;
+}
+
+#section-9129 {
+    height:900px;
 }
 
 /*WORDCLOUD VIZ*/
