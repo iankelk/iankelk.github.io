@@ -170,7 +170,7 @@ class BubbleVis {
                 .attr("cy", d => d.y)
         });
 
-        vis.height = split ? 650 : 400;
+        vis.height = split ? 500 : 300;
 
 
         vis.y.domain(split ? vis.categories[selectedCategoryBubbles] : vis.categories[selectedCategoryBubbles].concat("Global")); // workaround for updating the yAxis
