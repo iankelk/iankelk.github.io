@@ -515,34 +515,20 @@ text.title {
 }
 
 
+/*SOURCES CSS*/
 
-
-
-/*AOS DELAY TEST*/
-
-/*From this github discussion*/
-/*https://github.com/michalsnik/aos/issues/558*/
-
-body [data-aos-delay='3500'][data-aos].aos-animate,
-[data-aos][data-aos][data-aos-delay='3500'].aos-animate {
-    transition-delay: 3500ms;
+ul {
+    padding-left: 2rem;
+    max-width: 60vw;
+    margin: auto;
+    text-align: start;
 }
 
-body [data-aos-delay='4500'][data-aos].aos-animate,
-[data-aos][data-aos][data-aos-delay='4500'].aos-animate {
-    transition-delay: 4500ms;
-}
+source-text {
+    max-width: 60vw;
+    font-size: 0.5em;
 
-body [data-aos-delay='5500'][data-aos].aos-animate,
-[data-aos][data-aos][data-aos-delay='5500'].aos-animate {
-    transition-delay: 5500ms;
 }
-
-body [data-aos-delay='6500'][data-aos].aos-animate,
-[data-aos][data-aos][data-aos-delay='6500'].aos-animate {
-    transition-delay: 6500ms;
-}
-
 
 /*[data-aos] {*/
 /*@for $i from 1 through 60 {*/
