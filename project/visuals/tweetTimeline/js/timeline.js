@@ -84,25 +84,6 @@ class Timeline {
 			.attr("transform", "translate(0," + vis.height + ")")
 			.call(vis.xAxis);
 
-		// append tooltip
-		// vis.radioButtons = d3.select(".timeline-row").append('div')
-		// 	.attr('class', "radio-buttons")
-		// 	.style("opacity", 1)
-		// 	.style("left",20 + "vw")
-		// 	.style("bottom", 16  + "vh")
-		// 	.html(`
-        //              <div style="border: thin solid grey; border-radius: 5px; padding: 5px; width:7%;">
-        //              	<label class="blue">
-        //                 	<input type="radio" name="case" value="cases" id="case" onchange="toggleCase()" checked/>Cases
-        //             	</label>
-		// 				<label class="red">
-		// 					<input type="radio" name="case" value="deaths" id="death" onchange="toggleCase()"/>Deaths
-		// 				</label>
-		// 				<label >
-		// 					<input type="radio" name="case" value="both" onchange="toggleCase()"/>Both (Log10)
-		// 				</label>
-        //             </div>`);
-
 		vis.wrangleData();
 
 	}
@@ -126,14 +107,18 @@ class Timeline {
 			vis.y.domain([0, d3.max(vis.displayData, (d) => Math.log10(d.cases+1))]);
 		}
 
-		vis.yAxis.transition().duration(400).call(d3.axisLeft(vis.y).ticks(5).tickFormat(d3.format('.2s')));
-
+		let tickFormat;
 
 		if (selectedCasesDeaths === "cases" || selectedCasesDeaths === "deaths") {
 			vis.drawPaths([selectedCasesDeaths], false);
+			tickFormat = d3.format('.2s')
 		} else {
 			vis.drawPaths(["cases", "deaths"], true)
+			tickFormat = vis.logFormatTick;
 		}
+
+		// Use the appropriate ticks and update y axis
+		vis.yAxis.transition().duration(400).call(d3.axisLeft(vis.y).ticks(5).tickFormat(tickFormat));
 
 		// TO-DO: Initialize brush component
         // Initialize time scale (x-axis)
@@ -165,7 +150,6 @@ class Timeline {
 			.attr("d", vis.area)
 			.attr("fill", colors[areaToDraw[0]]);
 
-
 		// SVG area path generator
 		vis.area2 = d3.area()
 			.x(function (d) {
@@ -183,5 +167,22 @@ class Timeline {
 			.attr("d", vis.area2)
 			.attr("fill", colors["deaths"]);
 
+	}
+
+	logFormatTick(d) {
+		switch (d) {
+			case 1:
+				return "10";
+			case 2:
+				return "100";
+			case 3:
+				return "1k";
+			case 4:
+				return "10k";
+			case 5:
+				return "100k";
+			default:
+				return "0";
+		}
 	}
 }
