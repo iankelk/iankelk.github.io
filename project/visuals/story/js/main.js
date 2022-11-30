@@ -40,6 +40,8 @@ function nextSlide() {
 function previousSlide() {
     if (type > 0) {
         type -= 1;
+    } else {
+        type = 6;
     }
     console.log("type changed to", type)
     myStoryVis.wrangleData();
