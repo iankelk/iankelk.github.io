@@ -21,10 +21,6 @@ svg {
     max-width: 100%;
 }
 
-/*div {*/
-/*    overflow: visible;*/
-/*}*/
-
 /*BUBBLE VIS*/
 
 #top-row-bubbles {
@@ -39,10 +35,6 @@ svg {
 #category-bubbles {
     width: 40%;
 }
-
-/*#split {*/
-/*    max-width: 20%;*/
-/*}*/
 
 #radio {
     margin-top: 1vh;
@@ -116,11 +108,6 @@ https://html-online.com/articles/blinking-text-css-animation/
 
 /*FORCE DIRECT*/
 
-/*#top-row {*/
-/*    height: 50px;*/
-/*    margin-top: 10px;*/
-/*}*/
-
 #selector-row {
     height: 5vh;
 }
@@ -137,11 +124,6 @@ https://html-online.com/articles/blinking-text-css-animation/
 #split {
     width: 20%;
 }
-
-/*#vis-row {*/
-/*    height: 700px;*/
-/*    width: 100%;*/
-/*}*/
 
 .legend-text {
     font-size: 1em;
@@ -485,8 +467,6 @@ text.title {
 }
 
 #story-svg .annotation.rect text {
-    /*fill: var(--annotation-context-color);*/
-    /*fill: black;*/
     font-size: .6em;
     text-transform: uppercase;
 }
@@ -529,21 +509,3 @@ source-text {
     font-size: 0.5em;
 
 }
-
-/*[data-aos] {*/
-/*@for $i from 1 through 60 {*/
-/*    body[data-aos-duration='#{$i * 50}'] &,*/
-/*&[data-aos][data-aos-duration='#{$i * 50}'] {*/
-/*     transition-duration: #{$i * 50}ms;*/
-/* }*/
-
-/*    body[data-aos-delay='#{$i * 50}'] &,*/
-/*&[data-aos][data-aos-delay='#{$i * 50}'] {*/
-/*     transition-delay: 0;*/
-
-/*&.aos-animate {*/
-/*     transition-delay: #{$i * 50}ms;*/
-/* }*/
-/*}*/
-/*}*/
-/*}*/
