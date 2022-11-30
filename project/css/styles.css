@@ -345,17 +345,17 @@ input {
 }
 
 /* Popup container */
-.popup {
+.popup-timeline {
     position: relative;
     display: inline-block;
     cursor: pointer;
 }
 
 /* The actual popup (appears on top) */
-.popup .popuptext {
+.popup-timeline .popuptext-timeline {
     visibility: hidden;
     width: 750px;
-    height: 585px;
+    height: 625px;
     background-color: grey;
     color: #fff;
     text-align: left;
@@ -363,13 +363,13 @@ input {
     padding: 20px 20px;
     position: absolute;
     z-index: 1;
-    bottom: -600px;
+    bottom: -635px;
     left: 50%;
     margin-left: -375px;
 }
 
 /* Popup arrow */
-.popup .popuptext::after {
+.popup-timeline .popuptext-timeline::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -382,7 +382,7 @@ input {
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
+.popup-timeline .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s

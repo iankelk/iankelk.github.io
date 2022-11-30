@@ -88,7 +88,7 @@ function brushed(event) {
 }
 
 // When the user clicks on <div>, open the popup
-function help() {
-	let popup = document.getElementById("help");
+function helpTimeline() {
+	let popup = document.getElementById("help-timeline");
 	popup.classList.toggle("show");
 }
