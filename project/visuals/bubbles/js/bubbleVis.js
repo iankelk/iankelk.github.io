@@ -38,16 +38,6 @@ class BubbleVis {
             .append("svg")
             .attr("viewBox", [0, 0, vis.width, vis.height]);
 
-        // vis.svg = d3.select(vis.parentElement).append("svg")
-        //     .attr("width", vis.width + vis.margin.left +  Math.ceil(vis.margin.right))
-        //     .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
-        //    // .attr("viewBox", [0, 0, vis.width, height])
-        //     .append("g")
-        //     .attr("transform", "translate(" + vis.margin.left+ "," + vis.margin.top + ")");
-
-        // vis.svg.attr("viewBox", [0, 0, vis.width, height]) ;
-
-
         vis.x = d3.scaleLinear()
             .domain(d3.extent(vis.data, d => d3.isoParse(d.date)))
             .range([vis.margin.left, vis.width - vis.margin.right])
@@ -190,8 +180,6 @@ class BubbleVis {
         vis.sizeCircles = vis.sizeLegend.selectAll("circle")
             .data(vis.sizeTicks[selectedCategoryBubbles]);
 
-        // const multipliers = { motive: 47.9, narrative: 47.9, region: 47.9 };
-        // const offsets = { motive: 30.3, narrative: 30.3, region: 30.3 };
         const multipliers = { motive: 34.9, narrative: 34.9, region: 34.9 };
         const offsets = { motive: 22.5, narrative: 22.5, region: 22.5 };
 
@@ -218,7 +206,6 @@ class BubbleVis {
                 const sizeWordingBefore = { motive: "having", narrative: "following", region: "tweeting" };
                 const sizeWordingAfter = { motive: "followers", narrative: "other accounts", region: "times" };
 
-                // vis.counter.html(`${count} highlighted for ${sizeWordingBefore[selectedCategoryForceDirect]} ${size.toLocaleString("en-US")} to ${(nextSize-1).toLocaleString("en-US")} ${sizeWordingAfter[selectedCategory]}`);
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
@@ -226,7 +213,6 @@ class BubbleVis {
                 vis.node
                     .transition().duration(300)
                     .attr("fill", (d,i) => vis.colour(d[selectedCategoryBubbles]));
-                // vis.counter.html(``);
             })
 
             .transition().duration(300)
@@ -243,12 +229,8 @@ class BubbleVis {
 
         vis.simulation.on("tick", () => {
             vis.node
-                //.attr("cy", vis.height / 2)
-                //.attr("cy", 0)
-                //.attr("opacity", 0)
                 .transition()
                 .delay((d, i) => d.x)
-                //.attr("opacity", 1)
                 .ease(d3.easeLinear)
                 .attr("cx", d => d.x)
                 .attr("cy", d => d.y)
