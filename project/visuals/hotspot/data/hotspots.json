@@ -8,7 +8,7 @@
     "rectWidth": 335,
     "rectHeight": 95,
     "title": "The Source",
-    "description": "What's the story's intent? Investigate the site, its mission, and its contact info. Is this some little known website recently created? What is the language used in their other work, is it inflammatory, with clickbaity titles? Is this website oriented towards \"exposing the truth\"?  <br /><br /> Remember the history of fake news: Even mainstream media outlets may skew their news or even knowingly spread misinformation to achieve their goals. <br /> Understanding the potential biases of the source can help you guard against fake claims And sometimes even extract the truth out of the news piece, if there is any truth at all."
+    "description": "What's the story's intent? Investigate the site, its mission, and its contact info. Is this some little known website recently created? What is the language used in their other work, is it inflammatory, with clickbaity titles? Is this website oriented towards \"exposing the truth\"?  <br /><br /> Remember the history of fake news: Even mainstream media outlets may skew their news or even knowingly spread misinformation to achieve their goals. <br /><br /> Understanding the potential biases of the source can help you guard against fake claims And sometimes even extract the truth out of the news piece, if there is any truth at all."
   },
   {
     "x": -7,
@@ -19,7 +19,7 @@
     "rectWidth": 405,
     "rectHeight": 50,
     "title": "The Author",
-    "description": "Have you ever had someone close to you share news about an \"expert\"who challenges the \"establishment\" with their \"research\" that goes against everything you know and read elsewhere? <br />Do a quick search on the author. Are they credible? Are they knowledgeable in the field they are talking about, or are they experts in something else entirely? Have there been any ethical concerns raised about this person in the past? Are they even real? <br /> Remember: those who spread fake news, spread it about everything."
+    "description": "Have you ever had someone close to you share news about an \"expert\"who challenges the \"establishment\" with their \"research\" that goes against everything you know and read elsewhere? <br /> <br />Do a quick search on the author. Are they credible? Are they knowledgeable in the field they are talking about, or are they experts in something else entirely? Have there been any ethical concerns raised about this person in the past? Are they even real? <br /> <br />Remember: those who spread fake news, spread it about everything."
   },
   {
     "x": -7,
@@ -30,7 +30,7 @@
     "rectWidth": 570,
     "rectHeight": 83,
     "title": "The Information",
-    "description": "Does the information in the body of the text match what is on the headline? Websites may rely on misleading attention-catching headlines to get users to click on their links, in what is known as \"clickbait\". <br /> The body of the news article is also, naturally, the place where you are more likely to find the content of fake news in the story. Check other sources and fact-checking platforms. Everyone can be a potential spreader or creator of fake news, but the better informed you are, the more prepared you will be to question and reject fake news."
+    "description": "Does the information in the body of the text match what is on the headline? Websites may rely on misleading attention-catching headlines to get users to click on their links, in what is known as \"clickbait\". <br /><br /> The body of the news article is also, naturally, the place where you are more likely to find the content of fake news in the story. Check other sources and fact-checking platforms. Everyone can be a potential spreader or creator of fake news, but the better informed you are, the more prepared you will be to question and reject fake news."
   },
   {
     "x": 570,
@@ -74,7 +74,7 @@
     "rectWidth": 56,
     "rectHeight": 17,
     "title": "The Date",
-    "description": "Sometimes a certain news article presented to you is real, but not recent, in a way to alter the context of the news. To make things even more complicated, sometimes you will be presented with just a snippet of the news article, such as a screenshot showing the headline and the paper that published it and was shared on social media, taking it even further out of context. <br /> Be mindful of content that is shared with you that you cannot verify."
+    "description": "Sometimes a certain news article presented to you is real, but not recent, in a way to alter the context of the news. To make things even more complicated, sometimes you will be presented with just a snippet of the news article, such as a screenshot showing the headline and the paper that published it and was shared on social media, taking it even further out of context. <br /> <br /> Be mindful of content that is shared with you that you cannot verify."
   },
   {
     "x": 745,
@@ -96,6 +96,6 @@
     "rectWidth": 175,
     "rectHeight": 20,
     "title": "The Experts",
-    "description": "Much like the author, ask yourself: who are these experts? Are these experts knowledgeable in their field? Were they carefully selected by the author to misrepresent the scientific community, in order to create a fake consensus or disagreement? Is their research published in reputable scientific journals? Watch out for the red flags: if a scientist's claims are only published in \"exclusive documentaries\", \"groundbreaking books\", but not in scientific literature, their claims may not be true at all. <br /> Remember: peer-reviewed studies and scientific scrutiny are essential for good science. Even those papers can be wrong: the scientific journal The Lancet has withdrawn not only the paper that linked the MMR vaccine to autism, but also a paper linking the use of hydroxychloroquine as a treatment to COVID-19 with higher deaths and heart disease, based on a fake dataset."
+    "description": "Much like the author, ask yourself: who are these experts? Are these experts knowledgeable in their field? Were they carefully selected by the author to misrepresent the scientific community, in order to create a fake consensus or disagreement? Is their research published in reputable scientific journals? Watch out for the red flags: if a scientist's claims are only published in \"exclusive documentaries\", \"groundbreaking books\", but not in scientific literature, their claims may not be true at all. <br /> <br /> Remember: peer-reviewed studies and scientific scrutiny are essential for good science. Even those papers can be wrong: the scientific journal The Lancet has withdrawn not only the paper that linked the MMR vaccine to autism, but also a paper linking the use of hydroxychloroquine as a treatment to COVID-19 with higher deaths and heart disease, based on a fake dataset."
   }
 ]
