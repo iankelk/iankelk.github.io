@@ -161,7 +161,7 @@ constructor(parentElement, data) {
 	/*
  	* Data wrangling
  	*/
-	wrangleData(skipTransition=false){
+	wrangleData(transitionTime=0){
 		let vis = this;
 
 		let wrangledData = JSON.parse(JSON.stringify(vis.data));
@@ -185,20 +185,20 @@ constructor(parentElement, data) {
 		}
 
 		// Update the visualization
-		vis.updateVis(skipTransition);
+		vis.updateVis(transitionTime);
 	}
 
 	/*
 	 * The drawing function - should use the D3 update sequence (enter, update, exit)
  	* Function parameters only needed if different kinds of updates are needed
  	*/
-	updateVis(skipTransition=false){
+	updateVis(transitionTime = 0){
 		let vis = this;
 
 		// Add a transition for when the brush is cleared
 		//let t = d3.transition().duration(transitionTime);
 		//let t = d3.transition().duration(300);
-		let chartTrans = d3.transition().duration(300).ease(d3.easeCubic);
+		let t = d3.transition().duration(transitionTime).ease(d3.easeCubic);
 
 		// Update domain
         // Get the maximum of the multi-dimensional array or in other words, get the highest peak of the uppermost layer
@@ -235,11 +235,6 @@ constructor(parentElement, data) {
 		let cat = categories.enter().append("path")
 			.attr("class", "area")
 			.merge(categories)
-			.style("fill", (d) => {
-				return vis.colorScale(d.key)
-			});
-
-		cat
 			.on("mouseover", function(event, d) {
 				vis.tooltipText
 					.text(vis.misinfo6[d.key] + " (@" + d.key + ")");
@@ -249,32 +244,23 @@ constructor(parentElement, data) {
 					.text("");
 			})
 			.on("click", (event, d)=> {
-				vis.filter = vis.filter ? "" : d.key;
- 				vis.wrangleData(false);
-			});
+				const transitionTime = (vis.filter) ? 0 : 300;
+				vis.filter = (vis.filter) ? "" : d.key;
+				vis.wrangleData(transitionTime);
+			})
+			.transition(t)
+			.style("fill", (d) => {
+				return vis.colorScale(d.key)
+			})
+			.attr("d", function(d) {
+					if(vis.filter) {
+						return vis.areaSingle(d);
+					}
+					else {
+						return vis.area(d);
+					}
+			})
 
-		if (skipTransition) {
-			cat
-				.attr("d", function(d) {
-					if(vis.filter) {
-						return vis.areaSingle(d);
-					}
-					else {
-						return vis.area(d);
-					}
-				})
-		} else {
-			cat
-				.transition(chartTrans)
-				.attr("d", function(d) {
-					if(vis.filter) {
-						return vis.areaSingle(d);
-					}
-					else {
-						return vis.area(d);
-					}
-				})
-		}
 		categories.exit().remove();
 
 		// Call axis functions with the new domain
