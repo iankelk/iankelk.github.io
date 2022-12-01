@@ -53,6 +53,7 @@ class GlobeVis {
         vis.world = topojson.feature(vis.geoData, vis.geoData.objects.countries).features;
 
         // Add the "water" before the countries
+    // #0B0B45
         vis.svg.append("path")
             .datum({type: "Sphere"})
             .attr("class", "graticule")
@@ -141,8 +142,6 @@ class GlobeVis {
         });
 
 
-
-
         // Create data structure with information for each country
         vis.countryInfo = {};
         vis.geoData.objects.countries.geometries.forEach(d => {
@@ -167,16 +166,11 @@ class GlobeVis {
             }
         })
 
-        // console.log(vis.countryInfo);
-
         vis.updateVis()
     }
 
     updateVis() {
         let vis = this;
-
-
-        // console.log(vis.countryInfo);
 
         // Create a tooltip
         vis.tooltip = d3.select("body").append('div')

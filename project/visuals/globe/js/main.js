@@ -10,10 +10,6 @@ let myTimelineVis;
 let parseDate = d3.timeParse("%Y");
 let formatYear = d3.timeFormat("%Y");
 
-function updateAllVisualizations(){
-    myGlobeVis.wrangleData()
-}
-
 // load data using promises
 let promiseGlobe = [
     d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"),

@@ -11,7 +11,7 @@ function linkViews(fakeNews){
     d3.selectAll(".circle")
         .attr("stroke", "none")
         .attr("fill", d => {
-            if(countryNews.includes(d)){ // Make fake news for that same country also red
+            if(countryNews.includes(d)){ // Make fake news for that same country also orange
                 return "orange";
             }else{
                 return "#0B0B45";

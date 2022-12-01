@@ -6,7 +6,6 @@ class TimelineVis {
 
     constructor(parentElement, geoData, historyData) {
         this.parentElement = parentElement;
-        this.geoData = geoData;
         this.historyData = historyData;
 
         this.initVis()
@@ -99,8 +98,6 @@ class TimelineVis {
         vis.xAxsGroup.selectAll('.circle')
             .on("mouseover", function(event, d) {
                 d3.select(this)
-                    // .attr('stroke-width', '2px')
-                    // .attr('stroke', 'black')
                     .attr("r", "11px")
 
                 // Update the tooltip

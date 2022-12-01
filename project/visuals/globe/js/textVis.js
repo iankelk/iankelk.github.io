@@ -1,6 +1,5 @@
 function updateText(fakeNews){
 
-
     // Adds a description text based on the content of the fake news chosen
     myGlobeVis.description.html(`
                          <div style="width:60vw; max-height:28vh; border-radius: 5px; padding: 5px; margin: auto;">
