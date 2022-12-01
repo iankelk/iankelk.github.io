@@ -19,7 +19,7 @@
     "rectWidth": 405,
     "rectHeight": 50,
     "title": "The Author",
-    "description": "Have you ever had someone close to you share news about an \"expert\"who challenges the \"establishment\" with their \"research\" that goes against everything you know and read elsewhere? <br /> <br />Do a quick search on the author. Are they credible? Are they knowledgeable in the field they are talking about, or are they experts in something else entirely? Have there been any ethical concerns raised about this person in the past? Are they even real? <br /> <br />Remember: those who spread fake news, spread it about everything."
+    "description": "Have you ever had someone close to you share news about an \"expert\"who challenges the \"establishment\" with their \"research\" that goes against everything you know and read elsewhere? <br /> <br />Do a quick search on the author. Are they credible? Are they knowledgeable in the field they are talking about, or are they experts in something else entirely? Have there been any ethical concerns raised about this person in the past? Are they even real? <br /> <br />A common technique used by spreaders of fake news is to misrepresent their credentials. For example, this is a real author with a real Ph.D. writing about a medical topic. However, a quick search online reveals that he is actually a doctor of media studies, with no authority granted by his education to comment on health issues.<br /> <br />Remember: those who spread fake news, spread it about everything."
   },
   {
     "x": -7,
@@ -30,7 +30,7 @@
     "rectWidth": 570,
     "rectHeight": 83,
     "title": "The Information",
-    "description": "Does the information in the body of the text match what is on the headline? Websites may rely on misleading attention-catching headlines to get users to click on their links, in what is known as \"clickbait\". <br /><br /> The body of the news article is also, naturally, the place where you are more likely to find the content of fake news in the story. Check other sources and fact-checking platforms. Everyone can be a potential spreader or creator of fake news, but the better informed you are, the more prepared you will be to question and reject fake news."
+    "description": "Does the information in the body of the text match what is on the headline? Websites may rely on misleading attention-catching headlines to get users to click on their links, in what is known as \"clickbait\". <br /><br /> The body of the news article is also, naturally, the place where you are more likely to find the content of fake news in the story. The better informed you are, the more prepared you will be to question and reject fake news.<br/><br/>Another thing to look out for is weak language when deferring to experts. In this example, rather than \"denounce\" the safety of lab-grown meat, they \"question\" it. You'll see similar language when referring to studies, where they do not \"prove\" something, but rather they \"suggest\" it. Using such meaningless language allows fake news to claim honesty by using expert testimony without really using it at all. "
   },
   {
     "x": 570,
@@ -41,7 +41,7 @@
     "rectWidth": 100,
     "rectHeight": 20,
     "title": "Supporting Sources",
-    "description": "Check the news page for sources. Are there any supporting sources for the claims in the news article? Are the sources factual, or just opinion pieces? Are the sources cited accurately represented in the news article? Misrepresenting sources is just as misleading as not having any at all."
+    "description": "Check the news page for sources. Are there any supporting sources for the claims in the news article? Are the sources factual, or just opinion pieces? Are the sources cited accurately represented in the news article? Misrepresenting sources is just as misleading as not having any at all.<br/><br/>As well, the use here of mentioning a number of public figures commonly used as villains by conspiracy theories is another red flag that we should be wary of the contents of this article."
   },
   {
     "x": -8,
@@ -52,7 +52,7 @@
     "rectWidth": 235,
     "rectHeight": 20,
     "title": "The URL",
-    "description": "Be wary of unusual top-level domain names, like '.com.co' that are designed to appear legitimate. This may even be used to imitate legitimate news sites to give a false sense of credibility to the fake news being spread."
+    "description": "It is straightforward to do a web search for the URL of the page you're viewing to discover if it has a reputation for misinformation or pretending to be another website entirely.<br/><br/>Also be wary of unusual top-level domain names, like '.com.co' that are designed to appear legitimate. This may even be used to imitate legitimate news sites to give a false sense of credibility to the fake news being spread."
   },
   {
     "x": 660,
@@ -63,7 +63,7 @@
     "rectWidth": 147,
     "rectHeight": 35,
     "title": "Your Bias",
-    "description": "Who is the intended audience for this story? Consider if your own beliefs could affect your judgment. Internet algorithms are designed to provide you more content of your interest in what is know as \"bubbling\". Consuming news only from outlets that share your views may only reinforce your biases, especially if these outlets are spreaders of fake news."
+    "description": "How did you find this article? Was it from someone on social media who regularly shares this kind of content? Who is the intended audience for this story?<br/><br/> Consider how your own beliefs affect your judgment. Internet algorithms are designed to provide you more content of your interest in what is know as \"bubbling\". Consuming news only from outlets that share your views may only reinforce your biases, especially if these outlets are spreaders of fake news."
   },
   {
     "x": -7,
@@ -74,7 +74,7 @@
     "rectWidth": 56,
     "rectHeight": 17,
     "title": "The Date",
-    "description": "Sometimes a certain news article presented to you is real, but not recent, in a way to alter the context of the news. To make things even more complicated, sometimes you will be presented with just a snippet of the news article, such as a screenshot showing the headline and the paper that published it and was shared on social media, taking it even further out of context. <br /> <br /> Be mindful of content that is shared with you that you cannot verify."
+    "description": "While the date in our example is current, sometimes a certain news article presented to you is real, but not recent, as a way to alter the context of the news. To make things even more complicated, sometimes you will be presented with just a snippet of the news article, such as a screenshot showing the headline and the paper that published it and was shared on social media, taking it even further out of context. <br /> <br /> Be mindful of content that is shared with you that you cannot verify."
   },
   {
     "x": 745,
@@ -84,8 +84,8 @@
     "rectY": 538,
     "rectWidth": 134,
     "rectHeight": 47,
-    "title": "The Text",
-    "description": "Does the article have spelling errors or dramatic punctuation? Reputable sources have high proofreading and grammatical standards."
+    "title": "Other Articles",
+    "description": "Does the source of the article also feature numerous other articles heavily promoting fear and paranoia? Does it host content which links government officials to shady, mysterious plots that you <i>urgently</i> need to know about? This is another excellent way of checking to see whether you're dealing with a reputable source."
   },
   {
     "x": 223,
@@ -96,6 +96,6 @@
     "rectWidth": 175,
     "rectHeight": 20,
     "title": "The Experts",
-    "description": "Much like the author, ask yourself: who are these experts? Are these experts knowledgeable in their field? Were they carefully selected by the author to misrepresent the scientific community, in order to create a fake consensus or disagreement? Is their research published in reputable scientific journals? Watch out for the red flags: if a scientist's claims are only published in \"exclusive documentaries\", \"groundbreaking books\", but not in scientific literature, their claims may not be true at all. <br /> <br /> Remember: peer-reviewed studies and scientific scrutiny are essential for good science. Even those papers can be wrong: the scientific journal The Lancet has withdrawn not only the paper that linked the MMR vaccine to autism, but also a paper linking the use of hydroxychloroquine as a treatment to COVID-19 with higher deaths and heart disease, based on a fake dataset."
+    "description": "Much like the author, ask yourself: who are these experts? Are these experts knowledgeable in their fields? Were they carefully selected by the author to misrepresent the scientific community, in order to create a fake consensus or disagreement? Is their research published in reputable scientific journals? Watch out for the red flags: if a scientist's claims are only published in \"exclusive documentaries\", \"groundbreaking books\", but not in scientific literature, their claims may not be true at all. <br /> <br /> Remember: peer-reviewed studies and scientific scrutiny are essential for good science. Even those papers can be wrong: the scientific journal <i>The Lancet</i> has withdrawn not only the paper that linked the MMR vaccine to autism, but also a paper linking the use of hydroxychloroquine as a COVID-19 treatment to higher deaths and heart disease."
   }
 ]

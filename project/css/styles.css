@@ -292,12 +292,11 @@ img {
 
 #hotspot-body {
     font-family: "Domine", sans-serif;
-    /*margin: 20px auto 1em;*/
 }
 
 #hotspot-description {
     padding-top: 20px;
-    padding-right: 50px;
+    padding-right: 80px;
     text-align: left;
     font-size: 1.2em;
 }
