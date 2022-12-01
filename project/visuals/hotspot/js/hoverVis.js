@@ -112,18 +112,6 @@ class HoverVis {
         vis.bar = vis.svg.selectAll("rect")
             .data(vis.data);
 
-        // vis.svg.append("rect")
-        //     .attr("x", 220)
-        //     .attr("y", 180)
-        //     .attr("rx", 15)
-        //     .attr("ry", 15)
-        //     .attr("width", 100)
-        //     .attr("height", 100)
-        //     .attr("stroke-opacity", 1)
-        //     .attr("stroke-width",3)
-        //     .attr("stroke", "blue")
-        //     .attr("fill", "none")
-
         vis.rectangles = vis.svg.selectAll("rect")
             .data(vis.data)
             .enter()

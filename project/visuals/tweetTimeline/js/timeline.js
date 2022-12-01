@@ -83,7 +83,7 @@ class Timeline {
 		// Append x-axis
 		vis.xGroup = vis.svg.append("g")
 			.attr("class", "x-axis axis")
-			.attr("transform", "translate(0," + vis.height + ")")
+			.attr("transform", "translate(10," + vis.height + ")")
 
 		// Create a label saying what date range has been brushed
 		vis.dateRange = vis.xGroup
