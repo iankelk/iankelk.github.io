@@ -76,6 +76,8 @@ function brushed(event) {
 
 	if (event.selection === null) {
 		myAreaChartVis.x.domain(d3.extent(myAreaChartVis.data[selectedTweetCategory], d=> d.date));
+		myTimeLineVis.dateRange.text(formatTime(myTimeLineVis.displayData[0].date) + " - " +
+			formatTime(myTimeLineVis.displayData[myTimeLineVis.displayData.length-1].date));
 		myAreaChartVis.wrangleData(300);
 		return;
 	}

@@ -134,8 +134,6 @@ class TimelineVis {
                 linkViews(d);
             });
 
-
-
         // Render the x axis
         vis.svg.select(".timeline-axis")
             .transition()
