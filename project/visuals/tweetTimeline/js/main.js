@@ -52,7 +52,7 @@ String.prototype.toProperCase = function () {
 	return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();});
 };
 
-// var string="The water content is considered acceptable for this voltage class. Dielectric Breakdown Voltage is unacceptable for transformers > 288 KV. Power factors, Interfacial Tension and Neutralization Number are acceptable for continued use in-service.";
+
 function splitLongString(N, longString) {
 	let app = longString.split(' '),
 		arrayApp = [],
@@ -81,7 +81,7 @@ function brushed(event) {
 		myAreaChartVis.wrangleData(300);
 		return;
 	}
-	// TO-DO: React to 'brushed' event
+	// React to 'brushed' event
 	// Get the extent of the current brush
 	let selectionRange = d3.brushSelection(d3.select(".brush").node());
 

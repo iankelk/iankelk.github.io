@@ -38,7 +38,6 @@ class StackedAreaChart {
 			"sayerjigmi":"Sayer Ji"
 		}
 
-		// let colors = ['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c'];
 
 		// grab all the keys from the key value pairs in data (filter out 'year' ) to get a list of categories
 		this.dataCategories = Object.keys(this.data[selectedTweetCategory][0]).filter(d =>d !== "date")
@@ -95,12 +94,11 @@ class StackedAreaChart {
 			.attr("class", "y-axis axis");
 
 
-		// TO-DO (Activity II): Initialize stack layout
+		// Initialize stack layout
 		vis.stack = d3.stack()
 			.keys(vis.dataCategories);
 
-		// TO-DO (Activity II) Stack data
-		//vis.stackedData = vis.stack(vis.data[selectedTweetCategory]);
+		// Stack data
 
 		vis.tooltipText = vis.svg.append("text")
 			.attr("class", "categories")
@@ -118,7 +116,6 @@ class StackedAreaChart {
 			step: 1,
 			start: [30],
 			behaviour: 'tap',
-			// tooltips: true,
 			format: {
 				to: function(value) {
 					return d3.format("d")(value);
@@ -148,14 +145,7 @@ class StackedAreaChart {
 			changeDetail();
 		});
 
-		//
-		// d3.xml('../img/help.svg')
-		// 	.then(data => {
-		// 		vis.svg.append(data.documentElement)
-		// 			.attr("id", "help-icon");
-		// 	})
 
-		// TO-DO: (Filter, aggregate, modify data)
 		vis.wrangleData();
 	}
 	/*
@@ -196,8 +186,6 @@ class StackedAreaChart {
 		let vis = this;
 
 		// Add a transition for when the brush is cleared
-		//let t = d3.transition().duration(transitionTime);
-		//let t = d3.transition().duration(300);
 		let chartTrans = d3.transition().duration(300).ease(d3.easeCubic);
 
 		// Update domain

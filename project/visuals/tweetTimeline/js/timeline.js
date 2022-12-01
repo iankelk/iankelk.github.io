@@ -66,7 +66,7 @@ class Timeline {
 			.extent([[0, 0], [vis.width, vis.height]])
 			.on("brush end", brushed);
 
-		// TO-DO: Append brush component here
+		// Append brush component
 		vis.svg.append("g")
 			.attr("class", "x brush")
 			.call(vis.brush)
@@ -115,7 +115,6 @@ class Timeline {
 
 		const t = d3.transition().duration(500).ease(d3.easeLinear);
 
-		//vis.y.domain([0, d3.max(vis.displayData, (d) => d["cases"])]);
 		if (selectedCasesDeaths === "cases") {
 			vis.y.domain([0, d3.max(vis.displayData, (d) => d.cases)]);
 		} else if (selectedCasesDeaths === "deaths") {
