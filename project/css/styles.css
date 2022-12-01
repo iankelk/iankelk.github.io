@@ -571,12 +571,12 @@ source-text {
 
 }
 
-red-bold {
+.red-bold {
     font-weight: bold;
     color: red;
 }
 
-red-bold-big {
+.red-bold-big {
     font-weight: bold;
     color: red;
     font-size: 1.5em;
