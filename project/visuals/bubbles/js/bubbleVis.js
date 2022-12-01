@@ -248,9 +248,9 @@ class BubbleVis {
 
         vis.height = split ? 500 : 300;
 
-        vis.y.domain(split ? vis.categories[selectedCategoryBubbles] : vis.categories[selectedCategoryBubbles].concat("Global")); // workaround for updating the yAxis
+        vis.y.domain(split ? vis.categories[selectedCategoryBubbles] : vis.categories[selectedCategoryBubbles].concat("All")); // workaround for updating the yAxis
         vis.y.range(split ? [vis.margin.top, vis.height - vis.margin.bottom] : [vis.height / 2, vis.height / 2]);
-        let ticks = split ? vis.categories[selectedCategoryBubbles] : ["Global"];
+        let ticks = split ? vis.categories[selectedCategoryBubbles] : ["All"];
 
         const t = vis.svg.transition().duration(400);
         vis.svg.transition(t).attr("viewBox", [0, 0, vis.width, vis.height]) ;

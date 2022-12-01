@@ -77,7 +77,7 @@ input {
 .popup-bubbles .popuptext-bubbles {
     visibility: hidden;
     width: 750px;
-    height: 625px;
+    height: 375px;
     background-color: grey;
     color: #fff;
     text-align: left;
@@ -85,7 +85,7 @@ input {
     padding: 20px 20px;
     position: absolute;
     z-index: 1;
-    bottom: -635px;
+    bottom: -380px;
     left: 50%;
     margin-left: -700px;
 }
