@@ -15,6 +15,11 @@ class BubbleVis {
         selectedCategoryBubbles =  document.getElementById('category-bubbles').value;
         console.log("categories", this.categories);
 
+        this.sizeTicks = {
+            "motive": [20, 40, 60, 80, 100],
+            "narrative": [10, 30, 50, 70, 90],
+            "region": [10, 30, 50, 70, 90]};
+
         this.initVis()
     }
 
@@ -58,7 +63,6 @@ class BubbleVis {
 
         vis.colour = d3.scaleOrdinal(d3.schemeTableau10)
 
-
         vis.xAxis = g =>
             g
                 .attr("transform", `translate(0, ${vis.margin.top})`)
@@ -81,6 +85,27 @@ class BubbleVis {
                 .call(d3.axisLeft(scale).tickValues(ticks))
                 .call(g => g.style("text-anchor", "start"))
                 .call(g => g.select(".domain").remove())
+
+        // Size Legend
+        vis.sizeLegend = vis.svg.append("g")
+            .attr('class', 'size-legend')
+            .attr('transform', `translate(${vis.width*0.52},${-33})`);
+
+        vis.legendScale = d3.scaleBand()
+            .rangeRound([0, 300])
+            .padding(0.25)
+            .domain(vis.sizeTicks[selectedCategoryBubbles]);
+
+        vis.legendAxis = d3.axisBottom()
+            .scale(vis.legendScale)
+            .tickFormat(d3.format(",.0f"));
+
+        vis.legendAxisGroup = vis.svg.append("g")
+            .attr("class", "axis x-axis")
+            .attr('transform', `translate(${vis.width*0.52},${-13})`);
+
+        vis.legendAxisGroup
+            .call(vis.legendAxis);
 
         vis.svg.append("g").call(vis.xAxis);
         vis.yG = vis.svg.append("g").attr("stroke-width", 0);
@@ -152,6 +177,62 @@ class BubbleVis {
                     .html(``);
             });
 
+        vis.legendScale
+            .domain(vis.sizeTicks[selectedCategoryBubbles]);
+
+        vis.legendAxisGroup
+            .transition().duration(300)
+            .call(vis.legendAxis);
+
+        vis.sizeCircles = vis.sizeLegend.selectAll("circle")
+            .data(vis.sizeTicks[selectedCategoryBubbles]);
+
+        const multipliers = { motive: 57.05, narrative: 57.05, region: 57.05 };
+        const offsets = { motive: 37, narrative: 37, region: 37 };
+
+        // Size legend update
+        vis.sizeCircles
+            .enter()
+            .append("circle")
+            // .attr("r", 2)
+            .merge(vis.sizeCircles)
+            .attr("class", (d) => "size_" + d)
+            .on('mouseover', function(event, d) {
+                const size = +d3.select(this).attr("class").substring(5)
+                const nextSize = size+20;
+                console.log("size", size)
+                console.log("nextSize", nextSize)
+                d3.select(this)
+                    .attr("fill", "dodgerblue");
+                let count = 0;
+                vis.node
+                    .transition(300)
+                    .attr("fill", function(d,i) {
+                        //console.log("d", d.count)
+                        if (d.count >= size && d.count < nextSize) count++;
+                        return d.count >= size && d.count < nextSize ? vis.colour(d[selectedCategoryBubbles]) : "#B8B8B8";
+                    });
+                const sizeWordingBefore = { motive: "having", narrative: "following", region: "tweeting" };
+                const sizeWordingAfter = { motive: "followers", narrative: "other accounts", region: "times" };
+
+                // vis.counter.html(`${count} highlighted for ${sizeWordingBefore[selectedCategoryForceDirect]} ${size.toLocaleString("en-US")} to ${(nextSize-1).toLocaleString("en-US")} ${sizeWordingAfter[selectedCategory]}`);
+            })
+            .on('mouseout', function (event, d) {
+                d3.select(this)
+                    .attr("fill", "grey")
+                vis.node
+                    .transition().duration(300)
+                    .attr("fill", (d,i) => vis.colour(d[selectedCategoryBubbles]));
+                // vis.counter.html(``);
+            })
+
+            .transition().duration(300)
+            .attr("r", (d, i) => vis.r(d))
+            .attr("cx", (d, i) => i * multipliers[selectedCategoryBubbles] + offsets[selectedCategoryBubbles])
+            .attr("fill", (d,i) => "grey");
+
+        vis.sizeCircles.exit().remove();
+
         vis.simulation = d3.forceSimulation()
             .force("x", d3.forceX(d => vis.x(d3.isoParse(d.date))))
             .force("y", d3.forceY(d => vis.y(d[selectedCategoryBubbles]) + vis.y.bandwidth() / 2))
@@ -171,7 +252,6 @@ class BubbleVis {
         });
 
         vis.height = split ? 500 : 300;
-
 
         vis.y.domain(split ? vis.categories[selectedCategoryBubbles] : vis.categories[selectedCategoryBubbles].concat("Global")); // workaround for updating the yAxis
         vis.y.range(split ? [vis.margin.top, vis.height - vis.margin.bottom] : [vis.height / 2, vis.height / 2]);

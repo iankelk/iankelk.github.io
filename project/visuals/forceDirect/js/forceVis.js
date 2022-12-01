@@ -67,7 +67,7 @@ class ForceVis {
     updateVis() {
         let vis = this;
 
-        let t = d3.transition(800);
+        let t = d3.transition().duration(800);
 
         let updatedRadius = d => {
             return vis.scaleRadius(+d[selectedCategoryForceDirect]);
@@ -94,7 +94,7 @@ class ForceVis {
         vis.sizeCircles
             .enter()
             .append("circle")
-            .attr("r", 2)
+            // .attr("r", 2)
             .attr("class", (d) => "size_" + d)
             .merge(vis.sizeCircles)
             .on('mouseover', function(event, d) {
