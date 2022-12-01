@@ -5,7 +5,6 @@ let type = 0;
 // Load data using promises
 let promisesStory = [
     d3.json("/project/visuals/story/data/world.geojson.json"),
-    //d3.csv("data/mismanaged_plastic.csv")
     d3.csv("/project/visuals/story/data/fake_news_story.csv")
 ];
 
@@ -20,10 +19,10 @@ Promise.all(promisesStory)
 // initMainPage
 function initMainPageStory(dataArray) {
     let mapGeoJson = dataArray[0];
-    let mismanaged_plastic = dataArray[1];
+    let fake_news_data = dataArray[1];
 
     // Init story
-    myStoryVis = new StoryVis(document.getElementById('story'), mapGeoJson, mismanaged_plastic);
+    myStoryVis = new StoryVis(document.getElementById('story'), mapGeoJson, fake_news_data);
 }
 
 // Selector listener

@@ -4,8 +4,6 @@ class StoryVis {
         this.parentElement = parentElement;
         this.mapData = mapData;
         this.data = data;
-        // Make a deep copy of the data for display purposes
-        //this.displayData = this.data.map((x) => x);
 
         this.width = 1200;
         this.height = 600;
@@ -39,13 +37,11 @@ class StoryVis {
         vis.nodesData1 = vis.getNodesData1();
 
         vis.svg = d3.create('svg')
-            // .attr('viewBox', [0,0,vis.width*1.3+500, vis.height*1.9-300])
             .attr('viewBox', [0, 8, vis.width, vis.height * 1.3])
             .attr("height", vis.height)
             .attr("width", vis.width)
             .attr("preserveAspectRatio", "xMidYMid meet")
             .attr("id", "story-svg")
-        //.style('background', "#333333")
 
         const wrapper = vis.svg.append('g').attr("transform", `translate(${vis.margin.left},${vis.margin.top})`)
 
