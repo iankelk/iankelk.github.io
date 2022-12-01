@@ -535,10 +535,21 @@ text.title {
 #wordcloud {
     height: 750px;
 }
+
+.wordcloud-word {
+    cursor: pointer;
+}
+
 #redraw-wordcloud {
     margin-top: 50px;
 }
 
+#wordcloud-description {
+    padding-top: 20px;
+    padding-right: 50px;
+    text-align: left;
+    font-size: 1.2em;
+}
 
 /*SOURCES CSS*/
 

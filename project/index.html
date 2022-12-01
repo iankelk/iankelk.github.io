@@ -191,10 +191,6 @@
             </span>
             <br>
             <br>
-            <span data-aos="fade-in" data-aos-delay="3500">
-                We made a word cloud of what the tweets from the Misinformation 6 were spreading, and it turns out
-                <span style="color: red; font-weight: bold"> those who spread fake news, spread it about everything.</span>
-            </span>
         </p>
     </div>
 
@@ -203,17 +199,22 @@
         <div id="wordcloud-body">
             <div class="container-fluid">
                 <div class="row">
-                    <h1>Politics, Vaccines, Climate Change</h1>
-                    <br>
-                    <h3>Fake news spread lies about all subjects, at the cost of lives</h3>
-                </div>
-                <div class="row">
-                    <div class="col-9">
+                    <div class="col-8">
                         <div id="wordcloud"></div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-4" id="wordcloud-description">
+                        <h1>Politics, Vaccines, Climate Change</h1>
+                        <h3>Fake news spread lies about all subjects, at the cost of lives</h3>
+                        <hr/>
+                        Does it seem like the same people who spread conspiracy theories about one topic,
+                        also share false information about another? It's not coincidence.<br/><br/>
+                        We made a word cloud of the top 150 terms that the tweets from the Misinformation 6 were spreading, and it turns out
+                        <span style="color: red; font-weight: bold"> those who spread fake news, spread it about everything.</span>
+                        <br /><br />
+                        While it's fun to play with the dancing words by clicking the button below, it should be noted that word clouds <a href="https://www.niemanlab.org/2011/10/word-clouds-considered-harmful/" target="_blank">can
+                        be considered harmful</a>  in the way they present information.
                         <div style="text-align: left">
-                            <button id="redraw-wordcloud">Random Redraw</button>
+                            <button id="redraw-wordcloud">Shuffle the word cloud</button>
                         </div>
                     </div>
                 </div>

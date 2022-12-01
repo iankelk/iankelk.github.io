@@ -14,10 +14,10 @@ class WordCloud {
     initVis() {
         let vis = this;
 
-        vis.fill = d3.scaleOrdinal(d3.schemeCategory10);
+        vis.fill = d3.scaleOrdinal(d3.schemeTableau10);
 
         // define margins
-        vis.margin = {top: 20, right: 10, bottom: 10, left: 10};
+        vis.margin = {top: 20, right: 0, bottom: 10, left: 0};
         vis.width =  vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -26,12 +26,17 @@ class WordCloud {
             .attr("width", vis.width + vis.margin.left + vis.margin.right)
             .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
             .append('g')
-            .attr('transform', `translate (${vis.margin.left+vis.width/2}, ${vis.margin.top+ vis.height/2})`);
+            .attr('transform', `translate (${vis.margin.left+vis.width/2}, ${vis.margin.top+ vis.height/2})`)
+            //.attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
         vis.button = d3.select("#redraw-wordcloud").on("click", function (event) {
             console.log("submitted")
             vis.showNewWords(myWordCloud);
         });
+
+        // append tooltip
+        vis.tooltip = d3.select("body").append('div')
+            .attr('class', "tooltip");
 
         // How to scale the words which vary greatly in size
         vis.wordScale = d3.scaleLog()
@@ -60,9 +65,33 @@ class WordCloud {
             enter => enter.append("text")
                         .style("font-family", "Impact")
                         .style("fill", function(d, i) { return vis.fill(i); })
+                        .attr("class", "wordcloud-word")
                         .attr("text-anchor", "middle")
                         .attr('font-size', 1)
-                        .text(function(d) { return d.text; }),
+                        .text(function(d) { return d.text; })
+                        .on('mouseover', function(event, d) {
+                            let word = vis.displayData.find(item => item.key === d.text);
+                            vis.tooltip
+                                .style("opacity", 1)
+                                .style("left", event.pageX + 20 + "px")
+                                .style("top", event.pageY + "px")
+                                .html(`
+                                 <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
+                                     <h4>${word.key}</h4>
+                                     <strong>Number of times used: </strong> ${word.value}<br />
+                                 </div>`)})
+                        .on('mouseout', function (event, d) {
+                            vis.tooltip
+                                .style("opacity", 0)
+                                .style("left", 0)
+                                .style("top", 0)
+                                .html(``);
+                        })
+                        .on('mousemove', (event,d) => {
+                            vis.tooltip
+                                .style("left", event.pageX + 20 + "px")
+                                .style("top", event.pageY + "px")
+                        }),
                     // Entering and existing words
                     update => update
                         .transition()
