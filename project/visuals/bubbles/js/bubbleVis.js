@@ -88,10 +88,10 @@ class BubbleVis {
         // Size Legend
         vis.sizeLegend = vis.svg.append("g")
             .attr('class', 'size-legend')
-            .attr('transform', `translate(${vis.width*0.5},${-33})`);
+            .attr('transform', `translate(${vis.width*0.5},${-35})`);
 
         vis.legendScale = d3.scaleBand()
-            .rangeRound([0, 300])
+            .rangeRound([0, 220])
             .padding(0.25)
             .domain(vis.sizeTicks[selectedCategoryBubbles]);
 
@@ -101,7 +101,7 @@ class BubbleVis {
 
         vis.legendAxisGroup = vis.svg.append("g")
             .attr("class", "axis x-axis")
-            .attr('transform', `translate(${vis.width*0.5},${-13})`);
+            .attr('transform', `translate(${vis.width*0.5},${-15})`);
 
         vis.legendAxisGroup
             .call(vis.legendAxis);
@@ -190,8 +190,10 @@ class BubbleVis {
         vis.sizeCircles = vis.sizeLegend.selectAll("circle")
             .data(vis.sizeTicks[selectedCategoryBubbles]);
 
-        const multipliers = { motive: 47.9, narrative: 47.9, region: 47.9 };
-        const offsets = { motive: 30.3, narrative: 30.3, region: 30.3 };
+        // const multipliers = { motive: 47.9, narrative: 47.9, region: 47.9 };
+        // const offsets = { motive: 30.3, narrative: 30.3, region: 30.3 };
+        const multipliers = { motive: 34.9, narrative: 34.9, region: 34.9 };
+        const offsets = { motive: 22.5, narrative: 22.5, region: 22.5 };
 
         // Size legend update
         vis.sizeCircles
