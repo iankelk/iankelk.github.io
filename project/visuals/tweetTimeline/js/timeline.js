@@ -91,7 +91,7 @@ class Timeline {
 			.attr("class", "date-range")
 			.attr('text-anchor', 'start')
 			.attr('x', 0)
-			.attr('y', -110)
+			.attr('y', -100)
 			.attr('fill', 'black')
 			.text(formatTime(vis.displayData[0].date) + " - " +
 				formatTime(vis.displayData[vis.displayData.length-1].date));
