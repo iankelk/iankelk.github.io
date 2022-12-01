@@ -556,7 +556,7 @@ text.title {
     font-size: 1.2em;
 }
 
-/*SOURCES CSS*/
+/*GENERAL CSS*/
 
 ul {
     padding-left: 2rem;
@@ -569,4 +569,15 @@ source-text {
     max-width: 60vw;
     font-size: 0.5em;
 
+}
+
+red-bold {
+    font-weight: bold;
+    color: red;
+}
+
+red-bold-big {
+    font-weight: bold;
+    color: red;
+    font-size: 1.5em;
 }
