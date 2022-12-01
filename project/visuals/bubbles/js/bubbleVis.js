@@ -203,9 +203,6 @@ class BubbleVis {
                         if (d.count >= size && d.count < nextSize) count++;
                         return d.count >= size && d.count < nextSize ? vis.colour(d[selectedCategoryBubbles]) : "#B8B8B8";
                     });
-                const sizeWordingBefore = { motive: "having", narrative: "following", region: "tweeting" };
-                const sizeWordingAfter = { motive: "followers", narrative: "other accounts", region: "times" };
-
             })
             .on('mouseout', function (event, d) {
                 d3.select(this)
