@@ -8,7 +8,7 @@
     "rectWidth": 335,
     "rectHeight": 95,
     "title": "The Source",
-    "description": "What's the story's intent? Investigate the site, its mission, and its contact info."
+    "description": "What's the story's intent? Investigate the site, its mission, and its contact info. Is this some little known website recently created? What is the language used in their other work, is it inflammatory, with clickbaity titles? Is this website oriented towards \"exposing the truth\"?  <br> Remember the history of fake news: Even mainstream media outlets may skew their news or even knowingly spread misinformation to achieve their goals. <br> Understanding the potential biases of the source can help you guard against fake claims And sometimes even extract the truth out of the news piece, if there is any truth at all."
   },
   {
     "x": -7,
@@ -19,7 +19,7 @@
     "rectWidth": 405,
     "rectHeight": 50,
     "title": "The Author",
-    "description": "Do a quick search on the author. Are they credible? Are they real?"
+    "description": "Have you ever had someone close to you share news about an \"expert\"who challenges the \"establishment\" with their \"research\" that goes against everything you know and read elsewhere? <br>Do a quick search on the author. Are they credible? Are they knowledgeable in the field they are talking about, or are they experts in something else entirely? Have there been any ethical concerns raised about this person in the past? Are they even real? <br> Remember: those who spread fake news, spread it about everything."
   },
   {
     "x": -7,
@@ -30,7 +30,7 @@
     "rectWidth": 570,
     "rectHeight": 83,
     "title": "The Information",
-    "description": "Read past click-baity headlines, note who is (or isn't) quoted, and verify the information on other sites."
+    "description": "Does the information in the body of the text match what is on the headline? Websites may rely on misleading attention-catching headlines to get users to click on their links, in what is known as \"clickbait\""
   },
   {
     "x": 570,
@@ -41,7 +41,7 @@
     "rectWidth": 100,
     "rectHeight": 20,
     "title": "Supporting Sources",
-    "description": "Click on the supporting links, and perform reverse searches on the images. Are they credible, and do they support the story?"
+    "description": "Check the news page for sources. Are there any supporting sources for the claims in the news article? Are the sources factual, or just opinion pieces? Are the sources cited accurately represented in the news article? Misrepresenting sources is just as misleading as not having any at all."
   },
   {
     "x": -8,
@@ -52,7 +52,7 @@
     "rectWidth": 235,
     "rectHeight": 20,
     "title": "The URL",
-    "description": "Be wary of unusual top-level domain names, like '.com.co' that are designed to appear legitimate."
+    "description": "Be wary of unusual top-level domain names, like '.com.co' that are designed to appear legitimate. This may even be used to imitate legitimate news sites to give a false sense of credibility to the fake news being spread."
   },
   {
     "x": 660,
@@ -63,7 +63,7 @@
     "rectWidth": 147,
     "rectHeight": 35,
     "title": "Your Bias",
-    "description": "Who is the intended audience for this story? Consider if your own beliefs could affect your judgment."
+    "description": "Who is the intended audience for this story? Consider if your own beliefs could affect your judgment. Internet algorithms are designed to provide you more content of your interest in what is know as \"bubbling\". Consuming news only from outlets that share your views may only reinforce your biases, especially if these outlets are spreaders of fake news."
   },
   {
     "x": -7,
@@ -74,7 +74,7 @@
     "rectWidth": 56,
     "rectHeight": 17,
     "title": "The Date",
-    "description": "Reposting old news stories doesn't mean they're relevant to current events."
+    "description": "Sometimes a certain news article presented to you is real, but not recent, in a way to alter the context of the news. To make things even more complicated, sometimes you will be presented with just a snippet of the news article, such as a screenshot showing the headline and the paper that published it and was shared on social media, taking it even further out of context. <br> Be mindful of content that is shared with you that you cannot verify."
   },
   {
     "x": 745,
@@ -96,6 +96,6 @@
     "rectWidth": 175,
     "rectHeight": 20,
     "title": "The Experts",
-    "description": "Would this story meet academic citation standards? Consult a fact-checking site."
+    "description": "Much like the author, ask yourself: who are these experts? Are these experts knowledgeable in their field? Were they carefully selected by the author to misrepresent the scientific community, in order to create a fake consensus or disagreement? Is their research published in reputable scientific journals? Watch out for the red flags: if a scientist's claims are only published in \"exclusive documentaries\", \"groundbreaking books\", but not in scientific literature, their claims may not be true at all. <br> Remember: peer-reviewed studies and scientific scrutiny are essential for good science. Even those papers can be wrong: the scientific journal The Lancet has withdrawn not only the paper that linked the MMR vaccine to autism, but also a paper linking the use of hydroxychloroquine as a treatment to COVID-19 with higher deaths and heart disease, based on a fake dataset."
   }
 ]
