@@ -290,6 +290,11 @@ class ForceVis {
                     .style("top", 0)
                     .html(``);
             })
+            .on('mousemove', (event,d) => {
+                vis.tooltip
+                    .style("left", event.pageX + 20 + "px")
+                    .style("top", event.pageY -160 + "px")
+            })
             .call(drag(simulation));
 
         if (vis.G) vis.node.attr("fill", (d) => vis.color(vis.G[d.index]));

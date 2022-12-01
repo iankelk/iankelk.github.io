@@ -173,6 +173,11 @@ class BubbleVis {
                     .style("left", 0)
                     .style("top", 0)
                     .html(``);
+            })
+            .on('mousemove', (event,d) => {
+                vis.tooltip
+                    .style("left", event.pageX + 20 + "px")
+                    .style("top", event.pageY + "px")
             });
 
         vis.legendScale
