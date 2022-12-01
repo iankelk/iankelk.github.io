@@ -13,7 +13,6 @@ class BubbleVis {
         this.categories["region"] =  [...new Set(regionData.map(d => d.region))]
 
         selectedCategoryBubbles =  document.getElementById('category-bubbles').value;
-        console.log("categories", this.categories);
 
         this.sizeTicks = {
             "motive": [20, 40, 60, 80, 100],
@@ -138,7 +137,6 @@ class BubbleVis {
         vis.y.domain(vis.categories[selectedCategoryBubbles])
 
         if (vis.node) {
-            console.log("removing node")
             vis.node.remove();
         }
         vis.node = vis.svg.append("g")
@@ -200,15 +198,12 @@ class BubbleVis {
             .on('mouseover', function(event, d) {
                 const size = +d3.select(this).attr("class").substring(5)
                 const nextSize = size+20;
-                console.log("size", size)
-                console.log("nextSize", nextSize)
                 d3.select(this)
                     .attr("fill", "dodgerblue");
                 let count = 0;
                 vis.node
                     .transition(300)
                     .attr("fill", function(d,i) {
-                        //console.log("d", d.count)
                         if (d.count >= size && d.count < nextSize) count++;
                         return d.count >= size && d.count < nextSize ? vis.colour(d[selectedCategoryBubbles]) : "#B8B8B8";
                     });
@@ -256,7 +251,6 @@ class BubbleVis {
         vis.y.domain(split ? vis.categories[selectedCategoryBubbles] : vis.categories[selectedCategoryBubbles].concat("Global")); // workaround for updating the yAxis
         vis.y.range(split ? [vis.margin.top, vis.height - vis.margin.bottom] : [vis.height / 2, vis.height / 2]);
         let ticks = split ? vis.categories[selectedCategoryBubbles] : ["Global"];
-        console.log("ticks", ticks)
 
         const t = vis.svg.transition().duration(400);
         vis.svg.transition(t).attr("viewBox", [0, 0, vis.width, vis.height]) ;
