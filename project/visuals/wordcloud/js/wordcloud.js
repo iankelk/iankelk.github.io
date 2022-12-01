@@ -115,6 +115,8 @@ class WordCloud {
             // Recompute the word cloud. This method will
             // asynchronously call draw when the layout has been computed.
             update: function(words) {
+                // Make the 3rd rotation alternate between the angles of [0,60] and [0,-60]
+                const thirdRotation = ~~(Math.random() * 60) * {0:1,1:-1}[vis.step % 2];
                 vis.cloud
                     .words(words)
                     .padding(5)
@@ -140,7 +142,7 @@ class WordCloud {
                     vis.step++;
                     vis.cloud
                         .rotate(function () {
-                            return 30;
+                            return thirdRotation;
                         })
                         .start();
                 }
