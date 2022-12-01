@@ -285,20 +285,21 @@ img {
 
 /*HOTSPOT VIZ*/
 
-.direction {
-    position: relative;
-    top: 10px;
-    left: 0%;
-    font-size: 10px;
-}
-
-#vis-row-hotspot {
-    height: 800px;
-    width: 100%;
-}
-
 #hotspot-image {
     width: 100%;
+    height: 800px;
+}
+
+#hotspot-body {
+    font-family: "Domine", sans-serif;
+    margin: 20px auto 1em;
+}
+
+#hotspot-description {
+    padding-top: 20px;
+    padding-right: 50px;
+    text-align: left;
+    font-size: 1.2em;
 }
 
 /*TWEET TIMELINE*/
