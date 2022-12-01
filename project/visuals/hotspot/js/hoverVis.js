@@ -33,6 +33,11 @@ class HoverVis {
         vis.title = document.getElementById('title-hotspot');
         vis.description = document.getElementById('description-hotspot');
 
+        vis.titleText = vis.title.innerHTML;
+        vis.descriptionText = vis.description.innerHTML;
+
+        console.log(vis.titleText)
+
         const t = d3.transition().duration(500).ease(d3.easeLinear);
 
         // Create the animations for the circles
@@ -99,6 +104,9 @@ class HoverVis {
                 vis.svg.selectAll(`.item-${d.index}`)
                     .transition(t)
                     .attr("stroke-opacity", 0);
+
+                vis.title.innerHTML = vis.titleText;
+                vis.description.innerHTML = vis.descriptionText;
             })
 
         vis.bar = vis.svg.selectAll("rect")
