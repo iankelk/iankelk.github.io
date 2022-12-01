@@ -414,7 +414,7 @@ input {
 .popup-timeline .popuptext-timeline {
     visibility: hidden;
     width: 750px;
-    height: 625px;
+    height: 610px;
     background-color: grey;
     color: #fff;
     text-align: left;
