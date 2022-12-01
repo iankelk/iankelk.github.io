@@ -45,3 +45,9 @@ function changeCategory() {
 String.prototype.toProperCase = function () {
     return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();});
 };
+
+// When the user clicks on <div>, open the popup
+function helpBubbles() {
+    let popup = document.getElementById("help-bubbles");
+    popup.classList.toggle("show");
+}
