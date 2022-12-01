@@ -88,7 +88,7 @@ class BubbleVis {
         // Size Legend
         vis.sizeLegend = vis.svg.append("g")
             .attr('class', 'size-legend')
-            .attr('transform', `translate(${vis.width*0.5},${-35})`);
+            .attr('transform', `translate(${vis.width*0.51},${-35})`);
 
         vis.legendScale = d3.scaleBand()
             .rangeRound([0, 220])
