@@ -72,6 +72,8 @@ function splitLongString(N, longString) {
 }
 
 function brushed(event) {
+	const formatTime = d3.timeFormat("%B %d, %Y");
+
 	if (event.selection === null) {
 		myAreaChartVis.x.domain(d3.extent(myAreaChartVis.data[selectedTweetCategory], d=> d.date));
 		myAreaChartVis.wrangleData(300);
@@ -84,6 +86,8 @@ function brushed(event) {
 	// Convert the extent into the corresponding domain values
 	let selectionDomain = selectionRange.map(myTimeLineVis.xScale.invert);
 	myAreaChartVis.x.domain(selectionDomain)
+	myTimeLineVis.dateRange
+		.text(`${formatTime(selectionDomain[0])} - ${formatTime(selectionDomain[1])}`);
 	myAreaChartVis.wrangleData(true);
 }
 

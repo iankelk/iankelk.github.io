@@ -54,7 +54,7 @@ constructor(parentElement, data) {
 	initVis(){
 		let vis = this;
 
-		vis.margin = {top: 12, right: 40, bottom: 30, left: 40};
+		vis.margin = {top: 12, right: 40, bottom: 20, left: 40};
 
 		vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
 		vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;

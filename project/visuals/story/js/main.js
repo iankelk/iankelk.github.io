@@ -34,7 +34,7 @@ function nextSlide() {
         type = 0;
     }
     console.log("type changed to", type)
-    myStoryVis.wrangleData();
+    myStoryVis.morph(type);
 }
 // Selector listener
 function previousSlide() {
@@ -44,12 +44,12 @@ function previousSlide() {
         type = 6;
     }
     console.log("type changed to", type)
-    myStoryVis.wrangleData();
+    myStoryVis.morph(type);
 }
 function resetSlides() {
     type = 0;
     console.log("type changed to", type)
-    myStoryVis.wrangleData();
+    myStoryVis.morph(type);
 }
 
 

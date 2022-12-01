@@ -25,10 +25,12 @@ class Timeline {
 	// create initVis method for Timeline class
 	initVis() {
 
+		const formatTime = d3.timeFormat("%B %d, %Y");
+
 		// store keyword this which refers to the object it belongs to in variable vis
 		let vis = this;
 
-		vis.margin = {top: 10, right: 40, bottom: 30, left: 40};
+		vis.margin = {top: 10, right: 40, bottom: 10, left: 40};
 
 		vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
 		vis.height = vis.parentElement.getBoundingClientRect().height  - vis.margin.top - vis.margin.bottom;
@@ -79,10 +81,25 @@ class Timeline {
 			.attr("height", vis.height);
 
 		// Append x-axis
-		vis.svg.append("g")
+		vis.xGroup = vis.svg.append("g")
 			.attr("class", "x-axis axis")
 			.attr("transform", "translate(0," + vis.height + ")")
+
+		// Create a label saying what date range has been brushed
+		vis.dateRange = vis.xGroup
+			.append("text")
+			.attr("class", "date-range")
+			.attr('text-anchor', 'start')
+			.attr('x', 0)
+			.attr('y', -120)
+			.attr('fill', 'black')
+			.text(formatTime(vis.displayData[0].date) + " - " +
+				formatTime(vis.displayData[vis.displayData.length-1].date));
+
+		vis.xGroup
 			.call(vis.xAxis);
+
+
 
 		vis.wrangleData();
 

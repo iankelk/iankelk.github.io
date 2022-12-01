@@ -10,9 +10,7 @@ class StoryVis {
         this.width = 1200;
         this.height = 600;
         this.node_radius = 3;
-
         this.fn_per_dot = 5;
-        this.min_fn_graph = 5;
 
         this.individual_ratios = {
             "USA": 0.634,
@@ -27,8 +25,6 @@ class StoryVis {
             "GBR": 0.766
         }
 
-        this.top10Countries = ['United States', 'China', 'Turkey', 'Spain', 'Germany', 'Brazil', 'India', 'Egypt', 'Italy', 'United Kingdom'];
-
         this.initVis();
     }
 
@@ -42,9 +38,6 @@ class StoryVis {
         vis.nodesData = vis.getNodesData();
         vis.nodesData1 = vis.getNodesData1();
 
-        console.log("nodesData", this.nodesData)
-        console.log("nodesData1", this.nodesData1)
-
         vis.svg = d3.create('svg')
             // .attr('viewBox', [0,0,vis.width*1.3+500, vis.height*1.9-300])
             .attr('viewBox', [0, 8, vis.width, vis.height * 1.3])
@@ -52,7 +45,7 @@ class StoryVis {
             .attr("width", vis.width)
             .attr("preserveAspectRatio", "xMidYMid meet")
             .attr("id", "story-svg")
-            //.style('background', "#333333")
+        //.style('background', "#333333")
 
         const wrapper = vis.svg.append('g').attr("transform", `translate(${vis.margin.left},${vis.margin.top})`)
 
@@ -61,7 +54,7 @@ class StoryVis {
         let regions = wrapper.selectAll('region').data(vis.mapData.features)
         vis.areas = regions.enter().append('path').attr('class', 'areas').attr('d', d => geoGenerator(d)).attr('fill', '#969696')
 
-        vis.x_countries = d3.scaleBand().domain(vis.data.filter(d => d.num_fake_news > vis.min_fn_graph).sort((a, b) => a.num_fake_news - b.num_fake_news).map(v => v.country)).range([vis.width, 50])
+        vis.x_countries = d3.scaleBand().domain(vis.data.filter(d => d.num_fake_news > vis.fn_per_dot).sort((a, b) => a.num_fake_news - b.num_fake_news).map(v => v.country)).range([vis.width, 50])
 
         vis.y_count = d3.scaleLinear().domain([0, 380]).range([vis.height, -1200])
 
@@ -73,15 +66,6 @@ class StoryVis {
 
         vis.sumNews = sumValues(vis.countNews);
 
-
-        console.log("countNews", vis.countNews);
-        console.log("sumNews", vis.sumNews);
-
-
-        // parseInt(vis.nodesData1.filter(v => v.country === "Philippines").splice(-1)[0].count * 0.52)
-
-        vis.count_sachet = parseInt(vis.nodesData1.filter(v => v.country_code === "PHL").splice(-1)[0].count * 0.52)
-
         vis.xAxisCountries = g => g
             .call(d3.axisBottom(vis.x_countries))
             .call(g => g.select('.domain').remove())
@@ -90,7 +74,6 @@ class StoryVis {
         vis.yAxis_countries = wrapper.append("g").attr('transform', `translate(${0}, ${vis.height})`).call(vis.xAxisCountries).selectAll("text")
             .style("text-anchor", "end").attr('opacity', 0).attr("dy", "-1.5em").attr('dx', '-2em')
             .attr("transform", "rotate(-70)");
-
 
         // step 1 Description
         vis.step1description = vis.svg.append('g').attr("transform", `translate(${vis.width / 2},${vis.height / 2})`).attr('opacity', 0)
@@ -139,24 +122,9 @@ class StoryVis {
             .force('collision', d3.forceCollide().radius(d => vis.node_radius + 0.5).iterations(10))
 
         vis.svg = d3.select(vis.parentElement).node().appendChild(vis.initStepZero());
-
-        // vis.wrangleData();
     }
 
-    wrangleData() {
-        let vis = this;
-
-        vis.updateVis();
-    }
-
-    updateVis() {
-        let vis = this;
-
-        vis.morph(type);
-
-    }
-
-    // filter out low total mismanaged waste
+    // Filter out the lower number of fake news
     getNodesData() {
         let vis = this;
 
@@ -203,14 +171,12 @@ class StoryVis {
 
     getTopCountries() {
         let vis = this;
-        return vis.data.filter(d => d.num_fake_news > vis.min_fn_graph).sort((a, b) => b.num_fake_news - a.num_fake_news).slice(0, 10).map(v => v.country);
+        return vis.data.filter(d => d.num_fake_news > vis.fn_per_dot).sort((a, b) => b.num_fake_news - a.num_fake_news).slice(0, 10).map(v => v.country);
     }
 
     morph(type) {
-        console.log(type)
         let vis = this;
         if (type === 0) {
-
             vis.simulation.stop()
 
             // hide
@@ -410,8 +376,6 @@ class StoryVis {
             vis.simulation.stop()
             vis.nodes.transition().duration(1600).attr('transform', d => `translate(${d.x_grid},${d.y_grid})`).attr('r', 6)
         }
-        // #ffbf00
-
     }
 
     initStepZero() {
