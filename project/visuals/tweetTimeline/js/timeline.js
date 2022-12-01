@@ -30,7 +30,7 @@ class Timeline {
 		// store keyword this which refers to the object it belongs to in variable vis
 		let vis = this;
 
-		vis.margin = {top: 10, right: 40, bottom: 10, left: 40};
+		vis.margin = {top: 10, right: 40, bottom: 30, left: 40};
 
 		vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
 		vis.height = vis.parentElement.getBoundingClientRect().height  - vis.margin.top - vis.margin.bottom;
@@ -91,7 +91,7 @@ class Timeline {
 			.attr("class", "date-range")
 			.attr('text-anchor', 'start')
 			.attr('x', 0)
-			.attr('y', -120)
+			.attr('y', -110)
 			.attr('fill', 'black')
 			.text(formatTime(vis.displayData[0].date) + " - " +
 				formatTime(vis.displayData[vis.displayData.length-1].date));
