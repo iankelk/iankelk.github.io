@@ -77,7 +77,7 @@ class WordCloud {
                                 .html(`
                                  <div style="border: thin solid grey; border-radius: 5px; background: darkgrey; padding: 10px">
                                      <h4>${word.key}</h4>
-                                     <strong>Number of times used: </strong> ${word.value}<br />
+                                     <strong>Number of tweets containing this word: </strong> ${word.value}<br />
                                  </div>`)})
                         .on('mouseout', function (event, d) {
                             vis.tooltip
