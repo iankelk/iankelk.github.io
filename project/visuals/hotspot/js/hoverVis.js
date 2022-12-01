@@ -14,7 +14,7 @@ class HoverVis {
         // vis.height = 900;
 
         // define margins
-        vis.margin = {top: 20, right: 20, bottom: 20, left: 100};
+        vis.margin = {top: 0, right: 20, bottom: 0, left: 100};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = vis.parentElement.getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
