@@ -101,7 +101,7 @@ class BubbleVis {
 
         vis.legendAxisGroup = vis.svg.append("g")
             .attr("class", "axis x-axis")
-            .attr('transform', `translate(${vis.width*0.5},${-15})`);
+            .attr('transform', `translate(${vis.width*0.51},${-15})`);
 
         vis.legendAxisGroup
             .call(vis.legendAxis);
