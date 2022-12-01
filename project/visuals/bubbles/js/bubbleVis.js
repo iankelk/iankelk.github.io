@@ -15,9 +15,9 @@ class BubbleVis {
         selectedCategoryBubbles =  document.getElementById('category-bubbles').value;
 
         this.sizeTicks = {
-            "motive": [20, 40, 60, 80, 100],
-            "narrative": [10, 30, 50, 70, 90],
-            "region": [10, 30, 50, 70, 90]};
+            "motive": [1, 20, 40, 60, 80, 100],
+            "narrative": [1, 10, 30, 50, 70, 90],
+            "region": [1, 10, 30, 50, 70, 90]};
 
         this.initVis()
     }
@@ -185,8 +185,8 @@ class BubbleVis {
         vis.sizeCircles = vis.sizeLegend.selectAll("circle")
             .data(vis.sizeTicks[selectedCategoryBubbles]);
 
-        const multipliers = { motive: 57.05, narrative: 57.05, region: 57.05 };
-        const offsets = { motive: 37, narrative: 37, region: 37 };
+        const multipliers = { motive: 47.9, narrative: 47.9, region: 47.9 };
+        const offsets = { motive: 30.3, narrative: 30.3, region: 30.3 };
 
         // Size legend update
         vis.sizeCircles
@@ -197,7 +197,8 @@ class BubbleVis {
             .attr("class", (d) => "size_" + d)
             .on('mouseover', function(event, d) {
                 const size = +d3.select(this).attr("class").substring(5)
-                const nextSize = size+20;
+                // First range is 1-10, then every 20 after
+                const nextSize = (size === 1) ? 10 : size+20;
                 d3.select(this)
                     .attr("fill", "dodgerblue");
                 let count = 0;
