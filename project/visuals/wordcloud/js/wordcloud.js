@@ -30,7 +30,6 @@ class WordCloud {
             //.attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
         vis.button = d3.select("#redraw-wordcloud").on("click", function (event) {
-            console.log("submitted")
             vis.showNewWords(myWordCloud);
         });
 
@@ -116,7 +115,6 @@ class WordCloud {
             // Recompute the word cloud. This method will
             // asynchronously call draw when the layout has been computed.
             update: function(words) {
-                console.log("update words", words)
                 vis.cloud
                     .words(words)
                     .padding(5)
