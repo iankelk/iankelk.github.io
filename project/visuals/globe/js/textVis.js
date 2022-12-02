@@ -8,7 +8,7 @@ function updateText(fakeNews){
                          </div>`);
 
     myGlobeVis.newsimage.html(`
-                    <img src="visuals/globe/img/${fakeNews.image_code}" alt="${fakeNews.alt}" title="${fakeNews.img_credit}">
+                    <img class="globe-image" src="visuals/globe/img/${fakeNews.image_code}" alt="${fakeNews.alt}" title="${fakeNews.img_credit}">
                     `
     );
 

@@ -271,7 +271,7 @@ https://html-online.com/articles/blinking-text-css-animation/
     margin-bottom:0px;
 }
 
-img {
+.globe-image {
     max-height:50vh;
     max-width: 80%;
 }
