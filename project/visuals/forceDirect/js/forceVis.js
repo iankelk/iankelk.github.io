@@ -74,7 +74,7 @@ class ForceVis {
         };
 
         vis.node
-            .transition(800)
+            .transition().duration(800)
             .delay((d,i) => 7*i )
             .attr("r", updatedRadius);
 
@@ -104,7 +104,7 @@ class ForceVis {
                     .attr("fill", "dodgerblue");
                 let count = 0;
                 vis.node
-                    .transition(300)
+                    .transition().duration(300)
                     .attr("fill", function(d,i) {
                         if (d[selectedCategoryForceDirect] >= size && d[selectedCategoryForceDirect] < nextSize) count++;
                         return d[selectedCategoryForceDirect] >= size && d[selectedCategoryForceDirect] < nextSize ? vis.color(vis.G[i]) : "#B8B8B8";
@@ -118,7 +118,7 @@ class ForceVis {
                 d3.select(this)
                     .attr("fill", "grey")
                 vis.node
-                    .transition(300)
+                    .transition().duration(300)
                     .attr("fill", (d,i) => vis.color(vis.G[i]));
                 vis.counter.html(``);
             })
@@ -337,7 +337,7 @@ class ForceVis {
                 const group = +d3.select(this).attr("class").substring(6)
                 let count = 0;
                 vis.node
-                    .transition(300)
+                    .transition().duration(300)
                     .attr("fill", function(d,i) {
                         if (d.group === group) count++;
                         return d.group === group ? vis.color(vis.G[i]) : "#B8B8B8";
@@ -351,7 +351,7 @@ class ForceVis {
                 d3.select(this)
                     .attr("r", 15);
                 vis.node
-                    .transition(300)
+                    .transition().duration(300)
                     .attr("fill", (d,i) => vis.color(vis.G[i]));
                 vis.counter.html("");
             });
@@ -383,7 +383,7 @@ class ForceVis {
                     .attr("r", 18)
                 let count = 0;
                 vis.node
-                    .transition(300)
+                    .transition().duration(300)
                     .attr("fill", function(d,i) {
                         if (d.verified) count++;
                         return d.verified ? vis.color(vis.G[i]) : "#B8B8B8";
@@ -394,7 +394,7 @@ class ForceVis {
                 d3.select(this)
                     .attr("r", 15);
                 vis.node
-                    .transition(300)
+                    .transition().duration(300)
                     .attr("fill", (d,i) => vis.color(vis.G[i]));
                 vis.counter.html("");
             });
@@ -419,9 +419,9 @@ class ForceVis {
                     .attr("opacity", function(d,i) {
                         return d.group === 10 ? 1 :0.1;
                     })
-                    .transition(100)
+                    .transition().duration(100)
                     .attr("r", 10)
-                    .transition(100)
+                    .transition().duration(100)
                     .attr("r", (d, i) => vis.scaleRadius(+d[selectedCategoryForceDirect ]));
                 vis.counter.html(`${count} people highlighted for suspended accounts`)
             })

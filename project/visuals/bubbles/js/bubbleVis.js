@@ -191,6 +191,7 @@ class BubbleVis {
             .merge(vis.sizeCircles)
             .attr("class", (d) => "size_" + d)
             .on('mouseover', function(event, d) {
+                console.log("in!")
                 const size = +d3.select(this).attr("class").substring(5)
                 // First range is 1-10, then every 20 after
                 const nextSize = (size === 1) ? 10 : size+20;
@@ -198,13 +199,14 @@ class BubbleVis {
                     .attr("fill", "dodgerblue");
                 let count = 0;
                 vis.node
-                    .transition(300)
+                    .transition().duration(300)
                     .attr("fill", function(d,i) {
                         if (d.count >= size && d.count < nextSize) count++;
                         return d.count >= size && d.count < nextSize ? vis.colour(d[selectedCategoryBubbles]) : "#B8B8B8";
                     });
             })
             .on('mouseout', function (event, d) {
+                console.log("out!")
                 d3.select(this)
                     .attr("fill", "grey")
                 vis.node
