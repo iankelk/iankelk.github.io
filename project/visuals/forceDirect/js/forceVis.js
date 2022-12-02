@@ -419,9 +419,9 @@ class ForceVis {
                     .attr("opacity", function(d,i) {
                         return d.group === 10 ? 1 :0.1;
                     })
-                    .transition().duration(100)
+                    .transition().duration(300)
                     .attr("r", 10)
-                    .transition().duration(100)
+                    .transition().duration(300)
                     .attr("r", (d, i) => vis.scaleRadius(+d[selectedCategoryForceDirect ]));
                 vis.counter.html(`${count} people highlighted for suspended accounts`)
             })
