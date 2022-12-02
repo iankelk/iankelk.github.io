@@ -186,7 +186,7 @@ class StackedAreaChart {
 		let vis = this;
 
 		// Add a transition for when the brush is cleared
-		let chartTrans = d3.transition().duration(500).ease(d3.easeCubic);
+		let chartTrans = d3.transition().duration(300).ease(d3.easeCubic);
 
 		// Update domain
 		// Get the maximum of the multi-dimensional array or in other words, get the highest peak of the uppermost layer
@@ -253,7 +253,7 @@ class StackedAreaChart {
 				})
 		} else {
 			cat
-				.transition.duration(chartTrans)
+				.transition(chartTrans)
 				.attr("d", function(d) {
 					if(vis.filter) {
 						return vis.areaSingle(d);
