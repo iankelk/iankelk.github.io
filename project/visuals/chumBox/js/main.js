@@ -21,9 +21,9 @@ facts = [
             "https://www.ftc.gov/system/files/documents/public_statements/316321/140617falsedecepweightloss.pdf"]},
     {
         name: "pills.jpg",
-        fact: "a 2018 study on Twitter data found that the top 1% of fake news spread to between" +
-            " <span class=\"highlight\">1000 to 100,000 people</span>, but that the top 1% of true news rarely spread" +
-            " to more than <span class=\"highlight\">  1000 people? </span>",
+        fact: "a 2018 study on Twitter found that the top 1% of fake news spread to " +
+            " <span class=\"highlight\">1000 to 100,000 people</span>, but that the top 1% of <span class=\"highlight\">true</span> news rarely reached" +
+            " <span class=\"highlight\">  1000 people? </span>",
         sources: ["The spread of true and false news online",
         "https://www.science.org/doi/10.1126/science.aap9559"]
     }
