@@ -10,9 +10,6 @@ class HoverVis {
     initVis() {
         let vis = this;
 
-        // vis.width = 832;
-        // vis.height = 900;
-
         // define margins
         vis.margin = {top: 0, right: 20, bottom: 0, left: 100};
         vis.width = vis.parentElement.getBoundingClientRect().width - vis.margin.left - vis.margin.right;
@@ -77,7 +74,6 @@ class HoverVis {
 
                     d3.select(this)
                         .transition(t)
-                        //.attr("fill", "red")
                         .attr("opacity", 1)
                         .attr("stroke-opacity", 1)
 
@@ -90,17 +86,8 @@ class HoverVis {
                 const t = d3.transition().duration(500).ease(d3.easeLinear);
                 d3.select(this)
                     .transition(t)
-                    .attr("opacity", 0.5)
-                //.attr("fill", "green")
-                vis.circleAnimation
-                    .attr("r", 12)
-                    .attr("stroke-opacity", 1)
-                    .attr("opacity", 0.5)
-                    .transition(t)
-                    .attr("r", 25)
-                    .attr("stroke-opacity", 0)
-                    .attr("opacity", 0)
-
+                    .attr("opacity", 0.5);
+                vis.pulse()
                 vis.svg.selectAll(`.item-${d.index}`)
                     .transition(t)
                     .attr("stroke-opacity", 0);
@@ -130,19 +117,29 @@ class HoverVis {
             .attr("fill", "none")
             .attr("class", (d) => "item-" + d.index)
 
-        console.log("rectangles", vis.rectangles)
-        vis.wrangleData()
+        vis.pulse()
+        vis.timer()
     }
 
-    wrangleData() {
-        let vis = this;
-
-        vis.updateVis();
+    // Cause the green markers to pulse
+    pulse() {
+        const vis = this;
+        const t = d3.transition().duration(500).ease(d3.easeLinear);
+        vis.circleAnimation
+            .attr("r", 12)
+            .attr("stroke-opacity", 1)
+            .attr("opacity", 0.5)
+            .transition(t)
+            .attr("r", 25)
+            .attr("stroke-opacity", 0)
+            .attr("opacity", 0)
     }
 
-    updateVis() {
-        let vis = this;
-
+    // Cause the pulse every 5 seconds
+    timer() {
+        const vis = this;
+        vis.pulse();
+        setTimeout(function() { vis.timer() }, 5000)
     }
 }
 
