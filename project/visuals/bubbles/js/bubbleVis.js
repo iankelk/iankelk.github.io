@@ -191,7 +191,6 @@ class BubbleVis {
             .merge(vis.sizeCircles)
             .attr("class", (d) => "size_" + d)
             .on('mouseover', function(event, d) {
-                console.log("in!")
                 const size = +d3.select(this).attr("class").substring(5)
                 // First range is 1-10, then every 20 after
                 const nextSize = (size === 1) ? 10 : size+20;
@@ -206,7 +205,6 @@ class BubbleVis {
                     });
             })
             .on('mouseout', function (event, d) {
-                console.log("out!")
                 d3.select(this)
                     .attr("fill", "grey")
                 vis.node
