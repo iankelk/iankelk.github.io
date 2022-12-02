@@ -305,27 +305,29 @@ class ForceVis {
         // Color Legend
         vis.legend = svg.append("g")
             .attr('class', 'legend')
-            .attr('transform', `translate(400,-200)`);
+            .attr('transform', `translate(400,-220)`);
 
         vis.legend.selectAll().data([1])
             .enter()
             .append('text')
             .text("The nodes at the centers represent:")
-            .attr("y", -85)
+            .attr("y", -80)
             .attr("x", -12);
 
         vis.legend.selectAll().data([1])
             .enter()
             .append('text')
             .text("(Hover on colors and sizes to highlight)")
-            .attr("y", -60)
+            .attr("y", -55)
             .attr("x", -12);
 
         vis.legend.selectAll().data(vis.misinfoGroups)
             .enter()
             .append("circle")
             .attr("r", 15)
-            .attr("cy", (d, i) => i * 40 - 30)
+            .attr("cy", function(d, i) {
+                if (d.group > 6) {return i * 40 - 5}
+                else { return i * 40 - 30 }})
             .attr("cx", 10)
             .attr("fill", (d,i) => colors[i])
             .attr("class", (d,i) => `group_${d.group}`)
@@ -358,7 +360,10 @@ class ForceVis {
             .enter()
             .append('text')
             .text((d,i) => d.name)
-            .attr("y", (d, i) => i * 40 - 25)
+            .attr("y", function(d, i) {
+                if (d.group > 6) {return i * 40}
+                else { return i * 40 - 25 }})
+            //.attr("y", (d, i) => i * 40 - 25)
             .attr("x", 35);
 
         // Verified
@@ -366,7 +371,7 @@ class ForceVis {
             .enter()
             .append("circle")
             .attr("r", 15)
-            .attr("cy", 350)
+            .attr("cy",380)
             .attr("cx", 10)
             .attr("fill", "white")
             .attr("opacity", 0.5)
@@ -399,7 +404,7 @@ class ForceVis {
             .enter()
             .append("circle")
             .attr("r", 15)
-            .attr("cy", 390)
+            .attr("cy", 420)
             .attr("cx", 10)
             .attr("fill", "#B8B8B8")
             .on('mouseenter', function(event, d) {
@@ -433,7 +438,7 @@ class ForceVis {
             .enter()
             .append('text')
             .text((d) => d)
-            .attr("y", (d, i) => i * 40 + 355)
+            .attr("y", (d, i) => i * 40 + 385)
             .attr("x", 35);
 
         // Size Legend
@@ -462,7 +467,7 @@ class ForceVis {
             .attr("class", "counter")
             .attr('text-anchor', 'start')
             .attr('x', -10)
-            .attr('y', -120)
+            .attr('y', -105)
             .attr('fill', 'black');
 
         function intern(value) {

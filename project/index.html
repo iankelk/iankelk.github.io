@@ -135,29 +135,23 @@
                     <div class="popup-force-direct" onclick="helpForceDirect()"><img src="/project/visuals/forceDirect/img/help.png"
                                                                                      width="20" height="20" class="help-icon">
                         <span class="popuptext-force-direct" id="help-force-direct">
-                            This interactive visualization allows you to explore the activities of the "Disinformation Half-Dozen",
-                            6 of the 12 people responsive for 65% of disinformation about COVID-19 who still have active Twitter accounts.
-                            It allows you to use the dropdown box to select:<br/><br/>
+                            This interactive visualization allows you to explore the activities of the "Disinformation 6",
+                            6 of the 12 people responsive for 65% of disinformation about COVID-19 who still have active Twitter accounts. They are represented by the
+                            nodes in the center of the groups and revealed in the legend on the right. The colors of the nodes indicate which of the six people they are related to, and the arrows
+                            pointing outwards indicate messages radiating from them to other users. Note that this is a directed graph - that is, the connections only represent unilateral
+                            communication and do not mean that the recipients replied.<br/><br/>
+                            You can <strong>drag</strong> the nodes around to inspect the graph, and use the dropdown box to select:<br/><br/>
                             <ul>
-                                <li><strong>By Number of Tweets</strong> - The total number of times the person posted on Twitter. You can
-                                    notice there's a large burst of this activity before the major COVID-19 spike in January, 2021.</li>
-                                <li><strong>By Number of Retweets</strong> - The total number of times the person was retweeted,
-                                    which is when another person reposts their message directly. If the person retweeting
-                                    has more followers than the original poster, this can strongly amplify the reach of the message.</li>
-                                <li><strong>By Number of Favorites</strong> - The total number of times the person received a "like."
-                                    This is an indication of how many people read and reacted to their posts.</li>
+                                <li><strong>By Number of Followers</strong> - The total number of people directly following the user. The more people following the user, the more people receive the content they post. </li>
+                                <li><strong>By Number of People They Follow</strong> - The number of people the person is following. This can be relevant because only people who follow each other can send direct messages to each other that are not publicly viewable.</li>
+                                <li><strong>By Number of Tweets</strong> - The total number of times the person posted on Twitter. This is an indication of how active they are on the platform.</li>
+                                <li><strong>By Number of Lists</strong> - A list is a selection of Twitter accounts. Users can either create their own lists or subscribe to those created by other people. They're essentially mini-Twitter feeds and displayed in the same way as the main timeline. The number of lists a Twitter account is a member of is an indication of popularity.</li>
                             </ul><br/>
-                            <strong>Days to Aggregate</strong> - On the right you can choose the number of days added together to create
-                            a single time period that is plotted. When set to 1 day, the data shows individual days and is hard to read,
-                            but as you increase the aggregation and view the sums of days, it becomes smoother. Play with the various
-                            aggregations to see if any patterns are revealed.<br/><br/>
-                            <strong>Cases, Deaths, and Both (Log 10)</strong> - Choose either cases of COVID-19 or deaths due to it
-                            to compare against the creation of disinformation. Selecting "Both (Log 10)" displays a logarithm view
-                            of the 2 metrics, which was necessary as the cases greatly outnumbered the deaths.
-                            <br/><br/>
-                            <strong>Brush & Click</strong> - You can also <strong>brush</strong> the lower area chart to view more
-                            date specific detail, and <strong>click</strong> on the layers of the stacked area chart to view detail
-                            on each of the "Disinformation Half-Dozen."
+                             <strong>Hover over the nodes in the graph</strong> - You can <strong>hover</strong> over the colored nodes, which
+                                will give you detailed Twitter account information about all the people in the graph.<br/><br/>
+                            <strong>Hover over the color and size legend</strong> - You can <strong>hover</strong> over the colored circles, which
+                                will highlight all the nodes related to that person. You can also hover over the size legend
+                                to filter out the various nodes that represent different ranges of Twitter metrics for the accounts.
                         </span>
                     </div>
                     <select id='category-force-direct' class="custom-select align-self-center"
