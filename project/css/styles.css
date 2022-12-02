@@ -3,15 +3,45 @@ body {
     font-family: 'Domine', sans-serif;
 }
 
-/*.card {*/
-/*    width: 555px;*/
-/*}*/
+.fp-viewing-firstPage #fp-nav ul li a span{
+    background: whitesmoke;
+}
 
-.card-img-top {
-    /*height: 15rem;*/
-    /*width: 515px;*/
-    object-fit: fill;
+.box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    max-height: 680px;
+    padding: 50px;
+    background: #fff;
+    border: solid black;
+    border-width: 3px 3px 5px 5px;
+    /*border-radius: 4% 95% 2% 95%/95% 4% 92% 5%;*/
+}
 
+#section1{
+    background-image: url(../img/news.jpg);
+    background-size: cover;
+}
+
+
+row {
+    display: flex;
+}
+
+#intro-card {
+    height: 25rem;
+    width: 25rem;
+    max-width: 25rem;
+    object-fit: cover;
+}
+#maintitle {
+    font-size: 6rem;
+}
+
+#subtitle {
+    font-family: Snell Roundhand, cursive;
+    font-size: 4rem;
 }
 
 .globe-container {
