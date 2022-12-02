@@ -3,6 +3,17 @@ body {
     font-family: 'Domine', sans-serif;
 }
 
+/*.card {*/
+/*    width: 555px;*/
+/*}*/
+
+.card-img-top {
+    /*height: 15rem;*/
+    /*width: 515px;*/
+    object-fit: fill;
+
+}
+
 .globe-container {
     max-width: 80%
 }
