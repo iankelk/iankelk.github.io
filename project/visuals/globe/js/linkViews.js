@@ -2,8 +2,7 @@ function linkViews(fakeNews){
     // This function changes the colors of the timeline to match the historical news chosen
     // It calls updateText to change the text description to match that fake news
 
-    // Make all news from that country a darker red
-
+    // Make all news from that country orange
     // Get all news from that country
     let countryNews = myGlobeVis.historyData.filter(d => d.name == fakeNews.name);
 

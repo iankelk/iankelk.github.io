@@ -29,6 +29,7 @@ facts = [
     }
 ]
 
+// Show the facts in the div when clicking on the pictures
 d3.selectAll(".chumbox").data(facts).on("click", (event, d)=> {
     document.getElementById("factline").innerHTML =`<p>...${d.fact}</p>`;
 })
