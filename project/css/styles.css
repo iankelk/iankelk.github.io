@@ -3,8 +3,8 @@ body {
     font-family: 'Domine', sans-serif;
 }
 
-.fp-viewing-firstPage #fp-nav ul li a span{
-    /*background: whitesmoke;*/
+.fp-viewing-19thpage #fp-nav ul li a span{
+    background: red;
 }
 
 .box {
@@ -19,19 +19,43 @@ body {
     /*border-radius: 4% 95% 2% 95%/95% 4% 92% 5%;*/
 }
 
+/*#section0,*/
+/*#section1,*/
+/*#section2,*/
+/*#section3,*/
+/*#slide1,*/
+/*#slide2{*/
+/*    background-size: cover;*/
+/*    background-attachment: fixed;*/
+/*}*/
+
+
 #section1{
     background-image: url(../img/news.jpg);
     background-size: cover;
+    background-attachment: fixed;
+
 }
 
 #section4{
     background-image: url(../img/dozen.jpg);
     background-size: cover;
+    background-attachment: fixed;
+
 }
 
 #section10{
     background-image: url(../img/worldmap.jpg);
     background-size: cover;
+    background-attachment: fixed;
+
+}
+
+#section12{
+    background-image: url(../img/books.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 #section16 .layer{

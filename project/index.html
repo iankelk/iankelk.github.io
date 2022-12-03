@@ -383,21 +383,25 @@
 
 
     <div class="section" id="section12">
-        <h1 data-aos="fade-up" data-aos-delay="100">The Oldest Trick in the Book</h1>
-        <p class="slide-text" data-aos="fade-in" data-aos-delay="500">
-            From everything you've seen so far, you may believe that spreading fake news is a recent phenomenon,
-            a consequence of technology enabling people to reach the entire world instantly.
-            <br/>
-            <br/>
-            Although it seems that the term "fake news" became widespread as recently as 2016,
-            fraudsters have been aware of the power of disinformation since long before that. The term "fake news"
-            was first used in the 1890s, when sensational reports in newspapers known for "yellow journalism" were
-            common.
-            <br/>
-            <br/>
-            Even though the Internet has enabled the dissemination of misinformation on an unprecedented scale,
-            <span class="red-bold"> fake news is a tale as old as time.</span>
-        </p>
+        <div class="container-fluid">
+            <div class="container box" style="padding:20px;padding-left:70px;padding-right:50px;">
+                <h1 data-aos="fade-up" data-aos-delay="100">The Oldest Trick in the Book</h1>
+                <p class="slide-text" data-aos="fade-in" data-aos-delay="500">
+                    From everything you've seen so far, you may believe that spreading fake news is a recent phenomenon,
+                    a consequence of technology enabling people to reach the entire world instantly.
+                    <br/>
+                    <br/>
+                    Although it seems that the term "fake news" became widespread as recently as 2016,
+                    fraudsters have been aware of the power of disinformation since long before that. The term "fake news"
+                    was first used in the 1890s, when sensational reports in newspapers known for "yellow journalism" were
+                    common.
+                    <br/>
+                    <br/>
+                    Even though the Internet has enabled the dissemination of misinformation on an unprecedented scale,
+                    <span class="red-bold"> fake news is a tale as old as time.</span>
+                </p>
+            </div>
+        </div>
     </div>
 
     <div class="section" id="section13">
@@ -952,6 +956,7 @@
         licenseKey: 'gplv3-license',
         continuousVertical: true,
         navigation: true,
+        css3:false,
         afterLoad: function (origin, destination, direction, trigger) {
             console.log("afterLoad: destination:" + destination.index);
             // Necessary for AOS to work:
