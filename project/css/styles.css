@@ -20,7 +20,6 @@ body {
     background: #fff;
     border: solid black;
     border-width: 3px 3px 5px 5px;
-    /*border-radius: 4% 95% 2% 95%/95% 4% 92% 5%;*/
 }
 
 #section1{
@@ -118,7 +117,6 @@ row {
 }
 
 #subtitle {
-    /*font-family: Snell Roundhand, cursive;*/
     font-size: 4rem;
 }
 
@@ -638,15 +636,6 @@ text.title {
     font-size: .6em;
     text-transform: uppercase;
 }
-
-/*#story-svg {*/
-/*    height:600px;*/
-/*    width:800px;*/
-/*}*/
-
-/*#section-9129 {*/
-/*    height:900px;*/
-/*}*/
 
 /*WORDCLOUD VIZ*/
 
