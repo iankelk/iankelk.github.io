@@ -1,13 +1,20 @@
 # Fantastic Facts and How to Fake Them
 
+## Introduction
+What is fake news? Where do they come from? What is their goal?
+How can you guard against them? 
+This visualization project aims to answer all these questions in  a fun, impactful way,
+telling a story through data.
+
 **Team Members**: Ian Kelk, Ronan Fonseca
 
 * URL to website: https://iankelk.github.io/project/
-* URL to video: 
+* URL to video: https://www.youtube.com/watch?v=V8gTSvInKDA
 
 ## Project Structure
-- `index.html`: html file for the project.
-- `css/`: contains library CSS files as well as our custom `styles.css` and `aos-delays.css` containing custom animation durations for the AOS library.
+- `index.html`: html file for the project
+- `css/`: contains library CSS files as well as our custom `styles.css` and `aos-delays.css` containing
+custom animation durations for the AOS library.
 - `img/`: contains icons, background or auxiliary images used in presentation slides.
 - `js/`
     - `libraries/`: downloaded library JavaScript files.
