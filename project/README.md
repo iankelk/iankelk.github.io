@@ -68,7 +68,8 @@ custom animation durations for the AOS library.
       - `main.js`: loads the data and the visualization.
       - `wordcloud.js`: interactive word cloud visualization.
       - `d3.layout.cloud.js`: library for word clouds.
-  
+
+data_description.pdf contains a description of the datasets used and the adaptations used for each visualization.
 
 ## Libraries Used
   - [fullPage](https://alvarotrigo.com/fullPage/): used to join the visualizations into one scrollable web page.
