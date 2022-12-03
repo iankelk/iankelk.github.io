@@ -25,7 +25,8 @@ class StoryVis {
 
         this.initVis();
     }
-
+    // THE BELOW CODE IS _HEAVILY_ MODIFIED BUT WAS WAS FORKED FROM A VISUALIZATION ON OBSERVABLE
+    // https://observablehq.com/@ryanliwag
     initVis() {
         let vis = this;
 

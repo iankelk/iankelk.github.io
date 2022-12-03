@@ -22,6 +22,8 @@ class BubbleVis {
         this.initVis()
     }
 
+    // THE BELOW CODE IS _HEAVILY_ MODIFIED BUT WAS FORKED FROM A VISUALIZATION ON OBSERVABLE
+    // https://observablehq.com/@alterfueladb
     initVis() {
         let vis = this;
 
