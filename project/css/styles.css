@@ -29,6 +29,9 @@ body {
     background-size: cover;
 }
 
+#venn {
+    margin-right: 5rem;
+}
 
 row {
     display: flex;
