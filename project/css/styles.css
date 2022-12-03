@@ -4,7 +4,7 @@ body {
 }
 
 .fp-viewing-firstPage #fp-nav ul li a span{
-    background: whitesmoke;
+    /*background: whitesmoke;*/
 }
 
 .box {
@@ -40,7 +40,7 @@ row {
 }
 
 #subtitle {
-    font-family: Snell Roundhand, cursive;
+    /*font-family: Snell Roundhand, cursive;*/
     font-size: 4rem;
 }
 
