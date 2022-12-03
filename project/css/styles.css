@@ -29,6 +29,11 @@ body {
     background-size: cover;
 }
 
+#section10{
+    background-image: url(../img/worldmap.jpg);
+    background-size: cover;
+}
+
 #venn {
     margin-right: 5rem;
 }
