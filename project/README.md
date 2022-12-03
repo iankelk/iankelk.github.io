@@ -60,4 +60,13 @@
     - `js/`
       - `main.js`: loads the data and the visualization.
       - `wordcloud.js`: interactive word cloud visualization.
-      - `d3.layout.cloud.js`: D3.js required file for word clouds.
+      - `d3.layout.cloud.js`: library for word clouds.
+  
+
+## Libraries Used
+  - [fullPage](https://alvarotrigo.com/fullPage/): used to join the visualizations into one scrollable web page.
+  - [AOS - Animate On Scroll](https://michalsnik.github.io/aos/): used to create animations for text as the user scrolls.
+  - [noUiSlider](https://refreshless.com/nouislider/): JavaScript library for range sliders.
+  - [d3.cloud](https://github.com/jasondavies/d3-cloud): JavaScript library for creating word clouds.
+  - [cola](https://marvl.infotech.monash.edu/webcola/): JavaScript library with implementation for Force-Directed graphs.
+  

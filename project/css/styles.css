@@ -1,6 +1,31 @@
+/*GENERAL CSS*/
 body {
     text-align: center;
     font-family: 'Domine', sans-serif;
+}
+
+ul {
+    padding-left: 2rem;
+    max-width: 60vw;
+    margin: auto;
+    text-align: start;
+}
+
+source-text {
+    max-width: 60vw;
+    font-size: 0.5em;
+
+}
+
+.red-bold {
+    font-weight: bold;
+    color: red;
+}
+
+.red-bold-big {
+    font-weight: bold;
+    color: red;
+    font-size: 1.5em;
 }
 
 .fp-viewing-19thpage #fp-nav ul li a span{
@@ -673,30 +698,4 @@ text.title {
     padding-right: 50px;
     text-align: left;
     font-size: 1.2em;
-}
-
-/*GENERAL CSS*/
-
-ul {
-    padding-left: 2rem;
-    max-width: 60vw;
-    margin: auto;
-    text-align: start;
-}
-
-source-text {
-    max-width: 60vw;
-    font-size: 0.5em;
-
-}
-
-.red-bold {
-    font-weight: bold;
-    color: red;
-}
-
-.red-bold-big {
-    font-weight: bold;
-    color: red;
-    font-size: 1.5em;
 }
