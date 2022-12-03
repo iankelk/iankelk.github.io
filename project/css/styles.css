@@ -120,10 +120,6 @@ row {
     font-size: 4rem;
 }
 
-.globe-container {
-    max-width: 80%
-}
-
 .slide-text {
     max-width: 60vw;
     margin: auto;
@@ -229,11 +225,6 @@ input {
 
 
 /*CHUMBOX*/
-
-.highlight{
-    color:red;
-    font-weight: bold;
-}
 .website{
     margin-top: 0;
     margin-bottom: 0;
@@ -255,7 +246,7 @@ p {
 /*based on
 https://html-online.com/articles/blinking-text-css-animation/
  */
-.blinking{
+.blinking {
     font-size: 3rem;
     animation:blinkingText 1.2s infinite;
 }
@@ -266,6 +257,23 @@ https://html-online.com/articles/blinking-text-css-animation/
     99%{    color:red;  }
     100%{   color: #000;    }
 }
+
+#factline p{
+    font-size: 1.1em;
+    animation: fadeRed 2s;
+}
+
+@keyframes fadeRed {
+    0% {
+        opacity: 0;
+        font-size: 1em;
+    }
+    100% { opacity: 1;
+        font-size: 1.1em;
+    }
+}
+
+
 
 
 /*FORCE DIRECT*/
@@ -345,6 +353,10 @@ https://html-online.com/articles/blinking-text-css-animation/
 
 
 /*GLOBE VIZ*/
+
+.globe-container {
+    max-width: 80%
+}
 
 .tooltip-globe {
     position: absolute;

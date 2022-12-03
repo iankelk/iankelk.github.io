@@ -7,7 +7,7 @@
 
 ## Project Structure
 - `index.html`: html file for the project.
-- `css/`: contains library CSS files as well as our custom `styles.css`.
+- `css/`: contains library CSS files as well as our custom `styles.css` and `aos-delays.css` containing custom animation durations for the AOS library.
 - `img/`: contains icons, background or auxiliary images used in presentation slides.
 - `js/`
     - `libraries/`: downloaded library JavaScript files.

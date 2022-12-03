@@ -4,7 +4,7 @@ facts = [
         name: "shane.jpg",
         fact: "the two main companies behind this sort of targeted advertisement," +
             " taboola and Outbrain, made almost" +
-            " <span class=\"highlight\">2.4 billion dollars in revenue</span> in 2021?",
+            " <span style=\"font-weight: bold; color: red\">2.4 billion dollars in revenue</span> in 2021?",
         sources:
             [
                 "Taboola earnings report for 2021",
@@ -16,14 +16,15 @@ facts = [
         name: "pants.jpg",
         fact: "the U.S. Federal Trade Commission found that these weight-loss ads" +
             " get consumers to share their credit card information " +
-            "but <span class=\"highlight\">never deliver any product</span>?",
+            "but <span style=\"font-weight: bold; color: red\">never deliver any product?</span>",
         sources: ["Prepared Statement of the Federal Trade Commission",
             "https://www.ftc.gov/system/files/documents/public_statements/316321/140617falsedecepweightloss.pdf"]},
     {
         name: "pills.jpg",
         fact: "a 2018 study on Twitter found that the top 1% of fake news spread to " +
-            " <span class=\"highlight\">1000 to 100,000 people</span>, but that the top 1% of <span class=\"highlight\">true</span> news rarely reached" +
-            " <span class=\"highlight\">  1000 people? </span>",
+            " <span style=\"font-weight: bold; color: red\">1000 to 100,000 people</span>, but that the top 1% of " +
+            "<span style=\"font-weight: bold; color: red\">true</span> news rarely reached" +
+            " <span style=\"font-weight: bold; color: red\">  1000 people? </span>",
         sources: ["The spread of true and false news online",
         "https://www.science.org/doi/10.1126/science.aap9559"]
     }
