@@ -1,11 +1,12 @@
 # Fantastic Facts and How to Fake Them
 
-**Team Members**: Benjamin Levy, Rachel Moon, Pat Sukhum, Kevin Ji Whan Yoon
+**Team Members**: Ian Kelk, Ronan Fonseca
 
-* URL to website: https://patsukhum.github.io/Marvel/
-* URL to video: https://www.youtube.com/watch?v=_5D8RrOzJQ0
+* URL to website: https://iankelk.github.io/project/
+* URL to video: 
 
 ## Project Structure
+- `index.html`: html file for the project.
 - `css/`: contains library CSS files as well as our custom `styles.css`.
 - `img/`: contains icons, background or auxiliary images used in presentation slides.
 - `js/`
@@ -60,28 +61,3 @@
       - `main.js`: loads the data and the visualization.
       - `wordcloud.js`: interactive word cloud visualization.
       - `d3.layout.cloud.js`: D3.js required file for word clouds.
-    
-
-
-
-- `data/`:
-    - `raw/`: contains raw data collected
-    - `clean/`: contains cleaned data used for our visualization
-    - `scripts/`: all data collecting/cleaning Python/Jupyter Notebook scripts
-- `js/`
-    - `libraries/`: downloaded library JavaScript files, such as bootstrap, jQuery, D3, etc.
-    - `char-stats-vis.js`: character wiki stats visualization
-    - `cookiechart-vis.js`: cookie chart (genre bubble) visualization
-    - `dynamics.js`: for handling visualization dynamics with scrolling
-    - `linechart-vis.js`: line chart visualization
-    - `main.js`: main JavaScript file for loading data and all visualizations
-    - `map-carousel.js`: map poster carousel functions
-    - `map-vis.js`: map visualization
-    - `matrix-vis.js`: character power matrix visualization
-    - `network-vis.js`: character network visualization
-    - `plot-flow-vis.js`: plot tree chart visualization
-    - `title-vis.js`: for title page visualization
-    - `utils.js`: for general reusable functions
-
-- `img/`: contains images for characters,backgrounds,etc.
-- `index.html`: main html file for our website.
