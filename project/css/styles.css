@@ -38,6 +38,10 @@ body {
     margin-right: 5rem;
 }
 
+#covid {
+    margin-left: 3rem;
+}
+
 row {
     display: flex;
 }
