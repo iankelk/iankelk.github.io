@@ -16,6 +16,7 @@ telling a story through data.
 - `index.html`: html file for the project
 - `css/`: contains library CSS files as well as our custom `styles.css` and `aos-delays.css` containing
 custom animation durations for the AOS library.
+- `scripts/`: contains the script files used for cleaning the data for the project.
 - `img/`: contains icons, background or auxiliary images used in presentation slides.
 - `js/`
     - `libraries/`: downloaded library JavaScript files.
