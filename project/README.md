@@ -12,6 +12,8 @@ telling a story through data.
 * URL to video: https://www.youtube.com/watch?v=V8gTSvInKDA
 * Process Book: https://docs.google.com/document/d/1WOu36iGf9W7vIFWeQ7CbhUcI6EFkc7w7gDxS5gHseFw/edit?usp=sharing
 
+**Note: This project is optimized for Google Chrome, and will not run properly in Safari due to the use of `clip-path` in one of the visualizations.**
+
 ## Project Structure
 - `index.html`: html file for the project
 - `css/`: contains library CSS files as well as our custom `styles.css` and `aos-delays.css` containing
