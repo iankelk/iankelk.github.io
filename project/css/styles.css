@@ -286,6 +286,7 @@ https://html-online.com/articles/blinking-text-css-animation/
 #factline p{
     font-size: 1.1em;
     animation: fadeRed 2s;
+    min-height: 55px;
 }
 
 @keyframes fadeRed {
