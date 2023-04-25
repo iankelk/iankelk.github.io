@@ -7,7 +7,7 @@ title: Ian Kelk's project list
 ## Projects
 
 ### NLP
-* Research paper from last year on automatic fake news detection. [Automatic Fake News Detection: Are current models “fact-checking” or “gut-checking”?](https://aclanthology.org/2022.fever-1.4/) presented at FEVER at ACL 2022
+* Research paper from last year on automatic fake news detection: [Automatic Fake News Detection: Are current models “fact-checking” or “gut-checking”?](https://aclanthology.org/2022.fever-1.4/) presented at FEVER at ACL 2022
 * [Video](https://www.youtube.com/watch?v=v4Ue97kzX8Q&t) provided for the online system for ACL 2022
 * GitHub [repo](https://github.com/automatic-fake-news-detection) for the paper
 * I gave an hour-long talk to the [NeuLab](https://www.cs.cmu.edu/~neulab/) at Carnegie Mellon in July of 2022
@@ -16,7 +16,7 @@ title: Ian Kelk's project list
 * [Search and Rescue using YOLOv5](https://wandb.ai/iankelk/YOLOv5/reports/Search-and-Rescue-Augmentation-and-Preprocessing-on-Drone-Based-Water-Rescue-Images-with-YOLOv5---VmlldzoxOTk4MTI2?galleryTag=object-detection) using the Weights and Biases report
 * [How AI Could Have Warned Us about the Florida Condo Collapse Before It Happened](https://towardsdatascience.com/how-a-i-can-prevent-future-building-collapses-before-they-happen-71c3bf3740b5) article for TDS
 * The [video](https://www.youtube.com/watch?v=g4tnZTghSmg) for the TDS article (featured on the page, but here it is directly)
-Co-author on a paper on physical adversarial attacks on face recognition systems for S&P 2023. [ImU: Physical Impersonating Attack for Face Recognition System with Natural Style Changes](https://drive.google.com/file/d/1ewQSfJwTpHNtrRsdPiJNYB99_kcYtoCQ/view?usp=share_link)
+* Co-authored a paper on physical adversarial attacks on face recognition systems for biometric security for S&P 2023: [ImU: Physical Impersonating Attack for Face Recognition System with Natural Style Changes](https://drive.google.com/file/d/1ewQSfJwTpHNtrRsdPiJNYB99_kcYtoCQ/view?usp=share_link)
 
 ### Visualization
 * JavaScript D3 Visualization [project](https://iankelk.github.io/fantastic-news/) on Fake News mostly focuses on COVID-19 propaganda (requires Chrome or Firefox on desktop). It was selected as [best project](https://www.cs171.org/2022/fame/) for the class in my Masters program.
