@@ -38,7 +38,7 @@ title: Ian Kelk's project list
 * Retail AI promotional [video](https://www.youtube.com/watch?v=5HMlx5SLobg)  
 
 ### Virmuze
-* Virmuze is a startup of mine that I worked on for a while. The National Security Agency (NSA) uses it to host the National Cryptologic Museum's online exhibits. It's an unusual point of pride for me as I also helped them create much of the online exhibit content during the COVID-19 pandemic.
+* [Virmuze](https://virmuze.com/) is a startup of mine that I worked on for a while. The National Security Agency (NSA) uses it to host the National Cryptologic Museum's online exhibits. It's an unusual point of pride for me as I also helped them create much of the online exhibit content during the COVID-19 pandemic.
 * Link to Virmuze on https://www.nsa.gov/museum/ (it's the colorful footprint icon next to the Twitter logo)
 * [Link](https://virmuze.com/m/crypto-museum/) to the museum itself on Virmuze
 
