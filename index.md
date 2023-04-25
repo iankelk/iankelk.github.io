@@ -32,9 +32,10 @@ title: Ian Kelk's project list
 * [Auto Annotation](https://www.youtube.com/watch?v=q38eEf2dUoo)
 * Something I created for a Webinar offered by Acquia / Widen (Digital Asset Management providers) that actually aired today. I've just uploaded it right now as an [unlisted video](video) but it's a bit fun.
 
-### Promotional Clarifai Videos - I sometimes create promotional loops used at tradeshows using Adobe After Effects. 
-Digital Asset Management promotional [video](https://www.youtube.com/watch?v=BFAvwt_Cahc)
-Retail AI promotional [video](https://www.youtube.com/watch?v=5HMlx5SLobg)  
+### Promotional Clarifai Videos
+* I've created slick promotional loops used at tradeshows using Adobe After Effects. 
+* Digital Asset Management promotional [video](https://www.youtube.com/watch?v=BFAvwt_Cahc)
+* Retail AI promotional [video](https://www.youtube.com/watch?v=5HMlx5SLobg)  
 
 ### Virmuze
 * Virmuze is a startup of mine that I worked on for a while. The National Security Agency (NSA) uses it to host the National Cryptologic Museum's online exhibits. It's an unusual point of pride for me as I also helped them create much of the online exhibit content during the COVID-19 pandemic.
@@ -42,7 +43,7 @@ Retail AI promotional [video](https://www.youtube.com/watch?v=5HMlx5SLobg)
 * [Link](https://virmuze.com/m/crypto-museum/) to the museum itself on Virmuze
 
 ### Ongoing database design
-I'm currently working on a [systems project](http://daslab.seas.harvard.edu/classes/cs265/project.html) for a big data class in C++. It's now a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking.
+* I'm currently working on a [systems project](http://daslab.seas.harvard.edu/classes/cs265/project.html) for a big data class in C++. It's now a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking.
 
 ## Contact
 Feel free to reach out to me:
