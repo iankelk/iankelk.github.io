@@ -43,7 +43,7 @@ title: Ian Kelk's project list
 * [Link](https://virmuze.com/m/crypto-museum/) to the museum itself on Virmuze
 
 ### Ongoing database design
-* I'm currently working on a [systems project](http://daslab.seas.harvard.edu/classes/cs265/project.html) for a big data class in C++. It's now a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking.
+* I'm currently working on a [systems project](https://github.com/iankelk/cs265/) for a big data class in C++. It's now a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking. 
 
 ## Contact
 Feel free to reach out to me:
