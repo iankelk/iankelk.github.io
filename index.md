@@ -20,7 +20,7 @@ title: Ian Kelk's project list
 
 ### Visualization
 * JavaScript D3 Visualization [project](https://iankelk.github.io/fantastic-news/) on Fake News mostly focuses on COVID-19 propaganda (requires Chrome or Firefox on desktop). It was selected as [best project](https://www.cs171.org/2022/fame/) for the class in my Masters program.
-* I recorded the 2-minute [video](https://www.youtube.com/watch?v=V8gTSvInKDA) for the project in an old-timey mid-Atlantic accent.
+* I recorded the 2-minute [video](https://www.youtube.com/watch?v=V8gTSvInKDA) for the project in an old-timey mid-Atlantic accent for uh, fun.
 
 ### Clarifai Blogs
 * Blog [post](https://www.clarifai.com/blog/imperfections-in-the-machine-bias-in-ai) on AI bias
@@ -30,7 +30,7 @@ title: Ian Kelk's project list
 ### Clarifai Videos
 * [AI-assisted data labeling](https://www.youtube.com/watch?v=hLMzm_vvMVg)
 * [Auto Annotation](https://www.youtube.com/watch?v=q38eEf2dUoo)
-* Something I created for a Webinar offered by Acquia / Widen (Digital Asset Management providers) that actually aired today. I've just uploaded it right now as an [unlisted video](video) but it's a bit fun.
+* Something I created for a Webinar offered by Acquia / Widen (Digital Asset Management providers) for a demo on [generating ChatGPT prompts](https://www.youtube.com/watch?v=kMQbEcf3lps) using image classification.
 
 ### Promotional Clarifai Videos
 * I've created slick promotional loops used at tradeshows using Adobe After Effects. 
