@@ -34,8 +34,8 @@ title: Ian Kelk's project list
 
 ### Promotional Clarifai Videos
 * I've created slick promotional loops used at tradeshows using Adobe After Effects. 
-* Digital Asset Management promotional [video](https://www.youtube.com/watch?v=BFAvwt_Cahc)
-* Retail AI promotional [video](https://www.youtube.com/watch?v=5HMlx5SLobg)  
+	* Digital Asset Management promotional [video](https://www.youtube.com/watch?v=BFAvwt_Cahc)
+	* Retail AI promotional [video](https://www.youtube.com/watch?v=5HMlx5SLobg)  
 
 ### Virmuze
 * [Virmuze](https://virmuze.com/) is a startup of mine that I worked on for a while. The National Security Agency (NSA) uses it to host the National Cryptologic Museum's online exhibits. It's an unusual point of pride for me as I also helped them create much of the online exhibit content during the COVID-19 pandemic.
@@ -43,7 +43,7 @@ title: Ian Kelk's project list
 * [Link](https://virmuze.com/m/crypto-museum/) to the museum itself on Virmuze
 
 ### Ongoing database design
-* I'm currently working on a [systems project](https://github.com/iankelk/cs265/) for a big data class in C++. It's now a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking.
+* I'm currently working on a [systems project](https://github.com/iankelk/cs265/) for a big data class in C++. The midway report is [located here,](https://drive.google.com/file/d/1KkQ923IHsIZuSCjmPyJ8y9xlO6V4-HFo/view?usp=share_link) although it's changed significantly since that point. It's now a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking.
 
 ### Harvard Extension Masters
 * I'm a degree candidate for an ALM in Data Science. I'm currently taking my 9th class, a [research class](http://daslab.seas.harvard.edu/classes/cs265/) in big data systems.
