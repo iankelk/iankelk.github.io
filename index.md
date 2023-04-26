@@ -43,7 +43,19 @@ title: Ian Kelk's project list
 * [Link](https://virmuze.com/m/crypto-museum/) to the museum itself on Virmuze
 
 ### Ongoing database design
-* I'm currently working on a [systems project](https://github.com/iankelk/cs265/) for a big data class in C++. It's now a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking. 
+* I'm currently working on a [systems project](https://github.com/iankelk/cs265/) for a big data class in C++. It's now a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking.
+
+### Harvard Extension Masters
+* I'm a degree candidate for an ALM in Data Science. I'm currently taking my 9th class, a [research class](http://daslab.seas.harvard.edu/classes/cs265/) in big data systems.
+* I have maintained a 4.0 GPA in the following 8 classes:
+	* Data Modeling (R)
+	* Foundations of Data Science and Engineering (Python, SQL, Tableau)
+	* Deep Learning for NLP (Python, PyTorch)
+	* Computer Vision (Python, Keras/TensorFlow)
+	* Reinforcement Learning (Python)
+	* Elements of Data Science and Statistical Learning with R (R)
+	* Time Series Analysis with Python (Python)
+	* Visualization (D3 JavaScript, HTML, CSS, Tableau)
 
 ## Contact
 Feel free to reach out to me:
