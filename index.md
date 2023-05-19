@@ -16,7 +16,7 @@ title: Ian Kelk's project list
 * [Search and Rescue using YOLOv5](https://wandb.ai/iankelk/YOLOv5/reports/Search-and-Rescue-Augmentation-and-Preprocessing-on-Drone-Based-Water-Rescue-Images-with-YOLOv5---VmlldzoxOTk4MTI2?galleryTag=object-detection) using the Weights and Biases report
 * [How AI Could Have Warned Us about the Florida Condo Collapse Before It Happened](https://towardsdatascience.com/how-a-i-can-prevent-future-building-collapses-before-they-happen-71c3bf3740b5) article for TDS
 * The [video](https://www.youtube.com/watch?v=g4tnZTghSmg) for the TDS article (featured on the page, but here it is directly)
-* Co-authored a paper on physical adversarial attacks on face recognition systems for biometric security for S&P 2023: [ImU: Physical Impersonating Attack for Face Recognition System with Natural Style Changes](https://drive.google.com/file/d/1ewQSfJwTpHNtrRsdPiJNYB99_kcYtoCQ/view?usp=share_link)
+* Co-authored a [research paper](https://sp2023.ieee-security.org/program-papers.html) on physical adversarial attacks on face recognition systems for biometric security for S&P 2023: [ImU: Physical Impersonating Attack for Face Recognition System with Natural Style Changes](https://drive.google.com/file/d/1ewQSfJwTpHNtrRsdPiJNYB99_kcYtoCQ/view?usp=share_link)
 * I created a [detailed presentation](https://docs.google.com/presentation/d/1y4qM_qi-XI1kPqrZSM5u1yzr4aN5kxTOLejfJPO-5nA/edit?usp=sharing) on the [Gist: Efficient Data Encoding for Deep Neural Network Training](https://www.microsoft.com/en-us/research/uploads/prod/2018/04/fiddle-gist-isca18.pdf) paper from Microsoft. I plan on recording a video using the slides when I have a free moment.
 
 ### Visualization
@@ -43,8 +43,9 @@ title: Ian Kelk's project list
 * Link to Virmuze on [nsa.gov](https://www.nsa.gov/museum/) (it's the colorful footprint icon next to the Twitter logo)
 * [Link](https://virmuze.com/m/crypto-museum/) to the museum itself on Virmuze
 
-### Ongoing database design
+### Database design
 * I'm currently working on a [systems project](https://github.com/iankelk/cs265/) for a big data class in C++. The midway report is [located here,](https://drive.google.com/file/d/1KkQ923IHsIZuSCjmPyJ8y9xlO6V4-HFo/view?usp=share_link) although it's changed significantly since that point. It's now a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking.
+* UPDATE: The final report is located [here](reports/Final_Report_Ian_Kelk.pdf), and my literature review on LSM tree key value stores is located [here](reports/Literature_Review_Ian_Kelk.pdf).
 
 ### Harvard Extension Masters
 * I'm a degree candidate for an ALM in Data Science. I'm currently taking my 9th class, a [research class](http://daslab.seas.harvard.edu/classes/cs265/) in big data systems.
