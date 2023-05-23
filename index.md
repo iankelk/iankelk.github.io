@@ -49,15 +49,16 @@ title: Ian Kelk's project list
 
 ### Harvard Extension Masters
 * I'm a degree candidate for an ALM in Data Science. I'm currently taking my 9th class, a [research class](http://daslab.seas.harvard.edu/classes/cs265/) in big data systems.
-* I have maintained a 4.0 GPA in the following 8 classes:
+* I have maintained a 4.0 GPA in the following 9 classes:
 	* Data Modeling (R)
 	* Foundations of Data Science and Engineering (Python, SQL, Tableau)
-	* Deep Learning for NLP (Python, PyTorch)
+	* Deep Learning for NLP (Research, Python, PyTorch)
 	* Computer Vision (Python, Keras/TensorFlow)
 	* Reinforcement Learning (Python)
 	* Elements of Data Science and Statistical Learning with R (R)
 	* Time Series Analysis with Python (Python)
 	* Visualization (D3 JavaScript, HTML, CSS, Tableau)
+	* Big Data Systems (Research, C++)
 
 ## Contact
 Feel free to reach out to me:
