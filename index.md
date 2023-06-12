@@ -1,3 +1,6 @@
+<head>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
 ---
 layout: default
 title: Ian Kelk's project list
@@ -48,7 +51,7 @@ title: Ian Kelk's project list
 * UPDATE: The final report is located [here](reports/Final_Report_Ian_Kelk.pdf), and my literature review on LSM tree key value stores is located [here](reports/Literature_Review_Ian_Kelk.pdf).
 
 ### Harvard Extension Masters
-* I'm a degree candidate for an ALM in Data Science. I'm currently taking my 9th class, a [research class](http://daslab.seas.harvard.edu/classes/cs265/) in big data systems.
+* I'm a degree candidate for an ALM in Data Science. I've currently taking 9 classes out of a total of 10.[research class](http://daslab.seas.harvard.edu/classes/cs265/) in big data systems.
 * I have maintained a 4.0 GPA in the following 9 classes:
 	* Data Modeling (R)
 	* Foundations of Data Science and Engineering (Python, SQL, Tableau)
