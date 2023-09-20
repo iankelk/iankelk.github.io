@@ -51,10 +51,11 @@ title: Ian Kelk's project list
 * A literature review on LSM tree key value stores is located [here](reports/Literature_Review_Ian_Kelk.pdf).
 
 ### Teaching
-* Teaching fellow for Fall 2023, [CSCI E-89C Deep Reinforcement Learning.](https://courses.dce.harvard.edu/?details&srcdb=202401&crn=16817) I teach a weekly section on foundational and advanced concepts in reinforcement learning and deep learning. I also grade assignments, and answer questions via class forum and email.
-• Reinforcement learning topics include Markov Decision Processes (MDP), dynamic programming with the Bellman Equation, application of Monte Carlo methods in reinforcement contexts, temporal-difference Prediction & Control, including SARSA and Q-learning techniques, n-step TD and various Approximation Methods like stochastic-gradient, semi-gradient TD update, and Least-squares TD.
-• Deep learning topics include techniques and principles behind training neural networks using backpropagation, strategies for tuning neural networks, with a focus on regularization, convolutional neural networks (CNNs) and recurrent neural networks (RNNs).
-• Deep reinforcement learning topics include value-based deep RL using Q-networks, policy-based approaches in Deep RL with REINFORCE, asynchronous methods for deep RL, with a spotlight on advantage actor-critic (A2C).
+* Teaching fellow for Fall 2023, [CSCI E-89C Deep Reinforcement Learning.](https://courses.dce.harvard.edu/?details&srcdb=202401&crn=16817)
+* I teach a weekly section on foundational and advanced concepts in reinforcement learning and deep learning. I also grade assignments, and answer questions via class forum and email.
+* Reinforcement learning topics include Markov Decision Processes (MDP), dynamic programming with the Bellman Equation, application of Monte Carlo methods in reinforcement contexts, temporal-difference Prediction & Control, including SARSA and Q-learning techniques, n-step TD and various Approximation Methods like stochastic-gradient, semi-gradient TD update, and Least-squares TD.
+* Deep learning topics include techniques and principles behind training neural networks using backpropagation, strategies for tuning neural networks, with a focus on regularization, convolutional neural networks (CNNs) and recurrent neural networks (RNNs).
+* Deep reinforcement learning topics include value-based deep RL using Q-networks, policy-based approaches in Deep RL with REINFORCE, asynchronous methods for deep RL, with a spotlight on advantage actor-critic (A2C).
 
 ### Harvard Extension Masters
 * I'm a degree candidate for an ALM in Data Science. I've currently completed 9 classes out of a total of 10. I am currently taking [Advanced Practical Data Science](https://courses.dce.harvard.edu/?details&srcdb=202401&crn=17072), in which I am building a custom RAG system with an LLM that scrapes and answers questions on entire websites using LlamaIndex, Weaviate, LangChain, and GPT-3.5.
