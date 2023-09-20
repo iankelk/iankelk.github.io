@@ -29,6 +29,7 @@ title: Ian Kelk's project list
 * Clarifai Quick Start [post](https://www.clarifai.com/blog/image-predictions-quick-start)
 
 ### Clarifai Videos
+* [Enhancing LLMs with Retrieval Augmented Generation (RAG)](https://www.youtube.com/watch?v=HbuOu9zq2UE)
 * [AI-assisted data labeling](https://www.youtube.com/watch?v=hLMzm_vvMVg)
 * [Auto Annotation](https://www.youtube.com/watch?v=q38eEf2dUoo)
 * Something I created for a Webinar offered by Acquia / Widen (Digital Asset Management providers) for a demo on [generating ChatGPT prompts](https://www.youtube.com/watch?v=kMQbEcf3lps) using image classification.
@@ -44,11 +45,20 @@ title: Ian Kelk's project list
 * [Link](https://virmuze.com/m/crypto-museum/) to the museum itself on Virmuze
 
 ### Database design
-* I'm currently working on a [systems project](https://github.com/iankelk/cs265/) for a big data class in C++. The midway report is [located here,](https://drive.google.com/file/d/1KkQ923IHsIZuSCjmPyJ8y9xlO6V4-HFo/view?usp=share_link) although it's changed significantly since that point. It's now a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking.
-* UPDATE: The final report is located [here](reports/Final_Report_Ian_Kelk.pdf), and my literature review on LSM tree key value stores is located [here](reports/Literature_Review_Ian_Kelk.pdf).
+* I developed a [systems project](https://github.com/iankelk/cs265/) for a [research class](http://daslab.seas.harvard.edu/classes/cs265/) in big data systems in C++. 
+* It's a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking.
+* Final report is located [here](reports/Final_Report_Ian_Kelk.pdf)
+* A literature review on LSM tree key value stores is located [here](reports/Literature_Review_Ian_Kelk.pdf).
+
+### Teaching
+* Teaching fellow for Fall 2023, [CSCI E-89C Deep Reinforcement Learning.](https://courses.dce.harvard.edu/?details&srcdb=202401&crn=16817) I teach a weekly section on foundational and advanced concepts in reinforcement learning and deep learning. I also grade assignments, and answer questions via class forum and email.
+• Reinforcement learning topics include Markov Decision Processes (MDP), dynamic programming with the Bellman Equation, application of Monte Carlo methods in reinforcement contexts, temporal-difference Prediction & Control, including SARSA and Q-learning techniques, n-step TD and various Approximation Methods like stochastic-gradient, semi-gradient TD update, and Least-squares TD.
+• Deep learning topics include techniques and principles behind training neural networks using backpropagation, strategies for tuning neural networks, with a focus on regularization, convolutional neural networks (CNNs) and recurrent neural networks (RNNs).
+• Deep reinforcement learning topics include value-based deep RL using Q-networks, policy-based approaches in Deep RL with REINFORCE, asynchronous methods for deep RL, with a spotlight on advantage actor-critic (A2C).
 
 ### Harvard Extension Masters
-* I'm a degree candidate for an ALM in Data Science. I've currently completed 9 classes out of a total of 10.[research class](http://daslab.seas.harvard.edu/classes/cs265/) in big data systems.
+* I'm a degree candidate for an ALM in Data Science. I've currently completed 9 classes out of a total of 10. I am currently taking [Advanced Practical Data Science](https://courses.dce.harvard.edu/?details&srcdb=202401&crn=17072), in which I am building a custom RAG system with an LLM that scrapes and answers questions on entire websites using LlamaIndex, Weaviate, LangChain, and GPT-3.5.
+
 * I have maintained a 4.0 GPA in the following 9 classes:
 	* Data Modeling (R)
 	* Foundations of Data Science and Engineering (Python, SQL, Tableau)
