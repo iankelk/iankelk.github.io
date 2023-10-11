@@ -12,12 +12,16 @@ title: Ian Kelk's project list
 * GitHub [repo](https://github.com/automatic-fake-news-detection) for the paper
 * I gave an hour-long talk to the [NeuLab](https://www.cs.cmu.edu/~neulab/) at Carnegie Mellon in July of 2022
 
+### Vision for safety inspections
+* August 30th article in Bloomberg ["9 Smart Ways To Make Cities Better"] (https://www.bloomberg.com/features/2023-ways-to-make-cities-better/) mentioned my work on this project. Links to [PDF](./pdf/bloomberg.pdf) and [image of specific page.](./img/bloomberg-06.png)
+* [How AI Could Have Warned Us about the Florida Condo Collapse Before It Happened](https://towardsdatascience.com/how-a-i-can-prevent-future-building-collapses-before-they-happen-71c3bf3740b5) article for Towards Data Science.
+* The [video](https://www.youtube.com/watch?v=g4tnZTghSmg) for the TDS article (featured on the page, but here it is directly)
+
 ### Vision
 * [Search and Rescue using YOLOv5](https://wandb.ai/iankelk/YOLOv5/reports/Search-and-Rescue-Augmentation-and-Preprocessing-on-Drone-Based-Water-Rescue-Images-with-YOLOv5---VmlldzoxOTk4MTI2?galleryTag=object-detection) using the Weights and Biases report
-* [How AI Could Have Warned Us about the Florida Condo Collapse Before It Happened](https://towardsdatascience.com/how-a-i-can-prevent-future-building-collapses-before-they-happen-71c3bf3740b5) article for TDS
-* The [video](https://www.youtube.com/watch?v=g4tnZTghSmg) for the TDS article (featured on the page, but here it is directly)
 * Co-authored a [research paper](https://sp2023.ieee-security.org/program-papers.html) on physical adversarial attacks on face recognition systems for biometric security for S&P 2023: [ImU: Physical Impersonating Attack for Face Recognition System with Natural Style Changes](https://drive.google.com/file/d/1ewQSfJwTpHNtrRsdPiJNYB99_kcYtoCQ/view?usp=share_link)
-* I created a [detailed presentation](https://docs.google.com/presentation/d/1y4qM_qi-XI1kPqrZSM5u1yzr4aN5kxTOLejfJPO-5nA/edit?usp=sharing) on the [Gist: Efficient Data Encoding for Deep Neural Network Training](https://www.microsoft.com/en-us/research/uploads/prod/2018/04/fiddle-gist-isca18.pdf) paper from Microsoft. UPDATE: Video has been recorded! It's located [here.](https://www.youtube.com/watch?v=dzdyO1WmlEE)
+
+* My [recorded presentation](https://www.youtube.com/watch?v=dzdyO1WmlEE) on the [Gist: Efficient Data Encoding for Deep Neural Network Training](https://www.microsoft.com/en-us/research/uploads/prod/2018/04/fiddle-gist-isca18.pdf) paper from Microsoft. Link to slides [here.](https://docs.google.com/presentation/d/1y4qM_qi-XI1kPqrZSM5u1yzr4aN5kxTOLejfJPO-5nA/edit?usp=sharing)
 
 ### Visualization
 * JavaScript D3 Visualization [project](https://iankelk.github.io/fantastic-news/) on Fake News mostly focuses on COVID-19 propaganda (requires Chrome or Firefox on desktop). It was selected as [best project](https://www.cs171.org/2022/fame/) for the class in my Masters program.
