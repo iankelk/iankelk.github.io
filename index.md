@@ -28,15 +28,18 @@ title: Ian Kelk's project list
 * I recorded the 2-minute [video](https://www.youtube.com/watch?v=V8gTSvInKDA) for the project in an old-timey mid-Atlantic accent for uh, fun.
 
 ### Clarifai Blogs
+* I've written about 60 blog posts for Clarifai. They can all be found [here.](https://www.clarifai.com/blog) Below are a few samples. I also maintained the Clarifai documentation for quite two years, so much of the newer content on their [docs site](https://docs.clarifai.com) was written by me using Meta's "Docusaurus" platform.
 * Blog [post](https://www.clarifai.com/blog/imperfections-in-the-machine-bias-in-ai) on AI bias
 * Creating AI workflows [post](https://www.clarifai.com/blog/creating-workflows-in-clarifai-community)
 * Clarifai Quick Start [post](https://www.clarifai.com/blog/image-predictions-quick-start)
 
 ### Clarifai Videos
+* I've recorded a good number of videos for Clarifai, and they can be viewed [here.](https://www.youtube.com/@theworldsai/videos) Below are a few samples.
 * [Enhancing LLMs with Retrieval Augmented Generation (RAG)](https://www.youtube.com/watch?v=HbuOu9zq2UE)
 * [AI-assisted data labeling](https://www.youtube.com/watch?v=hLMzm_vvMVg)
 * [Auto Annotation](https://www.youtube.com/watch?v=q38eEf2dUoo)
 * Something I created for a Webinar offered by Acquia / Widen (Digital Asset Management providers) for a demo on [generating ChatGPT prompts](https://www.youtube.com/watch?v=kMQbEcf3lps) using image classification.
+* Another video for Acquia / Widen on relevant Clarifai features, where they had me [re-record the intro](https://www.youtube.com/watch?v=Fyb1Tq3yCtE) after I'd gotten a haircut. I'm sure nobody noticed.
 
 ### Promotional Clarifai Videos
 * I've created slick promotional loops used at tradeshows using Adobe After Effects. 
