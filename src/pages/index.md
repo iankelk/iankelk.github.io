@@ -13,7 +13,7 @@ title: Ian Kelk's project list
 * I gave an hour-long talk to the [NeuLab](https://www.cs.cmu.edu/~neulab/) at Carnegie Mellon in July of 2022
 
 ### Vision for safety inspections
-* August 30th article in Bloomberg ["9 Smart Ways To Make Cities Better"](https://archive.ph/SSPfv) mentioned my work on this project in part 6. Links to [PDF](./pdf/bloomberg.pdf) and [image of specific page.](./img/bloomberg-06.png)
+* August 30th article in Bloomberg ["9 Smart Ways To Make Cities Better"](https://archive.ph/SSPfv) mentioned my work on this project in part 6. Links to [PDF](/pdf/bloomberg.pdf) and [image of specific page.](/img/bloomberg-06.png)
 * [How AI Could Have Warned Us about the Florida Condo Collapse Before It Happened](https://towardsdatascience.com/how-a-i-can-prevent-future-building-collapses-before-they-happen-71c3bf3740b5) article for Towards Data Science.
 * The [video](https://www.youtube.com/watch?v=g4tnZTghSmg) for the TDS article (featured on the page, but here it is directly)
 
@@ -54,8 +54,8 @@ title: Ian Kelk's project list
 ### Database design
 * I developed a [systems project](https://github.com/iankelk/lsm-tree/) for a [research class](http://daslab.seas.harvard.edu/classes/cs265/) in big data systems in C++. 
 * It's a fully functional, modern LSM-tree (Log Structured Merge tree) write-optimized NoSQL key-value store. It supports tiered, leveled, lazy-leveled, and partial compaction by percentage level policies. It also offers [MONKEY](https://stratos.seas.harvard.edu/files/stratos/files/monkeykeyvaluestore.pdf) (Monkey: Optimal Navigable Key-Value Store) bloom filter optimization, internally multi-threaded range queries and compaction using a threadpool, and is also externally multi-threaded and can support multiple clients concurrently accessing the database with per-level blocking.
-* Final report is located [here](reports/Final_Report_Ian_Kelk.pdf)
-* A literature review on LSM tree key value stores is located [here](reports/Literature_Review_Ian_Kelk.pdf).
+* Final report is located [here](/reports/Final_Report_Ian_Kelk.pdf)
+* A literature review on LSM tree key value stores is located [here](/reports/Literature_Review_Ian_Kelk.pdf).
 
 ### Teaching
 * Teaching fellow for Fall 2023, [CSCI E-89C Deep Reinforcement Learning.](https://courses.dce.harvard.edu/?details&srcdb=202401&crn=16817)
