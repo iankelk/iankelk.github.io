@@ -84,7 +84,7 @@ Let's take another look at what happens in a more complex yet sillier chat inter
 
 ![How ChatGPT pretends to work](chatgpt-name-2.jpeg)
 
-### ### Now let's suppose we have a long enough conversation that the beginning is trimmed off. ChatGPT might either state that it's forgotten the name entirely or hallucinate it.
+### Now let's suppose we have a long enough conversation that the beginning is trimmed off. ChatGPT might either state that it's forgotten the name entirely or hallucinate it.
 
 ![How ChatGPT pretends to work](chatgpt-name-4.jpeg)
 
