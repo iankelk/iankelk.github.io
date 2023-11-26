@@ -10,6 +10,10 @@ import Figure from "@site/src/components/figure";
 
 Remember the first time you used ChatGPT and how amazed you were to find yourself having what appeared to be a full-on conversation with an artificial intelligence? While ChatGPT was (and still is) mind-blowing, it uses a few tricks to make things appear more familiar.
 
+![ChatGPT on the Tonight Show](social-card.jpg)
+
+<!-- truncate -->
+
 ## Trick #1: Repeating the whole conversation every time
 
 Contrary to appearances, large language models (LLMs) like ChatGPT do not actually "remember" past interactions. The moment they finish "typing" out their response, they have no idea who you are or what you were talking about. When ChatGPT seems to naturally recall details from earlier in the conversation, it is an illusion; the context of that dialogue is given back to ChatGPT every time you say something to it. This context enables them to build coherent, follow-on responses that appear to be normal conversations.
@@ -19,8 +23,6 @@ However, without this context, ChatGPT would have no knowledge of what was previ
 ### A typical short conversation with ChatGPT might go like this.
 
 ![How ChatGPT pretends to work](chatgpt-photosynthesis-1.jpeg)
-
-<!--truncate-->
 
 ### However, this is what is actually going on behind the scenes.
 
