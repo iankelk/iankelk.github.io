@@ -20,6 +20,8 @@ However, without this context, ChatGPT would have no knowledge of what was previ
 
 ![How ChatGPT pretends to work](chatgpt-photosynthesis-1.jpeg)
 
+<!--truncate-->
+
 ### However, this is what is actually going on behind the scenes.
 
 ![How ChatGPT pretends to work](chatgpt-photosynthesis-2.jpeg)
