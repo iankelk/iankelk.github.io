@@ -32,9 +32,9 @@ Notice that when the woman asks her second question, she has to reiterate the en
 
 These models are termed "auto-regressive" due to their method of generating text one piece at a time, building upon the previously generated text. "Auto-" comes from the Greek word "autós," meaning "self," and "regressive" is derived from "regress," which in this context refers to the statistical method of predicting future values based on past values.
 
-In LLMs, what this means is that the model predicts the next word or token in a sequence based on *all* the words or tokens that have come before it. That's *all* of it, not just the current question being asked in a long back-and-forth chat conversation. In humans, we naturally maintain coherence and context in a conversation by remembering what was said before without being re-told it every time. However, ChatGPT needs to know everything that has been said before to ensure that each new piece of text it adds is relevant.
+In LLMs, what this means is that the model predicts the next word or token in a sequence based on *all* the words or tokens that have come before it. That's *all* of it, not just the current question being asked in a long back-and-forth chat conversation. In humans, we naturally maintain coherence and context in a conversation by just... participating in the conversation.
 
-Conversations with ChatGPT actually mimic a conversational style where each response builds upon the previous dialogue; however, the moment ChatGPT finishes writing a response, it has no memory of what it just said. Take a look at what would happen with this same conversation without the entire discourse being fed to ChatGPT behind the scenes:
+However, while chats with ChatGPT mimic a conversational style, with each response building upon the previous dialogue, the moment ChatGPT finishes writing a response, it has no memory of what it just said. Take a look at what would happen with this same conversation without the *entire discourse* being back fed to ChatGPT behind the scenes:
 
 ### How ChatGPT would respond without being fed the whole conversation.
 
