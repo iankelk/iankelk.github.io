@@ -14,7 +14,7 @@ Remember the first time you used ChatGPT and how amazed you were to find yoursel
 
 <!-- truncate -->
 
-## Trick #1: Repeating the whole conversation every time
+## Trick #1: Every time you talk to ChatGPT, you're repeating the *entire* conversation up until that point.
 
 Contrary to appearances, large language models (LLMs) like ChatGPT do not actually "remember" past interactions. The moment they finish "typing" out their response, they have no idea who you are or what you were talking about. When ChatGPT seems to naturally recall details from earlier in the conversation, it is an illusion; the context of that dialogue is given back to ChatGPT every time you say something to it. This context enables them to build coherent, follow-on responses that appear to be normal conversations.
 
