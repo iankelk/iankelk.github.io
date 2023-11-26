@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iankelk.github.io/blog</id>
     <title>Short Attention Blog</title>
-    <updated>0231-11-26T00:00:00.000Z</updated>
+    <updated>2023-11-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iankelk.github.io/blog"/>
     <subtitle>Short Attention Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[How ChatGPT fools us into thinking we're having a conversation]]></title>
         <id>https://iankelk.github.io/blog/how-chatgpt-fools-us</id>
         <link href="https://iankelk.github.io/blog/how-chatgpt-fools-us"/>
-        <updated>0231-11-26T00:00:00.000Z</updated>
+        <updated>2023-11-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Remember the first time you tried ChatGPT and were blown away by how you were having what appeared, by all intents and purposes, a full-on conversation with an artificial intelligence? While ChatGPT was (and still is) mind blowing, it uses a few tricks to make things appear more familiar.]]></summary>
         <content type="html"><![CDATA[<p>Remember the first time you tried ChatGPT and were blown away by how you were having what appeared, by all intents and purposes, a full-on conversation with an artificial intelligence? While ChatGPT was (and still is) mind blowing, it uses a few tricks to make things appear more familiar.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="trick-1-repeating-the-whole-conversation-every-time">Trick #1: Repeating the whole conversation every time<a href="https://iankelk.github.io/blog/how-chatgpt-fools-us#trick-1-repeating-the-whole-conversation-every-time" class="hash-link" aria-label="Direct link to Trick #1: Repeating the whole conversation every time" title="Direct link to Trick #1: Repeating the whole conversation every time">​</a></h2>
