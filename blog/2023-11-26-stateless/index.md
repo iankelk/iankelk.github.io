@@ -2,7 +2,7 @@
 slug: how-chatgpt-fools-us
 title: How ChatGPT fools us into thinking we're having a conversation
 authors: [ikelk]
-tags: [history, chatgpt, context, chat, AI, LLM, chatbots, AIExplained]
+tags: [chat history, chatgpt, context, chat, AI, LLM, chatbots, AIExplained]
 image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2023-11-26-stateless/social-card.jpg?raw=true
 ---
 
@@ -56,7 +56,7 @@ There's often confusion about what the token limit means regarding input and out
 
 ### The chat problem
 
-Do you see where this becomes problematic? Previoulsy, we saw how the entire conversation has to be fed to the model so that it remembers what has already been discussed. Combining this with the context length, the result is that as you talk more and more with ChatGPT, eventually the combined totals of what you've asked and what it has replied will exceed the 4,096 token limit, and it won't be able to answer any more.
+Do you see where this becomes problematic? Previously, we saw how the entire conversation has to be fed to the model so that it remembers what has already been discussed. Combining this with the context length, the result is that as you talk more and more with ChatGPT, eventually the combined totals of what you've asked and what it has replied will exceed the 4,096 token limit, and it won't be able to answer any more.
 
 ### A visualization of ChatGPT simultaneously printing and scanning back in the entire conversation as it grows to extreme proportions.
 
@@ -64,9 +64,9 @@ Do you see where this becomes problematic? Previoulsy, we saw how the entire con
 
 #### Conversation Length and Token Limitations in LLMs
    
-So how does ChatGPT handle this limitation? As your conversation with it grows, the number of tokens eventually exceeds the model's context window (e.g., 4,096 tokens for GPT-3.5). ChatGPT invisibly removes the oldest parts of the conversation to remain within the limit. This method—using a rolling window of context—is certainly one of the easiest to implement, but oftentimes it is not the perfect solution. Some chat alternative front-ends like [TypingMind](https://www.typingmind.com/) both warn you when the context limit has been reached and allow you to manually delete sections of the chat that you don't need anymore. This lets you make the choice of what information you want to remain in the chat, and has the bizarre philosophical effect of "editing the memory" of GPT.
+So how does ChatGPT handle this limitation? As your conversation with it grows, the number of tokens eventually exceeds the model's context window (e.g., 4,096 tokens for GPT-3.5). ChatGPT invisibly removes the oldest parts of the conversation to remain within the limit. This method—using a rolling window of context—is certainly one of the easiest to implement, but oftentimes it is not the perfect solution. Some chat alternative front-ends like [TypingMind](https://www.typingmind.com/) both warn you when the context limit has been reached and allow you to manually delete sections of the chat that you don't need anymore. This lets you choose what information you want to remain in the chat, and has the bizarre philosophical effect of "editing the memory" of GPT.
 
-For your average user, what this means is that the longer your conversation, the sooner ChatGPT will start forgetting things you said at the beginning of the chat.
+For your average user using the web version of ChatGPT, what this means is that the longer your conversation, the sooner ChatGPT will start forgetting things you said at the beginning of the chat.
 
 ### Another visualization of ChatGPT trimming away the start of your conversation behind the scenes.
 
@@ -88,7 +88,7 @@ Let's take another look at what happens in a more complex yet sillier chat inter
 
 ![How ChatGPT pretends to work](chatgpt-name-4.jpeg)
 
-### And finally, if ChatGPT isn't fed the entire conversation, it will forget it all the moment it finishes generating each answer.
+### And finally, if we try to escape this problem by not feeding ChatGPT the entire conversation, it will forget it all the moment it finishes generating each answer.
 
 ![How ChatGPT pretends to work](chatgpt-name-3.jpeg)
 
