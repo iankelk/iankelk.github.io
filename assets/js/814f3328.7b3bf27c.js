@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"How ChatGPT fools us into thinking we\'re having a conversation","permalink":"/blog/how-chatgpt-fools-us","unlisted":false}]}')}}]);
