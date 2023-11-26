@@ -45,6 +45,13 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+      '@docusaurus/preset-classic',
+      {
+        gtag: {
+          trackingID: 'G-PNHB98RZ0D',
+          anonymizeIP: true,
+        },
+      },
     ],
   ],
 
