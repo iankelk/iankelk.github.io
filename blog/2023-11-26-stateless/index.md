@@ -40,7 +40,7 @@ However, while chats with ChatGPT mimic a conversational style, with each respon
 
 ![How ChatGPT would respond without being fed the whole conversation:](chatgpt-photosynthesis-3.jpeg)
 
-## Trick #2: ChatGPT doesn't forget things over time, but over the length of the conversation
+## Trick #2: As your conversation grows, ChatGPT will quietly remove the oldest parts from the beginning.
 
 #### Context Length in LLMs
 
@@ -48,7 +48,7 @@ When ChatGPT first came out in November 2022, it only offered the model GPT-3.5,
 
 This means that the model can comprehend a maximum of 4,096 tokens at any point. Tokenization is a fascinating subject in itself, and my next post will cover how it works and why 4,096 tokens only gives you about 3,000 words.
 
-There has been some confusion about what the token limit means: can we give ChatGPT 3,000 words and expect it to be able to produce 3,000 words back? The answer is unfortunately no; the context length of 4,096 tokens covers both the input (prompt) and the output (response). This results in a trade-off where we have to balance the amount of information we give in a prompt with the length of the response we get from the model.
+There's often confusion about what the token limit means regarding input and output: can we give ChatGPT 3,000 words and expect it to be able to produce 3,000 words back? The answer is unfortunately no; the context length of 4,096 tokens covers both the input (prompt) and the output (response). This results in a trade-off where we have to balance the amount of information we give in a prompt with the length of the response we get from the model.
    
 1. *Input (Prompt):* A longer prompt leaves less room for a meaningful response; if the input uses 4,000 tokens, the response can only be 96 tokens long to stay within the token limit. 
 
@@ -56,7 +56,7 @@ There has been some confusion about what the token limit means: can we give Chat
 
 ### The chat problem
 
-Do you see where this becomes problematic? In the first part of this post, I explain how the entire conversation has to be fed to the model so that it remembers what has already been discussed. Combining this with the context length, the result is that as you talk more and more with ChatGPT, eventually the combined totals of what you've asked and what it has replied will exceed the 4,096 token limit, and it won't be able to answer any more.
+Do you see where this becomes problematic? Previoulsy, we saw how the entire conversation has to be fed to the model so that it remembers what has already been discussed. Combining this with the context length, the result is that as you talk more and more with ChatGPT, eventually the combined totals of what you've asked and what it has replied will exceed the 4,096 token limit, and it won't be able to answer any more.
 
 ### A visualization of ChatGPT simultaneously printing and scanning back in the entire conversation as it grows to extreme proportions.
 
@@ -64,9 +64,9 @@ Do you see where this becomes problematic? In the first part of this post, I exp
 
 #### Conversation Length and Token Limitations in LLMs
    
-As a conversation between a human and an LLM chatbot grows, they run the risk of exceeding the model's context window (e.g., 4,096 tokens for GPT-3.5). This is handled by the web version of ChatGPT, which invisibly removes the oldest parts of the conversation to remain within the limit. This method—using a rolling window of context—is certainly one of the easiest to implement.
+So how does ChatGPT handle this limitation? As your conversation with it grows, the number of tokens eventually exceeds the model's context window (e.g., 4,096 tokens for GPT-3.5). ChatGPT invisibly removes the oldest parts of the conversation to remain within the limit. This method—using a rolling window of context—is certainly one of the easiest to implement, but oftentimes it is not the perfect solution. Some chat alternative front-ends like [TypingMind](https://www.typingmind.com/) both warn you when the context limit has been reached and allow you to manually delete sections of the chat that you don't need anymore. This lets you make the choice of what information you want to remain in the chat, and has the bizarre philosophical effect of "editing the memory" of GPT.
 
-What does this mean? The longer your conversation, the sooner ChatGPT will start forgetting things you said at the beginning of the chat.
+For your average user, what this means is that the longer your conversation, the sooner ChatGPT will start forgetting things you said at the beginning of the chat.
 
 ### Another visualization of ChatGPT trimming away the start of your conversation behind the scenes.
 
