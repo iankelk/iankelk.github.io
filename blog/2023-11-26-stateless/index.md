@@ -12,13 +12,25 @@ Remember the first time you used ChatGPT and how amazed you were to find yoursel
 
 While the title of this article is a bit tongue-in-cheek, it is most certainly not clickbait. ChatGPT does indeed use two notable hidden techniques to simulate human conversation, and the more you know about how they work, the more effectively you can use the technology.
 
+:::tip[Some key points I'll address here are:]
+
+- ChatGPT has no idea who you are and has no memory of talking to you at any point in the conversation.
+- It simulates conversations by "reading" the *whole* chat from the start each time.
+- As a conversation gets longer, ChatGPT starts removing pieces of the conversation from the start, creating a rolling window of context.
+- Because of this, very long chats will forget what was mentioned at the beginning.
+
+:::
+
+
 ![ChatGPT on the Tonight Show](social-card.jpg)
 
 <!-- truncate -->
 
 ## Trick #1: Every time you talk to ChatGPT, you're not just sending it your question. You're also sending it the *entire* conversation up until that point.
 
-Contrary to appearances, large language models (LLMs) like ChatGPT do not actually "remember" past interactions. The moment they finish "typing" out their response, they have no idea who you are or what you were talking about. When ChatGPT seems to naturally recall details from earlier in the conversation, it is an illusion; the context of that dialogue is given back to ChatGPT every time you say something to it. This context enables them to build coherent, follow-on responses that appear to be normal conversations.
+Contrary to appearances, large language models (LLMs) like ChatGPT do not actually "remember" past interactions. The moment they finish "typing" out their response, they have no idea who you are or what you were talking about. Each time the model is prompted is **completely independent** from previous things you've asked.
+
+When ChatGPT seems to naturally recall details from earlier in the conversation, it is an illusion; the context of that dialogue is given back to ChatGPT every time you say something to it. This context enables them to build coherent, follow-on responses that appear to be normal conversations.
 
 However, without this context, ChatGPT would have no knowledge of what was previously discussed. Like all LLMs, ChatGPT is completely *stateless*, meaning that in the actual model itself, no information is maintained between inputs and outputs. All of this feeding of previous context into the current interaction is hidden behind the scenes in the ChatGPT web application.
 
@@ -112,3 +124,27 @@ Prominent examples of such layers include [LangChain](https://www.langchain.com/
 
 
 ![A confused stateless robot](confused.jpg)
+
+:::info[Key Takeaways]
+
+- ChatGPT doesn't actually "remember" the conversations it has; instead, it simulates conversations by reading the entire chat from the start each time. Each interaction is independent, and once it's completed its response, it loses all context from that conversation. 
+
+- The entire conversation history must be fed back to ChatGPT each time to create coherent responses. But as the chat grows longer, it starts to forget the initial parts of the conversation because of the constraints of its token limit (4k tokens for GPT-3.5, 8k for GPT-4, and an amazing 128k tokens for GPT-4 Turbo). 
+
+- In the case of prolonged interactions, the parts of the conversation that were removed won't be recalled or acknowledged by the AI model. This happens unannounced in the web version of ChatGPT, making it important to be mindful of the length of the conversation and what parts may be forgotten.
+
+- If you're having a lengthy conversation on the ChatGPT web app and it relies on information from the start, consider copying and pasting the necessary parts into a new chat to avoid losing crucial context.
+
+- Tools like [TypingMind](https://www.typingmind.com/) allow users to selectively cut unimportant parts of the conversation, and even direct the chat from a selected point. This ability to manually manage the conversation can provide a more controlled experience with ChatGPT.
+
+- ChatGPT, and other similar models like GPT-3 and GPT-4, are designed to be stateless for a variety of reasons such as scalability, efficiency, and data privacy. 
+
+- While stateless nature makes these models safe and manageable at scale, the lack of memory and contextual retention is a limitation when it comes to personalization and continuous learning. Layered implementations like [LangChain](https://www.langchain.com/), [LlamaIndex](https://www.llamaindex.ai/), and [Haystack](https://haystack.deepset.ai/) help in managing this constraint.
+
+- As more advanced versions like GPT-4 with 8,192 and 32,768 context lengths and GPT-4 Turbo with a 128k context length come up, it enables longer conversations. However, there will always be a completion limit, currently at about 3,000 words (4,096 tokens) for GPT-4 Turbo. This completion limit may come as a surprise given the much larger [128k context of the model.](https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo)
+
+- Trying to dialogue with these models without providing the entire conversation effectively erases the memory of prior interactions, making them less effective in terms of continuity and coherence. 
+
+- Future technological advances and updates may amend some of these constraints, enhancing the AI's ability to maintain long and complex conversations while also respecting user data privacy.
+
+:::
