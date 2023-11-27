@@ -58,7 +58,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/short-attention-social-card.jpg',
     navbar: {
-      title: 'Project Page',
+      title: 'Projects Page',
       logo: {
         alt: 'Short Attention Logo',
         src: 'img/logo.svg',
