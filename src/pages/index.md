@@ -4,8 +4,6 @@ title: Ian Kelk's project list
 ---
 ![](/img/project-header.png)
 
-# Some of my recent work in AI and data science
-
 ## Projects
 
 ### NLP
