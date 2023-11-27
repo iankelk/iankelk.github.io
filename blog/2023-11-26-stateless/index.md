@@ -10,6 +10,8 @@ import Figure from "@site/src/components/figure";
 
 Remember the first time you used ChatGPT and how amazed you were to find yourself having what appeared to be a full-on conversation with an artificial intelligence? While ChatGPT was (and still is) mind-blowing, it uses a few tricks to make things appear more familiar.
 
+While the title of this article is a bit tongue-in-cheek, it is most certainly not clickbait. ChatGPT does indeed use two notable hidden techniques to simulate human conversation, and the more you know about how they work, the more effectively you can use the technology.
+
 ![ChatGPT on the Tonight Show](social-card.jpg)
 
 <!-- truncate -->
@@ -44,9 +46,9 @@ However, while chats with ChatGPT mimic a conversational style, with each respon
 
 #### Context Length in LLMs
 
-When ChatGPT first came out in November 2022, it only offered the model GPT-3.5, which had a maximum context of 4,096 tokens, which is roughly 3,000 words.
+When ChatGPT first came out in November 2022, it only offered the model GPT-3.5, which had a maximum context of 4,096 tokens, which is roughly 3,000 words. In a [recent talk,](https://youtu.be/zjkBMFhNj_g?t=2642) Andrej Karpathy referred to this context window as "your finite precious resource of your working memory of your language model."
 
-This means that the model can comprehend a maximum of 4,096 tokens at any point. Tokenization is a fascinating subject in itself, and my next post will cover how it works and why 4,096 tokens only gives you about 3,000 words.
+What this means is that the GPT-3.5 model can comprehend a maximum of 4,096 tokens at any point. Tokenization is a fascinating subject in itself, and my next post will cover how it works and why 4,096 tokens only gives you about 3,000 words.
 
 There's often confusion about what the token limit means regarding input and output: can we give ChatGPT 3,000 words and expect it to be able to produce 3,000 words back? The answer is unfortunately no; the context length of 4,096 tokens covers both the input (prompt) and the output (response). This results in a trade-off where we have to balance the amount of information we give in a prompt with the length of the response we get from the model.
    
