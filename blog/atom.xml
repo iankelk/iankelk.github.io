@@ -119,6 +119,8 @@
         <category label="chat" term="chat"/>
         <category label="AI" term="AI"/>
         <category label="LLM" term="LLM"/>
+        <category label="ML" term="ML"/>
+        <category label="chatbot" term="chatbot"/>
         <category label="chatbots" term="chatbots"/>
         <category label="AIExplained" term="AIExplained"/>
     </entry>
