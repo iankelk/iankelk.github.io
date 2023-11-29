@@ -2,6 +2,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 // import dashToEmdash from './src/remark/dash-to-emdash'; 
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
   title: 'Short Attention',
@@ -37,13 +39,20 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          remarkPlugins: [require('./src/remark/dash-to-emdash')],
+            sidebarPath: './sidebars.ts',
+            remarkPlugins: [
+                remarkMath,
+                require('./src/remark/dash-to-emdash')
+            ],
+            rehypePlugins: [rehypeKatex],
         },
         blog: {
-          showReadingTime: true,
-          remarkPlugins: [require('./src/remark/dash-to-emdash')],
-
+            showReadingTime: true,
+            remarkPlugins: [
+                remarkMath,
+                require('./src/remark/dash-to-emdash')
+            ],
+            rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -54,6 +63,15 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+  ],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
 
   themeConfig: {
