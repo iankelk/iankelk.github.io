@@ -50,12 +50,14 @@ const config: Config = {
           showReadingTime: true,
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} Ian Kelk`,
+            copyright: `Copyright © ${new Date().getFullYear()} Short Attention Blog`,
             createFeedItems: async (params) => {
-              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              const {blogPosts, siteConfig, defaultCreateFeedItems, ...rest} = params;
               return defaultCreateFeedItems({
-                // keep only the 10 most recent blog posts in the feed
+                // Keep only the 10 most recent blog posts in the feed
                 blogPosts: blogPosts.filter((item, index) => index < 20),
+                siteConfig,
+                outDir: rest.outDir,
               });
             },
           },
