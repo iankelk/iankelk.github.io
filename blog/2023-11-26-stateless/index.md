@@ -22,25 +22,25 @@ While the title of this article is a bit tongue-in-cheek, it is most certainly n
 :::
 
 
-![ChatGPT on the Tonight Show](social-card.jpg)
+![A black and white illustration of a late-night talk show setting, titled 'The ChatGPT Show.' A classic, boxy robot with visible joints and a round head featuring antenna and eyes, is depicted as the guest. It's gesturing with its hands as if in conversation. The host, a man in a suit with neat hair and a professional demeanor, sits across from the robot at a curved desk. Microphones and notes are on the desk, with an urban skyline visible through the window in the background.](social-card.jpg)
 
 <!-- truncate -->
 
-## Trick #1: Every time you talk to ChatGPT, you're not just sending it your question. You're also sending it the *entire* conversation up until that point.
+## Trick #1: Every time you talk to ChatGPT, you're not just sending it your question. You're also sending the *entire* conversation up until that point.
 
-Contrary to appearances, large language models (LLMs) like ChatGPT do not actually "remember" past interactions. The moment they finish "typing" out their response, they have no idea who you are or what you were talking about. Each time the model is prompted is **completely independent** from previous things you've asked.
+Contrary to appearances, large language models (LLMs) like ChatGPT do not actually "remember" past interactions. The moment they finish "typing" out their response, they have no idea who you are or what you were talking about. Each time the model is prompted, it is **completely independent** from previous questions you've asked.
 
 When ChatGPT seems to naturally recall details from earlier in the conversation, it is an illusion; the context of that dialogue is given back to ChatGPT every time you say something to it. This context enables them to build coherent, follow-on responses that appear to be normal conversations.
 
 However, without this context, ChatGPT would have no knowledge of what was previously discussed. Like all LLMs, ChatGPT is completely *stateless*, meaning that in the actual model itself, no information is maintained between inputs and outputs. All of this feeding of previous context into the current interaction is hidden behind the scenes in the ChatGPT web application.
 
-### A typical short conversation with ChatGPT might go like this.
+### A typical short conversation with ChatGPT might go like this:
 
-![How ChatGPT pretends to work](chatgpt-photosynthesis-1.jpeg)
+![A black and white comic strip depicts a conversation between a woman and a person wearing a 'CHATGPT' shirt. The woman asks, 'What is photosynthesis?' The person responds, 'Photosynthesis is the process by which plants use sunlight to synthesize nutrients from carbon dioxide and water.' She follows up with, 'Can humans do it?' to which the person replies, 'No, humans cannot perform photosynthesis.' The scene is simple with only the two characters and their speech bubbles.](chatgpt-photosynthesis-1.jpeg)
 
-### However, this is what is actually going on behind the scenes.
+### However, this is what is actually going on behind the scenes:
 
-![How ChatGPT pretends to work](chatgpt-photosynthesis-2.jpeg)
+![A black and white comic strip showing a dialogue between a woman and a person wearing a 'CHATGPT' shirt. The woman is labeled 'USER' and asks, 'What is photosynthesis?' The person labeled 'CHATGPT' answers, 'Photosynthesis is the process by which plants use sunlight to synthesize nutrients from carbon dioxide and water.' The woman, termed 'USER' again, follows with, 'Can humans do it?' and receives the reply, 'No, humans cannot perform photosynthesis.' Both characters are drawn as cartoons.](chatgpt-photosynthesis-2.jpeg)
 
 Notice that when the woman asks her second question, she has to reiterate the entire previous conversation, complete with tags on who said what. Can you imagine talking to a person where every time it was your turn to speak, you had to repeat the entire conversation up to that point? This is how ChatGPT (and all current LLMs) work. They require using their own outputs, plus the prompts that generated these outputs, to be prepended to the start of every new prompt from the user.
 
@@ -48,11 +48,11 @@ These models are termed "auto-regressive" due to their method of generating text
 
 In LLMs, what this means is that the model predicts the next word or token in a sequence based on *all* the words or tokens that have come before it. That's *all* of it, not just the current question being asked in a long back-and-forth chat conversation. In humans, we naturally maintain coherence and context in a conversation by just... participating in the conversation.
 
-However, while chats with ChatGPT mimic a conversational style, with each response building upon the previous dialogue, the moment ChatGPT finishes writing a response, it has no memory of what it just said. Take a look at what would happen with this same conversation without the *entire discourse* being back fed to ChatGPT behind the scenes:
+However, while chats with ChatGPT mimic a conversational style, with each response building upon the previous dialogue, the moment ChatGPT finishes writing a response, it has no memory of what it just said. Take a look at what would happen with this same conversation without the *entire discourse* being fed back to ChatGPT behind the scenes:
 
-### How ChatGPT would respond without being fed the whole conversation.
+### How would ChatGPT respond without being fed the whole conversation?
 
-![How ChatGPT would respond without being fed the whole conversation:](chatgpt-photosynthesis-3.jpeg)
+![A black and white comic panel featuring a conversation between a woman and a person wearing a 'CHATGPT' shirt. The woman asks, 'What is photosynthesis?' The person replies, 'Photosynthesis is the process by which plants use sunlight to synthesize nutrients from carbon dioxide and water.' The woman then asks, 'Can humans do it?' to which the person humorously responds, 'Can humans do what?' The characters are depicted in a lighthearted, cartoonish style, with the focus on their dialogue.](chatgpt-photosynthesis-3.jpeg)
 
 ## Trick #2: As your conversation grows, ChatGPT will quietly remove the oldest parts from the beginning.
 
@@ -64,27 +64,27 @@ What this means is that the GPT-3.5 model can comprehend a maximum of 4,096 toke
 
 There's often confusion about what the token limit means regarding input and output: can we give ChatGPT 3,000 words and expect it to be able to produce 3,000 words back? The answer is unfortunately no; the context length of 4,096 tokens covers both the input (prompt) and the output (response). This results in a trade-off where we have to balance the amount of information we give in a prompt with the length of the response we get from the model.
    
-1. *Input (Prompt):* A longer prompt leaves less room for a meaningful response; if the input uses 4,000 tokens, the response can only be 96 tokens long to stay within the token limit. 
+1. *Input (prompt):* A longer prompt leaves less room for a meaningful response; if the input uses 4,000 tokens, the response can only be 96 tokens long to stay within the token limit. 
 
-2. *Output (Response):* A shorter prompt could lead to a longer response as long as the combined length doesn't exceed the token limit, but you may not be able to include information in the prompt.
+2. *Output (response):* A shorter prompt could lead to a longer response as long as the combined length doesn't exceed the token limit, but you may not be able to include information in the prompt.
 
 ### The chat problem
 
 Do you see where this becomes problematic? Previously, we saw how the entire conversation has to be fed to the model so that it remembers what has already been discussed. Combining this with the context length, the result is that as you talk more and more with ChatGPT, eventually the combined totals of what you've asked and what it has replied will exceed the 4,096 token limit, and it won't be able to answer any more.
 
-### A visualization of ChatGPT simultaneously printing and scanning back in the entire conversation as it grows to extreme proportions.
+### A visualization of ChatGPT simultaneously printing and scanning back in the entire conversation as it grows to extreme proportions
 
-![ChatGPT accumulating a very long chat](rolled-chatgpt.jpg)
+![An illustration showcasing a printer labeled 'ChatGPT' in the foreground, and a scanner in the background, with a large loop of paper moving between them. The printer is actively printing the paper, which then rises up, forms a significant loop, and clearly feeds into the scanner. The paper should be filled with printed text, resembling pages of a book. The drawing should vividly depict the paper's journey from the 'ChatGPT' printer, through the loop, and into the scanner.](rolled-chatgpt.jpg)
 
 #### Conversation Length and Token Limitations in LLMs
    
-So how does ChatGPT handle this limitation? As your conversation with it grows, the number of tokens eventually exceeds the model's context window (e.g., 4,096 tokens for GPT-3.5). ChatGPT invisibly removes the oldest parts of the conversation to remain within the limit. This method—using a rolling window of context—is certainly one of the easiest to implement, but oftentimes it is not the perfect solution. Some chat alternative front-ends like [TypingMind](https://www.typingmind.com/) both warn you when the context limit has been reached and allow you to manually delete sections of the chat that you don't need anymore. This lets you choose what information you want to remain in the chat, and has the bizarre philosophical effect of "editing the memory" of GPT.
+So how does ChatGPT handle this limitation? As your conversation with it grows, the number of tokens eventually exceeds the model's context window (e.g., 4,096 tokens for GPT-3.5). ChatGPT invisibly removes the oldest parts of the conversation to remain within the limit. This method-using a rolling window of context-is certainly one of the easiest to implement, but oftentimes it is not the perfect solution. Some chat alternative front-ends, like [TypingMind](https://www.typingmind.com/) both warn you when the context limit has been reached and allow you to manually delete sections of the chat that you don't need anymore. This lets you choose what information you want to remain in the chat and has the bizarre philosophical effect of "editing the memory" of GPT.
 
 For your average user using the web version of ChatGPT, what this means is that the longer your conversation, the sooner ChatGPT will start forgetting things you said at the beginning of the chat.
 
-### Another visualization of ChatGPT trimming away the start of your conversation behind the scenes.
+### Another visualization of ChatGPT trimming away the start of your conversation behind the scenes
 
-![ChatGPT accumulating a very long chat](chatgpt-cutting.jpg)
+![A cartoon depicting a woman wearing a "ChatGPT" shirt, actively engaged in cutting a large roll of paper on the floor. The paper, covered in text like a book, is visibly being cut by the scissors in the woman's hands. The cut is halfway through the paper, illustrating the action of cutting. The cartoon should emphasize the humorous situation, with the woman's expression showing focus and the absurdly long paper being sliced by the scissors in a detailed and exaggerated style.](chatgpt-cutting.jpg)
 
 It's good to be mindful of this restriction, especially when referring back to earlier parts of a conversation that might have been truncated due to token limitations—the LLM will not be able to recall these anymore, but the web version of ChatGPT will not tell you. There's also always the risk that it could hallucinate answers based on other parts of the conversation if the beginning is trimmed off.
 
@@ -92,19 +92,19 @@ Let's take another look at what happens in a more complex yet sillier chat inter
 
 ### Another typical but silly conversation with ChatGPT.
 
-![How ChatGPT pretends to work](chatgpt-name-1.jpeg)
+![A black and white comic panel depicts a woman and a person wearing a 'CHATGPT' shirt having a conversation about rhymes. The woman says, 'My name is Jane! Can you give me a word that rhymes with my name?' The person responds, 'Certainly! The word "train" rhymes with "Jane".' She asks for another, and they reply, 'Of course! The word "plane" rhymes with "Jane".' She requests yet another, and the person concludes, '"Brain" rhymes with "Jane" as well.' The drawing style is playful and cartoonish.](chatgpt-name-1.jpeg)
 
 ### Again, this is what is actually going on behind the scenes.
 
-![How ChatGPT pretends to work](chatgpt-name-2.jpeg)
+![A black and white comic strip portrays a dialogue between a woman and a person wearing a 'CHATGPT' shirt. The woman is labeled 'USER' and asks, 'My name is Jane! Can you give me a word that rhymes with my name?' The 'CHATGPT' character responds, 'Certainly! The word "train" rhymes with "Jane".' The 'USER' asks for another word, and 'CHATGPT' says, 'Of course! The word "plane" rhymes with "Jane".' The 'USER' requests another, prompting 'CHATGPT' to conclude with, '"Brain" rhymes with "Jane".](chatgpt-name-2.jpeg)
 
 ### Now let's suppose we have a long enough conversation that the beginning is trimmed off. ChatGPT might either state that it's forgotten the name entirely or hallucinate it.
 
-![How ChatGPT pretends to work](chatgpt-name-4.jpeg)
+![A black and white comic strip displays a woman labeled 'USER' asking a person in a 'CHATGPT' shirt for a word that rhymes with her name, Jane. Initially, 'CHATGPT' provides 'train' as a rhyming word. A series of speech bubbles follow with the text '…blah blah…?' and '…blah!' indicating an inaudible conversation. In the last panel, the 'USER' asks for another rhyming word, and 'CHATGPT' amusingly offers 'jelly,' humorously mispronouncing 'Jane' as 'Kelly.' The artwork is lighthearted.](chatgpt-name-3.jpeg)
 
 ### And finally, if we try to escape this problem by not feeding ChatGPT the entire conversation, it will forget it all the moment it finishes generating each answer.
 
-![How ChatGPT pretends to work](chatgpt-name-3.jpeg)
+![A black and white comic strip features a woman and a person wearing a 'CHATGPT' shirt. The woman says, 'My name is Jane! Can you give me a word that rhymes with my name?' The person replies, 'Certainly! The word "train" rhymes with "Jane".' She expresses delight and asks for another, to which the person humorously responds, 'Sure! Another what?' She clarifies she wants another word that rhymes with her name, and the person cheekily responds, 'I'd be happy to help! What's your name?'](chatgpt-name-4.jpeg)
 
 Since ChatGPT's debut in November 2022, GPT-4 has been released with both 8,192 and 32,768 context lengths. This made things a lot better in terms of tracking long conversations, and in November 2023, GPT-4 Turbo was released with a 128k context length. Things are looking increasingly good for these models' ability to track long conversations. However, despite GPT-4 Turbo's massive amount of context, it still has a completion limit of 4,096 tokens, so it will always generate a maximum of about 3,000 words.
 
@@ -120,10 +120,12 @@ However, the stateless nature also means these models cannot remember user prefe
 
 ## Getting a bit more technical
 
-Prominent examples of such layers include [LangChain](https://www.langchain.com/), [LlamaIndex](https://www.llamaindex.ai/), and [Haystack](https://haystack.deepset.ai/). These layers add flexibility in managing the limited context that LLMs can handle by offering various strategies. For instance, when approaching the token limit, choices must be made: Should a rolling window approach be used to discard older text like in the web ChatGPT, or should GPT be utilized to summarize previous information? Is it more important to retain the initial context, like a source article, while removing less critical middle or later sections? Alternatively, should retrieval augmented generation (RAG, more on that in a later blog) techniques be employed to integrate external data into the token stream? These decisions vary based on the specific goals of the implementation. The most effective architectures often consist of specialized components interwoven to achieve a wide array of practical outcomes, allowing for more nuanced and effective user interactions.
+Prominent examples of such layers include [LangChain](https://www.langchain.com/), [LlamaIndex](https://www.llamaindex.ai/), and [Haystack](https://haystack.deepset.ai/). These layers add flexibility to managing the limited context that LLMs can handle by offering various strategies. For instance, when approaching the token limit, choices must be made: Should a rolling window approach be used to discard older text, like in the web ChatGPT, or should GPT be utilized to summarize previous information? Is it more important to retain the initial context, like a source article, while removing less critical middle or later sections? Alternatively, should retrieval augmented generation (RAG-more on that in a later blog) techniques be employed to integrate external data into the token stream? These decisions vary based on the specific goals of the implementation. The most effective architectures often consist of specialized components interwoven to achieve a wide array of practical outcomes, allowing for more nuanced and effective user interactions.
 
 
-![A confused stateless robot](confused.jpg)
+![A cartoon depicting a robot sitting at a desk with an old-fashioned typewriter. The robot appears confused, as if it's trying to remember something. It's looking upwards with a thoughtful expression, one metal hand hovering over the typewriter keys. The scene is in black and white, capturing the essence of a classic cartoon, with simple lines and a humorous touch.
+
+](confused.jpg)
 
 :::info[Key Takeaways]
 
@@ -135,11 +137,11 @@ Prominent examples of such layers include [LangChain](https://www.langchain.com/
 
 - If you're having a lengthy conversation on the ChatGPT web app and it relies on information from the start, consider copying and pasting the necessary parts into a new chat to avoid losing crucial context.
 
-- Tools like [TypingMind](https://www.typingmind.com/) allow users to selectively cut unimportant parts of the conversation, and even direct the chat from a selected point. This ability to manually manage the conversation can provide a more controlled experience with ChatGPT.
+- Tools like [TypingMind](https://www.typingmind.com/) allow users to selectively cut unimportant parts of the conversation and even direct the chat from a selected point. This ability to manually manage the conversation can provide a more controlled experience with ChatGPT.
 
-- ChatGPT, and other similar models like GPT-3 and GPT-4, are designed to be stateless for a variety of reasons such as scalability, efficiency, and data privacy. 
+- ChatGPT and other similar models, like GPT-3 and GPT-4, are designed to be stateless for a variety of reasons, such as scalability, efficiency, and data privacy. 
 
-- While stateless nature makes these models safe and manageable at scale, the lack of memory and contextual retention is a limitation when it comes to personalization and continuous learning. Layered implementations like [LangChain](https://www.langchain.com/), [LlamaIndex](https://www.llamaindex.ai/), and [Haystack](https://haystack.deepset.ai/) help in managing this constraint.
+- While their stateless nature makes these models safe and manageable at scale, the lack of memory and contextual retention is a limitation when it comes to personalization and continuous learning. Layered implementations like [LangChain](https://www.langchain.com/), [LlamaIndex](https://www.llamaindex.ai/), and [Haystack](https://haystack.deepset.ai/) help in managing this constraint.
 
 - As more advanced versions like GPT-4 with 8,192 and 32,768 context lengths and GPT-4 Turbo with a 128k context length come up, it enables longer conversations. However, there will always be a completion limit, currently at about 3,000 words (4,096 tokens) for GPT-4 Turbo. This completion limit may come as a surprise given the much larger [128k context of the model.](https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo)
 
