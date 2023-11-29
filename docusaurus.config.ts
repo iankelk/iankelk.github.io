@@ -48,6 +48,8 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
+          readingTime: ({content, defaultReadingTime}) =>
+            defaultReadingTime({content, options: {wordsPerMinute: 300}}),
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} Short Attention Blog`,
