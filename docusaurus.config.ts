@@ -38,10 +38,12 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // remarkPlugins: [dashToEmdash],
+          remarkPlugins: [require('./src/remark/dash-to-emdash')],
         },
         blog: {
           showReadingTime: true,
+          remarkPlugins: [require('./src/remark/dash-to-emdash')],
+
         },
         theme: {
           customCss: './src/css/custom.css',
