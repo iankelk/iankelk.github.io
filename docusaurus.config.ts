@@ -125,7 +125,7 @@ const config: Config = {
         //     },
         //   ],
         // },
-        {
+       {
           title: 'Social',
           items: [
             {
@@ -147,7 +147,26 @@ const config: Config = {
             },
           ],
         },
+        // New Feeds section
+        {
+          title: 'Feeds',
+          items: [
+            {
+              label: 'RSS',
+              href: '/blog/rss.xml',
+            },
+            {
+              label: 'Atom',
+              href: '/blog/atom.xml',
+            },
+            {
+              label: 'JSON',
+              href: '/blog/feed.json',
+            },
+          ],
+        },
       ],
+      // Existing copyright...
       copyright: `Copyright © ${new Date().getFullYear()} Short Attention Blog`,
     },
     prism: {
