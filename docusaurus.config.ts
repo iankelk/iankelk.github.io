@@ -1,7 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import dashToEmdash from './src/remark/dash-to-emdash'; 
+// import dashToEmdash from './src/remark/dash-to-emdash'; 
 
 const config: Config = {
   title: 'Short Attention',
@@ -38,7 +38,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          remarkPlugins: [dashToEmdash],
+          // remarkPlugins: [dashToEmdash],
         },
         blog: {
           showReadingTime: true,
