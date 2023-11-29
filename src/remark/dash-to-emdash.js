@@ -1,6 +1,6 @@
-import visit from 'unist-util-visit';
+import { visit } from 'unist-util-visit';
 
-const dashToEmdash = () => {
+const dashToEmdash = (options) => {
   const transformer = (ast) => {
     visit(ast, 'text', (node) => {
       if (node.value) {
