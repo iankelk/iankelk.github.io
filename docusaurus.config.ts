@@ -149,19 +149,19 @@ const config: Config = {
         },
         // New Feeds section
         {
-          title: 'Feeds',
+          title: 'Blog Feeds',
           items: [
             {
               label: 'RSS',
-              href: '/blog/rss.xml',
+              href: 'https://kelk.ai/blog/rss.xml',
             },
             {
               label: 'Atom',
-              href: '/blog/atom.xml',
+              href: 'https://kelk.ai/blog/atom.xml',
             },
             {
               label: 'JSON',
-              href: '/blog/feed.json',
+              href: 'https://kelk.ai/blog/feed.json',
             },
           ],
         },
