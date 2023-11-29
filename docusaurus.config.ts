@@ -39,20 +39,31 @@ const config: Config = {
       'classic',
       {
         docs: {
-            sidebarPath: './sidebars.ts',
-            remarkPlugins: [
-                remarkMath,
-                require('./src/remark/dash-to-emdash')
-            ],
-            rehypePlugins: [rehypeKatex],
+          sidebarPath: './sidebars.ts',
+          remarkPlugins: [
+            remarkMath,
+            require('./src/remark/dash-to-emdash')
+          ],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
-            showReadingTime: true,
-            remarkPlugins: [
-                remarkMath,
-                require('./src/remark/dash-to-emdash')
-            ],
-            rehypePlugins: [rehypeKatex],
+          showReadingTime: true,
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} Ian Kelk`,
+            createFeedItems: async (params) => {
+              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              return defaultCreateFeedItems({
+                // keep only the 10 most recent blog posts in the feed
+                blogPosts: blogPosts.filter((item, index) => index < 20),
+              });
+            },
+          },
+          remarkPlugins: [
+            remarkMath,
+            require('./src/remark/dash-to-emdash')
+          ],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: './src/css/custom.css',
