@@ -123,9 +123,7 @@ However, the stateless nature also means these models cannot remember user prefe
 Prominent examples of such layers include [LangChain](https://www.langchain.com/), [LlamaIndex](https://www.llamaindex.ai/), and [Haystack](https://haystack.deepset.ai/). These layers add flexibility to managing the limited context that LLMs can handle by offering various strategies. For instance, when approaching the token limit, choices must be made: Should a rolling window approach be used to discard older text, like in the web ChatGPT, or should GPT be utilized to summarize previous information? Is it more important to retain the initial context, like a source article, while removing less critical middle or later sections? Alternatively, should retrieval augmented generation (RAG—more on that in a later blog) techniques be employed to integrate external data into the token stream? These decisions vary based on the specific goals of the implementation. The most effective architectures often consist of specialized components interwoven to achieve a wide array of practical outcomes, allowing for more nuanced and effective user interactions.
 
 
-![A cartoon depicting a robot sitting at a desk with an old-fashioned typewriter. The robot appears confused, as if it's trying to remember something. It's looking upwards with a thoughtful expression, one metal hand hovering over the typewriter keys. The scene is in black and white, capturing the essence of a classic cartoon, with simple lines and a humorous touch.
-
-](confused.jpg)
+![A cartoon depicting a robot sitting at a desk with an old-fashioned typewriter. The robot appears confused, as if it's trying to remember something. It's looking upwards with a thoughtful expression, one metal hand hovering over the typewriter keys. The scene is in black and white, capturing the essence of a classic cartoon, with simple lines and a humorous touch.](confused.jpg)
 
 :::info[Key Takeaways]
 
