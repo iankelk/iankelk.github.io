@@ -6,7 +6,21 @@ tags: [chat history, chatgpt, context, chat, AI, LLM, ML, chatbot, chatbots, AIE
 image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2023-11-26-stateless/social-card.jpg?raw=true
 ---
 
-import Figure from "@site/src/components/figure";
+import Figure from '@site/src/components/figure';
+import chatgptPhotosynthesisImage1 from './chatgpt-photosynthesis-1.jpeg';
+import chatgptPhotosynthesisImage2 from './chatgpt-photosynthesis-2.jpeg';
+import chatgptPhotosynthesisImage3 from './chatgpt-photosynthesis-3.jpeg';
+
+import chatgptNameImage1 from './chatgpt-name-1.jpeg';
+import chatgptNameImage2 from './chatgpt-name-2.jpeg';
+import chatgptNameImage3 from './chatgpt-name-3.jpeg';
+import chatgptNameImage4 from './chatgpt-name-4.jpeg';
+
+import rolledChatgpt from './rolled-chatgpt.jpg';
+import chatGPTCutting from './chatgpt-cutting.jpg';
+
+import confusedRobot from './confused.jpg';
+
 
 Remember the first time you used ChatGPT and how amazed you were to find yourself having what appeared to be a full-on conversation with an artificial intelligence? While ChatGPT was (and still is) mind-blowing, it uses a few tricks to make things appear more familiar.
 
@@ -36,11 +50,19 @@ However, without this context, ChatGPT would have no knowledge of what was previ
 
 ### A typical short conversation with ChatGPT might go like this:
 
-![A black and white comic strip depicts a conversation between a woman and a person wearing a 'CHATGPT' shirt. The woman asks, 'What is photosynthesis?' The person responds, 'Photosynthesis is the process by which plants use sunlight to synthesize nutrients from carbon dioxide and water.' She follows up with, 'Can humans do it?' to which the person replies, 'No, humans cannot perform photosynthesis.' The scene is simple with only the two characters and their speech bubbles.](chatgpt-photosynthesis-1.jpeg)
+<Figure
+  image={chatgptPhotosynthesisImage1}
+  alt="A black and white comic strip depicts a conversation between a woman and a person wearing a 'CHATGPT' shirt. The woman asks, 'What is photosynthesis?' The person responds, 'Photosynthesis is the process by which plants use sunlight to synthesize nutrients from carbon dioxide and water.' She follows up with, 'Can humans do it?' to which the person replies, 'No, humans cannot perform photosynthesis.' The scene is simple with only the two characters and their speech bubbles."
+  caption="People images by OpenAI DALL-E 3. Text and comic bubbles by author."
+/>
 
 ### However, this is what is actually going on behind the scenes:
 
-![A black and white comic strip showing a dialogue between a woman and a person wearing a 'CHATGPT' shirt. The woman is labeled 'USER' and asks, 'What is photosynthesis?' The person labeled 'CHATGPT' answers, 'Photosynthesis is the process by which plants use sunlight to synthesize nutrients from carbon dioxide and water.' The woman, termed 'USER' again, follows with, 'Can humans do it?' and receives the reply, 'No, humans cannot perform photosynthesis.' Both characters are drawn as cartoons.](chatgpt-photosynthesis-2.jpeg)
+<Figure
+  image={chatgptPhotosynthesisImage2}
+  alt="A black and white comic strip showing a dialogue between a woman and a person wearing a 'CHATGPT' shirt. The woman is labeled 'USER' and asks, 'What is photosynthesis?' The person labeled 'CHATGPT' answers, 'Photosynthesis is the process by which plants use sunlight to synthesize nutrients from carbon dioxide and water.' The woman, termed 'USER' again, follows with, 'Can humans do it?' and receives the reply, 'No, humans cannot perform photosynthesis.' Both characters are drawn as cartoons."
+  caption="People images by OpenAI DALL-E 3. Text and comic bubbles by author."
+/>
 
 Notice that when the woman asks her second question, she has to reiterate the entire previous conversation, complete with tags on who said what. Can you imagine talking to a person where every time it was your turn to speak, you had to repeat the entire conversation up to that point? This is how ChatGPT (and all current LLMs) work. They require using their own outputs, plus the prompts that generated these outputs, to be prepended to the start of every new prompt from the user.
 
@@ -52,7 +74,11 @@ However, while chats with ChatGPT mimic a conversational style, with each respon
 
 ### How would ChatGPT respond without being fed the whole conversation?
 
-![A black and white comic panel featuring a conversation between a woman and a person wearing a 'CHATGPT' shirt. The woman asks, 'What is photosynthesis?' The person replies, 'Photosynthesis is the process by which plants use sunlight to synthesize nutrients from carbon dioxide and water.' The woman then asks, 'Can humans do it?' to which the person humorously responds, 'Can humans do what?' The characters are depicted in a lighthearted, cartoonish style, with the focus on their dialogue.](chatgpt-photosynthesis-3.jpeg)
+<Figure 
+  image={chatgptPhotosynthesisImage3}
+  alt="A black and white comic panel featuring a conversation between a woman and a person wearing a 'CHATGPT' shirt. The woman asks, 'What is photosynthesis?' The person replies, 'Photosynthesis is the process by which plants use sunlight to synthesize nutrients from carbon dioxide and water.' The woman then asks, 'Can humans do it?' to which the person humorously responds, 'Can humans do what?' The characters are depicted in a lighthearted, cartoonish style, with the focus on their dialogue." 
+  caption="People images by OpenAI DALL-E 3. Text and comic bubbles by author." 
+/>
 
 ## Trick #2: As your conversation grows, ChatGPT will quietly remove the oldest parts from the beginning.
 
@@ -74,7 +100,11 @@ Do you see where this becomes problematic? Previously, we saw how the entire con
 
 ### A visualization of ChatGPT simultaneously printing and scanning back in the entire conversation as it grows to extreme proportions
 
-![An illustration showcasing a printer labeled 'ChatGPT' in the foreground, and a scanner in the background, with a large loop of paper moving between them. The printer is actively printing the paper, which then rises up, forms a significant loop, and clearly feeds into the scanner. The paper should be filled with printed text, resembling pages of a book. The drawing should vividly depict the paper's journey from the 'ChatGPT' printer, through the loop, and into the scanner.](rolled-chatgpt.jpg)
+<Figure 
+  image={rolledChatgpt}
+  alt="An illustration showcasing a printer labeled 'ChatGPT' in the foreground, and a scanner in the background, with a large loop of paper moving between them. The printer is actively printing the paper, which then rises up, forms a significant loop, and clearly feeds into the scanner. The paper should be filled with printed text, resembling pages of a book. The drawing should vividly depict the paper's journey from the 'ChatGPT' printer, through the loop, and into the scanner." 
+  caption="Generated with OpenAI DALL-E 3." 
+/>
 
 #### Conversation Length and Token Limitations in LLMs
    
@@ -84,7 +114,11 @@ For your average user using the web version of ChatGPT, what this means is that 
 
 ### Another visualization of ChatGPT trimming away the start of your conversation behind the scenes
 
-![A cartoon depicting a woman wearing a "ChatGPT" shirt, actively engaged in cutting a large roll of paper on the floor. The paper, covered in text like a book, is visibly being cut by the scissors in the woman's hands. The cut is halfway through the paper, illustrating the action of cutting. The cartoon should emphasize the humorous situation, with the woman's expression showing focus and the absurdly long paper being sliced by the scissors in a detailed and exaggerated style.](chatgpt-cutting.jpg)
+<Figure 
+  image={chatGPTCutting}
+  alt="A cartoon depicting a woman wearing a 'ChatGPT' shirt, actively engaged in cutting a large roll of paper on the floor. The paper, covered in text like a book, is visibly being cut by the scissors in the woman's hands. The cut is halfway through the paper, illustrating the action of cutting. The cartoon should emphasize the humorous situation, with the woman's expression showing focus and the absurdly long paper being sliced by the scissors in a detailed and exaggerated style."
+  caption="Generated with OpenAI DALL-E 3." 
+/>
 
 It's good to be mindful of this restriction, especially when referring back to earlier parts of a conversation that might have been truncated due to token limitations--the LLM will not be able to recall these anymore, but the web version of ChatGPT will not tell you. There's also always the risk that it could hallucinate answers based on other parts of the conversation if the beginning is trimmed off.
 
@@ -92,19 +126,35 @@ Let's take another look at what happens in a more complex yet sillier chat inter
 
 ### Another typical but silly conversation with ChatGPT.
 
-![A black and white comic panel depicts a woman and a person wearing a 'CHATGPT' shirt having a conversation about rhymes. The woman says, 'My name is Jane! Can you give me a word that rhymes with my name?' The person responds, 'Certainly! The word "train" rhymes with "Jane".' She asks for another, and they reply, 'Of course! The word "plane" rhymes with "Jane".' She requests yet another, and the person concludes, '"Brain" rhymes with "Jane" as well.' The drawing style is playful and cartoonish.](chatgpt-name-1.jpeg)
+<Figure 
+  image={chatgptNameImage1}
+  alt="A black and white comic panel depicts a woman and a person wearing a 'CHATGPT' shirt having a conversation about rhymes. The woman says, 'My name is Jane! Can you give me a word that rhymes with my name?' The person responds, 'Certainly! The word 'train' rhymes with 'Jane'.' She asks for another, and they reply, 'Of course! The word 'plane' rhymes with 'Jane'.' She requests yet another, and the person concludes, ''Brain' rhymes with 'Jane' as well.' The drawing style is playful and cartoonish."
+  caption="People images by OpenAI DALL-E 3. Text and comic bubbles by author." 
+/>
 
 ### Again, this is what is actually going on behind the scenes.
 
-![A black and white comic strip portrays a dialogue between a woman and a person wearing a 'CHATGPT' shirt. The woman is labeled 'USER' and asks, 'My name is Jane! Can you give me a word that rhymes with my name?' The 'CHATGPT' character responds, 'Certainly! The word "train" rhymes with "Jane".' The 'USER' asks for another word, and 'CHATGPT' says, 'Of course! The word "plane" rhymes with "Jane".' The 'USER' requests another, prompting 'CHATGPT' to conclude with, '"Brain" rhymes with "Jane".](chatgpt-name-2.jpeg)
+<Figure 
+  image={chatgptNameImage2}
+  alt="A black and white comic strip portrays a dialogue between a woman and a person wearing a 'CHATGPT' shirt. The woman is labeled 'USER' and asks, 'My name is Jane! Can you give me a word that rhymes with my name?' The 'CHATGPT' character responds, 'Certainly! The word 'train' rhymes with 'Jane'.' The 'USER' asks for another word, and 'CHATGPT' says, 'Of course! The word 'plane' rhymes with 'Jane'.' The 'USER' requests another, prompting 'CHATGPT' to conclude with, ''Brain' rhymes with 'Jane'."
+  caption="People images by OpenAI DALL-E 3. Text and comic bubbles by author." 
+/>
 
 ### Now let's suppose we have a long enough conversation that the beginning is trimmed off. ChatGPT might either state that it's forgotten the name entirely or hallucinate it.
 
-![A black and white comic strip displays a woman labeled 'USER' asking a person in a 'CHATGPT' shirt for a word that rhymes with her name, Jane. Initially, 'CHATGPT' provides 'train' as a rhyming word. A series of speech bubbles follow with the text '…blah blah…?' and '…blah!' indicating an inaudible conversation. In the last panel, the 'USER' asks for another rhyming word, and 'CHATGPT' amusingly offers 'jelly,' humorously mispronouncing 'Jane' as 'Kelly.' The artwork is lighthearted.](chatgpt-name-3.jpeg)
+<Figure 
+  image={chatgptNameImage3}
+  alt="A black and white comic strip displays a woman labeled 'USER' asking a person in a 'CHATGPT' shirt for a word that rhymes with her name, Jane. Initially, 'CHATGPT' provides 'train' as a rhyming word. A series of speech bubbles follow with the text '…blah blah…?' and '…blah!' indicating an inaudible conversation. In the last panel, the 'USER' asks for another rhyming word, and 'CHATGPT' amusingly offers 'jelly,' humorously mispronouncing 'Jane' as 'Kelly.' The artwork is lighthearted."
+  caption="People images by OpenAI DALL-E 3. Text and comic bubbles by author." 
+/>
 
 ### And finally, if we try to escape this problem by not feeding ChatGPT the entire conversation, it will forget it all the moment it finishes generating each answer.
 
-![A black and white comic strip features a woman and a person wearing a 'CHATGPT' shirt. The woman says, 'My name is Jane! Can you give me a word that rhymes with my name?' The person replies, 'Certainly! The word "train" rhymes with "Jane".' She expresses delight and asks for another, to which the person humorously responds, 'Sure! Another what?' She clarifies she wants another word that rhymes with her name, and the person cheekily responds, 'I'd be happy to help! What's your name?'](chatgpt-name-4.jpeg)
+<Figure 
+  image={chatgptNameImage4}
+  alt="A black and white comic strip features a woman and a person wearing a 'CHATGPT' shirt. The woman says, 'My name is Jane! Can you give me a word that rhymes with my name?' The person replies, 'Certainly! The word 'train' rhymes with 'Jane'.' She expresses delight and asks for another, to which the person humorously responds, 'Sure! Another what?' She clarifies she wants another word that rhymes with her name, and the person cheekily responds, 'I'd be happy to help! What's your name?'"
+  caption="People images by OpenAI DALL-E 3. Text and comic bubbles by author." 
+/>
 
 Since ChatGPT's debut in November 2022, GPT-4 has been released with both 8,192 and 32,768 context lengths. This made things a lot better in terms of tracking long conversations, and in November 2023, GPT-4 Turbo was released with a 128k context length. Things are looking increasingly good for these models' ability to track long conversations. However, despite GPT-4 Turbo's massive amount of context, it still has a completion limit of 4,096 tokens, so it will always generate a maximum of about 3,000 words.
 
@@ -122,8 +172,11 @@ However, the stateless nature also means these models cannot remember user prefe
 
 Prominent examples of such layers include [LangChain](https://www.langchain.com/), [LlamaIndex](https://www.llamaindex.ai/), and [Haystack](https://haystack.deepset.ai/). These layers add flexibility to managing the limited context that LLMs can handle by offering various strategies. For instance, when approaching the token limit, choices must be made: Should a rolling window approach be used to discard older text, like in the web ChatGPT, or should GPT be utilized to summarize previous information? Is it more important to retain the initial context, like a source article, while removing less critical middle or later sections? Alternatively, should retrieval augmented generation (RAG--more on that in a later blog) techniques be employed to integrate external data into the token stream? These decisions vary based on the specific goals of the implementation. The most effective architectures often consist of specialized components interwoven to achieve a wide array of practical outcomes, allowing for more nuanced and effective user interactions.
 
-
-![A cartoon depicting a robot sitting at a desk with an old-fashioned typewriter. The robot appears confused, as if it's trying to remember something. It's looking upwards with a thoughtful expression, one metal hand hovering over the typewriter keys. The scene is in black and white, capturing the essence of a classic cartoon, with simple lines and a humorous touch.](confused.jpg)
+<Figure 
+  image={confusedRobot}
+  alt="A cartoon depicting a robot sitting at a desk with an old-fashioned typewriter. The robot appears confused, as if it's trying to remember something. It's looking upwards with a thoughtful expression, one metal hand hovering over the typewriter keys. The scene is in black and white, capturing the essence of a classic cartoon, with simple lines and a humorous touch."
+  caption="Generated with OpenAI DALL-E 3."
+/>
 
 :::info[Key Takeaways]
 
