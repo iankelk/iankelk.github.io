@@ -7,6 +7,8 @@ image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2023-11-26-st
 ---
 
 import Figure from '@site/src/components/figure';
+import robotDesk from './social-card.jpg';
+
 import chatgptPhotosynthesisImage1 from './chatgpt-photosynthesis-1.jpeg';
 import chatgptPhotosynthesisImage2 from './chatgpt-photosynthesis-2.jpeg';
 import chatgptPhotosynthesisImage3 from './chatgpt-photosynthesis-3.jpeg';
@@ -21,7 +23,6 @@ import chatGPTCutting from './chatgpt-cutting.jpg';
 
 import confusedRobot from './confused.jpg';
 
-
 Remember the first time you used ChatGPT and how amazed you were to find yourself having what appeared to be a full-on conversation with an artificial intelligence? While ChatGPT was (and still is) mind-blowing, it uses a few tricks to make things appear more familiar.
 
 While the title of this article is a bit tongue-in-cheek, it is most certainly not clickbait. ChatGPT does indeed use two notable hidden techniques to simulate human conversation, and the more you know about how they work, the more effectively you can use the technology.
@@ -35,8 +36,11 @@ While the title of this article is a bit tongue-in-cheek, it is most certainly n
 
 :::
 
-
-![A black and white illustration of a late-night talk show setting, titled 'The ChatGPT Show.' A classic, boxy robot with visible joints and a round head featuring antenna and eyes, is depicted as the guest. It's gesturing with its hands as if in conversation. The host, a man in a suit with neat hair and a professional demeanor, sits across from the robot at a curved desk. Microphones and notes are on the desk, with an urban skyline visible through the window in the background.](social-card.jpg)
+<Figure
+  image={robotDesk}
+  alt="A black and white illustration of a late-night talk show setting, titled 'The ChatGPT Show.' A classic, boxy robot with visible joints and a round head featuring antenna and eyes, is depicted as the guest. It's gesturing with its hands as if in conversation. The host, a man in a suit with neat hair and a professional demeanor, sits across from the robot at a curved desk. Microphones and notes are on the desk, with an urban skyline visible through the window in the background."
+  caption="Generated with OpenAI DALL-E 3."
+/>
 
 <!-- truncate -->
 
