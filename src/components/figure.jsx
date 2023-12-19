@@ -1,6 +1,8 @@
+// src/components/Figure.jsx
+
 import React from "react";
 
-export default function Figure({ image, alt, caption }) {
+const Figure = ({ image, alt, caption }) => {
   // Split the caption text by newline characters and render with <br /> tags
   const captionContent = caption.split('\\n').map((line, index, array) => (
     <React.Fragment key={index}>
@@ -31,4 +33,6 @@ export default function Figure({ image, alt, caption }) {
       </figcaption>
     </figure>
   );
-}
+};
+
+export default Figure;

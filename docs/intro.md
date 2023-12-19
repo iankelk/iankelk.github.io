@@ -3,6 +3,8 @@ sidebar_position: 1
 ---
 
 import Figure from "@site/src/components/figure";
+import ChatConversation from '@site/src/components/chat_conversation';
+
 
 
 # Tutorial Intro
@@ -49,13 +51,16 @@ The `npm run start` command builds your website locally and serves it through a 
 
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
 
-<!-- <Figure 
-  src="/img/social-card.jpg" 
-  alt="A black and white illustration of a late-night talk show setting, titled 'The ChatGPT Show.' A classic, boxy robot with visible joints and a round head featuring antenna and eyes, is depicted as the guest. It's gesturing with its hands as if in conversation. The host, a man in a suit with neat hair and a professional demeanor, sits across from the robot at a curved desk. Microphones and notes are on the desk, with an urban skyline visible through the window in the background." 
-  caption="Your caption here" 
-/>
 
-<figure>
-![A black and white illustration of a late-night talk show setting, titled 'The ChatGPT Show.' A classic, boxy robot with visible joints and a round head featuring antenna and eyes, is depicted as the guest. It's gesturing with its hands as if in conversation. The host, a man in a suit with neat hair and a professional demeanor, sits across from the robot at a curved desk. Microphones and notes are on the desk, with an urban skyline visible through the window in the background.](/img/social-card.jpg)
-<figcaption>Your caption</figcaption>
-</figure> -->
+<ChatConversation
+  conversation={[
+    { speaker: 'user', text: 'Hello, how are you?' },
+    { speaker: 'chatbot', text: 'I am fine, thank you! And you?' },
+    { speaker: 'user', text: "What's the difference between naming a file md or mdx? Does it matter for docusaurus?"},
+    { speaker: 'chatbot', text: "In the context of Docusaurus and many static site generators that support MDX is the extension for Markdown files. Markdown is a lightweight markup language with plain text formatting syntax. It's designed to be converted to HTML and often used for readme files, writing messages in online forums, and creating rich text using a plain text editor.- mdx is the extension for MDX files. MDX is an extension of Markdown that allows you to use JSX (JavaScript XML) within your Markdown files. This means that you can import and use React components directly in your Markdown files, enabling interactive and dynamic content within your static pages." },
+    { speaker: 'user', text: 'I am fine, thank you! And you?' },
+    { speaker: 'chatbot', text: 'I am fine, thank you! And you?' },
+  ]}
+  userAvatar="/img/userAvatar.jpeg"
+  chatbotAvatar="/img/chatbotAvatar.jpeg"
+/>
