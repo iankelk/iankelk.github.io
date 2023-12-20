@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[9053],{1228:l=>{l.exports=JSON.parse('{"label":"linear thinking","permalink":"/blog/tags/linear-thinking","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
