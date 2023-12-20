@@ -107,7 +107,7 @@ The following conversation is taken verbatim from ChatGPT with GPT-4:
 />
 ---
 
-#### Interesting... in a completely new chat, let's get more specific and ask again for fourth thing said:
+#### Interesting... in a completely new chat, let's get more specific and ask again for the fourth thing said:
 
 <ChatConversation
   conversation={[
@@ -119,7 +119,7 @@ The following conversation is taken verbatim from ChatGPT with GPT-4:
 />
 ---
 
-#### That answer seemed very familiar! Let's try more in a completely new chat and ask for the seventh line of dialogue:
+#### That answer seemed rather familiar. Let's try more in a completely new chat and ask for the seventh line of dialogue:
 
 <ChatConversation
   conversation={[
@@ -144,13 +144,13 @@ The following conversation is taken verbatim from ChatGPT with GPT-4:
 
 So it seems we can surmise that sharks and octopuses have separate evolutionary paths that are older than dinosaurs, and that's all that GPT-4 thinks is important *no matter where it's mentioned in the conversation.*
 
-## So... GPT-4 can't generate a realistic debate between these two?
+## Does this mean GPT-4 can't generate a realistic debate between these two?
 
 Here's the twist: it totally can. GPT-4 is completely capable of generating this conversation. I gave it this prompt:
 
 > A shark and an octopus are arguing over which one of them evolved from dinosaurs. Can you generate a script where they take turns arguing, and each speaks at least 5 times?
 
-In response, it generates this conversation, which I'll display as a chat. Feel free to skim it, since you'll get the idea after a few back-and-forths.
+In response, it generated the conversation below. Feel free to skim it if you're not into octo-shark facts, since you'll get the idea after a few back-and-forths.
 
 <ChatConversation
   conversation={[
@@ -175,7 +175,7 @@ In response, it generates this conversation, which I'll display as a chat. Feel 
   chatbotAvatar="/img/avatars/octaviaAvatar.png"
 />
 
-Examining the conversation above, we see that the fourth thing said (the second thing by the octopus) was:
+In the conversation above, we note that the fourth thing said (the second thing by the octopus) was:
 
 > Well, being ancient doesn't mean you're related to dinosaurs. It's like saying you're related to a rock because it's old.
 
@@ -183,7 +183,7 @@ and the sixth thing said (the third line from the octopus) was:
 
 > Sharky, dear, having sharp teeth doesn't make you a dino descendant. It just makes you good at biting. Did you know octopuses have three hearts and blue blood? Now that’s evolutionary marvel!
 
-None of these lines have anything to do with what the model previously predicted would be its fourth or sixth lines of dialogue! They're actually much more relevant, and make sense in the context of a conversational debate. The difference in the method of generation is that in this last example, we allow GPT-4 to generate the whole exchange.
+None of these lines have anything to do with what the model previously predicted would be its fourth or sixth lines of dialogue. These lines are actually more relevant, and make sense in the context of a conversational debate. The difference in the method of generation is that in this example, we allowed GPT-4 to generate the whole exchange.
 
 ### What's the lesson here?
 
