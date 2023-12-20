@@ -38,6 +38,8 @@ This is going to be a weird post. And we're going to start with a weird thought 
 
 As I mentioned, this is going to be weird, but I promise there is a point!
 
+<!-- truncate -->
+
 ## Meet Sharky and Octavia
 
 In the vast, shimmering depths of the ocean, near a thriving coral reef bustling with marine life, two extraordinary creatures prepare for a spirited debate. Meet Sharky, a magnificent and slightly brash great white shark, known for his bold claims and commanding presence. Gliding through the water with a confidence that only a top predator possesses, Sharky is ready to defend his views with a fierce determination.
