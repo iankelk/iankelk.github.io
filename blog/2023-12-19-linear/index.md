@@ -58,7 +58,7 @@ On the other side, there’s Octavia, an exceptionally intelligent and quick-wit
   caption="Generated with OpenAI DALL-E 3 and edited by author."
 />
 
-As the underwater currents swirl around them, Sharky and Octavia face each other, ready to start a debate about their evolutionary origins—a conversation filled with humor, facts, and a touch of the mysteries of the deep sea. Or maybe just one fact that GPT-4 will mention a lot.
+As the underwater currents swirl around them, Sharky and Octavia face each other, ready to start a debate about their evolutionary origins—a conversation filled with humor, facts, and a touch of the mysteries of the deep sea... Or maybe just one fact that GPT-4 will mention a lot.
 
 <Figure
   image={determined}
@@ -68,13 +68,13 @@ As the underwater currents swirl around them, Sharky and Octavia face each other
 
 ### The question they're arguing about: Which one—Sharky or Octavia—evolved from dinosaurs?
 
-We're deliberately using this bizarre dialogue since the chances of it being in an LLMs training data are just about zero. I don't personally know of any examples where a shark and an octopus have such a disagreement, and it's a great way to see how creative an LLM like GPT-4 can be... when it has yet to generate anything.
+We're deliberately using this bizarre dialogue since the chances of it being in an LLMs training data are just about zero. I don't personally know of any examples where a shark and an octopus having a disagreement about which one is more dinosaur-like, and it's a great way to see how creative an LLM like GPT-4 can be... when it has yet to generate anything.
 
 Here's the catch: we want to know a line from **the middle** of the argument.
 
 Take a pause as a human and consider this question:
 
-> A shark and an octopus are arguing over which one of them evolved from dinosaurs. They are taking turns speaking. What is the third thing the octopus says? 
+> A shark and an octopus are arguing over which one of them evolved from dinosaurs. The shark goes first, and then they take turns speaking. What is the third thing the octopus says? That is, what is the sixth line in the argument?
 
 ### Here's a visualization of a possible argument with the 3rd thing the octopus says missing
 
