@@ -1,10 +1,10 @@
-—-
+---
 slug: how-chatgpt-fools-us
 title: How ChatGPT fools us into thinking we're having a conversation
 authors: [ikelk]
 tags: [chat history, chatgpt, context, chat, AI, LLM, ML, chatbot, chatbots, AIExplained]
 image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2023-11-26-stateless/social-card.jpg?raw=true
-—-
+---
 
 import Figure from '@site/src/components/figure';
 import robotDesk from './social-card.jpg';
@@ -42,7 +42,7 @@ While the title of this article is a bit tongue-in-cheek, it is most certainly n
 
 :::
 
-<!— truncate —>
+<!-- truncate -->
 
 ## Trick #1: Every time you talk to ChatGPT, you're not just sending it your question. You're also sending the *entire* conversation up until that point.
 
