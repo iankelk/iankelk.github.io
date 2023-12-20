@@ -57,10 +57,32 @@ Open `docs/intro.md` (this page) and edit some lines: the site **reloads automat
     { speaker: 'user', text: 'Hello, how are you?' },
     { speaker: 'chatbot', text: 'I am fine, thank you! And you?' },
     { speaker: 'user', text: "What's the difference between naming a file md or mdx? Does it matter for docusaurus?"},
-    { speaker: 'chatbot', text: "In the context of Docusaurus and many static site generators that support MDX is the extension for Markdown files. Markdown is a lightweight markup language with plain text formatting syntax. It's designed to be converted to HTML and often used for readme files, writing messages in online forums, and creating rich text using a plain text editor.- mdx is the extension for MDX files. MDX is an extension of Markdown that allows you to use JSX (JavaScript XML) within your Markdown files. This means that you can import and use React components directly in your Markdown files, enabling interactive and dynamic content within your static pages." },
+    { speaker: 'chatbot', text: "In the context of Docusaurus and many static site generators that support MDX is the extension for Markdown files. Markdown is a lightweight markup language with plain text formatting syntax. It's designed to be converted to HTML and often used for readme files, writing messages in online forums, and creating rich text using a plain text editor.- mdx is the extension for MDX files. MDX is an extension of Markdown that allows you to use JSX (JavaScript XML) within your Markdown files. This means that you can import and use React components directly in your Markdown files, enabling interactive and dynamic content within your static pages.", comment: 'User greets the chatbot.'  },
     { speaker: 'user', text: 'I am fine, thank you! And you?' },
     { speaker: 'chatbot', text: 'I am fine, thank you! And you?' },
   ]}
   userAvatar="/img/userAvatar.jpeg"
   chatbotAvatar="/img/chatbotAvatar.jpeg"
 />
+
+<ChatConversation
+  conversation={[
+    { speaker: 'user', text: 'Hello, how are you?', comment: 'User greets the chatbot.' },
+    { speaker: 'chatbot', text: 'I am fine, thank you! And you?', comment: 'Chatbot responds politely.' },
+    // ... more entries
+  ]}
+  userAvatar="/img/userAvatar.jpeg"
+  chatbotAvatar="/img/chatbotAvatar.jpeg"
+/>
+
+
+<ChatConversation
+  conversation={[
+    { speaker: 'user', text: 'Hello, how are you?' },
+    { speaker: 'chatbot', text: 'I am fine, thank you! And you?', comment: 'Chatbot inquires about the user.' },
+    // ... more entries
+  ]}
+  userAvatar="/img/userAvatar.jpeg"
+  chatbotAvatar="/img/chatbotAvatar.jpeg"
+/>
+
