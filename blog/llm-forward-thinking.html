@@ -14,7 +14,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.4d756258.css">
-<script src="/assets/js/runtime~main.396b8d19.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ccbda794.js" defer="defer"></script>
 <script src="/assets/js/main.4e8f44cf.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -82,7 +82,7 @@
 </blockquote>
 <p>None of these lines have anything to do with what the model previously predicted would be its fourth or sixth lines of dialogue. These lines are actually more relevant, and make sense in the context of a conversational debate. The difference in the method of generation is that in this example, we allowed GPT-4 to generate the whole exchange.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="whats-the-lesson-here">What&#x27;s the lesson here?<a href="#whats-the-lesson-here" class="hash-link" aria-label="Direct link to What&#x27;s the lesson here?" title="Direct link to What&#x27;s the lesson here?">​</a></h3>
-<p>The results here reveal an interesting aspect of <a href="https://kelk.ai/blog/how-chatgpt-fools-us#however-this-is-what-is-actually-going-on-behind-the-scenes" target="_blank" rel="noopener noreferrer">autoregressive models</a>. Autoregressive models generate text sequentially, building each new piece of output based on what has come before. This sequential nature is necessary when generating coherent and contextually relevant text in a conversation. However, this means they are in many ways limited to only &quot;forward&quot; thinking; that is, they can&#x27;t jump ahead and generate text without context.</p>
+<p>The results here reveal an interesting aspect of <a href="https://kelk.ai/blog/how-chatgpt-fools-us#however-this-is-what-is-actually-going-on-behind-the-scenes" target="_blank" rel="noopener noreferrer">autoregressive models</a>. Autoregressive models generate text sequentially, building each new piece of output based on what has come before. This sequential nature is necessary when generating coherent and contextually relevant text in a conversation. However, this means they are in many ways limited to only &quot;forward&quot; thinking; that is, they can&#x27;t jump ahead and generate text without preivously generating (or being given) the context.</p>
 <p>When asked to do something like generating the fifth line in a conversation without knowing what came before isn&#x27;t necessarily difficult, but it&#x27;s something that an LLM isn&#x27;t able to do well. To a language model, it&#x27;s about understanding the context and the nature of the conversation. Given the scenario described, it tried to infer the general nature of the discussion and create a plausible response that fits into that context. But all of its responses in the previous examples are attempts to conclude the conversation using facts, a request that was never part of the prompt.</p>
 <ol>
 <li>
