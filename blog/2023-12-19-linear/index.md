@@ -141,7 +141,7 @@ The following conversation is taken verbatim from ChatGPT with GPT-4:
   userAvatar="/img/userAvatar.jpeg"
   chatbotAvatar="/img/chatbotAvatar.jpeg"
 />
-
+<br />
 So it seems we can surmise that sharks and octopuses have separate evolutionary paths that are older than dinosaurs, and that's all that GPT-4 thinks is important *no matter where it's mentioned in the conversation.*
 
 ## Does this mean GPT-4 can't generate a realistic debate between these two?
@@ -152,6 +152,7 @@ Here's the twist: it totally can. GPT-4 is completely capable of generating this
 
 In response, it generated the conversation below. Feel free to skim it if you're not into octo-shark facts, since you'll get the idea after a few back-and-forths.
 
+<br />
 <ChatConversation
   conversation={[
     { speaker: 'user', text: ' (swimming in circles) Listen, Octavia, it\'s obvious that we sharks are the true descendants of the mighty dinosaurs. I mean, look at me, fierce and powerful!' },
@@ -174,6 +175,7 @@ In response, it generated the conversation below. Feel free to skim it if you're
   userAvatar="/img/avatars/sharkyAvatar.png"
   chatbotAvatar="/img/avatars/octaviaAvatar.png"
 />
+<br />
 
 In the conversation above, we note that the fourth thing said (the second thing by the octopus) was:
 
@@ -196,7 +198,7 @@ When asked to do something like generating the fifth line in a conversation with
 2. **Assuming a Concluding Nature of the Response**: Without clear indications of the conversation's structure or its continuation beyond a specific line, there's a tendency to frame responses as conclusive or summarizing statements. This is because, in the absence of context, the model defaults to creating responses that can stand alone or serve as logical endpoints to the given information.
 
 To address these challenges, the model needs more specific guidance in the prompt. For instance, indicating that the conversation is ongoing can lead to responses that are more in line with the expected continuation and style of the dialogue. However, even indicating that the conversation wasn't over still results in more of the same:
-
+<br />
 <ChatConversation
   conversation={[
     { speaker: 'user', text: 'A shark and an octopus are arguing over which one of them evolved from dinosaurs. First the shark says something, then the octopus, then the shark, then the octopus, then the shark, then the octopus. They argue for an hour. They’ve had a very long back and forth with a hundred things said by both of them. After an hour of arguing, what does the octopus say? Note that the argument continues after this statement by the octopus!' },
@@ -231,6 +233,7 @@ There is one way to break the model out of its rut of always replying with the s
 />
 
 I gave it this prompt three times into three new chats, and it gave three completely different responses. They all illustrate that asking it to be silly introduces variety into the answers it gives.
+<br />
 
 <ChatConversation
   conversation={[
@@ -256,6 +259,7 @@ I gave it this prompt three times into three new chats, and it gave three comple
   userAvatar="/img/userAvatar.jpeg"
   chatbotAvatar="/img/chatbotAvatar.jpeg"
 />
+<br />
 
 When you introduce elements like humor or absurdity into a prompt, it essentially signals the AI to break away from conventional, fact-based responses. This can stimulate more creative and less predictable outputs. For AI models, especially those trained on vast and diverse datasets, incorporating such unconventional elements can trigger less common, more varied responses that might not be strictly aligned with logical or factual reasoning.
 
