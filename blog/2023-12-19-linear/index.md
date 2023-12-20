@@ -29,8 +29,8 @@ This is going to be a weird post. And we're going to start with a weird thought 
 :::tip[Some key points I'll address here are:]
 
 - Human brains are able to invent ideas without relying on a linear train of thought to arrive at them.
-- LLMs like ChatGPT are autoregressive and are unable to continue a dialogue that they haven't already generated.
-- If you try to get an LLM to write text in the middle of a dialogue without context, it will give near-identical answers and attempt to conclude the conversation.
+- LLMs like ChatGPT are autoregressive, and are unable to continue a dialogue if they haven't already generated everything up to that point.
+- If you try to get an LLM to writge text in the middle of a dialogue without previous context, it will give near-identical answers and attempt to conclude the conversation.
 - The reliance on a linear train of thought can be a limitation for general intelligence.
 - Prompting for "ridiculous" answers can spark creativity that breaks this pattern.
 
