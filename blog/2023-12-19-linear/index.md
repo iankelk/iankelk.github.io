@@ -146,7 +146,7 @@ So it seems we can surmise that sharks and octopuses have separate evolutionary 
 
 Here's the twist: it totally can. GPT-4 is completely capable of generating this converstation. Here I use this prompt:
 
-> A shark and an octopus are arguing over which one of them evolved from dinosaurs. Can you generate a script where they take turns arguing, and each speaks at least 5 times? It can be a funny script, but one that ends at a reasonable conclusion.
+> A shark and an octopus are arguing over which one of them evolved from dinosaurs. Can you generate a script where they take turns arguing, and each speaks at least 5 times?
 
 And it generates this conversation, which I'll display as a chat. Feel free to skim it, since you'll get the idea after a few back-and-forths.
 
