@@ -206,11 +206,13 @@ To address these challenges, the model needs more specific guidance in the promp
   chatbotAvatar="/img/chatbotAvatar.jpeg"
 />
 
-## Why does this matter? Thoughts on AGI
+## Why does this matter? My opinion on AGI
 
 One of the things I see commonly discussed today (especially online) is the idea of Artificial General Intelligence (AGI), which refers to a level of artificial intelligence that can understand, learn, and apply its intelligence to a wide range of problems, much like a human being. Unlike specialized AI systems that are designed for specific tasks, AGI possesses the ability to think, reason, and make decisions across diverse domains, demonstrating flexibility and adaptability akin to human cognition. It requires not just advanced problem-solving and learning capabilities, but also the capacity for abstract thinking, generalization, and integrating knowledge from various fields, mirroring the broad and integrated intelligence found in humans.
 
-The requirement that text always be generated in a sequential, linear manner, as exemplified by autoregressive models, has implications for the pursuit of AGI. Here are two key points to consider:
+Since AGI doesn't exist yet, my thoughts on AGI are based more on my opinion than empirical data. I think that while AGI may well come in the future, there are several obstacles that need to be overcome first.
+
+The requirement that text always be generated in a sequential, linear manner, as exemplified by autoregressive models, has implications for the pursuit of AGI.
 
 1. **Sequential Text Generation and Creativity**: The sequential nature of text generation in models like GPT-4 can sometimes limit the ability to jump into the middle of a conversation or narrative without prior context.
 
