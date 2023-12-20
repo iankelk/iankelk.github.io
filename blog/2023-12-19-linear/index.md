@@ -148,7 +148,7 @@ Here's the twist: it totally can. GPT-4 is completely capable of generating this
 
 > A shark and an octopus are arguing over which one of them evolved from dinosaurs. Can you generate a script where they take turns arguing, and each speaks at least 5 times? It can be a funny script, but one that ends at a reasonable conclusion.
 
-And it generates this conversation, which I'll display as a chat:
+And it generates this conversation, which I'll display as a chat. Feel free to skim it, since you'll get the idea after a few back-and-forths.
 
 <ChatConversation
   conversation={[
