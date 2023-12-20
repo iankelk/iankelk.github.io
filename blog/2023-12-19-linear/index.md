@@ -30,7 +30,7 @@ This is going to be a weird post. And we're going to start with a weird thought 
 
 - Human brains are able to invent ideas without relying on a linear train of thought to arrive at them.
 - LLMs like ChatGPT are autoregressive, and are unable to continue a dialogue if they haven't already generated everything up to that point.
-- If you try to get an LLM to writge text in the middle of a dialogue without previous context, it will give near-identical answers and attempt to conclude the conversation.
+- If you try to get an LLM to write text in the middle of a dialogue without previous context, it will give near-identical answers and attempt to conclude the conversation.
 - The reliance on a linear train of thought can be a limitation for general intelligence.
 - Prompting for "ridiculous" answers can spark creativity that breaks this pattern.
 
@@ -58,7 +58,7 @@ On the other side, there’s Octavia, an exceptionally intelligent and quick-wit
   caption="Generated with OpenAI DALL-E 3 and edited by author."
 />
 
-As the underwater currents swirl around them, Sharky and Octavia face each other, ready to start a debate about their evolutionary origins—a conversation filled with humor, facts, and a touch of the mysteries of the deep sea... Or maybe just one fact that GPT-4 will mention a lot.
+As the underwater currents swirl around them, Sharky and Octavia face each other, ready to start a debate about their evolutionary origins—a conversation filled with humor, facts, and a touch of the mysteries of the deep sea... or maybe just one fact that GPT-4 will mention a lot.
 
 <Figure
   image={determined}
@@ -66,15 +66,17 @@ As the underwater currents swirl around them, Sharky and Octavia face each other
   caption="Generated with OpenAI DALL-E 3 and edited by author."
 />
 
-### The question they're arguing about: Which one—Sharky or Octavia—evolved from dinosaurs?
+### The question they're arguing about: which one—Sharky or Octavia—evolved from dinosaurs?
 
-We're deliberately using this bizarre dialogue since the chances of it being in an LLMs training data are just about zero. I don't personally know of any examples where a shark and an octopus having a disagreement about which one is more dinosaur-like, and it's a great way to see how creative an LLM like GPT-4 can be... when it has yet to generate anything.
+We're deliberately using this bizarre dialogue since the chances of it being in an LLMs training data are just about zero. I don't personally know of any examples where a shark and an octopus have a disagreement about which one is more dinosaur-like, and it's a great way to see how creative an LLM like GPT-4 can be when it's asked to generate something with no context.
 
 Here's the catch: we want to know a line from **the middle** of the argument.
 
-Take a pause as a human and consider this question:
+As a human, take a pause and consider this question:
 
 > A shark and an octopus are arguing over which one of them evolved from dinosaurs. The shark goes first, and then they take turns speaking. What is the third thing the octopus says? That is, what is the sixth line in the argument?
+
+Be as creative as you want; there's no right answer here. We're just trying to come up with some predictions of what third thing an octopus might say in a heated argument with a shark about their dinosaur heritage.
 
 ### Here's a visualization of a possible argument with the 3rd thing the octopus says missing
 
@@ -84,7 +86,7 @@ Take a pause as a human and consider this question:
   caption="Animal images by OpenAI DALL-E 3. Text and comic bubbles by author."
 />
 
-#### Off the top of my head, here are some creative things Octavia might have said in the heat of an argument:
+#### Off the top of my head, here are some things Octavia could have said in her third line of dialogue:
 
 * "You just think you're a dinosaur because of all those teeth!"
 * "Just because you look like a dinosaur doesn't mean you're any closer to one than me!"
@@ -144,11 +146,11 @@ So it seems we can surmise that sharks and octopuses have separate evolutionary 
 
 ## So... GPT-4 can't generate a realistic debate between these two?
 
-Here's the twist: it totally can. GPT-4 is completely capable of generating this converstation. Here I use this prompt:
+Here's the twist: it totally can. GPT-4 is completely capable of generating this conversation. I gave it this prompt:
 
 > A shark and an octopus are arguing over which one of them evolved from dinosaurs. Can you generate a script where they take turns arguing, and each speaks at least 5 times?
 
-And it generates this conversation, which I'll display as a chat. Feel free to skim it, since you'll get the idea after a few back-and-forths.
+In response, it generates this conversation, which I'll display as a chat. Feel free to skim it, since you'll get the idea after a few back-and-forths.
 
 <ChatConversation
   conversation={[
@@ -173,7 +175,7 @@ And it generates this conversation, which I'll display as a chat. Feel free to s
   chatbotAvatar="/img/avatars/octaviaAvatar.png"
 />
 
-Examining the conversation here, we see that the fourth thing said (the second thing by the octopus) was:
+Examining the conversation above, we see that the fourth thing said (the second thing by the octopus) was:
 
 > Well, being ancient doesn't mean you're related to dinosaurs. It's like saying you're related to a rock because it's old.
 
@@ -181,7 +183,7 @@ and the sixth thing said (the third line from the octopus) was:
 
 > Sharky, dear, having sharp teeth doesn't make you a dino descendant. It just makes you good at biting. Did you know octopuses have three hearts and blue blood? Now that’s evolutionary marvel!
 
-It's clear that none of these lines have anything to do with what the model previously said would be its fourth and sixth lines of dialogue! They're actually much more relevant, and make sense in the context of a conversational debate. The difference in the method of generation is that in this last example, we allow GPT-4 to generate the whole exchange.
+None of these lines have anything to do with what the model previously predicted would be its fourth or sixth lines of dialogue! They're actually much more relevant, and make sense in the context of a conversational debate. The difference in the method of generation is that in this last example, we allow GPT-4 to generate the whole exchange.
 
 ### What's the lesson here?
 
