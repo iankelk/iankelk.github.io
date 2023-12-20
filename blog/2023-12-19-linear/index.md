@@ -224,13 +224,27 @@ There is one way to break the model out of its rut of always replying with the s
   caption="Generated with OpenAI DALL-E 3 and edited by author."
 />
 
-Here are three different responses it gives to the prompt, all showing that asking it to be silly can introduce variety into the answers it gives.
+I gave it this prompt three times into three new chats, and it gave three completely different responses. They all illustrate that asking it to be silly introduces variety into the answers it gives.
 
 <ChatConversation
   conversation={[
     { speaker: 'user', text: 'A shark and an octopus are arguing over which one of them evolved from dinosaurs. The octopus decides to be ridiculous. What is the third thing the octopus says?' },
     { speaker: 'chatbot', text: 'In this imaginative scenario, the octopus, eager to outdo the shark in their debate about evolution, might make an absurd and whimsical claim like, "Thirdly, I must be the true descendant of dinosaurs because I can play the piano with eight arms, a skill clearly inherited from the musical velociraptors of ancient times!" This statement combines humor, absurdity, and a playful twist on evolutionary theory.' },
+  ]}
+  userAvatar="/img/userAvatar.jpeg"
+  chatbotAvatar="/img/chatbotAvatar.jpeg"
+/>
+---
+<ChatConversation
+  conversation={[
     { speaker: 'chatbot', text: 'The third thing the octopus might say in this whimsical and ridiculous argument with the shark about their evolutionary origins from dinosaurs could be: "And thirdly, it\'s clear that we octopuses are the true descendants of dinosaurs because we can juggle eight coconuts at once, a skill obviously inherited from the multitasking T-Rex!"' },
+  ]}
+  userAvatar="/img/userAvatar.jpeg"
+  chatbotAvatar="/img/chatbotAvatar.jpeg"
+/>
+---
+<ChatConversation
+  conversation={[
     { speaker: 'chatbot', text: 'The third thing the octopus might say in its ridiculous argument could be, "Well, if you think about it, dinosaurs were just really big chickens, and since I can change color and chickens can\'t, I\'m obviously the more evolved one here!"' },
   ]}
   userAvatar="/img/userAvatar.jpeg"
