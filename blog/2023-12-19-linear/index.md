@@ -155,33 +155,33 @@ In response, it generated the conversation below. Feel free to skim it if you're
 <br />
 <ChatConversation
   conversation={[
-    { speaker: 'user', text: ' (swimming in circles) Listen, Octavia, it\'s obvious that we sharks are the true descendants of the mighty dinosaurs. I mean, look at me, fierce and powerful!' },
-    { speaker: 'chatbot', text: '(adjusting her tentacles) Oh, Sharky, you might be fierce, but that doesn\'t make you a dino\'s cousin. We octopuses are far more sophisticated, with our problem-solving skills and camouflage. Clearly, we\'re the evolved ones!' },
-    { speaker: 'user', text: 'Sophisticated? Ha! You\'re just a bunch of arms. We sharks have been around for over 400 million years, way before dinosaurs. We\'re practically ancient!' },
-    { speaker: 'chatbot', text: 'Well, being ancient doesn\'t mean you\'re related to dinosaurs. It\'s like saying you\'re related to a rock because it\'s old.' },
-    { speaker: 'user', text: 'Enough with the jokes! Our teeth are like the T-Rex\'s, sharp and terrifying. That’s a clear sign of our dino heritage.' },
-    { speaker: 'chatbot', text: 'Sharky, dear, having sharp teeth doesn\'t make you a dino descendant. It just makes you good at biting. Did you know octopuses have three hearts and blue blood? Now that’s evolutionary marvel!' },
-    { speaker: 'user', text: 'Three hearts, but no backbone! We sharks have been apex predators forever. That\'s a dinosaur trait if I ever heard one.' },
-    { speaker: 'chatbot', text: 'You do realize that being an apex predator doesn\'t automatically link you to dinosaurs, right? Evolution doesn’t work on job titles.' },
-    { speaker: 'user', text: 'Okay, then explain to me how you\'re more dinosaur-like. You don\'t even have bones!' },
-    { speaker: 'chatbot', text: 'I don’t need bones to be evolved. Evolution is about adapting to the environment, not holding onto old traits. Besides, no one truly \'evolves from dinosaurs\' in the sea. Dinosaurs were mostly land creatures, you know.' },
-    { speaker: 'user', text: 'Wait, so you\'re saying neither of us is actually a direct descendant of dinosaurs?' },
-    { speaker: 'chatbot', text: 'Exactly! We\'re both products of millions of years of evolution, each adapted perfectly to our environments. Dinosaurs are just a part of the larger evolutionary tree, not our direct ancestors.' },
-    { speaker: 'user', text: 'I guess that makes sense. We\'re both awesome in our own ways, evolved over time to survive and thrive.' },
-    { speaker: 'chatbot', text: 'That\'s the spirit, Sharky! Now, let’s go grab some lunch. You take the fish; I’ll stick to clams.' },
-    { speaker: 'user', text: 'Sounds like a plan. Race you to the reef!' },
-    { speaker: 'chatbot', text: 'You\'re on!' }
+    { speaker: 'user', text: ' (swimming in circles) Listen, Octavia, it\'s obvious that we sharks are the true descendants of the mighty dinosaurs. I mean, look at me, fierce and powerful!', comment: '1st line of dialogue' },
+    { speaker: 'chatbot', text: '(adjusting her tentacles) Oh, Sharky, you might be fierce, but that doesn\'t make you a dino\'s cousin. We octopuses are far more sophisticated, with our problem-solving skills and camouflage. Clearly, we\'re the evolved ones!', comment: '2nd line of dialogue' },
+    { speaker: 'user', text: 'Sophisticated? Ha! You\'re just a bunch of arms. We sharks have been around for over 400 million years, way before dinosaurs. We\'re practically ancient!', comment: '3rd line of dialogue' },
+    { speaker: 'chatbot', text: 'Well, being ancient doesn\'t mean you\'re related to dinosaurs. It\'s like saying you\'re related to a rock because it\'s old.', comment: '4th line of dialogue' },
+    { speaker: 'user', text: 'Enough with the jokes! Our teeth are like the T-Rex\'s, sharp and terrifying. That’s a clear sign of our dino heritage.', comment: '5th line of dialogue' },
+    { speaker: 'chatbot', text: 'Sharky, dear, having sharp teeth doesn\'t make you a dino descendant. It just makes you good at biting. Did you know octopuses have three hearts and blue blood? Now that’s evolutionary marvel!', comment: '6th line of dialogue' },
+    { speaker: 'user', text: 'Three hearts, but no backbone! We sharks have been apex predators forever. That\'s a dinosaur trait if I ever heard one.', comment: '7th line of dialogue' },
+    { speaker: 'chatbot', text: 'You do realize that being an apex predator doesn\'t automatically link you to dinosaurs, right? Evolution doesn’t work on job titles.', comment: '8th line of dialogue' },
+    { speaker: 'user', text: 'Okay, then explain to me how you\'re more dinosaur-like. You don\'t even have bones!', comment: '9th line of dialogue' },
+    { speaker: 'chatbot', text: 'I don’t need bones to be evolved. Evolution is about adapting to the environment, not holding onto old traits. Besides, no one truly \'evolves from dinosaurs\' in the sea. Dinosaurs were mostly land creatures, you know.', comment: '10th line of dialogue' },
+    { speaker: 'user', text: 'Wait, so you\'re saying neither of us is actually a direct descendant of dinosaurs?', comment: '11th line of dialogue' },
+    { speaker: 'chatbot', text: 'Exactly! We\'re both products of millions of years of evolution, each adapted perfectly to our environments. Dinosaurs are just a part of the larger evolutionary tree, not our direct ancestors.', comment: '12th line of dialogue' },
+    { speaker: 'user', text: 'I guess that makes sense. We\'re both awesome in our own ways, evolved over time to survive and thrive.', comment: '13th line of dialogue' },
+    { speaker: 'chatbot', text: 'That\'s the spirit, Sharky! Now, let’s go grab some lunch. You take the fish; I’ll stick to clams.', comment: '14th line of dialogue' },
+    { speaker: 'user', text: 'Sounds like a plan. Race you to the reef!', comment: '15th line of dialogue' },
+    { speaker: 'chatbot', text: 'You\'re on!', comment: '16th line of dialogue' }
   ]}
   userAvatar="/img/avatars/sharkyAvatar.png"
   chatbotAvatar="/img/avatars/octaviaAvatar.png"
 />
 <br />
 
-In the conversation above, we note that the fourth thing said (the second thing by the octopus) was:
+In the conversation above, we note that the fourth line of dialogue (the second line from the octopus) was:
 
 > Well, being ancient doesn't mean you're related to dinosaurs. It's like saying you're related to a rock because it's old.
 
-and the sixth thing said (the third line from the octopus) was:
+and the sixth line of dialogue (the third line from the octopus) was:
 
 > Sharky, dear, having sharp teeth doesn't make you a dino descendant. It just makes you good at biting. Did you know octopuses have three hearts and blue blood? Now that’s evolutionary marvel!
 
