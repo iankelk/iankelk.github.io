@@ -27,6 +27,12 @@ Remember the first time you used ChatGPT and how amazed you were to find yoursel
 
 While the title of this article is a bit tongue-in-cheek, it is most certainly not clickbait. ChatGPT does indeed use two notable hidden techniques to simulate human conversation, and the more you know about how they work, the more effectively you can use the technology.
 
+<Figure
+  image={robotDesk}
+  alt="A black and white illustration of a late-night talk show setting, titled 'The ChatGPT Show.' A classic, boxy robot with visible joints and a round head featuring antenna and eyes, is depicted as the guest. It's gesturing with its hands as if in conversation. The host, a man in a suit with neat hair and a professional demeanor, sits across from the robot at a curved desk. Microphones and notes are on the desk, with an urban skyline visible through the window in the background."
+  caption="Generated with OpenAI DALL-E 3."
+/>
+
 :::tip[Some key points I'll address here are:]
 
 - ChatGPT has no idea who you are and has no memory of talking to you at any point in the conversation.
@@ -35,12 +41,6 @@ While the title of this article is a bit tongue-in-cheek, it is most certainly n
 - Because of this, very long chats will forget what was mentioned at the beginning.
 
 :::
-
-<Figure
-  image={robotDesk}
-  alt="A black and white illustration of a late-night talk show setting, titled 'The ChatGPT Show.' A classic, boxy robot with visible joints and a round head featuring antenna and eyes, is depicted as the guest. It's gesturing with its hands as if in conversation. The host, a man in a suit with neat hair and a professional demeanor, sits across from the robot at a curved desk. Microphones and notes are on the desk, with an urban skyline visible through the window in the background."
-  caption="Generated with OpenAI DALL-E 3."
-/>
 
 <!-- truncate -->
 
@@ -70,7 +70,7 @@ However, without this context, ChatGPT would have no knowledge of what was previ
 
 Notice that when the woman asks her second question, she has to reiterate the entire previous conversation, complete with tags on who said what. Can you imagine talking to a person where every time it was your turn to speak, you had to repeat the entire conversation up to that point? This is how ChatGPT (and all current LLMs) work. They require using their own outputs, plus the prompts that generated these outputs, to be prepended to the start of every new prompt from the user.
 
-These models are termed "auto-regressive" due to their method of generating text one piece at a time, building upon the previously generated text. "Auto-" comes from the Greek word "autós," meaning "self," and "regressive" is derived from "regress," which in this context refers to the statistical method of predicting future values based on past values.
+These models are termed "autoregressive" due to their method of generating text one piece at a time, building upon the previously generated text. "auto" comes from the Greek word "autós," meaning "self," and "regressive" is derived from "regress," which in this context refers to the statistical method of predicting future values based on past values.
 
 In LLMs, what this means is that the model predicts the next word or token in a sequence based on *all* the words or tokens that have come before it. That's *all* of it, not just the current question being asked in a long back-and-forth chat conversation. In humans, we naturally maintain coherence and context in a conversation by just... participating in the conversation.
 
