@@ -1,6 +1,6 @@
 ---
 slug: llm-forward-thinking
-title: LLMs are "forward thinkers" and that's a problem
+title: LLMs are "forward thinkers"—and that's a problem
 authors: [ikelk]
 tags: [linear thinking, AGI, ASI, chatgpt, context, chat, AI, LLM, ML, chatbot, chatbots, AIExplained]
 image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2023-12-19-linear/social-card.jpg?raw=true

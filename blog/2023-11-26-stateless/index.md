@@ -1,10 +1,10 @@
----
+—-
 slug: how-chatgpt-fools-us
 title: How ChatGPT fools us into thinking we're having a conversation
 authors: [ikelk]
 tags: [chat history, chatgpt, context, chat, AI, LLM, ML, chatbot, chatbots, AIExplained]
 image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2023-11-26-stateless/social-card.jpg?raw=true
----
+—-
 
 import Figure from '@site/src/components/figure';
 import robotDesk from './social-card.jpg';
@@ -42,7 +42,7 @@ While the title of this article is a bit tongue-in-cheek, it is most certainly n
 
 :::
 
-<!-- truncate -->
+<!— truncate —>
 
 ## Trick #1: Every time you talk to ChatGPT, you're not just sending it your question. You're also sending the *entire* conversation up until that point.
 
@@ -112,7 +112,7 @@ Do you see where this becomes problematic? Previously, we saw how the entire con
 
 #### Conversation Length and Token Limitations in LLMs
    
-So how does ChatGPT handle this limitation? As your conversation with it grows, the number of tokens eventually exceeds the model's context window (e.g., 4,096 tokens for GPT-3.5). ChatGPT invisibly removes the oldest parts of the conversation to remain within the limit. This method--using a rolling window of context--is certainly one of the easiest to implement, but oftentimes it is not the perfect solution. Some chat alternative front-ends, like [TypingMind](https://www.typingmind.com/) both warn you when the context limit has been reached and allow you to manually delete sections of the chat that you don't need anymore. This lets you choose what information you want to remain in the chat and has the bizarre philosophical effect of "editing the memory" of GPT.
+So how does ChatGPT handle this limitation? As your conversation with it grows, the number of tokens eventually exceeds the model's context window (e.g., 4,096 tokens for GPT-3.5). ChatGPT invisibly removes the oldest parts of the conversation to remain within the limit. This method—using a rolling window of context—is certainly one of the easiest to implement, but oftentimes it is not the perfect solution. Some chat alternative front-ends, like [TypingMind](https://www.typingmind.com/) both warn you when the context limit has been reached and allow you to manually delete sections of the chat that you don't need anymore. This lets you choose what information you want to remain in the chat and has the bizarre philosophical effect of "editing the memory" of GPT.
 
 For your average user using the web version of ChatGPT, what this means is that the longer your conversation, the sooner ChatGPT will start forgetting things you said at the beginning of the chat.
 
@@ -124,7 +124,7 @@ For your average user using the web version of ChatGPT, what this means is that 
   caption="Generated with OpenAI DALL-E 3." 
 />
 
-It's good to be mindful of this restriction, especially when referring back to earlier parts of a conversation that might have been truncated due to token limitations--the LLM will not be able to recall these anymore, but the web version of ChatGPT will not tell you. There's also always the risk that it could hallucinate answers based on other parts of the conversation if the beginning is trimmed off.
+It's good to be mindful of this restriction, especially when referring back to earlier parts of a conversation that might have been truncated due to token limitations—the LLM will not be able to recall these anymore, but the web version of ChatGPT will not tell you. There's also always the risk that it could hallucinate answers based on other parts of the conversation if the beginning is trimmed off.
 
 Let's take another look at what happens in a more complex yet sillier chat interaction.
 
@@ -174,7 +174,7 @@ However, the stateless nature also means these models cannot remember user prefe
 
 ## Getting a bit more technical
 
-Prominent examples of such layers include [LangChain](https://www.langchain.com/), [LlamaIndex](https://www.llamaindex.ai/), and [Haystack](https://haystack.deepset.ai/). These layers add flexibility to managing the limited context that LLMs can handle by offering various strategies. For instance, when approaching the token limit, choices must be made: Should a rolling window approach be used to discard older text, like in the web ChatGPT, or should GPT be utilized to summarize previous information? Is it more important to retain the initial context, like a source article, while removing less critical middle or later sections? Alternatively, should retrieval augmented generation (RAG--more on that in a later blog) techniques be employed to integrate external data into the token stream? These decisions vary based on the specific goals of the implementation. The most effective architectures often consist of specialized components interwoven to achieve a wide array of practical outcomes, allowing for more nuanced and effective user interactions.
+Prominent examples of such layers include [LangChain](https://www.langchain.com/), [LlamaIndex](https://www.llamaindex.ai/), and [Haystack](https://haystack.deepset.ai/). These layers add flexibility to managing the limited context that LLMs can handle by offering various strategies. For instance, when approaching the token limit, choices must be made: Should a rolling window approach be used to discard older text, like in the web ChatGPT, or should GPT be utilized to summarize previous information? Is it more important to retain the initial context, like a source article, while removing less critical middle or later sections? Alternatively, should retrieval augmented generation (RAG—more on that in a later blog) techniques be employed to integrate external data into the token stream? These decisions vary based on the specific goals of the implementation. The most effective architectures often consist of specialized components interwoven to achieve a wide array of practical outcomes, allowing for more nuanced and effective user interactions.
 
 <Figure 
   image={confusedRobot}
