@@ -14,7 +14,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.00eed43c.css">
-<script src="/assets/js/runtime~main.ebcc3017.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4cdc2e93.js" defer="defer"></script>
 <script src="/assets/js/main.a8673c5f.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -86,7 +86,7 @@
 <p>None of these lines have anything to do with what the model previously predicted would be its fourth or sixth lines of dialogue. These lines are actually more relevant, and make sense in the context of a conversational debate. The difference in the method of generation is that in this example, we allowed GPT-4 to generate the whole exchange.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="whats-the-lesson-here">What&#x27;s the lesson here?<a href="#whats-the-lesson-here" class="hash-link" aria-label="Direct link to What&#x27;s the lesson here?" title="Direct link to What&#x27;s the lesson here?">​</a></h3>
 <p>The results here reveal an interesting aspect of <a href="https://kelk.ai/blog/how-chatgpt-fools-us#however-this-is-what-is-actually-going-on-behind-the-scenes" target="_blank" rel="noopener noreferrer">autoregressive models</a>. Autoregressive models generate text sequentially, building each new piece of output based on what has come before. This sequential nature is necessary when generating coherent and contextually relevant text in a conversation. However, this means they are in many ways limited to only &quot;forward&quot; thinking; that is, they can&#x27;t jump ahead and generate text without previously generating (or being given) the context.</p>
-<p>When asked to do something like generating the fifth line in a conversation without knowing what came before isn&#x27;t necessarily difficult, but it&#x27;s something that an LLM isn&#x27;t able to do well. To a language model, it&#x27;s about understanding the context and the nature of the conversation. Given the scenario described, it tried to infer the general nature of the discussion and create a plausible response that fits into that context. But all of its responses in the previous examples are attempts to conclude the conversation using facts, a request that was never part of the prompt.</p>
+<p>While generating the fifth line in a conversation without knowing what came before isn&#x27;t difficult for a person, it&#x27;s something that an LLM isn&#x27;t able to do well. Given the scenario described, GPT-4 tried to infer the general nature of the discussion and create a plausible response that fits into that context. But all of its responses in the previous examples are attempts to conclude the conversation using facts, a request that was never part of the prompt.</p>
 <ol>
 <li>
 <p><strong>Factual and Informative Responses</strong>: In scenarios where factual accuracy is important, such as discussions involving scientific or historical topics, LLMs are inclined to provide the most accurate and relevant information. This tendency is rooted in the training data and the model&#x27;s design, which emphasizes factual correctness in contexts where it&#x27;s expected. However, this approach might not always align with the creative or playful nature of certain prompts, especially in hypothetical or fictional scenarios.</p>
