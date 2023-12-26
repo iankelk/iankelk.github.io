@@ -29,10 +29,10 @@ This is going to be a weird post. And we're going to start with a weird thought 
 :::tip[Some key points I'll address here are:]
 
 - Human brains are able to invent ideas without relying on a linear train of thought to arrive at them.
-- LLMs like ChatGPT are autoregressive, and are unable to continue a dialogue if they haven't already generated everything up to that point.
+- LLMs like ChatGPT are autoregressive, and are unable to continue a dialogue if they haven't already generated everything up to that point. This is because they don't "think" per se, but progressively generate a response using the parts of the response they previously created. 
 - If you try to get an LLM to write text in the middle of a dialogue without previous context, it will give near-identical answers and attempt to conclude the conversation.
-- The reliance on a linear train of thought can be a limitation for general intelligence.
-- Prompting for "ridiculous" answers can spark creativity that breaks this pattern.
+- Prompting for "ridiculous" answers can spark creativity that helps break this pattern.
+- However, the reliance on a linear train of thought is a limitation for general intelligence. LLMs are ineffective if you ask them to generate the second part of a response, without allowing them to generate the first part.
 
 :::
 
@@ -208,7 +208,7 @@ To address these challenges, the model needs more specific guidance in the promp
   chatbotAvatar="/img/chatbotAvatar.jpeg"
 />
 
-## Why does this matter? My opinion on AGI
+## Why does this matter? Thoughts on AGI
 
 One of the things I see commonly discussed today (especially online) is the idea of Artificial General Intelligence (AGI), which refers to a level of artificial intelligence that can understand, learn, and apply its intelligence to a wide range of problems, much like a human being. Unlike specialized AI systems that are designed for specific tasks, AGI possesses the ability to think, reason, and make decisions across diverse domains, demonstrating flexibility and adaptability akin to human cognition. It requires not just advanced problem-solving and learning capabilities, but also the capacity for abstract thinking, generalization, and integrating knowledge from various fields, mirroring the broad and integrated intelligence found in humans.
 
@@ -216,7 +216,7 @@ Since AGI doesn't exist yet, my thoughts on AGI are based more on my opinion tha
 
 The requirement that text always be generated in a sequential, linear manner, as exemplified by autoregressive models, has implications for the pursuit of AGI.
 
-1. **Sequential Text Generation and Creativity**: The sequential nature of text generation in models like GPT-4 can sometimes limit the ability to jump into the middle of a conversation or narrative without prior context.
+1. **Sequential Text Generation and Creativity**: The sequential nature of text generation in models like GPT-4 limits the ability to jump into the middle of a conversation or narrative without prior context. This is because they don't "think" per se, but progressively generate a response using the parts of the response they previously created. 
 
 2. **Autonomy and Reasoning**: Current AI models operate based on patterns learned from their training data. Their responses are generated based on statistical likelihoods and learned associations, not on independent thought or understanding. This is the reason the model always generated the same answer for the octopus about different evolutionary paths; it assumed a pattern that wasn't provided to it, due to patterns in its training data.
 
