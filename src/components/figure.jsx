@@ -5,18 +5,21 @@ import React, { useState, useEffect } from 'react';
 const Figure = ({ image, alt, caption }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+    // Function to check and set whether the screen is mobile-sized
+    const checkMobileSize = () => {
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    // Check initially and on every window resize
+    checkMobileSize();
+    window.addEventListener('resize', checkMobileSize);
 
-  const isMobile = windowWidth <= 768;
+    // Cleanup function to remove the event listener
+    return () => window.removeEventListener('resize', checkMobileSize);
+  }, []);
 
   const captionContent = caption.split('\\n').map((line, index, array) => (
     <React.Fragment key={index}>
