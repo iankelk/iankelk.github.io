@@ -1,8 +1,22 @@
-import React, { useState } from 'react';
+// src/components/figure.jsx
+
+import React, { useState, useEffect } from 'react';
 
 const Figure = ({ image, alt, caption }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const isMobile = windowWidth <= 768;
 
   const captionContent = caption.split('\\n').map((line, index, array) => (
     <React.Fragment key={index}>
@@ -34,8 +48,8 @@ const Figure = ({ image, alt, caption }) => {
 
   const fullScreenStyles = {
     position: 'fixed',
-    maxWidth: '90%',
-    maxHeight: '90%',
+    maxWidth: isFullScreen ? (isMobile ? '100%' : '90%') : 'auto',
+    maxHeight: isFullScreen ? (isMobile ? '100%' : '90%') : 'auto',
     zIndex: 1001,
     transition: 'transform 0.3s ease',
     cursor: 'pointer',
@@ -65,24 +79,12 @@ const Figure = ({ image, alt, caption }) => {
     }
   };
 
-  // Mobile styles
-  const mobileStyles = `
-    @media (max-width: 768px) {
-      .fullScreenImage {
-        width: 100%;
-        height: auto;
-      }
-    }
-  `;
-
   return (
     <div>
-      <style>{mobileStyles}</style>
       <div style={overlayStyles} onClick={toggleFullScreen}>
         <img
           src={image}
           alt={alt}
-          className="fullScreenImage"
           style={fullScreenStyles}
           onClick={(e) => e.stopPropagation()}
           onTransitionEnd={handleTransitionEnd}
@@ -102,7 +104,7 @@ const Figure = ({ image, alt, caption }) => {
         }}
         onClick={toggleFullScreen}
       >
-        <img src={image} alt={alt} style={{ maxWidth: '100%', height: 'auto' }} className="fullScreenImage" />
+        <img src={image} alt={alt} style={{ maxWidth: '100%', height: 'auto' }} />
         <hr style={{ margin: '5px 0', backgroundColor: 'rgba(0, 0, 0, .2)' }} />
         <figcaption
           style={{
