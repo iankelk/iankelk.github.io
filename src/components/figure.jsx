@@ -1,9 +1,8 @@
-// src/components/Figure.jsx
-
 import React, { useState } from 'react';
 
 const Figure = ({ image, alt, caption }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const captionContent = caption.split('\\n').map((line, index, array) => (
     <React.Fragment key={index}>
@@ -13,6 +12,7 @@ const Figure = ({ image, alt, caption }) => {
   ));
 
   const toggleFullScreen = () => {
+    setIsAnimating(true); // Start the animation
     setIsFullScreen(!isFullScreen);
   };
 
@@ -24,29 +24,45 @@ const Figure = ({ image, alt, caption }) => {
     height: '100%',
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
     zIndex: 1000,
-    display: isFullScreen ? 'flex' : 'none',
+    display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    opacity: isFullScreen ? 1 : 0,
+    visibility: isFullScreen ? 'visible' : 'hidden',
+    transition: 'opacity 0.3s ease, visibility 0.3s ease'
   };
 
   const fullScreenStyles = {
-    position: 'relative',
-    maxWidth: '90%',
-    maxHeight: '90%',
-    zIndex: 1001
+    position: 'fixed',
+    maxWidth: '90%', // Limiting to 90% of the viewport width
+    maxHeight: '90%', // Limiting to 90% of the viewport height
+    zIndex: 1001,
+    transition: 'transform 0.3s ease',
+    cursor: 'pointer',
+    transform: isFullScreen ? 'translate(-50%, -50%)' : 'translate(-50%, -50%) scale(0.5)',
+    left: '50%',
+    top: '50%',
+    transformOrigin: 'center'
   };
 
   const closeButtonStyles = {
     position: 'absolute',
     top: '50px',
-    right: '10px',
-    width: '30px', // Width of the close button
-    height: '30px', // Height of the close button
-    lineHeight: '30px', // Center the text vertically
-    textAlign: 'center', // Center the text horizontally
+    right: '20px',
+    width: '30px',
+    height: '30px',
+    lineHeight: '30px',
+    textAlign: 'center',
     fontSize: '40px',
     color: 'white',
     cursor: 'pointer',
+    zIndex: 1002
+  };
+
+  const handleTransitionEnd = () => {
+    if (!isFullScreen) {
+      setIsAnimating(false); // End the animation when it shrinks back
+    }
   };
 
   return (
@@ -57,8 +73,11 @@ const Figure = ({ image, alt, caption }) => {
           alt={alt}
           style={fullScreenStyles}
           onClick={(e) => e.stopPropagation()}
+          onTransitionEnd={handleTransitionEnd}
         />
-        <span style={closeButtonStyles} onClick={toggleFullScreen}>x</span>
+        {isAnimating && (
+          <span style={closeButtonStyles} onClick={toggleFullScreen}>×</span>
+        )}
       </div>
       <figure
         style={{
