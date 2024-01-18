@@ -2,7 +2,7 @@
 layout: default
 title: Ian Kelk
 ---
-![My recent work in AI, ML, and data science](/img/project-header.png)
+![My recent work in AI, ML, and data science](/img/project-header-small.png)
 
 ## Projects
 
