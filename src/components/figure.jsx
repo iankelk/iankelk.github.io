@@ -12,7 +12,7 @@ const Figure = ({ image, alt, caption }) => {
   ));
 
   const toggleFullScreen = () => {
-    setIsAnimating(true); // Start the animation
+    setIsAnimating(true);
     setIsFullScreen(!isFullScreen);
   };
 
@@ -34,8 +34,8 @@ const Figure = ({ image, alt, caption }) => {
 
   const fullScreenStyles = {
     position: 'fixed',
-    maxWidth: '90%', // Limiting to 90% of the viewport width
-    maxHeight: '90%', // Limiting to 90% of the viewport height
+    maxWidth: '90%',
+    maxHeight: '90%',
     zIndex: 1001,
     transition: 'transform 0.3s ease',
     cursor: 'pointer',
@@ -47,13 +47,13 @@ const Figure = ({ image, alt, caption }) => {
 
   const closeButtonStyles = {
     position: 'absolute',
-    top: '50px',
+    top: '20px',
     right: '20px',
     width: '30px',
     height: '30px',
     lineHeight: '30px',
     textAlign: 'center',
-    fontSize: '40px',
+    fontSize: '30px',
     color: 'white',
     cursor: 'pointer',
     zIndex: 1002
@@ -61,16 +61,28 @@ const Figure = ({ image, alt, caption }) => {
 
   const handleTransitionEnd = () => {
     if (!isFullScreen) {
-      setIsAnimating(false); // End the animation when it shrinks back
+      setIsAnimating(false);
     }
   };
 
+  // Mobile styles
+  const mobileStyles = `
+    @media (max-width: 768px) {
+      .fullScreenImage {
+        width: 100%;
+        height: auto;
+      }
+    }
+  `;
+
   return (
     <div>
+      <style>{mobileStyles}</style>
       <div style={overlayStyles} onClick={toggleFullScreen}>
         <img
           src={image}
           alt={alt}
+          className="fullScreenImage"
           style={fullScreenStyles}
           onClick={(e) => e.stopPropagation()}
           onTransitionEnd={handleTransitionEnd}
@@ -90,7 +102,7 @@ const Figure = ({ image, alt, caption }) => {
         }}
         onClick={toggleFullScreen}
       >
-        <img src={image} alt={alt} style={{ maxWidth: '100%', height: 'auto' }} />
+        <img src={image} alt={alt} style={{ maxWidth: '100%', height: 'auto' }} className="fullScreenImage" />
         <hr style={{ margin: '5px 0', backgroundColor: 'rgba(0, 0, 0, .2)' }} />
         <figcaption
           style={{
