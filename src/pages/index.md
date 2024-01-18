@@ -65,18 +65,19 @@ title: Ian Kelk
 * Deep reinforcement learning topics include value-based deep RL using Q-networks, policy-based approaches in Deep RL with REINFORCE, asynchronous methods for deep RL, with a spotlight on advantage actor-critic (A2C).
 
 ### Harvard Extension Masters
-* I'm a degree candidate for an ALM in Data Science, and am less than a month away from finishing the courses for my masters. I've currently completed 9 classes out of a total of 10. I am currently taking [Productionizing AI (MLOps): AC215](https://harvard-iacs.github.io/2023-AC215/), in which I am building a custom RAG system with an LLM that scrapes and answers questions on entire websites using LlamaIndex, Weaviate, LangChain, and GPT-3.5. It's hosted on Google Cloud Services and Google Cloud Storage, and uses Docker and Kubernetes for production use. As well, the project hosts a fine-tuned BERT model on Google Vertex, and the entire thing runs FastAPI on the backend and React in the frontend.
+* I'm a degree candidate for an ALM in Data Science, and have finished the 10 courses for my masters. I most recently completed [Productionizing AI (MLOps): AC215](https://harvard-iacs.github.io/2023-AC215/), in which I am building a custom RAG system with an LLM that scrapes and answers questions on entire websites using LlamaIndex, Weaviate, LangChain, and GPT-3.5. It's hosted on Google Cloud Services and Google Cloud Storage, and uses Docker and Kubernetes for production use. As well, the project hosts a fine-tuned BERT model on Google Vertex, and the entire thing runs FastAPI on the backend and React in the frontend.
 
-* I have maintained a 4.0 GPA in the following 9 classes:
+* I have maintained a 4.0 GPA in the following 10 classes:
 	* Data Modeling (R)
 	* Foundations of Data Science and Engineering (Python, SQL, Tableau)
-	* Deep Learning for NLP (Research, Python, PyTorch)
+	* [Deep Learning for NLP](https://harvard-iacs.github.io/CS287/) (Research, Python, PyTorch)
 	* Computer Vision (Python, Keras/TensorFlow)
 	* Reinforcement Learning (Python)
 	* Elements of Data Science and Statistical Learning with R (R)
 	* Time Series Analysis with Python (Python)
-	* Visualization (D3 JavaScript, HTML, CSS, Tableau)
-	* Big Data Systems (Research, C++)
+	* [Visualization](https://www.cs171.org/2022/) (D3 JavaScript, HTML, CSS, Tableau)
+	* [Big Data Systems](http://daslab.seas.harvard.edu/classes/cs265/) (Research, C++)
+	* [Productionizing AI (MLOps): AC215](https://harvard-iacs.github.io/2023-AC215/)
 
 ## Contact
 Feel free to reach out to me:
