@@ -1,3 +1,5 @@
+// src/components/figure.jsx
+
 import React, { useEffect, useState } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
@@ -22,6 +24,7 @@ export default function Figure({ image, alt, caption }) {
     const lightbox = new PhotoSwipeLightbox({
       gallery: '#figure-gallery',
       children: 'a',
+      // Load PhotoSwipe upon click on image
       pswpModule: () => import('photoswipe'),
       // Other PhotoSwipe options...
     });
