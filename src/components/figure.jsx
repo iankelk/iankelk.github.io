@@ -1,5 +1,7 @@
 // src/components/figure.jsx
 
+// Captioned image with support for newline "\n" in caption, and PhotoSwipe viewing upon click
+
 import React, { useEffect, useState } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
