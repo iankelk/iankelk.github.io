@@ -1,7 +1,7 @@
 import React from 'react';
 import { useBlogPost } from '@docusaurus/theme-common/internal'
 import BlogPostItem from '@theme-original/BlogPostItem';
-import GiscusComponent from '@site/src/components/GiscusComponent';
+import GiscusComponent from '@site/src/components/giscus';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 
 export default function BlogPostItemWrapper(props) {
