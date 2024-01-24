@@ -3,6 +3,7 @@ slug: how-chatgpt-fools-us
 title: How ChatGPT fools us into thinking we're having a conversation
 authors: [ikelk]
 tags: [chat history, chatgpt, context, chat, AI, LLM, ML, chatbot, chatbots, AIExplained]
+enableComments: true
 image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2023-11-26-stateless/social-card.jpg?raw=true
 ---
 
