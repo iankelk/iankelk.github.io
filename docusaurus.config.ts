@@ -41,7 +41,7 @@ const config: Config = {
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
+          ignorePatterns: ['/blog/tags/**'],
           filename: 'sitemap.xml',
         },
         docs: {
