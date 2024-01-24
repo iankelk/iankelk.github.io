@@ -36,7 +36,7 @@ const config: Config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       {
         sitemap: {
           changefreq: 'weekly',
