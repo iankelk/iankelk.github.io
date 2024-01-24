@@ -15,6 +15,14 @@ Let's discover **Docusaurus in less than 5 minutes**.
 
 Get <kbd>started</kbd> by **creating a new site**.
 
+*italics*, **bold**, ***bold italics***
+
+superscript$^2$ / subscript$_2$
+
+~~strikethrough~~
+
+`verbatim code`
+
 Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
 ### What you'll need
