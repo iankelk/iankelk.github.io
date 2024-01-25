@@ -23,7 +23,7 @@ This is going to be a weird post. And we're going to start with a weird thought 
 
 <Figure
   image={sharkOctopus}
-  alt="A cartoon-style illustration in the vein of The New Yorker magazine, featuring a humorous underwater scene where a shark and an octopus are having an argument. The shark and octopus are depicted in a more exaggerated, cartoonish manner, with the shark sporting a grumpy expression and the octopus using its tentacles in a comedic, expressive way, as if in a lively debate. The underwater setting is whimsical, with stylized coral, seaweed, and playful small fish. The color palette is vibrant and lively, with brighter shades of blues, greens, and a touch of other colors, reflecting a more lighthearted and playful tone. The image maintains a 7:4 aspect ratio, offering a wide and engaging view of this charming and humorous underwater exchange."
+  alt="A cartoon-style illustration, featuring a humorous underwater scene where a shark and an octopus are having an argument. The shark and octopus are depicted in a more exaggerated, cartoonish manner, with the shark sporting a grumpy expression and the octopus using its tentacles in a comedic, expressive way, as if in a lively debate. The underwater setting is whimsical, with stylized coral, seaweed, and playful small fish. The color palette is vibrant and lively, with brighter shades of blues, greens, and a touch of other colors, reflecting a more lighthearted and playful tone. The image maintains a 7:4 aspect ratio, offering a wide and engaging view of this charming and humorous underwater exchange."
   caption="Generated with OpenAI DALL-E 3 and edited by author."
 />
 
@@ -47,7 +47,7 @@ In the vast, shimmering depths of the ocean, near a thriving coral reef bustling
 
 <Figure
   image={sharky}
-  alt="A cartoon-style illustration, similar to the style of The New Yorker magazine, featuring a proud and happy shark. The shark is depicted floating upright in the water, with a big, contented smile on its face, exuding a sense of pride and joy. Its body language is relaxed yet confident, giving it a charming and personable appearance. The underwater background is whimsical and colorful, with stylized coral, seaweed, and small, playful fish swimming around. The color scheme is bright and cheerful, with a predominance of blues and greens, complemented by splashes of other vibrant colors. The illustration maintains a 7:4 aspect ratio, providing a wide and engaging perspective on this delightful, happy shark."
+  alt="A cartoon-style illustration, featuring a proud and happy shark. The shark is depicted floating upright in the water, with a big, contented smile on its face, exuding a sense of pride and joy. Its body language is relaxed yet confident, giving it a charming and personable appearance. The underwater background is whimsical and colorful, with stylized coral, seaweed, and small, playful fish swimming around. The color scheme is bright and cheerful, with a predominance of blues and greens, complemented by splashes of other vibrant colors. The illustration maintains a 7:4 aspect ratio, providing a wide and engaging perspective on this delightful, happy shark."
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
 
@@ -55,7 +55,7 @@ On the other side, there’s Octavia, an exceptionally intelligent and quick-wit
 
 <Figure
   image={octavia}
-  alt="A semi-realistic cartoon illustration in the style of The New Yorker magazine, showcasing an octopus colored close to hex #ABF39F. The octopus is portrayed in a moment of triumph, energetically raising two of its arms upwards. The texture and shading on the octopus should suggest a level of realism while maintaining a cartoon aesthetic. The background is a lively underwater scene with intricately drawn coral and seaweed, set in a vibrant seascape. The color palette should use light green tones that closely match #ABF39F for the octopus, with harmonious blues and greens to complement the underwater theme. The illustration should have a 7:4 aspect ratio, offering a wide view that highlights the octopus's dynamic pose and the detailed environment."
+  alt="A semi-realistic cartoon illustration, showcasing an octopus colored close to hex #ABF39F. The octopus is portrayed in a moment of triumph, energetically raising two of its arms upwards. The texture and shading on the octopus should suggest a level of realism while maintaining a cartoon aesthetic. The background is a lively underwater scene with intricately drawn coral and seaweed, set in a vibrant seascape. The color palette should use light green tones that closely match #ABF39F for the octopus, with harmonious blues and greens to complement the underwater theme. The illustration should have a 7:4 aspect ratio, offering a wide view that highlights the octopus's dynamic pose and the detailed environment."
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
 
@@ -63,7 +63,7 @@ As the underwater currents swirl around them, Sharky and Octavia face each other
 
 <Figure
   image={determined}
-  alt="A cartoon-style illustration in the vein of The New Yorker magazine, featuring a shark and an octopus underwater, facing each other with determination. The shark and octopus are depicted in an exaggerated, cartoonish manner. The shark's expression is one of unwavering focus, and the octopus, with its tentacles firmly positioned, mirrors this determined stance. The setting is a whimsical underwater landscape with creatively stylized coral, seaweed, and a variety of small, playful fish. The color palette is vibrant, with bright shades of blues and greens to enhance the underwater theme. The image maintains a 7:4 aspect ratio, offering a wide and engaging view of this captivating underwater standoff."
+  alt="A cartoon-style illustration, featuring a shark and an octopus underwater, facing each other with determination. The shark and octopus are depicted in an exaggerated, cartoonish manner. The shark's expression is one of unwavering focus, and the octopus, with its tentacles firmly positioned, mirrors this determined stance. The setting is a whimsical underwater landscape with creatively stylized coral, seaweed, and a variety of small, playful fish. The color palette is vibrant, with bright shades of blues and greens to enhance the underwater theme. The image maintains a 7:4 aspect ratio, offering a wide and engaging view of this captivating underwater standoff."
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
 
@@ -229,7 +229,7 @@ There is one way to break the model out of its rut of always replying with the s
 
 <Figure
   image={crazy}
-  alt="A cartoon-style illustration in the vein of The New Yorker magazine, featuring a light green octopus, matching hex #ABF39F, with a humorous and exaggerated expression. The octopus is depicted as cross-eyed, adding a comical aspect to its appearance. In its tentacles, the octopus is holding a variety of random objects, such as a small treasure chest, a starfish, a pair of sunglasses, and a snorkel, creating a playful and whimsical scene. The underwater setting is vibrant and colorful, filled with stylized coral, seaweed, and other sea life. The color palette is bright, with the light green octopus standing out in the midst of the lively blues and other colors of the ocean. The image maintains a 7:4 aspect ratio, capturing the octopus in this quirky, humorous moment."
+  alt="A cartoon-style illustration, featuring a light green octopus, matching hex #ABF39F, with a humorous and exaggerated expression. The octopus is depicted as cross-eyed, adding a comical aspect to its appearance. In its tentacles, the octopus is holding a variety of random objects, such as a small treasure chest, a starfish, a pair of sunglasses, and a snorkel, creating a playful and whimsical scene. The underwater setting is vibrant and colorful, filled with stylized coral, seaweed, and other sea life. The color palette is bright, with the light green octopus standing out in the midst of the lively blues and other colors of the ocean. The image maintains a 7:4 aspect ratio, capturing the octopus in this quirky, humorous moment."
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
 
@@ -270,7 +270,7 @@ Unfortunately, the current success of AI in responding creatively to certain typ
 
 <Figure
   image={shrug}
-  alt="A cartoon-style illustration in the vein of The New Yorker magazine, showing a shark and an octopus facing the viewer and shrugging in a 'I don't know' gesture. The shark and octopus are depicted in a humorous, cartoonish manner. The shark, with a bemused expression, and the octopus, colored light green close to hex #ABF39F, both raise their fins and tentacles in a classic shrug, their faces conveying a playful sense of confusion or uncertainty. The underwater scene is vibrant and whimsical, with stylized coral, seaweed, and small fish adding to the light-hearted atmosphere. The color palette is bright, emphasizing the fun and playful mood of the image. The 7:4 aspect ratio provides a wide view of this engaging and amusing underwater interaction."
+  alt="A cartoon-style illustration, showing a shark and an octopus facing the viewer and shrugging in a 'I don't know' gesture. The shark and octopus are depicted in a humorous, cartoonish manner. The shark, with a bemused expression, and the octopus, colored light green close to hex #ABF39F, both raise their fins and tentacles in a classic shrug, their faces conveying a playful sense of confusion or uncertainty. The underwater scene is vibrant and whimsical, with stylized coral, seaweed, and small fish adding to the light-hearted atmosphere. The color palette is bright, emphasizing the fun and playful mood of the image. The 7:4 aspect ratio provides a wide view of this engaging and amusing underwater interaction."
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
 
