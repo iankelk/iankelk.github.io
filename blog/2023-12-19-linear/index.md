@@ -59,7 +59,7 @@ On the other side, there’s Octavia, an exceptionally intelligent and quick-wit
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
 
-As the underwater currents swirl around them, Sharky and Octavia face each other, ready to start a debate about their evolutionary origins—a conversation filled with humor, facts, and a touch of the mysteries of the deep sea... or maybe just one fact that GPT-4 will mention a lot.
+As the underwater currents swirl around them, Sharky and Octavia face each other, ready to start a debate about their evolutionary origins—a conversation filled with humor, facts, and a touch of the mysteries of the deep sea—or maybe just one fact that GPT-4 will mention a lot.
 
 <Figure
   image={determined}
@@ -67,11 +67,11 @@ As the underwater currents swirl around them, Sharky and Octavia face each other
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
 
-### The question they're arguing about: which one—Sharky or Octavia—evolved from dinosaurs?
+### The question they're arguing about is: which one-Sharky or Octavia-evolved from dinosaurs?
 
-We're deliberately using this bizarre dialogue since the chances of it being in an LLMs training data are just about zero. I don't personally know of any examples where a shark and an octopus have a disagreement about which one is more dinosaur-like, and it's a great way to see how creative an LLM like GPT-4 can be when it's asked to generate something with no context.
+We're deliberately using this bizarre dialogue since the chances of it being in LLM training data are just about zero. I don't personally know of any examples where a shark and an octopus have a disagreement about which one is more dinosaur-like, and it's a great way to see how creative an LLM like GPT-4 can be when it's asked to generate something with no context.
 
-Here's the catch: we want to know a line from **the middle** of the argument.
+Here's the catch: We want to know a line from **the middle** of the argument.
 
 As a human, take a pause and consider this question:
 
@@ -79,12 +79,12 @@ As a human, take a pause and consider this question:
 
 Be as creative as you want; there's no right answer here. We're just trying to come up with some predictions of what third thing an octopus might say in a heated argument with a shark about their dinosaur heritage.
 
-### Here's a visualization of a possible argument with the 3rd thing the octopus says missing
+### Here's a visualization of a possible argument with the third thing the octopus says missing
 
 <Figure
   image={sharkument1}
   alt="The image shows a colorful underwater scene in a comic book style. A shark and an octopus are facing each other with a series of speech bubbles above them, filled with variations of the word 'something.' The shark has a stern and somewhat confused expression, while the octopus looks surprised with wide eyes. The background is a bright teal, with small fish, bubbles, and sea plants scattered around. The speech bubbles indicate a back and forth conversation between the two sea creatures, although the content of the conversation is nonsensical as it only includes the word 'something' in different intonations and combinations, such as 'SOMETHING!' 'SOMETHING?' 'SOMETHING SOMETHING!!' and 'OHH BUT SOMETHING! SOMETHING!' There's also an empty speech bubble at the third statement by the octopus, suggesting a missing part of the conversation."
-  caption="Animal images by OpenAI DALL-E 3. Text and comic bubbles by author."
+  caption="Animal images by OpenAI DALL-E 3. Text and comic bubbles by the author."
 />
 
 #### Off the top of my head, here are some things Octavia could have said in her third line of dialogue:
@@ -108,7 +108,7 @@ The following conversation is taken verbatim from ChatGPT with GPT-4:
 />
 ---
 
-#### Interesting... in a completely new chat, let's get more specific and ask again for the fourth thing said:
+#### Interesting! In a completely new chat, let's get more specific and ask again for the fourth thing said:
 
 <ChatConversation
   conversation={[
@@ -143,11 +143,11 @@ The following conversation is taken verbatim from ChatGPT with GPT-4:
   chatbotAvatar="/img/chatbotAvatar.jpeg"
 />
 <br />
-So it seems we can surmise that sharks and octopuses have separate evolutionary paths that are older than dinosaurs, and that's all that GPT-4 thinks is important *no matter where it's mentioned in the conversation.*
+So it seems we can surmise that sharks and octopuses have separate evolutionary paths that are older than dinosaurs, and that's all that GPT-4 thinks is important, *no matter where it's mentioned in the conversation.*
 
 ## Does this mean GPT-4 can't generate a realistic debate between these two?
 
-Here's the twist: it totally can. GPT-4 is completely capable of generating this conversation. I gave it this prompt:
+Here's the twist: It totally can. GPT-4 is completely capable of generating this conversation. I gave it this prompt:
 
 > A shark and an octopus are arguing over which one of them evolved from dinosaurs. Can you generate a script where they take turns arguing, and each speaks at least 5 times?
 
@@ -186,7 +186,7 @@ and the sixth line of dialogue (the third line from the octopus) was:
 
 > Sharky, dear, having sharp teeth doesn't make you a dino descendant. It just makes you good at biting. Did you know octopuses have three hearts and blue blood? Now that’s evolutionary marvel!
 
-None of these lines have anything to do with what the model previously predicted would be its fourth or sixth lines of dialogue. These lines are actually more relevant, and make sense in the context of a conversational debate. The difference in the method of generation is that in this example, we allowed GPT-4 to generate the whole exchange.
+None of these lines have anything to do with what the model previously predicted would be its fourth or sixth lines of dialogue. These lines are actually more relevant and make sense in the context of a conversational debate. The difference in the method of generation is that in this example, we allowed GPT-4 to generate the whole exchange.
 
 ### What's the lesson here?
 
@@ -194,7 +194,7 @@ The results here reveal an interesting aspect of [autoregressive models](https:/
 
 While generating the fifth line in a conversation without knowing what came before isn't difficult for a person, it's something that an LLM isn't able to do well. Given the scenario described, GPT-4 tried to infer the general nature of the discussion and create a plausible response that fits into that context. But all of its responses in the previous examples are attempts to conclude the conversation using facts, a request that was never part of the prompt.
 
-1. **Factual and Informative Responses**: In scenarios where factual accuracy is important, such as discussions involving scientific or historical topics, LLMs are inclined to provide the most accurate and relevant information. This tendency is rooted in the training data and the model's design, which emphasizes factual correctness in contexts where it's expected. However, this approach might not always align with the creative or playful nature of certain prompts, especially in hypothetical or fictional scenarios.
+1. **Factual and Informative Responses**: In scenarios where factual accuracy is important, such as discussions involving scientific or historical topics, LLMs are inclined to provide the most accurate and relevant information. This tendency is rooted in the training data and the model's design, which emphasize factual correctness in contexts where it's expected. However, this approach might not always align with the creative or playful nature of certain prompts, especially in hypothetical or fictional scenarios.
 
 2. **Assuming a Concluding Nature of the Response**: Without clear indications of the conversation's structure or its continuation beyond a specific line, there's a tendency to frame responses as conclusive or summarizing statements. This is because, in the absence of context, the model defaults to creating responses that can stand alone or serve as logical endpoints to the given information.
 
@@ -211,15 +211,15 @@ To address these challenges, the model needs more specific guidance in the promp
 
 ## Why does this matter? Thoughts on AGI
 
-One of the things I see commonly discussed today (especially online) is the idea of Artificial General Intelligence (AGI), which refers to a level of artificial intelligence that can understand, learn, and apply its intelligence to a wide range of problems, much like a human being. Unlike specialized AI systems that are designed for specific tasks, AGI possesses the ability to think, reason, and make decisions across diverse domains, demonstrating flexibility and adaptability akin to human cognition. It requires not just advanced problem-solving and learning capabilities, but also the capacity for abstract thinking, generalization, and integrating knowledge from various fields, mirroring the broad and integrated intelligence found in humans.
+One of the things I see commonly discussed today (especially online) is the idea of artificial general intelligence (AGI), which refers to a level of artificial intelligence that can understand, learn, and apply its intelligence to a wide range of problems, much like a human being. Unlike specialized AI systems that are designed for specific tasks, AGI possesses the ability to think, reason, and make decisions across diverse domains, demonstrating flexibility and adaptability akin to human cognition. It requires not just advanced problem-solving and learning capabilities, but also the capacity for abstract thinking, generalization, and integrating knowledge from various fields, mirroring the broad and integrated intelligence found in humans.
 
 Since AGI doesn't exist yet, my thoughts on AGI are based more on my opinion than empirical data. I think that while AGI may well come in the future, there are several obstacles that need to be overcome first.
 
-The requirement that text always be generated in a sequential, linear manner, as exemplified by autoregressive models, has implications for the pursuit of AGI.
+Autoregressive models serve as an example of the requirement that text generation must always be sequential and linear, which has implications for the pursuit of AGI.
 
 1. **Sequential Text Generation and Creativity**: The sequential nature of text generation in models like GPT-4 limits the ability to jump into the middle of a conversation or narrative without prior context. This is because they don't "think" per se, but progressively generate a response using the parts of the response they previously created. 
 
-2. **Autonomy and Reasoning**: Current AI models operate based on patterns learned from their training data. Their responses are generated based on statistical likelihoods and learned associations, not on independent thought or understanding. This is the reason the model always generated the same answer for the octopus about different evolutionary paths; it assumed a pattern that wasn't provided to it, due to patterns in its training data.
+2. **Autonomy and Reasoning**: Current AI models operate based on patterns learned from their training data. Their responses are generated based on statistical likelihoods and learned associations, not on independent thought or understanding. This is the reason the model always generated the same answer for the octopus about different evolutionary paths; it assumed a pattern that wasn't provided to it due to patterns in its training data.
 
 For AGI, a level of autonomous reasoning and decision-making, akin to human cognitive processes, will be a key requirement. The journey towards AGI is likely to involve incremental advancements, learning from and building upon the capabilities and limitations of existing models.
 
@@ -233,7 +233,7 @@ There is one way to break the model out of its rut of always replying with the s
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
 
-I gave it this prompt three times into three new chats, and it gave three completely different responses. They all illustrate that asking it to be silly introduces variety into the answers it gives.
+I gave it this prompt three times in three new chats, and it gave three completely different responses. They all illustrate that asking it to be silly introduces variety to the answers it gives.
 <br />
 
 <ChatConversation
@@ -266,7 +266,7 @@ When you introduce elements like humor or absurdity into a prompt, it essentiall
 
 It's likely that the ability to adapt to different types of prompts, including those that are humorous or absurd, demonstrates a level of flexibility in AI systems. An AGI would need to handle a wide range of tasks and respond appropriately to a vast array of situations, including those that are non-standard or require creative thinking.
 
-Unfortunately, the current success of AI in responding creatively to certain types of prompts doesn't directly translate to achieving AGI. AGI would require not just creativitym but also a deep understanding, reasoning, self-awareness, and the ability to learn and apply knowledge across a wide range of domains. The creativity observed in current AI models is still a far cry from the complete intelligence that AGI represents. Sequential language generation is only one example of the gap we still need to bridge.
+Unfortunately, the current success of AI in responding creatively to certain types of prompts doesn't directly translate to achieving AGI. AGI would require not just creativity but also deep understanding, reasoning, self-awareness, and the ability to learn and apply knowledge across a wide range of domains. The creativity observed in current AI models is still a far cry from the complete intelligence that AGI represents. Sequential language generation is only one example of the gap we still need to bridge.
 
 <Figure
   image={shrug}
