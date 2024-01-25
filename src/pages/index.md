@@ -18,9 +18,8 @@ title: Ian Kelk
 * The [video](https://www.youtube.com/watch?v=g4tnZTghSmg) for the TDS article (featured on the page, but here it is directly)
 
 ### Vision
-* [Search and Rescue using YOLOv5](https://wandb.ai/iankelk/YOLOv5/reports/Search-and-Rescue-Augmentation-and-Preprocessing-on-Drone-Based-Water-Rescue-Images-with-YOLOv5---VmlldzoxOTk4MTI2?galleryTag=object-detection) using the Weights and Biases report
-* Co-authored a [research paper](https://sp2023.ieee-security.org/program-papers.html) on physical adversarial attacks on face recognition systems for biometric security for S&P 2023: [ImU: Physical Impersonating Attack for Face Recognition System with Natural Style Changes](https://drive.google.com/file/d/1ewQSfJwTpHNtrRsdPiJNYB99_kcYtoCQ/view?usp=share_link)
-
+* [Search and Rescue using YOLOv5](https://wandb.ai/iankelk/YOLOv5/reports/Search-and-Rescue-Augmentation-and-Preprocessing-on-Drone-Based-Water-Rescue-Images-with-YOLOv5---VmlldzoxOTk4MTI2?galleryTag=object-detection) using the Weights and Biases report.
+* Co-authored a [research paper](https://sp2023.ieee-security.org/program-papers.html) on physical adversarial attacks on face recognition systems for biometric security for S&P 2023: [ImU: Physical Impersonating Attack for Face Recognition System with Natural Style Changes](/reports/S_P_2023_Physical_Attack.pdf)
 * My [recorded presentation](https://www.youtube.com/watch?v=dzdyO1WmlEE) on the [Gist: Efficient Data Encoding for Deep Neural Network Training](https://www.microsoft.com/en-us/research/uploads/prod/2018/04/fiddle-gist-isca18.pdf) paper from Microsoft. Link to slides [here.](https://docs.google.com/presentation/d/1y4qM_qi-XI1kPqrZSM5u1yzr4aN5kxTOLejfJPO-5nA/edit?usp=sharing)
 
 ### Visualization
