@@ -9,12 +9,24 @@ import 'photoswipe/style.css';
 export default function Figure({ image, alt, caption }) {
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
 
-  const captionContent = caption.split('\\n').map((line, index, array) => (
-    <React.Fragment key={index}>
-      {line}
-      {index < array.length - 1 && <br />}
-    </React.Fragment>
-  ));
+  const parseCaption = (text) => {
+    // Splitting by newline first
+    return text.split('\\n').map((line, index, array) => {
+      // Parsing Markdown-style links in each line
+      const parsedLine = line.replace(/\[([^\]]+)\]\((https?:\/\/[^\s]+)\)/g, (match, linkText, url) => {
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">${linkText}</a>`;
+      });
+      return (
+        <React.Fragment key={index}>
+          {/* Using dangerouslySetInnerHTML to render the parsed line as HTML */}
+          <span dangerouslySetInnerHTML={{ __html: parsedLine }} />
+          {index < array.length - 1 && <br />}
+        </React.Fragment>
+      );
+    });
+  };
+
+  const captionContent = parseCaption(caption);
 
   useEffect(() => {
     const img = new Image();
@@ -28,12 +40,25 @@ export default function Figure({ image, alt, caption }) {
       children: 'a',
       // Load PhotoSwipe upon click on image
       pswpModule: () => import('photoswipe'),
-      // Other PhotoSwipe options...
     });
     lightbox.init();
 
+    // Adding event listener to caption links to stop propagation
+    const captionLinks = document.querySelectorAll('#figure-gallery figcaption a');
+    captionLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.stopPropagation(); // This prevents PhotoSwipe from handling the click
+      });
+    });
+
     return () => {
       lightbox.destroy();
+      // Clean up event listeners
+      captionLinks.forEach(link => {
+        link.removeEventListener('click', (e) => {
+          e.stopPropagation();
+        });
+      });
     };
   }, [image]);
 
