@@ -696,6 +696,21 @@ Therefore, the likelihood of generating the exact same sequence of 2,000 tokens 
   <summary>How is this calculated? (math & Python code)</summary>
 
   <div>
+
+Given a vocabulary size $V$ and a sequence length $N$, the total number of possible combinations can be calculated as $V^N$. For a vocabulary size of 50,257 and a sequence length of 2,000, the calculation is as follows:
+
+$$
+\text{Total Combinations} = V^N = 50,257^{2000}
+$$
+
+However, this number is astronomically large and beyond direct calculation. Instead, we use logarithms to estimate this number. The logarithm (base 10) of the total number of combinations is calculated as:
+
+$$
+\log_{10}(\text{Total Combinations}) = N \cdot \log_{10}(V) = 2000 \cdot \log_{10}(50,257)
+$$
+
+Here's how we can calculate this with Python:
+
 ```python title="Python code for calculating the combinatorial space of a 2,000 token sequence with a 50,257 token vocabulary"
 import math
 
@@ -748,6 +763,20 @@ Are there other methods of recognizing generated text? Yes, absolutely, using wa
   <summary>How is this calculated? (math & Python code)</summary>
 
   <div>
+Given a sequence length $N$ and a fixed number of choices per token $K$ in a top-k sampling method, the total number of possible combinations can be estimated. For a top-k of 40 choices per token and a sequence length of 2,000 tokens, the calculation is as follows:
+
+$$
+\text{Total Combinations} = K^N = 40^{2000}
+$$
+
+However, to manage the large numbers involved, we calculate the logarithm (base 10) of the total number of combinations. The calculation is given by:
+
+$$
+\log_{10}(\text{Total Combinations}) = N \cdot \log_{10}(K) = 2000 \cdot \log_{10}(40)
+$$
+
+Here's how we can calculate this with Python:
+
 ```python title="Python code for calculating the combinatorial space of a 2,000 token sequence with a top-k of 40"
 import math
 
@@ -757,7 +786,7 @@ choices_per_token = 40
 # Number of tokens in the sequence
 sequence_length = 2000
 
-# Calculate the logarithm (base 10) of the number of combinations for top-k and top-p sampling methods
+# Calculate the logarithm (base 10) of the number of combinations for top-k sampling methods
 log_combinations_top_k = sequence_length * math.log10(choices_per_token)
 log_combinations_top_k
 ```
