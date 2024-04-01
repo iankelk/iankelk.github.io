@@ -661,6 +661,12 @@ Renormalized Top-p: [0.33333333 0.26666667 0.2 0.13333333 0.06666667]
 
 Unlike top-k sampling, which selects a fixed number of tokens $k$, top-p sampling dynamically adjusts the number of tokens based on their probability distribution. Top-p sampling is effective in excluding the long tail of low-probability words without arbitrarily limiting the choice to a fixed number of top probabilities. This can prevent the inclusion of very unlikely words while still allowing for a rich variety of output.
 
+:::tip
+
+Top-p with $p=1$ is equivalent to the chicken choosing from all words in the vocabulary.
+
+:::
+
 ## What does the necessary existence of the chicken imply?
 
 ### There's probably no way to definitively prove that a given text was generated
