@@ -30,7 +30,7 @@ import cards from './cards.jpg';
 import hiddenChicken from './hidden-chicken.jpg';
 import dice from './dice.jpg';
 
-Humans often organize large, skilled groups to undertake complex projects, yet often place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate--a chicken.
+Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate--a chicken.
 
 :::note
 
