@@ -28,6 +28,7 @@ import chickenTopP from './chicken-top-p.jpg';
 import chickenTopPRenorm from './chicken-top-p-renorm.jpg';
 import cards from './cards.jpg';
 import hiddenChicken from './hidden-chicken.jpg';
+import dice from './dice.jpg';
 
 Humans often organize large, skilled groups to undertake complex projects, yet often place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate--a chicken.
 
@@ -922,3 +923,9 @@ When considering the model as a complete system for generating text, the inclusi
 It's probably easiest to view LLMs as deterministic systems with respect to their neural network computation, producing a predictable set of output probabilities for the next token when given an input. However, when considering the complete text generation process, which includes the decision-making by an unintelligent hungry bird of some kind, the system behaves stochastically.
 
 It's still mindbending that these models that have fundamentally changed world rely on pure chance for their final answers, and so far, this is the best we have.
+
+<Figure
+  image={dice}
+  alt="Monochrome illustration depicting rows of people seated at desks in a vast grid, working very hard to deliver information to the head table. At the head table, people are playing a dice game."
+  caption="God may not play dice with the universe, but language models sure do.\nGenerated with OpenAI DALL-E 3 and edited by the author."
+/>
