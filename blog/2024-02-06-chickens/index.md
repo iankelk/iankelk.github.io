@@ -34,7 +34,7 @@ Humans often organize large, skilled groups to undertake complex projects, and t
 
 :::note
 
-In this post, I use the term *word* instead of *token* to describe what an LLM predicts. This is just a useful simplification to avoid having to address why the model might predict half a word or a semicolon, since the underlying principles of the "stochastic chicken" are the same.
+For most of this post, I use the term *word* instead of *token* to describe what an LLM predicts. This is just a useful simplification to avoid having to address why the model might predict half a word or a semicolon, since the underlying principles of the "stochastic chicken" are the same.
 
 :::
 
@@ -73,7 +73,7 @@ We've given each one of these very patient people a calculator along with the in
 
 As the number travels from the front of the stadium to the back, it undergoes a series of transformations. Each person's "little work" on their calculator is akin to the operations performed by neurons in a layer of the neural network—applying weights (learned parameters), adding biases, and passing through activation functions. These transformations are based on the knowledge embedded in the model's parameters, trained to recognize patterns, relationships, and the structure of language.
 
-By the time the number reaches the last person in the stadium, it has been transformed multiple times, each step incorporating more context and adjusting the calculation based on the instructions (the model's architecture and trained parameters). This final result can be seen as the model's output—a complex representation of the input data that encodes the probabilities of the next possible word.
+By the time the number reaches the last person in the stadium, it has been transformed multiple times, each step incorporating more context and adjusting the calculation based on model's architecture and trained parameters. This final result can be seen as the model's output—a complex representation of the input data that encodes the probabilities of the next possible word.
 
 But here's the strange part: despite all this incredible depth of stored knowledge, we're going to take the recommended answers provided by these thousands of people, and select one using a completely random process. It's kind of like a huge pyramid where people work together to assemble a set of possible answers to a problem, then hand it at the top to a person flipping a coin.
 
@@ -84,7 +84,9 @@ But here's the strange part: despite all this incredible depth of stored knowled
 />
 
 
-Actually, we can do better than this. To really illustrate the contrast between the complexity of a  model with billions of parameters getting its final answer from a dumb-as-a-rock random number generator, let's use something truly silly. Let's use a chicken. 
+Actually, we can do better than this. To really illustrate the contrast between the complexity of a  model with billions of parameters getting its final answer from a dumb-as-a-rock random number generator, let's use something truly silly.
+
+Let's use a chicken. 
 
 To get this chicken involved, we're going to use the results of our calculations to create piles of chicken feed, each one representing a potential next word the model might generate. The bigger the pile, the higher the probability that the associated word should be selected.
 
@@ -104,7 +106,7 @@ The chicken, oblivious to the tireless efforts of the stadium's occupants, simpl
 
 Why on earth would we do something like this? Why would we create massive, intelligent machines that ultimately rely on the random judgments of a gambling idiot?
 
-The answer is that deep language models such as LLMs are built with neural networks, and neural networks are deterministic.
+The answer is that deep language models such as LLMs are built with neural networks, and neural networks are *deterministic.*
 
 ### What does deterministic mean?
 
