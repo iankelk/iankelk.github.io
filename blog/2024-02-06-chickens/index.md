@@ -29,6 +29,8 @@ import chickenTopPRenorm from './chicken-top-p-renorm.jpg';
 import cards from './cards.jpg';
 import hiddenChicken from './hidden-chicken.jpg';
 import dice from './dice.jpg';
+import looping from './looping.jpg';
+import beach from './beach.jpg';
 
 Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate--a chicken.
 
@@ -112,15 +114,17 @@ The answer is that deep language models such as LLMs are built with neural netwo
 
 Being deterministic means that if you do something exactly the same way every time, you'll always get the same result. There's no randomness or chance involved. Think of it like using a simple calculator; if you type in $2 + 2$ on any basic calculator, it will always show "4". It won't suddenly decide to show "5" one day.
 
-In contrast, something that's not deterministic (we call this stochastic) is like rolling a die; even if you try to do it the same way each time, you can get different outcomes because chance is involved. So, deterministic means predictable and consistent, with no surprises based on how you started.
+Deterministic means predictable and consistent, with no surprises based on how you started.
+
+In contrast, something that's not deterministic (we call this *stochastic*) is like rolling a die; even if you try to do it the same way each time, you can get different outcomes because chance is involved.
 
 ### Why are neural networks deterministic?
 
 A neural network is a complex system inspired by the human brain, designed to recognize patterns and solve problems. It's made up of layers of artificial neurons, which are small, simple units that perform mathematical operations. Each neuron takes in some input, applies some mathematical function to it, and then passes the result on to the next neuron in line.
 
-As a huge simplification of how these models work, these neurons are organized into layers: there's an input layer that receives the initial data (like the token representations of words in a sentence), one or more hidden layers that process the data further, and an output layer that provides the final decision (the probability distribution for the predicted next word in the text).
+As a huge simplification of how these models work, these neurons are organized into layers: there's an input layer that receives the initial data (like representations of words in a sentence), one or more hidden layers that process the data further, and an output layer that provides the final decision (the probability distribution for the predicted next word in the text).
 
-The diagram below might look **crazy** complicated, but the only thing you need to understand is that each line represents some math function performed from one circle to the next. Some numbers go in one side, and some numbers go out the other side.
+The diagram below might look **crazy** complicated, but the only thing you need to understand is that each line represents some math function performed from one circle to the next. Some numbers go in one side, and some numbers go out the other side. And the stuff that comes out on the right side will always be the same for identical stuff you put into the left side.
 
 <Figure
   image={nn}
@@ -128,7 +132,7 @@ The diagram below might look **crazy** complicated, but the only thing you need 
   caption="Maybe it looks scary, but each line connecting the dots is just a little math that never changes.\nGenerated with [NN-SVG](https://alexlenail.me/NN-SVG/) and DALL-E 3"
 />
 
-The reason a neural network is deterministic lies in how these artificial neurons are connected and how they process data. If you give the network the same input and the network has not been changed (its weights, or how much it values certain pieces of input, remain the same), it will always perform the same calculations in the same order, and thus return the same output. While LLMs will have *billions* of these neurons, the basic idea is the same: for a given input, you will **always** get the same output. Typing $2+5\times10$ into a calculator will always give you $52$, no matter how many times you do it.
+If you give the network the same input and the network has not been changed (ie., its weights, or how much it values certain pieces of input, remain the same), it will always perform the same calculations in the same order, and thus return the same output. While LLMs will have *billions* of these neurons, the basic idea is the same: for a given input, you will **always** get the same output. Typing $2+5\times10$ into a calculator will always give you $52$, no matter how many times you do it.
 
 ### So why do LLMs give different responses each time to the same prompt?
 
@@ -143,17 +147,17 @@ This seems suspicious. If you ask an LLM the same thing multiple times, it will 
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
 
-This is why we need the chicken. The chicken is stochastic, which adds randomness and unpredictability to the LLM.
+This is why we need the chicken. The chicken is stochastic, which adds randomness and unpredictability to the the whole system.
 
-The humans, who for some reason have deified a chicken, will present the chicken with a series of words and probabilities. Technically, these are not words but *tokens*; however, for the sake of simplifying this analogy, let's refer to them as words. These words and probabilities can be visualized as a series of piles of chicken feed, where each word pile's size corresponds to its probability.
+The previously mentioned humans in the stadium, who for some reason have deified a chicken, will present the chicken with a series of words and probabilities. Technically, these are not words but *tokens*; however, for the sake of simplifying this analogy, we'll refer to them as words. These words and probabilities can be visualized as a series of piles of chicken feed, where each word pile's size corresponds to its probability.
 
-Let's use an example! Here's a prompt that we can give to our language model to see what next word it's going to predict: **"After midnight, the cat decided to..."**
+As an example, here's a prompt that we can give to our language model to see what next word it's going to predict: **"After midnight, the cat decided to..."**
 
 If we show all the possible words that could finish this sentence, the number of food piles would match the size of the model's vocabulary. For a model like GPT-3, this would be **50,257** piles of food!
 
 :::note
 
-The way that GPT-3 can encapsulate all the words in 50+ languages into just 50,257 tokens is its own special magic that I'll cover later. Here's a [Wikipedia link](https://en.wikipedia.org/wiki/Byte_pair_encoding) in the meantime.
+The way that GPT-3 can encapsulate all the words in 50+ languages into just 50,257 tokens is its own special magic that I'll cover in another post. Here's a [Wikipedia link](https://en.wikipedia.org/wiki/Byte_pair_encoding) in the meantime.
 
 :::
 
@@ -194,17 +198,17 @@ Unfortunately, our chicken's work is just beginning, because it will now need to
   caption="One word down, just a few hundred more to go.\nChicken and feed generated with OpenAI DALL-E 3 and edited by the author."
 />
 
-The incredible irony of all this is that some of these language models are trained using *trillions* of words—comprising the collective works of humanity—and costing *millions* of dollars in the process. We then hand these predictions over to an unintelligent gambling chicken to choose what to actually say. With each choice from the chicken, the model's output increasingly diverges from the sequence of the most statistically probable words. Somehow, this produces more natural-sounding language.
+The incredible irony of all this is that some of these language models are trained using *trillions* of words—comprising the collective works of humanity—and costing *millions* of dollars in the process. We then hand these predictions over to an unintelligent gambling chicken to choose what to actually say. With each choice from the chicken, the model's output increasingly diverges from the sequence of the most  probable words, and yet somehow, this produces more natural-sounding language.
 
 It's kind of bonkers.
 
-In fact, not using the chicken—and just taking the most probable words from the LLM—generates poor language. This is called *greedy decoding*, and it has a whole host of problems.
+In fact, not using the chicken—and just taking the most probable words from the LLM—generates poor language. This is called **greedy decoding**, and it has a whole host of problems.
 
 ## Why we need the chicken
 
 ### Repetitiveness
 
-Greedy decoding tends to produce repetitive or looped text. Since it always chooses the most probable next word, it can get stuck in a pattern where the same sequence of words keeps being selected. This can happen in situations where the model finds a certain pattern of text to be highly probable and, without a certain chicken to encourage diversity, falls into a cycle of selecting the same sequence over and over again.
+Not using the chicken, and just taking the most probable word (greedy decoding) tends to produce repetitive or looped text. Since it always chooses the most probable next word, it can get stuck in a pattern where the same sequence of words keeps being selected. This can happen in situations where the model finds a certain pattern of text to be highly probable and, without the chicken to encourage diversity, falls into a cycle of selecting the same sequence over and over again.
 
 Here's a short example with some creative writing:
 
@@ -231,21 +235,27 @@ The model begins the sentence without issue, and begins by writing "The park was
 />
 <br />
 
+#### Well, that didn't work.
+
+<Figure
+  image={looping}
+  alt="A humorous and artistic illustration featuring a comically exasperated humanoid robot at a desk. The robot, sleek and metallic, has an exaggerated expression of frustration with its circuits visibly overheating. Above the robot's head is a large thought bubble filled with arrows spinning in endless circles, symbolizing its stuck thought loops. The scene is whimsically cluttered with papers and books under a dim desk lamp, emphasizing the robot's humorous struggle with its thoughts."
+  caption="Writing is easy is easy is easy is easy...\nGenerated with OpenAI DALL-E 3 and edited by the author."
+/>
+
 ### Lack of Creativity and Diversity
 
-Real human language is rich and varied, often taking unexpected turns, like a beautiful beautiful jellyfish riding a purple unicorn. By always choosing the most probable word, the generated text misses out on these creative and less predictable aspects of language, resulting in outputs that can feel dull or overly formulaic.
+Real human language is rich and varied, often taking unexpected turns, like a beautiful jellyfish riding a purple unicorn. By always choosing the most probable word, the generated text misses out on these creative and less predictable aspects of language, resulting in outputs that feel dull or formulaic.
 
 ### Contextual Inappropriateness
 
-The most probable next word is not always appropriate. Language is highly contextual, and the best choice in one situation might not be the most statistically common one. Greedy decoding can lead to nonsensical or awkward phrases that, while grammatically correct, do not fit well with the preceding text.
-
-Here's another example using a job application:
+As weird as this sounds, the most probable next word is not always appropriate. Language is highly contextual, and the best choice in one situation might not be the most statistically common one. Greedy decoding can lead to nonsensical or awkward phrases that, while grammatically correct, do not fit well with the preceding text. Here's another example using a job application:
 
 **Prompt**: "Write me a cover letter applying for a job in marketing"
 
 Again, the model begins the sentence without issue, and begins by writing, "Dear Ms. Smith, I am writing to express my interest ..." but then again we hit a pothole.
 
-In a cover letter for a job application, the language model should discuss the sender's relevant skills, experiences, or why they are a good fit for the job. However, a contextually inappropriate continuation might look like this:
+Since this is a cover letter for a job application, the language model should discuss the sender's relevant skills, experiences, or why they are a good fit for the job. However, a contextually inappropriate continuation might look like this:
 
 <ChatConversation
   conversation={[
@@ -258,11 +268,17 @@ In a cover letter for a job application, the language model should discuss the s
 />
 <br />
 
-The model, perhaps trained on more dating profiles than job applications, has continued the cover letter using the *most* probable words it predicted. While language models can recognize patterns and generate text based on statistical probabilities, they don't understand context in the same way humans do. They might link professional qualifications to personal hobbies due to statistical correlations in the training data, not recognizing the formal context of a job application email.
+The model, perhaps trained on more dating profiles than job applications, has continued the cover letter using the *most* probable words it predicted. While language models can recognize patterns and generate text based on statistical probabilities, they don't understand context in the same way humans do. They might link professional qualifications to personal hobbies due to statistical correlations in the training data and not recognize a job application, which sounds a tad ridiculous.
+
+<Figure
+  image={beach}
+  alt="A whimsical and stylish illustration depicting a humanoid robot in a business suit, walking comically with exaggerated movements along a beach. The robot is walking in the water up to its ankles, causing  splashes and waves around it. The beach scene includes soft sand and gentle waves under a serene sky. The humorous contrast of the formally attired robot deeply immersed in the water, playfully interacts with the natural seaside environment, creating a surreal and amusing visual narrative."
+  caption="I like romantic walks on the beach while being a team player in the corporate world.\nGenerated with OpenAI DALL-E 3 and edited by the author."
+/>
 
 ### Inability to Explore Multiple Paths
 
-Greedy decoding means that an LLM will always produce the same output for any given input. Asking it to "tell a story," for example, would always result in the same story, assuming it isn't plagued with the previously mentioned problems. Language generation, especially in creative or complex tasks, often benefits from considering multiple possible continuations at each step. Greedy decoding's linear path through the probability distribution means fewer interesting outputs that a more exploratory approach could uncover. 
+Greedy decoding means that an LLM will always produce the same output for any given input. Asking it to "tell a story," for example, would always result in the same story, assuming it isn't plagued with the previously mentioned problems. Language generation, especially in creative or complex tasks, often benefits from considering multiple possible continuations at each step. Greedy decoding's linear path through the probability distribution means fewer interesting outputs that an exploratory approach could uncover. 
 
 ## Tuning the chicken
 
@@ -587,7 +603,7 @@ Adjusting the value of "k" allows for tuning the balance between randomness and 
 
 Let's look at two examples of how top-k might affect text generation.
 
-#### Small Top-k (e.g., 5): This setting forces the model to pick from a narrower set of options, likely leading to a more conventional and expected description:
+#### Small top-k (e.g., 5): This setting forces the model to pick from a narrower set of options, likely leading to a more conventional and expected description:
 
 <ChatConversation
   conversation={[
@@ -599,7 +615,7 @@ Let's look at two examples of how top-k might affect text generation.
 />
 <br />
 
-#### Large Top-k (e.g., 50): With this setting, the model has a wider array of words to choose from for each step, potentially leading to a more unique or unconventional description:
+#### Large top-k (e.g., 50): With this setting, the model has a wider array of words to choose from for each step, potentially leading to a more unique or unconventional description:
 
 <ChatConversation
   conversation={[
@@ -625,7 +641,7 @@ Top-k with $k=1$ is equivalent to greedy decoding.
 
 Top-p sampling, also known as nucleus sampling, offers an alternative to top-k sampling and aims to dynamically select the number of words to consider for the next word in a sequence, based on a cumulative probability threshold $p$. This method allows for more flexibility and adaptability in text generation, as it doesn't fix the number of tokens to sample from, but rather adjusts this number based on the distribution of probabilities at each step. The term "nucleus sampling" comes from the method's approach to focusing on a "nucleus" of probable words at each step in the generation process.
 
-#### How Top-p sampling works
+#### How top-p sampling works
 
 1. **Probability Distribution**: Given a probability distribution for the next word predicted by a language model, sort the probabilities in descending order.
 
@@ -729,7 +745,7 @@ Unlike top-k sampling, which selects a fixed number of tokens $k$, top-p samplin
 
 As we did before, let's look at two examples of how top-p might affect text generation.
 
-#### Small Top-p (e.g., 0.5): This setting will likely produce a more straightforward and possibly familiar narrative:
+#### Small top-p (e.g., 0.5): This setting will likely produce a more straightforward and possibly familiar narrative:
 
 <ChatConversation
   conversation={[
@@ -741,7 +757,7 @@ As we did before, let's look at two examples of how top-p might affect text gene
 />
 <br />
 
-#### Large Top-p (e.g., 0.9): This setting allows for broader and potentially more imaginative exploration:
+#### Large top-p (e.g., 0.9): This setting allows for broader and potentially more imaginative exploration:
 
 <ChatConversation
   conversation={[
