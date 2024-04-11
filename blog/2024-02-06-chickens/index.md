@@ -988,7 +988,7 @@ A lot of this debate hinges on philosophical ideas of what "understanding" and "
 
 ### The parrot-chicken partnership
 
-I've used LLMs daily now for a year and a half, and in my opinion, the idea that they're merely mimicking answers is overly simplistic. I've seen GPT-4, Claude 3 Opus, and Google Gemini perform sophisticated forms of reasoning, and it's dismissive and naive to call these models parrots. That's just my opinion, but the whole "stochastic parrot" thing is also a matter of opinion.
+I've used LLMs daily now for a year and a half, and in my opinion, the idea that they're merely mimicking answers is overly simplistic. While the concerns of bias and environmental damage are valid, I've seen GPT-4, Claude 3 Opus, and Google Gemini perform sophisticated forms of reasoning, and it's dismissive and naive to call these models mere parrots. That's just my opinion, but the whole "stochastic parrot" thing is also a matter of opinion and a topic of ongoing research.
 
 In contrast, the sampling strategies of the stochastic chicken very much exist and are a known part of how LLMs generate text, independent of how the neural network model provides the distribution of words to choose from.
 
