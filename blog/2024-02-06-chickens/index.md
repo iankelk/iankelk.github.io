@@ -334,8 +334,10 @@ Lowering the temperature makes the model more confident in its outputs by increa
 />
 <br />
 
+#### How is low temperature calculated?
+
 <details>
-  <summary>How is this calculated? (math & Python code)</summary>
+  <summary>Math & Python code (optional technical content)</summary>
 
   <div>
       Using our original distribution with probabilities of 0.03, 0.05, 0.1, 0.15, 0.2, and 0.25. How would these change if we used a temperature of 0.5?
@@ -422,8 +424,10 @@ Increasing the temperature makes the model's predictions more uniform by reducin
 />
 <br />
 
+#### How is high temperature calculated?
+
 <details>
-  <summary>How is this calculated? (math & Python code)</summary>
+  <summary>Math & Python code (optional technical content)</summary>
 
   <div>
       Using our original distribution with probabilities of 0.03, 0.05, 0.1, 0.15, 0.2, and 0.25. How would these change if we used a temperature of 0.5?
@@ -536,8 +540,10 @@ Another method of "tuning the chicken" is called top-k sampling. The "k" in top-
 Remember, this is a heavily simplified example. In reality, the original values would contain *many* more probabilities, **50,257** in the case of GPT-3. Top-k with $k=4$ would have a large impact on the chicken.
 :::
 
+#### How is top-k calculated?
+
 <details>
-  <summary>How is this calculated? (math & Python code)</summary>
+  <summary>Math & Python code (optional technical content)</summary>
 
   <div>
       Here's how to compute top-k sampling with $k = 4$ on the set of probabilities
@@ -677,8 +683,10 @@ Top-p sampling, also known as nucleus sampling, offers an alternative to top-k s
 As with top-k, remember that this is a heavily simplified example. In reality, the original values would contain *many* more probabilities, **50,257** in the case of GPT-3. Top-p with $p=0.75$ would have a large impact on the chicken.
 :::
 
+#### How is top-p calculated?
+
 <details>
-  <summary>How is this calculated? (math & Python code)</summary>
+  <summary>Math & Python code (optional technical content)</summary>
 
   <div>
       Using top-p (nucleus) sampling with a cumulative probability threshold of $p = 0.75$ on the set of probabilities $P = [0.03, 0.05, 0.1, 0.15, 0.2, 0.25]$ involves selecting the smallest set of the most probable outcomes whose cumulative probability exceeds the threshold.
@@ -802,8 +810,10 @@ To put this into perspective, $10^{9402}$ is an astronomically large number. It'
 
 Therefore, the likelihood of generating the exact same sequence of 2,000 tokens twice is so incredibly small that it's effectively zero in any practical sense. The vastness of the combinatorial space emphasizes how distinctive each long sequence that a language model generates is.
 
+#### How is the size of the combinatorial space calculated?
+
 <details>
-  <summary>How is this calculated? (math & Python code)</summary>
+  <summary>Math & Python code (optional technical content)</summary>
 
   <div>
 
@@ -869,8 +879,10 @@ However, it's still such a stupidly large number that it might as well be infini
 
 Are there other methods of recognizing generated text? Yes, absolutely, using ways such as the frequency of uncommon words (GPT-4 really loves to say "delve") but that goes beyond the scope of this article. 
 
+#### How is the size of the combinatorial space using top-k calculated?
+
 <details>
-  <summary>How is this calculated? (math & Python code)</summary>
+  <summary>Math & Python code (optional technical content)</summary>
 
   <div>
 Given a sequence length $N$ and a fixed number of choices per token $K$ in a top-k sampling method, the total number of possible combinations can be estimated. For a top-k of 40 choices per token and a sequence length of 2,000 tokens, the calculation is as follows:
