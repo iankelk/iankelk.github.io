@@ -31,6 +31,8 @@ import hiddenChicken from './hidden-chicken.jpg';
 import dice from './dice.jpg';
 import looping from './looping.jpg';
 import beach from './beach.jpg';
+import parrotChicken from './parrot-vs-chicken.jpg';
+import partners from './partners.jpg';
 
 Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate--a chicken.
 
@@ -958,4 +960,42 @@ It's still mindbending that these models that have fundamentally changed world r
   image={dice}
   alt="Monochrome illustration depicting rows of people seated at desks in a vast grid, working very hard to deliver information to the head table. At the head table, people are playing a dice game."
   caption="God may not play dice with the universe, but language models sure do.\nGenerated with OpenAI DALL-E 3 and edited by the author."
+/>
+
+## Is a "stochastic chicken" the same as a "stochastic parrot"?
+
+You may have heard the term "stochastic parrot" as a way of saying that LLMs don't *understand* what they're actually saying.
+
+The term was coined in the paper [*On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜*](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922) by Bender et al, in which they argue that LLMs probabilistically link words and sentences together without considering meaning.
+
+However, despite the fact that both chickens and parrots are birds, they don't refer to the same thing.
+
+<Figure
+  image={parrotChicken}
+  alt="A cartoon illustration depicting a parrot and a chicken facing off with aggressive and exaggerated expressions. The parrot, vibrant with multicolored feathers, and the chicken, robust and fluffy, are  close together, their beaks almost touching, highlighting the intensity of their confrontation."
+  caption="A stochastic parrot is no stochastic chicken.\nGenerated with OpenAI DALL-E 3 and edited by the author."
+/>
+
+The "stochastic parrot" refers to the neural network part of the LLM rather than the sampling process. That is, it refers to the **stadium full of people working together,** rather than the chicken. The idea of the stochastic parrot critiques a language model's operation in terms of how it processes and generates language, based purely on the statistical patterns observed in the training data.
+
+It claims that:
+
+1. LLMs, like parrots, mimic words and phrases without understanding their meanings. It posits that *neural networks* regurgitate large chunks of learned text based on probabilities derived from their training data rather than on semantic understanding or reasoning.
+
+2. Biases found in the training data are perpetuated on an enormous scale, and the cost of training such large models damages the environment.
+
+A lot of this debate hinges on philosophical ideas of what "understanding" and "reasoning" even mean, and there's a comprehensive [Wikipedia article](https://en.wikipedia.org/wiki/Stochastic_parrot) on it if you're interested in reading more. 
+
+### The parrot-chicken partnership
+
+I've used LLMs daily now for a year and a half, and in my opinion, the idea that they're merely mimicking answers is overly simplistic. I've seen GPT-4, Claude 3 Opus, and Google Gemini perform sophisticated forms of reasoning, and it's dismissive and naive to call these models parrots. That's just my opinion, but the whole "stochastic parrot" thing is also a matter of opinion.
+
+In contrast, the sampling strategies of the stochastic chicken very much exist and are a known part of how LLMs generate text, independent of how the neural network model provides the distribution of words to choose from.
+
+So LLMs might be stochastic parrots--or they might not--but either way, a chicken is ultimately in charge.
+
+<Figure
+  image={partners}
+  alt="A cartoon illustration featuring a parrot and a chicken as comical business partners, shaking hands in a show of cooperation. The parrot, vibrant with multicolored feathers, and the chicken, fluffy and dignified, are standing upright, each extending a wing as if they were human hands, meeting in a firm handshake. They wear small, humorous expressions of smug satisfaction, portraying a successful partnership."
+  caption="Every stochastic parrot needs its stochastic chicken.\nGenerated with OpenAI DALL-E 3 and edited by the author."
 />
