@@ -806,9 +806,9 @@ In the case of a language model generating a sequence of, say, 2,000 tokens, the
 
 The logarithm (base 10) of the number of possible combinations for a sequence of 2,000 tokens, with GPT-3's vocabulary size of 50,257 unique tokens, is approximately $9,402$. This means the total number of combinations is $10^{9402}$.
 
-To put this into perspective, $10^{9402}$ is an astronomically large number. It's far beyond the total number of atoms in the observable universe (estimated to be around $10^{80}$). Even considering reasonable sampling mechanisms that might drastically reduce this number, the space of possible combinations remains vast.
+To put this into perspective, $10^{9402}$ is an astronomically large number. It's far beyond the total number of atoms in the observable universe (estimated to be around $10^{80}$). Even considering reasonable sampling mechanisms that might drastically reduce this number, the space of possible combinations is so large that for practical purposes it is infinite.
 
-Therefore, the likelihood of generating the exact same sequence of 2,000 tokens twice is so incredibly small that it's effectively zero in any practical sense. The vastness of the combinatorial space emphasizes how distinctive each long sequence that a language model generates is.
+Therefore, the likelihood of generating the exact same sequence of 2,000 tokens twice is so incredibly small that it's effectively zero in any practical sense. The ridiculous size of the combinatorial space emphasizes how distinctive each long sequence that a language model generates is.
 
 #### How is the size of the combinatorial space calculated?
 
