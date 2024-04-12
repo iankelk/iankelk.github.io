@@ -1,7 +1,8 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-// import dashToEmdash from './src/remark/dash-to-emdash'; 
+import dashToEmdash from './src/remark/dash-to-emdash'; 
+import myReadingTime from './src/utils/myReadingTime';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
@@ -54,8 +55,9 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
+          // readingTime: ({content}) => myReadingTime(content, 300),
           readingTime: ({content, defaultReadingTime}) =>
-            defaultReadingTime({content, options: {wordsPerMinute: 300}}),
+            defaultReadingTime({content, options: {wordsPerMinute: 350}}),
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} Short Attention Blog`,
