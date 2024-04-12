@@ -952,9 +952,9 @@ When considering the model as a complete system for generating text, the inclusi
 
 #### Combined perspective: deterministic core of a stochastic system
 
-It's probably easiest to view LLMs as deterministic systems with respect to their neural network computation, producing a predictable set of output probabilities for the next token when given an input. However, when considering the complete text generation process, which includes the decision-making by an unintelligent hungry bird of some kind, the system behaves stochastically.
+It's probably easiest to view LLMs as deterministic systems with respect to their neural network computation, producing a predictable set of output probabilities for the next token when given an input. However, when considering the complete text generation process, which includes the decision-making by a silly bird of some kind, the system behaves stochastically.
 
-It's still mindbending that these models that have fundamentally changed world rely on pure chance for their final answers, and so far, this is the best we have.
+It's still mindbending that these models that have fundamentally changed world rely on pure chance for their final answers, and so far, this is the best method we have.
 
 <Figure
   image={dice}
@@ -984,7 +984,7 @@ It claims that:
 
 2. Biases found in the training data are perpetuated on an enormous scale, and the cost of training such large models damages the environment.
 
-A lot of this debate hinges on philosophical ideas of what "understanding" and "reasoning" even mean, and there's a comprehensive [Wikipedia article](https://en.wikipedia.org/wiki/Stochastic_parrot) on it if you're interested in reading more. 
+A lot of this debate hinges on philosophical ideas of what "understanding" and "reasoning" even mean, and there's a comprehensive [Wikipedia article](https://en.wikipedia.org/wiki/Stochastic_parrot) on it if you're interested in reading more. It is indeed a bit ironic that the authors of the "stochastic parrot" paper named it after a "random" parrot, when their primary criticism of the models deals with the deterministic neural network component.
 
 ### The parrot-chicken partnership
 
@@ -999,3 +999,16 @@ So LLMs might be stochastic parrots--or they might not--but either way, a chicke
   alt="A cartoon illustration featuring a parrot and a chicken as comical business partners, shaking hands in a show of cooperation. The parrot, vibrant with multicolored feathers, and the chicken, fluffy and dignified, are standing upright, each extending a wing as if they were human hands, meeting in a firm handshake. They wear small, humorous expressions of smug satisfaction, portraying a successful partnership."
   caption="Every stochastic parrot needs its stochastic chicken.\nGenerated with OpenAI DALL-E 3 and edited by the author."
 />
+
+:::info[Key Takeaways]
+
+- Despite their sophistication and complexity, LLMs like GPT, Gemini, or Claude rely on randomness to select the next word in a sequence, similar to a chicken pecking at feed piles.
+- Neural networks are deterministic by nature, producing consistent outputs for given inputs. However, randomness is introduced through the chicken, making the final text generation stochastic.
+- The randomness in text generation can be controlled using inference hyperparameters such as temperature, top-k, and top-p, allowing a balance between coherence and creativity in the generated content.
+- This unpredictability ensures that each output is unique, contributing to a broad range of possible text outputs and making it nearly impossible to prove the originality of any given piece of generated text.
+- A lack of randomness, such as when using methods like greedy decoding where the most probable next word is always chosen, leads to repetitive and uncreative text.
+- Different sampling strategies for the chicken (temperature, top-k, and top-p) influence the diversity and unpredictability of text generation by limiting or expanding the selection pool of possible next words.
+- The need for the chicken highlights fundamental differences between artificial intelligence and human cognition, emphasizing that LLMs simulate rather than understand language.
+- "The "stochastic parrot" criticism of LLMs isn't really relevant to the chicken, as that metaphor deals primarily with the deterministic neural network component rather than the stochastic sampling part, despite it's name.
+
+:::
