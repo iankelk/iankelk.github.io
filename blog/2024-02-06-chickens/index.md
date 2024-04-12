@@ -36,12 +36,6 @@ import partners from './partners.jpg';
 
 Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate--a chicken.
 
-:::note
-
-For most of this post, I use the term *word* instead of *token* to describe what an LLM predicts. This is just a useful simplification to avoid having to address why the model might predict half a word or a semicolon, since the underlying principles of the "stochastic chicken" are the same.
-
-:::
-
 <Figure
   image={chickenWink}
   alt="Cartoon chicken winking at the camera. It is in a cluttered workspace filled with multiple computer monitors, electronics, and miscellaneous items, giving the impression of a tech-savvy or hacker chicken."
@@ -62,6 +56,13 @@ For most of this post, I use the term *word* instead of *token* to describe what
 :::
 
 <!-- truncate -->
+<br/>
+
+:::note
+
+For most of this post, I use the term *word* instead of *token* to describe what an LLM predicts. This is just a useful simplification to avoid having to address why the model might predict half a word or a semicolon, since the underlying principles of the "stochastic chicken" are the same.
+
+:::
 
 ## LLMs aren't messing around when they say they're "large." 
 
