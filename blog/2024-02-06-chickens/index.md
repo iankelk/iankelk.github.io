@@ -696,7 +696,13 @@ As with top-k, remember that this is a heavily simplified example. In reality, t
   <summary>Math & Python code (optional technical content)</summary>
 
   <div>
-      Using top-p (nucleus) sampling with a cumulative probability threshold of $p = 0.75$ on the set of probabilities $P = [0.03, 0.05, 0.1, 0.15, 0.2, 0.25]$ involves selecting the smallest set of the most probable outcomes whose cumulative probability exceeds the threshold.
+      Using top-p (nucleus) sampling with a cumulative probability threshold of $p = 0.75$ on the set of probabilities 
+
+      $$
+      P = [0.03, 0.05, 0.1, 0.15, 0.2, 0.25]
+      $$
+
+      involves selecting the smallest set of the most probable outcomes whose cumulative probability exceeds the threshold.
 
       1. **Sort Probabilities**: First, sort the probabilities in descending order to prioritize higher probabilities. For $P$, when sorted, we have $[0.25, 0.2, 0.15, 0.1, 0.05, 0.03]$.
 
@@ -706,13 +712,19 @@ As with top-k, remember that this is a heavily simplified example. In reality, t
 
       4. **Selected Subset**: Based on the threshold, we select the probabilities $[0.25, 0.2, 0.15, 0.1, 0.05]$. Notice that the cumulative probability of these selected probabilities is $0.75$, which meets our threshold condition.
 
-      5. **Renormalize Probabilities**: The selected probabilities are then renormalized so they sum up to 1, to be used for sampling. The renormalization involves dividing each selected probability by the sum of the selected probabilities (which is already $0.75$ in this case, but we generally renormalize to handle rounding).
+      5. **Renormalize Probabilities**: The selected probabilities are then renormalized so they sum up to 1, to be used for sampling. The renormalization is calculated as follows:
 
-      6. **Sampling**: Finally, let the chicken pick the next word from this renormalized subset according to the adjusted probabilities.
+         $$
+         p_i' = \frac{p_i}{\sum_{j=1}^{n} p_j}
+         $$
+
+         where $\sum_{j=1}^{n} p_j = 0.75$ for the selected probabilities, and $p_i$ represents each selected probability.
+
+      6. **Sampling**: Finally, let the chicken choose the next word from this renormalized subset according to the adjusted probabilities.
 
       ### Description
 
-      In top-p sampling with $p = 0.75$, we dynamically adjust the size of the set from which we sample based on the cumulative probability threshold. Unlike a fixed-size set in top-k sampling, the size of the set in top-p sampling can vary depending on the distribution of the probabilities. In this example, by setting $p = 0.75$, we focus on a subset of outcomes that collectively represent the most probable $75\%$ of the distribution. This method ensures that we're sampling from outcomes that are collectively likely while still allowing for variability and surprise in the generated sequence.
+      In top-p sampling with $p = 0.75$, we dynamically adjust the size of the set from which we sample based on the cumulative probability threshold. Unlike a fixed-size set in top-k sampling, the size of the set in top-p sampling can vary depending on the distribution of the probabilities. In this example, by setting $p = 0.75$, we focus on a subset of outcomes that collectively represent the most probable $75\%$ of the distribution. This method means that we're sampling from outcomes that are collectively likely while still allowing for variability and surprise in the generated sequence.
 
 ```python title="Python code for calculating probabilities top-p with p = 0.75"
 import numpy as np
