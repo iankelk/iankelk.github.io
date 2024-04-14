@@ -349,23 +349,23 @@ Lowering the temperature makes the model more confident in its outputs by increa
 
       1. **Compute the logits**: In this context, you can think of logits as the pre-softmax outputs that the model uses to calculate probabilities. However, since we start with probabilities and want to adjust them by temperature, we reverse-engineer logits by taking the natural logarithm of the probabilities. Thus, the logit for each probability $p_i$ in $P$ is given by:
 
-      $$
-      \text{logit}(p_i) = \log(p_i)
-      $$
+         $$
+         \text{logit}(p_i) = \log(p_i)
+         $$
 
       2. **Scale the logits by the temperature**: We then scale these logits by dividing them by the temperature $T$. This step adjusts the distribution of the logits based on the temperature value. For a temperature of $0.5$, the scaling is:
 
-      $$
-      \text{scaled\_logit}(p_i) = \frac{\log(p_i)}{T}
-      $$
+         $$
+         \text{scaled\_logit}(p_i) = \frac{\log(p_i)}{T}
+         $$
 
       3. **Convert the scaled logits back to probabilities**: We use the softmax function to convert the scaled logits back into probabilities. The softmax function is applied to the scaled logits, ensuring that the output probabilities sum to $1$. The softmax of a scaled logit $s_i$ is given by:
 
-      $$
-      \text{softmax}(s_i) = \frac{e^{s_i}}{\sum_j e^{s_j}}
-      $$
+         $$
+         \text{softmax}(s_i) = \frac{e^{s_i}}{\sum_j e^{s_j}}
+         $$
 
-      where $s_i$ is the scaled logit for probability $p_i$, and the denominator is the sum of the exponential of all scaled logits in the distribution. This ensures that the adjusted probabilities sum to $1$.
+         where $s_i$ is the scaled logit for probability $p_i$, and the denominator is the sum of the exponential of all scaled logits in the distribution. This ensures that the adjusted probabilities sum to $1$.
 
       Putting it all together for each probability $p_i$ in $P$ and a temperature $T = 0.5$, the adjusted probability $p_i'$ is calculated as:
 
@@ -439,23 +439,23 @@ Increasing the temperature makes the model's predictions more uniform by reducin
 
       1. **Compute the logits**: In this context, you can think of logits as the pre-softmax outputs that the model uses to calculate probabilities. However, since we start with probabilities and want to adjust them by temperature, we reverse-engineer logits by taking the natural logarithm of the probabilities. Thus, the logit for each probability $p_i$ in $P$ is given by:
 
-      $$
-      \text{logit}(p_i) = \log(p_i)
-      $$
+         $$
+         \text{logit}(p_i) = \log(p_i)
+         $$
 
       2. **Scale the logits by the temperature**: We then scale these logits by dividing them by the temperature $T$. This step adjusts the distribution of the logits based on the temperature value. For a temperature of $2$, the scaling is:
 
-      $$
-      \text{scaled\_logit}(p_i) = \frac{\log(p_i)}{T}
-      $$
+         $$
+         \text{scaled\_logit}(p_i) = \frac{\log(p_i)}{T}
+         $$
 
       3. **Convert the scaled logits back to probabilities**: We use the softmax function to convert the scaled logits back into probabilities. The softmax function is applied to the scaled logits, ensuring that the output probabilities sum to $1$. The softmax of a scaled logit $s_i$ is given by:
 
-      $$
-      \text{softmax}(s_i) = \frac{e^{s_i}}{\sum_j e^{s_j}}
-      $$
+         $$
+         \text{softmax}(s_i) = \frac{e^{s_i}}{\sum_j e^{s_j}}
+         $$
 
-      where $s_i$ is the scaled logit for probability $p_i$, and the denominator is the sum of the exponential of all scaled logits in the distribution. This ensures that the adjusted probabilities sum to $1$.
+         where $s_i$ is the scaled logit for probability $p_i$, and the denominator is the sum of the exponential of all scaled logits in the distribution. This ensures that the adjusted probabilities sum to $1$.
 
       Putting it all together for each probability $p_i$ in $P$ and a temperature $T = 2$, the adjusted probability $p_i'$ is calculated as:
 
@@ -559,7 +559,11 @@ Remember, this is a heavily simplified example. In reality, the original values 
 
       2. **Select the top $k$ probabilities**: We choose the four highest probabilities from $P$. Given our $P$, the top 4 probabilities are $0.25$, $0.2$, $0.15$, and $0.1$.
 
-      3. **Renormalize the selected probabilities**: To ensure that these top $k$ probabilities sum to $1$, we renormalize them. The renormalized probability for each selected outcome $p_i$ is calculated as $p_i' = \frac{p_i}{\sum_{j=1}^{k} p_j}$ where $\sum_{j=1}^{k} p_j$ is the sum of the top $k$ probabilities, ensuring they sum to $1$.
+      3. **Renormalize the selected probabilities**: To ensure that these top $k$ probabilities sum to $1$, we renormalize them. The renormalized probability for each selected outcome $p_i$ is calculated as:
+
+         $$p_i' = \frac{p_i}{\sum_{j=1}^{k} p_j}$$
+
+         where $\sum_{j=1}^{k} p_j$ is the sum of the top $k$ probabilities, ensuring they sum to $1$.
 
       4. **Sampling**: Finally, we let the chicken choose randomly from these top $k$ adjusted probabilities.
 
