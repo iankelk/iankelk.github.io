@@ -34,6 +34,8 @@ import looping from './looping.jpg';
 import beach from './beach.jpg';
 import parrotChicken from './parrot-vs-chicken.jpg';
 import partners from './partners.jpg';
+import unicorn from './unicorn.jpg';
+
 
 Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate--a chicken.
 
@@ -251,6 +253,12 @@ The model begins the sentence without issue, and begins by writing "The park was
 
 Real human language is rich and varied, often taking unexpected turns, like a beautiful jellyfish riding a purple unicorn. By always choosing the most probable word, the generated text misses out on these creative and less predictable aspects of language, resulting in outputs that feel dull or formulaic.
 
+<Figure
+  image={unicorn}
+  alt="An imaginative illustration, featuring a beautiful, translucent jellyfish with delicate, flowing tentacles, riding atop a majestic purple unicorn with a shimmering mane and tail. The unicorn is prancing among fluffy clouds against a sky-blue background. The unicorn is saying 'Greedy decoding? Ugh...' and the jellyfish is responding 'We're not fans of it'"
+  caption="A unicorn sting operation\nGenerated with OpenAI DALL-E 3 and edited by the author."
+/>
+
 ### Contextual Inappropriateness
 
 As weird as this sounds, the most probable next word is not always appropriate. Language is highly contextual, and the best choice in one situation might not be the most statistically common one. Greedy decoding can lead to nonsensical or awkward phrases that, while grammatically correct, do not fit well with the preceding text. Here's another example using a job application:
@@ -277,7 +285,7 @@ The model, perhaps trained on more dating profiles than job applications, has co
 <Figure
   image={beach}
   alt="A whimsical and stylish illustration depicting a humanoid robot in a business suit, walking comically with exaggerated movements along a beach. The robot is walking in the water up to its ankles, causing  splashes and waves around it. The beach scene includes soft sand and gentle waves under a serene sky. The humorous contrast of the formally attired robot deeply immersed in the water, playfully interacts with the natural seaside environment, creating a surreal and amusing visual narrative."
-  caption="I like romantic walks on the beach while being a team player in the corporate world.\nGenerated with OpenAI DALL-E 3 and edited by the author."
+  caption="I like romantic walks on the beach with someone whose love language is powerpoint and performance bonuses.\nGenerated with OpenAI DALL-E 3 and edited by the author."
 />
 
 ### Inability to Explore Multiple Paths
