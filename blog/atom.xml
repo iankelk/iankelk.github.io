@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kelk.ai/blog</id>
     <title>Short Attention Blog</title>
-    <updated>2024-02-06T00:00:00.000Z</updated>
+    <updated>2024-04-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kelk.ai/blog"/>
     <subtitle>Short Attention Blog</subtitle>
@@ -12,7 +12,7 @@
         <title type="html"><![CDATA[The secret chickens that run LLMs]]></title>
         <id>https://kelk.ai/blog/secret-chickens</id>
         <link href="https://kelk.ai/blog/secret-chickens"/>
-        <updated>2024-02-06T00:00:00.000Z</updated>
+        <updated>2024-04-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate--a chicken.]]></summary>
         <content type="html"><![CDATA[<p>Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate—a chicken.</p>
 <figure style="border:1px dashed rgba(0, 0, 0, .1);padding:0;margin:0;margin-bottom:20px;border-radius:15px;text-align:right" id="figure-gallery"><a href="https://kelk.ai/assets/images/social-card-b3347771ea10160380c43b741b943c89.jpg" data-pswp-width="0" data-pswp-height="0"><img src="https://kelk.ai/assets/images/social-card-b3347771ea10160380c43b741b943c89.jpg" alt="Cartoon chicken winking at the camera. It is in a cluttered workspace filled with multiple computer monitors, electronics, and miscellaneous items, giving the impression of a tech-savvy or hacker chicken." style="max-width:100%;height:auto"></a><hr style="margin:5px 0;background-color:rgba(0, 0, 0, .2)"><figcaption style="margin-top:0.5em;margin-bottom:0.5em;margin-right:1em;text-align:right;font-size:0.8em"><span>Generated with OpenAI DALL-E 3 and edited by the author.</span></figcaption></figure>
