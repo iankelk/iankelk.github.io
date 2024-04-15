@@ -77,13 +77,16 @@ Picture a stadium full of people. Here's [Kyle Field](https://en.wikipedia.org/w
   caption="Attribution: [Janreagan](https://en.wikipedia.org/wiki/User:Janreagan) at [Wikipedia Commons](https://commons.wikimedia.org/wiki/File:Kyle_Field_Panorama.jpg)"
 />
 
-We've given each one of these very patient people a calculator along with the instruction that the person in the seat in front of them will give them some number, at which point they need to do a little work on their calculator and pass their new number to the person behind them. For the sake of this analogy, let's assume that despite a considerable number of them being distracted, drunk, or children, they all are able to complete the task.
+We've given each one of these very patient people a calculator along with the instruction that the person in the seat in front of them will give them some number, at which point they need to do a little work on their calculator and pass their new number to the person behind them. For the sake of this analogy, let's assume that despite a considerable number of them being distracted, drunk, or children, they are all able to complete the task.
 
-As the number travels from the front of the stadium to the back, it undergoes a series of transformations. Each person's "little work" on their calculator is akin to the operations performed by neurons in a layer of the neural network—applying weights (learned parameters), adding biases, and passing through activation functions. These transformations are based on the knowledge embedded in the model's parameters, trained to recognize patterns, relationships, and the structure of language.
+As the numbers travel from the front of the stadium to the back, they undergo a series of transformations. Each person's "little work" on their calculator is akin to the operations performed by neurons in a layer of the neural network—applying weights (learned parameters), adding biases, and passing through activation functions. These transformations are based on the knowledge embedded in the model's parameters, trained to recognize patterns, relationships, and the structure of language.
 
-By the time the number reaches the last person in the stadium, it has been transformed multiple times, each step incorporating more context and adjusting the calculation based on model's architecture and trained parameters. This final result can be seen as the model's output—a complex representation of the input data that encodes the probabilities of the next possible word.
+By the time the numbers reach the last person in the stadium, they have been transformed multiple times, with each step incorporating more context and adjusting the calculation based on the model's architecture and trained parameters. This final result can be seen as the model's output—a complex representation of the input data that encodes the probabilities of the next possible word.
 
-But here's the strange part: despite all this incredible depth of stored knowledge, we're going to take the recommended answers provided by these thousands of people, and select one using a completely random process. It's kind of like a huge pyramid where people work together to assemble a set of possible answers to a problem, then hand it at the top to a person flipping a coin.
+The final output isn’t a single number or word, though; it’s a list of words and probabilities, where each probability is the likelihood that that word will be the *next* word in a sentence.
+
+But here's the strange part: despite all this incredible depth of stored knowledge, we're going to take these recommended answers provided by these thousands of people, and select the next word using a completely random process. It's kind of like a huge pyramid where people work together to assemble a set of possible answers to a problem, then hand it at the top to a person flipping a coin.
+
 
 <Figure
   image={coinFlip}
@@ -96,12 +99,12 @@ Actually, we can do better than this. To really illustrate the contrast between 
 
 Let's use a chicken. 
 
-To get this chicken involved, we're going to use the results of our calculations to create piles of chicken feed, each one representing a potential next word the model might generate. The bigger the pile, the higher the probability that the associated word should be selected.
+To get this chicken involved, we're going to use words and probabilities to create piles of chicken feed, each one representing a potential next word the model might generate. The bigger the pile, the higher the probability that the associated word should be selected.
 
 <Figure
   image={introChicken}
   alt="Satirical cartoon featuring a robot presenting a chicken with word options for the phrase 'why did the chicken cross the ___', with 'road', 'playground', 'moon', and 'refrigerator' as choices, set against a backdrop of numerous robots working at desks."
-  caption="Generated with OpenAI DALL-E 3 and edited by the author."
+  caption="Chickens have the amazing property to choose their food depending on the size of the piles!\nGenerated with OpenAI DALL-E 3 and edited by the author."
 />
 
 :::warning
