@@ -5,6 +5,7 @@ authors: [ikelk]
 tags: [distribution, sampling, top-p, top-k, temperature, AGI, ASI, chatgpt, chat, AI, LLM, ML, chatbot, chatbots, AIExplained]
 enableComments: true
 image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2024-02-06-chickens/social-card.jpg?raw=true
+hide_reading_time: true
 ---
 import CodeBlock from "@theme/CodeBlock";
 import Figure from '@site/src/components/figure';
