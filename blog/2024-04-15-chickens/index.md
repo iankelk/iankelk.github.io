@@ -83,7 +83,7 @@ As the numbers travel from the front of the stadium to the back, they undergo a 
 
 By the time the numbers reach the last person in the stadium, they have been transformed multiple times, with each step incorporating more context and adjusting the calculation based on the model's architecture and trained parameters. This final result can be seen as the model's output—a complex representation of the input data that encodes the probabilities of the next possible word.
 
-The final output isn’t a single number or word, though; it’s a list of words and probabilities, where each probability is the likelihood that that word will be the *next* word in a sentence.
+The model's final output isn’t a single number or word, though; it’s a list of words and probabilities, where each probability is the likelihood that that word will be the *next* word in a sentence.
 
 But here's the strange part: despite all this incredible depth of stored knowledge, we're going to take these recommended answers provided by these thousands of people, and select the next word using a completely random process. It's kind of like a huge pyramid where people work together to assemble a set of possible answers to a problem, then hand it at the top to a person flipping a coin.
 
@@ -143,8 +143,19 @@ The diagram below might look **crazy** complicated, but the only thing you need 
 
 If you give the network the same input and the network has not been changed (ie., its weights, or how much it values certain pieces of input, remain the same), it will always perform the same calculations in the same order, and thus return the same output. While LLMs will have *billions* of these neurons, the basic idea is the same: for a given input, you will **always** get the same output. Typing $2+5\times10$ into a calculator will always give you $52$, no matter how many times you do it.
 
-### So why do LLMs give different responses each time to the same prompt?
+<div style={{
+    fontSize: '1.5em',
+    textAlign: 'center',
+    color: 'black',
+    fontFamily: 'Roboto',
+    margin: '20px 0',
+    padding: '10px',
+    borderLeft: '5px solid gray'
+}}>
+    <p style={{ margin: '0' }}>"The model's final output isn’t a single number or word, though; it’s a list of words and probabilities, where each probability is the likelihood that that word will be the *next* word in a sentence."</p>
+</div>
 
+### So why do LLMs give different responses each time to the same prompt?
 
 This seems suspicious. If you ask an LLM the same thing multiple times, it will give you different answers each time. This contradicts the claim that neural networks are deterministic, right? 
 
