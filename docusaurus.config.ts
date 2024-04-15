@@ -56,8 +56,10 @@ const config: Config = {
         blog: {
           showReadingTime: true,
           // readingTime: ({content}) => myReadingTime(content, 300),
-          readingTime: ({content, defaultReadingTime}) =>
-            defaultReadingTime({content, options: {wordsPerMinute: 350}}),
+          readingTime: ({content, frontMatter, defaultReadingTime}) =>
+            frontMatter.hide_reading_time
+              ? undefined
+              : defaultReadingTime({content, options: {wordsPerMinute: 350}}),
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} Short Attention Blog`,
