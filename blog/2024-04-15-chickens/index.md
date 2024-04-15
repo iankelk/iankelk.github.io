@@ -954,7 +954,7 @@ log_combinations_top_k
 
 The use of the chicken in LLMs indeed highlights a fundamental difference between how these models generate text, and how humans think and produce language. 
 
-LLMs generate text based on statistical patterns learned from vast amounts of data, and the randomness introduced by the chicken is a mechanism to to produce diverse and contextually appropriate responses.  In contrast, cognitive processes like memory, reasoning, and emotional context, which do not rely on statistical sampling in the same way, are what drive human thought and language production.
+LLMs generate text based on statistical patterns learned from vast amounts of data, and the randomness introduced by the chicken is a mechanism to produce diverse and contextually appropriate responses.  In contrast, cognitive processes like memory, reasoning, and emotional context, which do not rely on statistical sampling in the same way, are what drive human thought and language production.
 
 <Figure
   image={hiddenChicken}
@@ -1035,6 +1035,6 @@ So LLMs might be stochastic parrots--or they might not--but either way, a chicke
 - A lack of randomness, such as when using methods like greedy decoding where the most probable next word is always chosen, leads to repetitive and uncreative text.
 - Different sampling strategies for the chicken (temperature, top-k, and top-p) influence the diversity and unpredictability of text generation by limiting or expanding the selection pool of possible next words.
 - The need for the chicken highlights fundamental differences between artificial intelligence and human cognition, emphasizing that LLMs simulate rather than understand language.
-- "The "stochastic parrot" criticism of LLMs isn't really relevant to the chicken, as that metaphor deals primarily with the deterministic neural network component rather than the stochastic sampling part, despite it's name.
+- The "stochastic parrot" criticism of LLMs isn't really relevant to the chicken, as that metaphor deals primarily with the deterministic neural network component rather than the stochastic sampling part, despite it's name.
 
 :::
