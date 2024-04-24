@@ -59,7 +59,7 @@ const config: Config = {
           readingTime: ({content, frontMatter, defaultReadingTime}) =>
             frontMatter.hide_reading_time
               ? undefined
-              : defaultReadingTime({content, options: {wordsPerMinute: 350}}),
+              : defaultReadingTime({content, options: {wordsPerMinute: 380}}),
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} Short Attention Blog`,
