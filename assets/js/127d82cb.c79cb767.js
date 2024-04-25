@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[2059],{3112:s=>{s.exports=JSON.parse('{"label":"stochastic parrot","permalink":"/blog/tags/stochastic-parrot","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
