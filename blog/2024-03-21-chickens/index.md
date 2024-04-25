@@ -1,10 +1,10 @@
 ---
 slug: secret-chickens-llm
-title: The secret chickens that run LLMs
+title: "The secret chickens that run LLMs"
 authors: [ikelk]
 tags: [distribution, sampling, AGI, ASI, chatgpt, chat, AI, LLM, ML, chatbot, chatbots, stochastic chicken, stochastic parrot, AIExplained]
 enableComments: true
-image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2024-03-20-chickens/social-card.jpg?raw=true
+image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2024-03-21-chickens/social-card.jpg?raw=true
 hide_reading_time: false
 ---
 import CodeBlock from "@theme/CodeBlock";
@@ -451,7 +451,7 @@ So LLMs might be stochastic parrots--or they might not--but either way, a chicke
 />
 
 *This topic is continued in my next article, [Secret chickens II: Tuning the chicken
-](./secret-chickens-llm), which discusses techniques that affect the behaviour of the chicken.*
+](secret-chickens-tuning), which discusses techniques that affect the behaviour of the chicken.*
 
 ## Key Takeaways
 

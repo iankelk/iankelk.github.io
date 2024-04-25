@@ -11,7 +11,6 @@ import CodeBlock from "@theme/CodeBlock";
 import Figure from '@site/src/components/figure';
 import ChatConversation from '@site/src/components/chat_conversation';
 
-
 import chickenTuning from './social-card.jpg';
 import studying from './studying.jpg';
 import chickenGuitar from './chicken-guitar.jpg';
@@ -25,7 +24,7 @@ import chickenTopPRenorm from './chicken-top-p-renorm.jpg';
 
 When working with an LLM, sometimes it doesn't generate responses in the way you want. Maybe it's being too creative and weird when tasked with serious prompts ("Write me a cover letter for a programming job" *"I am a coding wizard and I always min-max my character!"*), or it's being too serious when you want to do some creative writing ("Write me a story" *"You are tired and you lie down and go to sleep. The end."*). This can be tweaked by making certain adjustments to the sampling mechanism--aka "the chicken."
 
-*This blog post continues from my previous article, [The secret chickens that run LLMs](./secret-chickens-llm), and you should read that first to understand what a "stochastic chicken" is.*
+*This blog post continues from my previous article, [The secret chickens that run LLMs](secret-chickens-llm), and you should read that first to understand what a "stochastic chicken" is.*
 
 <Figure
   image={chickenTuning}
@@ -597,7 +596,7 @@ Top-p with $p=1$ is equivalent to the chicken choosing from all words in the voc
 
 ## Even with top-k, there's still no way to definitively prove that a given text was generated
 
-Previously we found that the number of different texts that an LLM can generate is [so large that it might as well be infinite.](./secret-chickens-llm#theres-probably-no-way-to-definitively-prove-that-a-given-text-was-generated) The number we found in that section, $10^9402$, is too large to be useful, so perhaps limiting the vocabulary with top-k or top-p we might make it more reasonable.
+Previously we found that the number of different texts that an LLM can generate is [so large that it might as well be infinite.](secret-chickens-llm#theres-probably-no-way-to-definitively-prove-that-a-given-text-was-generated) The number we found in that section, $10^9402$, is too large to be useful, so perhaps limiting the vocabulary with top-k or top-p we might make it more reasonable.
 
 First we calculate a more realistic estimate of the number of possible combinations with top-k where $k=40$. We'll use top-k only, since temperature doesn't affect the number of considered tokens, and top-p depends on the probabilities predicted.
 
