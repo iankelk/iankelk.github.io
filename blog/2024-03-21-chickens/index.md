@@ -31,6 +31,9 @@ import partners from './partners.jpg';
 
 Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate--a chicken.
 
+*There is now a sequal to this article, [Secret LLM chickens II: Tuning the chicken](secret-chickens-tuning), if you'd like to learn how and why the "chicken" can be customized.*
+
+
 <Figure
   image={chickenWink}
   alt="Cartoon chicken winking at the camera. It is in a cluttered workspace filled with multiple computer monitors, electronics, and miscellaneous items, giving the impression of a tech-savvy or hacker chicken."
