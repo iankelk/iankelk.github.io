@@ -29,7 +29,7 @@ import dice from './dice.jpg';
 import parrotChicken from './parrot-vs-chicken.jpg';
 import partners from './partners.jpg';
 
-Humans often organize large, skilled groups to undertake complex projects, but then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately in charge of writing the text they generate--a chicken.
+Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place incompetent individuals in charge. Large language models (LLMs) carry on this proud tradition with my new favorite metaphor of who's ultimately in charge of writing the text they generate--a chicken.
 
 *There is now a sequel to this article, [Secret LLM chickens II: Tuning the chicken](secret-chickens-tuning), if you'd like to learn how and why the "chicken" can be customized.*
 
