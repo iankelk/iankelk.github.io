@@ -58,7 +58,7 @@ Humans often organize large, skilled groups to undertake complex projects, but t
 
 :::note[A convenient untruth]
 
-For much of this post, I use the term *word* instead of *token* to describe what an LLM predicts. Tokens can be punctuation marks, or parts of words--even capitalization can split words into multiple tokens (for example "hello" is one token, but "Hello" might be split into two tokens of "H" and "ello". This is a friendly simplification to avoid having to address why the model might predict half a word or a semicolon, since the underlying principles of the "stochastic chicken" are the same.
+For much of this post, I use the term *word* instead of *token* to describe what an LLM predicts. Tokens can be punctuation marks, or parts of words--even capitalization can split words into multiple tokens (for example, "hello" is one token, but "Hello" might be split into two tokens of "H" and "ello". This is a friendly simplification to avoid having to address why the model might predict half a word or a semicolon, since the underlying principles of the "stochastic chicken" are the same.
 
 :::
 
@@ -116,7 +116,7 @@ The answer is that deep language models such as LLMs are built with neural netwo
 
 ### What does deterministic mean?
 
-Being deterministic means that if you do something exactly the same way every time, you'll always get the same result. There's no randomness or chance involved. Think of it like using a simple calculator; if you type in $2 + 2$ on any basic calculator, it will always show "4". It won't suddenly decide to show "5" one day.
+Being deterministic means that if you do something exactly the same way every time, you'll always get the same result. There's no randomness or chance involved. Think of it like using a simple calculator; $2 + 2$ on any basic calculator will always show "4". It won't suddenly decide to show "5" one day.
 
 Deterministic means predictable and consistent, with no surprises based on how you started.
 
@@ -197,7 +197,7 @@ Clearly, trying to visualize a chicken choosing from 50,257 options isn't very u
   caption="Showing the top 6 options makes things a lot easier to understand.\nChicken and feed generated with OpenAI DALL-E 3 and edited by the author."
 />
 
-Let's suppose the chicken decides to choose the word **"eat"**, despite it only being the third most probable word since it has the third largest feed pile.
+Let's suppose the chicken decides to choose the word **"eat,"** despite it only being the third most probable word since it has the third largest feed pile.
 
 Unfortunately, our chicken's work is just beginning, because it will now need to choose every subsequent word in the following way. Once again, it will be presented with a list of probable words from thousands of hardworking humans in the stadium, and once again, it will have to use its tiny chicken brain to select a word. Now our prompt to complete is **"After midnight, the cat decided to eat..."** with the following top 6 possible words and their probability distribution:
 
