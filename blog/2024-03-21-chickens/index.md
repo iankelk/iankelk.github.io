@@ -29,9 +29,9 @@ import dice from './dice.jpg';
 import parrotChicken from './parrot-vs-chicken.jpg';
 import partners from './partners.jpg';
 
-Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately responsible for the text they generate--a chicken.
+Humans often organize large, skilled groups to undertake complex projects, but then bizarrely place less-than-competent individuals in charge. Despite this, they somehow succeed! Large language models (LLMs) seem to be carrying on this proud tradition with my new favorite metaphor of who's ultimately in charge of writing the text they generate--a chicken.
 
-*There is now a sequal to this article, [Secret LLM chickens II: Tuning the chicken](secret-chickens-tuning), if you'd like to learn how and why the "chicken" can be customized.*
+*There is now a sequel to this article, [Secret LLM chickens II: Tuning the chicken](secret-chickens-tuning), if you'd like to learn how and why the "chicken" can be customized.*
 
 
 <Figure
@@ -56,9 +56,9 @@ Humans often organize large, skilled groups to undertake complex projects, and t
 <!-- truncate -->
 <br/>
 
-:::note
+:::note[A convenient untruth]
 
-For much of this post, I use the term *word* instead of *token* to describe what an LLM predicts. This is just a useful simplification to avoid having to address why the model might predict half a word or a semicolon, since the underlying principles of the "stochastic chicken" are the same.
+For much of this post, I use the term *word* instead of *token* to describe what an LLM predicts. Tokens can be punctuation marks, or parts of words--even capitalization can split words into multiple tokens (for example "hello" is one token, but "Hello" might be split into two tokens of "H" and "ello". This is a friendly simplification to avoid having to address why the model might predict half a word or a semicolon, since the underlying principles of the "stochastic chicken" are the same.
 
 :::
 
@@ -162,7 +162,7 @@ This seems suspicious. If you ask an LLM the same thing multiple times, it will 
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
 
-This is why we need the chicken. The chicken is stochastic, which adds randomness and unpredictability to the the whole system.
+This is why we need the chicken. The chicken is stochastic, which adds randomness and unpredictability to the whole system.
 
 The previously mentioned humans in the stadium, who for some reason have deified a chicken, will present the chicken with a series of words and probabilities. Technically, these are not words but *tokens*; however, for the sake of simplifying this analogy, we'll refer to them as words. These words and probabilities can be visualized as a series of piles of chicken feed, where each word pile's size corresponds to its probability.
 
@@ -179,7 +179,7 @@ The way that GPT-3 can encapsulate all the words in 50+ languages into just 50,2
 <Figure
   image={chicken50k}
   alt="Illustration depicting a chicken looking down a long line of seed piles that extends into the horizon, giving the illusion of an infinite number of piles. The seeds are on pieces of paper with words written on them, and the size of the piles and the spacing between them decrease as they recede into the distance, enhancing the perception of infinity. The scene is elegantly composed, capturing the curiosity of the chicken as it contemplates the endless supply."
-  caption="How the heck is an image like this going to help us understand how the chicken chooses the feed?\nGenerated with OpenAI DALL-E 3"
+  caption="How the cluck is an image like this going to help us understand how the chicken chooses its food?\nGenerated with OpenAI DALL-E 3"
 />
 
 Clearly, trying to visualize a chicken choosing from 50,257 options isn't very useful. Let's instead limit our chicken's choices to only the top 6 words that the language model chose. Here are the options for the chicken and how it might look when the chicken is presented with them:
@@ -197,9 +197,9 @@ Clearly, trying to visualize a chicken choosing from 50,257 options isn't very u
   caption="Showing the top 6 options makes things a lot easier to understand.\nChicken and feed generated with OpenAI DALL-E 3 and edited by the author."
 />
 
-Let's suppose the chicken decides to choose the word **"eat"**, despite it only being the third most probably word since it has the third largest feed pile.
+Let's suppose the chicken decides to choose the word **"eat"**, despite it only being the third most probable word since it has the third largest feed pile.
 
-Unfortunately, our chicken's work is just beginning, because it will now need to choose every subsequent word in the following way. Once again, it will be presented with a list of probable words from thousands of hardworking humans in the stadium, and once again it will have to use its tiny chicken brain to select a word. Now our prompt to complete is **"After midnight, the cat decided to eat..."** with the following top 6 possible words and their probability distribution:
+Unfortunately, our chicken's work is just beginning, because it will now need to choose every subsequent word in the following way. Once again, it will be presented with a list of probable words from thousands of hardworking humans in the stadium, and once again, it will have to use its tiny chicken brain to select a word. Now our prompt to complete is **"After midnight, the cat decided to eat..."** with the following top 6 possible words and their probability distribution:
 
 | Food  | birds | plants | grass | mice  | catnip | tuna |
 |-----------|------|----------|------|------|-------|------|
@@ -294,7 +294,7 @@ The model, perhaps trained on more dating profiles than job applications, has co
 <Figure
   image={beach}
   alt="A whimsical and stylish illustration depicting a humanoid robot in a business suit, walking comically with exaggerated movements along a beach. The robot is walking in the water up to its ankles, causing  splashes and waves around it. The beach scene includes soft sand and gentle waves under a serene sky. The humorous contrast of the formally attired robot deeply immersed in the water, playfully interacts with the natural seaside environment, creating a surreal and amusing visual narrative."
-  caption="I like romantic walks on the beach with someone whose love language is powerpoint and performance bonuses.\nGenerated with OpenAI DALL-E 3 and edited by the author."
+  caption="I like romantic walks on the beach with someone whose love language is PowerPoint and performance bonuses.\nGenerated with OpenAI DALL-E 3 and edited by the author."
 />
 
 ### Inability to Explore Multiple Paths
@@ -322,7 +322,7 @@ In the case of a language model generating a sequence of, say, 2,000 tokens, the
 
 The logarithm (base 10) of the number of possible combinations for a sequence of 2,000 tokens, with GPT-3's vocabulary size of 50,257 unique tokens, is approximately $9,402$. This means the total number of combinations is $10^{9402}$.
 
-To put this into perspective, $10^{9402}$ is an astronomically large number. It's far beyond the total number of atoms in the observable universe (estimated to be around $10^{80}$). Even considering reasonable sampling mechanisms that might drastically reduce this number, the space of possible combinations is so large that for practical purposes it is infinite.
+To put this into perspective, $10^{9402}$ is an astronomically large number. It's far beyond the total number of atoms in the observable universe (estimated to be around $10^{80}$). Even considering reasonable sampling mechanisms that might drastically reduce this number, the space of possible combinations is so large that for practical purposes, it is infinite.
 
 Therefore, the likelihood of generating the exact same sequence of 2,000 tokens twice is so *incredibly* small that it's effectively zero in any practical sense. The ridiculous size of this combinatorial space basically guarantees that generated text of any length is unique.
 
@@ -381,7 +381,7 @@ log_combinations
 
 The use of the chicken in LLMs indeed highlights a fundamental difference between how these models generate text, and how humans think and produce language. 
 
-LLMs generate text based on statistical patterns learned from vast amounts of data, and the randomness introduced by the chicken is a mechanism to produce diverse and contextually appropriate responses.  In contrast, cognitive processes like memory, reasoning, and emotional context, which do not rely on statistical sampling in the same way, are what drive human thought and language production.
+LLMs generate text based on statistical patterns learned from vast amounts of data, and the chicken introduces randomness as a mechanism to produce diverse and contextually appropriate responses. In contrast, cognitive processes like memory, reasoning, and emotional context, which do not rely on statistical sampling in the same way, are what drive human thought and language production.
 
 <Figure
   image={hiddenChicken}
@@ -393,21 +393,21 @@ In my opinion, the chicken is a stopgap, a temporary bandaid to solve a problem,
 
 ### Whether LLMs are deterministic or stochastic depends on your point of view
 
-Your perspective on this will change depending on if you focus on the neural network architecture itself, versus considering the complete text generation process, which includes our beloved chicken.
+Your perspective on this will change depending on whether you focus on the neural network architecture itself or instead consider the complete text generation process, which includes our beloved chicken.
 
 #### LLMs as deterministic systems
 
-The transformer architecture and the learned parameters of the model are fixed once the model is trained. Given the same input sequence and model parameters, the network will always produce the same output, which in the case of LLMs, is a distribution over the next possible tokens. The computation through the network's layers and the resulting probabilities for the next token are entirely predictable and repeatable. In this view, the distribution of tokens produced by the model represents the entire system, and the chicken is a part of some other system.
+The transformer architecture and the learned parameters of the model are fixed once the model is trained. Given the same input sequence and model parameters, the network will always produce the same output, which, in the case of LLMs, is a distribution over the next possible tokens. The computation through the network's layers and the resulting probabilities for the next token are entirely predictable and repeatable. In this view, the distribution of tokens produced by the model represents the entire system, and the chicken is a part of some other system.
 
 #### LLMs as stochastic systems
 
-When considering the model as a complete system for generating text, the inclusion of the chicken  as an integral part of its operation means that the overall system behaves in a stochastic manner. Different runs with the same input prompt produce different sequences of text, reflecting the randomness introduced by the stochastic chicken. With this view, since text cannot be generated without the chicken, the chicken is an integral part of the system.
+When considering the model as a complete system for generating text, the inclusion of the chicken  as an integral part of its operation means that the overall system behaves in a stochastic manner. The stochastic chicken introduces randomness, which results in different text sequences in different runs with the same input prompt. With this view, since text cannot be generated without the chicken, the chicken is an integral part of the system.
 
 #### Combined perspective: deterministic core of a stochastic system
 
 It's probably easiest to view LLMs as deterministic systems with respect to their neural network computation, producing a predictable set of output probabilities for the next token when given an input. However, when considering the complete text generation process, which includes the decision-making by a silly bird of some kind, the system behaves stochastically.
 
-It's still mindbending that these models that have fundamentally changed world rely on pure chance for their final answers, and so far, this is the best method we have.
+It's still mind-bending that these models that have fundamentally changed the world rely on pure chance for their final answers, and so far, this is the best method we have.
 
 <Figure
   image={dice}
@@ -462,16 +462,16 @@ So LLMs might be stochastic parrots--or they might not--but either way, a chicke
 
 - **The Stochastic Chicken**: The "stochastic chicken" metaphor effectively illustrates how randomness is essential in text generation by LLMs, contrasting the sophistication of neural computations with the simplicity of random choice mechanisms.
 
-- **Neural Determinism and Stochastic Outputs**: While the neural network components of LLMs are deterministic, producing consistent outputs for given inputs, the introduction of randomness (via the chicken) in the selection process of the final output introduces variability, making the overall system stochastic.
+- **Neural Determinism and Stochastic Outputs**: The neural network parts of LLMs are deterministic, meaning they always produce the same outputs for given inputs. However, the chicken adds randomness to the process of choosing the final output, which makes the whole system stochastic.
 
-- **Purpose of Randomness**: The randomness introduced by the stochastic chicken is needed for preventing issues like repetitiveness and lack of creativity in generated text. It ensures that LLM outputs are diverse and not just the most statistically likely continuations.
+- **Purpose of Randomness**: The randomness introduced by the stochastic chicken is needed to prevent issues like repetitiveness and lack of creativity in generated text. It ensures that LLM outputs are diverse and not just the most statistically likely continuations.
 
-- **Human vs. AI Cognition**: The reliance on stochastic processes (like the chicken) to finalize outputs highlights fundamental differences between artificial intelligence and human cognitive processes, underlining that AI may not "think" or "understand" in human-like ways despite producing human-like text.
+- **Human vs. AI Cognition**: The reliance on stochastic processes (like the chicken) to finalize outputs highlights fundamental differences between artificial intelligence and human cognitive processes, emphasizing that AI may not "think" or "understand" in human-like ways despite producing human-like text.
 
-- **Deterministic vs. Stochastic Views**: Depending on the focus—on the neural network alone or on the complete text generation process including randomness—LLMs can be viewed as either deterministic or stochastic systems.
+- **Deterministic vs. Stochastic Views**: Depending on the focus—on the neural network alone or on the complete text generation process, including randomness—LLMs can be viewed as either deterministic or stochastic systems.
 
 - **Uniqueness of Generated Text**: Given the vast combinatorial possibilities of token sequences in LLMs, any substantial text generated is virtually guaranteed to be unique, underscoring the impact of the chicken and making it nearly impossible to *prove* plagiarism.
 
-- **Stochastic Chicken vs. Stochastic Parrot**: The "stochastic chicken" (the randomness in selecting outputs) and the "stochastic parrot" (the critique of LLMs as merely mimicking patterns from data without understanding) are not the same thing; whether LLMs are parrots is somewhat conjecture, but LLMs absolutely do contain the mechanism explained by the chicken.
+- **Stochastic Chicken vs. Stochastic Parrot**: The "stochastic chicken" (the randomness in selecting outputs) and the "stochastic parrot" (the critique of LLMs as merely mimicking patterns from data without understanding) are not the same thing. Whether LLMs are parrots is somewhat of a conjecture, but LLMs absolutely do contain a metaphoric chicken pecking away.
 
 :::
