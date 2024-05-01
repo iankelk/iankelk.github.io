@@ -56,7 +56,7 @@ Humans often organize large, skilled groups to undertake complex projects, but t
 <!-- truncate -->
 <br/>
 
-:::note[A convenient untruth]
+:::info[A convenient untruth]
 
 For much of this post, I use the term *word* instead of *token* to describe what an LLM predicts. Tokens can be punctuation marks, or parts of words--even capitalization can split words into multiple tokens (for example, "hello" is one token, but "Hello" might be split into two tokens of "H" and "ello". This is a friendly simplification to avoid having to address why the model might predict half a word or a semicolon, since the underlying principles of the "stochastic chicken" are the same.
 
@@ -135,6 +135,12 @@ The diagram below might look **crazy** complicated, but the only thing you need 
   alt="Artistic representation of a neural network diagram with multiple interconnected nodes in the input and hidden layers, accompanied by a perplexed man in a suit holding a coffee cup in the foreground, symbolizing human confusion on trying to understand machine learning concepts."
   caption="Maybe it looks scary, but each line connecting the dots is just a little math that never changes.\nGenerated with [NN-SVG](https://alexlenail.me/NN-SVG/) and DALL-E 3"
 />
+
+:::info[another convenient untruth]
+
+Most LLMs use a more complex neural architecture called a *transformer*, but again we'll just simplify the idea for convenience. It makes no difference for this discussion, since transformers are also deterministic and require a chicken.
+
+:::
 
 If you give the network the same input and the network has not been changed (ie., its weights, or how much it values certain pieces of input, remain the same), it will always perform the same calculations in the same order, and thus return the same output. While LLMs will have *billions* of these neurons, the basic idea is the same: for a given input, you will **always** get the same output. Typing $2+5\times10$ into a calculator will always give you $52$, no matter how many times you do it.
 
