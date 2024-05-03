@@ -29,7 +29,7 @@ import dice from './dice.jpg';
 import parrotChicken from './parrot-vs-chicken.jpg';
 import partners from './partners.jpg';
 
-Humans often organize large, skilled groups to undertake complex projects, and then bizarrely place incompetent individuals in charge. Large language models (LLMs) carry on this proud tradition with my new favorite metaphor of who's ultimately in charge of writing the text they generate--a chicken.
+Humans often organize large, skilled groups to undertake complex projects and then bizarrely place incompetent people in charge. Large language models (LLMs) carry on this proud tradition with my new favorite metaphor of who has the final say in writing the text they generate—a chicken.
 
 *There is now a sequel to this article, [Secret LLM chickens II: Tuning the chicken](secret-chickens-tuning), if you'd like to learn how and why the "chicken" can be customized.*
 
@@ -42,7 +42,7 @@ Humans often organize large, skilled groups to undertake complex projects, and t
 
 :::tip[Some key points I'll address here are:]
 
-- Modern LLMs are huge and incredibly sophisticated. However, for every word they generate, they have to hand their predictions over to a random function to pick the actual word.
+- Modern LLMs are huge and incredibly sophisticated. However, for every word they generate, they have to hand their predictions over to a simple, random function to pick the actual word.
 - This is because neural networks are deterministic, and without the inclusion of randomness, they would always produce the same output for any given prompt.
 - These random functions that choose the word are no smarter than a chicken pecking at differently-sized piles of feed to choose the word.
 - Without these "stochastic chickens," large language models wouldn't work due to problems with repetitiveness, lack of creativity, and contextual inappropriateness.
