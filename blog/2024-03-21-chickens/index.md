@@ -1,6 +1,6 @@
 ---
 slug: secret-chickens-llm
-title: "The secret chickens that run large language models"
+title: "The secret chickens that run LLMs"
 authors: [ikelk]
 tags: [distribution, sampling, AGI, ASI, chatgpt, chat, AI, LLM, ML, chatbot, chatbots, stochastic chicken, stochastic parrot, AIExplained]
 enableComments: true
