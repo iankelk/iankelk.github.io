@@ -69,7 +69,7 @@ Picture a stadium full of people. Here's [Kyle Field](https://en.wikipedia.org/w
 <Figure
   image={kyleField}
   alt="A panorama of the interior of Kyle Field (a massive basebal stadium which holds more than 100,000 people) in College Station, Texas. Taken at the Ball State game during the 2015 season."
-  caption="Attribution: [Janreagan](https://en.wikipedia.org/wiki/User:Janreagan) at [Wikipedia Commons](https://commons.wikimedia.org/wiki/File:Kyle_Field_Panorama.jpg)"
+  caption="A panorama of the interior of Kyle Field in College Station, Texas. Taken at the Ball State game during the 2015 season. Attribution: [Janreagan](https://en.wikipedia.org/wiki/User:Janreagan) at [Wikipedia Commons](https://commons.wikimedia.org/wiki/File:Kyle_Field_Panorama.jpg)"
 />
 
 We've given each one of these very patient people a calculator along with the instruction that the person in the seat in front of them will give them some number, at which point they need to do a little work on their calculator and pass their new number to the person behind them. For the sake of this analogy, let's assume that despite a considerable number of them being distracted, drunk, or children, they are all able to complete the task.
