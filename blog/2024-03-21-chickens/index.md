@@ -1,6 +1,6 @@
 ---
 slug: secret-chickens-llm
-title: "The secret chickens that run LLMs"
+title: "The secret chickens that run large language models"
 authors: [ikelk]
 tags: [distribution, sampling, AGI, ASI, chatgpt, chat, AI, LLM, ML, chatbot, chatbots, stochastic chicken, stochastic parrot, AIExplained]
 enableComments: true
@@ -29,7 +29,7 @@ import dice from './dice.jpg';
 import parrotChicken from './parrot-vs-chicken.jpg';
 import partners from './partners.jpg';
 
-Humans often organize large, skilled groups to undertake complex projects and then bizarrely place incompetent people in charge. Large language models (LLMs) carry on this proud tradition with my new favorite metaphor of who has the final say in writing the text they generate—a chicken.
+Humans often organize large, skilled groups to undertake complex projects and then bizarrely place incompetent people in charge. Large language models (LLMs) such as OpenAI GPT-4, Anthropic Claude, and Google Gemini carry on this proud tradition with my new favorite metaphor of who has the final say in writing the text they generate—a chicken.
 
 *There is now a sequel to this article, [Secret LLM chickens II: Tuning the chicken](secret-chickens-tuning), if you'd like to learn how and why the "chicken" can be customized.*
 
