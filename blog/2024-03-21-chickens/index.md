@@ -37,7 +37,7 @@ Humans often organize large, skilled groups to undertake complex projects and th
 <Figure
   image={chickenWink}
   alt="Cartoon chicken winking at the camera. It is in a cluttered workspace filled with multiple computer monitors, electronics, and miscellaneous items, giving the impression of a tech-savvy or hacker chicken."
-  caption="Generated with OpenAI DALL-E 3 and edited by the author."
+  caption='Inside the Chicken Lab," generated with OpenAI DALL-E 3 and edited by the author.'
 />
 
 :::tip[Some key points I'll address here are:]
