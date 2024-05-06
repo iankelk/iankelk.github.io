@@ -1,6 +1,6 @@
 ---
 slug: llm-forward-thinking
-title: LLMs are forward thinkers, and that's a problem
+title: LLMs are forward thinkers, and that's a bit of a problem
 authors: [ikelk]
 tags: [linear thinking, AGI, ASI, chatgpt, context, chat, AI, LLM, ML, chatbot, chatbots, AIExplained]
 enableComments: true
@@ -19,7 +19,7 @@ import crazy from './crazy.jpg';
 import shrug from './shrug2.jpg';
 
 
-This is going to be a weird post. And we're going to start with a weird thought experiment about a shark and an octopus.
+This is going to be a weird post. And we're going to start with a thought experiment about a shark and an octopus.
 
 <Figure
   image={sharkOctopus}
