@@ -99,7 +99,7 @@ To get this chicken involved, we're going to use words and probabilities to crea
 <Figure
   image={introChicken}
   alt="Satirical cartoon featuring a robot presenting a chicken with word options for the phrase 'why did the chicken cross the ___', with 'road', 'playground', 'moon', and 'refrigerator' as choices, set against a backdrop of numerous robots working at desks."
-  caption="Chickens have the amazing property to choose their food depending on the size of the piles!\nGenerated with OpenAI DALL-E 3 and edited by the author."
+  caption="Chickens have the amazing property of choosing their food depending on the size of the piles!\nGenerated with OpenAI DALL-E 3 and edited by the author."
 />
 
 :::warning
@@ -138,7 +138,7 @@ The diagram below might look **crazy** complicated, but the only thing you need 
 
 :::info[another convenient untruth]
 
-Most LLMs use a more complex neural architecture called a [*transformer*](https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)), but again we'll just simplify the idea for convenience. It makes no difference for this discussion, since transformers are also deterministic and require a chicken.
+Most LLMs use a more complex neural architecture called a [*transformer*](https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)), but again, we'll just simplify the idea for convenience. It makes no difference for this discussion, since transformers are also deterministic and require a chicken.
 
 :::
 
@@ -309,7 +309,7 @@ Greedy decoding means that an LLM will always produce the same output for any gi
 
 ## What does the necessary existence of the chicken imply?
 
-### There's probably no way to definitively prove that a given text was generated
+### There's probably no way to definitively prove that a given text was generated.
 
 You may have heard this before since it's been floating around the internet for a few years, but every time you shuffle a deck of playing cards, it's almost certain that the specific order of cards has never existed before and will never exist again. In a standard deck of 52 cards, the number of possible ways to arrange the cards is 52 factorial $(52!)$. This number is approximately $8.07 \times 10^{67}$, an extraordinarily large figure.
 
@@ -383,7 +383,7 @@ log_combinations
 
 </details>
 
-### Despite LLMs appearing to think like people, the need for a stochastic chicken is an argument for why they don't
+### Despite LLMs appearing to think like people, the need for a stochastic chicken is an argument for why they don't.
 
 The use of the chicken in LLMs indeed highlights a fundamental difference between how these models generate text, and how humans think and produce language. 
 
@@ -397,7 +397,7 @@ LLMs generate text based on statistical patterns learned from vast amounts of da
 
 In my opinion, the chicken is a stopgap, a temporary bandaid to solve a problem, and it does not imbue the model with understanding or cognition. This distinction is central to ongoing discussions in AI about the nature of intelligence, consciousness, and the difference between simulating aspects of human thought and actually replicating the underlying cognitive processes.
 
-### Whether LLMs are deterministic or stochastic depends on your point of view
+### Whether LLMs are deterministic or stochastic depends on your point of view.
 
 Your perspective on this will change depending on whether you focus on the neural network architecture itself or instead consider the complete text generation process, which includes our beloved chicken.
 
@@ -459,8 +459,8 @@ So LLMs might be stochastic parrots--or they might not--but either way, a chicke
   caption="Every stochastic parrot needs its stochastic chicken.\nGenerated with OpenAI DALL-E 3 and edited by the author."
 />
 
-*This topic is continued in my next article, [Secret chickens II: Tuning the chicken
-](secret-chickens-tuning), which discusses techniques that affect the behaviour of the chicken.*
+*This topic is continued in my next article, [Secret chickens II: Tuning the chicken,
+](secret-chickens-tuning) which discusses techniques that affect the behaviour of the chicken.*
 
 ## Key Takeaways
 
