@@ -33,11 +33,11 @@ This is going to be a weird post. And we're going to start with a weird thought 
 - LLMs like ChatGPT are autoregressive and are unable to continue a dialogue if they haven't already generated everything up to that point. This is because they don't "think" per se, but progressively generate a response using the parts of the response they previously created. 
 - If you try to get an LLM to write text in the middle of a dialogue without previous context, it will give near-identical answers and attempt to conclude the conversation.
 - Prompting for "ridiculous" answers can spark creativity that helps break this pattern.
-- However, the reliance on a linear train of thought is a limitation for general intelligence. LLMs are ineffective if you ask them to generate the second part of a response without allowing them to generate the first part.
+- The reliance on a linear train of thought is a limitation for general intelligence. LLMs are ineffective if you ask them to generate the second part of a response without allowing them to generate the first part.
 
 :::
 
-As I mentioned, this is going to be weird, but I promise there is a point!
+As I mentioned, this is going to sound a bit silly, but I promise there is a point!
 
 <!-- truncate -->
 
