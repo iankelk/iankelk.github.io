@@ -4,7 +4,7 @@ title: "The secret chickens that run LLMs"
 authors: [ikelk]
 tags: [distribution, sampling, AGI, ASI, chatgpt, chat, AI, LLM, ML, chatbot, chatbots, stochastic chicken, stochastic parrot, AIExplained]
 enableComments: true
-image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2024-03-21-chickens/social-card.jpg?raw=true
+image: https://github.com/iankelk/iankelk.github.io/blob/main/blog/2024-05-06-chickens/social-card.jpg?raw=true
 hide_reading_time: false
 ---
 import CodeBlock from "@theme/CodeBlock";
