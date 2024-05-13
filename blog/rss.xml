@@ -4,7 +4,7 @@
         <title>Short Attention Blog</title>
         <link>https://kelk.ai/blog</link>
         <description>Short Attention Blog</description>
-        <lastBuildDate>Thu, 11 Apr 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 13 May 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -13,7 +13,7 @@
             <title><![CDATA[Secret LLM chickens II: Tuning the chicken]]></title>
             <link>https://kelk.ai/blog/secret-chickens-tuning</link>
             <guid>https://kelk.ai/blog/secret-chickens-tuning</guid>
-            <pubDate>Thu, 11 Apr 2024 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 13 May 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[When working with an LLM, sometimes it doesn't generate responses in the way you want. Maybe it's being too creative and weird when tasked with serious prompts ("Write me a cover letter for a programming job" "I am a coding wizard and I always min-max my character!"), or it's being too serious when you want to do some creative writing ("Write me a story" "You are tired and you lie down and go to sleep. The end."). This can be tweaked by making certain adjustments to the sampling mechanism--aka "the chicken."]]></description>
             <content:encoded><![CDATA[<p>When working with an LLM, sometimes it doesn't generate responses in the way you want. Maybe it's being too creative and weird when tasked with serious prompts ("Write me a cover letter for a programming job" <em>"I am a coding wizard and I always min-max my character!"</em>), or it's being too serious when you want to do some creative writing ("Write me a story" <em>"You are tired and you lie down and go to sleep. The end."</em>). This can be tweaked by making certain adjustments to the sampling mechanism—aka "the chicken."</p>
 <p><em>This blog post continues from my previous article, <a href="https://kelk.ai/blog/secret-chickens-llm">The secret chickens that run LLMs</a>, and you should read that first to understand what a "stochastic chicken" is.</em></p>
@@ -259,7 +259,7 @@
             <title><![CDATA[The secret chickens that run LLMs]]></title>
             <link>https://kelk.ai/blog/secret-chickens-llm</link>
             <guid>https://kelk.ai/blog/secret-chickens-llm</guid>
-            <pubDate>Thu, 21 Mar 2024 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 06 May 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Humans often organize large, skilled groups to undertake complex projects and then bizarrely place incompetent people in charge. Large language models (LLMs) such as OpenAI GPT-4, Anthropic Claude, and Google Gemini carry on this proud tradition with my new favorite metaphor of who has the final say in writing the text they generate—a chicken.]]></description>
             <content:encoded><![CDATA[<p>Humans often organize large, skilled groups to undertake complex projects and then bizarrely place incompetent people in charge. Large language models (LLMs) such as OpenAI GPT-4, Anthropic Claude, and Google Gemini carry on this proud tradition with my new favorite metaphor of who has the final say in writing the text they generate—a chicken.</p>
 <p><em>There is now a sequel to this article, <a href="https://kelk.ai/blog/secret-chickens-tuning">Secret LLM chickens II: Tuning the chicken</a>, if you'd like to learn how and why the "chicken" can be customized.</em></p>

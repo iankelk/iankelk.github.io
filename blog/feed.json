@@ -10,7 +10,7 @@
             "url": "https://kelk.ai/blog/secret-chickens-tuning",
             "title": "Secret LLM chickens II: Tuning the chicken",
             "summary": "When working with an LLM, sometimes it doesn't generate responses in the way you want. Maybe it's being too creative and weird when tasked with serious prompts (\"Write me a cover letter for a programming job\" \"I am a coding wizard and I always min-max my character!\"), or it's being too serious when you want to do some creative writing (\"Write me a story\" \"You are tired and you lie down and go to sleep. The end.\"). This can be tweaked by making certain adjustments to the sampling mechanism--aka \"the chicken.\"",
-            "date_modified": "2024-04-11T00:00:00.000Z",
+            "date_modified": "2024-05-13T00:00:00.000Z",
             "author": {
                 "name": "Ian Kelk",
                 "url": "https://kelk.ai"
@@ -39,7 +39,7 @@
             "url": "https://kelk.ai/blog/secret-chickens-llm",
             "title": "The secret chickens that run LLMs",
             "summary": "Humans often organize large, skilled groups to undertake complex projects and then bizarrely place incompetent people in charge. Large language models (LLMs) such as OpenAI GPT-4, Anthropic Claude, and Google Gemini carry on this proud tradition with my new favorite metaphor of who has the final say in writing the text they generate—a chicken.",
-            "date_modified": "2024-03-21T00:00:00.000Z",
+            "date_modified": "2024-05-06T00:00:00.000Z",
             "author": {
                 "name": "Ian Kelk",
                 "url": "https://kelk.ai"
