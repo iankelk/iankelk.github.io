@@ -24,7 +24,7 @@ import chickenTopPRenorm from './chicken-top-p-renorm.jpg';
 
 When working with an LLM, sometimes it doesn't generate responses in the way you want. Maybe it's being too creative and weird when tasked with serious prompts ("Write me a cover letter for a programming job" *"I am a coding wizard and I always min-max my character!"*), or it's being too serious when you want to do some creative writing ("Write me a story" *"You are tired and you lie down and go to sleep. The end."*). This can be tweaked by making certain adjustments to the sampling mechanism--aka "the chicken."
 
-*This blog post continues from my previous article, [The secret chickens that run LLMs](secret-chickens-llm), and you should read that first to understand what a "stochastic chicken" is.*
+*This blog post continues from my previous article, [The secret chickens that run LLMs](/blog/secret-chickens-llm), and you should read that first to understand what a "stochastic chicken" is.*
 
 <Figure
   image={chickenTuning}
@@ -34,7 +34,7 @@ When working with an LLM, sometimes it doesn't generate responses in the way you
 
 :::tip[Some key points I'll address here are:]
 
-- The "chicken" can be tuned, using [inference hyperparameters](#whats-an-inference-hyperparameter) like temperature, top-k, and top-p. These  serve as dials to fine-tune the randomness introduced by the stochastic process, balancing creativity and coherence in the text they generate.
+- The "chicken" can be tuned, using [inference hyperparameters](/blog/secret-chickens-tuning#whats-an-inference-hyperparameter) like temperature, top-k, and top-p. These  serve as dials to fine-tune the randomness introduced by the stochastic process, balancing creativity and coherence in the text they generate.
 - Adjusting the temperature parameter can make the model's outputs more predictable and less random at lower values, or more diverse and less deterministic at higher values.
 - Modifying the top-k and top-p parameters fine-tunes the sampling process by limiting the set of possible next words. 
 - Top-k restricts the model to choose from the $k$ most likely next words, while top-p uses a probability threshold to create a dynamic set of options. These tweaks help balance creativity with coherence, allowing the LLM to better meet specific needs or experimental conditions.
@@ -107,7 +107,7 @@ When the temperature is set to 1, it has no effect on the logits, and the model 
 
 #### Temperature < 1 (e.g., 0.5)
 
-Lowering the temperature makes the model more confident in its outputs by increasing the gap between the probability of the most likely outcomes and the rest. This makes the chicken's choices less diverse and more deterministic; how could any chicken ignore that *huge* pile by the word "hunt"? A lower temperature is useful when you want the model to take fewer risks and stick closely to the most likely predictions. This can, however, lead to a lack of variety and potentially more repetitive outputs since, as the temperature approaches $0$, it approximates greedy decoding (with all the problems [previously discussed](#why-we-need-the-chicken)).
+Lowering the temperature makes the model more confident in its outputs by increasing the gap between the probability of the most likely outcomes and the rest. This makes the chicken's choices less diverse and more deterministic; how could any chicken ignore that *huge* pile by the word "hunt"? A lower temperature is useful when you want the model to take fewer risks and stick closely to the most likely predictions. This can, however, lead to a lack of variety and potentially more repetitive outputs since, as the temperature approaches $0$, it approximates greedy decoding (with all the problems [previously discussed](/blog/secret-chickens-llm#why-we-need-the-chicken)).
 
 <Figure
   image={chickenLowTemp}
@@ -596,7 +596,7 @@ Top-p with $p=1$ is equivalent to the chicken choosing from all words in the voc
 
 ## Even with top-k, there's still no way to definitively prove that a given text was generated
 
-Previously we found that the number of different texts that an LLM can generate is [so large that it might as well be infinite.](secret-chickens-llm#theres-probably-no-way-to-definitively-prove-that-a-given-text-was-generated) The number we found in that section, $10^9402$, is too large to be useful, so perhaps limiting the vocabulary with top-k or top-p we might make it more reasonable.
+Previously we found that the number of different texts that an LLM can generate is [so large that it might as well be infinite.](/blog/secret-chickens-llm#theres-probably-no-way-to-definitively-prove-that-a-given-text-was-generated) The number we found in that section, $10^9402$, is too large to be useful, so perhaps limiting the vocabulary with top-k or top-p we might make it more reasonable.
 
 First we calculate a more realistic estimate of the number of possible combinations with top-k where $k=40$. We'll use top-k only, since temperature doesn't affect the number of considered tokens, and top-p depends on the probabilities predicted.
 
@@ -661,7 +661,7 @@ log_combinations_top_k
 
 :::info
 
-- **Hyperparameter Tuning**: The article discusses how to tune "stochastic chickens" (sampling mechanisms in LLMs) using inference hyperparameters like temperature, top-k, and top-p. These settings fine-tune the balance between creativity and coherence in generated text.
+- **Hyperparameter Tuning**: The article discusses how to tune "stochastic chickens" (sampling mechanisms in LLMs) using [inference hyperparameters](/blog/secret-chickens-tuning#whats-an-inference-hyperparameter) like temperature, top-k, and top-p. These settings fine-tune the balance between creativity and coherence in generated text.
   
 - **Temperature Adjustments**: Changing the temperature affects the randomness of model predictions. Lower temperatures result in more deterministic outputs and less diversity, while higher temperatures allow for more random and varied responses.
   
