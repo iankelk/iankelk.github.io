@@ -138,7 +138,7 @@ The diagram below might look **crazy** complicated, but the only thing you need 
 
 :::info[another convenient untruth]
 
-Most LLMs use a more complex neural architecture called a [*transformer*](https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)), but again, we'll just simplify the idea for convenience. It makes no difference for this discussion, since transformers are also deterministic and require a chicken.
+Most LLMs use a more complex neural architecture called a [*transformer*](https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)), but again, we'll just simplify the idea for convenience. It makes no difference for this discussion, since transformers are also deterministic and require a chicken for generative tasks.
 
 :::
 
