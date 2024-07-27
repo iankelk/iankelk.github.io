@@ -71,7 +71,7 @@ However, without this context, ChatGPT would have no knowledge of what was previ
 
 Notice that when the woman asks her second question, she has to reiterate the entire previous conversation, complete with tags on who said what. Can you imagine talking to a person where every time it was your turn to speak, you had to repeat the entire conversation up to that point? This is how ChatGPT (and all current LLMs) work. They require using their own outputs, plus the prompts that generated these outputs, to be prepended to the start of every new prompt from the user.
 
-These models are termed "autoregressive" due to their method of generating text one piece at a time, building upon the previously generated text. The word "auto" comes from the Greek  "autós," meaning "self," and "regressive" is derived from "regress," which in this case refers to predicting future values based on past values. Thus, "autoregressive" pretty much means the model "makes new predictions based on its own previous predictions."
+These models are termed "autoregressive" due to their method of generating text one piece at a time, building upon the previously generated text. The word "auto" comes from the Greek  "autós," meaning "self," and "regressive" is derived from "regress," which in this case refers to predicting future values based on past values. Thus, "autoregressive" pretty much means "makes new predictions based on its own previous predictions."
 
 In LLMs, the model predicts the next word or token in a sequence based on all the words or tokens that have come before it. That's *all* of it, not just the current question being asked in a long back-and-forth chat conversation. In humans, we naturally maintain coherence and context in a conversation by just... instinctively participating in the conversation.
 
@@ -91,7 +91,7 @@ However, while chats with ChatGPT mimic a conversational style, with each respon
 
 When ChatGPT first came out in November 2022, it only offered the model GPT-3.5, which had a maximum context of 4,096 tokens, which is roughly 3,000 words. In a [recent talk,](https://youtu.be/zjkBMFhNj_g?t=2642) Andrej Karpathy referred to this context window as "your finite precious resource of your working memory of your language model."
 
-What this means is that the GPT-3.5 model can comprehend a maximum of 4,096 tokens at any point. Tokenization is a fascinating subject in itself, and my next post will cover how it works and why 4,096 tokens only gives you about 3,000 words.
+What this means is that the GPT-3.5 model can comprehend a maximum of 4,096 tokens at any point. Tokenization is a fascinating subject in itself, and a future post will cover how it works and why 4,096 tokens only gives you about 3,000 words.
 
 There's often confusion about what the token limit means regarding input and output: can we give ChatGPT 3,000 words and expect it to be able to produce 3,000 words back? The answer is unfortunately no; the context length of 4,096 tokens covers both the input (prompt) and the output (response). This results in a trade-off where we have to balance the amount of information we give in a prompt with the length of the response we get from the model.
    
