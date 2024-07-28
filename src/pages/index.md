@@ -6,6 +6,13 @@ title: Ian Kelk
 
 ## Projects
 
+### Cloud2Cloud Harvard / NASA Capstone Project - Ongoing
+
+* Cloud2Cloud focuses on accurately measuring cloud-top heights to enhance the calibration and validation of satellite radiometric instruments. It is a joint project with Harvard Extension School and NASA.
+* NASA developed the Fly’s Eye GLM Simulator (FEGS), a multi-spectral radiometer system with 30 radiometers and an HD camera, to validate the Geostationary Lightning Mapper (GLM) on the GOES-16 satellite. It's mounted on the NASA ER-2 aerial laboratory, a plane which flies at 70,000 feet. During a 2017 flight campaign, the ER-2 collected data using FEGS and the Cloud Physics LiDAR (CPL) to measure cloud heights.
+* While LiDAR provides precise cloud-top heights, it offers only single-point values. Cloud2Cloud aims to develop a predictive computer vision model that combines high-definition images from FEGS with LiDAR data to estimate cloud-top heights accurately and create a three-dimensional height field.
+* Proposal for the project is located [here.](/reports/cloud2cloud-proposal.pdf)
+
 ### NLP
 * Research paper from last year on automatic fake news detection: [Automatic Fake News Detection: Are current models “fact-checking” or “gut-checking”?](https://aclanthology.org/2022.fever-1.4/) presented at FEVER at ACL 2022
 * [Video](https://www.youtube.com/watch?v=v4Ue97kzX8Q&t) provided for the online system for ACL 2022
@@ -66,7 +73,7 @@ title: Ian Kelk
 ### Harvard Extension Masters
 * I'm a degree candidate for an ALM in Data Science, and have finished the 10 courses for my masters. I most recently completed [Productionizing AI (MLOps): AC215](https://harvard-iacs.github.io/2023-AC215/), in which I am building a custom RAG system with an LLM that scrapes and answers questions on entire websites using LlamaIndex, Weaviate, LangChain, and GPT-3.5. It's hosted on Google Cloud Services and Google Cloud Storage, and uses Docker and Kubernetes for production use. As well, the project hosts a fine-tuned BERT model on Google Vertex, and the entire thing runs FastAPI on the backend and React in the frontend.
 
-* I have maintained a 4.0 GPA in the following 10 classes:
+* I have maintained a 4.0 GPA in the following 11 classes:
 	* Data Modeling (R)
 	* Foundations of Data Science and Engineering (Python, SQL, Tableau)
 	* [Deep Learning for NLP](https://harvard-iacs.github.io/CS287/) (Research, Python, PyTorch)
@@ -77,6 +84,7 @@ title: Ian Kelk
 	* [Visualization](https://www.cs171.org/2022/) (D3 JavaScript, HTML, CSS, Tableau)
 	* [Big Data Systems](http://daslab.seas.harvard.edu/classes/cs265/) (Research, C++)
 	* [Productionizing AI (MLOps): AC215](https://harvard-iacs.github.io/2023-AC215/)
+	* Pre-capstone proposal ([cloud2cloud](./#cloud2cloud-harvard--nasa-capstone-project---ongoing))
 
 ## Contact
 Feel free to reach out to me:
