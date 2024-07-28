@@ -78,7 +78,7 @@ title: Ian Kelk
 	* Foundations of Data Science and Engineering (Python, SQL, Tableau)
 	* [Deep Learning for NLP](https://harvard-iacs.github.io/CS287/) (Research, Python, PyTorch)
 	* Computer Vision (Python, Keras/TensorFlow)
-	* Reinforcement Learning (Python)
+	* Deep Reinforcement Learning (Python)
 	* Elements of Data Science and Statistical Learning with R (R)
 	* Time Series Analysis with Python (Python)
 	* [Visualization](https://www.cs171.org/2022/) (D3 JavaScript, HTML, CSS, Tableau)
