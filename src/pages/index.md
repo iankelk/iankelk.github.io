@@ -70,7 +70,7 @@ title: Ian Kelk
 * Deep learning topics include techniques and principles behind training neural networks using backpropagation, strategies for tuning neural networks, with a focus on regularization, convolutional neural networks (CNNs) and recurrent neural networks (RNNs).
 * Deep reinforcement learning topics include value-based deep RL using Q-networks, policy-based approaches in Deep RL with REINFORCE, asynchronous methods for deep RL, with a spotlight on advantage actor-critic (A2C).
 
-### RAG
+### Retrieval Augmented Generation (RAG)
 * I built a custom RAG system with an LLM that scrapes and answers questions on entire websites using LlamaIndex, Weaviate, LangChain, and GPT-3.5. It's hosted on Google Cloud Services and Google Cloud Storage, and uses Docker and Kubernetes for production use. As well, the project hosts a fine-tuned BERT model on Google Vertex for classification of the generated text, and the entire thing runs FastAPI on the backend and React in the frontend.
 * Video [RAG Detective: Retrieval Augmented Generation with website data](https://www.youtube.com/watch?v=L2hfkp8DXBU)
 * [Medium post](https://medium.com/@iankelk/rag-detective-retrieval-augmented-generation-with-website-data-5a748b063040)
