@@ -70,10 +70,15 @@ title: Ian Kelk
 * Deep learning topics include techniques and principles behind training neural networks using backpropagation, strategies for tuning neural networks, with a focus on regularization, convolutional neural networks (CNNs) and recurrent neural networks (RNNs).
 * Deep reinforcement learning topics include value-based deep RL using Q-networks, policy-based approaches in Deep RL with REINFORCE, asynchronous methods for deep RL, with a spotlight on advantage actor-critic (A2C).
 
-### Harvard Extension Masters
-* I'm a degree candidate for an ALM in Data Science, and have finished the 10 courses for my masters. I most recently completed [Productionizing AI (MLOps): AC215](https://harvard-iacs.github.io/2023-AC215/), in which I am building a custom RAG system with an LLM that scrapes and answers questions on entire websites using LlamaIndex, Weaviate, LangChain, and GPT-3.5. It's hosted on Google Cloud Services and Google Cloud Storage, and uses Docker and Kubernetes for production use. As well, the project hosts a fine-tuned BERT model on Google Vertex, and the entire thing runs FastAPI on the backend and React in the frontend.
+### RAG
+* I built a custom RAG system with an LLM that scrapes and answers questions on entire websites using LlamaIndex, Weaviate, LangChain, and GPT-3.5. It's hosted on Google Cloud Services and Google Cloud Storage, and uses Docker and Kubernetes for production use. As well, the project hosts a fine-tuned BERT model on Google Vertex for classification of the generated text, and the entire thing runs FastAPI on the backend and React in the frontend.
+* Video [RAG Detective: Retrieval Augmented Generation with website data](https://www.youtube.com/watch?v=L2hfkp8DXBU)
+* [Medium post](https://medium.com/@iankelk/rag-detective-retrieval-augmented-generation-with-website-data-5a748b063040)
+* [GitHub repo](https://github.com/healthy-chicken-saladeers/rag_detective)
 
-* I have maintained a 4.0 GPA in the following 11 classes:
+### Harvard Extension Masters
+* I'm a degree candidate for an ALM in Data Science, and have finished the 11 courses for my masters, with only the final capstone project remaining to be completed in December, 2024. I have maintained a 4.0 GPA in the following 11 classes:
+
 	* Data Modeling (R)
 	* Foundations of Data Science and Engineering (Python, SQL, Tableau)
 	* [Deep Learning for NLP](https://harvard-iacs.github.io/CS287/) (Research, Python, PyTorch)
