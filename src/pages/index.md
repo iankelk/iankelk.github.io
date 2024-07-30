@@ -34,7 +34,7 @@ title: Ian Kelk
 * I recorded the 2-minute [video](https://www.youtube.com/watch?v=V8gTSvInKDA) for the project in an old-timey mid-Atlantic accent for uh, fun.
 
 ### Clarifai Blogs
-* I've written about 60 blog posts for Clarifai. They can all be found [here.](https://www.clarifai.com/blog) Below are a few samples. I also maintained the Clarifai documentation for quite two years, so much of the newer content on their [docs site](https://docs.clarifai.com) was written by me using Meta's "Docusaurus" platform.
+* I've written about 60 blog posts for Clarifai. They can all be found [here.](https://www.clarifai.com/blog/author/ian-kelk) Below are a few samples. I also maintained the Clarifai documentation for quite two years, so much of the newer content on their [docs site](https://docs.clarifai.com) was written by me using Meta's "Docusaurus" platform.
 * Blog [post](https://www.clarifai.com/blog/imperfections-in-the-machine-bias-in-ai) on AI bias
 * Creating AI workflows [post](https://www.clarifai.com/blog/creating-workflows-in-clarifai-community)
 * Clarifai Quick Start [post](https://www.clarifai.com/blog/image-predictions-quick-start)
