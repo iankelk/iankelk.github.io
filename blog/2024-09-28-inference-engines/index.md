@@ -33,11 +33,14 @@ Two years later and the situation has dramatically changed. Thanks to the rise o
 
 :::tip[Some key points I'll address here are:]
 
-- The evolution from server-dependent AI models like ChatGPT to locally runnable models like Meta's Llama
-- The basic components needed to run a local LLM: parameter files and inference engine code
-- The introduction of PagedAttention and its role in efficient memory management for LLM serving
-- The comparison between traditional contiguous memory allocation and the paged memory approach in AI models
-- The ongoing competition and rapid developments in LLM inference optimization, including vLLM and TGI
+- The transition from server-based LLMs like ChatGPT to locally runnable models, enabling customization and offline usage.
+- The role of inference engines in executing neural networks using learned parameters for local model inference.
+- Introduction to **PagedAttention** in vLLM, improving memory efficiency through better key-value cache management.
+- A comparison of TGI and vLLM, highlighting shared features such as tensor parallelism and batching, and distinct features like speculative decoding and structured output guidance.
+- Explanation of **latency** and **throughput**, including how these performance metrics influence LLM deployments.
+- Advice on selecting between TGI and vLLM based on specific enterprise needs, focusing on use case experimentation and benchmarking.
+- An overview of licensing differences, discussing TGI's shift back to **Apache 2.0**, aligning with vLLM’s license.
+- Practical code examples showing how to deploy models using both TGI and vLLM for real-world applications.
 
 :::
 
@@ -74,7 +77,7 @@ PagedAttention solves the problem of inefficient memory management in LLM infere
 <Figure
   image={chatgptPhotosynthesisImage2}
   alt="A black and white comic strip showing a dialogue between a woman and a person wearing a 'CHATGPT' shirt. The woman is labeled 'USER' and asks, 'What is photosynthesis?' The person labeled 'CHATGPT' answers, 'Photosynthesis is the process by which plants use sunlight to synthesize nutrients from carbon dioxide and water.' The woman, termed 'USER' again, follows with, 'Can humans do it?' and receives the reply, 'No, humans cannot perform photosynthesis.' Both characters are drawn as cartoons."
-  caption="People images by OpenAI DALL-E 3. Text and comic bubbles by author."
+  caption="The actual content of a converstaion with ChatGPT simulating that it remembers what was previously said.\nPeople images by OpenAI DALL-E 3. Text and comic bubbles by author."
 />
 
 :::tip[What it means to be autoregressive]
@@ -336,3 +339,8 @@ The best inference engine ultimately depends on your specific use case. Each eng
 
 And then do that every couple of months when everything changes again.
 
+<Figure
+  image={shrug}
+  alt="A racecar driver shrugging"
+  caption="See you in a month or two!\nGenerated with OpenAI DALL-E 3 and edited by the author."
+/>
