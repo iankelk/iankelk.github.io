@@ -5,6 +5,7 @@ import React, { useEffect, useState, useRef } from 'react';
 export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }) {
   const [videoSize, setVideoSize] = useState({ width: 0, height: 0 });
   const videoRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const parseCaption = (text) => {
     return text.split('\\n').map((line, index, array) => {
@@ -22,19 +23,9 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
 
   const captionContent = parseCaption(caption);
 
-  // Function to handle video play/pause
-  const handleVideoClick = (event) => {
-    // Only handle clicks directly on the video, not on the controls
-    if (event.target === videoRef.current) {
-      event.preventDefault();
-      const video = videoRef.current;
-      if (video.paused) {
-        video.play().catch(error => console.error("Play failed:", error));
-      } else {
-        video.pause();
-      }
-    }
-  };
+  useEffect(() => {
+    setIsMobile('ontouchstart' in window);
+  }, []);
 
   useEffect(() => {
     const video = document.createElement('video');
@@ -46,10 +37,10 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
 
   useEffect(() => {
     const video = videoRef.current;
-    if (video && autoPlay && !('ontouchstart' in window)) {
+    if (video && autoPlay && !isMobile) {
       video.play().catch(error => console.error("Autoplay failed:", error));
     }
-  }, [autoPlay]);
+  }, [autoPlay, isMobile]);
 
   return (
     <figure style={{
@@ -65,11 +56,10 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
         src={videoSrc}
         alt={alt}
         controls
-        muted
         loop
         playsInline
-        style={{ maxWidth: '100%', height: 'auto', cursor: 'pointer' }}
-        onClick={handleVideoClick}
+        muted={!isMobile}
+        style={{ maxWidth: '100%', height: 'auto' }}
       />
       <hr style={{ margin: "5px 0", backgroundColor: "rgba(0, 0, 0, .2)" }} />
       <figcaption style={{
