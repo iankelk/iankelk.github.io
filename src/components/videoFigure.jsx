@@ -1,8 +1,6 @@
 // src/components/videoFigure.jsx
 
 import React, { useEffect, useState } from 'react';
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
 
 export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }) {
   const [videoSize, setVideoSize] = useState({ width: 0, height: 0 });
@@ -23,35 +21,26 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
 
   const captionContent = parseCaption(caption);
 
+  // Function to handle fullscreen
+  const handleFullscreen = (event) => {
+    const videoElement = event.currentTarget;
+    if (videoElement.requestFullscreen) {
+      videoElement.requestFullscreen();
+    } else if (videoElement.mozRequestFullScreen) { // Firefox
+      videoElement.mozRequestFullScreen();
+    } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, Opera
+      videoElement.webkitRequestFullscreen();
+    } else if (videoElement.msRequestFullscreen) { // IE/Edge
+      videoElement.msRequestFullscreen();
+    }
+  };
+
   useEffect(() => {
     const video = document.createElement('video');
     video.onloadedmetadata = () => {
       setVideoSize({ width: video.videoWidth, height: video.videoHeight });
     };
     video.src = videoSrc;
-
-    const lightbox = new PhotoSwipeLightbox({
-      gallery: '#figure-gallery',
-      children: 'a',
-      pswpModule: () => import('photoswipe'),
-    });
-    lightbox.init();
-
-    const captionLinks = document.querySelectorAll('#figure-gallery figcaption a');
-    captionLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.stopPropagation();
-      });
-    });
-
-    return () => {
-      lightbox.destroy();
-      captionLinks.forEach(link => {
-        link.removeEventListener('click', (e) => {
-          e.stopPropagation();
-        });
-      });
-    };
   }, [videoSrc]);
 
   return (
@@ -62,18 +51,17 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
       marginBottom: 20,
       borderRadius: "15px",
       textAlign: "right",
-    }} id="figure-gallery">
-      <a href={videoSrc} data-pswp-width={videoSize.width} data-pswp-height={videoSize.height}>
-        <video
-          src={videoSrc}
-          alt={alt}
-          controls
-          muted
-          loop
-          autoPlay={autoPlay}  // Pass the autoPlay prop to the video element
-          style={{ maxWidth: '100%', height: 'auto' }}
-        />
-      </a>
+    }}>
+      <video
+        src={videoSrc}
+        alt={alt}
+        controls
+        muted
+        loop
+        autoPlay={autoPlay}  // Pass the autoPlay prop to the video element
+        style={{ maxWidth: '100%', height: 'auto' }}
+        onClick={handleFullscreen}  // Add click handler to trigger fullscreen
+      />
       <hr style={{ margin: "5px 0", backgroundColor: "rgba(0, 0, 0, .2)" }} />
       <figcaption style={{
         marginTop: "0.5em",
