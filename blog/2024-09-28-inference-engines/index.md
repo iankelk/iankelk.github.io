@@ -9,21 +9,24 @@ hide_reading_time: false
 ---
 import CodeBlock from "@theme/CodeBlock";
 import Figure from '@site/src/components/figure';
+import VideoFigure from '@site/src/components/videoFigure';
 import ChatConversation from '@site/src/components/chat_conversation';
 
-import chickenTuning from './social-card.jpg';
+import raceCars from './social-card.jpg';
 import andrej from './andrej.jpg';
 import chatgptPhotosynthesisImage2 from './chatgpt-photosynthesis-2.jpeg';
 import comparison from './comparison.jpg';
 import sequential from './sequential.jpg';
 import paged from './paged.jpg';
+import shrug from './shrug.jpg';
+import latencyVideo from './LatencyThroughputVisualization.webm';
 
 Large language models (LLMs) have received a huge amount of attention ever since ChatGPT first appeared at the end of 2022. ChatGPT represented a notable breakthrough in AI language models, surprising everyone with its ability to generate human-like text. However, it came with a notable limitation: the model could only be accessed via OpenAI’s servers. Users could interact with ChatGPT through a web interface, but they lacked access to the underlying architecture and model weights. Although a few months later OpenAI added access to the underlying GPT-3.5 model to its API, the models still resided on remote servers, and the underlying weights of the models couldn’t be changed. While this was necessary due to the model's enormous computational requirements, it naturally raised questions about privacy and access since all data could be read by OpenAI and an external internet connection was required. 
 
 Two years later and the situation has dramatically changed. Thanks to the rise of open-weights alternatives like Meta’s Llama models, we now have multiple options for running LLMs locally on our own hardware. Access is no longer tethered to cloud-based infrastructures, but instead users can directly manipulate, explore, and deploy models themselves.
 
 <Figure
-  image={chickenTuning}
+  image={raceCars}
   alt="Two old-timey F1 race cars labeled TGI and vLLM, capturing that vintage racing vibe with a touch of futuristic flair. This design emphasizes the competitive spirit between the two inference engines, set in a nostalgic, dynamic scene."
   caption="Generated with OpenAI DALL-E 3 and edited by the author."
 />
@@ -139,7 +142,7 @@ However, TGI soon incorporated PagedAttention, mentioning it in their GitHub rep
 
 Currently, it’s quite tricky to make definitive statements about which inference engine is superior. LLM inference optimization is a rapidly evolving and heavily researched field; the best inference backend available today might quickly be surpassed by another as new optimizations become available.
 
-Even more so, the web is becoming inundated—rather ironically—with LLM-generated garbage articles which frequently tout information that was already out-of-date when they were written. Even the product pages for vLLM and TGI themselves are not complete; when I was initially putting together the below table I used [TGI's](https://github.com/huggingface/text-generation-inference) and [vLLM's](https://github.com/vllm-project/vllm) GitHub readme files, however neither of them list all their supported quantizations. I had to check their respective documentation sites. 
+Even more so, the web is becoming inundated—rather ironically—with LLM-generated garbage articles that frequently tout information that was already out-of-date when they were written. Even the product pages for vLLM and TGI themselves are not complete; when I was initially putting together the below table, I used [TGI's](https://github.com/huggingface/text-generation-inference) and [vLLM's](https://github.com/vllm-project/vllm) GitHub readme files; however neither of them list all their supported quantizations. I had to check their respective documentation sites. 
 
 Nevertheless, you can clearly see that for many of these optimizations, the two engines are very similar.
 
@@ -154,12 +157,13 @@ Nevertheless, you can clearly see that for many of these optimizations, the two 
 | **Quantization**                | GPTQ, AWQ, bitsandbytes, EETQ, Marlin, EXL2, and FP8 quantization                                         | GPTQ, AWQ, bitsandbytes, Marlin, AQLM, DeepSpeedFP, GGUF, INT4, INT8, FP8 quantization                                            |
 | **Streaming Outputs**           | Token streaming using Server-Sent Events (SSE)                                           | Streaming outputs                                                                         |
 | **Hardware Support**            | Supports **NVIDIA**, **AMD**, **Intel**, **Google TPU**, and **AWS Trainium/Inferentia**                    | Supports **NVIDIA**, **AMD**, **Intel**, **PowerPC**, **TPU**, and **AWS Trainium/Inferentia** 
-| **Multi-LoRA Support**          | Supports **Multi-LoRA** for adding multiple task-specific LoRA layers without retraining the model | Also supports **Multi-LoRA** for task-specific adaptation layers                                 |
+| **Multi-LoRA Support**          | Supports Multi-LoRA for adding multiple task-specific LoRA layers without retraining the model | Also supports Multi-LoRA for task-specific adaptation layers  
+                               |
 ### Unique features
 
-Here is where the engines diverge a bit, and we can more actively select for functionality we need.
+This is where the engines diverge a bit, and we can more actively select the functionality we need.
 
-- **[Speculative decoding](https://arxiv.org/abs/2211.17192)** becomes important when we want to reduce latency without compromising on the accuracy of the output. It does this by predicting the next tokens ahead of time, running speculative branches of the model in parallel and only finalizing the output once it’s clear which tokens are likely to be correct. This technique is especially useful in real-time applications like conversational agents, where every millisecond of delay matters.
+- When we want to reduce latency without compromising on the output's accuracy, **[speculative decoding](https://arxiv.org/abs/2211.17192)** becomes important. It does this by predicting the next tokens ahead of time, running speculative branches of the model in parallel and only finalizing the output once it’s clear which tokens are likely to be correct. This technique is especially useful in real-time applications like conversational agents, where every millisecond of delay matters.
 
 - Efficient **[beam search](https://towardsdatascience.com/foundations-of-nlp-explained-visually-beam-search-how-it-works-1586b9849a24)** is useful in cases where high-quality output is necessary, but we also need to maintain scalability and performance. In applications like *machine translation* or *summarization*, beam search improves text coherence, and vLLM’s efficient beam search allows us to get high-quality outputs without sacrificing throughput. This makes it ideal for large-scale, enterprise-level deployments.
 
@@ -171,24 +175,164 @@ Here is where the engines diverge a bit, and we can more actively select for fun
 
 | **Feature**                    | **TGI**                                                                                           | **vLLM**                                                                                        |
 |---------------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| **Production Readiness**        | Distributed tracing with **OpenTelemetry** and metrics tracking with **Prometheus**                | No emphasis on production monitoring, more focused on performance and throughput                 |
-| **Speculative Decoding**        | Not available                                                                                     | Supports **speculative decoding** for faster response time by predicting token generation        |
-| **Guidance for Structured Output** | Supports **Guidance**, enabling function calling and structured outputs based on schemas         | No equivalent feature, focuses on flexible decoding algorithms like **beam search**              |
+| **Production Readiness**        | Distributed tracing with OpenTelemetry and metrics tracking with Prometheus                | No emphasis on production monitoring, more focused on performance and throughput                 |
+| **Speculative Decoding**        | Not available                                                                                     | Supports speculative decoding for faster response time by predicting token generation        |
+| **Guidance for Structured Output** | Supports Guidance, enabling function calling and structured outputs based on schemas         | No equivalent feature, focuses on flexible decoding algorithms like beam search              |
 | **Watermarking**                | Includes **[A Watermark for Large Language Models](https://arxiv.org/abs/2301.10226)** to track model output                          | No watermarking feature available                                                               |
-| **Prefix Caching**              | Not available                                                                                     | Supports **prefix caching** to reduce latency for repeated queries                               |
+| **Prefix Caching**              | Not available                                                                                     | Supports prefix caching to reduce latency for repeated queries                               |
 
-## So when should we use which engine?
+## So which engine is more performant?
 
-As a point to begin choosing which engine we should use, we can note that
-TGI is well-suited for enterprises looking for production-ready deployments with robust monitoring and low-latency features such as token streaming and guidance for structured outputs. Its strong focus on observability and ease of deployment makes it ideal for applications requiring real-time interaction.
+To begin choosing which engine to use, we can note that TGI is well-suited for enterprises looking for production-ready deployments with robust monitoring and low-latency features such as token streaming and guidance for structured outputs. Its strong focus on observability and ease of deployment makes it ideal for applications requiring real-time interaction.
 
 vLLM, on the other hand, is designed for enterprises focused on high-throughput serving of large models, with advanced memory management, broad quantization support, and superior distributed inference capabilities. It is particularly effective in multi-node and multi-GPU environments that demand maximum scalability and efficiency.
 
-That said, there are still other factors, because when we talk about the performance of an LLM inference engine, there are multiple consuderations.
+That said, there are still other factors, because when we talk about the performance of an LLM inference engine, there are multiple considerations.
 
-import React from 'react';
+### Latency vs. Throughput
 
-<video style={{width: 'auto', height: 'auto'}} controls autoPlay muted loop>
-  <source src="./LatencyThroughputVisualization.webm" type="video/webm" />
-  Your browser does not support the video tag.
-</video>
+While these might sound like synonyms, they're actually orthogonal measurements. 
+
+:::tip[Orthogonal measurements?]
+
+When we say that latency and throughput are orthogonal measurements, it means they measure two independent aspects of system performance that don’t necessarily affect each other directly, and improving one does not automatically improve the other. However, system architecture often forces trade-offs between the two. When you optimize one, it can indirectly affect the other depending on how the system is designed.
+
+:::
+
+- **Latency** is the time it takes to process and return a response to a single request (how fast the system responds to one user).
+- **Throughput** is the number of requests or tokens the system can process per second (how much work it can handle in total).
+
+While they are theoretically independent, in real-world systems, optimizing for one can affect the other. Minimizing latency for each request might reduce throughput because the system focuses on quickly responding to each user, possibly limiting how many users it can handle at once. Conversely, increasing throughput (handling more requests at once) might lead to higher latency per user because the system may batch requests or process them sequentially.
+
+This video can help visualize this, showing that the LLM engine is producing 4 tokens per second; however, those are distributed among 4 users, so for each user it appears that it's only producing 1 token per second.
+
+<VideoFigure
+  videoSrc={latencyVideo}
+  alt="A visual demonstration of the difference between latency and throughput"
+  caption="A visual demonstration of the difference between latency and throughput in inference engines. Source: [Hugging Face](https://huggingface.co/blog/tgi-benchmarking)"
+  autoPlay={true}
+/>
+
+There are even more metrics to consider (the source again is [Hugging Face](https://huggingface.co/blog/tgi-benchmarking))
+
+| **Term**              | **Description**                                                                 |
+|-----------------------|---------------------------------------------------------------------------------|
+| **Token Latency**      | The amount of time it takes 1 token to be processed and sent to a user.          |
+| **Request Latency**    | The amount of time it takes to fully respond to a request.                       |
+| **Time to First Token**| The amount of time from the initial request to the first token returning to the user. This is a combination of the time to process the prefill input and a single generated token. |
+| **Throughput**         | The number of tokens the server can return in a set amount of time (e.g., 4 tokens per second). |
+
+which leads to this useful table on what to emphasize:
+
+| **I care about…**                              | **I should focus on…**                             |
+|-------------------------------------------------|----------------------------------------------------|
+| **Handling more users**                        | Maximizing Throughput                              |
+| **People not navigating away from my page/app**| Minimizing Time to First Token (TTFT)              |
+| **User Experience for a moderate amount of users**| Minimizing Latency                               |
+| **Well-rounded experience**                    | Capping latency and maximizing throughput          |
+
+Both [TGI](https://huggingface.co/blog/tgi-benchmarking) and [vLLM](https://docs.vllm.ai/en/v0.5.4/performance_benchmark/benchmarks.html) offer benchmarking utilities, so the best course of action is to determine your use case and priorities, and experiment with both.
+
+## Licensing
+
+**vLLM** has always used the Apache 2.0 license, a permissive open-source license that allows users to freely use, modify, and distribute software, provided they include proper attribution, a copy of the license, and a notice of changes, while also offering protection from patent claims.
+
+**TGI** initially used the Apache 2.0 license, but then in [July 2023](https://www.reddit.com/r/MachineLearning/comments/15c89r7/d_huggingface_changed_the_license_of_one_of_its/), it changed its license from Apache 2.0 to the Hugging Face Optimized Inference License 1.0 (HFOILv1.0). This was widely disliked because it imposed the following restrictions on its previous Apache 2.0 license:
+
+  1.  **No Hosting Services:** You can’t offer the software as a paid online service without getting permission from Hugging Face.
+  2.  **No Changing the License:** You can’t relicense the software under different rules.
+  3.  **Patent Clause:** If you sue someone over patent issues related to the software, you lose the right to use it.
+  4.  **Modification Requirements:** If you change the software, you have to clearly state what changes you made and include that information when sharing it.
+  5.  **No Use of Trademarks:** You can’t use Hugging Face’s logos or trademarks without their approval.
+
+  In a video presentation from vLLM, you can [hear the crowd's reaction](https://youtu.be/5ZlavKF_98U?t=1760) when they point out that vLLM is still Apache 2.0 licensed.
+
+  Hugging Face later reverted back to Apache 2.0 in [April 2024](https://github.com/huggingface/text-generation-inference/commit/ff42d33e9944832a19171967d2edd6c292bdb2d6) so at this point their licensing is equivalent to vLLM. Both are open source software.
+
+  ## Brief code samples
+
+  For vLLM, the documentation is excellent and this code sample is taken directly from [their quickstart.](https://docs.vllm.ai/en/v0.5.4/getting_started/quickstart.html)
+
+  ### vLLM
+
+  #### Installing vLLM
+
+```python title="Using pip"
+# (Recommended) Create a new conda environment.
+conda create -n myenv python=3.10 -y
+conda activate myenv
+
+# Install vLLM with CUDA 12.1.
+pip install vllm
+```
+
+#### Consuming vLLM
+
+```python title="Performing inference using Hugging Face"
+from vllm import LLM, SamplingParams
+
+# Sample prompts.
+prompts = [
+    "Hello, my name is",
+    "The president of the United States is",
+    "The capital of France is",
+    "The future of AI is",
+]
+# Create a sampling params object.
+sampling_params = SamplingParams(temperature=0.8, top_p=0.95)
+
+# Create an LLM.
+llm = LLM(model="facebook/opt-125m")
+# Generate texts from the prompts. The output is a list of RequestOutput objects
+# that contain the prompt, generated text, and other information.
+outputs = llm.generate(prompts, sampling_params)
+# Print the outputs.
+for output in outputs:
+    prompt = output.prompt
+    generated_text = output.outputs[0].text
+    print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
+```
+
+### TGI
+
+#### Launching TGI
+TGI is distributed using Docker, so it's a bit different to set up, but also straightforward. You need to first [install Docker](https://docs.docker.com/engine/install/) and then proceed. Like vLLM above, this is taken verbatim from the [TGI Quick Tour](https://huggingface.co/docs/text-generation-inference/en/quicktour?code=python) page.
+
+```bash title="Launching a Docker container with teknium/OpenHermes-2.5-Mistral-7B on an NVIDIA GPU"
+model=teknium/OpenHermes-2.5-Mistral-7B
+volume=$PWD/data # share a volume with the Docker container to avoid downloading weights every run
+
+docker run --gpus all --shm-size 1g -p 8080:80 -v $volume:/data \
+    ghcr.io/huggingface/text-generation-inference:2.3.0 \
+    --model-id $model```
+```
+
+#### Consuming TGI (Python example)
+
+Once TGI is running, you can use the generate endpoint or the Open AI Chat Completion API compatible Messages API by doing requests.
+
+```python title="Consuming TGI with Python"
+import requests
+
+headers = {
+    "Content-Type": "application/json",
+}
+
+data = {
+    'inputs': 'What is Deep Learning?',
+    'parameters': {
+        'max_new_tokens': 20,
+    },
+}
+
+response = requests.post('http://127.0.0.1:8080/generate', headers=headers, json=data)
+print(response.json())
+# {'generated_text': '\n\nDeep Learning is a subset of Machine Learning that is concerned with the development of algorithms that can'}
+```
+
+## Either vLLM or TGI will likely suit your needs
+
+The best inference engine ultimately depends on your specific use case. Each engine offers distinct optimizations for different enterprise needs. **TGI** is great for real-time, production-ready applications with strong monitoring tools and structured output guidance, while vLLM shines in high-throughput environments with advanced memory management and distributed inference capabilities. The best way to decide is by experimenting and benchmarking each engine using the model and hardware specific to your workload, allowing you to tailor the solution to your priorities, whether that’s **low latency**, **high throughput**, or **scalability.**
+
+And then do that every couple of months when everything changes again.
+
