@@ -163,6 +163,8 @@ Here is where the engines diverge a bit, and we can more actively select for fun
 
 - Efficient **[beam search](https://towardsdatascience.com/foundations-of-nlp-explained-visually-beam-search-how-it-works-1586b9849a24)** is useful in cases where high-quality output is necessary, but we also need to maintain scalability and performance. In applications like *machine translation* or *summarization*, beam search improves text coherence, and vLLM’s efficient beam search allows us to get high-quality outputs without sacrificing throughput. This makes it ideal for large-scale, enterprise-level deployments.
 
+  However, in scenarios where you need speed and low latency, such as in live chatbots or voice assistants, beam search may introduce delays. In these cases, simpler decoding strategies like greedy search or sampling might be preferred to ensure faster response times.
+
 - **[Watermarking](https://en.wikipedia.org/wiki/Digital_watermarking)** is important when organizations need to ensure the traceability of AI-generated content, particularly in environments where content verification or intellectual property protection is a priority. Use cases such as legal document generation, journalism, and content moderation benefit from watermarking, which allows enterprises to ensure transparency while maintaining trust in the system’s integrity.
 
 - **[Prefix caching](https://docs.vllm.ai/en/latest/automatic_prefix_caching/apc.html)** is important when dealing with repeated queries in chatbots, customer service automation, or document generation systems. In these cases, multiple requests often share similar prefixes or input sequences, and recalculating the same intermediate results for each query would waste computational resources. This can also be very helpful for [RAG](https://www.clarifai.com/blog/what-is-rag-retrieval-augmented-generation) use cases, where a long document would be repeatedly used to answer questions.
@@ -174,3 +176,19 @@ Here is where the engines diverge a bit, and we can more actively select for fun
 | **Guidance for Structured Output** | Supports **Guidance**, enabling function calling and structured outputs based on schemas         | No equivalent feature, focuses on flexible decoding algorithms like **beam search**              |
 | **Watermarking**                | Includes **[A Watermark for Large Language Models](https://arxiv.org/abs/2301.10226)** to track model output                          | No watermarking feature available                                                               |
 | **Prefix Caching**              | Not available                                                                                     | Supports **prefix caching** to reduce latency for repeated queries                               |
+
+## So when should we use which engine?
+
+As a point to begin choosing which engine we should use, we can note that
+TGI is well-suited for enterprises looking for production-ready deployments with robust monitoring and low-latency features such as token streaming and guidance for structured outputs. Its strong focus on observability and ease of deployment makes it ideal for applications requiring real-time interaction.
+
+vLLM, on the other hand, is designed for enterprises focused on high-throughput serving of large models, with advanced memory management, broad quantization support, and superior distributed inference capabilities. It is particularly effective in multi-node and multi-GPU environments that demand maximum scalability and efficiency.
+
+That said, there are still other factors, because when we talk about the performance of an LLM inference engine, there are multiple consuderations.
+
+import React from 'react';
+
+<video style={{width: 'auto', height: 'auto'}} controls autoPlay muted loop>
+  <source src="./LatencyThroughputVisualization.webm" type="video/webm" />
+  Your browser does not support the video tag.
+</video>
