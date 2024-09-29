@@ -1,9 +1,12 @@
 // src/components/videoFigure.jsx
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }) {
   const [videoSize, setVideoSize] = useState({ width: 0, height: 0 });
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const videoRef = useRef(null);
+  const firstClickRef = useRef(true);
 
   const parseCaption = (text) => {
     return text.split('\\n').map((line, index, array) => {
@@ -21,17 +24,16 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
 
   const captionContent = parseCaption(caption);
 
-  // Function to handle fullscreen
-  const handleFullscreen = (event) => {
-    const videoElement = event.currentTarget;
-    if (videoElement.requestFullscreen) {
-      videoElement.requestFullscreen();
-    } else if (videoElement.mozRequestFullScreen) { // Firefox
-      videoElement.mozRequestFullScreen();
-    } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, Opera
-      videoElement.webkitRequestFullscreen();
-    } else if (videoElement.msRequestFullscreen) { // IE/Edge
-      videoElement.msRequestFullscreen();
+  // Function to handle video play/pause
+  const handleVideoClick = () => {
+    const video = videoRef.current;
+    if (firstClickRef.current || isPlaying) {
+      video.pause();
+      setIsPlaying(false);
+      firstClickRef.current = false;
+    } else {
+      video.play();
+      setIsPlaying(true);
     }
   };
 
@@ -43,6 +45,16 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
     video.src = videoSrc;
   }, [videoSrc]);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      if (autoPlay) {
+        video.play().catch(error => console.error("Autoplay failed:", error));
+        setIsPlaying(true);
+      }
+    }
+  }, [autoPlay]);
+
   return (
     <figure style={{
       border: "1px dashed rgba(0, 0, 0, .1)",
@@ -53,14 +65,14 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
       textAlign: "right",
     }}>
       <video
+        ref={videoRef}
         src={videoSrc}
         alt={alt}
         controls
         muted
         loop
-        autoPlay={autoPlay}  // Pass the autoPlay prop to the video element
-        style={{ maxWidth: '100%', height: 'auto' }}
-        onClick={handleFullscreen}  // Add click handler to trigger fullscreen
+        style={{ maxWidth: '100%', height: 'auto', cursor: 'pointer' }}
+        onClick={handleVideoClick}
       />
       <hr style={{ margin: "5px 0", backgroundColor: "rgba(0, 0, 0, .2)" }} />
       <figcaption style={{
