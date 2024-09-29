@@ -23,7 +23,7 @@ import latencyVideo from './LatencyThroughputVisualization.webm';
 
 Large language models (LLMs) have received a huge amount of attention ever since ChatGPT first appeared at the end of 2022. ChatGPT represented a notable breakthrough in AI language models, surprising everyone with its ability to generate human-like text. However, it came with a notable limitation: the model could only be accessed via OpenAI’s servers. Users could interact with ChatGPT through a web interface, but they lacked access to the underlying architecture and model weights. Although a few months later OpenAI added access to the underlying GPT-3.5 model to its API, the models still resided on remote servers, and the underlying weights of the models couldn’t be changed. While this was necessary due to the model's enormous computational requirements, it naturally raised questions about privacy and access since all data could be read by OpenAI and an external internet connection was required. 
 
-Two years later and the situation has dramatically changed. Thanks to the rise of open-weights alternatives like Meta’s Llama models, we now have multiple options for running LLMs locally on our own hardware. Access is no longer tethered to cloud-based infrastructures, but instead users can directly manipulate, explore, and deploy models themselves.
+Two years later and the situation has dramatically changed. Due to the rising availability of open-weights alternatives like Meta’s Llama models, we now have multiple options for running LLMs locally on our own hardware. Access is no longer tethered to cloud-based infrastructures.
 
 <Figure
   image={raceCars}
