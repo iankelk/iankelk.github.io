@@ -125,7 +125,7 @@ There are also additional benefits to PagedAttention. Memory can be shared more 
 
 :::
 
-### How does vLLM compare to TGI?
+## How does vLLM compare to TGI?
 
 When vLLM was first released, it outperformed TGI by a solid margin due to PagedAttention, performing with up to 2.2x to 3.5x higher throughput. 
 
