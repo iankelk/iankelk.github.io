@@ -4,7 +4,6 @@ import React, { useEffect, useState, useRef } from 'react';
 
 export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }) {
   const [videoSize, setVideoSize] = useState({ width: 0, height: 0 });
-  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
   const parseCaption = (text) => {
@@ -25,13 +24,15 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
 
   // Function to handle video play/pause
   const handleVideoClick = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    const video = videoRef.current;
-    if (video.paused) {
-      video.play().catch(error => console.error("Play failed:", error));
-    } else {
-      video.pause();
+    // Only handle clicks directly on the video, not on the controls
+    if (event.target === videoRef.current) {
+      event.preventDefault();
+      const video = videoRef.current;
+      if (video.paused) {
+        video.play().catch(error => console.error("Play failed:", error));
+      } else {
+        video.pause();
+      }
     }
   };
 
@@ -45,22 +46,8 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
 
   useEffect(() => {
     const video = videoRef.current;
-    if (video) {
-      const playHandler = () => setIsPlaying(true);
-      const pauseHandler = () => setIsPlaying(false);
-
-      video.addEventListener('play', playHandler);
-      video.addEventListener('pause', pauseHandler);
-
-      // Attempt autoplay only on desktop
-      if (autoPlay && !('ontouchstart' in window)) {
-        video.play().catch(error => console.error("Autoplay failed:", error));
-      }
-
-      return () => {
-        video.removeEventListener('play', playHandler);
-        video.removeEventListener('pause', pauseHandler);
-      };
+    if (video && autoPlay && !('ontouchstart' in window)) {
+      video.play().catch(error => console.error("Autoplay failed:", error));
     }
   }, [autoPlay]);
 
@@ -73,31 +60,17 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
       borderRadius: "15px",
       textAlign: "right",
     }}>
-      <div style={{ position: 'relative', cursor: 'pointer' }} onClick={handleVideoClick}>
-        <video
-          ref={videoRef}
-          src={videoSrc}
-          alt={alt}
-          muted
-          loop
-          playsInline
-          style={{ maxWidth: '100%', height: 'auto' }}
-        />
-        {!isPlaying && (
-          <div style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            color: 'white',
-            padding: '10px 20px',
-            borderRadius: '5px',
-          }}>
-            Click to play
-          </div>
-        )}
-      </div>
+      <video
+        ref={videoRef}
+        src={videoSrc}
+        alt={alt}
+        controls
+        muted
+        loop
+        playsInline
+        style={{ maxWidth: '100%', height: 'auto', cursor: 'pointer' }}
+        onClick={handleVideoClick}
+      />
       <hr style={{ margin: "5px 0", backgroundColor: "rgba(0, 0, 0, .2)" }} />
       <figcaption style={{
         marginTop: "0.5em",
