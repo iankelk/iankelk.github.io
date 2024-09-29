@@ -4,9 +4,8 @@ import React, { useEffect, useState, useRef } from 'react';
 
 export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }) {
   const [videoSize, setVideoSize] = useState({ width: 0, height: 0 });
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
-  const firstClickRef = useRef(true);
 
   const parseCaption = (text) => {
     return text.split('\\n').map((line, index, array) => {
@@ -25,15 +24,13 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
   const captionContent = parseCaption(caption);
 
   // Function to handle video play/pause
-  const handleVideoClick = () => {
+  const handleVideoClick = (event) => {
+    event.preventDefault();
     const video = videoRef.current;
-    if (firstClickRef.current || isPlaying) {
+    if (isPlaying) {
       video.pause();
-      setIsPlaying(false);
-      firstClickRef.current = false;
     } else {
       video.play();
-      setIsPlaying(true);
     }
   };
 
@@ -48,10 +45,20 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
+      const playHandler = () => setIsPlaying(true);
+      const pauseHandler = () => setIsPlaying(false);
+
+      video.addEventListener('play', playHandler);
+      video.addEventListener('pause', pauseHandler);
+
       if (autoPlay) {
         video.play().catch(error => console.error("Autoplay failed:", error));
-        setIsPlaying(true);
       }
+
+      return () => {
+        video.removeEventListener('play', playHandler);
+        video.removeEventListener('pause', pauseHandler);
+      };
     }
   }, [autoPlay]);
 
