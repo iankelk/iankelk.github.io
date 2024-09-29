@@ -54,7 +54,7 @@ To actually run the model, you need a small piece of code—often written in C o
 
 Using just these two files—the parameters and the code—you can run the model directly on your local machine. You can compile the code, point it at the parameters file, and begin interacting with the model. For example, you could prompt it to generate a poem or an essay, just as you would with cloud-based models like ChatGPT.
 
-Unlike proprietary models locked behind web interfaces, open-weights models allow for customization, experimentation, and offline usage, making it possible to run sophisticated AI models in entirely self-contained and private environments.
+Unlike proprietary models locked behind web interfaces, open-weights models allow for customization, experimentation, and offline usage, making it possible to run LLMs in entirely self-contained and private environments.
 
 While the code to run these models can be extremely short, as in Andrej Karpathy's video, where he points to one that's a mere 500 lines, running a model as large as Llama 3.1 70B locally requires significant computational power. 
 
