@@ -26,11 +26,12 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
   // Function to handle video play/pause
   const handleVideoClick = (event) => {
     event.preventDefault();
+    event.stopPropagation();
     const video = videoRef.current;
-    if (isPlaying) {
-      video.pause();
+    if (video.paused) {
+      video.play().catch(error => console.error("Play failed:", error));
     } else {
-      video.play();
+      video.pause();
     }
   };
 
@@ -51,7 +52,8 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
       video.addEventListener('play', playHandler);
       video.addEventListener('pause', pauseHandler);
 
-      if (autoPlay) {
+      // Attempt autoplay only on desktop
+      if (autoPlay && !('ontouchstart' in window)) {
         video.play().catch(error => console.error("Autoplay failed:", error));
       }
 
@@ -71,16 +73,31 @@ export default function VideoFigure({ videoSrc, alt, caption, autoPlay = false }
       borderRadius: "15px",
       textAlign: "right",
     }}>
-      <video
-        ref={videoRef}
-        src={videoSrc}
-        alt={alt}
-        controls
-        muted
-        loop
-        style={{ maxWidth: '100%', height: 'auto', cursor: 'pointer' }}
-        onClick={handleVideoClick}
-      />
+      <div style={{ position: 'relative', cursor: 'pointer' }} onClick={handleVideoClick}>
+        <video
+          ref={videoRef}
+          src={videoSrc}
+          alt={alt}
+          muted
+          loop
+          playsInline
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
+        {!isPlaying && (
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            color: 'white',
+            padding: '10px 20px',
+            borderRadius: '5px',
+          }}>
+            Click to play
+          </div>
+        )}
+      </div>
       <hr style={{ margin: "5px 0", backgroundColor: "rgba(0, 0, 0, .2)" }} />
       <figcaption style={{
         marginTop: "0.5em",
