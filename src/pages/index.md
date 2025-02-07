@@ -6,12 +6,19 @@ title: Ian Kelk
 
 ## Projects
 
-### Cloud2Cloud Harvard / NASA Capstone Project - Ongoing
+### Cloud2Cloud Harvard / NASA Capstone Project
+#### Cloud-Top Height Field Estimation from Aerial Imagery
 
-* Cloud2Cloud focuses on accurately measuring cloud-top heights to enhance the calibration and validation of satellite radiometric instruments. It is a joint project with Harvard Extension School and NASA.
-* NASA developed the Fly’s Eye GLM Simulator (FEGS), a multi-spectral radiometer system with 30 radiometers and an HD camera, to validate the Geostationary Lightning Mapper (GLM) on the GOES-16 satellite. It's mounted on the NASA ER-2 aerial laboratory, a plane which flies at 70,000 feet. During a 2017 flight campaign, the ER-2 collected data using FEGS and the Cloud Physics LiDAR (CPL) to measure cloud heights.
-* While LiDAR provides precise cloud-top heights, it offers only single-point values. Cloud2Cloud aims to develop a predictive computer vision model that combines high-definition images from FEGS with LiDAR data to estimate cloud-top heights accurately and create a three-dimensional height field.
+* Cloud2Cloud focuses on accurately measuring cloud-top heights to enhance the calibration and validation of satellite radiometric instruments. This project is a collaboration between Harvard University and NASA.
+* NASA developed the Fly’s Eye GLM Simulator (FEGS), a multi-spectral radiometer system with 30 radiometers and an HD camera, to validate the Geostationary Lightning Mapper (GLM) onboard the GOES-16 satellite. Mounted on the NASA ER-2 aerial laboratory, which flies at 70,000 feet, FEGS collected cloud imagery during a 2017 flight campaign alongside the Cloud Physics LiDAR (CPL), which provides precise but single-point cloud-top height measurements.
+* Cloud2Cloud developed a predictive computer vision model that integrates high-definition FEGS imagery, LiDAR data, and aircraft metadata to estimate cloud-top heights and generate a three-dimensional height field. Our approach involved deep learning and optical flow techniques to extend single-point height measurements into full spatial height maps.
+	- **Feature Extraction**: The ConvNext-large CNN model was used to extract cloud features from high-definition images after fisheye correction and augmentation.
+	- **CNN-RNN Model**: A hybrid neural network processed sequences of cloud images alongside flight metadata to predict cloud-top heights at the center of each image.
+	- **Optical Flow Geometry**: The RAFT model, coupled with a parallax-based height estimation method, was used to create full cloud height fields. The Lucas-Kanade and TV-L1 optical flow methods were evaluated for tracking cloud motion.
+	- **Height Field Generation**: Optical flow-derived height estimates were calibrated using single-point LiDAR measurements to ensure accuracy.
+	- **Field Stitching**: Consecutive height fields were merged to create a large-scale, coherent 3D representation of the cloud structure along the flight path.
 * Proposal for the project is located [here.](/reports/cloud2cloud-proposal.pdf)
+* Final report for the project is located [here.](/reports/cloud2cloud.pdf)
 
 ### NLP
 * Research paper from last year on automatic fake news detection: [Automatic Fake News Detection: Are current models “fact-checking” or “gut-checking”?](https://aclanthology.org/2022.fever-1.4/) presented at FEVER at ACL 2022
