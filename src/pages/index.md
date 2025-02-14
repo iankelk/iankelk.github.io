@@ -25,6 +25,7 @@ title: Ian Kelk
 * [Video](https://www.youtube.com/watch?v=v4Ue97kzX8Q&t) provided for the online system for ACL 2022
 * GitHub [repo](https://github.com/automatic-fake-news-detection) for the paper
 * I gave an hour-long talk to the [NeuLab](https://www.cs.cmu.edu/~neulab/) at Carnegie Mellon in July of 2022
+* Short [video](https://www.youtube.com/watch?v=hj_Oujn9ZK0) and [repository](https://github.com/iankelk/rlhf-imdb) explaining how RLHF works.
 
 ### Vision for safety inspections
 * August 30th article in Bloomberg ["9 Smart Ways To Make Cities Better"](https://archive.ph/SSPfv) mentioned my work on this project in part 6. Links to [PDF](/pdf/bloomberg.pdf) and [image of specific page.](/img/bloomberg-06.png)
@@ -84,19 +85,20 @@ title: Ian Kelk
 * [GitHub repo](https://github.com/healthy-chicken-saladeers/rag_detective)
 
 ### Harvard Extension Masters
-* I'm a degree candidate for an ALM in Data Science, and have finished the 11 courses for my masters, with only the final capstone project remaining to be completed in December, 2024. I have maintained a 4.0 GPA in the following 11 classes:
+* I completed a master's degree in Data Science from Harvard University in December, 2024, and graduated on the Dean's List with a 4.0 GPA. The classes I took were:
 
 	* Data Modeling (R)
 	* Foundations of Data Science and Engineering (Python, SQL, Tableau)
 	* [Deep Learning for NLP](https://harvard-iacs.github.io/CS287/) (Research, Python, PyTorch)
 	* Computer Vision (Python, Keras/TensorFlow)
-	* Deep Reinforcement Learning (Python)
+	* Deep Reinforcement Learning (Python, I later TA'd this class)
 	* Elements of Data Science and Statistical Learning with R (R)
 	* Time Series Analysis with Python (Python)
 	* [Visualization](https://www.cs171.org/2022/) (D3 JavaScript, HTML, CSS, Tableau)
 	* [Big Data Systems](http://daslab.seas.harvard.edu/classes/cs265/) (Research, C++)
 	* [Productionizing AI (MLOps): AC215](https://harvard-iacs.github.io/2023-AC215/)
 	* Pre-capstone proposal ([cloud2cloud](./#cloud2cloud-harvard--nasa-capstone-project---ongoing))
+	* Capstone project ([cloud2cloud](https://github.com/cloud-2-cloud/c2c)
 
 ## Contact
 Feel free to reach out to me:
