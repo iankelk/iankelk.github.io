@@ -4,6 +4,8 @@ title: Ian Kelk
 ---
 ![My recent work in AI, ML, and data science](/img/project-header-small.png)
 
+## [Resume](/pdf/Kelk_Ian_resume.pdf)
+
 ## Projects
 
 ### Cloud2Cloud Harvard / NASA Capstone Project

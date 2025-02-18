@@ -139,6 +139,14 @@ const config: Config = {
           title: 'Social',
           items: [
             {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/iankelk/',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/iankelk',
+            },            
+            {
               label: 'Twitter',
               href: 'https://twitter.com/kelkulus',
             },
