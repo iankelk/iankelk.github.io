@@ -23,7 +23,7 @@ title: Ian Kelk
 * Final report for the project is located [here.](/reports/cloud2cloud.pdf)
 
 ### NLP
-* Research paper from last year on automatic fake news detection: [Automatic Fake News Detection: Are current models “fact-checking” or “gut-checking”?](https://aclanthology.org/2022.fever-1.4/) presented at FEVER at ACL 2022
+* Research paper from 2022 on automatic fake news detection: [Automatic Fake News Detection: Are current models “fact-checking” or “gut-checking”?](https://aclanthology.org/2022.fever-1.4/) presented at FEVER at ACL 2022
 * [Video](https://www.youtube.com/watch?v=v4Ue97kzX8Q&t) provided for the online system for ACL 2022
 * GitHub [repo](https://github.com/automatic-fake-news-detection) for the paper
 * I gave an hour-long talk to the [NeuLab](https://www.cs.cmu.edu/~neulab/) at Carnegie Mellon in July of 2022
