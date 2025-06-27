@@ -22,6 +22,7 @@ title: Ian Kelk
 * Proposal for the project is located [here.](/reports/cloud2cloud-proposal.pdf)
 * Final report for the project is located [here.](/reports/cloud2cloud.pdf)
 * Poster for [cloud2cloud](/reports/c2c_poster.pdf)
+* Standee for [cloud2cloud](/reports/standee.jpg)
 * Appendix for [RAFT modeling](/reports/raft_appendix.pdf)
 
 ### NLP
