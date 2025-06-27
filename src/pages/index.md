@@ -21,6 +21,8 @@ title: Ian Kelk
 	- **Field Stitching**: Consecutive height fields were merged to create a large-scale, coherent 3D representation of the cloud structure along the flight path.
 * Proposal for the project is located [here.](/reports/cloud2cloud-proposal.pdf)
 * Final report for the project is located [here.](/reports/cloud2cloud.pdf)
+* Poster for [cloud2cloud](/reports/c2c_poster.pdf)
+* Appendix for [RAFT modeling](/reports/raft_appendix.pdf)
 
 ### NLP
 * Research paper from 2022 on automatic fake news detection: [Automatic Fake News Detection: Are current models “fact-checking” or “gut-checking”?](https://aclanthology.org/2022.fever-1.4/) presented at FEVER at ACL 2022
@@ -99,7 +101,7 @@ title: Ian Kelk
 	* [Visualization](https://www.cs171.org/2022/) (D3 JavaScript, HTML, CSS, Tableau)
 	* [Big Data Systems](http://daslab.seas.harvard.edu/classes/cs265/) (Research, C++)
 	* [Productionizing AI (MLOps): AC215](https://harvard-iacs.github.io/2023-AC215/)
-	* Pre-capstone proposal ([cloud2cloud](./#cloud2cloud-harvard--nasa-capstone-project---ongoing))
+	* Pre-capstone proposal ([cloud2cloud](./#cloud2cloud-harvard--nasa-capstone-project))
 	* Capstone project ([cloud2cloud](https://github.com/cloud-2-cloud/c2c)
 
 ## Contact
